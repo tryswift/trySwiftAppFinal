@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        configureStyling()
+        
         return true
     }
 
@@ -34,13 +36,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        // Restart any tasks that were paused (or not yet started) while the applicatakjfdsjklfasdadsfkljion was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-
+private extension AppDelegate {
+    
+    func configureStyling() {
+        
+        let tintColor = UIColor(red: 184.0/255.0, green: 50.0/255.0, blue: 43.0/255.0, alpha: 1.0)
+        
+        window?.tintColor = tintColor
+        
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSForegroundColorAttributeName : UIColor.whiteColor(),
+            NSFontAttributeName : UIFont.systemFontOfSize(18)
+        ]
+        
+        UINavigationBar.appearance().barTintColor = tintColor
+        UINavigationBar.appearance().translucent = false
+        UINavigationBar.appearance().barStyle = .BlackTranslucent
+    }
 }
 
