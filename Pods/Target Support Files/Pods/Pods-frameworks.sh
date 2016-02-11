@@ -84,10 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/DynamicColor.framework"
+  install_framework "Pods/Timepiece.framework"
   install_framework "Pods/Toucan.framework"
   install_framework "Pods/XLPagerTabStrip.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/DynamicColor.framework"
+  install_framework "Pods/Timepiece.framework"
   install_framework "Pods/Toucan.framework"
   install_framework "Pods/XLPagerTabStrip.framework"
 fi

@@ -7,151 +7,230 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10BDABA2D6CF3E7835688C7BB78D1D8E /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C5952199B56152AE1668874C3542A9 /* ButtonBarPagerTabStripViewController.swift */; };
-		11D2CE01B112073AE320BBB0CEA2F775 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6AFBD48CEC8510448F8B80675F1503 /* BaseButtonBarPagerTabStripViewController.swift */; };
-		12BC0C51F02FD067E8CAF798DDF3FE31 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB211A8B0C9C6C56B0BDDC4109D98E6 /* ButtonCell.xib */; };
-		1A0BC7AAA2E484DE4C7C69FF66D202A8 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
-		1DE34899D5B5F2B74D9F2AFE30CC9106 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA61478D30CD29ED14DFAACB4D78993 /* ButtonBarView.swift */; };
-		1EB88286DEEE3AFD47F932348567BC2D /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530853FBA0CCA5E78FD9DFE665AFB2C5 /* PagerTabStripBehaviour.swift */; };
-		2C1937FB8B6A8333DB6F484D867425DA /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E5CFC3C79B7F3060BA22D088CD1963 /* SegmentedPagerTabStripViewController.swift */; };
-		2F18EA7F502522F2BC47D7AFE897E79C /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 77F7CB405575362D7B2E4D536F97B3FE /* XLPagerTabStrip.bundle */; };
-		36BA5C8E3A7154D97C6E1AC69BAA510A /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46CE557BA0930F5DE2C6ACA317439D2F /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47518221C64555C62B589870E918639D /* SwipeDirection.swift */; };
-		51BAFFE7D217EB9CA8CC70B00E455116 /* Toucan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F6C0B7EC224247EF88E93EEAA292810 /* Toucan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55D0F2D32490FAC4D1266276F228EAC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		598AFC3B8D07E9B345D9E6693BF3AE65 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489C121CAE0103341EF77448A208276A /* IndicatorInfo.swift */; };
-		62A439EC37ABDC7A1AC138C27BE9C3D4 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33244BA65E761E3FE8168F5972FA5A50 /* PagerTabStripViewController.swift */; };
-		6677D162055B7F27C550E98F3CFD6B84 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0847605C99950424EBAF065A8A4B0DC /* BarView.swift */; };
-		667A37A863BDEEFE84FDF268ED3B2097 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
-		7F9045D4AEED0EF8ABB74435A35525AE /* ButtonCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = CCB211A8B0C9C6C56B0BDDC4109D98E6 /* ButtonCell.xib */; };
-		7F995ECE4CED446EEAA11ED5F4B838B3 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB96E1A5766A8945F3FB51F3D3B32FF /* FXPageControl.m */; };
-		8A8EE7431C384D75645A89BCFC71DA58 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 12F7C7EDEC5A06C00174C85EF9D6B173 /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92328F356A6BFFF1B813A92F08C6FC2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		9E5BEC0A3057AEA7299FB84C5D04AD93 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3BDBABD03EB3982FCD31C4AC2644C0 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B18E034C091F07FE7567B059F6C6FD64 /* Toucan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A61C681EF4E8691A0654C390C2FF5C /* Toucan-dummy.m */; };
-		B48C2EE07EE213DB03CA5DE67944166D /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3B7440DA03C572D67904521EF129B /* XLPagerTabStrip-dummy.m */; };
-		C4ACFD2303FF45C43CC1EF20FD15A956 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AC2479834A70B6B1AD45983C38AEDF /* BarPagerTabStripViewController.swift */; };
-		D540974BF1A6ED21FFC592D8121E3CB0 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EF0884D5252575F342D5817F0879BB /* TwitterPagerTabStripViewController.swift */; };
-		E2313715682274B99A42C40E645410F5 /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C079A6163F28332E5F33CFFBDA9BBB /* PagerTabStripError.swift */; };
-		ECDA578DAB12C6615524352B6DC928C5 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02BAF928E405C2DF78E6AADDD33DF5F /* ButtonBarViewCell.swift */; };
-		F082D55773739FE68BB64CDCE7768894 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		F9CD3319D624BC70412D9301DFC01F9E /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A213FABD7FD143CFE4F3DE3B81DF1BA7 /* Toucan.swift */; };
+		06B9BB6FD07341F2A02C0E3ADE0E178D /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE585155B6CFAF1908FDB3CC1399F0E /* Duration.swift */; };
+		07E3A4FF84860A61EDA9C819D15229CB /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E76F66ECB95EDAF3D02EC45C237E8 /* BaseButtonBarPagerTabStripViewController.swift */; };
+		131459BD624873F0B958D1F830AF1D6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		14090ACF0234ECEE66759EBC8E6475FF /* NSDate+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B6FEC7C3743D2FB93F913E9BEA268A /* NSDate+Timepiece.swift */; };
+		176E9D13FB5930EA89EF2BAA5A79B52D /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBCA7224087DDD5DE14AD3D95BFB4CE /* BarView.swift */; };
+		18E938F95DB58AF7A4E933D7BD645F0B /* DynamicColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E58EE0B753C4323630B19F2C817CFCE /* DynamicColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A93B215B62C0BC1B8203576F1BF4E74 /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD088AF52DDB9FFE7E99FBFCE955A4E1 /* NSDateComponents+Timepiece.swift */; };
+		1D874F35B3C921F54D529E166ED6CDC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		20F0425C74A06D5D761E780853E536E7 /* Timepiece-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9D6386E82B4B7A520DEE6F2D1E35993 /* Timepiece-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F7FA66326610C23B56F272DB59624D8 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E51FB572F396D773F267E4ED0F65DB1F /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31BE3C4177A616BF34DCD9C6CFA50297 /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54E385147FDABD511C053A2A7647CE7 /* PagerTabStripError.swift */; };
+		37B3AC1225FDA65F5E8CBEE245490274 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
+		392A989FDF1FBFB5B1C1489E5517E36E /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5374B88154E0F17E1A7289DBBE4793 /* DynamicColor.swift */; };
+		3D2B8AF5A32B2998ED5E021D536FD87F /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
+		48A1A7C3BADF7ADF73DF3F0DF17D4029 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68BC644D12627843DFF462B150DD830 /* TwitterPagerTabStripViewController.swift */; };
+		4C0C4EB7FF31558A6CC197DE5D2D8144 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
+		4CF32EC29869710D309C69792E65BD4C /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AACE5CAFE2861EA95FA7252FDDCDEB /* SegmentedPagerTabStripViewController.swift */; };
+		541C407F145011D0A883993A93331AC1 /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 512EB4485112D7D6408C0B57D468ED78 /* XLPagerTabStrip-dummy.m */; };
+		5B58A6E3E4CBD40E72DE5338B67A0897 /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B86A660BAAF7190BC96E68738647B2F3 /* XLPagerTabStrip.bundle */; };
+		5EEC203A0F765A770FDB9057185E75E8 /* Toucan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF8A48BE8105AE0F8CC54329927F0E3 /* Toucan-dummy.m */; };
+		70A3924E4879386CAA42D743EAD3CE50 /* ButtonCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = D528C12CF978DB3FABEDB37387CB1239 /* ButtonCell.xib */; };
+		7578F09F0C081DC0E72631F30B74C7D2 /* Toucan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9F606CC95D2DB311572ECEFF54B9E94 /* Toucan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		75F7DB2E8187F52BA188123C65AB1285 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		8A186B05B11DA1C486C7B694F3C44D04 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E611990ADC277EC4E528222468D61E /* HSL.swift */; };
+		8A256C56081881D21F48B97AF1FC5F8C /* String+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7294DD2626A1DCD0443D5206E1F2E2 /* String+Timepiece.swift */; };
+		8B606EA36BD293581EF95430CAB387C6 /* NSTimeInterval+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2573CDFC453741AD6494AFEF905BDE6 /* NSTimeInterval+Timepiece.swift */; };
+		918203D24F519968C6106B7F02B3BB83 /* Timepiece-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 451C1A7AA7DA399D2711B2AFED41D1C5 /* Timepiece-dummy.m */; };
+		96BF7B9384BF0CDF81FD47F856217FEF /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E5D3D7E6BEF40323A6809FEB5B500 /* ButtonBarView.swift */; };
+		9FA9EDA3AF0915D6926ACF405DF1016E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		AC70714918C15230E15812309F65E51B /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D528C12CF978DB3FABEDB37387CB1239 /* ButtonCell.xib */; };
+		AE3F2BA5EFA3CA2C7E9CFE2F6F506D5E /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DBFCB0B7F5762B821381ECAA0BDDFC /* IndicatorInfo.swift */; };
+		B6395D0E826BCCED76AA8D7BDEC2EA9B /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F73A7AC9AD7C7E0D8D160FEF40D7D /* BarPagerTabStripViewController.swift */; };
+		B6F867AE5941E5924B0D9933801502E7 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAD42757AF50922AA90ECC92C1E90A24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		BBE9F690BE53ADF64BDE20BFBF2FB262 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A59624FD91E0EEA500023C0C82CC60 /* SwipeDirection.swift */; };
+		C4C3EE8CBCDB84AB4C5F4B7C2A3AFD64 /* NSCalendarUnit+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2FA9F16C25D75FAD45F5BC777CA051 /* NSCalendarUnit+Timepiece.swift */; };
+		CE0446AEB86BF006FBC040343CD31899 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AE10CE1E6415E0AD3085C708EE516DBB /* FXPageControl.m */; };
+		CE1A3F8B57A02C3ABEF76FD525223E08 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E00444EB72DDDF45863B0106AB006 /* PagerTabStripViewController.swift */; };
+		CF2F45F9978F03C2D791792DFCEC0C28 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF09092ADD3DF93CEDB82499C2B54D7 /* ButtonBarPagerTabStripViewController.swift */; };
+		CFF1A7E8E514E3D8678A4A45BF7D6FCE /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FEA8DE7F1797364EB919E62185761C /* PagerTabStripBehaviour.swift */; };
+		D8A4DACDA3F2F67E9C2302F047CFED7F /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35684D50B229689A3770C12E971DA0E /* Int+Timepiece.swift */; };
+		DDAE2730611AEF6250382CE67A9AD99A /* DynamicColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F43065EC006DCCB273FA2326AB2E719 /* DynamicColor-dummy.m */; };
+		E3C3DDAFC3D5C1327FA78B7CACF27B8B /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E61E28ED31B086480867FF76C4070759 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7F60BCE9A7238655D8857A48A4F1663 /* NSCalendar+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DDB258956AF1FDF02B23D086949FD8 /* NSCalendar+Timepiece.swift */; };
+		F31FD54D97F05B67C91A026323CB6E52 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EE93562661C6388B35F3CD557AA5B9 /* ButtonBarViewCell.swift */; };
+		FC46411F12BE95E6FF25112E554A91AF /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D23670C92D5471D1F355362AF90574E /* Toucan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A1838E1A81167833FDCC4A9A69F6C4A8 /* PBXContainerItemProxy */ = {
+		0E658EDA4669E9C588F1C5B3E458DBA7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1258D0C54A0F24C3C9EC6893D7A0B715;
-			remoteInfo = "XLPagerTabStrip-XLPagerTabStrip";
+			remoteGlobalIDString = AA25B82F227839542BE6C984D1271331;
+			remoteInfo = Timepiece;
 		};
-		ECA13A85873291D5AF2374A0442E9B08 /* PBXContainerItemProxy */ = {
+		CB64BAD4C8D7CB70A6F834347F0C33D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0473FA98FCBC3E0CF69EE868DA528D87;
+			remoteGlobalIDString = 08F6A5AF8E89681F880EB03F167AACB7;
+			remoteInfo = DynamicColor;
+		};
+		D36866F5CB2E6B5025ABA5442721D12C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE5D90463A92696A6DCE168AF322FCB;
 			remoteInfo = XLPagerTabStrip;
 		};
-		F4F316F0C03ABB59C078003E28F560E9 /* PBXContainerItemProxy */ = {
+		D5D44162EEC6293BF363BE60051B03CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EF5B91E0C09A35DB96A8A6085C387709;
+			remoteGlobalIDString = CDC4B306094E5BA66EF73084F0ABD0F4;
 			remoteInfo = Toucan;
+		};
+		F34A03EBAC777BAF3FAD1BEB7F0AEE58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A8B76EA5FD41BB58F12A20B112AAF70;
+			remoteInfo = "XLPagerTabStrip-XLPagerTabStrip";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01D888D1689639415EDFC5C686A061B2 /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
-		12F7C7EDEC5A06C00174C85EF9D6B173 /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
-		16EF0884D5252575F342D5817F0879BB /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		1B3BDBABD03EB3982FCD31C4AC2644C0 /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
-		29C079A6163F28332E5F33CFFBDA9BBB /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
+		041E76F66ECB95EDAF3D02EC45C237E8 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		0914B8470D255C521F0F7F723C325FBC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A4AF80594E4D762635B8DCCD4260183 /* Toucan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Toucan.modulemap; sourceTree = "<group>"; };
+		0AA358BDC08F8E33AB4C106CD7F50FCC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F7294DD2626A1DCD0443D5206E1F2E2 /* String+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Timepiece.swift"; path = "Sources/String+Timepiece.swift"; sourceTree = "<group>"; };
+		10DDB258956AF1FDF02B23D086949FD8 /* NSCalendar+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSCalendar+Timepiece.swift"; path = "Sources/NSCalendar+Timepiece.swift"; sourceTree = "<group>"; };
+		1DF09092ADD3DF93CEDB82499C2B54D7 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		1E58EE0B753C4323630B19F2C817CFCE /* DynamicColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-umbrella.h"; sourceTree = "<group>"; };
+		24DBFCB0B7F5762B821381ECAA0BDDFC /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
 		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		2FD3B7440DA03C572D67904521EF129B /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
-		33244BA65E761E3FE8168F5972FA5A50 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
-		3E6AFBD48CEC8510448F8B80675F1503 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		47518221C64555C62B589870E918639D /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
-		489C121CAE0103341EF77448A208276A /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
-		4CA61478D30CD29ED14DFAACB4D78993 /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
-		4EB96E1A5766A8945F3FB51F3D3B32FF /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
-		50AC2479834A70B6B1AD45983C38AEDF /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		530853FBA0CCA5E78FD9DFE665AFB2C5 /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
-		65BEC21ACFA91A0C64AFBBA00678CEB1 /* Toucan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Toucan.modulemap; sourceTree = "<group>"; };
-		68F5944437DEA607EC00653E74149416 /* Toucan-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-prefix.pch"; sourceTree = "<group>"; };
+		2CC7D7C05D1A7C198661794129D57E2E /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
+		32EE93562661C6388B35F3CD557AA5B9 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
+		43E611990ADC277EC4E528222468D61E /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = DynamicColor/HSL.swift; sourceTree = "<group>"; };
+		451C1A7AA7DA399D2711B2AFED41D1C5 /* Timepiece-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Timepiece-dummy.m"; sourceTree = "<group>"; };
+		47BB81F408B892C15CA5DFA9269D28BC /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
+		4ADEB008D4776974C7BFC57F7B6D0991 /* Toucan-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-prefix.pch"; sourceTree = "<group>"; };
+		4D23670C92D5471D1F355362AF90574E /* Toucan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toucan.swift; path = Source/Toucan.swift; sourceTree = "<group>"; };
+		4D5374B88154E0F17E1A7289DBBE4793 /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = DynamicColor/DynamicColor.swift; sourceTree = "<group>"; };
+		4FBCA7224087DDD5DE14AD3D95BFB4CE /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
+		512EB4485112D7D6408C0B57D468ED78 /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
+		58C1C1C94DE4BEAE709BB7475A256CC7 /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicColor.modulemap; sourceTree = "<group>"; };
+		5A5AE13EB4EC9041D88534CAABE01F9A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B507B945690A5568CD703DB398EA015 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF8A48BE8105AE0F8CC54329927F0E3 /* Toucan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toucan-dummy.m"; sourceTree = "<group>"; };
+		687DA8D2CFA9D842B07D041653C75C7B /* Timepiece.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Timepiece.modulemap; sourceTree = "<group>"; };
+		6D2FA9F16C25D75FAD45F5BC777CA051 /* NSCalendarUnit+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSCalendarUnit+Timepiece.swift"; path = "Sources/NSCalendarUnit+Timepiece.swift"; sourceTree = "<group>"; };
 		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6F6C0B7EC224247EF88E93EEAA292810 /* Toucan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-umbrella.h"; sourceTree = "<group>"; };
-		77F7CB405575362D7B2E4D536F97B3FE /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		723A47C669BECC64481C0A3B5262B346 /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		80F183609B094026EFA751A33F6FEB7E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FE585155B6CFAF1908FDB3CC1399F0E /* Duration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Duration.swift; path = Sources/Duration.swift; sourceTree = "<group>"; };
+		81F632F73F9A980C2416898A4E6BCCC4 /* Toucan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toucan.xcconfig; sourceTree = "<group>"; };
+		846E00444EB72DDDF45863B0106AB006 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
+		84FEA8DE7F1797364EB919E62185761C /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
 		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		8FE192E2160F3D1532130DA4D785C39D /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
 		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		983D3B0955139EDEBC38CFAB0988BABA /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
-		A213FABD7FD143CFE4F3DE3B81DF1BA7 /* Toucan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toucan.swift; path = Source/Toucan.swift; sourceTree = "<group>"; };
-		B5A61C681EF4E8691A0654C390C2FF5C /* Toucan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toucan-dummy.m"; sourceTree = "<group>"; };
+		9F43065EC006DCCB273FA2326AB2E719 /* DynamicColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicColor-dummy.m"; sourceTree = "<group>"; };
+		A20F73A7AC9AD7C7E0D8D160FEF40D7D /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		A3AACE5CAFE2861EA95FA7252FDDCDEB /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		AE10CE1E6415E0AD3085C708EE516DBB /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
+		B0B6FEC7C3743D2FB93F913E9BEA268A /* NSDate+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDate+Timepiece.swift"; path = "Sources/NSDate+Timepiece.swift"; sourceTree = "<group>"; };
+		B86A660BAAF7190BC96E68738647B2F3 /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8EA8EEDF8243884310F4BC16B9BEE33 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9D6386E82B4B7A520DEE6F2D1E35993 /* Timepiece-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-umbrella.h"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BBDC475CAEA6D0E4EC7B412DA958D461 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE940B67E559D8B98F5D641DB0D6E8A5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1C5952199B56152AE1668874C3542A9 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C54E385147FDABD511C053A2A7647CE7 /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
+		CB95C266DF33AEAA7AD992600B09D841 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		CC828E9A554C3ABDC3F180B22D56E14A /* Toucan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toucan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCB211A8B0C9C6C56B0BDDC4109D98E6 /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
-		D02BAF928E405C2DF78E6AADDD33DF5F /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
 		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D6E5CFC3C79B7F3060BA22D088CD1963 /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		D0528C8F3ECF5085D4CF093A65ED91AF /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35684D50B229689A3770C12E971DA0E /* Int+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Timepiece.swift"; path = "Sources/Int+Timepiece.swift"; sourceTree = "<group>"; };
+		D528C12CF978DB3FABEDB37387CB1239 /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
+		D5B3AE2261538932892E1ACCC09765AC /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
 		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		E0847605C99950424EBAF065A8A4B0DC /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
+		DB7870CC6FE5DBCDC3275E1B1D3F5B18 /* Toucan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toucan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E46E5D3D7E6BEF40323A6809FEB5B500 /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
+		E51FB572F396D773F267E4ED0F65DB1F /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
+		E61E28ED31B086480867FF76C4070759 /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
+		E68BC644D12627843DFF462B150DD830 /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA046749F8ED7F7DA382E21C812A4A54 /* Toucan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toucan.xcconfig; sourceTree = "<group>"; };
-		F1786665AC92FE78CA2E5D0C74176253 /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
-		FE92E382A6B64BF68B3B6F9B1DD659F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB6363E751AF2B41917C3D2D7A7FA40 /* Timepiece-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-prefix.pch"; sourceTree = "<group>"; };
+		F2573CDFC453741AD6494AFEF905BDE6 /* NSTimeInterval+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTimeInterval+Timepiece.swift"; path = "Sources/NSTimeInterval+Timepiece.swift"; sourceTree = "<group>"; };
+		F2A59624FD91E0EEA500023C0C82CC60 /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
+		F72EF47D3B4C38FE688669310AB00001 /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
+		F9F606CC95D2DB311572ECEFF54B9E94 /* Toucan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-umbrella.h"; sourceTree = "<group>"; };
+		FBF980A9A35DA711CD200D4FAF354CCC /* Timepiece.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Timepiece.xcconfig; sourceTree = "<group>"; };
+		FD088AF52DDB9FFE7E99FBFCE955A4E1 /* NSDateComponents+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDateComponents+Timepiece.swift"; path = "Sources/NSDateComponents+Timepiece.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0C6A9C089B11F1F51AE38CB07907DD68 /* Frameworks */ = {
+		1B32E948FC24660EEC7AF739B493BDD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92328F356A6BFFF1B813A92F08C6FC2B /* Foundation.framework in Frameworks */,
+				1D874F35B3C921F54D529E166ED6CDC1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C6FB1DE95E3B4056AA1E569D661ED7E /* Frameworks */ = {
+		2238FCD94A4DA0978EF3DBA51EAB157A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F082D55773739FE68BB64CDCE7768894 /* Foundation.framework in Frameworks */,
-				667A37A863BDEEFE84FDF268ED3B2097 /* UIKit.framework in Frameworks */,
+				75F7DB2E8187F52BA188123C65AB1285 /* Foundation.framework in Frameworks */,
+				37B3AC1225FDA65F5E8CBEE245490274 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CF19A0063BD58BF75A516949C148ADD /* Frameworks */ = {
+		246C9A3AE3C8EA6AB465B1BD7ECC6054 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55D0F2D32490FAC4D1266276F228EAC0 /* Foundation.framework in Frameworks */,
+				9FA9EDA3AF0915D6926ACF405DF1016E /* Foundation.framework in Frameworks */,
+				4C0C4EB7FF31558A6CC197DE5D2D8144 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B43AEE02196E09890AE6715FFA0C5ACA /* Frameworks */ = {
+		61B4790EB220F07F7B2F62C336B9F6A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD42757AF50922AA90ECC92C1E90A24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E8AC932103E5B529D93B20FE8609A4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		714FC976A5AC1AF6FF1B0279396FA91E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131459BD624873F0B958D1F830AF1D6D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00C25892FCA48C958C137E751CE1E636 /* Resources */ = {
+		0B2F9DCB80ECA26C042ABCA087506F11 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8EA8EEDF8243884310F4BC16B9BEE33 /* Info.plist */,
+				687DA8D2CFA9D842B07D041653C75C7B /* Timepiece.modulemap */,
+				FBF980A9A35DA711CD200D4FAF354CCC /* Timepiece.xcconfig */,
+				451C1A7AA7DA399D2711B2AFED41D1C5 /* Timepiece-dummy.m */,
+				EBB6363E751AF2B41917C3D2D7A7FA40 /* Timepiece-prefix.pch */,
+				B9D6386E82B4B7A520DEE6F2D1E35993 /* Timepiece-umbrella.h */,
 			);
-			name = Resources;
+			name = "Support Files";
+			path = "../Target Support Files/Timepiece";
 			sourceTree = "<group>";
 		};
 		18340F12838DEE43507667CC74401EB1 /* iOS */ = {
@@ -163,13 +242,27 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		240C94DBFADFDCFCEA8C1584F7E4743F /* Toucan */ = {
+		2834170863CBB862E0448BC79CEBE6D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A213FABD7FD143CFE4F3DE3B81DF1BA7 /* Toucan.swift */,
-				CA2A4A68EA8E5EE9BADE50B615A1C71F /* Support Files */,
 			);
-			path = Toucan;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3422F92EDD70928B6A2C78D7DC7075FC /* Timepiece */ = {
+			isa = PBXGroup;
+			children = (
+				7FE585155B6CFAF1908FDB3CC1399F0E /* Duration.swift */,
+				D35684D50B229689A3770C12E971DA0E /* Int+Timepiece.swift */,
+				10DDB258956AF1FDF02B23D086949FD8 /* NSCalendar+Timepiece.swift */,
+				6D2FA9F16C25D75FAD45F5BC777CA051 /* NSCalendarUnit+Timepiece.swift */,
+				B0B6FEC7C3743D2FB93F913E9BEA268A /* NSDate+Timepiece.swift */,
+				FD088AF52DDB9FFE7E99FBFCE955A4E1 /* NSDateComponents+Timepiece.swift */,
+				F2573CDFC453741AD6494AFEF905BDE6 /* NSTimeInterval+Timepiece.swift */,
+				0F7294DD2626A1DCD0443D5206E1F2E2 /* String+Timepiece.swift */,
+				0B2F9DCB80ECA26C042ABCA087506F11 /* Support Files */,
+			);
+			path = Timepiece;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -178,6 +271,48 @@
 				18340F12838DEE43507667CC74401EB1 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CE031D2B91184543A3D318CC4373228 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0914B8470D255C521F0F7F723C325FBC /* Info.plist */,
+				0A4AF80594E4D762635B8DCCD4260183 /* Toucan.modulemap */,
+				81F632F73F9A980C2416898A4E6BCCC4 /* Toucan.xcconfig */,
+				5BF8A48BE8105AE0F8CC54329927F0E3 /* Toucan-dummy.m */,
+				4ADEB008D4776974C7BFC57F7B6D0991 /* Toucan-prefix.pch */,
+				F9F606CC95D2DB311572ECEFF54B9E94 /* Toucan-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Toucan";
+			sourceTree = "<group>";
+		};
+		665630D1E450CE50DE820055B434CF42 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AA358BDC08F8E33AB4C106CD7F50FCC /* Info.plist */,
+				D5B3AE2261538932892E1ACCC09765AC /* XLPagerTabStrip.modulemap */,
+				2CC7D7C05D1A7C198661794129D57E2E /* XLPagerTabStrip.xcconfig */,
+				512EB4485112D7D6408C0B57D468ED78 /* XLPagerTabStrip-dummy.m */,
+				47BB81F408B892C15CA5DFA9269D28BC /* XLPagerTabStrip-prefix.pch */,
+				E61E28ED31B086480867FF76C4070759 /* XLPagerTabStrip-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XLPagerTabStrip";
+			sourceTree = "<group>";
+		};
+		6DB89FBC99031DF853C6121C57807D7C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				58C1C1C94DE4BEAE709BB7475A256CC7 /* DynamicColor.modulemap */,
+				8FE192E2160F3D1532130DA4D785C39D /* DynamicColor.xcconfig */,
+				9F43065EC006DCCB273FA2326AB2E719 /* DynamicColor-dummy.m */,
+				F72EF47D3B4C38FE688669310AB00001 /* DynamicColor-prefix.pch */,
+				1E58EE0B753C4323630B19F2C817CFCE /* DynamicColor-umbrella.h */,
+				5B507B945690A5568CD703DB398EA015 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DynamicColor";
 			sourceTree = "<group>";
 		};
 		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
@@ -203,46 +338,42 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				FEF455B344DDA8889D96FC5FA13D2703 /* Pods */,
-				8817850124006DE20909850DB2904070 /* Products */,
+				FEEDEBADA68A3F770771B300C25774D5 /* Pods */,
+				8AC12B721F338346A8BC7B5F19EC096A /* Products */,
 				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8817850124006DE20909850DB2904070 /* Products */ = {
+		8AC12B721F338346A8BC7B5F19EC096A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE940B67E559D8B98F5D641DB0D6E8A5 /* Pods.framework */,
-				CC828E9A554C3ABDC3F180B22D56E14A /* Toucan.framework */,
-				77F7CB405575362D7B2E4D536F97B3FE /* XLPagerTabStrip.bundle */,
-				BBDC475CAEA6D0E4EC7B412DA958D461 /* XLPagerTabStrip.framework */,
+				723A47C669BECC64481C0A3B5262B346 /* DynamicColor.framework */,
+				5A5AE13EB4EC9041D88534CAABE01F9A /* Pods.framework */,
+				CB95C266DF33AEAA7AD992600B09D841 /* Timepiece.framework */,
+				DB7870CC6FE5DBCDC3275E1B1D3F5B18 /* Toucan.framework */,
+				B86A660BAAF7190BC96E68738647B2F3 /* XLPagerTabStrip.bundle */,
+				D0528C8F3ECF5085D4CF093A65ED91AF /* XLPagerTabStrip.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9E186480DEC7233628A2674925EA1288 /* XLPagerTabStrip */ = {
+		ABE8179A6138F0A2600041780E1CEC27 /* Toucan */ = {
 			isa = PBXGroup;
 			children = (
-				50AC2479834A70B6B1AD45983C38AEDF /* BarPagerTabStripViewController.swift */,
-				E0847605C99950424EBAF065A8A4B0DC /* BarView.swift */,
-				3E6AFBD48CEC8510448F8B80675F1503 /* BaseButtonBarPagerTabStripViewController.swift */,
-				C1C5952199B56152AE1668874C3542A9 /* ButtonBarPagerTabStripViewController.swift */,
-				4CA61478D30CD29ED14DFAACB4D78993 /* ButtonBarView.swift */,
-				D02BAF928E405C2DF78E6AADDD33DF5F /* ButtonBarViewCell.swift */,
-				CCB211A8B0C9C6C56B0BDDC4109D98E6 /* ButtonCell.xib */,
-				12F7C7EDEC5A06C00174C85EF9D6B173 /* FXPageControl.h */,
-				4EB96E1A5766A8945F3FB51F3D3B32FF /* FXPageControl.m */,
-				489C121CAE0103341EF77448A208276A /* IndicatorInfo.swift */,
-				530853FBA0CCA5E78FD9DFE665AFB2C5 /* PagerTabStripBehaviour.swift */,
-				29C079A6163F28332E5F33CFFBDA9BBB /* PagerTabStripError.swift */,
-				33244BA65E761E3FE8168F5972FA5A50 /* PagerTabStripViewController.swift */,
-				D6E5CFC3C79B7F3060BA22D088CD1963 /* SegmentedPagerTabStripViewController.swift */,
-				47518221C64555C62B589870E918639D /* SwipeDirection.swift */,
-				16EF0884D5252575F342D5817F0879BB /* TwitterPagerTabStripViewController.swift */,
-				00C25892FCA48C958C137E751CE1E636 /* Resources */,
-				FCE720416BACA888B6E3A1EC33FF1E78 /* Support Files */,
+				4D23670C92D5471D1F355362AF90574E /* Toucan.swift */,
+				4CE031D2B91184543A3D318CC4373228 /* Support Files */,
 			);
-			path = XLPagerTabStrip;
+			path = Toucan;
+			sourceTree = "<group>";
+		};
+		B4D5C72F544B302BE8673A5B2B3F3EE7 /* DynamicColor */ = {
+			isa = PBXGroup;
+			children = (
+				4D5374B88154E0F17E1A7289DBBE4793 /* DynamicColor.swift */,
+				43E611990ADC277EC4E528222468D61E /* HSL.swift */,
+				6DB89FBC99031DF853C6121C57807D7C /* Support Files */,
+			);
+			path = DynamicColor;
 			sourceTree = "<group>";
 		};
 		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
@@ -253,39 +384,38 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		CA2A4A68EA8E5EE9BADE50B615A1C71F /* Support Files */ = {
+		D755B999D273F7459614DCCC576F717D /* XLPagerTabStrip */ = {
 			isa = PBXGroup;
 			children = (
-				FE92E382A6B64BF68B3B6F9B1DD659F6 /* Info.plist */,
-				65BEC21ACFA91A0C64AFBBA00678CEB1 /* Toucan.modulemap */,
-				EA046749F8ED7F7DA382E21C812A4A54 /* Toucan.xcconfig */,
-				B5A61C681EF4E8691A0654C390C2FF5C /* Toucan-dummy.m */,
-				68F5944437DEA607EC00653E74149416 /* Toucan-prefix.pch */,
-				6F6C0B7EC224247EF88E93EEAA292810 /* Toucan-umbrella.h */,
+				A20F73A7AC9AD7C7E0D8D160FEF40D7D /* BarPagerTabStripViewController.swift */,
+				4FBCA7224087DDD5DE14AD3D95BFB4CE /* BarView.swift */,
+				041E76F66ECB95EDAF3D02EC45C237E8 /* BaseButtonBarPagerTabStripViewController.swift */,
+				1DF09092ADD3DF93CEDB82499C2B54D7 /* ButtonBarPagerTabStripViewController.swift */,
+				E46E5D3D7E6BEF40323A6809FEB5B500 /* ButtonBarView.swift */,
+				32EE93562661C6388B35F3CD557AA5B9 /* ButtonBarViewCell.swift */,
+				D528C12CF978DB3FABEDB37387CB1239 /* ButtonCell.xib */,
+				E51FB572F396D773F267E4ED0F65DB1F /* FXPageControl.h */,
+				AE10CE1E6415E0AD3085C708EE516DBB /* FXPageControl.m */,
+				24DBFCB0B7F5762B821381ECAA0BDDFC /* IndicatorInfo.swift */,
+				84FEA8DE7F1797364EB919E62185761C /* PagerTabStripBehaviour.swift */,
+				C54E385147FDABD511C053A2A7647CE7 /* PagerTabStripError.swift */,
+				846E00444EB72DDDF45863B0106AB006 /* PagerTabStripViewController.swift */,
+				A3AACE5CAFE2861EA95FA7252FDDCDEB /* SegmentedPagerTabStripViewController.swift */,
+				F2A59624FD91E0EEA500023C0C82CC60 /* SwipeDirection.swift */,
+				E68BC644D12627843DFF462B150DD830 /* TwitterPagerTabStripViewController.swift */,
+				2834170863CBB862E0448BC79CEBE6D2 /* Resources */,
+				665630D1E450CE50DE820055B434CF42 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Toucan";
+			path = XLPagerTabStrip;
 			sourceTree = "<group>";
 		};
-		FCE720416BACA888B6E3A1EC33FF1E78 /* Support Files */ = {
+		FEEDEBADA68A3F770771B300C25774D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				80F183609B094026EFA751A33F6FEB7E /* Info.plist */,
-				F1786665AC92FE78CA2E5D0C74176253 /* XLPagerTabStrip.modulemap */,
-				983D3B0955139EDEBC38CFAB0988BABA /* XLPagerTabStrip.xcconfig */,
-				2FD3B7440DA03C572D67904521EF129B /* XLPagerTabStrip-dummy.m */,
-				01D888D1689639415EDFC5C686A061B2 /* XLPagerTabStrip-prefix.pch */,
-				1B3BDBABD03EB3982FCD31C4AC2644C0 /* XLPagerTabStrip-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/XLPagerTabStrip";
-			sourceTree = "<group>";
-		};
-		FEF455B344DDA8889D96FC5FA13D2703 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				240C94DBFADFDCFCEA8C1584F7E4743F /* Toucan */,
-				9E186480DEC7233628A2674925EA1288 /* XLPagerTabStrip */,
+				B4D5C72F544B302BE8673A5B2B3F3EE7 /* DynamicColor */,
+				3422F92EDD70928B6A2C78D7DC7075FC /* Timepiece */,
+				ABE8179A6138F0A2600041780E1CEC27 /* Toucan */,
+				D755B999D273F7459614DCCC576F717D /* XLPagerTabStrip */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -293,60 +423,74 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		061678EB4D232563FD034879EF3353C6 /* Headers */ = {
+		1AA473C3F9E49BD7998C51F390611E03 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51BAFFE7D217EB9CA8CC70B00E455116 /* Toucan-umbrella.h in Headers */,
+				2F7FA66326610C23B56F272DB59624D8 /* FXPageControl.h in Headers */,
+				E3C3DDAFC3D5C1327FA78B7CACF27B8B /* XLPagerTabStrip-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3585A7E652D5947A6477D6048C327B5 /* Headers */ = {
+		78DC979041E6B37A641A89904C2E68D7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A8EE7431C384D75645A89BCFC71DA58 /* FXPageControl.h in Headers */,
-				9E5BEC0A3057AEA7299FB84C5D04AD93 /* XLPagerTabStrip-umbrella.h in Headers */,
+				B6F867AE5941E5924B0D9933801502E7 /* Pods-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BBD8EC5D565273187F06F045E192593D /* Headers */ = {
+		C2044C2DCAA4CC4226793B82270F31B8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36BA5C8E3A7154D97C6E1AC69BAA510A /* Pods-umbrella.h in Headers */,
+				7578F09F0C081DC0E72631F30B74C7D2 /* Toucan-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD7231EDA24F70411F42E6452B8618E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E938F95DB58AF7A4E933D7BD645F0B /* DynamicColor-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D579AF093C5AA33AC66BBEAC904F0E57 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20F0425C74A06D5D761E780853E536E7 /* Timepiece-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0473FA98FCBC3E0CF69EE868DA528D87 /* XLPagerTabStrip */ = {
+		08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B35BDF9561F67E92FAD26688B5C8EAF /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */;
+			buildConfigurationList = FC4702B144C514B41D51E60E93CA52C5 /* Build configuration list for PBXNativeTarget "DynamicColor" */;
 			buildPhases = (
-				149463D6D27B53BAE9535A4C7C35BCB2 /* Sources */,
-				3C6FB1DE95E3B4056AA1E569D661ED7E /* Frameworks */,
-				A543FCA2BB9292185F315CB713AE138F /* Resources */,
-				B3585A7E652D5947A6477D6048C327B5 /* Headers */,
+				C8D6A9BD06E5CEFF7F6CD051253FDE6C /* Sources */,
+				2238FCD94A4DA0978EF3DBA51EAB157A /* Frameworks */,
+				CD7231EDA24F70411F42E6452B8618E5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0E0C5F2ABEC86C8912844505D1C24016 /* PBXTargetDependency */,
 			);
-			name = XLPagerTabStrip;
-			productName = XLPagerTabStrip;
-			productReference = BBDC475CAEA6D0E4EC7B412DA958D461 /* XLPagerTabStrip.framework */;
+			name = DynamicColor;
+			productName = DynamicColor;
+			productReference = 723A47C669BECC64481C0A3B5262B346 /* DynamicColor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1258D0C54A0F24C3C9EC6893D7A0B715 /* XLPagerTabStrip-XLPagerTabStrip */ = {
+		4A8B76EA5FD41BB58F12A20B112AAF70 /* XLPagerTabStrip-XLPagerTabStrip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35DC78ECF1B48A10EC7649FC67AB4F62 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */;
+			buildConfigurationList = 39178FEED81F6B24AB359337AE564934 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */;
 			buildPhases = (
-				B56A2BEAC9F88D38C690292F44AEDB0F /* Sources */,
-				B43AEE02196E09890AE6715FFA0C5ACA /* Frameworks */,
-				28047ABC52C39841C202A0120C3D7C0F /* Resources */,
+				F2ABB87B0B2301B5596A9311B746CE62 /* Sources */,
+				6E8AC932103E5B529D93B20FE8609A4F /* Frameworks */,
+				92AF4030BFF1D6D7034B3983A925E6FF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -354,35 +498,54 @@
 			);
 			name = "XLPagerTabStrip-XLPagerTabStrip";
 			productName = "XLPagerTabStrip-XLPagerTabStrip";
-			productReference = 77F7CB405575362D7B2E4D536F97B3FE /* XLPagerTabStrip.bundle */;
+			productReference = B86A660BAAF7190BC96E68738647B2F3 /* XLPagerTabStrip.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		23C8E4BBFC0FCF1B0239D89332961B8C /* Pods */ = {
+		7F2D0327BFBB164F77A47D4CED0F78C0 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A307EEE9CCCA93E451D54DA4EFE75FB7 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 91BD6C766CD53712FD36A8AB035B07B6 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				346E4116E71CA0E5CC336CE9A34FCE4C /* Sources */,
-				0C6A9C089B11F1F51AE38CB07907DD68 /* Frameworks */,
-				BBD8EC5D565273187F06F045E192593D /* Headers */,
+				ED97E21C0991D8FE3CC79EA29E6E1781 /* Sources */,
+				1B32E948FC24660EEC7AF739B493BDD2 /* Frameworks */,
+				78DC979041E6B37A641A89904C2E68D7 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EDB5FA911E1E2A44B4A3C4985BD8A723 /* PBXTargetDependency */,
-				777024E87D06AB5292B3EF2E4BCA293B /* PBXTargetDependency */,
+				2C01C89A1F24B0F11B46D06E253DE005 /* PBXTargetDependency */,
+				D584D87B5F2C380C66FC2DC5E0CFE1D8 /* PBXTargetDependency */,
+				A005AEEE01BFA33EBBF0C8777861FCAA /* PBXTargetDependency */,
+				2575442732B5E84642BAC27E93A14E4F /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = BE940B67E559D8B98F5D641DB0D6E8A5 /* Pods.framework */;
+			productReference = 5A5AE13EB4EC9041D88534CAABE01F9A /* Pods.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EF5B91E0C09A35DB96A8A6085C387709 /* Toucan */ = {
+		AA25B82F227839542BE6C984D1271331 /* Timepiece */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C3494DB6AFA2321E41EA451E37B8421 /* Build configuration list for PBXNativeTarget "Toucan" */;
+			buildConfigurationList = 675B6E7559035EBB3F0337694183467E /* Build configuration list for PBXNativeTarget "Timepiece" */;
 			buildPhases = (
-				F7BABB2F20462F2DBC817924B6113E37 /* Sources */,
-				3CF19A0063BD58BF75A516949C148ADD /* Frameworks */,
-				061678EB4D232563FD034879EF3353C6 /* Headers */,
+				2E0C95A55375251859CD107D30BB2DF6 /* Sources */,
+				61B4790EB220F07F7B2F62C336B9F6A5 /* Frameworks */,
+				D579AF093C5AA33AC66BBEAC904F0E57 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Timepiece;
+			productName = Timepiece;
+			productReference = CB95C266DF33AEAA7AD992600B09D841 /* Timepiece.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CDC4B306094E5BA66EF73084F0ABD0F4 /* Toucan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D673850FAFC9C5AD176287BC0C29BCF /* Build configuration list for PBXNativeTarget "Toucan" */;
+			buildPhases = (
+				E685F4BE2F460D1FCE32C04BE9D580A1 /* Sources */,
+				714FC976A5AC1AF6FF1B0279396FA91E /* Frameworks */,
+				C2044C2DCAA4CC4226793B82270F31B8 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -390,7 +553,26 @@
 			);
 			name = Toucan;
 			productName = Toucan;
-			productReference = CC828E9A554C3ABDC3F180B22D56E14A /* Toucan.framework */;
+			productReference = DB7870CC6FE5DBCDC3275E1B1D3F5B18 /* Toucan.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FCE5D90463A92696A6DCE168AF322FCB /* XLPagerTabStrip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55A15A40A0B871A13C2AE14ED2478330 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */;
+			buildPhases = (
+				E51D8747C6B18A65099A9C8F96D71DEC /* Sources */,
+				246C9A3AE3C8EA6AB465B1BD7ECC6054 /* Frameworks */,
+				96AB25980222A2F0E1975F3DDD4FD874 /* Resources */,
+				1AA473C3F9E49BD7998C51F390611E03 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				876A41F3BF2BE7753969822A8E047EB0 /* PBXTargetDependency */,
+			);
+			name = XLPagerTabStrip;
+			productName = XLPagerTabStrip;
+			productReference = D0528C8F3ECF5085D4CF093A65ED91AF /* XLPagerTabStrip.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -410,112 +592,204 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 8817850124006DE20909850DB2904070 /* Products */;
+			productRefGroup = 8AC12B721F338346A8BC7B5F19EC096A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23C8E4BBFC0FCF1B0239D89332961B8C /* Pods */,
-				EF5B91E0C09A35DB96A8A6085C387709 /* Toucan */,
-				0473FA98FCBC3E0CF69EE868DA528D87 /* XLPagerTabStrip */,
-				1258D0C54A0F24C3C9EC6893D7A0B715 /* XLPagerTabStrip-XLPagerTabStrip */,
+				08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */,
+				7F2D0327BFBB164F77A47D4CED0F78C0 /* Pods */,
+				AA25B82F227839542BE6C984D1271331 /* Timepiece */,
+				CDC4B306094E5BA66EF73084F0ABD0F4 /* Toucan */,
+				FCE5D90463A92696A6DCE168AF322FCB /* XLPagerTabStrip */,
+				4A8B76EA5FD41BB58F12A20B112AAF70 /* XLPagerTabStrip-XLPagerTabStrip */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		28047ABC52C39841C202A0120C3D7C0F /* Resources */ = {
+		92AF4030BFF1D6D7034B3983A925E6FF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12BC0C51F02FD067E8CAF798DDF3FE31 /* ButtonCell.xib in Resources */,
+				AC70714918C15230E15812309F65E51B /* ButtonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A543FCA2BB9292185F315CB713AE138F /* Resources */ = {
+		96AB25980222A2F0E1975F3DDD4FD874 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F18EA7F502522F2BC47D7AFE897E79C /* XLPagerTabStrip.bundle in Resources */,
+				5B58A6E3E4CBD40E72DE5338B67A0897 /* XLPagerTabStrip.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		149463D6D27B53BAE9535A4C7C35BCB2 /* Sources */ = {
+		2E0C95A55375251859CD107D30BB2DF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4ACFD2303FF45C43CC1EF20FD15A956 /* BarPagerTabStripViewController.swift in Sources */,
-				6677D162055B7F27C550E98F3CFD6B84 /* BarView.swift in Sources */,
-				11D2CE01B112073AE320BBB0CEA2F775 /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
-				10BDABA2D6CF3E7835688C7BB78D1D8E /* ButtonBarPagerTabStripViewController.swift in Sources */,
-				1DE34899D5B5F2B74D9F2AFE30CC9106 /* ButtonBarView.swift in Sources */,
-				ECDA578DAB12C6615524352B6DC928C5 /* ButtonBarViewCell.swift in Sources */,
-				7F9045D4AEED0EF8ABB74435A35525AE /* ButtonCell.xib in Sources */,
-				7F995ECE4CED446EEAA11ED5F4B838B3 /* FXPageControl.m in Sources */,
-				598AFC3B8D07E9B345D9E6693BF3AE65 /* IndicatorInfo.swift in Sources */,
-				1EB88286DEEE3AFD47F932348567BC2D /* PagerTabStripBehaviour.swift in Sources */,
-				E2313715682274B99A42C40E645410F5 /* PagerTabStripError.swift in Sources */,
-				62A439EC37ABDC7A1AC138C27BE9C3D4 /* PagerTabStripViewController.swift in Sources */,
-				2C1937FB8B6A8333DB6F484D867425DA /* SegmentedPagerTabStripViewController.swift in Sources */,
-				46CE557BA0930F5DE2C6ACA317439D2F /* SwipeDirection.swift in Sources */,
-				D540974BF1A6ED21FFC592D8121E3CB0 /* TwitterPagerTabStripViewController.swift in Sources */,
-				B48C2EE07EE213DB03CA5DE67944166D /* XLPagerTabStrip-dummy.m in Sources */,
+				06B9BB6FD07341F2A02C0E3ADE0E178D /* Duration.swift in Sources */,
+				D8A4DACDA3F2F67E9C2302F047CFED7F /* Int+Timepiece.swift in Sources */,
+				E7F60BCE9A7238655D8857A48A4F1663 /* NSCalendar+Timepiece.swift in Sources */,
+				C4C3EE8CBCDB84AB4C5F4B7C2A3AFD64 /* NSCalendarUnit+Timepiece.swift in Sources */,
+				14090ACF0234ECEE66759EBC8E6475FF /* NSDate+Timepiece.swift in Sources */,
+				1A93B215B62C0BC1B8203576F1BF4E74 /* NSDateComponents+Timepiece.swift in Sources */,
+				8B606EA36BD293581EF95430CAB387C6 /* NSTimeInterval+Timepiece.swift in Sources */,
+				8A256C56081881D21F48B97AF1FC5F8C /* String+Timepiece.swift in Sources */,
+				918203D24F519968C6106B7F02B3BB83 /* Timepiece-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		346E4116E71CA0E5CC336CE9A34FCE4C /* Sources */ = {
+		C8D6A9BD06E5CEFF7F6CD051253FDE6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A0BC7AAA2E484DE4C7C69FF66D202A8 /* Pods-dummy.m in Sources */,
+				DDAE2730611AEF6250382CE67A9AD99A /* DynamicColor-dummy.m in Sources */,
+				392A989FDF1FBFB5B1C1489E5517E36E /* DynamicColor.swift in Sources */,
+				8A186B05B11DA1C486C7B694F3C44D04 /* HSL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B56A2BEAC9F88D38C690292F44AEDB0F /* Sources */ = {
+		E51D8747C6B18A65099A9C8F96D71DEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6395D0E826BCCED76AA8D7BDEC2EA9B /* BarPagerTabStripViewController.swift in Sources */,
+				176E9D13FB5930EA89EF2BAA5A79B52D /* BarView.swift in Sources */,
+				07E3A4FF84860A61EDA9C819D15229CB /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
+				CF2F45F9978F03C2D791792DFCEC0C28 /* ButtonBarPagerTabStripViewController.swift in Sources */,
+				96BF7B9384BF0CDF81FD47F856217FEF /* ButtonBarView.swift in Sources */,
+				F31FD54D97F05B67C91A026323CB6E52 /* ButtonBarViewCell.swift in Sources */,
+				70A3924E4879386CAA42D743EAD3CE50 /* ButtonCell.xib in Sources */,
+				CE0446AEB86BF006FBC040343CD31899 /* FXPageControl.m in Sources */,
+				AE3F2BA5EFA3CA2C7E9CFE2F6F506D5E /* IndicatorInfo.swift in Sources */,
+				CFF1A7E8E514E3D8678A4A45BF7D6FCE /* PagerTabStripBehaviour.swift in Sources */,
+				31BE3C4177A616BF34DCD9C6CFA50297 /* PagerTabStripError.swift in Sources */,
+				CE1A3F8B57A02C3ABEF76FD525223E08 /* PagerTabStripViewController.swift in Sources */,
+				4CF32EC29869710D309C69792E65BD4C /* SegmentedPagerTabStripViewController.swift in Sources */,
+				BBE9F690BE53ADF64BDE20BFBF2FB262 /* SwipeDirection.swift in Sources */,
+				48A1A7C3BADF7ADF73DF3F0DF17D4029 /* TwitterPagerTabStripViewController.swift in Sources */,
+				541C407F145011D0A883993A93331AC1 /* XLPagerTabStrip-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F7BABB2F20462F2DBC817924B6113E37 /* Sources */ = {
+		E685F4BE2F460D1FCE32C04BE9D580A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B18E034C091F07FE7567B059F6C6FD64 /* Toucan-dummy.m in Sources */,
-				F9CD3319D624BC70412D9301DFC01F9E /* Toucan.swift in Sources */,
+				5EEC203A0F765A770FDB9057185E75E8 /* Toucan-dummy.m in Sources */,
+				FC46411F12BE95E6FF25112E554A91AF /* Toucan.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED97E21C0991D8FE3CC79EA29E6E1781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2B8AF5A32B2998ED5E021D536FD87F /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2ABB87B0B2301B5596A9311B746CE62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0E0C5F2ABEC86C8912844505D1C24016 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "XLPagerTabStrip-XLPagerTabStrip";
-			target = 1258D0C54A0F24C3C9EC6893D7A0B715 /* XLPagerTabStrip-XLPagerTabStrip */;
-			targetProxy = A1838E1A81167833FDCC4A9A69F6C4A8 /* PBXContainerItemProxy */;
-		};
-		777024E87D06AB5292B3EF2E4BCA293B /* PBXTargetDependency */ = {
+		2575442732B5E84642BAC27E93A14E4F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = XLPagerTabStrip;
-			target = 0473FA98FCBC3E0CF69EE868DA528D87 /* XLPagerTabStrip */;
-			targetProxy = ECA13A85873291D5AF2374A0442E9B08 /* PBXContainerItemProxy */;
+			target = FCE5D90463A92696A6DCE168AF322FCB /* XLPagerTabStrip */;
+			targetProxy = D36866F5CB2E6B5025ABA5442721D12C /* PBXContainerItemProxy */;
 		};
-		EDB5FA911E1E2A44B4A3C4985BD8A723 /* PBXTargetDependency */ = {
+		2C01C89A1F24B0F11B46D06E253DE005 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DynamicColor;
+			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
+			targetProxy = CB64BAD4C8D7CB70A6F834347F0C33D0 /* PBXContainerItemProxy */;
+		};
+		876A41F3BF2BE7753969822A8E047EB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "XLPagerTabStrip-XLPagerTabStrip";
+			target = 4A8B76EA5FD41BB58F12A20B112AAF70 /* XLPagerTabStrip-XLPagerTabStrip */;
+			targetProxy = F34A03EBAC777BAF3FAD1BEB7F0AEE58 /* PBXContainerItemProxy */;
+		};
+		A005AEEE01BFA33EBBF0C8777861FCAA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Toucan;
-			target = EF5B91E0C09A35DB96A8A6085C387709 /* Toucan */;
-			targetProxy = F4F316F0C03ABB59C078003E28F560E9 /* PBXContainerItemProxy */;
+			target = CDC4B306094E5BA66EF73084F0ABD0F4 /* Toucan */;
+			targetProxy = D5D44162EEC6293BF363BE60051B03CC /* PBXContainerItemProxy */;
+		};
+		D584D87B5F2C380C66FC2DC5E0CFE1D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Timepiece;
+			target = AA25B82F227839542BE6C984D1271331 /* Timepiece */;
+			targetProxy = 0E658EDA4669E9C588F1C5B3E458DBA7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		126FD12B30A43C4165EEE5FDCB60946C /* Release */ = {
+		23581A6F0C12B7DDF2136C40068900C3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 983D3B0955139EDEBC38CFAB0988BABA /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = 2CC7D7C05D1A7C198661794129D57E2E /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		2538188D781890E6C4E24CAC008555CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CC7D7C05D1A7C198661794129D57E2E /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4344394955DDF613C394FF88F43FB19E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CC7D7C05D1A7C198661794129D57E2E /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		4DE1CA8BBA344DDD387EF574CE96CF8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CC7D7C05D1A7C198661794129D57E2E /* XLPagerTabStrip.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -539,49 +813,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		174ACB2BD1C9584502D14B7268B96F3C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		40D2BF4085629BF830DF0F31A3683782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 983D3B0955139EDEBC38CFAB0988BABA /* XLPagerTabStrip.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = XLPagerTabStrip;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
 		};
 		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -622,6 +853,37 @@
 			};
 			name = Debug;
 		};
+		71765A6E55CE8801A7D26EC674AA1ECA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -656,9 +918,64 @@
 			};
 			name = Release;
 		};
-		8935E1F4A15FB9EFB186F47D6B248741 /* Release */ = {
+		89CE7CD7486FD51184102D1B63290300 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA046749F8ED7F7DA382E21C812A4A54 /* Toucan.xcconfig */;
+			baseConfigurationReference = 8FE192E2160F3D1532130DA4D785C39D /* DynamicColor.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DynamicColor/DynamicColor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DynamicColor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DynamicColor/DynamicColor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DynamicColor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A0FF20E247DC0A7E54362B2F47A77CD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FE192E2160F3D1532130DA4D785C39D /* DynamicColor.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DynamicColor/DynamicColor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DynamicColor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DynamicColor/DynamicColor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DynamicColor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9ED2E9DF0F90D883490C0381143C869 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81F632F73F9A980C2416898A4E6BCCC4 /* Toucan.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -683,7 +1000,63 @@
 			};
 			name = Release;
 		};
-		969A6B4B5B2BA6B489679BC916F768D0 /* Release */ = {
+		B3E6A3A841D3AAD55BEFFE5461E86C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81F632F73F9A980C2416898A4E6BCCC4 /* Toucan.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Toucan/Toucan-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toucan/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toucan/Toucan.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Toucan;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BBB3DEB6CDBEE2AA50074D66C76B9EE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBF980A9A35DA711CD200D4FAF354CCC /* Timepiece.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Timepiece/Timepiece-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Timepiece/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Timepiece/Timepiece.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Timepiece;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CDB2E601432526AE19EC3412FB925DE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
 			buildSettings = {
@@ -713,9 +1086,9 @@
 			};
 			name = Release;
 		};
-		B04381FBC0F2F45E626845C93E493392 /* Debug */ = {
+		F437D92B353F6844D8094EBB8FEBF6F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 983D3B0955139EDEBC38CFAB0988BABA /* XLPagerTabStrip.xcconfig */;
+			baseConfigurationReference = FBF980A9A35DA711CD200D4FAF354CCC /* Timepiece.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -724,60 +1097,19 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Timepiece/Timepiece-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Timepiece/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = XLPagerTabStrip;
+				MODULEMAP_FILE = "Target Support Files/Timepiece/Timepiece.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Timepiece;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D7F394C8BCAC9719653D740C5038AFCB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA046749F8ED7F7DA382E21C812A4A54 /* Toucan.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Toucan/Toucan-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Toucan/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Toucan/Toucan.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Toucan;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FE869CBD0AA14B6DE2A34A5EA7A22A32 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 983D3B0955139EDEBC38CFAB0988BABA /* XLPagerTabStrip.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = XLPagerTabStrip;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -793,38 +1125,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35DC78ECF1B48A10EC7649FC67AB4F62 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */ = {
+		39178FEED81F6B24AB359337AE564934 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				40D2BF4085629BF830DF0F31A3683782 /* Debug */,
-				FE869CBD0AA14B6DE2A34A5EA7A22A32 /* Release */,
+				4344394955DDF613C394FF88F43FB19E /* Debug */,
+				23581A6F0C12B7DDF2136C40068900C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C3494DB6AFA2321E41EA451E37B8421 /* Build configuration list for PBXNativeTarget "Toucan" */ = {
+		4D673850FAFC9C5AD176287BC0C29BCF /* Build configuration list for PBXNativeTarget "Toucan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D7F394C8BCAC9719653D740C5038AFCB /* Debug */,
-				8935E1F4A15FB9EFB186F47D6B248741 /* Release */,
+				B3E6A3A841D3AAD55BEFFE5461E86C24 /* Debug */,
+				A9ED2E9DF0F90D883490C0381143C869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B35BDF9561F67E92FAD26688B5C8EAF /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */ = {
+		55A15A40A0B871A13C2AE14ED2478330 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B04381FBC0F2F45E626845C93E493392 /* Debug */,
-				126FD12B30A43C4165EEE5FDCB60946C /* Release */,
+				2538188D781890E6C4E24CAC008555CF /* Debug */,
+				4DE1CA8BBA344DDD387EF574CE96CF8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A307EEE9CCCA93E451D54DA4EFE75FB7 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		675B6E7559035EBB3F0337694183467E /* Build configuration list for PBXNativeTarget "Timepiece" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				174ACB2BD1C9584502D14B7268B96F3C /* Debug */,
-				969A6B4B5B2BA6B489679BC916F768D0 /* Release */,
+				BBB3DEB6CDBEE2AA50074D66C76B9EE5 /* Debug */,
+				F437D92B353F6844D8094EBB8FEBF6F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91BD6C766CD53712FD36A8AB035B07B6 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71765A6E55CE8801A7D26EC674AA1ECA /* Debug */,
+				CDB2E601432526AE19EC3412FB925DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC4702B144C514B41D51E60E93CA52C5 /* Build configuration list for PBXNativeTarget "DynamicColor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CE7CD7486FD51184102D1B63290300 /* Debug */,
+				A0FF20E247DC0A7E54362B2F47A77CD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
