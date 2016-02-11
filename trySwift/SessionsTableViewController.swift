@@ -18,7 +18,7 @@ class SessionsTableViewController: UITableViewController {
         
         tableView.registerNib(UINib(nibName: String(SessionTableViewCell), bundle: nil), forCellReuseIdentifier: String(SessionTableViewCell))
         
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 160
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 

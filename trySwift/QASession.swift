@@ -70,7 +70,7 @@ extension QASession {
             id: 523,
             startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 14, minute: 30, second: 0),
             endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 15, minute: 55, second: 0),
-            speakers: [Speaker.matthewGillingham, Speaker.rachelBobbins, Speaker.himiSato],
+            speakers: [Speaker.matthewGillingham, Speaker.himiSato, Speaker.rachelBobbins],
             location: SeminarRoom17F
         ),
         QASession(

@@ -8,7 +8,7 @@
 
 
 struct QASessionDataSourceDay1: QASessionDataSourceProtocol {
-    var header = isJapanese ? "3月2日（水）" : "Wed, March 2"
+    var header = isJapanese ? "3月2日（水）" : "Wed, Mar 2"
     var qaSessions = QASession.qaSessionsDay1
 }
 
