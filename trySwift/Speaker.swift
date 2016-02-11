@@ -87,7 +87,10 @@ extension Speaker {
         twitter: "cockscomb",
         image: Toucan(image: UIImage(named: "hiroki")!).maskWithEllipse().image,
         bio: isJapanese ? "はてなのソフトウェアエンジニアです。学生時代にMac/iOSアプリ開発からエンジニアとしてのキャリアをスタートしました。Apple、Cocoa (touch), Objective-C そして Swift が大好きです。" : "Software Engineer, working at Hatena in Kyoto. I started my career as a developer of OS X/iOS apps when I was a student. I’m loving Apple, Cocoa (touch), Objective-C and Swift.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "Motivation based library abstraction" : "Motivation based library abstraction",
+            summary: isJapanese ? "最近、自分が直面した問題を解決するためのライブラリを作ることがあります。そのようなライブラリは、実際の問題に対する解決策を具現化したものです。今日のSwiftには、解決するべき課題がたくさんあることでしょう。現実のモチベーションに裏付けられた、役に立つライブラリを作ってみませんか。" : "I recently developed some libraries to resolve the problems I was faced with. Such libraries would have a concrete solution to them. There should be many subjects to address in Swift now. Let's make useful libraries based on real motivation together.")
+    )
     
     static let dianaZmuda = Speaker(
         name: "Diana Zmuda",
