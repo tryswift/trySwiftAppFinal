@@ -90,10 +90,33 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Speakers" id="rfT-S1-TG2"/>
+                    <connections>
+                        <segue destination="gZZ-TI-i9R" kind="show" identifier="speakerDetailSegue" id="GLU-a7-ocO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="581-ig-6d0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1555" y="405"/>
+        </scene>
+        <!--Speaker Detail View Controller-->
+        <scene sceneID="cT2-kN-3XL">
+            <objects>
+                <tableViewController storyboardIdentifier="SpeakerDetailViewController" id="gZZ-TI-i9R" customClass="SpeakerDetailViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="FQc-pa-q04">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="gZZ-TI-i9R" id="d6z-WW-ktd"/>
+                            <outlet property="delegate" destination="gZZ-TI-i9R" id="gP8-0H-nOt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="sjf-jU-X7a"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5m-1D-KdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2298" y="405"/>
         </scene>
         <!--Sponsors-->
         <scene sceneID="J5H-sm-sb8">
