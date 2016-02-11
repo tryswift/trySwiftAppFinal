@@ -95,30 +95,20 @@
             </objects>
             <point key="canvasLocation" x="1555" y="405"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Sponsors-->
         <scene sceneID="J5H-sm-sb8">
             <objects>
-                <tableViewController id="acP-CT-yp9" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GeR-GO-uTC">
+                <tableViewController id="acP-CT-yp9" customClass="SponsorsViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="GeR-GO-uTC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0xy-Ec-Y5J">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0xy-Ec-Y5J" id="qyB-z6-kbS">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="acP-CT-yp9" id="VQa-rW-Aui"/>
                             <outlet property="delegate" destination="acP-CT-yp9" id="Tgi-7U-UvE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="YxN-Ef-87C"/>
+                    <navigationItem key="navigationItem" title="Sponsors" id="YxN-Ef-87C"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmv-lw-FUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

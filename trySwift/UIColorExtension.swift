@@ -26,4 +26,8 @@ extension UIColor {
     class func trySwiftAccentColor() -> UIColor {
         return UIColor(hexString: "#4FD5D6")
     }
+    
+    class func twitterBlue() -> UIColor {
+        return UIColor(hexString: "#4099FF")
+    }
 }
