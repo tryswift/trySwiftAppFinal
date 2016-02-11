@@ -1,0 +1,289 @@
+//
+//  Speaker.swift
+//  trySwift
+//
+//  Created by Natasha Murashev on 2/10/16.
+//  Copyright © 2016 NatashaTheRobot. All rights reserved.
+//
+
+import UIKit
+import Toucan
+
+struct Speaker {
+    let name: String
+    let twitter: String
+    let image: UIImage
+    let bio: String
+    let presentation: Presentation
+}
+
+extension Speaker {
+    
+    static let ashFurrow = Speaker(
+        name: "Ash Furrow",
+        twitter: "ashfurrow",
+        image: Toucan(image: UIImage(named: "ashfurrow")!).maskWithEllipse().image,
+        bio: isJapanese ? "iOSエンジニアおよび著者としてArtsyで働くカナダ人です。多くのアプリを開発し、これまで4冊の書籍を出版しています。また、オープンソースのコントリビューターとしてコミュニティに関わっています。ブログでは、興味深いプログラミングのネタからフィルムカメラにまでおよぶ様々なトピックを扱っています。" : "Ash Furrow is a Canadian iOS developer and author, currently working at Artsy. He has published four books, built many apps, and is a contributor to the open source community. On his blog, he writes about a range of topics, from interesting programming to explorations of analogue film photography.",
+        presentation: Presentation(
+            title: isJapanese ? "TBD" : "TBD",
+            summary: isJapanese ? "TBD" : "TBD")
+    )
+    
+    static let natalieBerdys = Speaker(
+        name: "Natalia Berdys",
+        twitter: "batalia",
+        image: Toucan(image: UIImage(named: "natalia")!).maskWithEllipse().image,
+        bio: isJapanese ? "iOS開発のリードエンジニアとして、ポーランドのソフトウェアハウスTutu Labに勤務しています。この２年間で独学でエンジニアになり、モバイルエンジニアリングの学位を取得、さらに、WWDCにてスピーチをしました。また、彼女のアプリは47カ国でNo.1を獲得しました。アメリカ文学の学位保持者のため、プログラミングに対して人文的かつ詩的な視点を持っています。" : "Natalia Berdys is the lead iOS Developer at Tutu Lab, an indie studio in Poland. Within 2 years, she managed to become a self-taught developer, get a Mobile Engineering degree, speak at Apple WWDC and take her apps to #1 in 47 countries. Since she also holds a Master’s Degree in American Literature, she has a very humanistic and poetic view of programming.",
+        presentation: Presentation(
+            title: isJapanese ? "TBD" : "TBD",
+            summary: isJapanese ? "TBD" : "TBD")
+    )
+    
+    static let jesseSquires = Speaker(
+        name: "Jesse Squires",
+        twitter: "jesse_squires",
+        image: Toucan(image: UIImage(named: "squires")!).maskWithEllipse().image,
+        bio: isJapanese ? "InstagramでiOSアプリを開発しているソフトウェアエンジニアです。jessesquires.comにてSwiftやObjective-Cに関するブログを書いています。Github上で多くのオープンソースプロジェクトにコントリビュートしています。走ることと新しいことを学ぶのが好きで、主にブラックコーヒーとブラックメタルによって元気になります。" : "Jesse is a software developer who works on iOS at Instagram. He writes about Swift and Objective-C on his blog at jessesquires.com, and contributes to many open-source projects on GitHub. He loves running and learning new things, and is fueled primarily by black coffee and black metal.",
+        presentation: Presentation(
+            title: isJapanese ? "オープンソースSwiftへの貢献" : "Contributing to open source Swift",
+            summary: isJapanese ? "Swiftに貢献したいですか？どのように、また、どこから取り掛かればいいか分かりませんか？パッと見て圧倒されるかもしれません。この講演では、さまざまなSwiftのプロジェクトがどのように関係しているかを見て、貢献し始めるために必要なスキルを議論し、あなたが行うであろう最初の変更が承認されるためのベストな方法を学びます。" : "Do you want to contribute to Swift? Not sure how or where to begin? It can be overwhelming! In this talk we'll explore the different parts of Swift, see how the various Swift projects are related, discuss the skills you need to get started, and learn the best ways to get your first fix accepted. ")
+    )
+    
+    static let syoIkeda = Speaker(
+        name: "Syo Ikeda",
+        twitter: "ikesyo",
+        image: Toucan(image: UIImage(named: "syo")!).maskWithEllipse().image,
+        bio: isJapanese ? "京都在住のフリーランスiOSエンジニアです。（Twitter上では@ikesyoで知られています。）オープンソースの活動として、Himotoki（type-safeなJSONパーサーライブラリ）の開発やReactiveCocoaやCarthageといったオープンソースのプロジェクトにコントリビュートしています。" : "Syo Ikeda (a.k.a @ikesyo) is an independent iOS developer lives in Kyoto. He is the author of Himotoki, a type-safe JSON decoding library made of Swift, and also is contributing to several open source projects such as ReactiveCocoa and Carthage.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let veronicaRay = Speaker(
+        name: "Veronica Ray",
+        twitter: "nerdonica",
+        image: Toucan(image: UIImage(named: "veronica")!).maskWithEllipse().image,
+        bio: isJapanese ? "LinkedInのビデオチームに所属するソフトウェアエンジニアです。以前自転車でヘラジカの間を通り抜けたことがあります。MediumのブログとTwitterでは@nerdonicaとして活動しています。" : "Veronica Ray is a software engineer at LinkedIn on the Video team. Once she rode her bike between two moose. She blogs on Medium and is on Twitter as  @nerdonica.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let chrisEidhof = Speaker(
+        name: "Chris Eidhof",
+        twitter: "chriseidhof",
+        image: Toucan(image: UIImage(named: "chris")!).maskWithEllipse().image,
+        bio: isJapanese ? "ドイツ・ベルリンに住むオランダ人のソフトウェア開発者です。iOS/Macアプリ開発を中心に活動しており、DecksetやSceneryを開発しています。UIKonfやobjc.ioの立ち上げ、Functional Programming in Swift, Advanced Swift（現在、執筆中）の著者でもあります。" : "Chris is a Dutch software developer living in Berlin (Germany). He spends most of his time building iOS and Mac apps, such as Deckset and Scenery. He started UIKonf, objc.io, wrote a book about Functional Programming in Swift and is currently writing a book on Advanced Swift.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let timOliver = Speaker(
+        name: "Tim Oliver",
+        twitter: "TimOliverAU",
+        image: Toucan(image: UIImage(named: "timoliver")!).maskWithEllipse().image,
+        bio: isJapanese ? "オーストラリア・パースの出身です。6年間iOS開発に携わっており、2015年3月にRealmにジョインしました。App StoreではiComicsというクールなアプリをリリースしてます。カラオケが大好きです!" : "Tim Oliver hails from Perth, Australia! He has been an iOS developer for 6 years, and recently joined Realm in March 2015. Tim has a cool app called iComics and he loves karaoke!",
+        presentation: Presentation(
+            title: isJapanese ? "Core Animationで作る高度なグラフィックス" : "Advanced Graphics with Core Animation",
+            summary: isJapanese ? "iOSならアニメーションがUXに対してとても大事なことです。それでUIKitのAPIのおかげで実装するのが既にとても簡単です。しかし、UIKitの下のレベル、Core Animationも利用したら、自分のアプリにもっとかっこよくて、もっときれいなアニメーションも可能性になります。このプレゼンテーションはiOSでCore Animationの実装方法やエフェクトのデモンストレーションを説明します。" : "Animation is one of the cornerstones of the UI experience on iOS, and thanks to the animation APIs in UIKit, it's incredibly easy. However, by dropping down to Core Animation level, it's possible to create even more dynamic and impressive animations that can really help make your app stand out. This talk will cover the concepts of how Core Animation works in iOS, how to work with the API, as well as examples on what sorts of animations and effects it can enable in your app. ")
+    )
+    
+    static let hirokiKato = Speaker(
+        name: "Hiroki Kato",
+        twitter: "cockscomb",
+        image: Toucan(image: UIImage(named: "hiroki")!).maskWithEllipse().image,
+        bio: isJapanese ? "はてなのソフトウェアエンジニアです。学生時代にMac/iOSアプリ開発からエンジニアとしてのキャリアをスタートしました。Apple、Cocoa (touch), Objective-C そして Swift が大好きです。" : "Software Engineer, working at Hatena in Kyoto. I started my career as a developer of OS X/iOS apps when I was a student. I’m loving Apple, Cocoa (touch), Objective-C and Swift.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let dianaZmuda = Speaker(
+        name: "Diana Zmuda",
+        twitter: "dazmuda",
+        image: Toucan(image: UIImage(named: "diana")!).maskWithEllipse().image,
+        bio: isJapanese ? "thoughtbotに所属しているiOSエンジニアです。iOS on Railsと呼ばれるAPIと連携するモバイルアプリ開発に関する書籍を共同執筆しました。また、App Camp for Girlsのインストラクターもしています。ときおり、iOS関連のジョークを@dazmudaにてツイートしています。" : "Diana is an iOS developer at thoughtbot. She co-wrote a book about building mobile apps in tandem with APIs called iOS on Rails. She's also an instructor for App Camp for Girls, a summer camp where young girls learn how to write software. Occasionally, she tweets iOS related puns @dazmuda.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let yasuhiroInami = Speaker(
+        name: "Yasuhiro Inami",
+        twitter: "inamiy",
+        image: Toucan(image: UIImage(named: "inamiy")!).maskWithEllipse().image,
+        bio: isJapanese ? "LINEでiOSエンジニアをしています。業務ではメッセンジャー、カメラ、ニュースといったアプリ開発に関わる一方、プライベートではReactKitやSwiftTaskといったオープンソースプロジェクトにコントリビュートしています。Apple、SwiftそしてHearthstoneの大ファンです。Battle.netやGitHub: https://github.com/inamiy で出会うことができます。" : "Yasuhiro is an iOS developer at LINE Corporation. While creating iPhone apps such as messenger, camera, news app in his work, he also spends time on making open source projects, e.g. ReactKit and SwiftTask. He is a big fan of Apple, Swift, and Hearthstone. You can find him at Battle.net or GitHub: https://github.com/inamiy.",
+        presentation: Presentation(
+            title: isJapanese ? "パーサーコンビネーター in Swift" : "Parser Combinator in Swift",
+            summary: isJapanese ? "パーサーコンビネーターは、関数型プログラミングにおける最も美しいコード記述法の一つです。JSON構文木などを簡単に生成することができます。このプレゼンテーションでは、パーサーコンビネーターが実際にどのように動作し、活用されているのか、具体例を交えて解説します。" : "Parser-combinator is one of the most awesome functional technique to parse strings into parse tree, e.g. constructing JSON. In this presentation, we will look into how they actually work by combining small parsers together to form a complex and practical ones.")
+    )
+    
+    static let jeffHui = Speaker(
+        name: "Jeff Hui",
+        twitter: "jeffhui",
+        image: Toucan(image: UIImage(named: "jeff")!).maskWithEllipse().image,
+        bio: isJapanese ? "iOS開発に特化したフルスタックエンジニアです。コンサルタントとして多くのiOSアプリ開発プロジェクトに従事しています。活発にオープンソースにコントリビュートしており、テストフレームであるQuick/Nimbleのコアチームメンバーです。" : "Jeff Hui is an full-stack engineer specializing in iOS development. He’s worked on a number of iOS apps as a consultant. He’s an active open source contributor and the core team member to Quick & Nimble testing frameworks.",
+        presentation: Presentation(
+            title: isJapanese ? "Nimbleの内部構造" : "Nimble Internals",
+            summary: isJapanese ? "NimbleはBDDのためのアサーションライブラリで、BDDフレームワークQuickの一部になっています。言語機能の裏側とNimbleが安全で簡潔なAPIを提供するために使っているテクニックを解説します。" : "Nimble is a BDD assertion library that's part of the Quick BDD Framework. We'll tear under the hood at the language features and techniques Nimble uses to provide an safe and concise API."))
+    
+    static let ayakaNonaka = Speaker(
+        name: "Ayaka Nonaka",
+        twitter: "ayanonagon",
+        image: Toucan(image: UIImage(named: "Ayaka")!).maskWithEllipse().image,
+        bio: isJapanese ? "AyakaはVenmoのiOSリードで最近はSwiftばかり書いています。iOS 4の頃からiOS開発を始め、テイラー・スウィフトの曲を聴きながらSwiftを書くのが大好きです。これまでSwiftにおける自然言語処理や、スクリプティング、VenmoアプリをSwiftで書き直したことなどをテーマに講演を行いました。東京出身なので、東京のカンファレンスで話せることがとても楽しみです！「宜しくお願いします。」" : "Ayaka leads the iOS team at Venmo where they write only Swift these days. She’s been doing iOS development since iOS 4 and loves writing Swift while listening to Taylor Swift. In the past, she’s given talks on NLP in Swift, Swift Scripting, and rewriting the Venmo app in Swift. She was born in Tokyo and can’t wait to give her first talk there! 宜しくお願いします。",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let simonGladman = Speaker(
+        name: "Simon Gladman",
+        twitter: "FlexMonkey",
+        image: Toucan(image: UIImage(named: "simon")!).maskWithEllipse().image,
+        bio: isJapanese ? "Simonは初期のSwift言語のチャンピオンです。彼のブログ(http://flexmonkey.blogspot.co.uk)はiOSのテクノロジーを探求・検証する際の人気のソースになっています。いくつものiOSアプリをリリースしており、その中にnode.jsベースのiPad用画像処理アプリであるNodalityも含まれています。余暇は、物理・粒子シミュレーション・画像処理・今までにないユーザインタラクションといったよりクリエイティブな方向性の取り組みをしています。" : "An early champion of Apple's Swift language, Simon's blog, http://flexmonkey.blogspot.co.uk, has become a popular source for articles exploring and experimenting with iOS technology. Simon has published several iOS apps including Nodality, a node based image editing app for iPads. In his spare time, his coding takes a more creative direction where his interests include topics such as physics and particle simulations, image processing and novel user interaction patterns.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let cateHuston = Speaker(
+        name: "Cate Huston",
+        twitter: "catehstn",
+        image: Toucan(image: UIImage(named: "cate")!).maskWithEllipse().image,
+        bio: isJapanese ? "Rideにてモバイルエンジニアリングのディレクターをしています。UK、オースタラリア、カナダ、中国、アメリカに居住した経験を持ち、Googleではエンジニア、IBMではExtreme Blueインターン、スキーのインストラクターとして働いた経験があります。国際的にモバイル開発の講演をしており、執筆に関してはLifehacker、The Daily Beast、The Eloquent Woman、Model View Cultureといったサイトに掲載されております。Glowforgeにてアドバイザーをしており、Accidentally in Codeでブログも書いています。また、Twitterは@catehstnで活動しています。" : "Cate Huston is Director of Mobile Engineering at Ride. She’s lived and worked in the UK, Australia, Canada, China and the United States, previously as an engineer at Google, an Extreme Blue intern at IBM, and a ski instructor. Cate speaks internationally on mobile development and her writing has been published on sites as varied as Lifehacker, The Daily Beast, The Eloquent Woman and Model View Culture. She is an advisor at Glowforge, co-curates Technically Speaking, blogs at Accidentally in Code and is @catehstn on Twitter.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let danielSteinberg = Speaker(
+        name: "Daniel Steinberg",
+        twitter: "dimsumthinking",
+        image: Toucan(image: UIImage(named: "dimsumthinking")!).maskWithEllipse().image,
+        bio: isJapanese ? "Danielはベストセラーになった「A Swift Kickstart」と「Developing iOS 7 Apps for iPad and iPhone」の著者です。（この２冊の本は、iTunes Uで人気のスタンフォード大学のiOS開発の講義の公式の参考書になっています。）iPhoneとiPadアプリの開発をSDKが出た当初から始め、Macアプリに至ってはSyntem 7の頃から携わっています。また、iPhone、Cocoa、およびSwiftについてのトレーニングとコンサルティングを彼のDim Sum Thinking社で行っています。" : "Daniel is the author of the best selling books A Swift Kickstart and Developing iOS 7 Apps for iPad and iPhone (the official companion book to the popular iTunes U series from Stanford University). He has written apps for the iPhone and the iPad since the SDKs first appeared and has written programs for the Mac all the way back to System 7.Daniel presents iPhone, Cocoa, and Swift training and consults through his company Dim Sum Thinking.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let matthewGillingham = Speaker(
+        name: "Matthew Gillingham",
+        twitter: "gillygize",
+        image: Toucan(image: UIImage(named: "matthewg")!).maskWithEllipse().image,
+        bio: isJapanese ? "Tonchidot, GREE, Mediweb、Eventacularといった日本企業で7年間iOS開発をしています。また、5年以上もAppleのプラットフォーム上で開発している人達の国際的なコミュニティであるTokyo iOS Meetupのオーガナイザーをしています。" : "Matthew Gillingham has been an iOS developer for seven years, working at Japanese companies such as Tonchidot, GREE, Mediweb, and Eventacular. He has also been organizing the Tokyo iOS Meetup, an international community of people making things on Apple platforms, for over five years.",
+        presentation: Presentation(
+            title: isJapanese ? "プロトコル拡張の歴史" : "Protocol Extensions: A History",
+            summary: isJapanese ? "Swift 2.0のプロトコル拡張に至るまでの、プログラミング言語のコードの再利用とコードシェア機能の簡単な歴史です。" : "A brief history of programming language features which permit code-sharing and code-reuse, leading up the protocol extensions in Swift 2.0.")
+    )
+    
+    static let lauraSavino = Speaker(
+        name: "Laura Savino",
+        twitter: "savinola",
+        image: Toucan(image: UIImage(named: "laura")!).maskWithEllipse().image,
+        bio: isJapanese ? "言語、旅行、教育に強い興味を持っているiOSエンジニアです。Khan Academyにて、アプリを作り、学ぶ過程で学生のアカデミックな経験を活かす取り組みをしています。フリーでコーダー、発表者、トレーナーをしています。" : "Laura is an iOS developer with a penchant for languages, travel, and education. She most recently worked to transform students' academic experience by building apps for learning at Khan Academy, and is now an independent coder, speaker, and trainer.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let yutaKoshizawa = Speaker(
+        name: "Yuta Koshizawa",
+        twitter: "koher",
+        image: Toucan(image: UIImage(named: "koher")!).maskWithEllipse().image,
+        bio: isJapanese ? "QonceptでiOS開発をしています。また、サイドプロジェクトとしてarticles.eachというiOSアプリも開発しています。Qiitaに投稿しているSwiftの記事は日本のiOS開発者の間で人気です。" : "Yuta is an iOS developer at Qoncept. He is also developing an iOS app [articles.each {](articles-each.github.io) as his side project. His posts about Swift on Qiita, Japanese blogging service specialized for programming, are popular with iOS developers in Japan.",
+        presentation: Presentation(
+            title: isJapanese ? "Swiftのエラー処理についての三つの話" : "Three Stories about Error Handling in Swift",
+            summary: isJapanese ? "エラー処理は安全なコードを書く上で重要です。私のプレゼンテーションでは、主に私の経験と考えに基いて、また `Error Handling Rationale and Proposal` と swift-evolution のメーリングリストでの議論にも触れながら、 Swift におけるエラー処理の論点を整理します。" : "Error handling is important to write safe codes. In my presentation, I will organize the issues of error handling in Swift mainly based on my experience and thinking referring to `Error Handling Rationale and Proposal` and discussions on the swift-evolution mailing list.")
+    )
+    
+    static let danielEggert = Speaker(
+        name: "Daniel Eggert",
+        twitter: "danielboedewadt",
+        image: Toucan(image: UIImage(named: "danieleggert")!).maskWithEllipse().image,
+        bio: isJapanese ? "写真を愛し、ベルリンに住んでいます。objc.ioの共同設立者の一人です。10年以上、Cocoaに関係する全て（主に写真や画像処理）に関わって仕事をしています。5年間Appleで働き、Photos.appとCamera.appをCore Dataに移行する仕事をしました。" : "Daniel loves photography and lives in Berlin. He is one of the co-founders of objc.io. He’s been working with all kinds of things related to Cocoa for more than ten years — mostly photo and image processing related. Daniel worked at Apple for five years, and helped move Photos.app and Camera.app to Core Data.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let helenHolmes = Speaker(
+        name: "Helen Holmes",
+        twitter: "helenvholmes",
+        image: Toucan(image: UIImage(named: "helen")!).maskWithEllipse().image,
+        bio: isJapanese ? "誰でも正しいサポートがあればプログラミングを学べると考えているデザイナーです。技術を全ての人に対して適切なコミュニティにすることの提唱者です。Women Who Code DC’s chapterの設立に協力し、アメリカ全土で学生ハッカソンのメンターをしています。現在、Mozillaで開発ツールを誰にとってもより良くする仕事をしています。" : "Helen is a designer who figures anyone can learn to program with the right support. A big proponent of making tech a healthy community for all, she helped found Women Who Code DC’s chapter and has mentored at student hackathons all over the U.S. She’s currently at Mozilla helping make devtools a little better for everyone.",
+        presentation: Presentation(
+            title: isJapanese ? "デザイナーをSwiftのコードベースに巻き込む10の方法" : "10 Ways to Get Designers In Your Swift Codebase",
+            summary: isJapanese ? "デザイナーが開発者と蜜に連携することは多くのメリットがあります。アプリケーションの設計を飛躍的に改善するために行った技術的な判断をデザイナーに伝えることで、、デザイナーをコードベースに巻き込む方法について解説します。" : "Getting designers working closely with developers has a lot of benefits. I’ll show you how to get designers into your code base by explaining the engineering architectural decisions you can make to make your app designs improve exponentially. ")
+    )
+    
+    static let yosukeIshikawa = Speaker(
+        name: "Yosuke Ishikawa",
+        twitter: "_ishkawa",
+        image: Toucan(image: UIImage(named: "ishkawa")!).maskWithEllipse().image,
+        bio: isJapanese ? "メルカリで働くiOSエンジニアです。APIKitというSwiftの言語機能を活かしたネットワークライブラリの開発者でもあります。最近は川遊びに夢中になっています。" : "Yosuke Ishikawa works as a software engineer at Mercari, writing code for iOS apps and server side apps. He created APIKit, which is a networking library that aims at taking advantage of the language features.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let adamBell = Speaker(
+        name: "Adam Bell",
+        twitter: "b3ll",
+        image: Toucan(image: UIImage(named: "adambell")!).maskWithEllipse().image,
+        bio: isJapanese ? "Adam Bellはカナダ人のiOSエンジニアでJailbreakコミュニティでiOSの活動を始め、現在はリバースエンジニアリングとオープンソース活動をしています。普段はアニメーション、音楽、プロトタイプをしているか、ソフトウェアのビットを操作する以外は、レゴで遊ぶかポケモンを育てています。以前はARTPOP、MessageBoxやIgnitionのプロジェクトに従事していました。現在はFacebookでiOSエンジニアとして働いており、アニメーションエンジン「Pop」などのプロジェクトのメンテナンスに関わっています" : "Adam Bell is a Canadian iOS engineer who started out in the jailbreak community reverse-engineering and developing Open Source projects for the platform. When he’s not playing with Lego or training Pokémon, he’s usually playing with animations, music, prototypes, or messing with bits of software he probably shouldn’t. Previous projects include ARTPOP, MessageBox, and Ignition. He's now currently working on iOS Experiences at Facebook and is helping maintain projects like Pop.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let borisBugling = Speaker(
+        name: "Boris Bügling",
+        twitter: "NeoNacho",
+        image: Toucan(image: UIImage(named: "boris")!).maskWithEllipse().image,
+        bio: isJapanese ? "Borisはベルリン在住のCocoaデベロッパーです。現在はContentfulでiOSのSDKを開発に携わっています。Java開発者としての一面や、たくさんのiOSアプリを開発した経験を持っています。彼はまたオープンソースの強力なコントリビュータでもあります。Xcodeをより使いやすくするためのプラグインを開発したり、“Senior VP of Evil”という肩書きでCocoaPodsの不具合を直しています。Ya tu sabes.（それじゃ、また。）" : "Boris is a Cocoa developer from Berlin, who currently works on the iOS SDK at Contentful. A Java developer in another life, with many iOS apps under his belt, he is also a strong open source contributor, building plugins to tame Xcode, and bashing bugs as the CocoaPods “Senior VP of Evil“",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let hectorMatos = Speaker(
+        name: "Hector Matos",
+        twitter: "allonsykraken",
+        image: Toucan(image: UIImage(named: "hectormatos")!).maskWithEllipse().image,
+        bio: isJapanese ? "素晴らしい州であるテキサスでラマによって育てられ、ゼルダの伝説をしたり、Game of Thronesを見ながらテレビの前で叫んだりするカウチポテトとして成長しました。家では座ってのんびり過ごさず、KrakenDev.ioでブログを書いている一方、Capital Oneのオフィスではデスクに座ってiOSやAndroidのモバイルアプリの開発をしています。モバイルのUI/UXに強いこだわりをもっており、彼の書くコードは世界をよくしています。Boris, ya tu sabes." : "Raised by llamas in the great state of Texas, Hector grew to be an avid couch potato who likes spending his precious couch time playing the Legend of Zelda or yelling at the TV whilst watching Game of Thrones. While he isn’t sitting at home vegging out, blogging or working on KrakenDev.io, you can find him sitting at the office writing iOS & Android mobile apps for Capital One. With a particular penchant for great mobile UI/UX, Hector writes the code that makes the world go round. Boris, ya tu sabes.",
+        presentation: Presentation(
+            title: isJapanese ? "Swiftヒップスター" : "Hipster Swift",
+            summary: isJapanese ? "Swiftにはあまり知られていない多くの細かい機能があります。それを知っていれば開発にかかる時間や労力を削減することができます。少しの重要な機能を覚えるだけです。この講演では、Swiftのあまり見慣れない機能を多数、初心者にも分かりやすいように解説します。講演後は、日々の開発中に出くわす見慣れない構文を、一目で解読できるようになっていることでしょう！" : "At a high level, Swift is amazing and brings so much to us developers to use on a daily basis. However, there are many little known things in Swift that can save us time and energy if we just take the time to memorize a few key features in Swift. This talk will cover many features in Swift that look weird and translates them in an easy to understand way for beginners and experts alike. After hearing it, developers should hopefully be able to save lots of time decrypting the weird things they may see on a day to day basis!")
+    )
+    
+    static let micheleTitolo = Speaker(
+        name: "Michele Titolo",
+        twitter: "micheletitolo",
+        image: Toucan(image: UIImage(named: "michele")!).maskWithEllipse().image,
+        bio: isJapanese ? "Michele Titoloは機械の反乱についてまったく気にしていません。2010よりプロとしてソフトウェア開発を始め、数多くのテスト書かれていないコードを見てきて、未来が安全であるという確信を得ました。 彼女はCapital Oneのリードエンジニアであり、Women Who CodeのCTOでもあります。日夜、彼女は品質が高くメンテナンスしやすいコードを世界に広めるために活動しています。" : "Michele Titolo is not at all worried about a robot uprising. Making software professionally since 2010, she has seen enough codebases without tests to know our future is safe. By day she is a Lead Software Engineer at Capital One and CTO of Women Who Code. By night she travels the world advocating for high quality and maintainable code.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let rachelBobbins = Speaker(
+        name: "Rachel Bobbins",
+        twitter: "bobbins",
+        image: Toucan(image: UIImage(named: "rachel")!).maskWithEllipse().image,
+        bio: isJapanese ? "Stitch FixでiOSのリードエンジニアをしています。以前はPivotal Labsで働いていました。ユーザ・開発者の両方にとって素晴らしい経験を作り出すことを大切にしています。" : "Rachel is a lead engineer on the iOS team at Stitch Fix. Previously, she worked at Pivotal Labs. She cares deeply about building delightful experiences for both software users and software developers.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let danielHaight = Speaker(
+        name: "Daniel Haight",
+        twitter: "daniel1of1",
+        image: Toucan(image: UIImage(named: "daniel")!).maskWithEllipse().image,
+        bio: isJapanese ? "iOSエンジニアです。そうではないふりをしますが。小さなプロダクトコンサルタント会社を経営しています。タイトなジーンズを着、ゆっくりと旅行の荷造りのエキスパートになっています。" : "Daniel is an iOS Developer, whenever he is not pretending to be one. He runs a small product consultancy - Many Things. He wears tight jeans and he is slowly becoming an expert at travel packing.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let stephanieShupe = Speaker(
+        name: "Stephanie Shupe",
+        twitter: "steph_shupe",
+        image: Toucan(image: UIImage(named: "stephanie")!).maskWithEllipse().image,
+        bio: isJapanese ? "Lookoutでシニアソフトウェアエンジニアをしており、Wowen Who Codeのアドバイザーもしています。iOSのフィールドで長年の経験を持っており、最近はバックエンドの開発により関わっています。自身が新しいことを学ぶこと、また、人が学習しスキルアップをサポートすることに情熱を持っています。" : "Stephanie Shupe is a Senior Software Engineer at Lookout and an Advisor to Women Who Code. She has years of experience in iOS and has recently gotten more involved with backend development. Stephanie is passionate about learning new things, and helping others learn and develop their skills.",
+        presentation: Presentation(
+            title: isJapanese ? "スマートホームのためのコード" : "Code for the Smart Home",
+            summary: isJapanese ? "私たちはスマートテクノロジーの時代に生きており、スマートテクノロジーは家庭にも入り始めています。この講演では、Appleが提供しているスマートアクセサリのためのフレームワークであるHomeKitと連携する方法について解説します。この講演を聞いた後、家に帰ってすぐにスマートアクセサリを触りたくなるかもしれませんよ？" : "We live in the age of smart technology and it has started to come into our homes. This presentation will cover how to interact with HomeKit, Apple’s framework for smart accessories. Perhaps after the talk, you’ll go off and play with accessories in your own home!")
+    )
+    
+    static let himiSato = Speaker(
+        name: "Himi Sato",
+        twitter: "himisanta",
+        image: Toucan(image: UIImage(named: "himi")!).maskWithEllipse().image,
+        bio: isJapanese ? "大学時代はドイツ語を専攻し、前職は危険物に特化した物流会社で国内輸送を担当していました。危険物乙種四類取扱者や毒物劇物取扱者の資格を持っています。しかしプログラミングに出会い、現在グローバルNPO「Women Who Code Tokyo」の Co-founderをしています。このカンファレンスで沢山の人達とお会いできる事を楽しみにしています。" : "I majored in German Linguistics and literature, worked for a logistics company which specialized in dangerous materials. I have some special licenses. (A hazardous materials engineer etc...) But　luckily I discovered the world of programming. Now I'm a co-founder of Women Who Code Tokyo. I'm looking forward to seeing many people at this conference.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let novallKhan = Speaker(
+        name: "Novall Khan",
+        twitter: "novallkhan",
+        image: Toucan(image: UIImage(named: "novall")!).maskWithEllipse().image,
+        bio: isJapanese ? "SplitwiseでiOSエンジニアをしており、Apple Watch上での割り勘できる機能の開発をしています。SplitwiseのiPhoneアプリに素晴らしい新機能を実装しました。また、HCIの研究者、メンタルヘルス、technology spaceへのコントリビューター、コンピューターが出てくる以前のコンテキストでのコーディングに対する提唱者でもあります。" : "Novall is an iOS engineer at Splitwise where she’s worked on bringing bill-splitting to the Apple Watch, and has built delightful new features for the Splitwise iPhone app. Novall is also an HCI researcher, a contributor to the mental health & technology space, and advocates for writing code in the context of humans before computers.",
+        presentation: Presentation(
+            title: isJapanese ? "SwiftコンパイラとLLDBの連携" : "Swift compiler integration in LLDB",
+            summary: isJapanese ? "デバッグはLLDBとSwiftコンパイラの日々の進歩によってさらに簡単になっています。デバッグコンソールを使った新しいテクニック、Swiftにおけるエラーハンドリング、特定のエラーが発生したところでブレークする方法を学びます。またデータフォーマットの方法の改善、名前付きブレークポイントなどを見ていきます。" : "Everyday debugging becomes even easier with advancements to LLDB and the swift compiler. Learn new tricks with the debugging console, handling errors in Swift expressions, and stopping when specific Swift error types occur. We’ll also explore improved data formatting, named breakpoints, and more!")
+    )
+    
+    static let jpSimard = Speaker(
+        name: "JP Simard",
+        twitter: "simjp",
+        image: Toucan(image: UIImage(named: "jpsimard")!).maskWithEllipse().image,
+        bio: isJapanese ? "Realmにて、Objective-CとSwiftのバインディングを担当しています。また、jazzy（Appleがリリースし忘れているドキュメンテーションツール😜）の開発者でありSwiftのツールチェーンのハックを楽しんでいます。" : "JP works at Realm on the Objective-C & Swift bindings, creator of jazzy (the documentation tool Apple forgot to release) and enjoys hacking on Swift tooling.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+    
+    static let gwendolynWeston = Speaker(
+        name: "Gwendolyn Weston",
+        twitter: "purpleyay",
+        image: Toucan(image: UIImage(named: "gwen")!).maskWithEllipse().image,
+        bio: isJapanese ? "PlanGridでエンジニアをしており、建築設計図用のバージョンコントロールの開発をしています。数学と紫色(#A157E8）が好きで、初めてのミュージックアルバムの制作を現在しています。" : "Gwendolyn Weston is a developer at PlanGrid, where she works on version control for construction blueprints. She likes math, the colour purple (#A157E8), and is currently producing her first music album.",
+        presentation: Presentation(
+            title: isJapanese ? "平常心で型を消し去る" : "Keep Calm and Type Erase On",
+            summary: isJapanese ? "型を明確にすることがSwiftらしいやり方であると気づいた時、同時に時には型を消す必要があると分かります。この講演では、型とは何か、型を消すことが何を意味するか、なぜそうしたいかについて解説します。" : "Just when you thought having unambiguous types was the one true way of Swift, it turns out that sometimes it’s necessary to erase types.  This talk answers what a type is, what it means to erase a type, and why you would want to do it."))
+    
+    static let maximCramer = Speaker(
+        name: "Maxim Cramer",
+        twitter: "mennenia",
+        image: Toucan(image: UIImage(named: "Maxim")!).maskWithEllipse().image,
+        bio: isJapanese ? "デザインと開発のバックブランドを持ち、人を観察し、技術が本当に役立つように改善することに情熱を持っています。" : "Coming from both a design and development background, Maxim loves observing people in their natural habitat, making technology that will serve them instead of the other way around.",
+        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+}
