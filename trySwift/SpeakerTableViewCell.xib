@@ -11,11 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="287" height="82"/>
+                <rect key="frame" x="0.0" y="0.0" width="287" height="81.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OJ6-6o-s54">
-                        <rect key="frame" x="8" y="8" width="271" height="67"/>
+                        <rect key="frame" x="8" y="8.5" width="271" height="67"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJ0-wN-VIc">
                                 <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
@@ -28,16 +28,13 @@
                                 <rect key="frame" x="82" y="0.0" width="189" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaker Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRi-ih-5by">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="21"/>
+                                        <rect key="frame" x="0.0" y="13" width="112" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@twitter" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nQ-Um-CIm">
-                                        <rect key="frame" x="0.0" y="22" width="57" height="18"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="18" id="r31-UD-xvp"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="35.5" width="57" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -47,8 +44,8 @@
                                 <constraints>
                                     <constraint firstItem="6nQ-Um-CIm" firstAttribute="leading" secondItem="ZRi-ih-5by" secondAttribute="leading" id="TxZ-ew-eDy"/>
                                     <constraint firstItem="ZRi-ih-5by" firstAttribute="leading" secondItem="tZ7-4p-Esg" secondAttribute="leading" id="VoI-b4-Yiy"/>
-                                    <constraint firstAttribute="bottom" secondItem="6nQ-Um-CIm" secondAttribute="bottom" constant="27" id="f4f-HV-93K"/>
-                                    <constraint firstItem="ZRi-ih-5by" firstAttribute="top" secondItem="tZ7-4p-Esg" secondAttribute="top" id="pKY-mT-kvu"/>
+                                    <constraint firstAttribute="height" constant="67" id="cgu-0l-vYe"/>
+                                    <constraint firstItem="ZRi-ih-5by" firstAttribute="top" secondItem="tZ7-4p-Esg" secondAttribute="top" constant="13" id="pKY-mT-kvu"/>
                                     <constraint firstItem="6nQ-Um-CIm" firstAttribute="top" secondItem="ZRi-ih-5by" secondAttribute="bottom" constant="2" id="t3y-uy-eMz"/>
                                 </constraints>
                             </view>
