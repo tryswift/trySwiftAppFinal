@@ -35,7 +35,7 @@ extension Session {
         Session(id: 102,
             startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 9, minute: 30, second: 0),
             endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 9, minute: 55, second: 0),
-            description: (isJapanese ? "開催の挨拶" : "Opening Announcements"),
+            description: (isJapanese ? "開会の挨拶" : "Opening Announcements"),
             location: SeminarRoom13F,
             speaker: nil),
         Session(id: 103,
