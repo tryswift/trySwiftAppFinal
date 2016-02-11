@@ -20,6 +20,7 @@ class SessionTableViewCell: UITableViewCell {
     static let logoImage = Toucan(image: UIImage(named: "tryLogo")!).maskWithEllipse().image
     
     override func awakeFromNib() {
+        super.awakeFromNib()
 
         sessionTitleLabel.textColor = .trySwiftTitleColor()
         sessionTypeLabel.textColor = .trySwiftTitleColor()
@@ -34,6 +35,7 @@ class SessionTableViewCell: UITableViewCell {
             speakerNameLabel.text = speaker.name
             sessionTypeLabel.text = session.description
             accessoryType = .DisclosureIndicator
+            selectionStyle = .Default
         } else {
             // coffee / tea / opening announcements
             sessionTitleLabel.text = session.description
@@ -41,6 +43,7 @@ class SessionTableViewCell: UITableViewCell {
             speakerNameLabel.text = "try! Swift"
             sessionTypeLabel.text = "🤗"
             accessoryType = .None
+            selectionStyle = .None
         }
         
         sessionLocationLabel.text = session.location

@@ -13,8 +13,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bA-d3-zGi">
                     <rect key="frame" x="19" y="10" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -27,7 +26,7 @@
             <connections>
                 <outlet property="label" destination="4bA-d3-zGi" id="Ckx-bG-ZhP"/>
             </connections>
-            <point key="canvasLocation" x="471.5" y="429"/>
+            <point key="canvasLocation" x="471" y="429"/>
         </view>
     </objects>
 </document>
