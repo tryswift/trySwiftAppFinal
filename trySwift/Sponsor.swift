@@ -34,7 +34,7 @@ extension Sponsor {
     
     static let diamondSponsors = [realm, cyberAgent]
     static let goldSponsors = [mercari, line, kytrade]
-    static let silverSponsors = [fenrir, denso, voyageGroup, dena, freee, nineDrafts, goodpatch, hatena, github, mixi, yahoo, cookpad, toreta, fablic, recruit, classMethod, furyu, retty, sansan, speee, chatwork, pepabo, wondershake, ubiregi, togetter, ride, nikkei, prtimes, ohaki, ookami, perfect, instagram]
+    static let silverSponsors = [fenrir, denso, voyageGroup, dena, freee, nineDrafts, goodpatch, hatena, github, mixi, yahoo, cookpad, toreta, fablic, recruit, classMethod, furyu, retty, sansan, speee, chatwork, pepabo, wondershake, ubiregi, togetter, ride, nikkei, prtimes, ohako, ookami, perfect, instagram]
     
     // MARK: Diamond Sponsors
     static let realm = Sponsor(
@@ -47,7 +47,7 @@ extension Sponsor {
     )
     
     static let cyberAgent = Sponsor(
-        name: "CyberAgent, Inc.",
+        name: isJapanese ? "株式会社サイバーエージェント" : "CyberAgent, Inc.",
         website: "www.cyberagent.co.jp",
         twitter: "CyberAgent_PR",
         logo: UIImage(named: "calogo")!,
@@ -57,16 +57,16 @@ extension Sponsor {
     
     // MARK: Gold Sponsors
     static let mercari = Sponsor(
-        name: isJapanese ? "株式会社メルカリ" : "Mercari",
+        name: isJapanese ? "株式会社メルカリ" : "Mercari, Inc.",
         website: "www.mercari.com",
         twitter: "mercari_jp",
         logo: UIImage(named: "mercari")!,
         level: .Gold,
-        description: nil
+        description: isJapanese ? "メルカリは\"新たな価値を生みだす世界的なマーケットプレイスを創る\"会社です。" : "Mercari is creating value in a global marketplace where anyone can buy & sell."
     )
     
     static let kytrade = Sponsor(
-        name: isJapanese ? "ケイワイトレード 株式会社" : "KY Trade",
+        name: isJapanese ? "ケイワイトレード株式会社" : "KY TRADE CO., LTD.",
         website: "www.kytrade.co.jp",
         twitter: nil,
         logo: UIImage(named: "kyt")!,
@@ -75,12 +75,14 @@ extension Sponsor {
     )
     
     static let line = Sponsor(
-        name: isJapanese ? "LINE株式会社" : "LINE",
+        name: isJapanese ? "LINE株式会社" : "LINE Corporation",
         website: "linecorp.com",
         twitter: "LINEjp_official",
         logo: UIImage(named: "line")!,
         level: .Gold,
-        description: nil
+        description: isJapanese ?
+            "LINE株式会社（本社：日本）は、コミュニケーションアプリ「LINE」および、LINEプラットフォーム上で展開する様々なコンテンツ・サービス（ゲーム、マンガ、音楽、決済など）を運営しています。LINEでは、1対1やグループでの多種多様なスタンプを利用したメッセージサービスや、音声・ビデオ通話によって、世界中のLINEユーザーとのコミュニケーションを無料でお楽しみ頂けます。" :
+            "LINE Corporation is based in Japan and operates the LINE messenger app and other various content and services offered on the LINE Platform. LINE allows users to freely enjoy communication with other users around the world via audio or video calls, or in one-to-one or group messages, where users have access to a diverse array of emotive stickers."
     )
     
     // MARK: Silver Sponsors
@@ -109,7 +111,9 @@ extension Sponsor {
         twitter: "tech_voyage",
         logo: UIImage(named: "voyage")!,
         level: .Silver,
-        description: nil
+        description: isJapanese ?
+            "株式会社VOYAGE GROUPは、人を軸にした事業開発会社です。\n\nVOYAGE GROUPでは、SOUL（魂：創業時の想い）と8つのCREED（価値観）を経営理念としています。\n\n■SOUL：360°スゴイ\n\n■CREED： 挑戦し続ける。\n\n\t自ら考え、自ら動く。\n\t本質を追い求める。\n\t圧倒的スピード。\n\t仲間と事を成す。\n\tすべてに楽しさを。\n\t真っ直ぐに、誠実に。\n\t\n\t夢と志、そして情熱。" :
+            "The Business philosophy of VOYAGE GROUP is created from two parts: SOUL and CREED.\n\n■SOUL: creating a fantastic world.\n\n■CREED: Keep challenging.\n\tThink on your own, act on your own.\n\tPursue for the essence.\n\tOverwhelming speed.\n\tAchieve the work in a team.\n\tEnjoyment for everything.\n\tGo straightforward and be honest.\n\tDream, spirit and passion."
     )
     
     static let dena = Sponsor(
@@ -122,7 +126,7 @@ extension Sponsor {
     )
     
     static let freee = Sponsor(
-        name: isJapanese ? "freee株式会社" : "freee",
+        name: isJapanese ? "freee株式会社" : "freee K.K.",
         website: "freee.co.jp",
         twitter: "freee_jp",
         logo: UIImage(named: "freee")!,
@@ -149,8 +153,8 @@ extension Sponsor {
     )
     
     static let hatena = Sponsor(
-        name: isJapanese ? "株式会社はてな" : "Hatena",
-        website: "hatena.ne.jp",
+        name: isJapanese ? "株式会社はてな" : "Hatena Co., Ltd.",
+        website: "hatenacorp.jp",
         twitter: "hatenapr",
         logo: UIImage(named: "hatena")!,
         level: .Silver,
@@ -158,7 +162,7 @@ extension Sponsor {
     )
     
     static let github = Sponsor(
-        name: "Github",
+        name: "GitHub",
         website: "github.com",
         twitter: "github",
         logo: UIImage(named: "github")!,
@@ -167,7 +171,7 @@ extension Sponsor {
     )
     
     static let mixi = Sponsor(
-        name: isJapanese ? "株式会社ミクシィ" : "mixi",
+        name: isJapanese ? "株式会社ミクシィ" : "mixi, Inc.",
         website: "mixi.co.jp",
         twitter: "mixi_engineers",
         logo: UIImage(named: "mixi")!,
@@ -185,16 +189,18 @@ extension Sponsor {
     )
     
     static let cookpad = Sponsor(
-        name: isJapanese ? "クックパッド株式会社" : "Cookpad",
+        name: isJapanese ? "クックパッド株式会社" : "Cookpad Inc.",
         website: "cookpad.com",
         twitter: "cookpad_pr",
         logo: UIImage(named: "cookpad")!,
         level: .Silver,
-        description: nil
+        description: isJapanese ?
+            "クックパッドは、毎日の料理を楽しみにを軸に、レシピをはじめとした様々な生活に便利なサービスを提供する世界企業です。日本をはじめ、アメリカ・スペイン・インドネシアにサービスを展開しています。\n\n私たちは、ユーザに素早く価値を提供する必要があります。そのため大きなサービスを小さなサービスに分割するマイクロアーキテクチャや、グローバルのレシピ基盤の開発など、様々なテクノロジーに挑戦しています。" :
+            "Cookpad is a global technology company whose mission is to make cooking fun! Our services help people enjoy cooking daily across the world, including Japan, the USA, Spain, and Indonesia. To help us continue to deliver value to our users as fast as possible, we’re exploring ways to split up our service with techniques such as microservices architecture and the development of a global recipe platform."
     )
     
     static let toreta = Sponsor(
-        name: isJapanese ? "株式会社トレタ" : "TORETA",
+        name: isJapanese ? "株式会社トレタ" : "Toreta, Inc.",
         website: "toreta.in",
         twitter: "TORETA_official",
         logo: UIImage(named: "toreta")!,
@@ -203,16 +209,16 @@ extension Sponsor {
     )
     
     static let fablic = Sponsor(
-        name: isJapanese ? "株式会社トレタ" : "Fablic",
+        name: isJapanese ? "株式会社Fablic" : "Fablic, inc.",
         website: "fablic.co.jp",
         twitter: "friljp",
         logo: UIImage(named: "fablic")!,
         level: .Silver,
-        description: nil
+        description: "フリマアプリフリルを開発しているFablicではユーザー志向の開発をしたいエンジニアを募集しています。"
     )
     
     static let recruit = Sponsor(
-        name: isJapanese ? "株式会社リクルートマーケティングパートナーズ" : "RECRUIT",
+        name: isJapanese ? "株式会社リクルートマーケティングパートナーズ" : "Recruit Marketing Partners Co.,Ltd.",
         website: "recruit-mp.co.jp",
         twitter: "recruit_pr",
         logo: UIImage(named: "recruit-mp")!,
@@ -221,7 +227,7 @@ extension Sponsor {
     )
     
     static let classMethod = Sponsor(
-        name: isJapanese ? "クラスメソッド株式会社" : "Class Method",
+        name: isJapanese ? "クラスメソッド株式会社" : "Classmethod, Inc.",
         website: "classmethod.jp",
         twitter: "classmethod",
         logo: UIImage(named: "classmethod")!,
@@ -230,7 +236,7 @@ extension Sponsor {
     )
     
     static let furyu = Sponsor(
-        name: isJapanese ? "フリュー株式会社" : "FuRyu",
+        name: isJapanese ? "フリュー株式会社" : "FURYU Corporation",
         website: "furyu.jp",
         twitter: "furyupr",
         logo: UIImage(named: "furyu")!,
@@ -248,7 +254,7 @@ extension Sponsor {
     )
 
     static let sansan = Sponsor(
-        name: isJapanese ? "Sansan株式会社" : "Sansan",
+        name: isJapanese ? "Sansan株式会社" : "Sansan, Inc.",
         website: "jp.corp-sansan.com",
         twitter: "sansanjapan",
         logo: UIImage(named: "sansan")!,
@@ -257,7 +263,7 @@ extension Sponsor {
     )
     
     static let speee = Sponsor(
-        name: isJapanese ? "株式会社Speee" : "Speee",
+        name: isJapanese ? "株式会社Speee" : "Speee, Inc.",
         website: "speee.jp",
         twitter: "speeeinfo",
         logo: UIImage(named: "speee")!,
@@ -266,7 +272,7 @@ extension Sponsor {
     )
     
     static let chatwork = Sponsor(
-        name: isJapanese ? "チャットワーク株式会社" : "chatwork",
+        name: isJapanese ? "チャットワーク株式会社" : "ChatWork",
         website: "chatwork.com/ja/",
         twitter: "chatwork_ja",
         logo: UIImage(named: "chatwork")!,
@@ -284,7 +290,7 @@ extension Sponsor {
     )
     
     static let wondershake = Sponsor(
-        name: isJapanese ? "株式会社Wondershake" : "Wondershake",
+        name: isJapanese ? "株式会社Wondershake" : "Wondershake,Inc.",
         website: "locari.jp",
         twitter: "Wondershake",
         logo: UIImage(named: "wondershake")!,
@@ -293,7 +299,7 @@ extension Sponsor {
     )
     
     static let ubiregi = Sponsor(
-        name: isJapanese ? "株式会社ユビレジ" : "Ubiregi",
+        name: isJapanese ? "株式会社ユビレジ" : "Ubiregi Inc.",
         website: "ubiregi.com/ja",
         twitter: "ubiregi",
         logo: UIImage(named: "ubiregi")!,
@@ -302,7 +308,7 @@ extension Sponsor {
     )
     
     static let togetter = Sponsor(
-        name: isJapanese ? "株式会社ユビレジ" : "togetter",
+        name: isJapanese ? "トゥギャッター株式会社" : "Togetter",
         website: "togetter.com",
         twitter: "togetter_jp",
         logo: UIImage(named: "togetter")!,
@@ -320,16 +326,18 @@ extension Sponsor {
     )
     
     static let nikkei = Sponsor(
-        name: isJapanese ? "日本経済新聞社" : "NIKKEI",
+        name: isJapanese ? "日本経済新聞社" : "Nikkei Inc.",
         website: "www.nikkei.com",
         twitter: "nikkei",
         logo: UIImage(named: "nikkei")!,
         level: .Silver,
-        description: nil
+        description: isJapanese ?
+            "日経電子版は、日本で最大級の有料ニュースサービスです。有料ユーザーの過半数が利用する iPhoneアプリは2015年春に内製化により全面リニューアルし100万ダウンロードを突破しました。続いて紙面をそのまま閲覧できる「紙面ビューアー」もSwiftを使ってこの3月に内製化・リニューアルします。日経電子版ではこれらのアプリを引き続き内製で開発していくためのエンジニアを求めています。詳しい情報は s.nikkei.com/saiyo を御覧ください。" :
+            "Nikkei is one of the most popular  financial news media in Japan.Our flagship iOS App was revamped from scratch by in-house developers in April of 2015, and it achieved more than 1 million downloads. We need talented engineers for further apps development. Please refer to the details at s.nikkei.com/saiyo."
     )
     
     static let prtimes = Sponsor(
-        name: isJapanese ? "株式会社PR TIMES" : "PRTIMES",
+        name: isJapanese ? "株式会社PR TIMES" : "PR TIMES, Inc.",
         website: "prtimes.co.jp",
         twitter: "PRTIMES_JP",
         logo: UIImage(named: "prtimes")!,
@@ -337,8 +345,8 @@ extension Sponsor {
         description: nil
     )
     
-    static let ohaki = Sponsor(
-        name: isJapanese ? "株式会社オハコ" : "OHAKO",
+    static let ohako = Sponsor(
+        name: isJapanese ? "株式会社オハコ" : "OHAKO, Inc.",
         website: "ohako-inc.jp",
         twitter: "OhakoJP",
         logo: UIImage(named: "ohako")!,
@@ -347,7 +355,7 @@ extension Sponsor {
     )
     
     static let ookami = Sponsor(
-        name: isJapanese ? "株式会社ookami" : "ookami!",
+        name: isJapanese ? "株式会社ookami" : "ookami, inc",
         website: "playerapp.tokyo",
         twitter: "Player_twi",
         logo: UIImage(named: "ookami")!,
