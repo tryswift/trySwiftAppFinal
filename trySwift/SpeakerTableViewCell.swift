@@ -14,6 +14,12 @@ class SpeakerTableViewCell: UITableViewCell {
     @IBOutlet weak var speakerNameLabel: UILabel!
     @IBOutlet weak var speakerTwitterLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        speakerTwitterLabel.textColor = UIColor.twitterBlue()
+    }
+    
     func configure(withSpeaker speaker: Speaker) {
         speakerImageView.image = speaker.image
         speakerNameLabel.text = speaker.name

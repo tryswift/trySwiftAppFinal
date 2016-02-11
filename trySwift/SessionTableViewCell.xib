@@ -15,16 +15,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vmd-Sr-zGL">
-                        <rect key="frame" x="8" y="18" width="360" height="134"/>
+                        <rect key="frame" x="8" y="8" width="360" height="144"/>
                         <subviews>
                             <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="761" text="Opening Announcements" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izF-NR-kSQ">
-                                <rect key="frame" x="0.0" y="0.0" width="360" height="48"/>
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="58"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="cUa-yU-B0y">
-                                <rect key="frame" x="0.0" y="58" width="360" height="76"/>
+                                <rect key="frame" x="0.0" y="68" width="360" height="76"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b1j-CV-cHH" userLabel="Speaker Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
@@ -43,13 +43,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Type" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiO-rJ-5dA">
-                                                <rect key="frame" x="0.0" y="25" width="85" height="25"/>
+                                                <rect key="frame" x="0.0" y="25.5" width="85" height="25"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otd-hL-cEY">
-                                                <rect key="frame" x="0.0" y="50" width="51.5" height="25.5"/>
+                                                <rect key="frame" x="0.0" y="50.5" width="51.5" height="25.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="Vmd-Sr-zGL" secondAttribute="bottomMargin" id="6vo-vn-EB4"/>
                     <constraint firstItem="Vmd-Sr-zGL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ORg-yM-bIQ"/>
-                    <constraint firstItem="Vmd-Sr-zGL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="eHy-Lh-gjt"/>
+                    <constraint firstItem="Vmd-Sr-zGL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="eHy-Lh-gjt"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Vmd-Sr-zGL" secondAttribute="trailingMargin" id="hXD-HF-Y1E"/>
                 </constraints>
             </tableViewCellContentView>

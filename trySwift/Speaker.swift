@@ -120,7 +120,10 @@ extension Speaker {
         twitter: "ayanonagon",
         image: Toucan(image: UIImage(named: "Ayaka")!).maskWithEllipse().image,
         bio: isJapanese ? "AyakaはVenmoのiOSリードで最近はSwiftばかり書いています。iOS 4の頃からiOS開発を始め、テイラー・スウィフトの曲を聴きながらSwiftを書くのが大好きです。これまでSwiftにおける自然言語処理や、スクリプティング、VenmoアプリをSwiftで書き直したことなどをテーマに講演を行いました。東京出身なので、東京のカンファレンスで話せることがとても楽しみです！「宜しくお願いします。」" : "Ayaka leads the iOS team at Venmo where they write only Swift these days. She’s been doing iOS development since iOS 4 and loves writing Swift while listening to Taylor Swift. In the past, she’s given talks on NLP in Swift, Swift Scripting, and rewriting the Venmo app in Swift. She was born in Tokyo and can’t wait to give her first talk there! 宜しくお願いします。",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "実践的 “Boundaries”" : "Boundaries in Practice",
+            summary: isJapanese ? "Gary BernhardtさんのBoundariesの講演(https://www.destroyallsoftware.com/talks/boundaries)、ご存知ですか。ファンクショナルプログラミングの講演で良く参照される講演です。私は数年前に初めてこの講演を観た時、「Functional Core, Imperative Shell」の理論は理解できたのですが、実際どの様にこのコンセプトを実用化できるのか良く分かりませんでした。しかし、毎日少しずつSwiftを書いているうちに、このコンセプトはファンクショナルプログラミングだけではなく、良いエンジニアリングに一般的に適用できるのが明らかになってきました。今回はどの様に「Boundaries」を利用して、もっと良い、もっと安全なそして将来性のあるSwiftを書くことが出来るのかを幾つかの事例を紹介しながらお話しさせて頂きます。「Boundaries」をご覧になった事がなくても私の話をご理解頂けると思いますが、もしお時間があれば是非一度ご覧下さい。素晴らしい話です。" : "One of the talks that I’ve enjoyed watching is Boundaries by Gary Bernhardt(https://www.destroyallsoftware.com/talks/boundaries). If you’ve seen a talk about functional programming in Swift, you’ve probably heard it being referenced. When I first watched the talk a few years ago, I understood the theory but wasn’t sure where exactly to apply the concepts. As I’ve been writing more and more Swift, I started to see that the concept of “Functional Core, Imperative Shell” applies not just to functional programming, but also to good engineering in general. In this talk, we’ll go over a couple of specific examples how these “boundaries” can help us write better, safer, and more future-proof Swift code. You don’t need to watch the Boundaries talk to understand this talk, but if you have time, definitely watch it because it’s a great talk.")
+    )
     
     static let simonGladman = Speaker(
         name: "Simon Gladman",
@@ -192,7 +195,10 @@ extension Speaker {
         twitter: "_ishkawa",
         image: Toucan(image: UIImage(named: "ishkawa")!).maskWithEllipse().image,
         bio: isJapanese ? "メルカリで働くiOSエンジニアです。APIKitというSwiftの言語機能を活かしたネットワークライブラリの開発者でもあります。最近は川遊びに夢中になっています。" : "Yosuke Ishikawa works as a software engineer at Mercari, writing code for iOS apps and server side apps. He created APIKit, which is a networking library that aims at taking advantage of the language features.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "Protocol-Oriented Programming in Networking" : "Protocol-Oriented Programming in Networking",
+            summary: isJapanese ? "Protocol-Oriented ProgrammingはWWDC 2015で紹介された新しいプログラミングのコンセプトです。本トークでは、Protocol-Oriented Programmingがなぜネットワーキングに適しているのか、また、型安全性やコードのシンプルさにどのように貢献するのか説明します。実際のアプリケーション開発で使えるような実例や、RxSwiftと組み合わせた発展的な実例についても紹介します。" : " Protocol-Oriented Programming is a new concept introduced at WWDC 2015. This talk describes why Protocol-Oriented Programming is a good choice for networking and how it contributes type-safety and code simplicity. This talk also contains practical examples and advanced examples with RxSwift.")
+    )
     
     static let adamBell = Speaker(
         name: "Adam Bell",
