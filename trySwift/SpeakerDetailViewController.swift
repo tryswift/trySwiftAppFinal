@@ -53,7 +53,7 @@ class SpeakerDetailViewController: UITableViewController {
             return cell
         case .Twitter:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TwitterFollowTableViewCell), forIndexPath: indexPath) as! TwitterFollowTableViewCell
-            cell.configure(withUsername: speaker.twitter)
+            cell.configure(withUsername: speaker.twitter, delegate: self)
             return cell
         }
     }
@@ -63,4 +63,38 @@ class SpeakerDetailViewController: UITableViewController {
         return isJapanese ? "スピーカーの詳細" : "Speaker Details"
     }
 
+}
+
+extension SpeakerDetailViewController: TwitterFollowDelegate {
+    
+    func followUser(username: String) {
+        let twitterURLs = [
+            "twitter://user?screen_name=\(username)", // Twitter
+            "tweetbot:///user_profile/\(username)", // TweetBot
+            "echofon:///user_timeline?\(username)", // Echofon
+            "twit:///user?screen_name=\(username)", // Twittelator Pro
+            "x-seesmic://twitter_profile?twitter_screen_name=\(username)", // Seesmic
+            "x-birdfeed://user?screen_name=\(username)", // Birdfeed
+            "tweetings:///user?screen_name=\(username)", // Tweetings
+            "simplytweet:?link=http://twitter.com/\(username)", // SimplyTweet
+            "icebird://user?screen_name=\(username)", // IceBird
+            "fluttr://user/\(username)", // Fluttr
+        ]
+        
+        var applicationOpened: Bool = false
+        let application = UIApplication.sharedApplication()
+        for twitterURL in twitterURLs {
+            if let url = NSURL(string: twitterURL) where application.canOpenURL(url) && !applicationOpened {
+                application.openURL(url)
+                applicationOpened = true
+            }
+        }
+
+        if !applicationOpened {
+            let webViewController = WebDisplayViewController()
+            webViewController.url = NSURL(string: "http://twitter.com/\(username)")!
+            webViewController.displayTitle = "@\(username)"
+            navigationController?.pushViewController(webViewController, animated: true)
+        }
+    }
 }

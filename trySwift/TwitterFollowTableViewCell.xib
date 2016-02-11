@@ -14,24 +14,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gC-rR-C2T">
-                        <rect key="frame" x="8" y="8" width="59" height="27.5"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="glP-AN-MLz">
+                        <rect key="frame" x="8" y="8" width="49" height="26"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                         <state key="normal" title="Follow"/>
                         <connections>
-                            <action selector="onFollowButtonTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kpg-vV-ZKZ"/>
+                            <action selector="onFollowButtonTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jsS-7r-m9Q"/>
                         </connections>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="5gC-rR-C2T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="O1T-0n-Jsr"/>
-                    <constraint firstItem="5gC-rR-C2T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cgc-qd-PCX"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="5gC-rR-C2T" secondAttribute="bottom" id="oUo-Fv-y7F"/>
+                    <constraint firstItem="glP-AN-MLz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="9Rm-Vr-yVI"/>
+                    <constraint firstItem="glP-AN-MLz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="TOf-DE-5Zr"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="followButton" destination="5gC-rR-C2T" id="ZVy-aR-lqs"/>
+                <outlet property="followButton" destination="glP-AN-MLz" id="0AD-Tt-cs1"/>
             </connections>
         </tableViewCell>
     </objects>
