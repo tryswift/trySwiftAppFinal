@@ -11,6 +11,7 @@ import UIKit
 class SpeakersViewController: UITableViewController {
 
     private let speakers = Speaker.speakers
+    private let speakerDetailSegue = "speakerDetailSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,14 @@ class SpeakersViewController: UITableViewController {
         tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let speakerDetailVC = segue.destinationViewController as? SpeakerDetailViewController {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                speakerDetailVC.speaker = speakers[selectedIndexPath.row]
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -38,5 +47,9 @@ class SpeakersViewController: UITableViewController {
         cell.configure(withSpeaker: speakers[indexPath.row])
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier(speakerDetailSegue, sender: self)
     }
 }
