@@ -40,18 +40,8 @@ class SponsorsViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(SponsorTableViewCell), forIndexPath: indexPath) as! SponsorTableViewCell
         
-        switch Sponsor.Level(rawValue: indexPath.section)! {
-        case .Diamond:
-            let sponsor = Sponsor.diamondSponsors[indexPath.row]
-            cell.configure(withSponsor: sponsor)
-        case .Gold:
-            let sponsor = Sponsor.goldSponsors[indexPath.row]
-            cell.configure(withSponsor: sponsor)
-        case .Silver:
-            let sponsor = Sponsor.silverSponsors[indexPath.row]
-            cell.configure(withSponsor: sponsor)
-        }
-
+        let sponsor = sponsorAtIndexPath(indexPath)
+        cell.configure(withSponsor: sponsor)
         
         return cell
     }
@@ -61,5 +51,32 @@ class SponsorsViewController: UITableViewController {
         let sponsorLevel = Sponsor.Level(rawValue: section)!
         return sponsorLevel.title
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
+        let sponsor = sponsorAtIndexPath(indexPath)
+        
+        let webViewController = WebDisplayViewController()
+        webViewController.url = NSURL(string: "http://\(sponsor.website)")!
+        webViewController.displayTitle = sponsor.name
+        
+        self.navigationController?.pushViewController(webViewController, animated: true)
+    }
+
+}
+
+private extension SponsorsViewController {
+    
+    func sponsorAtIndexPath(indexPath: NSIndexPath) -> Sponsor {
+
+        switch Sponsor.Level(rawValue: indexPath.section)! {
+        case .Diamond:
+            return Sponsor.diamondSponsors[indexPath.row]
+        case .Gold:
+            return Sponsor.goldSponsors[indexPath.row]
+        case .Silver:
+            return Sponsor.silverSponsors[indexPath.row]
+        }
+
+    }
 }
