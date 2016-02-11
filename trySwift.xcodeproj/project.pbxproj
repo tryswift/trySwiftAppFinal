@@ -38,6 +38,8 @@
 		FA39E90F1C6C81870074B6BE /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E90E1C6C81870074B6BE /* SponsorsViewController.swift */; };
 		FA39E9161C6C83A40074B6BE /* SponsorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9141C6C83A40074B6BE /* SponsorTableViewCell.swift */; };
 		FA39E9171C6C83A40074B6BE /* SponsorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9151C6C83A40074B6BE /* SponsorTableViewCell.xib */; };
+		FA39E91D1C6C8D100074B6BE /* WebDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E91B1C6C8D100074B6BE /* WebDisplayViewController.swift */; };
+		FA39E91E1C6C8D100074B6BE /* WebDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E91C1C6C8D100074B6BE /* WebDisplayViewController.xib */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -97,6 +99,8 @@
 		FA39E90E1C6C81870074B6BE /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		FA39E9141C6C83A40074B6BE /* SponsorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E9151C6C83A40074B6BE /* SponsorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewCell.xib; sourceTree = "<group>"; };
+		FA39E91B1C6C8D100074B6BE /* WebDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebDisplayViewController.swift; sourceTree = "<group>"; };
+		FA39E91C1C6C8D100074B6BE /* WebDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebDisplayViewController.xib; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				FA39E8FC1C6C32120074B6BE /* Q&A */,
 				FA39E9061C6C43480074B6BE /* Speakers */,
 				FA39E9111C6C81940074B6BE /* SponsorsViewController */,
+				FA39E91B1C6C8D100074B6BE /* WebDisplayViewController.swift */,
+				FA39E91C1C6C8D100074B6BE /* WebDisplayViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -468,6 +474,7 @@
 				FA39E8E91C6B32F80074B6BE /* SessionTableViewCell.xib in Resources */,
 				FA39E90C1C6C45FD0074B6BE /* SpeakerTableViewCell.xib in Resources */,
 				FAFA15C61C69D31C00FEA4EA /* LaunchScreen.storyboard in Resources */,
+				FA39E91E1C6C8D100074B6BE /* WebDisplayViewController.xib in Resources */,
 				FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */,
 				FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */,
 				FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */,
@@ -553,6 +560,7 @@
 				FA39E8F11C6C13D70074B6BE /* QASession.swift in Sources */,
 				FA39E8FE1C6C32510074B6BE /* QASessionsViewController.swift in Sources */,
 				FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */,
+				FA39E91D1C6C8D100074B6BE /* WebDisplayViewController.swift in Sources */,
 				FA39E8E51C6B31300074B6BE /* SessionDataSourceDay3.swift in Sources */,
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
 				FA39E8DD1C6B09DF0074B6BE /* Sponsor.swift in Sources */,

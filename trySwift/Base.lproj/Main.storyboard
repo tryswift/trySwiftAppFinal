@@ -114,7 +114,7 @@
             </objects>
             <point key="canvasLocation" x="1555" y="1177"/>
         </scene>
-        <!--Root View Controller-->
+        <!--More-->
         <scene sceneID="VxK-C8-k6U">
             <objects>
                 <tableViewController id="kZF-fI-031" sceneMemberID="viewController">
@@ -137,7 +137,7 @@
                             <outlet property="delegate" destination="kZF-fI-031" id="g9C-nU-BVk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="vqW-Ku-cZc"/>
+                    <navigationItem key="navigationItem" title="More" id="vqW-Ku-cZc"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QvF-Mq-n9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

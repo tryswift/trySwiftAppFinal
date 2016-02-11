@@ -48,7 +48,7 @@ extension Sponsor {
     
     static let cyberAgent = Sponsor(
         name: "CyberAgent, Inc.",
-        website: "cyberagent.co.jp",
+        website: "www.cyberagent.co.jp",
         twitter: "CyberAgent_PR",
         logo: UIImage(named: "calogo")!,
         level: .Diamond,
@@ -58,7 +58,7 @@ extension Sponsor {
     // MARK: Gold Sponsors
     static let mercari = Sponsor(
         name: isJapanese ? "株式会社メルカリ" : "Mercari",
-        website: "mercari.com",
+        website: "www.mercari.com",
         twitter: "mercari_jp",
         logo: UIImage(named: "mercari")!,
         level: .Gold,
@@ -67,7 +67,7 @@ extension Sponsor {
     
     static let kytrade = Sponsor(
         name: isJapanese ? "ケイワイトレード 株式会社" : "KY Trade",
-        website: "kytrade.co.jp",
+        website: "www.kytrade.co.jp",
         twitter: nil,
         logo: UIImage(named: "kyt")!,
         level: .Gold,
@@ -87,7 +87,7 @@ extension Sponsor {
     
     static let fenrir = Sponsor(
         name: isJapanese ? "フェンリル株式会社" : "Fenrir Inc.",
-        website: "fenrir-inc.com",
+        website: "www.fenrir-inc.com",
         twitter: "fenrir_official",
         logo: UIImage(named: "fenrir")!,
         level: .Silver,
@@ -96,7 +96,7 @@ extension Sponsor {
     
     static let denso = Sponsor(
         name: "DENSO IT Laboratory, Inc.",
-        website: "d-itlab.co.jp",
+        website: "www.d-itlab.co.jp",
         twitter: "densoitlab",
         logo: UIImage(named: "denso")!,
         level: .Silver,
@@ -321,7 +321,7 @@ extension Sponsor {
     
     static let nikkei = Sponsor(
         name: isJapanese ? "日本経済新聞社" : "NIKKEI",
-        website: "nikkei.com",
+        website: "www.nikkei.com",
         twitter: "nikkei",
         logo: UIImage(named: "nikkei")!,
         level: .Silver,
