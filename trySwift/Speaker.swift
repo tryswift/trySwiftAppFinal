@@ -19,6 +19,8 @@ struct Speaker {
 
 extension Speaker {
     
+    static let speakers = [ashFurrow, natalieBerdys, jesseSquires, syoIkeda, veronicaRay, chrisEidhof, timOliver, hirokiKato, dianaZmuda, yasuhiroInami, jeffHui, ayakaNonaka, simonGladman, cateHuston, danielSteinberg, matthewGillingham, lauraSavino, yutaKoshizawa, danielEggert, helenHolmes, yosukeIshikawa, adamBell, borisBugling, hectorMatos, micheleTitolo, rachelBobbins, danielHaight, stephanieShupe, himiSato, novallKhan, jpSimard, gwendolynWeston, maximCramer].sort { $0.name < $1.name }
+    
     static let ashFurrow = Speaker(
         name: "Ash Furrow",
         twitter: "ashfurrow",

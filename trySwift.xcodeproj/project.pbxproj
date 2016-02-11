@@ -32,6 +32,9 @@
 		FA39E9001C6C32A50074B6BE /* QASessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8FF1C6C32A50074B6BE /* QASessionsTableViewController.swift */; };
 		FA39E9031C6C33870074B6BE /* QASessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9011C6C33870074B6BE /* QASessionTableViewCell.swift */; };
 		FA39E9041C6C33870074B6BE /* QASessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9021C6C33870074B6BE /* QASessionTableViewCell.xib */; };
+		FA39E9081C6C43760074B6BE /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9071C6C43760074B6BE /* SpeakersViewController.swift */; };
+		FA39E90B1C6C45FD0074B6BE /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9091C6C45FD0074B6BE /* SpeakerTableViewCell.swift */; };
+		FA39E90C1C6C45FD0074B6BE /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E90A1C6C45FD0074B6BE /* SpeakerTableViewCell.xib */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -85,6 +88,9 @@
 		FA39E8FF1C6C32A50074B6BE /* QASessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionsTableViewController.swift; sourceTree = "<group>"; };
 		FA39E9011C6C33870074B6BE /* QASessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E9021C6C33870074B6BE /* QASessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QASessionTableViewCell.xib; sourceTree = "<group>"; };
+		FA39E9071C6C43760074B6BE /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
+		FA39E9091C6C45FD0074B6BE /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
+		FA39E90A1C6C45FD0074B6BE /* SpeakerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerTableViewCell.xib; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 			children = (
 				FA39E8FB1C6C26150074B6BE /* Schedule */,
 				FA39E8FC1C6C32120074B6BE /* Q&A */,
+				FA39E9061C6C43480074B6BE /* Speakers */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -157,6 +164,7 @@
 				FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */,
 				FA39E8EA1C6BF13D0074B6BE /* SessionTableViewCell */,
 				FA39E9051C6C338C0074B6BE /* QASessionTableViewCell */,
+				FA39E90D1C6C46020074B6BE /* SpeakerTableViewCell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -247,6 +255,23 @@
 				FA39E9021C6C33870074B6BE /* QASessionTableViewCell.xib */,
 			);
 			name = QASessionTableViewCell;
+			sourceTree = "<group>";
+		};
+		FA39E9061C6C43480074B6BE /* Speakers */ = {
+			isa = PBXGroup;
+			children = (
+				FA39E9071C6C43760074B6BE /* SpeakersViewController.swift */,
+			);
+			name = Speakers;
+			sourceTree = "<group>";
+		};
+		FA39E90D1C6C46020074B6BE /* SpeakerTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA39E9091C6C45FD0074B6BE /* SpeakerTableViewCell.swift */,
+				FA39E90A1C6C45FD0074B6BE /* SpeakerTableViewCell.xib */,
+			);
+			name = SpeakerTableViewCell;
 			sourceTree = "<group>";
 		};
 		FAFA15AF1C69D31B00FEA4EA = {
@@ -415,6 +440,7 @@
 			files = (
 				FA39E9041C6C33870074B6BE /* QASessionTableViewCell.xib in Resources */,
 				FA39E8E91C6B32F80074B6BE /* SessionTableViewCell.xib in Resources */,
+				FA39E90C1C6C45FD0074B6BE /* SpeakerTableViewCell.xib in Resources */,
 				FAFA15C61C69D31C00FEA4EA /* LaunchScreen.storyboard in Resources */,
 				FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */,
 				FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */,
@@ -494,6 +520,7 @@
 				FA39E8D71C6B05980074B6BE /* Session.swift in Sources */,
 				FA39E8F61C6C244A0074B6BE /* QASessionDataSourceDay1.swift in Sources */,
 				FA39E9031C6C33870074B6BE /* QASessionTableViewCell.swift in Sources */,
+				FA39E9081C6C43760074B6BE /* SpeakersViewController.swift in Sources */,
 				FA39E8EE1C6C034B0074B6BE /* UIColorExtension.swift in Sources */,
 				FA39E8DF1C6B17DC0074B6BE /* Presentation.swift in Sources */,
 				FA39E8F11C6C13D70074B6BE /* QASession.swift in Sources */,
@@ -509,6 +536,7 @@
 				FA39E8D41C6AFE180074B6BE /* SessionDataSourceProtocol.swift in Sources */,
 				FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */,
 				FA39E8FA1C6C24690074B6BE /* QASessionDataSourceDay3.swift in Sources */,
+				FA39E90B1C6C45FD0074B6BE /* SpeakerTableViewCell.swift in Sources */,
 				FA39E9001C6C32A50074B6BE /* QASessionsTableViewController.swift in Sources */,
 				FA39E8F41C6C24240074B6BE /* QASessionDataSourceProtocol.swift in Sources */,
 				FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */,

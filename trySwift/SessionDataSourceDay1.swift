@@ -7,6 +7,6 @@
 //
 
 struct SessionDataSourceDay1: SessionDataSourceProtocol {
-    var header = isJapanese ? "3月2日（水）" : "Wed, March 2"
+    var header = isJapanese ? "3月2日（水）" : "Wed, Mar 2"
     var sessions = Session.sessionsDay1
 }

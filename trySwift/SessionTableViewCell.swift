@@ -26,6 +26,7 @@ class SessionTableViewCell: UITableViewCell {
         sessionTypeLabel.textColor = .trySwiftTitleColor()
         speakerNameLabel.textColor = .trySwiftSubtitleColor()
         sessionLocationLabel.textColor = .trySwiftSubtitleColor()
+        sessionTitleLabel.clipsToBounds = false
     }
 
     func configure(withSession session: Session) {
@@ -47,6 +48,9 @@ class SessionTableViewCell: UITableViewCell {
         }
         
         sessionLocationLabel.text = session.location
+        setNeedsUpdateConstraints()
+        layoutIfNeeded()
     }
-    
 }
+
+
