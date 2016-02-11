@@ -77,35 +77,6 @@
             <point key="canvasLocation" x="1527" y="-1138"/>
         </scene>
         <!--Root View Controller-->
-        <scene sceneID="Wk6-W3-YUZ">
-            <objects>
-                <tableViewController id="Lqc-ls-QQF" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sBf-P8-NZm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nfh-Pb-FPN">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nfh-Pb-FPN" id="dTl-5l-zgg">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Lqc-ls-QQF" id="lPR-zf-xA3"/>
-                            <outlet property="delegate" destination="Lqc-ls-QQF" id="ZXm-YV-VM3"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Wmd-1k-lwK"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hfu-3j-nmp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1555" y="-376"/>
-        </scene>
-        <!--Root View Controller-->
         <scene sceneID="2oi-0W-qWe">
             <objects>
                 <tableViewController id="Ccr-fK-qqe" sceneMemberID="viewController">
@@ -253,12 +224,46 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Lqc-ls-QQF" kind="relationship" relationship="rootViewController" id="RmM-4m-bcu"/>
+                        <segue destination="JNG-MG-GVZ" kind="relationship" relationship="rootViewController" id="ZCv-FY-3UF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEw-93-IqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="764" y="-376"/>
+        </scene>
+        <!--Q&A Sessions View Controller-->
+        <scene sceneID="91W-FK-vvq">
+            <objects>
+                <viewController id="JNG-MG-GVZ" userLabel="Q&amp;A Sessions View Controller" customClass="QASessionsViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eON-q3-RA2"/>
+                        <viewControllerLayoutGuide type="bottom" id="cp8-0P-D8j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CDc-Er-RQB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98Y-7i-ZD0">
+                                <rect key="frame" x="0.0" y="104" width="600" height="447"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="98Y-7i-ZD0" firstAttribute="leading" secondItem="CDc-Er-RQB" secondAttribute="leading" id="H4N-Sy-Ije"/>
+                            <constraint firstItem="98Y-7i-ZD0" firstAttribute="top" secondItem="eON-q3-RA2" secondAttribute="bottom" constant="40" id="Hg8-fw-HDq"/>
+                            <constraint firstItem="cp8-0P-D8j" firstAttribute="top" secondItem="98Y-7i-ZD0" secondAttribute="bottom" id="ket-2O-Eqk"/>
+                            <constraint firstAttribute="trailing" secondItem="98Y-7i-ZD0" secondAttribute="trailing" id="w6V-iH-Fge"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WLk-HI-aSw"/>
+                    <connections>
+                        <outlet property="containerView" destination="98Y-7i-ZD0" id="IgZ-1J-2f8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uKI-aG-92Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1527" y="-376"/>
         </scene>
     </scenes>
     <resources>

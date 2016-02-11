@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="168" id="KGk-i7-Jjw" customClass="QASessionTableViewCell" customModule="trySwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="167.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q1J-UG-7V3">
+                        <rect key="frame" x="8" y="8" width="304" height="152"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Q&amp;A Session title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWW-Nv-HEG">
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxT-tO-edD">
+                                <rect key="frame" x="0.0" y="28" width="304" height="19"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QwE-TR-8kX">
+                                <rect key="frame" x="0.0" y="52" width="304" height="100"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-On-eyj">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tOK-Ci-Anr">
+                                        <rect key="frame" x="105" y="0.0" width="95" height="100"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LOL-79-9Qz">
+                                        <rect key="frame" x="210" y="0.0" width="95" height="100"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fwM-tu-Id6"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Q1J-UG-7V3" secondAttribute="bottom" id="22c-4h-GZG"/>
+                    <constraint firstItem="Q1J-UG-7V3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5Fq-E1-t7I"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Q1J-UG-7V3" secondAttribute="trailing" id="GPW-bW-vSn"/>
+                    <constraint firstItem="Q1J-UG-7V3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="fbY-OH-79n"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="locationLabel" destination="vxT-tO-edD" id="a32-sC-0Us"/>
+                <outlet property="qaSessionTitleLabel" destination="TWW-Nv-HEG" id="TRD-4C-jLC"/>
+                <outlet property="speaker1ImageView" destination="fe7-On-eyj" id="H45-bP-bSS"/>
+                <outlet property="speaker2ImageView" destination="tOK-Ci-Anr" id="UbL-DO-pof"/>
+                <outlet property="speaker3ImageView" destination="LOL-79-9Qz" id="vYW-YN-MfJ"/>
+            </connections>
+            <point key="canvasLocation" x="345" y="196"/>
+        </tableViewCell>
+    </objects>
+</document>

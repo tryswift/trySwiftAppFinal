@@ -14,8 +14,10 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         super.viewDidLoad()
         
         title = isJapanese ? "スケジュール" : "Schedule"
-        // navigationController?.navigationBarHidden = true
         buttonBarView.registerNib(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+        buttonBarView.backgroundColor = .whiteColor()
+        settings.style.selectedBarBackgroundColor = .whiteColor()
+        buttonBarView.selectedBar.backgroundColor = UIColor.trySwiftAccentColor()
     }
     
     override func viewControllersForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

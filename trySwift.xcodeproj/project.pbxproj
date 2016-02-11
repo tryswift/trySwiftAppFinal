@@ -23,6 +23,15 @@
 		FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E61C6B32F80074B6BE /* SessionTableViewCell.swift */; };
 		FA39E8E91C6B32F80074B6BE /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8E71C6B32F80074B6BE /* SessionTableViewCell.xib */; };
 		FA39E8EE1C6C034B0074B6BE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8ED1C6C034B0074B6BE /* UIColorExtension.swift */; };
+		FA39E8F11C6C13D70074B6BE /* QASession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8F01C6C13D70074B6BE /* QASession.swift */; };
+		FA39E8F41C6C24240074B6BE /* QASessionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8F31C6C24240074B6BE /* QASessionDataSourceProtocol.swift */; };
+		FA39E8F61C6C244A0074B6BE /* QASessionDataSourceDay1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8F51C6C244A0074B6BE /* QASessionDataSourceDay1.swift */; };
+		FA39E8F81C6C245B0074B6BE /* QASessionDataSourceDay2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8F71C6C245B0074B6BE /* QASessionDataSourceDay2.swift */; };
+		FA39E8FA1C6C24690074B6BE /* QASessionDataSourceDay3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8F91C6C24690074B6BE /* QASessionDataSourceDay3.swift */; };
+		FA39E8FE1C6C32510074B6BE /* QASessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8FD1C6C32510074B6BE /* QASessionsViewController.swift */; };
+		FA39E9001C6C32A50074B6BE /* QASessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8FF1C6C32A50074B6BE /* QASessionsTableViewController.swift */; };
+		FA39E9031C6C33870074B6BE /* QASessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9011C6C33870074B6BE /* QASessionTableViewCell.swift */; };
+		FA39E9041C6C33870074B6BE /* QASessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9021C6C33870074B6BE /* QASessionTableViewCell.xib */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -67,6 +76,15 @@
 		FA39E8E61C6B32F80074B6BE /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E8E71C6B32F80074B6BE /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
 		FA39E8ED1C6C034B0074B6BE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		FA39E8F01C6C13D70074B6BE /* QASession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASession.swift; sourceTree = "<group>"; };
+		FA39E8F31C6C24240074B6BE /* QASessionDataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionDataSourceProtocol.swift; sourceTree = "<group>"; };
+		FA39E8F51C6C244A0074B6BE /* QASessionDataSourceDay1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionDataSourceDay1.swift; sourceTree = "<group>"; };
+		FA39E8F71C6C245B0074B6BE /* QASessionDataSourceDay2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionDataSourceDay2.swift; sourceTree = "<group>"; };
+		FA39E8F91C6C24690074B6BE /* QASessionDataSourceDay3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionDataSourceDay3.swift; sourceTree = "<group>"; };
+		FA39E8FD1C6C32510074B6BE /* QASessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionsViewController.swift; sourceTree = "<group>"; };
+		FA39E8FF1C6C32A50074B6BE /* QASessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionsTableViewController.swift; sourceTree = "<group>"; };
+		FA39E9011C6C33870074B6BE /* QASessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionTableViewCell.swift; sourceTree = "<group>"; };
+		FA39E9021C6C33870074B6BE /* QASessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QASessionTableViewCell.xib; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,8 +145,8 @@
 		FA39E8C51C6AB7310074B6BE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */,
-				FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */,
+				FA39E8FB1C6C26150074B6BE /* Schedule */,
+				FA39E8FC1C6C32120074B6BE /* Q&A */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -138,6 +156,7 @@
 			children = (
 				FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */,
 				FA39E8EA1C6BF13D0074B6BE /* SessionTableViewCell */,
+				FA39E9051C6C338C0074B6BE /* QASessionTableViewCell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -155,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				FA39E8D61C6B05980074B6BE /* Session.swift */,
+				FA39E8F01C6C13D70074B6BE /* QASession.swift */,
 				FA39E8DA1C6B09CE0074B6BE /* Speaker.swift */,
 				FA39E8DC1C6B09DF0074B6BE /* Sponsor.swift */,
 				FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */,
@@ -165,10 +185,8 @@
 		FA39E8D51C6AFE200074B6BE /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				FA39E8D31C6AFE180074B6BE /* SessionDataSourceProtocol.swift */,
-				FA39E8E01C6B31150074B6BE /* SessionDataSourceDay1.swift */,
-				FA39E8E21C6B31220074B6BE /* SessionDataSourceDay2.swift */,
-				FA39E8E41C6B31300074B6BE /* SessionDataSourceDay3.swift */,
+				FA39E8EF1C6C13B70074B6BE /* SessionDataSources */,
+				FA39E8F21C6C23E00074B6BE /* QASessionDataSources */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -180,6 +198,55 @@
 				FA39E8E71C6B32F80074B6BE /* SessionTableViewCell.xib */,
 			);
 			name = SessionTableViewCell;
+			sourceTree = "<group>";
+		};
+		FA39E8EF1C6C13B70074B6BE /* SessionDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				FA39E8D31C6AFE180074B6BE /* SessionDataSourceProtocol.swift */,
+				FA39E8E01C6B31150074B6BE /* SessionDataSourceDay1.swift */,
+				FA39E8E21C6B31220074B6BE /* SessionDataSourceDay2.swift */,
+				FA39E8E41C6B31300074B6BE /* SessionDataSourceDay3.swift */,
+			);
+			name = SessionDataSources;
+			sourceTree = "<group>";
+		};
+		FA39E8F21C6C23E00074B6BE /* QASessionDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				FA39E8F31C6C24240074B6BE /* QASessionDataSourceProtocol.swift */,
+				FA39E8F51C6C244A0074B6BE /* QASessionDataSourceDay1.swift */,
+				FA39E8F71C6C245B0074B6BE /* QASessionDataSourceDay2.swift */,
+				FA39E8F91C6C24690074B6BE /* QASessionDataSourceDay3.swift */,
+			);
+			name = QASessionDataSources;
+			sourceTree = "<group>";
+		};
+		FA39E8FB1C6C26150074B6BE /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */,
+				FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		FA39E8FC1C6C32120074B6BE /* Q&A */ = {
+			isa = PBXGroup;
+			children = (
+				FA39E8FD1C6C32510074B6BE /* QASessionsViewController.swift */,
+				FA39E8FF1C6C32A50074B6BE /* QASessionsTableViewController.swift */,
+			);
+			name = "Q&A";
+			sourceTree = "<group>";
+		};
+		FA39E9051C6C338C0074B6BE /* QASessionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA39E9011C6C33870074B6BE /* QASessionTableViewCell.swift */,
+				FA39E9021C6C33870074B6BE /* QASessionTableViewCell.xib */,
+			);
+			name = QASessionTableViewCell;
 			sourceTree = "<group>";
 		};
 		FAFA15AF1C69D31B00FEA4EA = {
@@ -346,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA39E9041C6C33870074B6BE /* QASessionTableViewCell.xib in Resources */,
 				FA39E8E91C6B32F80074B6BE /* SessionTableViewCell.xib in Resources */,
 				FAFA15C61C69D31C00FEA4EA /* LaunchScreen.storyboard in Resources */,
 				FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */,
@@ -424,17 +492,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA39E8D71C6B05980074B6BE /* Session.swift in Sources */,
+				FA39E8F61C6C244A0074B6BE /* QASessionDataSourceDay1.swift in Sources */,
+				FA39E9031C6C33870074B6BE /* QASessionTableViewCell.swift in Sources */,
 				FA39E8EE1C6C034B0074B6BE /* UIColorExtension.swift in Sources */,
 				FA39E8DF1C6B17DC0074B6BE /* Presentation.swift in Sources */,
+				FA39E8F11C6C13D70074B6BE /* QASession.swift in Sources */,
+				FA39E8FE1C6C32510074B6BE /* QASessionsViewController.swift in Sources */,
 				FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */,
 				FA39E8E51C6B31300074B6BE /* SessionDataSourceDay3.swift in Sources */,
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
 				FA39E8DD1C6B09DF0074B6BE /* Sponsor.swift in Sources */,
+				FA39E8F81C6C245B0074B6BE /* QASessionDataSourceDay2.swift in Sources */,
 				FA39E8DB1C6B09CE0074B6BE /* Speaker.swift in Sources */,
 				FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */,
 				FA39E8E31C6B31220074B6BE /* SessionDataSourceDay2.swift in Sources */,
 				FA39E8D41C6AFE180074B6BE /* SessionDataSourceProtocol.swift in Sources */,
 				FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */,
+				FA39E8FA1C6C24690074B6BE /* QASessionDataSourceDay3.swift in Sources */,
+				FA39E9001C6C32A50074B6BE /* QASessionsTableViewController.swift in Sources */,
+				FA39E8F41C6C24240074B6BE /* QASessionDataSourceProtocol.swift in Sources */,
 				FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */,
 				FA39E8CD1C6AF8C80074B6BE /* NSLocaleExtension.swift in Sources */,
 			);

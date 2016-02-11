@@ -22,4 +22,8 @@ extension UIColor {
     class func trySwiftSubtitleColor() -> UIColor {
         return UIColor.blackColor().lightenColor(0.4).desaturatedColor()
     }
+    
+    class func trySwiftAccentColor() -> UIColor {
+        return UIColor(hexString: "#4FD5D6")
+    }
 }
