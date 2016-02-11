@@ -20,9 +20,17 @@ class SpeakerTableViewCell: UITableViewCell {
         speakerTwitterLabel.textColor = UIColor.twitterBlue()
     }
     
-    func configure(withSpeaker speaker: Speaker) {
+    func configure(withSpeaker speaker: Speaker, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {
         speakerImageView.image = speaker.image
         speakerNameLabel.text = speaker.name
         speakerTwitterLabel.text = "@\(speaker.twitter)"
+        
+        if selectionEnabled == false {
+            selectionStyle = .None
+        }
+        
+        if accessoryEnabled == false {
+            accessoryType = .None
+        }
     }
 }
