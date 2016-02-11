@@ -12,7 +12,7 @@ import DynamicColor
 extension UIColor {
 
     class func trySwiftMainColor() -> UIColor {
-        return UIColor(hexString: "#C62128")
+        return UIColor(hexString: "#B8322B")
     }
     
     class func trySwiftTitleColor() -> UIColor {
