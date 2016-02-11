@@ -24,7 +24,6 @@ class WebDisplayViewController: UIViewController {
         activityIndicator.startAnimating()
         
         title = displayTitle
-        navigationController?.navigationBar.tintColor = .whiteColor()
     }
 
 }

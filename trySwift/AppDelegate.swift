@@ -59,6 +59,7 @@ private extension AppDelegate {
         ]
         
         UINavigationBar.appearance().barTintColor = tintColor
+        UINavigationBar.appearance().tintColor = .whiteColor()
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().barStyle = .BlackTranslucent
     }
