@@ -21,6 +21,8 @@ class SessionsTableViewController: UITableViewController {
         
         tableView.estimatedRowHeight = 160
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        registerForPreviewingWithDelegate(self, sourceView: tableView)
     }
 
     // MARK: - Table view data source
@@ -65,6 +67,29 @@ extension SessionsTableViewController: IndicatorInfoProvider {
     
     func indicatorInfoForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: dataSource.header)
+    }
+}
+
+extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        if let indexPath = tableView.indexPathForRowAtPoint(location) {
+            //This will show the cell clearly and blur the rest of the screen for our peek.
+            previewingContext.sourceRect = tableView.rectForRowAtIndexPath(indexPath)
+            let session = dataSource.sessions[indexPath.section]
+            if let speaker = session.speaker {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let sessionDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SessionDetailsViewController)) as! SessionDetailsViewController
+                sessionDetailsVC.session = session
+                sessionDetailsVC.speaker = speaker
+                return sessionDetailsVC
+            }
+        }
+        return nil
+    }
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }
 }
 
