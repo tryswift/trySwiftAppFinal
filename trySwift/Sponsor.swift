@@ -346,7 +346,9 @@ extension Sponsor {
         twitter: "PRTIMES_JP",
         logo: UIImage(named: "prtimes")!,
         level: .Silver,
-        description: "「企業と生活者をつなぎ、世の中にいいものを広める」それがPR TIMESです。プレスリリース配信サービス「PR TIMES」はプレスリリースにテクノロジーを加えることで、より多彩な表現を実現し、多くの優良なプレスリリースが集まっています。プレスリリース配信シェアとサイト月間PV数は、共に国内N0.1です。また、昨年お問い合わせフォームなどが直感的に作成できるカスタマーサポートツール「Tayori」も立ち上げ、好評を頂いています。"
+        description: isJapanese ?
+            "「企業と生活者をつなぎ、世の中にいいものを広める」それがPR TIMESです。プレスリリース配信サービス「PR TIMES」はプレスリリースにテクノロジーを加えることで、より多彩な表現を実現し、多くの優良なプレスリリースが集まっています。プレスリリース配信シェアとサイト月間PV数は、共に国内No.1です。また、昨年お問い合わせフォームなどが直感的に作成できるカスタマーサポートツール「Tayori」も立ち上げ、好評を頂いています。" :
+            "PR TIMES is the platform to connect companies to public audiences and spread good things across the society. Our service can distribute unique releases with any design using the Editor. You can edit pictures, movies, and layouts to create the custom look you want. Every month, we have the leading number of page views, shares on social sites and the most significant press releases in all of Japan. Last year we launched Tayori, a customer support tool which has gained a first rate reputation."
     )
     
     static let ohako = Sponsor(
