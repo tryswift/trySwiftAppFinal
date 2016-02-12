@@ -34,7 +34,7 @@ extension Sponsor {
     
     static let diamondSponsors = [realm, cyberAgent]
     static let goldSponsors = [mercari, line, kytrade]
-    static let silverSponsors = [fenrir, denso, voyageGroup, dena, freee, nineDrafts, goodpatch, hatena, github, mixi, yahoo, cookpad, toreta, fablic, recruit, classMethod, furyu, retty, sansan, speee, chatwork, pepabo, wondershake, ubiregi, togetter, ride, nikkei, prtimes, ohako, ookami, perfect, instagram]
+    static let silverSponsors = [fenrir, denso, voyageGroup, dena, freee, nineDrafts, goodpatch, hatena, github, mixi, yahoo, cookpad, toreta, fablic, recruit, classMethod, furyu, retty, sansan, speee, chatwork, pepabo, wondershake, ubiregi, togetter, ride, nikkei, prtimes, ohako, ookami, perfect, instagram, caraquri]
     
     // MARK: Diamond Sponsors
     static let realm = Sponsor(
@@ -385,5 +385,16 @@ extension Sponsor {
         logo: UIImage(named: "Instagram")!,
         level: .Silver,
         description: nil
+    )
+
+    static let caraquri = Sponsor(
+        name: isJapanese ? "からくり株式会社" : "Caraquri Inc.",
+        website: "caraquri.com",
+        twitter: "caraquri",
+        logo: UIImage(named: "caraquri")!,
+        level: .Silver,
+        description: isJapanese ?
+            "iOS/Androidアプリ開発の会社です。クライアントと消費者とのコミュニケーションチャンネルとしてアプリを開発することが多く、動画視聴アプリ、小売向け会員アプリ、販促向けクーポンアプリ、ポータルサイトのニュースアプリ、電子書籍アプリなどを主に手がけています。" :
+            "We develop iOS and Android applications. We develop applications as a communication channel between our clients and their consumers, and develop movie apps, retail coupon apps, news portal apps, e-book apps and more."
     )
 }
