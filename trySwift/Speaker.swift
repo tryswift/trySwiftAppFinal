@@ -27,7 +27,7 @@ extension Speaker {
         image: Toucan(image: UIImage(named: "ashfurrow")!).maskWithEllipse().image,
         bio: isJapanese ? "iOSエンジニアおよび著者としてArtsyで働くカナダ人です。多くのアプリを開発し、これまで4冊の書籍を出版しています。また、オープンソースのコントリビューターとしてコミュニティに関わっています。ブログでは、興味深いプログラミングのネタからフィルムカメラにまでおよぶ様々なトピックを扱っています。" : "Ash Furrow is a Canadian iOS developer and author, currently working at Artsy. He has published four books, built many apps, and is a contributor to the open source community. On his blog, he writes about a range of topics, from interesting programming to explorations of analogue film photography.",
         presentation: Presentation(
-            title: isJapanese ? "An Artsy Testing Tour" : "Artsyにおけるテスト手法の紹介",
+            title: isJapanese ? "Artsyにおけるテスト手法の紹介" : "An Artsy Testing Tour",
             summary: isJapanese ?
                 "Artyは４つのiOSアプリケーションを提供しています。すべてオープンソースとして公開しています。そしてすべて異なるアプローチを用いてテストされています。なぜでしょうか？それぞれ異なるテスト手法を用いることは、異なる環境においてうまく動くからです。ArtsyのiOSチームの判断の裏付けとなった議論や、どんな問題にあたり、どのように課題を解決したのかを紹介します。すばらしいソフトウェアを作るために、なぜテストが重要なのかをより理解できるようになるでしょう。" :
                 "Artsy has four iOS applications; all of them are open source, and all of them take different approaches to testing. Why? Because different testing techniques work better or worse in different circumstances. Come hear Ash Furrow discuss the motivations behind the Artsy iOS team's decisions, what struggles they encountered, and how they overcame those challenges. You will leave with a better understanding of when and why testing is important to building fantastic software.")
@@ -165,7 +165,9 @@ extension Speaker {
         twitter: "dimsumthinking",
         image: Toucan(image: UIImage(named: "dimsumthinking")!).maskWithEllipse().image,
         bio: isJapanese ? "Danielはベストセラーになった「A Swift Kickstart」と「Developing iOS 7 Apps for iPad and iPhone」の著者です。（この２冊の本は、iTunes Uで人気のスタンフォード大学のiOS開発の講義の公式の参考書になっています。）iPhoneとiPadアプリの開発をSDKが出た当初から始め、Macアプリに至ってはSyntem 7の頃から携わっています。また、iPhone、Cocoa、およびSwiftについてのトレーニングとコンサルティングを彼のDim Sum Thinking社で行っています。" : "Daniel is the author of the best selling books A Swift Kickstart and Developing iOS 7 Apps for iPad and iPhone (the official companion book to the popular iTunes U series from Stanford University). He has written apps for the iPhone and the iPad since the SDKs first appeared and has written programs for the Mac all the way back to System 7.Daniel presents iPhone, Cocoa, and Swift training and consults through his company Dim Sum Thinking.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "文化を調和させる" : "Blending Cultures",
+            summary: isJapanese ? "Swiftでアプリケーションを書くということはObjective-Cで書かれたアプリケーションをただSwiftに書き換えるだけでなく、Swiftの特徴や哲学を受け入れる必要があります。この講演では、標準的なMVCで構成されたテーブルビューを使用したアプリケーションをSwiftに書き換えるところから始まり、よりSwiftらしいコードにするために、関数型プログラミング、オブジェクト指向プログラミング、デザインパターン、プロトコル指向プログラミングの考え方を適用していきます。" : "A Swift application is more than just an Objective-C app translated into Swift. We need to embrace the features and philosophy of the Swift language. In this talk, we begin with a standard Model-View-Controller TableView application translated into Swift and apply ideas from Functional Programming, Object Oriented Programming, Design Patterns, and Protocol Oriented Programming to turn it into idiomatic Swift."))
     
     static let matthewGillingham = Speaker(
         name: "Matthew Gillingham",
@@ -243,7 +245,9 @@ extension Speaker {
         twitter: "NeoNacho",
         image: Toucan(image: UIImage(named: "boris")!).maskWithEllipse().image,
         bio: isJapanese ? "Borisはベルリン在住のCocoaデベロッパーです。現在はContentfulでiOSのSDKを開発に携わっています。Java開発者としての一面や、たくさんのiOSアプリを開発した経験を持っています。彼はまたオープンソースの強力なコントリビュータでもあります。Xcodeをより使いやすくするためのプラグインを開発したり、“Senior VP of Evil”という肩書きでCocoaPodsの不具合を直しています。Ya tu sabes.（それじゃ、また。）" : "Boris is a Cocoa developer from Berlin, who currently works on the iOS SDK at Contentful. A Java developer in another life, with many iOS apps under his belt, he is also a strong open source contributor, building plugins to tame Xcode, and bashing bugs as the CocoaPods “Senior VP of Evil“",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "📺" : "📺",
+            summary: isJapanese ? "新しいApple TV向けの設計、開発方法の概要、tvOSのUIコンポーネント、フレームワーク、iOSとの違い、既存のアプリケーションを移植する方法を説明します。" : "This talk will give you an overview on designing and developing for the new Apple TV. Learn about the tvOS UI components, available frameworks, what makes it different from iOS and how to port existing apps."))
     
     static let hectorMatos = Speaker(
         name: "Hector Matos",
@@ -261,7 +265,7 @@ extension Speaker {
         image: Toucan(image: UIImage(named: "michele")!).maskWithEllipse().image,
         bio: isJapanese ? "Michele Titoloは機械の反乱についてまったく気にしていません。2010よりプロとしてソフトウェア開発を始め、数多くのテスト書かれていないコードを見てきて、未来が安全であるという確信を得ました。 彼女はCapital Oneのリードエンジニアであり、Women Who CodeのCTOでもあります。日夜、彼女は品質が高くメンテナンスしやすいコードを世界に広めるために活動しています。" : "Michele Titolo is not at all worried about a robot uprising. Making software professionally since 2010, she has seen enough codebases without tests to know our future is safe. By day she is a Lead Software Engineer at Capital One and CTO of Women Who Code. By night she travels the world advocating for high quality and maintainable code.",
         presentation: Presentation(
-            title: isJapanese ? "Protocols and the Promised Land" : "プロトコルと約束の地",
+            title: isJapanese ? "プロトコルと約束の地" : "Protocols and the Promised Land",
             summary: isJapanese ?
                 "Swiftの設計はジェネリクスや第一級プロトコルなど言語の機能がアプリケーション開発のカギとなることを推進しています。しかし、Objective-Cから導入されたものを含む論理的パターンの多くは期待した通りには動作しません。多くの場合、Swiftの型システムは、プロパティをクラスとプロトコルの両方に拘束したりする素直なパターンとうまく動きません。この講演ではいくつかの課題に着目し、内部に潜む原因を議論し、対応策について考えます。" :
                 "Swift’s design promotes language features like generics and first-class protocols as key architectural components in application development. However, many of the logical patterns that arise, including ones imported from Objective-C, don’t work as we expect them to. In many cases, Swift’s type system resists certain straightforward patterns, such as constraining a property to both a class and a protocol. This talk will highlight several of these challenges, discuss the underlying cause, and evaluate workarounds."))
@@ -272,7 +276,7 @@ extension Speaker {
         image: Toucan(image: UIImage(named: "rachel")!).maskWithEllipse().image,
         bio: isJapanese ? "Stitch FixでiOSのリードエンジニアをしています。以前はPivotal Labsで働いていました。ユーザ・開発者の両方にとって素晴らしい経験を作り出すことを大切にしています。" : "Rachel is a lead engineer on the iOS team at Stitch Fix. Previously, she worked at Pivotal Labs. She cares deeply about building delightful experiences for both software users and software developers.",
         presentation: Presentation(
-            title: isJapanese ? "The Design of Everyday Swift" : "Swift版「誰のためのデザイン？」",
+            title: isJapanese ? "Swift版「誰のためのデザイン？」" : "The Design of Everyday Swift",
             summary: isJapanese ?
                 "D.A.ノーマン著「誰のためのデザイン？（原題: \"The Design of Everyday Things\"）」はデザイン哲学に焦点をあてたデザインの書です。そこで紹介されている多くの原則はSwiftのような物理的ではない言語についても当てはまります。このような原則を通して、読みやすく効果的なコードの書き方を探ります。" :
                 "Don Norman's \"The Design of Everyday Things\" is a classic design book, focused on the design of physical objects. Many of the principles that he discusses are also applicable to non-physical object–like Swift! In this talk, we'll go over some of these principles, and how they can be applied towards writing well-factored, easy-to-read Swift code."))
@@ -284,8 +288,10 @@ extension Speaker {
         bio: isJapanese ? "iOSエンジニアです。そうではないふりをしますが。小さなプロダクトコンサルタント会社を経営しています。タイトなジーンズを着、ゆっくりと旅行の荷造りのエキスパートになっています。" : "Daniel is an iOS Developer, whenever he is not pretending to be one. He runs a small product consultancy - Many Things. He wears tight jeans and he is slowly becoming an expert at travel packing.",
         presentation: Presentation(
             title: isJapanese ? "xcodeless - the build system" : "xcodeless - the build system",
-            summary: isJapanese ? "what would you do without xcodebuild? why would you do it? how would you do it? we'll take a look at how Xcode builds your projects and how we can use swiftc and Clang to build our own." : "xcodebuildが無いとしたらどうしますか？どのようにんプロジェクトをビルドするでしょうか？Xcodeがどうやっってプロジャクトをビルドするのか、またswiftcとClangを使ってビルドする方法を説明します。"))
-    
+            summary: isJapanese ?
+                "xcodebuildが無いとしたらどうしますか？どのようにんプロジェクトをビルドするでしょうか？Xcodeがどうやっってプロジャクトをビルドするのか、またswiftcとClangを使ってビルドする方法を説明します。" :
+                "what would you do without xcodebuild? why would you do it? how would you do it? we'll take a look at how Xcode builds your projects and how we can use swiftc and Clang to build our own."))
+
     static let stephanieShupe = Speaker(
         name: "Stephanie Shupe",
         twitter: "steph_shupe",
