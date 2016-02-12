@@ -27,7 +27,7 @@ class MoreTableViewController: UITableViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = isJapanese ? "もっと" : "More"
+        title = isJapanese ? "その他" : "More"
     }
     
     override func viewDidLoad() {
