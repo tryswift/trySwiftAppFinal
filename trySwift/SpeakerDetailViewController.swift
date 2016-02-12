@@ -13,9 +13,7 @@ class SpeakerDetailViewController: UITableViewController {
     var speaker: Speaker!
     
     private enum SpeakerDetail: Int {
-        case Header
-        case Bio
-        case Twitter
+        case Header, Bio, Twitter
     }
     
     override func viewDidLoad() {

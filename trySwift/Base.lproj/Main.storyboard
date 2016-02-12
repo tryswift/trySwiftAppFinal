@@ -70,11 +70,30 @@
                     <navigationItem key="navigationItem" id="olD-E8-za3"/>
                     <connections>
                         <outlet property="containerView" destination="RPm-KG-Btr" id="dlS-tG-Pjv"/>
+                        <segue destination="YhW-46-7Om" kind="show" identifier="sessionDetailsSegue" action="showDetailViewController:sender:" id="MDQ-HI-qa8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDk-xO-67d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1527" y="-1138"/>
+        </scene>
+        <!--Session Details View Controller-->
+        <scene sceneID="gqx-3r-fjx">
+            <objects>
+                <tableViewController storyboardIdentifier="SessionDetailsViewController" id="YhW-46-7Om" customClass="SessionDetailsViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qZt-eO-bKm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="YhW-46-7Om" id="IOG-f3-OmZ"/>
+                            <outlet property="delegate" destination="YhW-46-7Om" id="SJq-Nh-3I4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEB-E9-8Lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2216" y="-1138"/>
         </scene>
         <!--Speakers-->
         <scene sceneID="2oi-0W-qWe">

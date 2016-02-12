@@ -12,6 +12,7 @@ import XLPagerTabStrip
 class SessionsTableViewController: UITableViewController {
 
     var dataSource: SessionDataSourceProtocol!
+    private let sessionDetailsSegue = "sessionDetailsSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,18 @@ class SessionsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         let session = dataSource.sessions[section]
-        return "\(session.startTime.stringFromFormat("H:mm")) - \(session.endTime.stringFromFormat("H:mm"))"
+        return session.timeString
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let session = dataSource.sessions[indexPath.section]
+        if let speaker = session.speaker {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let sessionDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SessionDetailsViewController)) as! SessionDetailsViewController
+            sessionDetailsVC.session = session
+            sessionDetailsVC.speaker = speaker
+            navigationController?.pushViewController(sessionDetailsVC, animated: true)
+        }
     }
 
 }
