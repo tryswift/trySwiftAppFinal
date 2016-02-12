@@ -45,6 +45,9 @@
 		FA39E9261C6D29D20074B6BE /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9241C6D29D20074B6BE /* TextTableViewCell.xib */; };
 		FA39E92C1C6D310E0074B6BE /* TwitterFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E92A1C6D310E0074B6BE /* TwitterFollowTableViewCell.swift */; };
 		FA39E92D1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E92B1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib */; };
+		FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */; };
+		FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */; };
+		FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -111,6 +114,9 @@
 		FA39E9241C6D29D20074B6BE /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		FA39E92A1C6D310E0074B6BE /* TwitterFollowTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterFollowTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E92B1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterFollowTableViewCell.xib; sourceTree = "<group>"; };
+		FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,6 +197,7 @@
 				FA39E9181C6C83A90074B6BE /* SponsorTableViewCell */,
 				FA39E9271C6D29D60074B6BE /* TextTableViewCell */,
 				FA39E92E1C6D31120074B6BE /* TwitterFollowTableViewCell */,
+				FA39E9361C6D598C0074B6BE /* SessionHeaderTableViewCell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -261,6 +268,7 @@
 			children = (
 				FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */,
 				FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */,
+				FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */,
 			);
 			name = Schedule;
 			sourceTree = "<group>";
@@ -334,6 +342,15 @@
 				FA39E92B1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib */,
 			);
 			name = TwitterFollowTableViewCell;
+			sourceTree = "<group>";
+		};
+		FA39E9361C6D598C0074B6BE /* SessionHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */,
+				FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */,
+			);
+			name = SessionHeaderTableViewCell;
 			sourceTree = "<group>";
 		};
 		FAFA15AF1C69D31B00FEA4EA = {
@@ -508,6 +525,7 @@
 				FA39E91E1C6C8D100074B6BE /* WebDisplayViewController.xib in Resources */,
 				FA39E9261C6D29D20074B6BE /* TextTableViewCell.xib in Resources */,
 				FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */,
+				FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */,
 				FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */,
 				FA39E92D1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib in Resources */,
 				FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */,
@@ -606,12 +624,14 @@
 				FA39E8D41C6AFE180074B6BE /* SessionDataSourceProtocol.swift in Sources */,
 				FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */,
 				FA39E8FA1C6C24690074B6BE /* QASessionDataSourceDay3.swift in Sources */,
+				FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */,
 				FA39E90B1C6C45FD0074B6BE /* SpeakerTableViewCell.swift in Sources */,
 				FA39E9001C6C32A50074B6BE /* QASessionsTableViewController.swift in Sources */,
 				FA39E9251C6D29D20074B6BE /* TextTableViewCell.swift in Sources */,
 				FA39E8F41C6C24240074B6BE /* QASessionDataSourceProtocol.swift in Sources */,
 				FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */,
 				FA39E8CD1C6AF8C80074B6BE /* NSLocaleExtension.swift in Sources */,
+				FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */,
 				FA39E9201C6D25D00074B6BE /* SpeakerDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
