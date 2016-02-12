@@ -26,7 +26,7 @@ extension Organizer {
     )
     
     static let kk = Organizer(
-        name: isJapanese ? "Kishikawa Katsumi" : "Kishikawa Katsumi",
+        name: isJapanese ? "岸川克己" : "Kishikawa Katsumi",
         twitter: "k_katsumi",
         image: Toucan(image: UIImage(named: "kk")!).maskWithEllipse().image
     )
