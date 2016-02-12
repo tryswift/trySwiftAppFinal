@@ -54,6 +54,7 @@
 		FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5891C6D8A5200DCAF0B /* OrganizersTableViewController.swift */; };
 		FA65B58D1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B58B1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift */; };
 		FA65B58E1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA65B58C1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib */; };
+		FA65B5911C6DA53600DCAF0B /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5901C6DA53600DCAF0B /* AboutTableViewController.swift */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -130,6 +131,7 @@
 		FA65B5891C6D8A5200DCAF0B /* OrganizersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizersTableViewController.swift; sourceTree = "<group>"; };
 		FA65B58B1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerTableViewCell.swift; sourceTree = "<group>"; };
 		FA65B58C1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrganizerTableViewCell.xib; sourceTree = "<group>"; };
+		FA65B5901C6DA53600DCAF0B /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 			children = (
 				FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */,
 				FA65B5891C6D8A5200DCAF0B /* OrganizersTableViewController.swift */,
+				FA65B5901C6DA53600DCAF0B /* AboutTableViewController.swift */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				FA39E8FA1C6C24690074B6BE /* QASessionDataSourceDay3.swift in Sources */,
 				FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */,
 				FA39E90B1C6C45FD0074B6BE /* SpeakerTableViewCell.swift in Sources */,
+				FA65B5911C6DA53600DCAF0B /* AboutTableViewController.swift in Sources */,
 				FA65B58D1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift in Sources */,
 				FA39E9001C6C32A50074B6BE /* QASessionsTableViewController.swift in Sources */,
 				FA39E9251C6D29D20074B6BE /* TextTableViewCell.swift in Sources */,

@@ -75,7 +75,7 @@ class MoreTableViewController: UITableViewController {
         case .EventDetails:
             switch EventDetailsRow(rawValue: indexPath.row)! {
             case .About:
-                return
+                showAbout()
             case .Venue:
                 showVenue()
             case .CodeOfConduct:
@@ -94,6 +94,11 @@ class MoreTableViewController: UITableViewController {
 }
 
 private extension MoreTableViewController {
+    
+    func showAbout() {
+        let aboutViewController = AboutTableViewController()
+        navigationController?.pushViewController(aboutViewController, animated: true)
+    }
     
     func showVenue() {
         let webViewController = WebDisplayViewController()

@@ -66,4 +66,10 @@ extension Organizer {
         twitter: "tasanobu",
         image: Toucan(image: UIImage(named: "tasanobu")!).maskWithEllipse().image
     )
+    
+    static let trySwift = Organizer(
+        name: "try! Swift",
+        twitter: "tryswiftconf",
+        image: Toucan(image: UIImage(named: "logo")!).maskWithEllipse().image
+    )
 }
