@@ -26,7 +26,9 @@ class SpeakersViewController: UITableViewController {
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        registerForPreviewingWithDelegate(self, sourceView: tableView)
+        if traitCollection.forceTouchCapability == .Available {
+            registerForPreviewingWithDelegate(self, sourceView: tableView)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

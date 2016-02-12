@@ -36,7 +36,11 @@ class QASessionsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(QASessionTableViewCell), forIndexPath: indexPath) as! QASessionTableViewCell
         
         let qaSession = dataSource.qaSessions[indexPath.section]
-        cell.configure(withQASession: qaSession)
+        cell.configure(withQASession: qaSession, delegate: self)
+        
+        if traitCollection.forceTouchCapability == .Available {
+            registerForPreviewingWithDelegate(cell, sourceView: cell.contentView)
+        }
         
         return cell
     }
@@ -53,5 +57,11 @@ extension QASessionsTableViewController: IndicatorInfoProvider {
     
     func indicatorInfoForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: dataSource.header)
+    }
+}
+
+extension QASessionsTableViewController: QASessionSpeakerPopDelegate {
+    func onCommitViewController(viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

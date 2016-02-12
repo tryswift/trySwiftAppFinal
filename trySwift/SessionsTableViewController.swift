@@ -22,7 +22,9 @@ class SessionsTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 160
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        registerForPreviewingWithDelegate(self, sourceView: tableView)
+        if traitCollection.forceTouchCapability == .Available {
+            registerForPreviewingWithDelegate(self, sourceView: tableView)
+        }
     }
 
     // MARK: - Table view data source
