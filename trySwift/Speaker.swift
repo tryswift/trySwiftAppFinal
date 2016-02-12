@@ -39,8 +39,8 @@ extension Speaker {
         image: Toucan(image: UIImage(named: "natalia")!).maskWithEllipse().image,
         bio: isJapanese ? "iOS開発のリードエンジニアとして、ポーランドのソフトウェアハウスTutu Labに勤務しています。この２年間で独学でエンジニアになり、モバイルエンジニアリングの学位を取得、さらに、WWDCにてスピーチをしました。また、彼女のアプリは47カ国でNo.1を獲得しました。アメリカ文学の学位保持者のため、プログラミングに対して人文的かつ詩的な視点を持っています。" : "Natalia Berdys is the lead iOS Developer at Tutu Lab, an indie studio in Poland. Within 2 years, she managed to become a self-taught developer, get a Mobile Engineering degree, speak at Apple WWDC and take her apps to #1 in 47 countries. Since she also holds a Master’s Degree in American Literature, she has a very humanistic and poetic view of programming.",
         presentation: Presentation(
-            title: isJapanese ? "TBD" : "TBD",
-            summary: isJapanese ? "TBD" : "TBD")
+            title: isJapanese ? "SpriteKitにワクワクする" : "Livin’ on the edge with Sprite Kit",
+            summary: isJapanese ? "ゲームを開発することは、威圧し圧倒する、\"外人\"が初めての日本旅行でパチンコホールに入ってしまうようなことに少し似ています。SpriteKit、古いパチンコにインスパイアされたこの講演では、いくつかの便利なテクニックや非常に早くプロトタイピングをする方法を紹介します。SpriteKitのの世界が今ひとつ理解できてなくても心配いりません。" : "Making games can be intimidating and overwhelming - a bit like a gaijin walking into a crazy pachinko parlor during their first trip to Japan. Sprite Kit, however, takes the edge off! This talk, inspired by a vintage pachinko game, will take you through some nifty techniques and lightning-fast prototyping to make your life easier - even if you’re a lost tourist in the Sprite Kit world.")
     )
     
     static let jesseSquires = Speaker(
@@ -109,7 +109,11 @@ extension Speaker {
         twitter: "dazmuda",
         image: Toucan(image: UIImage(named: "diana")!).maskWithEllipse().image,
         bio: isJapanese ? "thoughtbotに所属しているiOSエンジニアです。iOS on Railsと呼ばれるAPIと連携するモバイルアプリ開発に関する書籍を共同執筆しました。また、App Camp for Girlsのインストラクターもしています。ときおり、iOS関連のジョークを@dazmudaにてツイートしています。" : "Diana is an iOS developer at thoughtbot. She co-wrote a book about building mobile apps in tandem with APIs called iOS on Rails. She's also an instructor for App Camp for Girls, a summer camp where young girls learn how to write software. Occasionally, she tweets iOS related puns @dazmuda.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "Swiftトレーニング: 統計学を例に" : "How to Train Your Swift: Examples of Computational Statistics in Swift",
+            summary: isJapanese ?
+                "Swiftの使いやすさとエレガントさはシンプルな数学の概念を探求しようとする数学愛好者にとって完璧なものです。この講演では、統計的なランキングデータと、特徴語の集合（BoW、Bag of Words）を新しいエレメントを分類するために使用し、マルコフ連鎖アルゴリズムを完全なデータポイントを生成するために使用します。講演の間に、さまざまな数式をSwiftだけで実装し、ソート、分類、データ生成にSwiftを利用するさまをお見せします。" :
+                "Swift's ease of use and elegance of form make it perfect for math hobbyists looking to explore simple mathematical concepts. In this talk we'll use a statistical model to rank data, a bag-of-words model to classify new elements, and a Markov Chain algorithm to generate entirely new data points. Over the course of this session, we'll walk through a variety of examples of exciting formulas implemented entirely in Swift, building up to a program trained to sort, classify, and generate data."))
     
     static let yasuhiroInami = Speaker(
         name: "Yasuhiro Inami",
@@ -152,7 +156,9 @@ extension Speaker {
         twitter: "catehstn",
         image: Toucan(image: UIImage(named: "cate")!).maskWithEllipse().image,
         bio: isJapanese ? "Rideにてモバイルエンジニアリングのディレクターをしています。UK、オースタラリア、カナダ、中国、アメリカに居住した経験を持ち、Googleではエンジニア、IBMではExtreme Blueインターン、スキーのインストラクターとして働いた経験があります。国際的にモバイル開発の講演をしており、執筆に関してはLifehacker、The Daily Beast、The Eloquent Woman、Model View Cultureといったサイトに掲載されております。Glowforgeにてアドバイザーをしており、Accidentally in Codeでブログも書いています。また、Twitterは@catehstnで活動しています。" : "Cate Huston is Director of Mobile Engineering at Ride. She’s lived and worked in the UK, Australia, Canada, China and the United States, previously as an engineer at Google, an Extreme Blue intern at IBM, and a ski instructor. Cate speaks internationally on mobile development and her writing has been published on sites as varied as Lifehacker, The Daily Beast, The Eloquent Woman and Model View Culture. She is an advisor at Glowforge, co-curates Technically Speaking, blogs at Accidentally in Code and is @catehstn on Twitter.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "目に見えないものを学ぶ" : "How To Be Invisible",
+            summary: isJapanese ? "特にモバイルにおいては、ほとんどの製品は2つの陣営に分類されます。時間かお金か、です。時間は\"digital crack\"と捉えることもできます。それは予測不能な報酬による中毒性とも言えます。お金は、ユーザーがより効果的に、ときには最高のユーザー体験がまったくなされてないことがあります。私たちは目に見えないものを学ばなければなりません。" : "On mobile especially, most products fall into one of two camps - minutes or dollars. Minutes can also be thought of as “digital crack” - the addictive nature of an unpredictable reward. Dollars means helping our users be more effective, and sometimes the best user experience is no user experience at all; we must learn to be invisible."))
     
     static let danielSteinberg = Speaker(
         name: "Daniel Steinberg",
@@ -218,7 +224,7 @@ extension Speaker {
         bio: isJapanese ? "メルカリで働くiOSエンジニアです。APIKitというSwiftの言語機能を活かしたネットワークライブラリの開発者でもあります。最近は川遊びに夢中になっています。" : "Yosuke Ishikawa works as a software engineer at Mercari, writing code for iOS apps and server side apps. He created APIKit, which is a networking library that aims at taking advantage of the language features.",
         presentation: Presentation(
             title: isJapanese ? "Protocol-Oriented Programming in Networking" : "Protocol-Oriented Programming in Networking",
-            summary: isJapanese ? "Protocol-Oriented ProgrammingはWWDC 2015で紹介された新しいプログラミングのコンセプトです。本トークでは、Protocol-Oriented Programmingがなぜネットワーキングに適しているのか、また、型安全性やコードのシンプルさにどのように貢献するのか説明します。実際のアプリケーション開発で使えるような実例や、RxSwiftと組み合わせた発展的な実例についても紹介します。" : " Protocol-Oriented Programming is a new concept introduced at WWDC 2015. This talk describes why Protocol-Oriented Programming is a good choice for networking and how it contributes type-safety and code simplicity. This talk also contains practical examples and advanced examples with RxSwift.")
+            summary: isJapanese ? "Protocol-Oriented ProgrammingはWWDC 2015で紹介された新しいプログラミングのコンセプトです。この講演では、Protocol-Oriented Programmingがなぜネットワーキングに適しているのか、また、型安全性やコードのシンプルさにどのように貢献するのか説明します。実際のアプリケーション開発で使えるような実例や、RxSwiftと組み合わせた発展的な実例についても紹介します。" : " Protocol-Oriented Programming is a new concept introduced at WWDC 2015. This talk describes why Protocol-Oriented Programming is a good choice for networking and how it contributes type-safety and code simplicity. This talk also contains practical examples and advanced examples with RxSwift.")
     )
     
     static let adamBell = Speaker(
@@ -265,14 +271,20 @@ extension Speaker {
         twitter: "bobbins",
         image: Toucan(image: UIImage(named: "rachel")!).maskWithEllipse().image,
         bio: isJapanese ? "Stitch FixでiOSのリードエンジニアをしています。以前はPivotal Labsで働いていました。ユーザ・開発者の両方にとって素晴らしい経験を作り出すことを大切にしています。" : "Rachel is a lead engineer on the iOS team at Stitch Fix. Previously, she worked at Pivotal Labs. She cares deeply about building delightful experiences for both software users and software developers.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "The Design of Everyday Swift" : "Swift版「誰のためのデザイン？」",
+            summary: isJapanese ?
+                "D.A.ノーマン著「誰のためのデザイン？（原題: \"The Design of Everyday Things\"）」はデザイン哲学に焦点をあてたデザインの書です。そこで紹介されている多くの原則はSwiftのような物理的ではない言語についても当てはまります。このような原則を通して、読みやすく効果的なコードの書き方を探ります。" :
+                "Don Norman's \"The Design of Everyday Things\" is a classic design book, focused on the design of physical objects. Many of the principles that he discusses are also applicable to non-physical object–like Swift! In this talk, we'll go over some of these principles, and how they can be applied towards writing well-factored, easy-to-read Swift code."))
     
     static let danielHaight = Speaker(
         name: "Daniel Haight",
         twitter: "daniel1of1",
         image: Toucan(image: UIImage(named: "daniel")!).maskWithEllipse().image,
         bio: isJapanese ? "iOSエンジニアです。そうではないふりをしますが。小さなプロダクトコンサルタント会社を経営しています。タイトなジーンズを着、ゆっくりと旅行の荷造りのエキスパートになっています。" : "Daniel is an iOS Developer, whenever he is not pretending to be one. He runs a small product consultancy - Many Things. He wears tight jeans and he is slowly becoming an expert at travel packing.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "xcodeless - the build system" : "xcodeless - the build system",
+            summary: isJapanese ? "what would you do without xcodebuild? why would you do it? how would you do it? we'll take a look at how Xcode builds your projects and how we can use swiftc and Clang to build our own." : "xcodebuildが無いとしたらどうしますか？どのようにんプロジェクトをビルドするでしょうか？Xcodeがどうやっってプロジャクトをビルドするのか、またswiftcとClangを使ってビルドする方法を説明します。"))
     
     static let stephanieShupe = Speaker(
         name: "Stephanie Shupe",
@@ -291,7 +303,7 @@ extension Speaker {
         bio: isJapanese ? "大学時代はドイツ語を専攻し、前職は危険物に特化した物流会社で国内輸送を担当していました。危険物乙種四類取扱者や毒物劇物取扱者の資格を持っています。しかしプログラミングに出会い、現在グローバルNPO「Women Who Code Tokyo」の Co-founderをしています。このカンファレンスで沢山の人達とお会いできる事を楽しみにしています。" : "I majored in German Linguistics and literature, worked for a logistics company which specialized in dangerous materials. I have some special licenses. (A hazardous materials engineer etc...) But　luckily I discovered the world of programming. Now I'm a co-founder of Women Who Code Tokyo. I'm looking forward to seeing many people at this conference.",
         presentation: Presentation(
             title: isJapanese ? "Building Women Who Code in Tokyo" : "Building Women Who Code in Tokyo",
-            summary: isJapanese ? "約2年間、私はWomen Who Code というコミュニティをここ東京で広げていきました。”Building”とは、コミュニティを形成することであり、コーディングすることであり、また自身のスキル向上することでもあります。新しくて素敵なSwiftコミュニティを構築する為に、私が学んだ教訓を皆さんと共有できたら嬉しいです。" : "For the past two years, I’ve been building the Women Who Code Community here in Tokyo. Building community, building in code, and building my own skills. I’d like to share lessons I learned as we build the new, awesome Swift community.")
+            summary: isJapanese ? "約2年間、私はWomen Who Code というコミュニティをここ東京で広げていきました。”Building”とは、コミュニティを形成することであり、コーディングすることであり、また自身のスキルを向上することでもあります。新しくて素敵なSwiftコミュニティを構築する為に、私が学んだ教訓を皆さんと共有できたら嬉しいです。" : "For the past two years, I’ve been building the Women Who Code Community here in Tokyo. Building community, building in code, and building my own skills. I’d like to share lessons I learned as we build the new, awesome Swift community.")
     )
     
     static let novallKhan = Speaker(
@@ -309,7 +321,11 @@ extension Speaker {
         twitter: "simjp",
         image: Toucan(image: UIImage(named: "jpsimard")!).maskWithEllipse().image,
         bio: isJapanese ? "Realmにて、Objective-CとSwiftのバインディングを担当しています。また、jazzy（Appleがリリースし忘れているドキュメンテーションツール😜）の開発者でありSwiftのツールチェーンのハックを楽しんでいます。" : "JP works at Realm on the Objective-C & Swift bindings, creator of jazzy (the documentation tool Apple forgot to release) and enjoys hacking on Swift tooling.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "実践的クロスプラットフォームSwift" : "Practical Cross-Platform Swift",
+            summary: isJapanese ?
+                "SwiftはApple以外のプラットフォームでも利用できるようになりました。iOSアプリ以外でも好きなようにSwiftを書けます。この講演では、CocoaやObjective-Cの機能を犠牲にせずに、クロスプラットフォームでSwiftを用いるときの実践的な書き方、テスト・デバッグ手法、について解説します。" :
+                "With Swift now available on non-Apple platforms, you can now set your code free to roam beyond just your iOS app. In this presentation, we'll discover practical ways to write, test, debug and deploy cross-platform Swift code without sacrificing the Cocoa and Objective-C functionality where it's available."))
     
     static let gwendolynWeston = Speaker(
         name: "Gwendolyn Weston",
