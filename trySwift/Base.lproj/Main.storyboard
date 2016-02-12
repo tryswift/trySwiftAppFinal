@@ -194,11 +194,11 @@
             </objects>
             <point key="canvasLocation" x="1555" y="1917"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--More-->
         <scene sceneID="Xc4-bi-G0D">
             <objects>
                 <navigationController id="qm7-MC-Ro5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="2fM-wV-nWB"/>
+                    <tabBarItem key="tabBarItem" title="More" image="more" id="2fM-wV-nWB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="seW-AH-OWk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -299,6 +299,7 @@
     </scenes>
     <resources>
         <image name="chat" width="25" height="25"/>
+        <image name="more" width="25" height="25"/>
         <image name="schedule" width="25" height="25"/>
         <image name="speakers" width="25" height="25"/>
         <image name="sponsors" width="25" height="25"/>

@@ -13,10 +13,14 @@ class SpeakersViewController: UITableViewController {
     private let speakers = Speaker.speakers
     private let speakerDetailSegue = "speakerDetailSegue"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
         title = isJapanese ? "講演者" : "Speakers"
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
         tableView.estimatedRowHeight = 83

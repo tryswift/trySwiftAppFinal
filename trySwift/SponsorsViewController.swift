@@ -10,10 +10,14 @@ import UIKit
 
 class SponsorsViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
         title = isJapanese ? "スポンサー" : "Sponsors"
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         tableView.registerNib(UINib(nibName: String(SponsorTableViewCell), bundle: nil), forCellReuseIdentifier: String(SponsorTableViewCell))
         tableView.estimatedRowHeight = 83

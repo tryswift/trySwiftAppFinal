@@ -24,10 +24,14 @@ class MoreTableViewController: UITableViewController {
         case Organizers, Libraries
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        title = isJapanese ? "もっと" : "More"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = isJapanese ? "もっと" : "More"
     }
 
     // MARK: - Table view data source

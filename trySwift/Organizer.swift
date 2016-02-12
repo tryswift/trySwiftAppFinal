@@ -62,7 +62,7 @@ extension Organizer {
     )
 
     static let tasanobu = Organizer(
-        name: "Kazunobu Tasaka",
+        name: isJapanese ? "田坂和暢" : "Kazunobu Tasaka",
         twitter: "tasanobu",
         image: Toucan(image: UIImage(named: "tasanobu")!).maskWithEllipse().image
     )
