@@ -2,18 +2,21 @@ PODS:
   - DynamicColor (2.3.0)
   - Timepiece (0.4.2)
   - Toucan (0.5.0)
+  - VTAcknowledgementsViewController (0.17)
   - XLPagerTabStrip (4.0.0)
 
 DEPENDENCIES:
   - DynamicColor (~> 2.3.0)
   - Timepiece
   - Toucan (~> 0.5.0)
+  - VTAcknowledgementsViewController
   - XLPagerTabStrip (~> 4.0)
 
 SPEC CHECKSUMS:
   DynamicColor: 18badd22ee5edeefcbe0a8f5887a86640c592a1c
   Timepiece: cf53bb908bf542acc0e3d5f69cabfed869df4ebd
   Toucan: 0519c341148252ae114c5a657d2a85bb9ada9e40
+  VTAcknowledgementsViewController: 6056f5f5e5ed995bbf0581bed6ddd29355ca9a80
   XLPagerTabStrip: 52944e7ff6aae4e4e2e3d073467bd29f5f5f4123
 
 COCOAPODS: 0.39.0

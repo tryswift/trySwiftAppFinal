@@ -10,86 +10,99 @@ import UIKit
 
 class MoreTableViewController: UITableViewController {
 
+    private let cellIdentifier = "BasicCell"
+    
+    private enum MoreSection: Int {
+        case EventDetails, Acknowledgements
+    }
+    
+    private enum EventDetailsRow: Int {
+        case About, Venue, CodeOfConduct
+    }
+    
+    private enum AcknowledgementsRow: Int {
+        case Organizers, Libraries
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        title = isJapanese ? "もっと" : "More"
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        switch MoreSection(rawValue: section)! {
+        case .EventDetails:
+            return 3
+        case .Acknowledgements:
+            return 2
+        }
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
 
-        // Configure the cell...
+        switch MoreSection(rawValue: indexPath.section)! {
+        case .EventDetails:
+            switch EventDetailsRow(rawValue: indexPath.row)! {
+            case .About:
+                cell.textLabel?.text = isJapanese ? "約" : "About"
+            case .Venue:
+                cell.textLabel?.text = isJapanese ? "会場" : "Venue"
+            case .CodeOfConduct:
+                cell.textLabel?.text = isJapanese ? "行動規範" : "Code of Conduct"
+            }
+        case .Acknowledgements:
+            switch AcknowledgementsRow(rawValue: indexPath.row)! {
+            case .Organizers:
+                cell.textLabel?.text = isJapanese ? "主催者" : "Organizers"
+            case .Libraries:
+                cell.textLabel?.text = isJapanese ? "謝辞" : "Acknowledgements"
+            }
+        }
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch MoreSection(rawValue: indexPath.section)! {
+        case .EventDetails:
+            switch EventDetailsRow(rawValue: indexPath.row)! {
+            case .About:
+                return
+            case .Venue:
+                return
+            case .CodeOfConduct:
+                return
+            }
+        case .Acknowledgements:
+            switch AcknowledgementsRow(rawValue: indexPath.row)! {
+            case .Organizers:
+                return
+            case .Libraries:
+                showLibraries()
+            }
+        }
 
     }
-    */
+}
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+private extension MoreTableViewController {
+    
+    func showOrganizers() {
+        
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func showLibraries() {
+        if let acknowledgementesViewController = VTAcknowledgementsViewController.acknowledgementsViewController() {
+            acknowledgementesViewController.headerText = "We 🤗 Open Source Software"
+            navigationController?.pushViewController(acknowledgementesViewController, animated: true)
+        }
     }
-    */
-
 }
