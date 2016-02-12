@@ -62,7 +62,9 @@ extension Sponsor {
         twitter: "mercari_jp",
         logo: UIImage(named: "mercari")!,
         level: .Gold,
-        description: isJapanese ? "メルカリは\"新たな価値を生みだす世界的なマーケットプレイスを創る\"会社です。" : "Mercari is creating value in a global marketplace where anyone can buy & sell."
+        description: isJapanese ?
+            "メルカリは\"新たな価値を生みだす世界的なマーケットプレイスを創る\"会社です。" :
+            "Mercari is creating value in a global marketplace where anyone can buy & sell."
     )
     
     static let kytrade = Sponsor(
@@ -122,7 +124,9 @@ extension Sponsor {
         twitter: "DeNACorp",
         logo: UIImage(named: "dena")!,
         level: .Silver,
-        description: nil
+        description: isJapanese ?
+            "1999年に創業した株式会社ディー・エヌ・エー（以下DeNA）はeコマース、ソーシャルゲームを中心に、モバイルサービスに特化した事業展開を行っています。近年ではキュレーションサービスの展開や、自動車やヘルスケアなどリアル巨大産業への進出をしています。http://dena.com/jp/" :
+            "DeNA develops and operates mobile and online services including games and e-commerce. Founded in Tokyo in 1999, DeNA is currently listed on the Tokyo Stock Exchange with over 2,000 employees.For more information, visit: dena.com"
     )
     
     static let freee = Sponsor(
@@ -342,7 +346,7 @@ extension Sponsor {
         twitter: "PRTIMES_JP",
         logo: UIImage(named: "prtimes")!,
         level: .Silver,
-        description: nil
+        description: "「企業と生活者をつなぎ、世の中にいいものを広める」それがPR TIMESです。プレスリリース配信サービス「PR TIMES」はプレスリリースにテクノロジーを加えることで、より多彩な表現を実現し、多くの優良なプレスリリースが集まっています。プレスリリース配信シェアとサイト月間PV数は、共に国内N0.1です。また、昨年お問い合わせフォームなどが直感的に作成できるカスタマーサポートツール「Tayori」も立ち上げ、好評を頂いています。"
     )
     
     static let ohako = Sponsor(
