@@ -15,31 +15,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q1J-UG-7V3">
-                        <rect key="frame" x="8" y="8" width="304" height="152"/>
+                        <rect key="frame" x="16" y="10" width="288" height="148"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Q&amp;A Session title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWW-Nv-HEG">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Q&amp;A Session title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWW-Nv-HEG">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxT-tO-edD">
-                                <rect key="frame" x="0.0" y="28" width="304" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxT-tO-edD">
+                                <rect key="frame" x="0.0" y="27" width="288" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QwE-TR-8kX">
-                                <rect key="frame" x="0.0" y="52" width="304" height="100"/>
+                                <rect key="frame" x="0.0" y="48" width="288" height="100"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-On-eyj">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="100"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tOK-Ci-Anr">
-                                        <rect key="frame" x="105" y="0.0" width="95" height="100"/>
+                                        <rect key="frame" x="100" y="0.0" width="89" height="100"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LOL-79-9Qz">
-                                        <rect key="frame" x="210" y="0.0" width="95" height="100"/>
+                                        <rect key="frame" x="199" y="0.0" width="90" height="100"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -50,10 +50,10 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="Q1J-UG-7V3" secondAttribute="bottom" id="22c-4h-GZG"/>
-                    <constraint firstItem="Q1J-UG-7V3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5Fq-E1-t7I"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Q1J-UG-7V3" secondAttribute="trailing" id="GPW-bW-vSn"/>
-                    <constraint firstItem="Q1J-UG-7V3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="fbY-OH-79n"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Q1J-UG-7V3" secondAttribute="bottom" constant="2" id="22c-4h-GZG"/>
+                    <constraint firstItem="Q1J-UG-7V3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="5Fq-E1-t7I"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Q1J-UG-7V3" secondAttribute="trailing" constant="8" id="GPW-bW-vSn"/>
+                    <constraint firstItem="Q1J-UG-7V3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="fbY-OH-79n"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
