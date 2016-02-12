@@ -33,6 +33,7 @@ extension Session {
     static let Breakfast = isJapanese ? "受付・朝食" : "☕️ & Breakfast"
     static let Lunch = isJapanese ? "🍱 ランチ" : "🍱 Lunch"
     static let Coffee = isJapanese ? " ☕️ 休憩" : "☕️ & 🍩 Break"
+    static let TOMBOY106 = isJapanese ? "TOMBOY INDIAN LOUNGE DINING 渋谷106道玄坂店" : "TOMBOY INDIAN LOUNGE DINING" // http://www.tomboy106.com/shibuya106/index.html
     
     static let sessionsDay1 = [
         Session(id: 101,
@@ -351,7 +352,7 @@ extension Session {
             startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 18, minute: 30, second: 0),
             endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 11, minute: 59, second: 0),
             description: "🎉🎉🎉",
-            location: SeminarRoom13F,
+            location: TOMBOY106,
             speaker: nil)
     ]
 }
