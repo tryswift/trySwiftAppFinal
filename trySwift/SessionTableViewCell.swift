@@ -42,7 +42,12 @@ class SessionTableViewCell: UITableViewCell {
             sessionTitleLabel.text = session.description
             speakerImageView.image = SessionTableViewCell.logoImage
             speakerNameLabel.text = "try! Swift"
-            sessionTypeLabel.text = "🤗"
+            if #available(iOS 9.2, *) {
+                sessionTypeLabel.text = "🤗"
+            } else {
+                sessionTypeLabel.text = "🐥"
+            }
+            
             accessoryType = .None
             selectionStyle = .None
         }
