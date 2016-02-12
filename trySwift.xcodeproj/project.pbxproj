@@ -48,6 +48,8 @@
 		FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */; };
 		FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */; };
 		FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */; };
+		FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */; };
+		FA65B5861C6D827B00DCAF0B /* Pods-acknowledgements.plist in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5851C6D827B00DCAF0B /* Pods-acknowledgements.plist */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -117,6 +119,9 @@
 		FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
+		FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		FA65B5811C6D813200DCAF0B /* trySwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "trySwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		FA65B5851C6D827B00DCAF0B /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,8 +186,8 @@
 				FA39E8FC1C6C32120074B6BE /* Q&A */,
 				FA39E9061C6C43480074B6BE /* Speakers */,
 				FA39E9111C6C81940074B6BE /* SponsorsViewController */,
-				FA39E91B1C6C8D100074B6BE /* WebDisplayViewController.swift */,
-				FA39E91C1C6C8D100074B6BE /* WebDisplayViewController.xib */,
+				FA65B57D1C6D7AFC00DCAF0B /* More */,
+				FA65B57E1C6D7B0900DCAF0B /* Shared */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -353,9 +358,27 @@
 			name = SessionHeaderTableViewCell;
 			sourceTree = "<group>";
 		};
+		FA65B57D1C6D7AFC00DCAF0B /* More */ = {
+			isa = PBXGroup;
+			children = (
+				FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
+		FA65B57E1C6D7B0900DCAF0B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FA39E91B1C6C8D100074B6BE /* WebDisplayViewController.swift */,
+				FA39E91C1C6C8D100074B6BE /* WebDisplayViewController.xib */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		FAFA15AF1C69D31B00FEA4EA = {
 			isa = PBXGroup;
 			children = (
+				FA65B5851C6D827B00DCAF0B /* Pods-acknowledgements.plist */,
 				FAFA15BA1C69D31C00FEA4EA /* trySwift */,
 				FAFA15CF1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15DA1C69D31C00FEA4EA /* trySwiftUITests */,
@@ -388,6 +411,7 @@
 				FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */,
 				FAFA15C41C69D31C00FEA4EA /* LaunchScreen.storyboard */,
 				FAFA15C71C69D31C00FEA4EA /* Info.plist */,
+				FA65B5811C6D813200DCAF0B /* trySwift-Bridging-Header.h */,
 			);
 			path = trySwift;
 			sourceTree = "<group>";
@@ -601,6 +625,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA65B5861C6D827B00DCAF0B /* Pods-acknowledgements.plist in Sources */,
 				FA39E90F1C6C81870074B6BE /* SponsorsViewController.swift in Sources */,
 				FA39E8D71C6B05980074B6BE /* Session.swift in Sources */,
 				FA39E8F61C6C244A0074B6BE /* QASessionDataSourceDay1.swift in Sources */,
@@ -617,6 +642,7 @@
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
 				FA39E8DD1C6B09DF0074B6BE /* Sponsor.swift in Sources */,
 				FA39E8F81C6C245B0074B6BE /* QASessionDataSourceDay2.swift in Sources */,
+				FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */,
 				FA39E9161C6C83A40074B6BE /* SponsorTableViewCell.swift in Sources */,
 				FA39E8DB1C6B09CE0074B6BE /* Speaker.swift in Sources */,
 				FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */,
@@ -773,11 +799,14 @@
 			baseConfigurationReference = 45B486A92C7FDE576D71BD2E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "trySwift/trySwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -786,11 +815,13 @@
 			baseConfigurationReference = 38CAAC53F6ECFE1EAE2B3111 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "trySwift/trySwift-Bridging-Header.h";
 			};
 			name = Release;
 		};
