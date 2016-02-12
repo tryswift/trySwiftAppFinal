@@ -40,7 +40,7 @@ extension Organizer {
     static let helen = Organizer(
         name: "Helen Holmes",
         twitter: "helenvholmes",
-        image: Toucan(image: UIImage(named: "helen")!).maskWithEllipse().image
+        image: Toucan(image: UIImage(named: "hellenholmes")!).maskWithEllipse().image
     )
     
     static let caesar = Organizer(
