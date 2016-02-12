@@ -84,7 +84,7 @@ class MoreTableViewController: UITableViewController {
         case .Acknowledgements:
             switch AcknowledgementsRow(rawValue: indexPath.row)! {
             case .Organizers:
-                return
+                showOrganizers()
             case .Libraries:
                 showLibraries()
             }
@@ -96,7 +96,8 @@ class MoreTableViewController: UITableViewController {
 private extension MoreTableViewController {
     
     func showOrganizers() {
-        
+        let organizersViewController = OrganizersTableViewController()
+        navigationController?.pushViewController(organizersViewController, animated: true)
     }
     
     func showLibraries() {
