@@ -270,8 +270,9 @@ extension Speaker {
         image: Toucan(image: UIImage(named: "himi")!).maskWithEllipse().image,
         bio: isJapanese ? "大学時代はドイツ語を専攻し、前職は危険物に特化した物流会社で国内輸送を担当していました。危険物乙種四類取扱者や毒物劇物取扱者の資格を持っています。しかしプログラミングに出会い、現在グローバルNPO「Women Who Code Tokyo」の Co-founderをしています。このカンファレンスで沢山の人達とお会いできる事を楽しみにしています。" : "I majored in German Linguistics and literature, worked for a logistics company which specialized in dangerous materials. I have some special licenses. (A hazardous materials engineer etc...) But　luckily I discovered the world of programming. Now I'm a co-founder of Women Who Code Tokyo. I'm looking forward to seeing many people at this conference.",
         presentation: Presentation(
-            title: isJapanese ? "TBD" : "Building Women Who Code in Tokyo",
-            summary: isJapanese ? "TBD" : "TBD"))
+            title: isJapanese ? "Building Women Who Code in Tokyo" : "Building Women Who Code in Tokyo",
+            summary: isJapanese ? "約2年間、私はWomen Who Code というコミュニティをここ東京で広げていきました。”Building”とは、コミュニティを形成することであり、コーディングすることであり、また自身のスキル向上することでもあります。新しくて素敵なSwiftコミュニティを構築する為に、私が学んだ教訓を皆さんと共有できたら嬉しいです。" : "For the past two years, I’ve been building the Women Who Code Community here in Tokyo. Building community, building in code, and building my own skills. I’d like to share lessons I learned as we build the new, awesome Swift community.")
+    )
     
     static let novallKhan = Speaker(
         name: "Novall Khan",
