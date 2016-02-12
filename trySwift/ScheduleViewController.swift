@@ -7,6 +7,7 @@
 //
 
 import XLPagerTabStrip
+import Timepiece
 
 class ScheduleViewController: ButtonBarPagerTabStripViewController {
     
@@ -23,6 +24,8 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         buttonBarView.backgroundColor = .whiteColor()
         settings.style.selectedBarBackgroundColor = .whiteColor()
         buttonBarView.selectedBar.backgroundColor = UIColor.trySwiftAccentColor()
+        
+        moveToCorrectDate()
     }
     
     override func viewControllersForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -37,5 +40,22 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         sessionDay3ViewController.dataSource = SessionDataSourceDay3()
         
         return [sessionDay1ViewController, sessionDay2ViewController, sessionDay3ViewController]
+    }
+}
+
+private extension ScheduleViewController {
+    
+    func moveToCorrectDate() {
+        let today = NSDate.today()
+        
+        let day2 = NSDate.date(year: 2016, month: 3, day: 3)
+        if today == day2 {
+            moveToViewControllerAtIndex(1)
+        }
+        
+        let day3 = NSDate.date(year: 2016, month: 3, day: 4)
+        if today == day3 {
+          moveToViewControllerAtIndex(2)   
+        }
     }
 }
