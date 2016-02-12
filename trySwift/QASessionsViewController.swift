@@ -23,6 +23,8 @@ class QASessionsViewController: ButtonBarPagerTabStripViewController {
         buttonBarView.registerNib(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         buttonBarView.backgroundColor = UIColor.whiteColor()
         buttonBarView.selectedBar.backgroundColor = UIColor.trySwiftAccentColor()
+        
+        moveToCorrectDate()
     }
     
     override func viewControllersForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -37,5 +39,22 @@ class QASessionsViewController: ButtonBarPagerTabStripViewController {
         qaSessionDay3ViewController.dataSource = QASessionDataSourceDay3()
         
         return [qaSessionDay1ViewController, qaSessionDay2ViewController, qaSessionDay3ViewController]
+    }
+}
+
+private extension QASessionsViewController {
+    
+    func moveToCorrectDate() {
+        let today = NSDate.today()
+        
+        let day2 = NSDate.date(year: 2016, month: 3, day: 3)
+        if today == day2 {
+            moveToViewControllerAtIndex(1)
+        }
+        
+        let day3 = NSDate.date(year: 2016, month: 3, day: 4)
+        if today == day3 {
+            moveToViewControllerAtIndex(2)
+        }
     }
 }
