@@ -10,10 +10,15 @@ import XLPagerTabStrip
 
 class ScheduleViewController: ButtonBarPagerTabStripViewController {
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        title = isJapanese ? "スケジュール" : "Schedule"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = isJapanese ? "スケジュール" : "Schedule"
         buttonBarView.registerNib(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         buttonBarView.backgroundColor = .whiteColor()
         settings.style.selectedBarBackgroundColor = .whiteColor()

@@ -11,10 +11,15 @@ import XLPagerTabStrip
 
 class QASessionsViewController: ButtonBarPagerTabStripViewController {
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        title = isJapanese ? "Q&A" : "Q&A"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = isJapanese ? "Q&A" : "Q&A"
         buttonBarView.registerNib(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         buttonBarView.backgroundColor = UIColor.whiteColor()
         buttonBarView.selectedBar.backgroundColor = UIColor.trySwiftAccentColor()
