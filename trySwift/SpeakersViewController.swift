@@ -25,6 +25,8 @@ class SpeakersViewController: UITableViewController {
         tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        registerForPreviewingWithDelegate(self, sourceView: tableView)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -55,5 +57,23 @@ class SpeakersViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier(speakerDetailSegue, sender: self)
+    }
+}
+
+extension SpeakersViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        if let indexPath = tableView.indexPathForRowAtPoint(location) {
+            //This will show the cell clearly and blur the rest of the screen for our peek.
+            previewingContext.sourceRect = tableView.rectForRowAtIndexPath(indexPath)
+            let speakerDetailVC = SpeakerDetailViewController()
+            speakerDetailVC.speaker = speakers[indexPath.row]
+            return speakerDetailVC
+        }
+        return nil
+    }
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }
 }
