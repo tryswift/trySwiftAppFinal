@@ -56,7 +56,7 @@ class MoreTableViewController: UITableViewController {
         case .EventDetails:
             switch EventDetailsRow(rawValue: indexPath.row)! {
             case .About:
-                cell.textLabel?.text = isJapanese ? "約" : "About"
+                cell.textLabel?.text = isJapanese ? "try! Swiftについて" : "About"
             case .Venue:
                 cell.textLabel?.text = isJapanese ? "会場" : "Venue"
             case .CodeOfConduct:
