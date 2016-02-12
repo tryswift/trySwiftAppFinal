@@ -56,14 +56,20 @@ extension Speaker {
         twitter: "ikesyo",
         image: Toucan(image: UIImage(named: "syo")!).maskWithEllipse().image,
         bio: isJapanese ? "京都在住のフリーランスiOSエンジニアです。（Twitter上では@ikesyoで知られています。）オープンソースの活動として、Himotoki（type-safeなJSONパーサーライブラリ）の開発やReactiveCocoaやCarthageといったオープンソースのプロジェクトにコントリビュートしています。" : "Syo Ikeda (a.k.a @ikesyo) is an independent iOS developer lives in Kyoto. He is the author of Himotoki, a type-safe JSON decoding library made of Swift, and also is contributing to several open source projects such as ReactiveCocoa and Carthage.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "Swiftのエコシステムに飛び込む" : "Dive into Swift Ecosystem",
+            summary: isJapanese ? "Swiftはこの2年でとても人気のある言語になり、いまやオープンソース化されました。エコシステムは日々拡大しており、Swiftをサービスが出てきたり、多くの開発者向けツールがSwiftで書かれています。講演ではそういったツールやサービスを紹介し、それらを使ったり、貢献することをお勧めします。大きなチャンスです:-)" : "Swift became a very popular programming language in this two years and is now open sourced. Its ecosystem should be growing day by day and there are already some services those support Swift or many developer tools themselves are written in Swift. I will introduce the services and tools, and encourage you to use, participate in or contribute to them. It's a great chance to do so! :-)")
+    )
     
     static let veronicaRay = Speaker(
         name: "Veronica Ray",
         twitter: "nerdonica",
         image: Toucan(image: UIImage(named: "veronica")!).maskWithEllipse().image,
         bio: isJapanese ? "LinkedInのビデオチームに所属するソフトウェアエンジニアです。以前自転車でヘラジカの間を通り抜けたことがあります。MediumのブログとTwitterでは@nerdonicaとして活動しています。" : "Veronica Ray is a software engineer at LinkedIn on the Video team. Once she rode her bike between two moose. She blogs on Medium and is on Twitter as  @nerdonica.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "Swiftで現実的なモックを書く" : "Real World Mocking In Swift",
+            summary: isJapanese ? "モックは本番データと関係なく早くテストを書くことを助けてくれます。OCMockなしでモックを書く必要がありますが、それほど多くのことを必要としません。講演では、コードベースの多くの重要な箇所に対して簡単でメンテナンスしやすい実用的なモックを作るためのテクニックをSwiftで説明します。" : "Mocks allow us to write fast tests that don’t mess with production data. Without OCMock we will need to write our own mocks, but it doesn’t have to be a lot of work. We will look at techniques for practical mocking in Swift that will allow us to create simple, easy to maintain mocks for the most important parts of our codebase. ")
+    )
     
     static let chrisEidhof = Speaker(
         name: "Chris Eidhof",
@@ -298,5 +304,8 @@ extension Speaker {
         twitter: "mennenia",
         image: Toucan(image: UIImage(named: "Maxim")!).maskWithEllipse().image,
         bio: isJapanese ? "デザインと開発のバックブランドを持ち、人を観察し、技術が本当に役立つように改善することに情熱を持っています。" : "Coming from both a design and development background, Maxim loves observing people in their natural habitat, making technology that will serve them instead of the other way around.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "ライブデザイン:🎙🎨 " : "Live Design:🎙🎨 ",
+            summary: isJapanese ? "私たちはコードを知っており愛しています。しかし、App Storeで注目されるためにはコードでさえ他の規律からの助けが必要です。講演では、アプリの申請時に必要となるアプリアイコンとスクリーンショットをSketchを使って作成するライブデモを行います。コードからアプリ申請に至るまで、自分のアプリを所有する方法を説明します。" : "We know and love code. But even code requires a bit of help from other disciplines to grab attention in the app store. In this talk, I’ll do a live demonstration in Sketch of making app icons and screenshot collateral for your app’s submission to the store. Learn how to own your app, from code to submission. ")
+    )
 }
