@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="glP-AN-MLz">
-                        <rect key="frame" x="8" y="8" width="49" height="26"/>
+                        <rect key="frame" x="13" y="8" width="49" height="26"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                         <state key="normal" title="Follow"/>
@@ -25,7 +25,7 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="glP-AN-MLz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="9Rm-Vr-yVI"/>
+                    <constraint firstItem="glP-AN-MLz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="9Rm-Vr-yVI"/>
                     <constraint firstItem="glP-AN-MLz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="TOf-DE-5Zr"/>
                 </constraints>
             </tableViewCellContentView>

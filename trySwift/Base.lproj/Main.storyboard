@@ -28,7 +28,6 @@
         <!--Schedule-->
         <scene sceneID="2WR-M6-Nfy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jxu-2e-MOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="FLe-Rw-VAv" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Schedule" image="schedule" selectedImage="schedule" id="ssU-GV-kBZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRb-ge-fhW">
@@ -39,6 +38,7 @@
                         <segue destination="ZbV-jw-mHT" kind="relationship" relationship="rootViewController" id="9Dl-oV-KhO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxu-2e-MOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="779" y="-1138"/>
         </scene>
@@ -102,10 +102,10 @@
         <scene sceneID="cT2-kN-3XL">
             <objects>
                 <tableViewController storyboardIdentifier="SpeakerDetailViewController" id="gZZ-TI-i9R" customClass="SpeakerDetailViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="FQc-pa-q04">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FQc-pa-q04">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
                             <outlet property="dataSource" destination="gZZ-TI-i9R" id="d6z-WW-ktd"/>

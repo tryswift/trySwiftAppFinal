@@ -29,6 +29,7 @@ class SpeakerDetailViewController: UITableViewController {
         
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
     }
 
     // MARK: - Table view data source
@@ -56,11 +57,6 @@ class SpeakerDetailViewController: UITableViewController {
             cell.configure(withUsername: speaker.twitter, delegate: self)
             return cell
         }
-    }
-    
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        return isJapanese ? "スピーカーの詳細" : "Speaker Details"
     }
 
 }

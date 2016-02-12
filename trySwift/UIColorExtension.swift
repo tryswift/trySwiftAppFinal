@@ -28,6 +28,7 @@ extension UIColor {
     }
     
     class func twitterBlue() -> UIColor {
-        return UIColor(hexString: "#4099FF")
+        return UIColor(hexString: "#4FD5D6").darkenColor(0.1).desaturatedColor()
+        //return UIColor(hexString: "#4099FF")
     }
 }
