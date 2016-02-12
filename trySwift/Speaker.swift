@@ -27,8 +27,10 @@ extension Speaker {
         image: Toucan(image: UIImage(named: "ashfurrow")!).maskWithEllipse().image,
         bio: isJapanese ? "iOSエンジニアおよび著者としてArtsyで働くカナダ人です。多くのアプリを開発し、これまで4冊の書籍を出版しています。また、オープンソースのコントリビューターとしてコミュニティに関わっています。ブログでは、興味深いプログラミングのネタからフィルムカメラにまでおよぶ様々なトピックを扱っています。" : "Ash Furrow is a Canadian iOS developer and author, currently working at Artsy. He has published four books, built many apps, and is a contributor to the open source community. On his blog, he writes about a range of topics, from interesting programming to explorations of analogue film photography.",
         presentation: Presentation(
-            title: isJapanese ? "TBD" : "TBD",
-            summary: isJapanese ? "TBD" : "TBD")
+            title: isJapanese ? "An Artsy Testing Tour" : "Artsyにおけるテスト手法の紹介",
+            summary: isJapanese ?
+                "Artyは４つのiOSアプリケーションを提供しています。すべてオープンソースとして公開しています。そしてすべて異なるアプローチを用いてテストされています。なぜでしょうか？それぞれ異なるテスト手法を用いることは、異なる環境においてうまく動くからです。ArtsyのiOSチームの判断の裏付けとなった議論や、どんな問題にあたり、どのように課題を解決したのかを紹介します。すばらしいソフトウェアを作るために、なぜテストが重要なのかをより理解できるようになるでしょう。" :
+                "Artsy has four iOS applications; all of them are open source, and all of them take different approaches to testing. Why? Because different testing techniques work better or worse in different circumstances. Come hear Ash Furrow discuss the motivations behind the Artsy iOS team's decisions, what struggles they encountered, and how they overcame those challenges. You will leave with a better understanding of when and why testing is important to building fantastic software.")
     )
     
     static let natalieBerdys = Speaker(
@@ -58,7 +60,7 @@ extension Speaker {
         bio: isJapanese ? "京都在住のフリーランスiOSエンジニアです。（Twitter上では@ikesyoで知られています。）オープンソースの活動として、Himotoki（type-safeなJSONパーサーライブラリ）の開発やReactiveCocoaやCarthageといったオープンソースのプロジェクトにコントリビュートしています。" : "Syo Ikeda (a.k.a @ikesyo) is an independent iOS developer lives in Kyoto. He is the author of Himotoki, a type-safe JSON decoding library made of Swift, and also is contributing to several open source projects such as ReactiveCocoa and Carthage.",
         presentation: Presentation(
             title: isJapanese ? "Swiftのエコシステムに飛び込む" : "Dive into Swift Ecosystem",
-            summary: isJapanese ? "Swiftはこの2年でとても人気のある言語になり、いまやオープンソース化されました。エコシステムは日々拡大しており、Swiftをサービスが出てきたり、多くの開発者向けツールがSwiftで書かれています。講演ではそういったツールやサービスを紹介し、それらを使ったり、貢献することをお勧めします。大きなチャンスです:-)" : "Swift became a very popular programming language in this two years and is now open sourced. Its ecosystem should be growing day by day and there are already some services those support Swift or many developer tools themselves are written in Swift. I will introduce the services and tools, and encourage you to use, participate in or contribute to them. It's a great chance to do so! :-)")
+            summary: isJapanese ? "Swiftはこの2年のうちに非常に人気のある言語になり、いまやオープンソース化されました。エコシステムは日々拡大しており、Swiftをサポートするサービスが出てきたり、多くの開発者向けツールがSwiftで書かれています。講演ではそういったツールやサービスを紹介し、それらを使ったり、貢献することをお勧めします。大きなチャンスです:-)" : "Swift became a very popular programming language in this two years and is now open sourced. Its ecosystem should be growing day by day and there are already some services those support Swift or many developer tools themselves are written in Swift. I will introduce the services and tools, and encourage you to use, participate in or contribute to them. It's a great chance to do so! :-)")
     )
     
     static let veronicaRay = Speaker(
@@ -67,8 +69,8 @@ extension Speaker {
         image: Toucan(image: UIImage(named: "veronica")!).maskWithEllipse().image,
         bio: isJapanese ? "LinkedInのビデオチームに所属するソフトウェアエンジニアです。以前自転車でヘラジカの間を通り抜けたことがあります。MediumのブログとTwitterでは@nerdonicaとして活動しています。" : "Veronica Ray is a software engineer at LinkedIn on the Video team. Once she rode her bike between two moose. She blogs on Medium and is on Twitter as  @nerdonica.",
         presentation: Presentation(
-            title: isJapanese ? "Swiftで現実的なモックを書く" : "Real World Mocking In Swift",
-            summary: isJapanese ? "モックは本番データと関係なく早くテストを書くことを助けてくれます。OCMockなしでモックを書く必要がありますが、それほど多くのことを必要としません。講演では、コードベースの多くの重要な箇所に対して簡単でメンテナンスしやすい実用的なモックを作るためのテクニックをSwiftで説明します。" : "Mocks allow us to write fast tests that don’t mess with production data. Without OCMock we will need to write our own mocks, but it doesn’t have to be a lot of work. We will look at techniques for practical mocking in Swift that will allow us to create simple, easy to maintain mocks for the most important parts of our codebase. ")
+            title: isJapanese ? "Swiftにおける実践的なモック化について" : "Real World Mocking In Swift",
+            summary: isJapanese ? "モックを使うと、プロダクションのデータが揃うのを待たずに、早くテストを書くことができます。OCMockを使わずにモックを書く場合でも、それほど多くの作業が発生するわけではありません。講演では、コードベースの多くの重要な箇所に対して簡単でメンテナンスしやすい実践的なモックを作るためのテクニックをSwiftで説明します。" : "Mocks allow us to write fast tests that don’t mess with production data. Without OCMock we will need to write our own mocks, but it doesn’t have to be a lot of work. We will look at techniques for practical mocking in Swift that will allow us to create simple, easy to maintain mocks for the most important parts of our codebase. ")
     )
     
     static let chrisEidhof = Speaker(
@@ -76,8 +78,12 @@ extension Speaker {
         twitter: "chriseidhof",
         image: Toucan(image: UIImage(named: "chris")!).maskWithEllipse().image,
         bio: isJapanese ? "ドイツ・ベルリンに住むオランダ人のソフトウェア開発者です。iOS/Macアプリ開発を中心に活動しており、DecksetやSceneryを開発しています。UIKonfやobjc.ioの立ち上げ、Functional Programming in Swift, Advanced Swift（現在、執筆中）の著者でもあります。" : "Chris is a Dutch software developer living in Berlin (Germany). He spends most of his time building iOS and Mac apps, such as Deckset and Scenery. He started UIKonf, objc.io, wrote a book about Functional Programming in Swift and is currently writing a book on Advanced Swift.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
-    
+        presentation: Presentation(
+            title: isJapanese ? "SwiftらしいTable View Controllerの使い方" : "Table View Controllers in Swift",
+            summary: isJapanese ?
+                "この講演ではよりSwiftらしいTable View Controllerの使い方を探ります。ジェネリクスやStruct、再利用可能なUITableViewControllerのサブクラスを作る関数などについて話します。" :
+                "In this talk, we'll look at how we can work with table view controllers in a more Swifty way. We'll use generics, structs and functions to create a reusable subclass of UITableViewController."))
+
     static let timOliver = Speaker(
         name: "Tim Oliver",
         twitter: "TimOliverAU",
@@ -131,7 +137,7 @@ extension Speaker {
         bio: isJapanese ? "AyakaはVenmoのiOSリードで最近はSwiftばかり書いています。iOS 4の頃からiOS開発を始め、テイラー・スウィフトの曲を聴きながらSwiftを書くのが大好きです。これまでSwiftにおける自然言語処理や、スクリプティング、VenmoアプリをSwiftで書き直したことなどをテーマに講演を行いました。東京出身なので、東京のカンファレンスで話せることがとても楽しみです！「宜しくお願いします。」" : "Ayaka leads the iOS team at Venmo where they write only Swift these days. She’s been doing iOS development since iOS 4 and loves writing Swift while listening to Taylor Swift. In the past, she’s given talks on NLP in Swift, Swift Scripting, and rewriting the Venmo app in Swift. She was born in Tokyo and can’t wait to give her first talk there! 宜しくお願いします。",
         presentation: Presentation(
             title: isJapanese ? "実践的 “Boundaries”" : "Boundaries in Practice",
-            summary: isJapanese ? "Gary BernhardtさんのBoundariesの講演(https://www.destroyallsoftware.com/talks/boundaries)、ご存知ですか。ファンクショナルプログラミングの講演で良く参照される講演です。私は数年前に初めてこの講演を観た時、「Functional Core, Imperative Shell」の理論は理解できたのですが、実際どの様にこのコンセプトを実用化できるのか良く分かりませんでした。しかし、毎日少しずつSwiftを書いているうちに、このコンセプトはファンクショナルプログラミングだけではなく、良いエンジニアリングに一般的に適用できるのが明らかになってきました。今回はどの様に「Boundaries」を利用して、もっと良い、もっと安全なそして将来性のあるSwiftを書くことが出来るのかを幾つかの事例を紹介しながらお話しさせて頂きます。「Boundaries」をご覧になった事がなくても私の話をご理解頂けると思いますが、もしお時間があれば是非一度ご覧下さい。素晴らしい話です。" : "One of the talks that I’ve enjoyed watching is Boundaries by Gary Bernhardt(https://www.destroyallsoftware.com/talks/boundaries). If you’ve seen a talk about functional programming in Swift, you’ve probably heard it being referenced. When I first watched the talk a few years ago, I understood the theory but wasn’t sure where exactly to apply the concepts. As I’ve been writing more and more Swift, I started to see that the concept of “Functional Core, Imperative Shell” applies not just to functional programming, but also to good engineering in general. In this talk, we’ll go over a couple of specific examples how these “boundaries” can help us write better, safer, and more future-proof Swift code. You don’t need to watch the Boundaries talk to understand this talk, but if you have time, definitely watch it because it’s a great talk.")
+            summary: isJapanese ? "Gary BernhardtさんのBoundariesという講演 https://www.destroyallsoftware.com/talks/boundaries) をご存知でしょうか。関数型プログラミングの講演ではよく言及されています。私は数年前に初めてこの講演を聴いたとき、「Functional Core, Imperative Shell」を理論的には理解できたのですが、実際の場面でにどのようにこの概念を適用できるのかよく分かりませんでした。しかし、毎日少しずつSwiftを書いているうちに、この概念は関数型プログラミングだけではなく、良いエンジニアリングに一般的に適用できることがわかってきました。今回は「Boundaries」をどのように利用して、より良い、より安全な、そして将来性のあるSwiftを書くことができるのかを、いくつかの事例を紹介しながらお話しします。「Boundaries」をご覧になったことがなくても私の話をご理解いただけると思いますが、もしお時間があればぜひ一度ご覧ください。すばらしい講演です。" : "One of the talks that I’ve enjoyed watching is Boundaries by Gary Bernhardt(https://www.destroyallsoftware.com/talks/boundaries). If you’ve seen a talk about functional programming in Swift, you’ve probably heard it being referenced. When I first watched the talk a few years ago, I understood the theory but wasn’t sure where exactly to apply the concepts. As I’ve been writing more and more Swift, I started to see that the concept of “Functional Core, Imperative Shell” applies not just to functional programming, but also to good engineering in general. In this talk, we’ll go over a couple of specific examples how these “boundaries” can help us write better, safer, and more future-proof Swift code. You don’t need to watch the Boundaries talk to understand this talk, but if you have time, definitely watch it because it’s a great talk.")
     )
     
     static let simonGladman = Speaker(
@@ -161,8 +167,8 @@ extension Speaker {
         image: Toucan(image: UIImage(named: "matthewg")!).maskWithEllipse().image,
         bio: isJapanese ? "Tonchidot, GREE, Mediweb、Eventacularといった日本企業で7年間iOS開発をしています。また、5年以上もAppleのプラットフォーム上で開発している人達の国際的なコミュニティであるTokyo iOS Meetupのオーガナイザーをしています。" : "Matthew Gillingham has been an iOS developer for seven years, working at Japanese companies such as Tonchidot, GREE, Mediweb, and Eventacular. He has also been organizing the Tokyo iOS Meetup, an international community of people making things on Apple platforms, for over five years.",
         presentation: Presentation(
-            title: isJapanese ? "プロトコル拡張の歴史" : "Protocol Extensions: A History",
-            summary: isJapanese ? "Swift 2.0のプロトコル拡張に至るまでの、プログラミング言語のコードの再利用とコードシェア機能の簡単な歴史です。" : "A brief history of programming language features which permit code-sharing and code-reuse, leading up the protocol extensions in Swift 2.0.")
+            title: isJapanese ? "プロトコルエクステンション: 歴史について" : "Protocol Extensions: A History",
+            summary: isJapanese ? "Swift 2.0のプロトコルエクステンションに至るまでの、プログラミング言語におけるコードの再利用と共通化の歴史をお話しします。" : "A brief history of programming language features which permit code-sharing and code-reuse, leading up the protocol extensions in Swift 2.0.")
     )
     
     static let lauraSavino = Speaker(
@@ -170,7 +176,11 @@ extension Speaker {
         twitter: "savinola",
         image: Toucan(image: UIImage(named: "laura")!).maskWithEllipse().image,
         bio: isJapanese ? "言語、旅行、教育に強い興味を持っているiOSエンジニアです。Khan Academyにて、アプリを作り、学ぶ過程で学生のアカデミックな経験を活かす取り組みをしています。フリーでコーダー、発表者、トレーナーをしています。" : "Laura is an iOS developer with a penchant for languages, travel, and education. She most recently worked to transform students' academic experience by building apps for learning at Khan Academy, and is now an independent coder, speaker, and trainer.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "コードリーディングについて" : "Learning to Read Again",
+            summary: isJapanese ?
+                "新しいコードを読み解くことを、私たちはしばしば行いますが、それはエネルギーと時間を消費します。そこで、スラスラと新しい言語を読めるようにする方法と、進化に付いていく方法をお話しします。" :
+                "Puzzling over new code takes energy and time, and we're often short on both. So how can we learn to read fluently in this new language, especially as it keeps changing?"))
     
     static let yutaKoshizawa = Speaker(
         name: "Yuta Koshizawa",
@@ -187,7 +197,9 @@ extension Speaker {
         twitter: "danielboedewadt",
         image: Toucan(image: UIImage(named: "danieleggert")!).maskWithEllipse().image,
         bio: isJapanese ? "写真を愛し、ベルリンに住んでいます。objc.ioの共同設立者の一人です。10年以上、Cocoaに関係する全て（主に写真や画像処理）に関わって仕事をしています。5年間Appleで働き、Photos.appとCamera.appをCore Dataに移行する仕事をしました。" : "Daniel loves photography and lives in Berlin. He is one of the co-founders of objc.io. He’s been working with all kinds of things related to Cocoa for more than ten years — mostly photo and image processing related. Daniel worked at Apple for five years, and helped move Photos.app and Camera.app to Core Data.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "モダンCore Data" : "Modern Core Data",
+            summary: isJapanese ? "Swiftを使い、古いObjective-CのAPIに新たな命を吹き込みます。" : "Use Swift to breathe new life into an old Objective-C API"))
     
     static let helenHolmes = Speaker(
         name: "Helen Holmes",
@@ -214,7 +226,11 @@ extension Speaker {
         twitter: "b3ll",
         image: Toucan(image: UIImage(named: "adambell")!).maskWithEllipse().image,
         bio: isJapanese ? "Adam Bellはカナダ人のiOSエンジニアでJailbreakコミュニティでiOSの活動を始め、現在はリバースエンジニアリングとオープンソース活動をしています。普段はアニメーション、音楽、プロトタイプをしているか、ソフトウェアのビットを操作する以外は、レゴで遊ぶかポケモンを育てています。以前はARTPOP、MessageBoxやIgnitionのプロジェクトに従事していました。現在はFacebookでiOSエンジニアとして働いており、アニメーションエンジン「Pop」などのプロジェクトのメンテナンスに関わっています" : "Adam Bell is a Canadian iOS engineer who started out in the jailbreak community reverse-engineering and developing Open Source projects for the platform. When he’s not playing with Lego or training Pokémon, he’s usually playing with animations, music, prototypes, or messing with bits of software he probably shouldn’t. Previous projects include ARTPOP, MessageBox, and Ignition. He's now currently working on iOS Experiences at Facebook and is helping maintain projects like Pop.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "プロトタイピングの魔法" : "Prototyping Magic",
+            summary: isJapanese ?
+                "最後にアプリケーションの動きが非現実的、もしくは物理法則に従ってないと感じたことはいつですか？近年のアプリケーションは\"フラットでシンプル\"になっています。魔法のように感じられるアプリは非常に稀になっています。すぐれたジェスチャやアニメーションを備えたアプリケーションを作るために、プロトタイピングの方法を深く学ぶ必要があります。そして、失われた昔の魔法のようなアプリケーションを再現しましょう。" :
+                "When was the last time you used an app that felt surreal, or broke the laws of physics? With modern apps becoming \"flat and simple\", apps that felt magical are becoming exceedingly rare! We'll be doing a deep-dive on how to prototype and build great interactive gestures and animations with Swift, so we can restore that sense of magic that's been lost with time."))
     
     static let borisBugling = Speaker(
         name: "Boris Bügling",
@@ -238,7 +254,11 @@ extension Speaker {
         twitter: "micheletitolo",
         image: Toucan(image: UIImage(named: "michele")!).maskWithEllipse().image,
         bio: isJapanese ? "Michele Titoloは機械の反乱についてまったく気にしていません。2010よりプロとしてソフトウェア開発を始め、数多くのテスト書かれていないコードを見てきて、未来が安全であるという確信を得ました。 彼女はCapital Oneのリードエンジニアであり、Women Who CodeのCTOでもあります。日夜、彼女は品質が高くメンテナンスしやすいコードを世界に広めるために活動しています。" : "Michele Titolo is not at all worried about a robot uprising. Making software professionally since 2010, she has seen enough codebases without tests to know our future is safe. By day she is a Lead Software Engineer at Capital One and CTO of Women Who Code. By night she travels the world advocating for high quality and maintainable code.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "Protocols and the Promised Land" : "プロトコルと約束の地",
+            summary: isJapanese ?
+                "Swiftの設計はジェネリクスや第一級プロトコルなど言語の機能がアプリケーション開発のカギとなることを推進しています。しかし、Objective-Cから導入されたものを含む論理的パターンの多くは期待した通りには動作しません。多くの場合、Swiftの型システムは、プロパティをクラスとプロトコルの両方に拘束したりする素直なパターンとうまく動きません。この講演ではいくつかの課題に着目し、内部に潜む原因を議論し、対応策について考えます。" :
+                "Swift’s design promotes language features like generics and first-class protocols as key architectural components in application development. However, many of the logical patterns that arise, including ones imported from Objective-C, don’t work as we expect them to. In many cases, Swift’s type system resists certain straightforward patterns, such as constraining a property to both a class and a protocol. This talk will highlight several of these challenges, discuss the underlying cause, and evaluate workarounds."))
     
     static let rachelBobbins = Speaker(
         name: "Rachel Bobbins",
@@ -306,7 +326,7 @@ extension Speaker {
         image: Toucan(image: UIImage(named: "Maxim")!).maskWithEllipse().image,
         bio: isJapanese ? "デザインと開発のバックブランドを持ち、人を観察し、技術が本当に役立つように改善することに情熱を持っています。" : "Coming from both a design and development background, Maxim loves observing people in their natural habitat, making technology that will serve them instead of the other way around.",
         presentation: Presentation(
-            title: isJapanese ? "ライブデザイン:🎙🎨 " : "Live Design:🎙🎨 ",
-            summary: isJapanese ? "私たちはコードを知っており愛しています。しかし、App Storeで注目されるためにはコードでさえ他の規律からの助けが必要です。講演では、アプリの申請時に必要となるアプリアイコンとスクリーンショットをSketchを使って作成するライブデモを行います。コードからアプリ申請に至るまで、自分のアプリを所有する方法を説明します。" : "We know and love code. But even code requires a bit of help from other disciplines to grab attention in the app store. In this talk, I’ll do a live demonstration in Sketch of making app icons and screenshot collateral for your app’s submission to the store. Learn how to own your app, from code to submission. ")
+            title: isJapanese ? "ライブデザイニング:🎙🎨 " : "Live Design:🎙🎨 ",
+            summary: isJapanese ? "私たちはコードを書くことが好きです。しかし、App Storeで注目されるためにはコーディングだけでなく、他の素養も必要になります。この講演では、アプリの申請時に必要となるアプリアイコンとスクリーンショットをSketchを使って作成するデモをその場で行います。コーディングからアプリ申請まで、自分一人でうまくやる方法を説明します。" : "We know and love code. But even code requires a bit of help from other disciplines to grab attention in the app store. In this talk, I’ll do a live demonstration in Sketch of making app icons and screenshot collateral for your app’s submission to the store. Learn how to own your app, from code to submission. ")
     )
 }
