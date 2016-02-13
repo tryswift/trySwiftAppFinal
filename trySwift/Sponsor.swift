@@ -375,7 +375,7 @@ extension Sponsor {
         twitter: "perfectlysoft",
         logo: UIImage(named: "perfect")!,
         level: .Silver,
-        description: nil
+        description: isJapanese ? nil : "Server-Side Swift is here! - developed by PerfectlySoft, Perfect is a framework for developing web and other REST services in the Swift programming language. Its primary focus is on facilitating mobile apps which require backend server connections, allowing you to use Swift for both user-side and server-side development. It’s the perfect backbone for cloud and mobile technologies, web development and cross-platform development. Developers can now write less code and work in the powerful, modern and elegant Swift language for all of their needs."
     )
     
     static let instagram = Sponsor(
