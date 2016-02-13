@@ -149,7 +149,9 @@ extension Speaker {
         twitter: "FlexMonkey",
         image: Toucan(image: UIImage(named: "simon")!).maskWithEllipse().image,
         bio: isJapanese ? "Simonは初期のSwift言語のチャンピオンです。彼のブログ(http://flexmonkey.blogspot.co.uk)はiOSのテクノロジーを探求・検証する際の人気のソースになっています。いくつものiOSアプリをリリースしており、その中にnode.jsベースのiPad用画像処理アプリであるNodalityも含まれています。余暇は、物理・粒子シミュレーション・画像処理・今までにないユーザインタラクションといったよりクリエイティブな方向性の取り組みをしています。" : "An early champion of Apple's Swift language, Simon's blog, http://flexmonkey.blogspot.co.uk, has become a popular source for articles exploring and experimenting with iOS technology. Simon has published several iOS apps including Nodality, a node based image editing app for iPads. In his spare time, his coding takes a more creative direction where his interests include topics such as physics and particle simulations, image processing and novel user interaction patterns.",
-        presentation: Presentation(title: isJapanese ? "TBD" : "TBD", summary: isJapanese ? "TBD" : "TBD"))
+        presentation: Presentation(
+            title: isJapanese ? "Core Imageによる高度な画像処理" : "Advanced Image Processing with Core Image", summary: isJapanese ? "Core ImageはAppleが提供している画像処理・解析用フレームワークです。170以上の組み込みフィルタ（単独でも組み合わせても使えます）とカスタムフィルタを自分で作ることもできるので、Core Imageは静止画および動画に適用可能な視覚効果に対するとてつもないポテンシャルを提供しています。この講演では、Core Imageの基本から上級テクニックまでご紹介します。" : "Core Image is Apple's framework for image processing and analysis. With over 170 built in filters - which can be used alone or together in complex graphs - and support for custom image kernels, Core Image offers unlimited creative potential for visual effects that can be applied to still or moving images. In this talk, we'll look at Core Image from its very basics right through to advanced techniques.")
+    )
     
     static let cateHuston = Speaker(
         name: "Cate Huston",
