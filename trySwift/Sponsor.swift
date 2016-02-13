@@ -263,7 +263,9 @@ extension Sponsor {
         twitter: "sansanjapan",
         logo: UIImage(named: "sansan")!,
         level: .Silver,
-        description: nil
+        description: isJapanese ?
+        "Sansan株式会社は、「ビジネスの出会いを資産に変え、働き方を革新する」をミッションに掲げ、クラウド名刺管理サービス『Sansan』と『Eight』を提供しています。\n世界初の法人向けクラウド名刺管理サービス「Sansan」は、組織全体の働き方を変え、導入企業は2016年1月に4,000社を突破しました。\n個人向けアプリ「Eight」では新たなビジネスSNSの形を提案しり、ユーザー数は100万人を越えています。" :
+        "We create a resource from everyday business encounters and tranforming the way the world works. \"Sansan\" is a cloud-based business card management service for corporations. \"Eight\" is for individuals and it  has 1million users."
     )
     
     static let speee = Sponsor(
