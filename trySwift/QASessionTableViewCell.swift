@@ -53,31 +53,30 @@ extension QASessionTableViewCell: UIViewControllerPreviewingDelegate {
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         
-        let locationInView1 = speaker1ImageView.convertPoint(location, fromView: contentView)
-        if CGRectContainsPoint(speaker1ImageView.bounds, locationInView1) {
-            let speakerDetailVC = SpeakerDetailViewController()
-            speakerDetailVC.speaker = qaSession?.speakers[0]
-            return speakerDetailVC
-        }
+        let viewsTo3DTouch = [speaker1ImageView, speaker2ImageView, speaker3ImageView]
         
-        let locationInView2 = speaker2ImageView.convertPoint(location, fromView: contentView)
-        if CGRectContainsPoint(speaker2ImageView.bounds, locationInView2) {
-            let speakerDetailVC = SpeakerDetailViewController()
-            speakerDetailVC.speaker = qaSession?.speakers[1]
-            return speakerDetailVC
-        }
-        
-        let locationInView3 = speaker3ImageView.convertPoint(location, fromView: contentView)
-        if CGRectContainsPoint(speaker3ImageView.bounds, locationInView3) {
-            let speakerDetailVC = SpeakerDetailViewController()
-            speakerDetailVC.speaker = qaSession?.speakers[2]
-            return speakerDetailVC
+        for (index, view) in viewsTo3DTouch.enumerate() where touchedView(view, location: location) {
+            if let speaker = qaSession?.speakers[index] {
+                return viewControllerForSpeaker(speaker)
+            }
         }
         
         return nil
     }
     
-    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController)
+    {
         delegate?.onCommitViewController(viewControllerToCommit)
+    }
+    
+    private func touchedView(view: UIView, location: CGPoint) -> Bool {
+        let locationInView = view.convertPoint(location, fromView: contentView)
+        return CGRectContainsPoint(view.bounds, locationInView)
+    }
+    
+    private func viewControllerForSpeaker(speaker: Speaker) -> UIViewController {
+        let speakerDetailVC = SpeakerDetailViewController()
+        speakerDetailVC.speaker = speaker
+        return speakerDetailVC
     }
 }
