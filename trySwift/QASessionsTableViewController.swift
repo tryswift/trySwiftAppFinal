@@ -20,6 +20,11 @@ class QASessionsTableViewController: UITableViewController {
         
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        if traitCollection.forceTouchCapability == .Available {
+            registerForPreviewingWithDelegate(self, sourceView: tableView)
+        }
+
     }
     
     // MARK: - Table view data source
@@ -36,11 +41,7 @@ class QASessionsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(QASessionTableViewCell), forIndexPath: indexPath) as! QASessionTableViewCell
         
         let qaSession = dataSource.qaSessions[indexPath.section]
-        cell.configure(withQASession: qaSession, delegate: self)
-        
-        if traitCollection.forceTouchCapability == .Available {
-            registerForPreviewingWithDelegate(cell, sourceView: cell.contentView)
-        }
+        cell.configure(withQASession: qaSession)
         
         return cell
     }
@@ -60,8 +61,44 @@ extension QASessionsTableViewController: IndicatorInfoProvider {
     }
 }
 
-extension QASessionsTableViewController: QASessionSpeakerPopDelegate {
-    func onCommitViewController(viewController: UIViewController) {
-        navigationController?.pushViewController(viewController, animated: true)
+// MARK: Force Touch on Speaker Images
+extension QASessionsTableViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        if let indexPath = tableView.indexPathForRowAtPoint(location) {
+
+            let cell = tableView.cellForRowAtIndexPath(indexPath) as! QASessionTableViewCell
+            
+            let viewsTo3DTouch = [cell.speaker1ImageView, cell.speaker2ImageView, cell.speaker3ImageView]
+            for (index, view) in viewsTo3DTouch.enumerate() where touchedView(view, location: location) {
+                
+                //This will show the image clearly and blur the rest of the screen for our peek.
+                // have to convert the image view coordinates to table view coordinate space
+                let viewRectInTableView = tableView.convertRect(view.frame, fromCoordinateSpace: view.superview!)
+                previewingContext.sourceRect = viewRectInTableView
+                
+                // configuring the view controller to show
+                let qaSession = dataSource.qaSessions[indexPath.section]
+                let speaker = qaSession.speakers[index]
+                return viewControllerForSpeaker(speaker)
+            }
+        }
+        return nil
     }
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        navigationController?.pushViewController(viewControllerToCommit, animated: true)
+    }
+    
+    private func touchedView(view: UIView, location: CGPoint) -> Bool {
+        let locationInView = view.convertPoint(location, fromView: tableView)
+        return CGRectContainsPoint(view.bounds, locationInView)
+    }
+    
+    private func viewControllerForSpeaker(speaker: Speaker) -> UIViewController {
+        let speakerDetailVC = SpeakerDetailViewController()
+        speakerDetailVC.speaker = speaker
+        return speakerDetailVC
+    }
+
 }
