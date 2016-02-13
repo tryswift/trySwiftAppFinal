@@ -350,7 +350,7 @@ extension Session {
             speaker: nil),
         Session(id: 319,
             startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 18, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 11, minute: 59, second: 0),
+            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 23, minute: 59, second: 0),
             description: "🎉🎉🎉",
             location: TOMBOY106,
             speaker: nil)
