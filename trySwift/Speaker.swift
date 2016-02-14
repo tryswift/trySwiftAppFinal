@@ -57,7 +57,7 @@ extension Speaker {
         name: "Syo Ikeda",
         twitter: "ikesyo",
         image: Toucan(image: UIImage(named: "syo")!).maskWithEllipse().image,
-        bio: isJapanese ? "京都在住のフリーランスiOSエンジニアです。（Twitter上では@ikesyoで知られています。）オープンソースの活動として、Himotoki（type-safeなJSONパーサーライブラリ）の開発やReactiveCocoaやCarthageといったオープンソースのプロジェクトにコントリビュートしています。" : "Syo Ikeda (a.k.a @ikesyo) is an independent iOS developer lives in Kyoto. He is the author of Himotoki, a type-safe JSON decoding library made of Swift, and also is contributing to several open source projects such as ReactiveCocoa and Carthage.",
+        bio: isJapanese ? "京都在住のiOSエンジニアで、はてなで働いています。（Twitter上では@ikesyoで知られています。）オープンソースの活動として、Himotoki（type-safeなJSONパーサーライブラリ）の開発やReactiveCocoaやCarthageといったオープンソースのプロジェクトにコントリビュートしています。" : "Syo Ikeda (a.k.a @ikesyo) is an iOS developer lives in Kyoto, working at Hatena. He is the author of Himotoki, a type-safe JSON decoding library made of Swift, and also is contributing to several open source projects such as ReactiveCocoa and Carthage.",
         presentation: Presentation(
             title: isJapanese ? "Swiftのエコシステムに飛び込む" : "Dive into Swift Ecosystem",
             summary: isJapanese ? "Swiftはこの2年のうちに非常に人気のある言語になり、いまやオープンソース化されました。エコシステムは日々拡大しており、Swiftをサポートするサービスが出てきたり、多くの開発者向けツールがSwiftで書かれています。講演ではそういったツールやサービスを紹介し、それらを使ったり、貢献することをお勧めします。大きなチャンスです:-)" : "Swift became a very popular programming language in this two years and is now open sourced. Its ecosystem should be growing day by day and there are already some services those support Swift or many developer tools themselves are written in Swift. I will introduce the services and tools, and encourage you to use, participate in or contribute to them. It's a great chance to do so! :-)")
