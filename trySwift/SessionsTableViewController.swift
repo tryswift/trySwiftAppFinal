@@ -61,6 +61,13 @@ class SessionsTableViewController: UITableViewController {
             sessionDetailsVC.speaker = speaker
             navigationController?.pushViewController(sessionDetailsVC, animated: true)
         }
+
+        if session.id == 319 { // TOMBOY106
+            let webViewController = WebDisplayViewController()
+            webViewController.url = NSURL(string: "http://www.tomboy106.com/shibuya106/index.html")!
+            webViewController.displayTitle = session.location
+            navigationController?.pushViewController(webViewController, animated: true)
+        }
     }
 
 }
