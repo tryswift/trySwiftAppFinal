@@ -75,9 +75,13 @@ private extension AppDelegate {
         let sponsorImages = (Sponsor.diamondSponsors + Sponsor.goldSponsors + Sponsor.silverSponsors).map {
             return (key: $0.logo, image: UIImage(named: $0.logo)!)
         }
+        
+        let organizerImages = Organizer.organizers.map {
+            return (key: $0.image, image: Toucan(image: UIImage(named: $0.image)!).maskWithEllipse().image)
+        }
 
         ImageCache.sharedInstance.warmUp {
-            return sponsorImages + speakerImages
+            return sponsorImages + speakerImages + organizerImages
         }
     }
 }
