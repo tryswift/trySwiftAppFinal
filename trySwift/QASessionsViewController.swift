@@ -14,7 +14,7 @@ class QASessionsViewController: ButtonBarPagerTabStripViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = isJapanese ? "Q&A" : "Q&A"
+        title = "Q&A"
     }
     
     override func viewDidLoad() {
