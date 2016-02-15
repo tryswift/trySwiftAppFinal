@@ -28,7 +28,7 @@ class ImageCache {
         fileManager = NSFileManager()
     }
     
-    func warmUp(@autoclosure(escaping) imagesClosure: () -> [(key: String, image: UIImage)]) {
+    func warmUp(imagesClosure: () -> [(key: String, image: UIImage)]) {
         dispatch_async(ioQueue) { () -> Void in
             
             guard !self.fileManager.fileExistsAtPath(self.diskCachePath) else {
