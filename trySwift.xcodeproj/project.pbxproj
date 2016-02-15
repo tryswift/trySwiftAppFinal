@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		048A9BF7A8D3C3DD26D50B41 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9600A9591D00647A023EE414 /* Pods.framework */; };
+		7C30FC061C724C2A00CE5918 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C30FC051C724C2A00CE5918 /* ImageCache.swift */; };
 		FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */; };
 		FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */; };
 		FA39E8CD1C6AF8C80074B6BE /* NSLocaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8CC1C6AF8C80074B6BE /* NSLocaleExtension.swift */; };
@@ -83,6 +84,7 @@
 /* Begin PBXFileReference section */
 		38CAAC53F6ECFE1EAE2B3111 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		45B486A92C7FDE576D71BD2E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7C30FC051C724C2A00CE5918 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		9600A9591D00647A023EE414 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavTabButtonCell.xib; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 			children = (
 				FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */,
 				FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */,
+				7C30FC051C724C2A00CE5918 /* ImageCache.swift */,
 				FA39E8C51C6AB7310074B6BE /* ViewControllers */,
 				FA39E8C81C6AE3E50074B6BE /* Views */,
 				FA39E8D51C6AFE200074B6BE /* DataSources */,
@@ -662,6 +665,7 @@
 				FA39E8F11C6C13D70074B6BE /* QASession.swift in Sources */,
 				FA39E8FE1C6C32510074B6BE /* QASessionsViewController.swift in Sources */,
 				FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */,
+				7C30FC061C724C2A00CE5918 /* ImageCache.swift in Sources */,
 				FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */,
 				FA39E91D1C6C8D100074B6BE /* WebDisplayViewController.swift in Sources */,
 				FA39E8E51C6B31300074B6BE /* SessionDataSourceDay3.swift in Sources */,

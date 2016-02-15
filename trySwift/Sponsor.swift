@@ -25,7 +25,7 @@ struct Sponsor {
     let name: String
     let website: String
     let twitter: String?
-    let logo: UIImage
+    let logo: String
     let level: Level
     let description: String?
 }
@@ -41,7 +41,7 @@ extension Sponsor {
         name: "Realm",
         website: "realm.io",
         twitter: "realm",
-        logo: UIImage(named: "realm")!,
+        logo: "realm",
         level: .Diamond,
         description: nil
     )
@@ -50,7 +50,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社サイバーエージェント" : "CyberAgent, Inc.",
         website: "www.cyberagent.co.jp",
         twitter: "CyberAgent_PR",
-        logo: UIImage(named: "calogo")!,
+        logo: "calogo",
         level: .Diamond,
         description: nil
     )
@@ -60,7 +60,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社メルカリ" : "Mercari, Inc.",
         website: "www.mercari.com",
         twitter: "mercari_jp",
-        logo: UIImage(named: "mercari")!,
+        logo: "mercari",
         level: .Gold,
         description: isJapanese ?
             "メルカリは\"新たな価値を生みだす世界的なマーケットプレイスを創る\"会社です。" :
@@ -71,7 +71,7 @@ extension Sponsor {
         name: isJapanese ? "ケイワイトレード株式会社" : "KY TRADE CO., LTD.",
         website: "www.kytrade.co.jp",
         twitter: nil,
-        logo: UIImage(named: "kyt")!,
+        logo: "kyt",
         level: .Gold,
         description: nil
     )
@@ -80,7 +80,7 @@ extension Sponsor {
         name: isJapanese ? "LINE株式会社" : "LINE Corporation",
         website: "linecorp.com",
         twitter: "LINEjp_official",
-        logo: UIImage(named: "line")!,
+        logo: "line",
         level: .Gold,
         description: isJapanese ?
             "LINE株式会社（本社：日本）は、コミュニケーションアプリ「LINE」および、LINEプラットフォーム上で展開する様々なコンテンツ・サービス（ゲーム、マンガ、音楽、決済など）を運営しています。LINEでは、1対1やグループでの多種多様なスタンプを利用したメッセージサービスや、音声・ビデオ通話によって、世界中のLINEユーザーとのコミュニケーションを無料でお楽しみ頂けます。" :
@@ -93,7 +93,7 @@ extension Sponsor {
         name: isJapanese ? "フェンリル株式会社" : "Fenrir Inc.",
         website: "www.fenrir-inc.com",
         twitter: "fenrir_official",
-        logo: UIImage(named: "fenrir")!,
+        logo: "fenrir",
         level: .Silver,
         description: isJapanese ?
         "ウェブブラウザ Sleipnirなどの自社プロダクトとともに、国内大手企業とアプリケーションの共同開発に取り組んでいます。大阪（本社）・東京・名古屋・島根にある拠点では、新しい技術を積極的に採用し、生産性を高め続けています。また、ユーザー体験までもデザインするこだわり抜いたアプリ開発は高く評価され、すでに400本を超えた開発実績や、100万ダウンロードを超える人気アプリの実現につながっています。" :
@@ -104,7 +104,7 @@ extension Sponsor {
         name: "DENSO IT Laboratory, Inc.",
         website: "www.d-itlab.co.jp",
         twitter: "densoitlab",
-        logo: UIImage(named: "denso")!,
+        logo: "denso",
         level: .Silver,
         description: nil
     )
@@ -113,7 +113,7 @@ extension Sponsor {
         name: "VOYAGE GROUP",
         website: "voyagegroup.com",
         twitter: "tech_voyage",
-        logo: UIImage(named: "voyage")!,
+        logo: "voyage",
         level: .Silver,
         description: isJapanese ?
             "株式会社VOYAGE GROUPは、人を軸にした事業開発会社です。\n\nVOYAGE GROUPでは、SOUL（魂：創業時の想い）と8つのCREED（価値観）を経営理念としています。\n\n■SOUL：360°スゴイ\n\n■CREED： 挑戦し続ける。\n\n\t自ら考え、自ら動く。\n\t本質を追い求める。\n\t圧倒的スピード。\n\t仲間と事を成す。\n\tすべてに楽しさを。\n\t真っ直ぐに、誠実に。\n\t\n\t夢と志、そして情熱。" :
@@ -124,7 +124,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社ディー・エヌ・エー" : "DeNa",
         website: "dena.com",
         twitter: "DeNACorp",
-        logo: UIImage(named: "dena")!,
+        logo: "dena",
         level: .Silver,
         description: isJapanese ?
             "1999年に創業した株式会社ディー・エヌ・エー（以下DeNA）はeコマース、ソーシャルゲームを中心に、モバイルサービスに特化した事業展開を行っています。近年ではキュレーションサービスの展開や、自動車やヘルスケアなどリアル巨大産業への進出をしています。http://dena.com/jp/" :
@@ -135,7 +135,7 @@ extension Sponsor {
         name: isJapanese ? "freee株式会社" : "freee K.K.",
         website: "freee.co.jp",
         twitter: "freee_jp",
-        logo: UIImage(named: "freee")!,
+        logo: "freee",
         level: .Silver,
         description: nil
     )
@@ -144,7 +144,7 @@ extension Sponsor {
         name: "Nine Drafts Inc.",
         website: "9drafts.com",
         twitter: "9drafts",
-        logo: UIImage(named: "ninedrafts")!,
+        logo: "ninedrafts",
         level: .Silver,
         description: nil
     )
@@ -153,7 +153,7 @@ extension Sponsor {
         name: "Goodpatch, Inc.",
         website: "goodpatch.com",
         twitter: "GoodpatchTokyo",
-        logo: UIImage(named: "goodpatch")!,
+        logo: "goodpatch",
         level: .Silver,
         description: nil
     )
@@ -162,7 +162,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社はてな" : "Hatena Co., Ltd.",
         website: "hatenacorp.jp",
         twitter: "hatenapr",
-        logo: UIImage(named: "hatena")!,
+        logo: "hatena",
         level: .Silver,
         description: nil
     )
@@ -171,7 +171,7 @@ extension Sponsor {
         name: "GitHub",
         website: "github.com",
         twitter: "github",
-        logo: UIImage(named: "github")!,
+        logo: "github",
         level: .Silver,
         description: nil
     )
@@ -180,7 +180,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社ミクシィ" : "mixi, Inc.",
         website: "mixi.co.jp",
         twitter: "mixi_engineers",
-        logo: UIImage(named: "mixi")!,
+        logo: "mixi",
         level: .Silver,
         description: nil
     )
@@ -189,7 +189,7 @@ extension Sponsor {
         name: "Yahoo! JAPAN",
         website: "yahoo.co.jp",
         twitter: "yahoo",
-        logo: UIImage(named: "yahoo")!,
+        logo: "yahoo",
         level: .Silver,
         description: nil
     )
@@ -198,7 +198,7 @@ extension Sponsor {
         name: isJapanese ? "クックパッド株式会社" : "Cookpad Inc.",
         website: "cookpad.com",
         twitter: "cookpad_pr",
-        logo: UIImage(named: "cookpad")!,
+        logo: "cookpad",
         level: .Silver,
         description: isJapanese ?
             "クックパッドは、毎日の料理を楽しみにを軸に、レシピをはじめとした様々な生活に便利なサービスを提供する世界企業です。日本をはじめ、アメリカ・スペイン・インドネシアにサービスを展開しています。\n\n私たちは、ユーザに素早く価値を提供する必要があります。そのため大きなサービスを小さなサービスに分割するマイクロアーキテクチャや、グローバルのレシピ基盤の開発など、様々なテクノロジーに挑戦しています。" :
@@ -209,7 +209,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社トレタ" : "Toreta, Inc.",
         website: "toreta.in",
         twitter: "TORETA_official",
-        logo: UIImage(named: "toreta")!,
+        logo: "toreta",
         level: .Silver,
         description: nil
     )
@@ -218,7 +218,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社Fablic" : "Fablic, inc.",
         website: "fablic.co.jp",
         twitter: "friljp",
-        logo: UIImage(named: "fablic")!,
+        logo: "fablic",
         level: .Silver,
         description: "フリマアプリフリルを開発しているFablicではユーザー志向の開発をしたいエンジニアを募集しています。"
     )
@@ -227,7 +227,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社リクルートマーケティングパートナーズ" : "Recruit Marketing Partners Co.,Ltd.",
         website: "recruit-mp.co.jp",
         twitter: "recruit_pr",
-        logo: UIImage(named: "recruit-mp")!,
+        logo: "recruit-mp",
         level: .Silver,
         description: nil
     )
@@ -236,7 +236,7 @@ extension Sponsor {
         name: isJapanese ? "クラスメソッド株式会社" : "Classmethod, Inc.",
         website: "classmethod.jp",
         twitter: "classmethod",
-        logo: UIImage(named: "classmethod")!,
+        logo: "classmethod",
         level: .Silver,
         description: nil
     )
@@ -245,7 +245,7 @@ extension Sponsor {
         name: isJapanese ? "フリュー株式会社" : "FURYU Corporation",
         website: "furyu.jp",
         twitter: "furyupr",
-        logo: UIImage(named: "furyu")!,
+        logo: "furyu",
         level: .Silver,
         description: nil
     )
@@ -254,7 +254,7 @@ extension Sponsor {
         name: "Retty, Inc.",
         website: "corp.retty.me",
         twitter: "Retty_jp",
-        logo: UIImage(named: "retty")!,
+        logo: "retty",
         level: .Silver,
         description: nil
     )
@@ -263,7 +263,7 @@ extension Sponsor {
         name: isJapanese ? "Sansan株式会社" : "Sansan, Inc.",
         website: "jp.corp-sansan.com",
         twitter: "sansanjapan",
-        logo: UIImage(named: "sansan")!,
+        logo: "sansan",
         level: .Silver,
         description: isJapanese ?
         "Sansan株式会社は、「ビジネスの出会いを資産に変え、働き方を革新する」をミッションに掲げ、クラウド名刺管理サービス『Sansan』と『Eight』を提供しています。\n世界初の法人向けクラウド名刺管理サービス「Sansan」は、組織全体の働き方を変え、導入企業は2016年1月に4,000社を突破しました。\n個人向けアプリ「Eight」では新たなビジネスSNSの形を提案しり、ユーザー数は100万人を越えています。" :
@@ -274,7 +274,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社Speee" : "Speee, Inc.",
         website: "speee.jp",
         twitter: "speeeinfo",
-        logo: UIImage(named: "speee")!,
+        logo: "speee",
         level: .Silver,
         description: nil
     )
@@ -283,7 +283,7 @@ extension Sponsor {
         name: isJapanese ? "チャットワーク株式会社" : "ChatWork",
         website: "chatwork.com/ja/",
         twitter: "chatwork_ja",
-        logo: UIImage(named: "chatwork")!,
+        logo: "chatwork",
         level: .Silver,
         description: nil
     )
@@ -292,7 +292,7 @@ extension Sponsor {
         name: isJapanese ? "GMOペパボ株式会社" : "GMO Pepabo Inc.",
         website: "pepabo.com",
         twitter: "pepabo",
-        logo: UIImage(named: "pepabo")!,
+        logo: "pepabo",
         level: .Silver,
         description: nil
     )
@@ -301,7 +301,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社Wondershake" : "Wondershake,Inc.",
         website: "locari.jp",
         twitter: "Wondershake",
-        logo: UIImage(named: "wondershake")!,
+        logo: "wondershake",
         level: .Silver,
         description: nil
     )
@@ -310,7 +310,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社ユビレジ" : "Ubiregi Inc.",
         website: "ubiregi.com/ja",
         twitter: "ubiregi",
-        logo: UIImage(named: "ubiregi")!,
+        logo: "ubiregi",
         level: .Silver,
         description: nil
     )
@@ -319,7 +319,7 @@ extension Sponsor {
         name: isJapanese ? "トゥギャッター株式会社" : "Togetter",
         website: "togetter.com",
         twitter: "togetter_jp",
-        logo: UIImage(named: "togetter")!,
+        logo: "togetter",
         level: .Silver,
         description: nil
     )
@@ -328,7 +328,7 @@ extension Sponsor {
         name: "ride",
         website: "ride.com",
         twitter: "ride",
-        logo: UIImage(named: "ride")!,
+        logo: "ride",
         level: .Silver,
         description: nil
     )
@@ -337,7 +337,7 @@ extension Sponsor {
         name: isJapanese ? "日本経済新聞社" : "Nikkei Inc.",
         website: "www.nikkei.com",
         twitter: "nikkei",
-        logo: UIImage(named: "nikkei")!,
+        logo: "nikkei",
         level: .Silver,
         description: isJapanese ?
             "日経電子版は、日本で最大級の有料ニュースサービスです。有料ユーザーの過半数が利用する iPhoneアプリは2015年春に内製化により全面リニューアルし100万ダウンロードを突破しました。続いて紙面をそのまま閲覧できる「紙面ビューアー」もSwiftを使ってこの3月に内製化・リニューアルします。日経電子版ではこれらのアプリを引き続き内製で開発していくためのエンジニアを求めています。詳しい情報は s.nikkei.com/saiyo を御覧ください。" :
@@ -348,7 +348,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社PR TIMES" : "PR TIMES, Inc.",
         website: "prtimes.co.jp",
         twitter: "PRTIMES_JP",
-        logo: UIImage(named: "prtimes")!,
+        logo: "prtimes",
         level: .Silver,
         description: isJapanese ?
             "「企業と生活者をつなぎ、世の中にいいものを広める」それがPR TIMESです。プレスリリース配信サービス「PR TIMES」はプレスリリースにテクノロジーを加えることで、より多彩な表現を実現し、多くの優良なプレスリリースが集まっています。プレスリリース配信シェアとサイト月間PV数は、共に国内No.1です。また、昨年お問い合わせフォームなどが直感的に作成できるカスタマーサポートツール「Tayori」も立ち上げ、好評を頂いています。" :
@@ -359,7 +359,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社オハコ" : "OHAKO, Inc.",
         website: "ohako-inc.jp",
         twitter: "OhakoJP",
-        logo: UIImage(named: "ohako")!,
+        logo: "ohako",
         level: .Silver,
         description: isJapanese ?
             "株式会社オハコは、体験の本質を探し出し、磨き上げ、人とプロダクトの心地よい接点をつくるUIデザインカンパニーです。私たちがプロダクトをつくる上で、ユーザー体験の本質を設計し、人とプロダクトの心地よい接点となるUIを生み出すことを大切に大切にしています。ただアプリをつくるのではなく、細部のインタラクションにもこだわることで、使った人が心地よいと感じられるUIづくり・アプリ作りを重視しています。" :
@@ -370,7 +370,7 @@ extension Sponsor {
         name: isJapanese ? "株式会社ookami" : "ookami, inc",
         website: "playerapp.tokyo",
         twitter: "Player_twi",
-        logo: UIImage(named: "ookami")!,
+        logo: "ookami",
         level: .Silver,
         description: nil
     )
@@ -379,7 +379,7 @@ extension Sponsor {
         name: "Perfect",
         website: "perfect.org",
         twitter: "perfectlysoft",
-        logo: UIImage(named: "perfect")!,
+        logo: "perfect",
         level: .Silver,
         description: isJapanese ? nil : "Server-Side Swift is here! - developed by PerfectlySoft, Perfect is a framework for developing web and other REST services in the Swift programming language. Its primary focus is on facilitating mobile apps which require backend server connections, allowing you to use Swift for both user-side and server-side development. It’s the perfect backbone for cloud and mobile technologies, web development and cross-platform development. Developers can now write less code and work in the powerful, modern and elegant Swift language for all of their needs."
     )
@@ -388,7 +388,7 @@ extension Sponsor {
         name: "Instagram",
         website: "instagram.com",
         twitter: "instagram",
-        logo: UIImage(named: "Instagram")!,
+        logo: "Instagram",
         level: .Silver,
         description: nil
     )
@@ -397,7 +397,7 @@ extension Sponsor {
         name: isJapanese ? "からくり株式会社" : "Caraquri Inc.",
         website: "caraquri.com",
         twitter: "caraquri",
-        logo: UIImage(named: "caraquri")!,
+        logo: "caraquri",
         level: .Silver,
         description: isJapanese ?
             "iOS/Androidアプリ開発の会社です。クライアントと消費者とのコミュニケーションチャンネルとしてアプリを開発することが多く、動画視聴アプリ、小売向け会員アプリ、販促向けクーポンアプリ、ポータルサイトのニュースアプリ、電子書籍アプリなどを主に手がけています。" :
