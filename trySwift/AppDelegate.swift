@@ -18,6 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         configureStyling()
 
+        ImageCache.sharedInstance.warmUp {
+            (Sponsor.diamondSponsors + Sponsor.goldSponsors + Sponsor.silverSponsors).flatMap{
+                guard let image = UIImage(named: $0.logo) else {
+                    return nil
+                }
+                return (key: $0.logo, image: image) }
+        }
+
         NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "JST")!)
         return true
     }
