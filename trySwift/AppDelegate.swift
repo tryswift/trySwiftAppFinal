@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toucan
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,14 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         configureStyling()
-
-        ImageCache.sharedInstance.warmUp {
-            (Sponsor.diamondSponsors + Sponsor.goldSponsors + Sponsor.silverSponsors).flatMap{
-                guard let image = UIImage(named: $0.logo) else {
-                    return nil
-                }
-                return (key: $0.logo, image: image) }
-        }
+        setupImages()
 
         NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "JST")!)
         return true
@@ -70,6 +64,21 @@ private extension AppDelegate {
         UINavigationBar.appearance().tintColor = .whiteColor()
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().barStyle = .BlackTranslucent
+    }
+    
+    func setupImages() {
+        
+        let speakerImages = Speaker.speakers.map {
+            return (key: $0.image, image: Toucan(image: UIImage(named: $0.image)!).maskWithEllipse().image)
+        }
+        
+        let sponsorImages = (Sponsor.diamondSponsors + Sponsor.goldSponsors + Sponsor.silverSponsors).map {
+            return (key: $0.logo, image: UIImage(named: $0.logo)!)
+        }
+
+        ImageCache.sharedInstance.warmUp {
+            return sponsorImages + speakerImages
+        }
     }
 }
 
