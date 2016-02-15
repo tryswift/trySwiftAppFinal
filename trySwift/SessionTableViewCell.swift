@@ -17,8 +17,6 @@ class SessionTableViewCell: UITableViewCell {
     @IBOutlet weak var sessionTypeLabel: UILabel!
     @IBOutlet weak var sessionLocationLabel: UILabel!
     
-    static let logoImage = Toucan(image: UIImage(named: "tryLogo")!).maskWithEllipse().image
-    
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -31,8 +29,14 @@ class SessionTableViewCell: UITableViewCell {
 
     func configure(withSession session: Session) {
         if let speaker = session.speaker {
+            ImageCache.sharedInstance.retrieveImage(forKey: speaker.image) { maybeImage in
+                guard let image = maybeImage else {
+                    self.speakerImageView.image = UIImage.trySwiftDefaultImage
+                    return
+                }
+                self.speakerImageView.image = Toucan(image: image).maskWithEllipse().image
+            }
             sessionTitleLabel.text = speaker.presentation.title
-            speakerImageView.image = speaker.image
             speakerNameLabel.text = speaker.name
             sessionTypeLabel.text = session.description
             accessoryType = .DisclosureIndicator
@@ -40,7 +44,7 @@ class SessionTableViewCell: UITableViewCell {
         } else {
             // coffee / tea / opening announcements
             sessionTitleLabel.text = session.description
-            speakerImageView.image = SessionTableViewCell.logoImage
+            speakerImageView.image = UIImage.trySwiftDefaultImage
             speakerNameLabel.text = "try! Swift"
             if #available(iOS 9.2, *) {
                 sessionTypeLabel.text = "🤗"
