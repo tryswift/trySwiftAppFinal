@@ -21,7 +21,14 @@ class SponsorTableViewCell: UITableViewCell {
     }
     
     func configure(withSponsor sponsor: Sponsor) {
-        sponsorImageView.image = sponsor.logo
+        
+        ImageCache.sharedInstance.retrieveImage(forKey: sponsor.logo) { maybeImage in
+            guard let image = maybeImage else {
+                return
+            }
+            self.sponsorImageView.image = image
+        }
+
         sponsorNameLabel.text = sponsor.name
         websiteLabel.text = sponsor.website
     }
