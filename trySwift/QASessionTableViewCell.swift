@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Toucan
 
 class QASessionTableViewCell: UITableViewCell {
 
@@ -44,7 +43,7 @@ private extension QASessionTableViewCell {
                 imageView.image = UIImage.trySwiftDefaultImage
                 return
             }
-            imageView.image = Toucan(image: image).maskWithEllipse().image
+            imageView.image = image
         }
     }
 }

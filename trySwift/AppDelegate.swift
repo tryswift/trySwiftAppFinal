@@ -69,7 +69,7 @@ private extension AppDelegate {
     func setupImages() {
         
         let speakerImages = Speaker.speakers.map {
-            return (key: $0.image, image: UIImage(named: $0.image)!)
+            return (key: $0.image, image: Toucan(image: UIImage(named: $0.image)!).maskWithEllipse().image)
         }
         
         let sponsorImages = (Sponsor.diamondSponsors + Sponsor.goldSponsors + Sponsor.silverSponsors).map {
