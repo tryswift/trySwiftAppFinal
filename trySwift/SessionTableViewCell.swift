@@ -47,9 +47,14 @@ class SessionTableViewCell: UITableViewCell {
             } else {
                 sessionTypeLabel.text = "🐥"
             }
-            
-            accessoryType = .None
-            selectionStyle = .None
+
+            if session.id == 319 {  // TOMBOY106
+                accessoryType = .DisclosureIndicator
+                selectionStyle = .Default
+            } else {
+                accessoryType = .None
+                selectionStyle = .None
+            }
         }
         
         sessionLocationLabel.text = session.location
