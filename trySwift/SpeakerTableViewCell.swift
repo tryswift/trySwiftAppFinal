@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toucan
 
 class SpeakerTableViewCell: UITableViewCell {
 
@@ -21,7 +22,15 @@ class SpeakerTableViewCell: UITableViewCell {
     }
     
     func configure(withSpeaker speaker: Speaker, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {
-        speakerImageView.image = speaker.image
+        
+        ImageCache.sharedInstance.retrieveImage(forKey: speaker.image) { maybeImage in
+            guard let image = maybeImage else {
+                self.speakerImageView.image = UIImage.trySwiftDefaultImage
+                return
+            }
+            self.speakerImageView.image = Toucan(image: image).maskWithEllipse().image
+        }
+        
         speakerNameLabel.text = speaker.name
         speakerTwitterLabel.text = "@\(speaker.twitter)"
         
