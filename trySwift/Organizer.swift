@@ -6,13 +6,10 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import UIKit
-import Toucan
-
 struct Organizer {
     let name: String
     let twitter: String
-    let image: UIImage
+    let image: String
 }
 
 extension Organizer {
@@ -22,54 +19,54 @@ extension Organizer {
     static let natasha = Organizer(
         name: isJapanese ? "ナターシャ ザ ロボット" : "Natasha Murashev",
         twitter: "NatashaTheRobot",
-        image: Toucan(image: UIImage(named: "natasha")!).maskWithEllipse().image
+        image: "natasha"
     )
     
     static let kk = Organizer(
         name: isJapanese ? "岸川克己" : "Kishikawa Katsumi",
         twitter: "k_katsumi",
-        image: Toucan(image: UIImage(named: "kk")!).maskWithEllipse().image
+        image: "kk"
     )
     
     static let vaish = Organizer(
         name: "Vaishnavi Srinivasan",
         twitter: "vaish",
-        image: Toucan(image: UIImage(named: "vaish")!).maskWithEllipse().image
+        image: "vaish"
     )
     
     static let helen = Organizer(
         name: "Helen Holmes",
         twitter: "helenvholmes",
-        image: Toucan(image: UIImage(named: "hellenholmes")!).maskWithEllipse().image
+        image: "hellenholmes"
     )
     
     static let caesar = Organizer(
         name: isJapanese ? "Caesar Wirth" : "Caesar Wirth",
         twitter: "cjwirth",
-        image: Toucan(image: UIImage(named: "caesar")!).maskWithEllipse().image
+        image: "caesar"
     )
     
     static let minwoo = Organizer(
         name: "Minwoo Park",
         twitter: "tebica",
-        image: Toucan(image: UIImage(named: "minwoo")!).maskWithEllipse().image
+        image: "minwoo"
     )
     
     static let hector = Organizer(
         name: "Hector Matos",
         twitter: "allonsykraken",
-        image: Toucan(image: UIImage(named: "hector")!).maskWithEllipse().image
+        image: "hector"
     )
 
     static let tasanobu = Organizer(
         name: isJapanese ? "田坂和暢" : "Kazunobu Tasaka",
         twitter: "tasanobu",
-        image: Toucan(image: UIImage(named: "tasanobu")!).maskWithEllipse().image
+        image: "tasanobu"
     )
     
     static let trySwift = Organizer(
         name: "try! Swift",
         twitter: "tryswiftconf",
-        image: Toucan(image: UIImage(named: "logo")!).maskWithEllipse().image
+        image: "logo"
     )
 }
