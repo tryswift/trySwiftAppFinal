@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Toucan
 
 class SessionTableViewCell: UITableViewCell {
 
@@ -34,7 +33,7 @@ class SessionTableViewCell: UITableViewCell {
                     self.speakerImageView.image = UIImage.trySwiftDefaultImage
                     return
                 }
-                self.speakerImageView.image = Toucan(image: image).maskWithEllipse().image
+                self.speakerImageView.image = image
             }
             sessionTitleLabel.text = speaker.presentation.title
             speakerNameLabel.text = speaker.name

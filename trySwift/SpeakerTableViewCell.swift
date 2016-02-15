@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Toucan
 
 class SpeakerTableViewCell: UITableViewCell {
 
@@ -28,7 +27,7 @@ class SpeakerTableViewCell: UITableViewCell {
                 self.speakerImageView.image = UIImage.trySwiftDefaultImage
                 return
             }
-            self.speakerImageView.image = Toucan(image: image).maskWithEllipse().image
+            self.speakerImageView.image = image
         }
         
         speakerNameLabel.text = speaker.name
