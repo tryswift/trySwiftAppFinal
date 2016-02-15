@@ -95,7 +95,9 @@ extension Sponsor {
         twitter: "fenrir_official",
         logo: UIImage(named: "fenrir")!,
         level: .Silver,
-        description: nil
+        description: isJapanese ?
+        "ウェブブラウザ Sleipnirなどの自社プロダクトとともに、国内大手企業とアプリケーションの共同開発に取り組んでいます。大阪（本社）・東京・名古屋・島根にある拠点では、新しい技術を積極的に採用し、生産性を高め続けています。また、ユーザー体験までもデザインするこだわり抜いたアプリ開発は高く評価され、すでに400本を超えた開発実績や、100万ダウンロードを超える人気アプリの実現につながっています。" :
+        "Along with the Sleipnir Web Browser, we work with big Japanese companies to develop apps. At offices in Osaka (HQ), Tokyo, Nagoya, and Shimane, we boost productivity by using new technologies. We have been praised for app development that is committed to the user experience, and have developed over 400 apps, with popular apps downloaded over a million times."
     )
     
     static let denso = Sponsor(
@@ -359,9 +361,11 @@ extension Sponsor {
         twitter: "OhakoJP",
         logo: UIImage(named: "ohako")!,
         level: .Silver,
-        description: nil
+        description: isJapanese ?
+            "株式会社オハコは、体験の本質を探し出し、磨き上げ、人とプロダクトの心地よい接点をつくるUIデザインカンパニーです。私たちがプロダクトをつくる上で、ユーザー体験の本質を設計し、人とプロダクトの心地よい接点となるUIを生み出すことを大切に大切にしています。ただアプリをつくるのではなく、細部のインタラクションにもこだわることで、使った人が心地よいと感じられるUIづくり・アプリ作りを重視しています。" :
+            "Ohako inc. is one of the leading UI/UX design companys in Japan. We design and create  web & smartphone apps. Our challenge is to search for essence of UX, and to find out the fluent interface of a human and our products. The most important things to us is to make people feel comfortable using our products."
     )
-    
+
     static let ookami = Sponsor(
         name: isJapanese ? "株式会社ookami" : "ookami, inc",
         website: "playerapp.tokyo",
