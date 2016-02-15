@@ -291,7 +291,7 @@ extension Speaker {
         presentation: Presentation(
             title: isJapanese ? "xcodeless - the build system" : "xcodeless - the build system",
             summary: isJapanese ?
-                "xcodebuildが無いとしたらどうしますか？どのようにんプロジェクトをビルドするでしょうか？Xcodeがどうやっってプロジャクトをビルドするのか、またswiftcとClangを使ってビルドする方法を説明します。" :
+                "xcodebuildが無いとしたらどうしますか？どのようにプロジェクトをビルドするでしょうか？Xcodeがどうやってプロジェクトをビルドするのか、またswiftcとClangを使ってビルドする方法を説明します。" :
                 "what would you do without xcodebuild? why would you do it? how would you do it? we'll take a look at how Xcode builds your projects and how we can use swiftc and Clang to build our own."))
 
     static let stephanieShupe = Speaker(
