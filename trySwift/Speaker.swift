@@ -128,8 +128,8 @@ extension Speaker {
         image: "jeff",
         bio: isJapanese ? "iOS開発に特化したフルスタックエンジニアです。コンサルタントとして多くのiOSアプリ開発プロジェクトに従事しています。活発にオープンソースにコントリビュートしており、テストフレームであるQuick/Nimbleのコアチームメンバーです。" : "Jeff Hui is an full-stack engineer specializing in iOS development. He’s worked on a number of iOS apps as a consultant. He’s an active open source contributor and the core team member to Quick & Nimble testing frameworks.",
         presentation: Presentation(
-            title: isJapanese ? "Nimbleの内部構造" : "Nimble Internals",
-            summary: isJapanese ? "NimbleはBDDのためのアサーションライブラリで、BDDフレームワークQuickの一部になっています。言語機能の裏側とNimbleが安全で簡潔なAPIを提供するために使っているテクニックを解説します。" : "Nimble is a BDD assertion library that's part of the Quick BDD Framework. We'll tear under the hood at the language features and techniques Nimble uses to provide an safe and concise API."))
+            title: isJapanese ? "ライブラリの開発" : "Creating a Library",
+            summary: isJapanese ? "ライブラリは未来です。しかし、プラットフォーム、パッケージマネージャー、テストなどの影響を受ける可能性があります。Swiftで書かれたライブラリのリリースやメンテナンスに関連するツールやプロセスの解説をします。" : "Libraries are the future, but it's also frought with peril. Platforms, package managers and tests! Learn about all the tools and processes around shipping and maintaining a library in Swift."))
     
     static let ayakaNonaka = Speaker(
         name: "Ayaka Nonaka",
