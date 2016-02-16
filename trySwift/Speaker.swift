@@ -193,7 +193,7 @@ extension Speaker {
         name: "Yuta Koshizawa",
         twitter: "koher",
         image: "koher",
-        bio: isJapanese ? "QonceptでiOS開発をしています。また、サイドプロジェクトとしてarticles.eachというiOSアプリも開発しています。Qiitaに投稿しているSwiftの記事は日本のiOS開発者の間で人気です。" : "Yuta is an iOS developer at Qoncept. He is also developing an iOS app [articles.each {](articles-each.github.io) as his side project. His posts about Swift on Qiita, Japanese blogging service specialized for programming, are popular with iOS developers in Japan.",
+        bio: isJapanese ? "QonceptでiOS開発をしています。また、サイドプロジェクトとしてQaleidospaceも開発しています。Qiitaに投稿しているSwiftの記事は日本のiOS開発者の間で人気です。" : "Yuta is an iOS developer at Qoncept. He is also developing Qaleidospace as his side project. His posts about Swift on Qiita, Japanese blogging service specialized for programming, are popular with iOS developers in Japan.",
         presentation: Presentation(
             title: isJapanese ? "Swiftのエラー処理についての三つの話" : "Three Stories about Error Handling in Swift",
             summary: isJapanese ? "エラー処理は安全なコードを書く上で重要です。私のプレゼンテーションでは、主に私の経験と考えに基いて、また `Error Handling Rationale and Proposal` と swift-evolution のメーリングリストでの議論にも触れながら、 Swift におけるエラー処理の論点を整理します。" : "Error handling is important to write safe codes. In my presentation, I will organize the issues of error handling in Swift mainly based on my experience and thinking referring to `Error Handling Rationale and Proposal` and discussions on the swift-evolution mailing list.")
