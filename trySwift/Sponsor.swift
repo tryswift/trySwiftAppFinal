@@ -137,7 +137,9 @@ extension Sponsor {
         twitter: "freee_jp",
         logo: "freee",
         level: .Silver,
-        description: nil
+        description: isJapanese ?
+            "freee株式会社は「スモールビジネスに携わるすべての人が、創造的な活動にフォーカスできる社会を実現する」という理念のもと2012年7月創業しました。シェアNo.1、有効事業所数40万を突破した「クラウド会計ソフト freee」、「クラウド給与計算ソフト freee」、「会社設立 freee」などを運営する、ビジネスのスタートから成長までサポートしバックオフィス業務を効率化しています。" :
+            "freee provides online software to serve the SMB focus on their creative job by simplifying backoffice tasks. freee has started its service from accounting software on March 2013, now having 4 services in total to help the business to launch and develop.  freee currently has over 500,000 SMB users and over 2200 accounting firms, and in February 2016 was chosen by a 3rd party research agent* as the No. 1 cloud-based accounting software in Japan by market share."
     )
     
     static let nineDrafts = Sponsor(
