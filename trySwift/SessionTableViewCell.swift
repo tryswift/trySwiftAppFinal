@@ -44,7 +44,7 @@ class SessionTableViewCell: UITableViewCell {
             // coffee / tea / opening announcements
             sessionTitleLabel.text = session.description
             speakerImageView.image = UIImage.trySwiftDefaultImage
-            speakerNameLabel.text = "try! Swift"
+            speakerNameLabel.text = "try! Conference"
             if #available(iOS 9.2, *) {
                 sessionTypeLabel.text = "🤗"
             } else {

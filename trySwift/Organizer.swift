@@ -65,7 +65,7 @@ extension Organizer {
     )
     
     static let trySwift = Organizer(
-        name: "try! Swift",
+        name: "try! Conference",
         twitter: "tryswiftconf",
         image: "logo"
     )
