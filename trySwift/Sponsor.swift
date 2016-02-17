@@ -34,7 +34,7 @@ extension Sponsor {
     
     static let diamondSponsors = [realm, cyberAgent]
     static let goldSponsors = [mercari, line, kytrade]
-    static let silverSponsors = [fenrir, denso, voyageGroup, dena, freee, nineDrafts, goodpatch, hatena, github, mixi, yahoo, cookpad, toreta, fablic, recruit, classMethod, furyu, retty, sansan, speee, chatwork, pepabo, wondershake, ubiregi, togetter, ride, nikkei, prtimes, ohako, ookami, perfect, instagram, caraquri]
+    static let silverSponsors = [fenrir, denso, voyageGroup, dena, freee, nineDrafts, goodpatch, hatena, github, mixi, yahoo, cookpad, toreta, fablic, recruit, classMethod, furyu, retty, sansan, speee, chatwork, pepabo, wondershake, ubiregi, togetter, ride, nikkei, prtimes, ohako, ookami, perfect, instagram, caraquri, gihyojp]
     
     // MARK: Diamond Sponsors
     static let realm = Sponsor(
@@ -404,5 +404,14 @@ extension Sponsor {
         description: isJapanese ?
             "iOS/Androidアプリ開発の会社です。クライアントと消費者とのコミュニケーションチャンネルとしてアプリを開発することが多く、動画視聴アプリ、小売向け会員アプリ、販促向けクーポンアプリ、ポータルサイトのニュースアプリ、電子書籍アプリなどを主に手がけています。" :
             "We develop iOS and Android applications. We develop applications as a communication channel between our clients and their consumers, and develop movie apps, retail coupon apps, news portal apps, e-book apps and more."
+    )
+
+    static let gihyojp = Sponsor(
+        name: isJapanese ? "技術評論社" : "Gijutsu-Hyohron Co., Ltd.",
+        website: "http://gihyo.jp/",
+        twitter: "gihyojp",
+        logo: UIImage(named: "gihyojp")!,
+        level: .Silver,
+        description: nil
     )
 }
