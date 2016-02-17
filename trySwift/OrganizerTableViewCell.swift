@@ -21,14 +21,7 @@ class OrganizerTableViewCell: UITableViewCell {
     }
 
     func configure(withOrganizer organizer: Organizer) {
-        ImageCache.sharedInstance.retrieveImage(forKey: organizer.image) { maybeImage in
-            guard let image = maybeImage else {
-                self.organizerImageView.image = UIImage.trySwiftDefaultImage
-                return
-            }
-            self.organizerImageView.image = image
-        }
-
+        organizerImageView.image = organizer.image
         organizerNameLabel.text = organizer.name
         organizerTwitterLabel.text = "@\(organizer.twitter)"
     }

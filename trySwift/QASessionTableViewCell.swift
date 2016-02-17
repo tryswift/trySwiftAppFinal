@@ -27,23 +27,10 @@ class QASessionTableViewCell: UITableViewCell {
     func configure(withQASession qaSession: QASession) {
         qaSessionTitleLabel.text = qaSession.title
         locationLabel.text = qaSession.location
-        
-        for (index, speakerImageView) in [speaker1ImageView, speaker2ImageView, speaker3ImageView].enumerate() {
-            configureImageForSpeaker(qaSession.speakers[index], imageView: speakerImageView)
-        }
-    }
-    
-}
 
-private extension QASessionTableViewCell {
-    
-    func configureImageForSpeaker(speaker: Speaker, imageView: UIImageView) {
-        ImageCache.sharedInstance.retrieveImage(forKey: speaker.image) { maybeImage in
-            guard let image = maybeImage else {
-                imageView.image = UIImage.trySwiftDefaultImage
-                return
-            }
-            imageView.image = image
-        }
+        speaker1ImageView.image = qaSession.speakers[0].image
+        speaker2ImageView.image = qaSession.speakers[1].image
+        speaker3ImageView.image = qaSession.speakers[2].image
     }
+    
 }
