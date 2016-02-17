@@ -129,7 +129,7 @@ extension Speaker {
         bio: isJapanese ? "iOS開発に特化したフルスタックエンジニアです。コンサルタントとして多くのiOSアプリ開発プロジェクトに従事しています。活発にオープンソースにコントリビュートしており、テストフレームであるQuick/Nimbleのコアチームメンバーです。" : "Jeff Hui is an full-stack engineer specializing in iOS development. He’s worked on a number of iOS apps as a consultant. He’s an active open source contributor and the core team member to Quick & Nimble testing frameworks.",
         presentation: Presentation(
             title: isJapanese ? "ライブラリの開発" : "Creating a Library",
-            summary: isJapanese ? "ライブラリは未来です。しかし、プラットフォーム、パッケージマネージャー、テストなどの影響を受ける可能性があります。Swiftで書かれたライブラリのリリースやメンテナンスに関連するツールやプロセスの解説をします。" : "Libraries are the future, but it's also frought with peril. Platforms, package managers and tests! Learn about all the tools and processes around shipping and maintaining a library in Swift."))
+            summary: isJapanese ? "ライブラリには将来があります。しかし、プラットフォーム、パッケージマネージャー、テストなどの影響を受ける可能性があります。Swiftで書かれたライブラリのリリースやメンテナンスに関連するツールやプロセスの解説をします。" : "Libraries are the future, but it's also frought with peril. Platforms, package managers and tests! Learn about all the tools and processes around shipping and maintaining a library in Swift."))
     
     static let ayakaNonaka = Speaker(
         name: "Ayaka Nonaka",
