@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Toucan
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         configureStyling()
-        setupImages()
 
         NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "JST")!)
         return true
@@ -48,41 +46,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 private extension AppDelegate {
-    
+
     func configureStyling() {
-        
+
         let tintColor = UIColor(red: 184.0/255.0, green: 50.0/255.0, blue: 43.0/255.0, alpha: 1.0)
-        
+
         window?.tintColor = tintColor
-        
+
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName : UIColor.whiteColor(),
             NSFontAttributeName : UIFont.systemFontOfSize(18)
         ]
-        
+
         UINavigationBar.appearance().barTintColor = tintColor
         UINavigationBar.appearance().tintColor = .whiteColor()
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().barStyle = .BlackTranslucent
     }
-    
-    func setupImages() {
-        
-        let speakerImages = Speaker.speakers.map {
-            return (key: $0.image, image: Toucan(image: UIImage(named: $0.image)!).maskWithEllipse().image)
-        }
-        
-        let sponsorImages = (Sponsor.diamondSponsors + Sponsor.goldSponsors + Sponsor.silverSponsors).map {
-            return (key: $0.logo, image: UIImage(named: $0.logo)!)
-        }
-        
-        let organizerImages = Organizer.organizers.map {
-            return (key: $0.image, image: Toucan(image: UIImage(named: $0.image)!).maskWithEllipse().image)
-        }
-
-        ImageCache.sharedInstance.warmUp {
-            return sponsorImages + speakerImages + organizerImages
-        }
-    }
 }
-

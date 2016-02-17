@@ -28,14 +28,8 @@ class SessionTableViewCell: UITableViewCell {
 
     func configure(withSession session: Session) {
         if let speaker = session.speaker {
-            ImageCache.sharedInstance.retrieveImage(forKey: speaker.image) { maybeImage in
-                guard let image = maybeImage else {
-                    self.speakerImageView.image = UIImage.trySwiftDefaultImage
-                    return
-                }
-                self.speakerImageView.image = image
-            }
             sessionTitleLabel.text = speaker.presentation.title
+            speakerImageView.image = speaker.image
             speakerNameLabel.text = speaker.name
             sessionTypeLabel.text = session.description
             accessoryType = .DisclosureIndicator
