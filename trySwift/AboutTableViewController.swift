@@ -19,7 +19,7 @@ class AboutTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = isJapanese ? "try! Swiftについて" : "About"
+        title = isJapanese ? "try! Conferenceについて" : "About"
         
         tableView.registerNib(UINib(nibName: String(OrganizerTableViewCell), bundle: nil), forCellReuseIdentifier: String(OrganizerTableViewCell))
         tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
@@ -51,7 +51,7 @@ class AboutTableViewController: UITableViewController {
             return cell
         case .Detail:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TextTableViewCell), forIndexPath: indexPath) as! TextTableViewCell
-            cell.configure(withText: isJapanese ? "try! Swiftは世界中のSwiftデベロッパーが一堂に会し、知識や技術を互いに共有し高め合うことを目的としたカンファレンスです。2016.3.2〜2016.3.4の三日間、東京・渋谷にて新たな出会いと学びの機会を、素晴らしい食事とともにお待ちしています。" : "try! Swift is an immersive community gathering about iOS, WatchOS, and tvOS development in Swift happening in Tokyo, Japan on March 2nd - 4th, 2016. The event is about bringing together talent from all around the world to collaborate and share advanced knowledge and techniques to improve our craft.")
+            cell.configure(withText: isJapanese ? "try! Conferenceは世界中のSwiftデベロッパーが一堂に会し、知識や技術を互いに共有し高め合うことを目的としたカンファレンスです。2016.3.2〜2016.3.4の三日間、東京・渋谷にて新たな出会いと学びの機会を、素晴らしい食事とともにお待ちしています。" : "try! Conference is an immersive community gathering about iOS, WatchOS, and tvOS development in Swift happening in Tokyo, Japan on March 2nd - 4th, 2016. The event is about bringing together talent from all around the world to collaborate and share advanced knowledge and techniques to improve our craft.")
             return cell
         case .Twitter:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TwitterFollowTableViewCell), forIndexPath: indexPath) as! TwitterFollowTableViewCell
