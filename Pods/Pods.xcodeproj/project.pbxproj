@@ -7,569 +7,735 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07B4A4C6B7B342C8871B510533E2FC28 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
-		10F0B19A497BD3101CE4853384F6E951 /* VTAcknowledgementsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4307FDD63E95F1539ACFAC3FF1638B29 /* VTAcknowledgementsParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		14039EC49FDAA9F5322032B3FAF3B520 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26C476998455C3F18B61F42D277B711 /* SwipeDirection.swift */; };
-		149AFF139990FCFCCDCFF5295FF519FB /* Timepiece-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7442306BAF05B0CE2E44788C5DF075A1 /* Timepiece-dummy.m */; };
-		162CACEF9A893A9D0392C7CAD6DAA415 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D33022709F972BCB6BECB206EB89E /* TwitterPagerTabStripViewController.swift */; };
-		1885042F795B7AF9501C95AFF93F16B9 /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C621479CB9A0779B9D8A0CD65653129E /* NSDateComponents+Timepiece.swift */; };
-		18E938F95DB58AF7A4E933D7BD645F0B /* DynamicColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 29304608F1ADAAC8F90E8E210F6C0063 /* DynamicColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A12642F2DBB2A3A4C97102AA4DB5170 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		1F756594C85E511FFC99D720FA95AD55 /* VTAcknowledgementsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C9676DC0C85A2FCED69C9E5D35799B4C /* VTAcknowledgementsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1FD0EDC26E089A0B260151012E132637 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		24489D8F80980F1D2BC61325B09B42CD /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A548B612ECFC72ECF349F19A3E19315D /* XLPagerTabStrip-dummy.m */; };
-		37B3AC1225FDA65F5E8CBEE245490274 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
-		392A989FDF1FBFB5B1C1489E5517E36E /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3794F7A67449F163395687D004E8D34A /* DynamicColor.swift */; };
-		3F421CAD07641191027527680B257A68 /* VTAcknowledgementsViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D72920B9EE7D814BF99F35204A42E99D /* VTAcknowledgementsViewController-dummy.m */; };
-		4248E3DC46BF5FA60398DB31DC08F836 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 21571C60DE1967F7E30ADDF1A68CA07A /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		490A1A196CA64FB9D6A74CB24FADF075 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8615D12DB6DD9FD665011273B1426F76 /* FXPageControl.m */; };
-		4B64847691118319041954C43C36775C /* VTAcknowledgementsViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9980DABC2FA4B3423F62DEE74587238F /* VTAcknowledgementsViewController.bundle */; };
-		4C2D6788C73E14D94DEDABCA11DFFE55 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3954A58C701D1E76E1B52F7222206DF /* ButtonCell.xib */; };
-		5050C5542B6D6BF3E1B2F8AD4604A30C /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF73C37DC3D3338D971C9F4089C85C /* PagerTabStripError.swift */; };
-		523ED4D9917EFAEF75F3EAA0ED3AFD8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		52BCA24018A74A9325CE3B3D678FE0B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
-		554A0CB11F9B521DD1543092708ED87B /* Toucan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D4DD8473E430CEF4FAB9B1A734EF00A /* Toucan-dummy.m */; };
-		55D82AC102AD02E5BFF556C3C0A38E3A /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53580DACC69384A1A83D6D6DE19D686 /* PagerTabStripViewController.swift */; };
-		56AE5FCA0FC8233B66C06D0B00E9D3E7 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B49E4AFBF339A06B53B6431833ED75F3 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A9D6FA22775E6E9EDD763E05F625304 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88B588CFBA36D1E4B7DE663760BE351 /* Duration.swift */; };
-		5EA93571F146E3D09E520B307EA88E4F /* VTAcknowledgementsViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33AEE071C85D8B757E5E4E790D86E45D /* VTAcknowledgementsViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66231CB55B81035DDCE07DDFA1496947 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		6690C61E7950BB99593B9BDEFC950840 /* VTAcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD94263535980BDD77FB9E4852175B3F /* VTAcknowledgementsViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6B072673BB21FB7CEA4DF0D5286B0B59 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1864DD6258BF4533F8688F9EF813E686 /* ButtonBarViewCell.swift */; };
-		6C131B14BC6D48CBC15673E02E751970 /* VTAcknowledgement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C67C409EB16BA0B3172B13530C6F09C /* VTAcknowledgement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		755A59AD8014C69F61F219B84004999D /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17161F181E496348ACE9D70325BE1F86 /* BarView.swift */; };
-		75F7DB2E8187F52BA188123C65AB1285 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		7637DBA6F4CF73F2C76C894EDA0359C4 /* String+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A26FA8E487D77DBF0CB19E7C66494C /* String+Timepiece.swift */; };
-		7785C71FC72611F7A490D423DFAAE0C9 /* Toucan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96F6A77A255F7D131C4F00F11316966C /* Toucan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A544B6D77AAD058F1138A5B6D2CCA65 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F82F3050CDC5C5691CF24AFD6D53429 /* ButtonBarPagerTabStripViewController.swift */; };
-		7CEBED3EB6E0B6D929B0B632F97B89A2 /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C5F6F78296B956FC8B1B60017DF011 /* Int+Timepiece.swift */; };
-		7E0E7AC73D21A773D2BECD4A424E7C1F /* NSTimeInterval+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF137D229B58F33743668C07FDB69EF /* NSTimeInterval+Timepiece.swift */; };
-		7F19306BF20D394AE2799308CC2E5EC0 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D780A0837DB8B24001C8898A9B31547 /* BarPagerTabStripViewController.swift */; };
-		8A186B05B11DA1C486C7B694F3C44D04 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EDEE15FC2D5739ADDD78FF0107F9E6 /* HSL.swift */; };
-		8CFCADC940422985F1D7543D2938C3DF /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95027EC6154D75029A1779A2114D62AE /* PagerTabStripBehaviour.swift */; };
-		8F3BAF24C72C3DA39EF5BE51B958264F /* VTAcknowledgementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF5486A07691A0FB1EB9A8EEADFFB6B /* VTAcknowledgementViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A2F9EB166B04149435197AA388412E95 /* NSCalendar+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8674014DB6CE7BEA4C3444A441D80EE5 /* NSCalendar+Timepiece.swift */; };
-		A4FA1BFC4E82068594EC96ED381AA241 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
-		AAD67E93BA315525EDCE9E5B4F3E4C0F /* NSDate+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9F2C3A5D1C28F9310806C4FF6F44E8 /* NSDate+Timepiece.swift */; };
-		B19C62911A4C7890F382A510C13BBC77 /* VTAcknowledgement.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C83CCD070AD433DBD94942BF1E97979 /* VTAcknowledgement.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4929142F5A8CDCD8C9088E96718A6D8 /* VTAcknowledgementViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 67716092A14A2D081BEEF1C9961563B5 /* VTAcknowledgementViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B74B45A31F191DF4774761E2D5E1BFCD /* NSCalendarUnit+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B3BA70CAC058AB47FDA9E9647FB50 /* NSCalendarUnit+Timepiece.swift */; };
-		BECF9EE0C22A329B9BECF49A2B529D70 /* VTAcknowledgementsParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C8A5E7A6EB3BD2A3121E58126FE4B296 /* VTAcknowledgementsParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C39A159A93318D923144952B26063620 /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BF54AB02A01D25CB702DAB4C0C2A5 /* SegmentedPagerTabStripViewController.swift */; };
-		D318235400B685146C6B2EAD34016ED6 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9574DFC078ECA91C4DFA3AB699D9A99C /* ButtonBarView.swift */; };
-		D505EBBA52FF5CE1DE7A75A200B9ED44 /* ButtonCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = E3954A58C701D1E76E1B52F7222206DF /* ButtonCell.xib */; };
-		D6499186BC6A14497357BE3A1EE9B273 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDAE2730611AEF6250382CE67A9AD99A /* DynamicColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16209E4AA02672326670832AD5B5247C /* DynamicColor-dummy.m */; };
-		F02C99A8BF78E8A631842E08D1E1620C /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06A29FF9D5C83B12E6156353909960B /* Toucan.swift */; };
-		F54FCC110B39B17A1BF5D2AE7C3E7DC6 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC0BF4CCB75F143BAA7F13C51D0158E /* IndicatorInfo.swift */; };
-		F9B7187889BB72BCE63C7B0A33CBE214 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD2CAC927025F045B5CF4E71877658C /* BaseButtonBarPagerTabStripViewController.swift */; };
-		FDE912E1054F1D917102D96D0B36BD56 /* Timepiece-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCCF086A82C703C33D759BDB365F5D80 /* Timepiece-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE8BB26A8184F3A3DA94D62C84AE7CFF /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 091462523CC6A4A9F9CCFB93518DEDB8 /* XLPagerTabStrip.bundle */; };
+		0289DE8DC6869FA07D4F9A4D /* VTAcknowledgementsViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E6A8B3E53161299A49D23D /* VTAcknowledgementsViewController-dummy.m */; };
+		071ECCA9DCF256482B10EFE3 /* String+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286928506F5C901CF44C3268 /* String+Timepiece.swift */; };
+		0AA2CC4CA1EDF5A349CF2D95 /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221B556EEA3E7772EFCAB6B /* NSDateComponents+Timepiece.swift */; };
+		0ADCFAB554892FA1C7948923 /* Pods-trySwift-Timepiece-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D38A11CCEE60A58BB53455DC /* Pods-trySwift-Timepiece-dummy.m */; };
+		0DAA744E8A651E9DF3D37826 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0BD54EDF30DE0492D34D7AF /* ButtonCell.xib */; };
+		103E172A257C0F86F355CEB1 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3116D4E239EB92C7E194EC /* BaseButtonBarPagerTabStripViewController.swift */; };
+		115BDA0E7E94C7E495F2AB30 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF8B3F0509084495CF09AA5 /* IndicatorInfo.swift */; };
+		14B2A0C8D2D635F96B776426 /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6490FB225ED939973F165D16 /* XLPagerTabStrip.bundle */; };
+		1D21A5AD0EE9A694F40C0605 /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092F1700B5AA3A1D499B6FC0 /* PagerTabStripError.swift */; };
+		20FAAE4E7A11923E9E5B68E7 /* String+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286928506F5C901CF44C3268 /* String+Timepiece.swift */; };
+		215C7C4BA014EFF877B69B6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8EE35D7B6E2DC5C4A56C73 /* UIKit.framework */; };
+		28EF2FB082DC707874BF557E /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB4ECB7064E91B88DFEEA5 /* ButtonBarViewCell.swift */; };
+		2A85D4AB3E4E0B0DBCCCBEF1 /* NSCalendar+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFF7D3AEBBFD5E327C90F9 /* NSCalendar+Timepiece.swift */; };
+		2BEDE5B50268E2C8273950E4 /* VTAcknowledgementsViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64DD3A90E67C809C5F6BD2A3 /* VTAcknowledgementsViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2E2FD344F31C1D4E0F0DC1AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86DB4D873F83C8E3E7A28C4 /* Foundation.framework */; };
+		2FD087A1B38AB351EF402636 /* VTAcknowledgementsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B3646F95F848078E726688D0 /* VTAcknowledgementsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31AC0416B682B4579702C5D9 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE261F9CA7809E6BA4841B62 /* TwitterPagerTabStripViewController.swift */; };
+		33FEB9DDFC8D5AD0B8DAD27C /* Pods-trySwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4708DC14ED9F65BFD09103F /* Pods-trySwift-dummy.m */; };
+		349C3720C2B1FF16C7B69C2A /* ButtonCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = F0BD54EDF30DE0492D34D7AF /* ButtonCell.xib */; };
+		3901D8CB1B5D5E9E28123E9D /* Pods-trySwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05FD1C3B97FB53C2DBA3734B /* Pods-trySwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B6D274EBF111E6BBA8CCE42 /* Pods-try Extension-Timepiece-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1178C82CB76AC289DDE808F /* Pods-try Extension-Timepiece-dummy.m */; };
+		3C267C8D506D24BD36529AE6 /* VTAcknowledgementsParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 402288B8869DCD6DB64243EC /* VTAcknowledgementsParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FEF44DF634A9E1659EC881B /* VTAcknowledgementsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 275A43EFB6386B2591AAB3DC /* VTAcknowledgementsParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4663D095EBC3C82D898A22ED /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057CBE9DD5DF4595F8B9BDE /* Int+Timepiece.swift */; };
+		490BB1E7E2A9F88FC9C860F8 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFC4E5671C1F566FB5A9E7D /* FXPageControl.m */; };
+		4E0761D8A2BB142ED308DAF3 /* NSCalendar+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFF7D3AEBBFD5E327C90F9 /* NSCalendar+Timepiece.swift */; };
+		4F936FE627D45D75F0642614 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3B079EDADFE0708CEC745C /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53E4D3740B4FFE3534824168 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AAC2AB4C61A02A1E5DF43C /* ButtonBarPagerTabStripViewController.swift */; };
+		5E33A40827124DAB1C66278B /* NSCalendarUnit+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5CC4DBC875857A87CF9F /* NSCalendarUnit+Timepiece.swift */; };
+		5F85C9C5766C8DF98F3C6C88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86DB4D873F83C8E3E7A28C4 /* Foundation.framework */; };
+		6B5C575026F82A197BAA5F26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0FFC7652203BAB1712D7C8 /* Foundation.framework */; };
+		6C40BF61C121D75A52DF126F /* NSDate+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F9935F191F8702E6A29B0 /* NSDate+Timepiece.swift */; };
+		7455913BBAA9C038147F77A9 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C3F28C1F55F80393A350D /* ButtonBarView.swift */; };
+		7780184353CEBA0A3BB1AC5C /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057CBE9DD5DF4595F8B9BDE /* Int+Timepiece.swift */; };
+		78326BAF894DFCF81B3088D0 /* DynamicColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D750BBB2F9EBCAF79E4ADE3F /* DynamicColor-dummy.m */; };
+		7A4884C36099BE2DC518D159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0FFC7652203BAB1712D7C8 /* Foundation.framework */; };
+		7DB16D84C30D4F8A91862563 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0FFC7652203BAB1712D7C8 /* Foundation.framework */; };
+		80C35C9B5A564FB4680F189F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8EE35D7B6E2DC5C4A56C73 /* UIKit.framework */; };
+		8A377AC1730CC4B985EF1560 /* Pods-try Extension-Timepiece-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DDE6D1C854B3A4FFCA0F250 /* Pods-try Extension-Timepiece-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B682B5053D9EE59A9213182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0FFC7652203BAB1712D7C8 /* Foundation.framework */; };
+		8C0849054D62A79A6A3A95C6 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B0AAED0CFD2B5DF79F280 /* PagerTabStripViewController.swift */; };
+		8EDB39F2CFB7FA8685C06AB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0FFC7652203BAB1712D7C8 /* Foundation.framework */; };
+		8FB0A326A16D3A1F70476D0C /* VTAcknowledgementsViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0988253866B92C3831D8633A /* VTAcknowledgementsViewController.bundle */; };
+		933670588B4D1BBCAB77FD68 /* Toucan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 681D60429F71B10AE909460A /* Toucan-dummy.m */; };
+		96C8D87C041ECFA3E0EDD38A /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB65E8EB18837CAEB2C99E2 /* Duration.swift */; };
+		96CF37A5B0460A51ED7EEEA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0FFC7652203BAB1712D7C8 /* Foundation.framework */; };
+		A108544F66308085EE7572D4 /* Pods-trySwift-Timepiece-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BEDF704E02B1F0CABD0788A1 /* Pods-trySwift-Timepiece-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A631AE66FD256F3EB450227E /* Pods-try Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B1CAF8B5DBA88BC41D528BA /* Pods-try Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABF9484A334CDC469DE92652 /* NSTimeInterval+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C68039EFB9188F6A67932E /* NSTimeInterval+Timepiece.swift */; };
+		B126D336CF023A3967CB6F25 /* Pods-try Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D15D71117780CEE74B6F489 /* Pods-try Extension-dummy.m */; };
+		B1915A74C543B00778DD66F0 /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA09A31984F80A5C9D42223E /* SegmentedPagerTabStripViewController.swift */; };
+		B521829BD3E8A1B92941A4CF /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19E6E166D8D50871564539C /* BarPagerTabStripViewController.swift */; };
+		B87E00CE7294237FB1E94F4C /* DynamicColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00FE4D8ACB34DABA3CF1E79D /* DynamicColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0BC39FB939C13EEB2489FC7 /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA133156BC43DB0BEFF53A9 /* HSL.swift */; };
+		C2CA8AFF237DFB242E3B7545 /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221B556EEA3E7772EFCAB6B /* NSDateComponents+Timepiece.swift */; };
+		C2F5FDE2B2AFCF683712E5DF /* VTAcknowledgement.h in Headers */ = {isa = PBXBuildFile; fileRef = 7825E904E632829B4BC78CF5 /* VTAcknowledgement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6C5A84B535B8623E0A03FB0 /* VTAcknowledgementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE9A9AD46B7F67B9567970F /* VTAcknowledgementViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CB6949C5E884582FCE1FA697 /* Toucan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2AE01494E3C99C210C0DFD /* Toucan.swift */; };
+		CCADBDEDE06D697D580A59D9 /* NSDate+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F9935F191F8702E6A29B0 /* NSDate+Timepiece.swift */; };
+		CCD06C999965B87BE7BD3600 /* VTAcknowledgement.m in Sources */ = {isa = PBXBuildFile; fileRef = 1337A697FD33EBE190B66FE0 /* VTAcknowledgement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D214D39CD89643C53E1D816F /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F056BA0B611B5568D79F9D27 /* XLPagerTabStrip-dummy.m */; };
+		E12306267EFA6389AE143763 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB65E8EB18837CAEB2C99E2 /* Duration.swift */; };
+		E395B43E97B43E0928A909AF /* NSTimeInterval+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C68039EFB9188F6A67932E /* NSTimeInterval+Timepiece.swift */; };
+		E64318C7290B48010594E166 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A15F45770DDDAD06516451 /* BarView.swift */; };
+		E75F7006F94561CF7E2E9204 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB019BD1ABF3BDB1681DD919 /* DynamicColor.swift */; };
+		EA8AB63E68398435E46AEA1A /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49807E1CD91A27112730E0 /* SwipeDirection.swift */; };
+		EC018393F4DB5B9E943A04F8 /* NSCalendarUnit+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DC5CC4DBC875857A87CF9F /* NSCalendarUnit+Timepiece.swift */; };
+		EDC13EA510ACE36EB975DB2E /* Toucan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 508B44C7296750E56450FCCF /* Toucan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEDF9738B5A4AC02EB5D9C10 /* VTAcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF023CFD690C476FC4703F2B /* VTAcknowledgementsViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F1A03FA2DAF01E15BC82F128 /* VTAcknowledgementViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E65B8C4E3FA65C7DBCCEBE77 /* VTAcknowledgementViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE7AC058FB91D507DBDAD0C0 /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = A495829ED6CCD80B8F619BF5 /* PagerTabStripBehaviour.swift */; };
+		FF75C71D916D5655D333EFD4 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DD29502DA40E3627A5B21D /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1328FF0FBC6B573BF3993419F9B0ACF7 /* PBXContainerItemProxy */ = {
+		27D6B14E2828AE0D82FDB882 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = 1F0CB4E4E98ABEEA48F2C7AE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4B1EBFE997C640647C7138F67571C948;
-			remoteInfo = Toucan;
-		};
-		38C5350663635EB5A2E13B342D3E45D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ACB712198CB011AB357EB02F4E538031;
+			remoteGlobalIDString = 263F14994627823F105D0D09;
 			remoteInfo = XLPagerTabStrip;
 		};
-		3F34F94D46827F33818147F9CA5F9DCE /* PBXContainerItemProxy */ = {
+		457268CAF05D06663D565D70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = 1F0CB4E4E98ABEEA48F2C7AE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C334BE050C5AC37121E309B8727D8A40;
-			remoteInfo = Timepiece;
+			remoteGlobalIDString = 7C3F5BA8A2C035BA06A29C82;
+			remoteInfo = VTAcknowledgementsViewController;
 		};
-		54705B32C83EAADCDEE27F4D179EC90C /* PBXContainerItemProxy */ = {
+		5431ADD3D9E26363B81C5D6A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = 1F0CB4E4E98ABEEA48F2C7AE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9654CA6D2236C868BA0EF4A3A9BEFCD5;
-			remoteInfo = "XLPagerTabStrip-XLPagerTabStrip";
-		};
-		ABDAB41FD2D52C2B15FAB078436A90E1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 08F6A5AF8E89681F880EB03F167AACB7;
+			remoteGlobalIDString = 5A8C1960A343DF103EA82BD0;
 			remoteInfo = DynamicColor;
 		};
-		B8921A3C4A0289B0DE317F58F6DBF2D0 /* PBXContainerItemProxy */ = {
+		606130688B12725FBC14832D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = 1F0CB4E4E98ABEEA48F2C7AE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6E9F42C9A789119EE7E79FFAAA1222D5;
-			remoteInfo = VTAcknowledgementsViewController;
+			remoteGlobalIDString = 7EA3368AF7DAC4A5E31834C0;
+			remoteInfo = Toucan;
+		};
+		C2B5E69D56C7182865A28077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F0CB4E4E98ABEEA48F2C7AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 120D02C24D2097287617AAD4;
+			remoteInfo = "Pods-trySwift-Timepiece";
+		};
+		C729D275C1330E7DAE25D60D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F0CB4E4E98ABEEA48F2C7AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6FAFB5162E54F325A2DE2AF;
+			remoteInfo = "XLPagerTabStrip-XLPagerTabStrip";
+		};
+		E198F1EAD2F03232ECA83CD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F0CB4E4E98ABEEA48F2C7AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADEC5DD734E77641DF177AEB;
+			remoteInfo = "Pods-try Extension-Timepiece";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02D4B0F84C30EFC85CADF2A132DF270B /* VTAcknowledgementsViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VTAcknowledgementsViewController.modulemap; sourceTree = "<group>"; };
-		091462523CC6A4A9F9CCFB93518DEDB8 /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D4D33022709F972BCB6BECB206EB89E /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		0F79377A3E9EF4796D48902FADEAB3DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10C5F6F78296B956FC8B1B60017DF011 /* Int+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Timepiece.swift"; path = "Sources/Int+Timepiece.swift"; sourceTree = "<group>"; };
-		16209E4AA02672326670832AD5B5247C /* DynamicColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicColor-dummy.m"; sourceTree = "<group>"; };
-		17161F181E496348ACE9D70325BE1F86 /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
-		1864DD6258BF4533F8688F9EF813E686 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
-		1B3B314ECE41E28D6FB6BA45A2C4DA08 /* Timepiece-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-prefix.pch"; sourceTree = "<group>"; };
-		21571C60DE1967F7E30ADDF1A68CA07A /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
-		27697CF9667A86A62C8764EB338D88EA /* Toucan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toucan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		280FADF8C5FB405E970451E55AEF0758 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29304608F1ADAAC8F90E8E210F6C0063 /* DynamicColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-umbrella.h"; sourceTree = "<group>"; };
-		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		2CEE27A828B6744087EC45398CB50C60 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		33AEE071C85D8B757E5E4E790D86E45D /* VTAcknowledgementsViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VTAcknowledgementsViewController-umbrella.h"; sourceTree = "<group>"; };
-		3794F7A67449F163395687D004E8D34A /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = DynamicColor/DynamicColor.swift; sourceTree = "<group>"; };
-		380892E4AE00C6ECBC92B65BBB5C9E57 /* Toucan-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-prefix.pch"; sourceTree = "<group>"; };
-		40EDEE15FC2D5739ADDD78FF0107F9E6 /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = DynamicColor/HSL.swift; sourceTree = "<group>"; };
-		4307FDD63E95F1539ACFAC3FF1638B29 /* VTAcknowledgementsParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VTAcknowledgementsParser.m; path = Classes/VTAcknowledgementsParser.m; sourceTree = "<group>"; };
-		4A4F96D576E3DC21F649C9ADD1AD1CB3 /* Toucan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Toucan.modulemap; sourceTree = "<group>"; };
-		4C67C409EB16BA0B3172B13530C6F09C /* VTAcknowledgement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VTAcknowledgement.m; path = Classes/VTAcknowledgement.m; sourceTree = "<group>"; };
-		51C1F0EFC325B9D693A344B71B566C25 /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
-		5572ABE28CD4C0916DDEDD278F2DBEB0 /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
-		59E0CEEF89E35F227824926991A1E422 /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
-		5A1BBDF37E86B391EF6835C4B75627AC /* VTAcknowledgementsViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTAcknowledgementsViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63DB239D05B860FACE672F50774E6178 /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicColor.modulemap; sourceTree = "<group>"; };
-		66CF73C37DC3D3338D971C9F4089C85C /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
-		67716092A14A2D081BEEF1C9961563B5 /* VTAcknowledgementViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgementViewController.h; path = Classes/VTAcknowledgementViewController.h; sourceTree = "<group>"; };
-		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7442306BAF05B0CE2E44788C5DF075A1 /* Timepiece-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Timepiece-dummy.m"; sourceTree = "<group>"; };
-		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		7C83CCD070AD433DBD94942BF1E97979 /* VTAcknowledgement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgement.h; path = Classes/VTAcknowledgement.h; sourceTree = "<group>"; };
-		8615D12DB6DD9FD665011273B1426F76 /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
-		8674014DB6CE7BEA4C3444A441D80EE5 /* NSCalendar+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSCalendar+Timepiece.swift"; path = "Sources/NSCalendar+Timepiece.swift"; sourceTree = "<group>"; };
-		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		8D780A0837DB8B24001C8898A9B31547 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		8F82F3050CDC5C5691CF24AFD6D53429 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		95027EC6154D75029A1779A2114D62AE /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
-		9574DFC078ECA91C4DFA3AB699D9A99C /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
-		96F6A77A255F7D131C4F00F11316966C /* Toucan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-umbrella.h"; sourceTree = "<group>"; };
-		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		98EB448CA66FAC42C4713598AF6C0AF4 /* Timepiece.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Timepiece.modulemap; sourceTree = "<group>"; };
-		9980DABC2FA4B3423F62DEE74587238F /* VTAcknowledgementsViewController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = VTAcknowledgementsViewController.bundle; sourceTree = "<group>"; };
-		9D4DD8473E430CEF4FAB9B1A734EF00A /* Toucan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toucan-dummy.m"; sourceTree = "<group>"; };
-		A03F182F27C5F43F41D14A133686A8DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A26C476998455C3F18B61F42D277B711 /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
-		A53580DACC69384A1A83D6D6DE19D686 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
-		A548B612ECFC72ECF349F19A3E19315D /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
-		A5A26FA8E487D77DBF0CB19E7C66494C /* String+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Timepiece.swift"; path = "Sources/String+Timepiece.swift"; sourceTree = "<group>"; };
-		A5AE2A357F8283A290023F8244CCBAC8 /* Toucan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toucan.xcconfig; sourceTree = "<group>"; };
-		AAAF0935281ABD20258D02440663BFE8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACD2CAC927025F045B5CF4E71877658C /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		B1E605B8DAEA575F40E93A9EF1BBD329 /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B30BF54AB02A01D25CB702DAB4C0C2A5 /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		B34AEEBB047B47BFFBB6CE00947BA54F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B496CC42A313F8A7BC8937798A97DA50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B49E4AFBF339A06B53B6431833ED75F3 /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C621479CB9A0779B9D8A0CD65653129E /* NSDateComponents+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDateComponents+Timepiece.swift"; path = "Sources/NSDateComponents+Timepiece.swift"; sourceTree = "<group>"; };
-		C88B588CFBA36D1E4B7DE663760BE351 /* Duration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Duration.swift; path = Sources/Duration.swift; sourceTree = "<group>"; };
-		C8A5E7A6EB3BD2A3121E58126FE4B296 /* VTAcknowledgementsParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgementsParser.h; path = Classes/VTAcknowledgementsParser.h; sourceTree = "<group>"; };
-		C91AFEF3CA6DDCD848486E20511A9C1B /* Timepiece.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Timepiece.xcconfig; sourceTree = "<group>"; };
-		C9676DC0C85A2FCED69C9E5D35799B4C /* VTAcknowledgementsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgementsViewController.h; path = Classes/VTAcknowledgementsViewController.h; sourceTree = "<group>"; };
-		CABFD469896ED333C97984558ADC227F /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
-		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		CCCF086A82C703C33D759BDB365F5D80 /* Timepiece-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-umbrella.h"; sourceTree = "<group>"; };
-		CD94263535980BDD77FB9E4852175B3F /* VTAcknowledgementsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VTAcknowledgementsViewController.m; path = Classes/VTAcknowledgementsViewController.m; sourceTree = "<group>"; };
-		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D06A29FF9D5C83B12E6156353909960B /* Toucan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toucan.swift; path = Source/Toucan.swift; sourceTree = "<group>"; };
-		D19658F4E1FF1D24BDAB65FB8E66C7A4 /* VTAcknowledgementsViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VTAcknowledgementsViewController-prefix.pch"; sourceTree = "<group>"; };
-		D72920B9EE7D814BF99F35204A42E99D /* VTAcknowledgementsViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VTAcknowledgementsViewController-dummy.m"; sourceTree = "<group>"; };
-		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		DA67E528B45A98E08A29E36F8BE23863 /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
-		DAF5486A07691A0FB1EB9A8EEADFFB6B /* VTAcknowledgementViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VTAcknowledgementViewController.m; path = Classes/VTAcknowledgementViewController.m; sourceTree = "<group>"; };
-		DB2B37F32410B3F9723E87363F3E6B82 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF137D229B58F33743668C07FDB69EF /* NSTimeInterval+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTimeInterval+Timepiece.swift"; path = "Sources/NSTimeInterval+Timepiece.swift"; sourceTree = "<group>"; };
-		DE6B3BA70CAC058AB47FDA9E9647FB50 /* NSCalendarUnit+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSCalendarUnit+Timepiece.swift"; path = "Sources/NSCalendarUnit+Timepiece.swift"; sourceTree = "<group>"; };
-		E3954A58C701D1E76E1B52F7222206DF /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
-		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBC0BF4CCB75F143BAA7F13C51D0158E /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
-		F99DC026ECF04DEC5682781942DF1C9E /* VTAcknowledgementsViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VTAcknowledgementsViewController.xcconfig; sourceTree = "<group>"; };
-		FE9F2C3A5D1C28F9310806C4FF6F44E8 /* NSDate+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDate+Timepiece.swift"; path = "Sources/NSDate+Timepiece.swift"; sourceTree = "<group>"; };
+		00DC5CC4DBC875857A87CF9F /* NSCalendarUnit+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSCalendarUnit+Timepiece.swift"; path = "Sources/NSCalendarUnit+Timepiece.swift"; sourceTree = "<group>"; };
+		00FE4D8ACB34DABA3CF1E79D /* DynamicColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-umbrella.h"; sourceTree = "<group>"; };
+		049F9935F191F8702E6A29B0 /* NSDate+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDate+Timepiece.swift"; path = "Sources/NSDate+Timepiece.swift"; sourceTree = "<group>"; };
+		04AFF7D3AEBBFD5E327C90F9 /* NSCalendar+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSCalendar+Timepiece.swift"; path = "Sources/NSCalendar+Timepiece.swift"; sourceTree = "<group>"; };
+		05FD1C3B97FB53C2DBA3734B /* Pods-trySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-trySwift-umbrella.h"; sourceTree = "<group>"; };
+		06946895637A3717C2DEABAF /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
+		084BC1EFB587B112F1F196E6 /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
+		092F1700B5AA3A1D499B6FC0 /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
+		0988253866B92C3831D8633A /* VTAcknowledgementsViewController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = VTAcknowledgementsViewController.bundle; sourceTree = "<group>"; };
+		0C2A6D63766DE91339D060EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D05C1915013C65F7DB51575 /* Pods-try Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-try Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		0DDE6D1C854B3A4FFCA0F250 /* Pods-try Extension-Timepiece-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-try Extension-Timepiece-umbrella.h"; sourceTree = "<group>"; };
+		1087C12B624E68F6F6E09399 /* Pods-try Extension-Timepiece.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try Extension-Timepiece.xcconfig"; sourceTree = "<group>"; };
+		1221B556EEA3E7772EFCAB6B /* NSDateComponents+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDateComponents+Timepiece.swift"; path = "Sources/NSDateComponents+Timepiece.swift"; sourceTree = "<group>"; };
+		1337A697FD33EBE190B66FE0 /* VTAcknowledgement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VTAcknowledgement.m; path = Classes/VTAcknowledgement.m; sourceTree = "<group>"; };
+		18AAC2AB4C61A02A1E5DF43C /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		1BE9A9AD46B7F67B9567970F /* VTAcknowledgementViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VTAcknowledgementViewController.m; path = Classes/VTAcknowledgementViewController.m; sourceTree = "<group>"; };
+		1D3B079EDADFE0708CEC745C /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
+		2057CBE9DD5DF4595F8B9BDE /* Int+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Timepiece.swift"; path = "Sources/Int+Timepiece.swift"; sourceTree = "<group>"; };
+		21BB4ECB7064E91B88DFEEA5 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
+		275A43EFB6386B2591AAB3DC /* VTAcknowledgementsParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VTAcknowledgementsParser.m; path = Classes/VTAcknowledgementsParser.m; sourceTree = "<group>"; };
+		286928506F5C901CF44C3268 /* String+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Timepiece.swift"; path = "Sources/String+Timepiece.swift"; sourceTree = "<group>"; };
+		286A6B10A526B56642F6F6CD /* Pods-try Extension-Timepiece.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-try Extension-Timepiece.modulemap"; sourceTree = "<group>"; };
+		28A15F45770DDDAD06516451 /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
+		2AB65E8EB18837CAEB2C99E2 /* Duration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Duration.swift; path = Sources/Duration.swift; sourceTree = "<group>"; };
+		2BFC4E5671C1F566FB5A9E7D /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
+		2C49486C7159A0312B983789 /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
+		2D15D71117780CEE74B6F489 /* Pods-try Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-try Extension-dummy.m"; sourceTree = "<group>"; };
+		2D34405394F0633C22F7FA6D /* Pods-trySwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-trySwift-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2ED2149764CD0EB432F2A836 /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
+		3016105117A40E0CF2DC29D2 /* Pods-try Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-try Extension.modulemap"; sourceTree = "<group>"; };
+		35C2D185F3EC843FE081F535 /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicColor.modulemap; sourceTree = "<group>"; };
+		36E8C423CD5B3F73FD6B8D8A /* Pods-try Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-try Extension-resources.sh"; sourceTree = "<group>"; };
+		3C9237CCB14198B7445CBF2D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CF8B3F0509084495CF09AA5 /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
+		3DDA9586B3819658C5D4C6DD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		402288B8869DCD6DB64243EC /* VTAcknowledgementsParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgementsParser.h; path = Classes/VTAcknowledgementsParser.h; sourceTree = "<group>"; };
+		41E6A8B3E53161299A49D23D /* VTAcknowledgementsViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VTAcknowledgementsViewController-dummy.m"; sourceTree = "<group>"; };
+		4B3116D4E239EB92C7E194EC /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		508B44C7296750E56450FCCF /* Toucan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-umbrella.h"; sourceTree = "<group>"; };
+		541A51F2CEC96DFBFED52263 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-trySwift-Timepiece/Info.plist"; sourceTree = "<group>"; };
+		5569E3E098ACB8738DDA7DF6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		567CC6B15BA4F9E288129FCC /* Pods_try_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58CFA327250B45CC80C9534C /* Pods-trySwift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-trySwift-resources.sh"; sourceTree = "<group>"; };
+		5C6A29A4CF3F526896CC28EB /* Pods-try Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-try Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5D2AE01494E3C99C210C0DFD /* Toucan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toucan.swift; path = Source/Toucan.swift; sourceTree = "<group>"; };
+		5D7BEEE72A6E512FA1D8DEDF /* Pods-trySwift-Timepiece-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-trySwift-Timepiece-prefix.pch"; path = "../Pods-trySwift-Timepiece/Pods-trySwift-Timepiece-prefix.pch"; sourceTree = "<group>"; };
+		646EA59A09E458D32D3751B7 /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
+		6470F79A629A3A8EEDBD72D3 /* Pods-try Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		6490FB225ED939973F165D16 /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		64DD3A90E67C809C5F6BD2A3 /* VTAcknowledgementsViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VTAcknowledgementsViewController-umbrella.h"; sourceTree = "<group>"; };
+		66ECA81FB0E95FB3A95C9D7E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		681D60429F71B10AE909460A /* Toucan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toucan-dummy.m"; sourceTree = "<group>"; };
+		6D8EE35D7B6E2DC5C4A56C73 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		6EE5A1F32F2B33EDF9CF3FD9 /* Pods-try Extension-Timepiece-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-try Extension-Timepiece-prefix.pch"; sourceTree = "<group>"; };
+		72EE93C8C941538AE40B4B0B /* Pods-trySwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-trySwift-frameworks.sh"; sourceTree = "<group>"; };
+		7825E904E632829B4BC78CF5 /* VTAcknowledgement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgement.h; path = Classes/VTAcknowledgement.h; sourceTree = "<group>"; };
+		7835100683F55C139A0C0FC3 /* Toucan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Toucan.modulemap; sourceTree = "<group>"; };
+		797D2CDB1F9F2E9174F786A8 /* Toucan-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-prefix.pch"; sourceTree = "<group>"; };
+		7B1CAF8B5DBA88BC41D528BA /* Pods-try Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-try Extension-umbrella.h"; sourceTree = "<group>"; };
+		7BA133156BC43DB0BEFF53A9 /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = DynamicColor/HSL.swift; sourceTree = "<group>"; };
+		81CE14D2EA38C635E21C0848 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97BD4E0C04326EF4ED3DD5A3 /* Pods-trySwift-Timepiece.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift-Timepiece.xcconfig"; path = "../Pods-trySwift-Timepiece/Pods-trySwift-Timepiece.xcconfig"; sourceTree = "<group>"; };
+		9B1B0AAED0CFD2B5DF79F280 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
+		9D8D7403A00CC34D53DF44BA /* VTAcknowledgementsViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VTAcknowledgementsViewController.xcconfig; sourceTree = "<group>"; };
+		A495829ED6CCD80B8F619BF5 /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
+		A77DC83D839D1B3C718C5F61 /* Pods-trySwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-trySwift-acknowledgements.plist"; sourceTree = "<group>"; };
+		A78E45052DCF00D10A136BFE /* Pods-try Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-try Extension-frameworks.sh"; sourceTree = "<group>"; };
+		A86DB4D873F83C8E3E7A28C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B22F71EC4035A2E417F91694 /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3646F95F848078E726688D0 /* VTAcknowledgementsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgementsViewController.h; path = Classes/VTAcknowledgementsViewController.h; sourceTree = "<group>"; };
+		B79416FED1F26FF14622C586 /* Pods-trySwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-trySwift.modulemap"; sourceTree = "<group>"; };
+		B9808EA3660CF4220441B5D1 /* Toucan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toucan.xcconfig; sourceTree = "<group>"; };
+		BDC217AF3A350D753F496C44 /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
+		BEDF704E02B1F0CABD0788A1 /* Pods-trySwift-Timepiece-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-trySwift-Timepiece-umbrella.h"; path = "../Pods-trySwift-Timepiece/Pods-trySwift-Timepiece-umbrella.h"; sourceTree = "<group>"; };
+		C1178C82CB76AC289DDE808F /* Pods-try Extension-Timepiece-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-try Extension-Timepiece-dummy.m"; sourceTree = "<group>"; };
+		C19E6E166D8D50871564539C /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		CF023CFD690C476FC4703F2B /* VTAcknowledgementsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VTAcknowledgementsViewController.m; path = Classes/VTAcknowledgementsViewController.m; sourceTree = "<group>"; };
+		CF0A39884B3D8EE2B6E31A95 /* Pods-trySwift-Timepiece.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-trySwift-Timepiece.modulemap"; path = "../Pods-trySwift-Timepiece/Pods-trySwift-Timepiece.modulemap"; sourceTree = "<group>"; };
+		D38A11CCEE60A58BB53455DC /* Pods-trySwift-Timepiece-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-trySwift-Timepiece-dummy.m"; path = "../Pods-trySwift-Timepiece/Pods-trySwift-Timepiece-dummy.m"; sourceTree = "<group>"; };
+		D4708DC14ED9F65BFD09103F /* Pods-trySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-trySwift-dummy.m"; sourceTree = "<group>"; };
+		D750BBB2F9EBCAF79E4ADE3F /* DynamicColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicColor-dummy.m"; sourceTree = "<group>"; };
+		DA09A31984F80A5C9D42223E /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		DB0FFC7652203BAB1712D7C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DCB354BE7968F1C1B6810A4F /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE261F9CA7809E6BA4841B62 /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		DFEF2D4750C28B5BB9CFA614 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1717BBC3D041A5AEECE0652 /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65B8C4E3FA65C7DBCCEBE77 /* VTAcknowledgementViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgementViewController.h; path = Classes/VTAcknowledgementViewController.h; sourceTree = "<group>"; };
+		E719892AD1D53E5DCB8A3553 /* Pods-try Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try Extension.release.xcconfig"; sourceTree = "<group>"; };
+		E8C68039EFB9188F6A67932E /* NSTimeInterval+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTimeInterval+Timepiece.swift"; path = "Sources/NSTimeInterval+Timepiece.swift"; sourceTree = "<group>"; };
+		EB019BD1ABF3BDB1681DD919 /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = DynamicColor/DynamicColor.swift; sourceTree = "<group>"; };
+		EE66847736EFC347AB6A6458 /* Toucan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toucan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA1C37180340929E43CAFA8 /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
+		F056BA0B611B5568D79F9D27 /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
+		F0BD54EDF30DE0492D34D7AF /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
+		F1FFAB8854B4B95863B32A18 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21C3F28C1F55F80393A350D /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
+		F23575703633C228E4540FE0 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F4DD29502DA40E3627A5B21D /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
+		F60D338D3037FDE2DF37FBE7 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B370D05276953BF93E162C /* VTAcknowledgementsViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VTAcknowledgementsViewController.modulemap; sourceTree = "<group>"; };
+		F97719598E0FA7FBA4C6F848 /* VTAcknowledgementsViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTAcknowledgementsViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD49807E1CD91A27112730E0 /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
+		FECD722367C54BD8DCE30F67 /* VTAcknowledgementsViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VTAcknowledgementsViewController-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2238FCD94A4DA0978EF3DBA51EAB157A /* Frameworks */ = {
+		1876194D62CBD3E78AE3F61F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F7DB2E8187F52BA188123C65AB1285 /* Foundation.framework in Frameworks */,
-				37B3AC1225FDA65F5E8CBEE245490274 /* UIKit.framework in Frameworks */,
+				8B682B5053D9EE59A9213182 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FEF58D04F21CAA51EF3FAF6CE27A924 /* Frameworks */ = {
+		3C41C65299D1F9491FF0E677 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4FA1BFC4E82068594EC96ED381AA241 /* Foundation.framework in Frameworks */,
+				8EDB39F2CFB7FA8685C06AB3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45C4B8DB0A212EB0D9739F2B31ABE6A7 /* Frameworks */ = {
+		567F559011F7F1E2AA00D57A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FD0EDC26E089A0B260151012E132637 /* Foundation.framework in Frameworks */,
-				52BCA24018A74A9325CE3B3D678FE0B8 /* UIKit.framework in Frameworks */,
+				7A4884C36099BE2DC518D159 /* Foundation.framework in Frameworks */,
+				215C7C4BA014EFF877B69B6E /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87952EE2EE07E34ADBC0F2723A6A471D /* Frameworks */ = {
+		7686F8341D156EDE4037DE35 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A12642F2DBB2A3A4C97102AA4DB5170 /* Foundation.framework in Frameworks */,
+				6B5C575026F82A197BAA5F26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98612A92104EF5EAB988D4CA575596C5 /* Frameworks */ = {
+		83C01E1D00B7CC92DEBB283F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2FD344F31C1D4E0F0DC1AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB34E3B7017348AC888B2297 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CF37A5B0460A51ED7EEEA8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7079167EF7665BD1F4CC4B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DC9C6A095B6F13D602E4E93C528197E0 /* Frameworks */ = {
+		D1744CA27DF36A222F213050 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				523ED4D9917EFAEF75F3EAA0ED3AFD8D /* Foundation.framework in Frameworks */,
+				7DB16D84C30D4F8A91862563 /* Foundation.framework in Frameworks */,
+				80C35C9B5A564FB4680F189F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF2CD5C5C9DD01CF2D25EAEE54D1AD71 /* Frameworks */ = {
+		D1AE708F8AA35AF28EA79F71 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66231CB55B81035DDCE07DDFA1496947 /* Foundation.framework in Frameworks */,
+				5F85C9C5766C8DF98F3C6C88 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18340F12838DEE43507667CC74401EB1 /* iOS */ = {
+		0DC51BBF9E408E4A9C1572E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */,
-				C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */,
+				451E5B7B0A3BA7107347F09E /* DynamicColor */,
+				8DB140520819FEAC4F9A7D42 /* Timepiece */,
+				B17F238074F1E3EDB2893199 /* Toucan */,
+				15071998992E4B25051C5227 /* VTAcknowledgementsViewController */,
+				E0D1017AA390CBCE6B66611C /* XLPagerTabStrip */,
 			);
-			name = iOS;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		142AE24A9E5B99824740E26B /* Pods-trySwift */ = {
 			isa = PBXGroup;
 			children = (
-				18340F12838DEE43507667CC74401EB1 /* iOS */,
+				DFEF2D4750C28B5BB9CFA614 /* Info.plist */,
+				B79416FED1F26FF14622C586 /* Pods-trySwift.modulemap */,
+				2D34405394F0633C22F7FA6D /* Pods-trySwift-acknowledgements.markdown */,
+				A77DC83D839D1B3C718C5F61 /* Pods-trySwift-acknowledgements.plist */,
+				D4708DC14ED9F65BFD09103F /* Pods-trySwift-dummy.m */,
+				72EE93C8C941538AE40B4B0B /* Pods-trySwift-frameworks.sh */,
+				58CFA327250B45CC80C9534C /* Pods-trySwift-resources.sh */,
+				05FD1C3B97FB53C2DBA3734B /* Pods-trySwift-umbrella.h */,
+				BDC217AF3A350D753F496C44 /* Pods-trySwift.debug.xcconfig */,
+				2C49486C7159A0312B983789 /* Pods-trySwift.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-trySwift";
+			path = "Target Support Files/Pods-trySwift";
 			sourceTree = "<group>";
 		};
-		72A5F44AC29A7D371B14405EDAD61435 /* VTAcknowledgementsViewController */ = {
+		15071998992E4B25051C5227 /* VTAcknowledgementsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7C83CCD070AD433DBD94942BF1E97979 /* VTAcknowledgement.h */,
-				4C67C409EB16BA0B3172B13530C6F09C /* VTAcknowledgement.m */,
-				C8A5E7A6EB3BD2A3121E58126FE4B296 /* VTAcknowledgementsParser.h */,
-				4307FDD63E95F1539ACFAC3FF1638B29 /* VTAcknowledgementsParser.m */,
-				C9676DC0C85A2FCED69C9E5D35799B4C /* VTAcknowledgementsViewController.h */,
-				CD94263535980BDD77FB9E4852175B3F /* VTAcknowledgementsViewController.m */,
-				67716092A14A2D081BEEF1C9961563B5 /* VTAcknowledgementViewController.h */,
-				DAF5486A07691A0FB1EB9A8EEADFFB6B /* VTAcknowledgementViewController.m */,
-				C0794175A2AECED8A9F349425C3309C0 /* Resources */,
-				89C020F65371A281A6D85E4EB8421015 /* Support Files */,
+				7825E904E632829B4BC78CF5 /* VTAcknowledgement.h */,
+				1337A697FD33EBE190B66FE0 /* VTAcknowledgement.m */,
+				402288B8869DCD6DB64243EC /* VTAcknowledgementsParser.h */,
+				275A43EFB6386B2591AAB3DC /* VTAcknowledgementsParser.m */,
+				B3646F95F848078E726688D0 /* VTAcknowledgementsViewController.h */,
+				CF023CFD690C476FC4703F2B /* VTAcknowledgementsViewController.m */,
+				E65B8C4E3FA65C7DBCCEBE77 /* VTAcknowledgementViewController.h */,
+				1BE9A9AD46B7F67B9567970F /* VTAcknowledgementViewController.m */,
+				9FF395B4C6479D64484883FF /* Resources */,
+				7E780947454AB5A2840A1BEA /* Support Files */,
 			);
 			path = VTAcknowledgementsViewController;
 			sourceTree = "<group>";
 		};
-		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
+		1A93E64290F6A87D34119821 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */,
-				79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */,
-				D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */,
-				87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */,
-				894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */,
-				E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */,
-				CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */,
-				2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */,
-				977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */,
-				DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */,
+				A86DB4D873F83C8E3E7A28C4 /* Foundation.framework */,
 			);
-			name = Pods;
-			path = "Target Support Files/Pods";
+			name = watchOS;
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		36BBBC0AEAD2BF746408C310 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				E1197466DCBB43566112B5FA804717D4 /* Pods */,
-				961D511F21114D8319250A77DFB12C16 /* Products */,
-				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		818279C4293D3721DCFE1EDC5194BE1A /* Timepiece */ = {
-			isa = PBXGroup;
-			children = (
-				C88B588CFBA36D1E4B7DE663760BE351 /* Duration.swift */,
-				10C5F6F78296B956FC8B1B60017DF011 /* Int+Timepiece.swift */,
-				8674014DB6CE7BEA4C3444A441D80EE5 /* NSCalendar+Timepiece.swift */,
-				DE6B3BA70CAC058AB47FDA9E9647FB50 /* NSCalendarUnit+Timepiece.swift */,
-				FE9F2C3A5D1C28F9310806C4FF6F44E8 /* NSDate+Timepiece.swift */,
-				C621479CB9A0779B9D8A0CD65653129E /* NSDateComponents+Timepiece.swift */,
-				DDF137D229B58F33743668C07FDB69EF /* NSTimeInterval+Timepiece.swift */,
-				A5A26FA8E487D77DBF0CB19E7C66494C /* String+Timepiece.swift */,
-				A10D18C0D2BA4624D1C71B99DECA073E /* Support Files */,
-			);
-			path = Timepiece;
-			sourceTree = "<group>";
-		};
-		89C020F65371A281A6D85E4EB8421015 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B34AEEBB047B47BFFBB6CE00947BA54F /* Info.plist */,
-				02D4B0F84C30EFC85CADF2A132DF270B /* VTAcknowledgementsViewController.modulemap */,
-				F99DC026ECF04DEC5682781942DF1C9E /* VTAcknowledgementsViewController.xcconfig */,
-				D72920B9EE7D814BF99F35204A42E99D /* VTAcknowledgementsViewController-dummy.m */,
-				D19658F4E1FF1D24BDAB65FB8E66C7A4 /* VTAcknowledgementsViewController-prefix.pch */,
-				33AEE071C85D8B757E5E4E790D86E45D /* VTAcknowledgementsViewController-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/VTAcknowledgementsViewController";
-			sourceTree = "<group>";
-		};
-		8AE03064141F09B9F6625A04F0B30AE2 /* XLPagerTabStrip */ = {
-			isa = PBXGroup;
-			children = (
-				8D780A0837DB8B24001C8898A9B31547 /* BarPagerTabStripViewController.swift */,
-				17161F181E496348ACE9D70325BE1F86 /* BarView.swift */,
-				ACD2CAC927025F045B5CF4E71877658C /* BaseButtonBarPagerTabStripViewController.swift */,
-				8F82F3050CDC5C5691CF24AFD6D53429 /* ButtonBarPagerTabStripViewController.swift */,
-				9574DFC078ECA91C4DFA3AB699D9A99C /* ButtonBarView.swift */,
-				1864DD6258BF4533F8688F9EF813E686 /* ButtonBarViewCell.swift */,
-				E3954A58C701D1E76E1B52F7222206DF /* ButtonCell.xib */,
-				21571C60DE1967F7E30ADDF1A68CA07A /* FXPageControl.h */,
-				8615D12DB6DD9FD665011273B1426F76 /* FXPageControl.m */,
-				EBC0BF4CCB75F143BAA7F13C51D0158E /* IndicatorInfo.swift */,
-				95027EC6154D75029A1779A2114D62AE /* PagerTabStripBehaviour.swift */,
-				66CF73C37DC3D3338D971C9F4089C85C /* PagerTabStripError.swift */,
-				A53580DACC69384A1A83D6D6DE19D686 /* PagerTabStripViewController.swift */,
-				B30BF54AB02A01D25CB702DAB4C0C2A5 /* SegmentedPagerTabStripViewController.swift */,
-				A26C476998455C3F18B61F42D277B711 /* SwipeDirection.swift */,
-				0D4D33022709F972BCB6BECB206EB89E /* TwitterPagerTabStripViewController.swift */,
-				C900EF21592963867EFE1D0FF0E55686 /* Resources */,
-				A4E3A0D8E99CB343925EC2B0D5E8E687 /* Support Files */,
-			);
-			path = XLPagerTabStrip;
-			sourceTree = "<group>";
-		};
-		961D511F21114D8319250A77DFB12C16 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B1E605B8DAEA575F40E93A9EF1BBD329 /* DynamicColor.framework */,
-				DB2B37F32410B3F9723E87363F3E6B82 /* Pods.framework */,
-				2CEE27A828B6744087EC45398CB50C60 /* Timepiece.framework */,
-				27697CF9667A86A62C8764EB338D88EA /* Toucan.framework */,
-				5A1BBDF37E86B391EF6835C4B75627AC /* VTAcknowledgementsViewController.framework */,
-				091462523CC6A4A9F9CCFB93518DEDB8 /* XLPagerTabStrip.bundle */,
-				280FADF8C5FB405E970451E55AEF0758 /* XLPagerTabStrip.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A10D18C0D2BA4624D1C71B99DECA073E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AAAF0935281ABD20258D02440663BFE8 /* Info.plist */,
-				98EB448CA66FAC42C4713598AF6C0AF4 /* Timepiece.modulemap */,
-				C91AFEF3CA6DDCD848486E20511A9C1B /* Timepiece.xcconfig */,
-				7442306BAF05B0CE2E44788C5DF075A1 /* Timepiece-dummy.m */,
-				1B3B314ECE41E28D6FB6BA45A2C4DA08 /* Timepiece-prefix.pch */,
-				CCCF086A82C703C33D759BDB365F5D80 /* Timepiece-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Timepiece";
-			sourceTree = "<group>";
-		};
-		A4E3A0D8E99CB343925EC2B0D5E8E687 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B496CC42A313F8A7BC8937798A97DA50 /* Info.plist */,
-				59E0CEEF89E35F227824926991A1E422 /* XLPagerTabStrip.modulemap */,
-				51C1F0EFC325B9D693A344B71B566C25 /* XLPagerTabStrip.xcconfig */,
-				A548B612ECFC72ECF349F19A3E19315D /* XLPagerTabStrip-dummy.m */,
-				5572ABE28CD4C0916DDEDD278F2DBEB0 /* XLPagerTabStrip-prefix.pch */,
-				B49E4AFBF339A06B53B6431833ED75F3 /* XLPagerTabStrip-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/XLPagerTabStrip";
-			sourceTree = "<group>";
-		};
-		A59D701457F9F5E202FCF9CD53BBC74A /* Toucan */ = {
-			isa = PBXGroup;
-			children = (
-				D06A29FF9D5C83B12E6156353909960B /* Toucan.swift */,
-				BC4BEC5327D70A5B68051AE49060B57C /* Support Files */,
-			);
-			path = Toucan;
-			sourceTree = "<group>";
-		};
-		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		BC4BEC5327D70A5B68051AE49060B57C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A03F182F27C5F43F41D14A133686A8DC /* Info.plist */,
-				4A4F96D576E3DC21F649C9ADD1AD1CB3 /* Toucan.modulemap */,
-				A5AE2A357F8283A290023F8244CCBAC8 /* Toucan.xcconfig */,
-				9D4DD8473E430CEF4FAB9B1A734EF00A /* Toucan-dummy.m */,
-				380892E4AE00C6ECBC92B65BBB5C9E57 /* Toucan-prefix.pch */,
-				96F6A77A255F7D131C4F00F11316966C /* Toucan-umbrella.h */,
+				66ECA81FB0E95FB3A95C9D7E /* Info.plist */,
+				7835100683F55C139A0C0FC3 /* Toucan.modulemap */,
+				B9808EA3660CF4220441B5D1 /* Toucan.xcconfig */,
+				681D60429F71B10AE909460A /* Toucan-dummy.m */,
+				797D2CDB1F9F2E9174F786A8 /* Toucan-prefix.pch */,
+				508B44C7296750E56450FCCF /* Toucan-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Toucan";
 			sourceTree = "<group>";
 		};
-		C0794175A2AECED8A9F349425C3309C0 /* Resources */ = {
+		451E5B7B0A3BA7107347F09E /* DynamicColor */ = {
 			isa = PBXGroup;
 			children = (
-				9980DABC2FA4B3423F62DEE74587238F /* VTAcknowledgementsViewController.bundle */,
+				EB019BD1ABF3BDB1681DD919 /* DynamicColor.swift */,
+				7BA133156BC43DB0BEFF53A9 /* HSL.swift */,
+				BD51FCF0E4CC8B1DB93B2B29 /* Support Files */,
+			);
+			path = DynamicColor;
+			sourceTree = "<group>";
+		};
+		77E502980D335CDEE2ABB8F7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DDA9586B3819658C5D4C6DD /* Info.plist */,
+				084BC1EFB587B112F1F196E6 /* XLPagerTabStrip.modulemap */,
+				EFA1C37180340929E43CAFA8 /* XLPagerTabStrip.xcconfig */,
+				F056BA0B611B5568D79F9D27 /* XLPagerTabStrip-dummy.m */,
+				646EA59A09E458D32D3751B7 /* XLPagerTabStrip-prefix.pch */,
+				1D3B079EDADFE0708CEC745C /* XLPagerTabStrip-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/XLPagerTabStrip";
+			sourceTree = "<group>";
+		};
+		7E780947454AB5A2840A1BEA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C2A6D63766DE91339D060EB /* Info.plist */,
+				F8B370D05276953BF93E162C /* VTAcknowledgementsViewController.modulemap */,
+				9D8D7403A00CC34D53DF44BA /* VTAcknowledgementsViewController.xcconfig */,
+				41E6A8B3E53161299A49D23D /* VTAcknowledgementsViewController-dummy.m */,
+				FECD722367C54BD8DCE30F67 /* VTAcknowledgementsViewController-prefix.pch */,
+				64DD3A90E67C809C5F6BD2A3 /* VTAcknowledgementsViewController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VTAcknowledgementsViewController";
+			sourceTree = "<group>";
+		};
+		8C09405A2CBA12142025C67F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				541A51F2CEC96DFBFED52263 /* Info.plist */,
+				3C9237CCB14198B7445CBF2D /* Info.plist */,
+				286A6B10A526B56642F6F6CD /* Pods-try Extension-Timepiece.modulemap */,
+				1087C12B624E68F6F6E09399 /* Pods-try Extension-Timepiece.xcconfig */,
+				C1178C82CB76AC289DDE808F /* Pods-try Extension-Timepiece-dummy.m */,
+				6EE5A1F32F2B33EDF9CF3FD9 /* Pods-try Extension-Timepiece-prefix.pch */,
+				0DDE6D1C854B3A4FFCA0F250 /* Pods-try Extension-Timepiece-umbrella.h */,
+				CF0A39884B3D8EE2B6E31A95 /* Pods-trySwift-Timepiece.modulemap */,
+				97BD4E0C04326EF4ED3DD5A3 /* Pods-trySwift-Timepiece.xcconfig */,
+				D38A11CCEE60A58BB53455DC /* Pods-trySwift-Timepiece-dummy.m */,
+				5D7BEEE72A6E512FA1D8DEDF /* Pods-trySwift-Timepiece-prefix.pch */,
+				BEDF704E02B1F0CABD0788A1 /* Pods-trySwift-Timepiece-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-try Extension-Timepiece";
+			sourceTree = "<group>";
+		};
+		8DB140520819FEAC4F9A7D42 /* Timepiece */ = {
+			isa = PBXGroup;
+			children = (
+				2AB65E8EB18837CAEB2C99E2 /* Duration.swift */,
+				2057CBE9DD5DF4595F8B9BDE /* Int+Timepiece.swift */,
+				04AFF7D3AEBBFD5E327C90F9 /* NSCalendar+Timepiece.swift */,
+				00DC5CC4DBC875857A87CF9F /* NSCalendarUnit+Timepiece.swift */,
+				049F9935F191F8702E6A29B0 /* NSDate+Timepiece.swift */,
+				1221B556EEA3E7772EFCAB6B /* NSDateComponents+Timepiece.swift */,
+				E8C68039EFB9188F6A67932E /* NSTimeInterval+Timepiece.swift */,
+				286928506F5C901CF44C3268 /* String+Timepiece.swift */,
+				8C09405A2CBA12142025C67F /* Support Files */,
+			);
+			path = Timepiece;
+			sourceTree = "<group>";
+		};
+		8E1E2861588673F5909DC399 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		C1142623A8B12749A1102A18824CF01C /* Support Files */ = {
+		8E282D25A748DC413C3CB9DB /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				63DB239D05B860FACE672F50774E6178 /* DynamicColor.modulemap */,
-				DA67E528B45A98E08A29E36F8BE23863 /* DynamicColor.xcconfig */,
-				16209E4AA02672326670832AD5B5247C /* DynamicColor-dummy.m */,
-				CABFD469896ED333C97984558ADC227F /* DynamicColor-prefix.pch */,
-				29304608F1ADAAC8F90E8E210F6C0063 /* DynamicColor-umbrella.h */,
-				0F79377A3E9EF4796D48902FADEAB3DF /* Info.plist */,
+				98465F05A4F896F69B0CFA27 /* Pods-try Extension */,
+				142AE24A9E5B99824740E26B /* Pods-trySwift */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		98465F05A4F896F69B0CFA27 /* Pods-try Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5569E3E098ACB8738DDA7DF6 /* Info.plist */,
+				3016105117A40E0CF2DC29D2 /* Pods-try Extension.modulemap */,
+				5C6A29A4CF3F526896CC28EB /* Pods-try Extension-acknowledgements.markdown */,
+				0D05C1915013C65F7DB51575 /* Pods-try Extension-acknowledgements.plist */,
+				2D15D71117780CEE74B6F489 /* Pods-try Extension-dummy.m */,
+				A78E45052DCF00D10A136BFE /* Pods-try Extension-frameworks.sh */,
+				36E8C423CD5B3F73FD6B8D8A /* Pods-try Extension-resources.sh */,
+				7B1CAF8B5DBA88BC41D528BA /* Pods-try Extension-umbrella.h */,
+				6470F79A629A3A8EEDBD72D3 /* Pods-try Extension.debug.xcconfig */,
+				E719892AD1D53E5DCB8A3553 /* Pods-try Extension.release.xcconfig */,
+			);
+			name = "Pods-try Extension";
+			path = "Target Support Files/Pods-try Extension";
+			sourceTree = "<group>";
+		};
+		9FF395B4C6479D64484883FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0988253866B92C3831D8633A /* VTAcknowledgementsViewController.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A6F367F57B22E7FB80B6885F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1717BBC3D041A5AEECE0652 /* DynamicColor.framework */,
+				567CC6B15BA4F9E288129FCC /* Pods_try_Extension.framework */,
+				B22F71EC4035A2E417F91694 /* Pods_trySwift.framework */,
+				F60D338D3037FDE2DF37FBE7 /* Timepiece.framework */,
+				DCB354BE7968F1C1B6810A4F /* Timepiece.framework */,
+				EE66847736EFC347AB6A6458 /* Toucan.framework */,
+				F97719598E0FA7FBA4C6F848 /* VTAcknowledgementsViewController.framework */,
+				6490FB225ED939973F165D16 /* XLPagerTabStrip.bundle */,
+				81CE14D2EA38C635E21C0848 /* XLPagerTabStrip.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACAF0B6391DA5AE9DAB6281C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DB0FFC7652203BAB1712D7C8 /* Foundation.framework */,
+				6D8EE35D7B6E2DC5C4A56C73 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B17F238074F1E3EDB2893199 /* Toucan */ = {
+			isa = PBXGroup;
+			children = (
+				5D2AE01494E3C99C210C0DFD /* Toucan.swift */,
+				36BBBC0AEAD2BF746408C310 /* Support Files */,
+			);
+			path = Toucan;
+			sourceTree = "<group>";
+		};
+		BD51FCF0E4CC8B1DB93B2B29 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				35C2D185F3EC843FE081F535 /* DynamicColor.modulemap */,
+				2ED2149764CD0EB432F2A836 /* DynamicColor.xcconfig */,
+				D750BBB2F9EBCAF79E4ADE3F /* DynamicColor-dummy.m */,
+				06946895637A3717C2DEABAF /* DynamicColor-prefix.pch */,
+				00FE4D8ACB34DABA3CF1E79D /* DynamicColor-umbrella.h */,
+				F1FFAB8854B4B95863B32A18 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/DynamicColor";
 			sourceTree = "<group>";
 		};
-		C900EF21592963867EFE1D0FF0E55686 /* Resources */ = {
+		C23E54059E1A244169A1DE24 = {
 			isa = PBXGroup;
 			children = (
+				F23575703633C228E4540FE0 /* Podfile */,
+				F5F7B6BD7FF547786B35E927 /* Frameworks */,
+				0DC51BBF9E408E4A9C1572E8 /* Pods */,
+				A6F367F57B22E7FB80B6885F /* Products */,
+				8E282D25A748DC413C3CB9DB /* Targets Support Files */,
 			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
-		E1197466DCBB43566112B5FA804717D4 /* Pods */ = {
+		E0D1017AA390CBCE6B66611C /* XLPagerTabStrip */ = {
 			isa = PBXGroup;
 			children = (
-				EF5CDEC2F4B7D862E7CE87EC5A1E103E /* DynamicColor */,
-				818279C4293D3721DCFE1EDC5194BE1A /* Timepiece */,
-				A59D701457F9F5E202FCF9CD53BBC74A /* Toucan */,
-				72A5F44AC29A7D371B14405EDAD61435 /* VTAcknowledgementsViewController */,
-				8AE03064141F09B9F6625A04F0B30AE2 /* XLPagerTabStrip */,
+				C19E6E166D8D50871564539C /* BarPagerTabStripViewController.swift */,
+				28A15F45770DDDAD06516451 /* BarView.swift */,
+				4B3116D4E239EB92C7E194EC /* BaseButtonBarPagerTabStripViewController.swift */,
+				18AAC2AB4C61A02A1E5DF43C /* ButtonBarPagerTabStripViewController.swift */,
+				F21C3F28C1F55F80393A350D /* ButtonBarView.swift */,
+				21BB4ECB7064E91B88DFEEA5 /* ButtonBarViewCell.swift */,
+				F0BD54EDF30DE0492D34D7AF /* ButtonCell.xib */,
+				F4DD29502DA40E3627A5B21D /* FXPageControl.h */,
+				2BFC4E5671C1F566FB5A9E7D /* FXPageControl.m */,
+				3CF8B3F0509084495CF09AA5 /* IndicatorInfo.swift */,
+				A495829ED6CCD80B8F619BF5 /* PagerTabStripBehaviour.swift */,
+				092F1700B5AA3A1D499B6FC0 /* PagerTabStripError.swift */,
+				9B1B0AAED0CFD2B5DF79F280 /* PagerTabStripViewController.swift */,
+				DA09A31984F80A5C9D42223E /* SegmentedPagerTabStripViewController.swift */,
+				FD49807E1CD91A27112730E0 /* SwipeDirection.swift */,
+				DE261F9CA7809E6BA4841B62 /* TwitterPagerTabStripViewController.swift */,
+				8E1E2861588673F5909DC399 /* Resources */,
+				77E502980D335CDEE2ABB8F7 /* Support Files */,
 			);
-			name = Pods;
+			path = XLPagerTabStrip;
 			sourceTree = "<group>";
 		};
-		EF5CDEC2F4B7D862E7CE87EC5A1E103E /* DynamicColor */ = {
+		F5F7B6BD7FF547786B35E927 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3794F7A67449F163395687D004E8D34A /* DynamicColor.swift */,
-				40EDEE15FC2D5739ADDD78FF0107F9E6 /* HSL.swift */,
-				C1142623A8B12749A1102A18824CF01C /* Support Files */,
+				ACAF0B6391DA5AE9DAB6281C /* iOS */,
+				1A93E64290F6A87D34119821 /* watchOS */,
 			);
-			path = DynamicColor;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		20630E76C110C89D67CFB05FD2AC32CC /* Headers */ = {
+		381199EC08072E694D30028A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDE912E1054F1D917102D96D0B36BD56 /* Timepiece-umbrella.h in Headers */,
+				A631AE66FD256F3EB450227E /* Pods-try Extension-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8713C7231D0C56AEDCAC66AEB43E8741 /* Headers */ = {
+		468AB30936EF9C5664BC90FE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6499186BC6A14497357BE3A1EE9B273 /* Pods-umbrella.h in Headers */,
+				FF75C71D916D5655D333EFD4 /* FXPageControl.h in Headers */,
+				4F936FE627D45D75F0642614 /* XLPagerTabStrip-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A82167A54BC78285E236E7ED0EABA434 /* Headers */ = {
+		4CAE5558521F479CC66E90D5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4248E3DC46BF5FA60398DB31DC08F836 /* FXPageControl.h in Headers */,
-				56AE5FCA0FC8233B66C06D0B00E9D3E7 /* XLPagerTabStrip-umbrella.h in Headers */,
+				B87E00CE7294237FB1E94F4C /* DynamicColor-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD7231EDA24F70411F42E6452B8618E5 /* Headers */ = {
+		6986AEF8A580A51283BD8D1B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E938F95DB58AF7A4E933D7BD645F0B /* DynamicColor-umbrella.h in Headers */,
+				EDC13EA510ACE36EB975DB2E /* Toucan-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0A8A7F4223922C2F0612AA7E8994B79 /* Headers */ = {
+		9EBDE9ACC3D254B8499A767F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B19C62911A4C7890F382A510C13BBC77 /* VTAcknowledgement.h in Headers */,
-				BECF9EE0C22A329B9BECF49A2B529D70 /* VTAcknowledgementsParser.h in Headers */,
-				5EA93571F146E3D09E520B307EA88E4F /* VTAcknowledgementsViewController-umbrella.h in Headers */,
-				1F756594C85E511FFC99D720FA95AD55 /* VTAcknowledgementsViewController.h in Headers */,
-				B4929142F5A8CDCD8C9088E96718A6D8 /* VTAcknowledgementViewController.h in Headers */,
+				C2F5FDE2B2AFCF683712E5DF /* VTAcknowledgement.h in Headers */,
+				3C267C8D506D24BD36529AE6 /* VTAcknowledgementsParser.h in Headers */,
+				2BEDE5B50268E2C8273950E4 /* VTAcknowledgementsViewController-umbrella.h in Headers */,
+				2FD087A1B38AB351EF402636 /* VTAcknowledgementsViewController.h in Headers */,
+				F1A03FA2DAF01E15BC82F128 /* VTAcknowledgementViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4728995EFDF4EEB24DFA5822F685E48 /* Headers */ = {
+		AC4D82F62F927C7D43D73699 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7785C71FC72611F7A490D423DFAAE0C9 /* Toucan-umbrella.h in Headers */,
+				8A377AC1730CC4B985EF1560 /* Pods-try Extension-Timepiece-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20F757D626C70AC22A64844 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3901D8CB1B5D5E9E28123E9D /* Pods-trySwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52B756229D8A2C471A02F25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A108544F66308085EE7572D4 /* Pods-trySwift-Timepiece-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */ = {
+		041910E914F3EC023A80814C /* Pods-trySwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC4702B144C514B41D51E60E93CA52C5 /* Build configuration list for PBXNativeTarget "DynamicColor" */;
+			buildConfigurationList = 82D8DC730F7EE951DBA0FB85 /* Build configuration list for PBXNativeTarget "Pods-trySwift" */;
 			buildPhases = (
-				C8D6A9BD06E5CEFF7F6CD051253FDE6C /* Sources */,
-				2238FCD94A4DA0978EF3DBA51EAB157A /* Frameworks */,
-				CD7231EDA24F70411F42E6452B8618E5 /* Headers */,
+				EFF5BDB658DFEC689B31A792 /* Sources */,
+				1876194D62CBD3E78AE3F61F /* Frameworks */,
+				C20F757D626C70AC22A64844 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				804028A3255B90BAE137FF92 /* PBXTargetDependency */,
+				84F399B844FD817D268FD82C /* PBXTargetDependency */,
+				FD652BADDF73376E03F77256 /* PBXTargetDependency */,
+				53122DAC956814C31308C966 /* PBXTargetDependency */,
+				C8BBCCCA04E22ACEBD39A076 /* PBXTargetDependency */,
+			);
+			name = "Pods-trySwift";
+			productName = "Pods-trySwift";
+			productReference = B22F71EC4035A2E417F91694 /* Pods_trySwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		120D02C24D2097287617AAD4 /* Pods-trySwift-Timepiece */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3382364DAA60E0EC009A5A3D /* Build configuration list for PBXNativeTarget "Pods-trySwift-Timepiece" */;
+			buildPhases = (
+				EAC00BD0F347D21DF3FF8C0B /* Sources */,
+				7686F8341D156EDE4037DE35 /* Frameworks */,
+				F52B756229D8A2C471A02F25 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-trySwift-Timepiece";
+			productName = "Pods-trySwift-Timepiece";
+			productReference = DCB354BE7968F1C1B6810A4F /* Timepiece.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		263F14994627823F105D0D09 /* XLPagerTabStrip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF041BB1CBDE7EC500F59281 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */;
+			buildPhases = (
+				27D1CA0A4F43E5E18925A48C /* Sources */,
+				567F559011F7F1E2AA00D57A /* Frameworks */,
+				B0648042BFACFF21725F12AA /* Resources */,
+				468AB30936EF9C5664BC90FE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10DBE002D155BEF8415EE7BC /* PBXTargetDependency */,
+			);
+			name = XLPagerTabStrip;
+			productName = XLPagerTabStrip;
+			productReference = 81CE14D2EA38C635E21C0848 /* XLPagerTabStrip.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5A8C1960A343DF103EA82BD0 /* DynamicColor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 544CE540B7A9948449C0EF3E /* Build configuration list for PBXNativeTarget "DynamicColor" */;
+			buildPhases = (
+				9AAB2AE5139A0B2C3BDD591C /* Sources */,
+				D1744CA27DF36A222F213050 /* Frameworks */,
+				4CAE5558521F479CC66E90D5 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -577,56 +743,17 @@
 			);
 			name = DynamicColor;
 			productName = DynamicColor;
-			productReference = B1E605B8DAEA575F40E93A9EF1BBD329 /* DynamicColor.framework */;
+			productReference = E1717BBC3D041A5AEECE0652 /* DynamicColor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0F7E2169A383E2E9A90C0A6A596CE316 /* Pods */ = {
+		7C3F5BA8A2C035BA06A29C82 /* VTAcknowledgementsViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0ED06FD56BC08655A7EAB3261A1E1473 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 3D197A90DA94F88A7B6C638D /* Build configuration list for PBXNativeTarget "VTAcknowledgementsViewController" */;
 			buildPhases = (
-				3221A851628851115CFA6051D357B6B1 /* Sources */,
-				FF2CD5C5C9DD01CF2D25EAEE54D1AD71 /* Frameworks */,
-				8713C7231D0C56AEDCAC66AEB43E8741 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				07F5B7485736DEA8DEB2CF257455CF91 /* PBXTargetDependency */,
-				EA436C837E2321322CFD4386503D6E97 /* PBXTargetDependency */,
-				65872040FCD8B799A74B4E344F9D72C7 /* PBXTargetDependency */,
-				C1549C66F36BD70C145AAB6BC7B49A3B /* PBXTargetDependency */,
-				4DB9E8B4C05BF714BCFB869073578DCA /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = DB2B37F32410B3F9723E87363F3E6B82 /* Pods.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4B1EBFE997C640647C7138F67571C948 /* Toucan */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E3973EA6524E156A0A3C9E945FC9F45E /* Build configuration list for PBXNativeTarget "Toucan" */;
-			buildPhases = (
-				71EA6CE5F493AF0CB4C44B31B60E22D6 /* Sources */,
-				3FEF58D04F21CAA51EF3FAF6CE27A924 /* Frameworks */,
-				D4728995EFDF4EEB24DFA5822F685E48 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Toucan;
-			productName = Toucan;
-			productReference = 27697CF9667A86A62C8764EB338D88EA /* Toucan.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		6E9F42C9A789119EE7E79FFAAA1222D5 /* VTAcknowledgementsViewController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B9905EBE0989CCC37C3768D1742C96FA /* Build configuration list for PBXNativeTarget "VTAcknowledgementsViewController" */;
-			buildPhases = (
-				BE619F1B3E3FE98384C2E6590605F763 /* Sources */,
-				DC9C6A095B6F13D602E4E93C528197E0 /* Frameworks */,
-				D0A8A7F4223922C2F0612AA7E8994B79 /* Headers */,
-				2D11FDB65E55CFF4C5A23DB47B74B6BA /* Resources */,
+				9EB055F18165717C32FF1E11 /* Sources */,
+				3C41C65299D1F9491FF0E677 /* Frameworks */,
+				9EBDE9ACC3D254B8499A767F /* Headers */,
+				998E84D954B0D47ED8EB4E48 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -634,16 +761,50 @@
 			);
 			name = VTAcknowledgementsViewController;
 			productName = VTAcknowledgementsViewController;
-			productReference = 5A1BBDF37E86B391EF6835C4B75627AC /* VTAcknowledgementsViewController.framework */;
+			productReference = F97719598E0FA7FBA4C6F848 /* VTAcknowledgementsViewController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9654CA6D2236C868BA0EF4A3A9BEFCD5 /* XLPagerTabStrip-XLPagerTabStrip */ = {
+		7EA3368AF7DAC4A5E31834C0 /* Toucan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C0F5D154E793BD77EE1747B4380CB5CE /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */;
+			buildConfigurationList = 011715A6916713E12E43B672 /* Build configuration list for PBXNativeTarget "Toucan" */;
 			buildPhases = (
-				D57F1B497FA7D7022D4D9B3887944D00 /* Sources */,
-				98612A92104EF5EAB988D4CA575596C5 /* Frameworks */,
-				BAF0D0249E142459A8DF09D1A6E20F9B /* Resources */,
+				009AEA786710340632250B53 /* Sources */,
+				BB34E3B7017348AC888B2297 /* Frameworks */,
+				6986AEF8A580A51283BD8D1B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Toucan;
+			productName = Toucan;
+			productReference = EE66847736EFC347AB6A6458 /* Toucan.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ADEC5DD734E77641DF177AEB /* Pods-try Extension-Timepiece */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F8A0837B3800697F4E72D42 /* Build configuration list for PBXNativeTarget "Pods-try Extension-Timepiece" */;
+			buildPhases = (
+				561866197EBE92743A192381 /* Sources */,
+				83C01E1D00B7CC92DEBB283F /* Frameworks */,
+				AC4D82F62F927C7D43D73699 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-try Extension-Timepiece";
+			productName = "Pods-try Extension-Timepiece";
+			productReference = F60D338D3037FDE2DF37FBE7 /* Timepiece.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D6FAFB5162E54F325A2DE2AF /* XLPagerTabStrip-XLPagerTabStrip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 066CAF7472B93C044C7EAB79 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */;
+			buildPhases = (
+				ED6E5F52194445152D084A73 /* Sources */,
+				C7079167EF7665BD1F4CC4B5 /* Frameworks */,
+				CC7F277EC76F729D3BC54117 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -651,291 +812,249 @@
 			);
 			name = "XLPagerTabStrip-XLPagerTabStrip";
 			productName = "XLPagerTabStrip-XLPagerTabStrip";
-			productReference = 091462523CC6A4A9F9CCFB93518DEDB8 /* XLPagerTabStrip.bundle */;
+			productReference = 6490FB225ED939973F165D16 /* XLPagerTabStrip.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		ACB712198CB011AB357EB02F4E538031 /* XLPagerTabStrip */ = {
+		E85EB4BEFB14FD4D1174AB6D /* Pods-try Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57651C2D3F79A767FE83184678F39DFA /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */;
+			buildConfigurationList = F0D66F4EA85AA4CA00C776A9 /* Build configuration list for PBXNativeTarget "Pods-try Extension" */;
 			buildPhases = (
-				F041425578FCC65F71D0C7DE074C2272 /* Sources */,
-				45C4B8DB0A212EB0D9739F2B31ABE6A7 /* Frameworks */,
-				07F903EDACA386258D50335C7697CC25 /* Resources */,
-				A82167A54BC78285E236E7ED0EABA434 /* Headers */,
+				3E6EB86007961F9723B38A9C /* Sources */,
+				D1AE708F8AA35AF28EA79F71 /* Frameworks */,
+				381199EC08072E694D30028A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B4816D194F7E0C67C5DE8439B809FF3F /* PBXTargetDependency */,
+				89DCB4B1C0D38192BC308760 /* PBXTargetDependency */,
 			);
-			name = XLPagerTabStrip;
-			productName = XLPagerTabStrip;
-			productReference = 280FADF8C5FB405E970451E55AEF0758 /* XLPagerTabStrip.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C334BE050C5AC37121E309B8727D8A40 /* Timepiece */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0F5694708F8E130A77BD7A60108B4608 /* Build configuration list for PBXNativeTarget "Timepiece" */;
-			buildPhases = (
-				729AA799E2F117D872F03999E9508847 /* Sources */,
-				87952EE2EE07E34ADBC0F2723A6A471D /* Frameworks */,
-				20630E76C110C89D67CFB05FD2AC32CC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Timepiece;
-			productName = Timepiece;
-			productReference = 2CEE27A828B6744087EC45398CB50C60 /* Timepiece.framework */;
+			name = "Pods-try Extension";
+			productName = "Pods-try Extension";
+			productReference = 567CC6B15BA4F9E288129FCC /* Pods_try_Extension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		1F0CB4E4E98ABEEA48F2C7AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 7EC6A9466D81C579DFEAA8BD /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 961D511F21114D8319250A77DFB12C16 /* Products */;
+			mainGroup = C23E54059E1A244169A1DE24;
+			productRefGroup = A6F367F57B22E7FB80B6885F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */,
-				0F7E2169A383E2E9A90C0A6A596CE316 /* Pods */,
-				C334BE050C5AC37121E309B8727D8A40 /* Timepiece */,
-				4B1EBFE997C640647C7138F67571C948 /* Toucan */,
-				6E9F42C9A789119EE7E79FFAAA1222D5 /* VTAcknowledgementsViewController */,
-				ACB712198CB011AB357EB02F4E538031 /* XLPagerTabStrip */,
-				9654CA6D2236C868BA0EF4A3A9BEFCD5 /* XLPagerTabStrip-XLPagerTabStrip */,
+				5A8C1960A343DF103EA82BD0 /* DynamicColor */,
+				E85EB4BEFB14FD4D1174AB6D /* Pods-try Extension */,
+				ADEC5DD734E77641DF177AEB /* Pods-try Extension-Timepiece */,
+				041910E914F3EC023A80814C /* Pods-trySwift */,
+				120D02C24D2097287617AAD4 /* Pods-trySwift-Timepiece */,
+				7EA3368AF7DAC4A5E31834C0 /* Toucan */,
+				7C3F5BA8A2C035BA06A29C82 /* VTAcknowledgementsViewController */,
+				263F14994627823F105D0D09 /* XLPagerTabStrip */,
+				D6FAFB5162E54F325A2DE2AF /* XLPagerTabStrip-XLPagerTabStrip */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		07F903EDACA386258D50335C7697CC25 /* Resources */ = {
+		998E84D954B0D47ED8EB4E48 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE8BB26A8184F3A3DA94D62C84AE7CFF /* XLPagerTabStrip.bundle in Resources */,
+				8FB0A326A16D3A1F70476D0C /* VTAcknowledgementsViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D11FDB65E55CFF4C5A23DB47B74B6BA /* Resources */ = {
+		B0648042BFACFF21725F12AA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B64847691118319041954C43C36775C /* VTAcknowledgementsViewController.bundle in Resources */,
+				14B2A0C8D2D635F96B776426 /* XLPagerTabStrip.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAF0D0249E142459A8DF09D1A6E20F9B /* Resources */ = {
+		CC7F277EC76F729D3BC54117 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2D6788C73E14D94DEDABCA11DFFE55 /* ButtonCell.xib in Resources */,
+				0DAA744E8A651E9DF3D37826 /* ButtonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3221A851628851115CFA6051D357B6B1 /* Sources */ = {
+		009AEA786710340632250B53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07B4A4C6B7B342C8871B510533E2FC28 /* Pods-dummy.m in Sources */,
+				933670588B4D1BBCAB77FD68 /* Toucan-dummy.m in Sources */,
+				CB6949C5E884582FCE1FA697 /* Toucan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71EA6CE5F493AF0CB4C44B31B60E22D6 /* Sources */ = {
+		27D1CA0A4F43E5E18925A48C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				554A0CB11F9B521DD1543092708ED87B /* Toucan-dummy.m in Sources */,
-				F02C99A8BF78E8A631842E08D1E1620C /* Toucan.swift in Sources */,
+				B521829BD3E8A1B92941A4CF /* BarPagerTabStripViewController.swift in Sources */,
+				E64318C7290B48010594E166 /* BarView.swift in Sources */,
+				103E172A257C0F86F355CEB1 /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
+				53E4D3740B4FFE3534824168 /* ButtonBarPagerTabStripViewController.swift in Sources */,
+				7455913BBAA9C038147F77A9 /* ButtonBarView.swift in Sources */,
+				28EF2FB082DC707874BF557E /* ButtonBarViewCell.swift in Sources */,
+				349C3720C2B1FF16C7B69C2A /* ButtonCell.xib in Sources */,
+				490BB1E7E2A9F88FC9C860F8 /* FXPageControl.m in Sources */,
+				115BDA0E7E94C7E495F2AB30 /* IndicatorInfo.swift in Sources */,
+				FE7AC058FB91D507DBDAD0C0 /* PagerTabStripBehaviour.swift in Sources */,
+				1D21A5AD0EE9A694F40C0605 /* PagerTabStripError.swift in Sources */,
+				8C0849054D62A79A6A3A95C6 /* PagerTabStripViewController.swift in Sources */,
+				B1915A74C543B00778DD66F0 /* SegmentedPagerTabStripViewController.swift in Sources */,
+				EA8AB63E68398435E46AEA1A /* SwipeDirection.swift in Sources */,
+				31AC0416B682B4579702C5D9 /* TwitterPagerTabStripViewController.swift in Sources */,
+				D214D39CD89643C53E1D816F /* XLPagerTabStrip-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		729AA799E2F117D872F03999E9508847 /* Sources */ = {
+		3E6EB86007961F9723B38A9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A9D6FA22775E6E9EDD763E05F625304 /* Duration.swift in Sources */,
-				7CEBED3EB6E0B6D929B0B632F97B89A2 /* Int+Timepiece.swift in Sources */,
-				A2F9EB166B04149435197AA388412E95 /* NSCalendar+Timepiece.swift in Sources */,
-				B74B45A31F191DF4774761E2D5E1BFCD /* NSCalendarUnit+Timepiece.swift in Sources */,
-				AAD67E93BA315525EDCE9E5B4F3E4C0F /* NSDate+Timepiece.swift in Sources */,
-				1885042F795B7AF9501C95AFF93F16B9 /* NSDateComponents+Timepiece.swift in Sources */,
-				7E0E7AC73D21A773D2BECD4A424E7C1F /* NSTimeInterval+Timepiece.swift in Sources */,
-				7637DBA6F4CF73F2C76C894EDA0359C4 /* String+Timepiece.swift in Sources */,
-				149AFF139990FCFCCDCFF5295FF519FB /* Timepiece-dummy.m in Sources */,
+				B126D336CF023A3967CB6F25 /* Pods-try Extension-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE619F1B3E3FE98384C2E6590605F763 /* Sources */ = {
+		561866197EBE92743A192381 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C131B14BC6D48CBC15673E02E751970 /* VTAcknowledgement.m in Sources */,
-				10F0B19A497BD3101CE4853384F6E951 /* VTAcknowledgementsParser.m in Sources */,
-				3F421CAD07641191027527680B257A68 /* VTAcknowledgementsViewController-dummy.m in Sources */,
-				6690C61E7950BB99593B9BDEFC950840 /* VTAcknowledgementsViewController.m in Sources */,
-				8F3BAF24C72C3DA39EF5BE51B958264F /* VTAcknowledgementViewController.m in Sources */,
+				96C8D87C041ECFA3E0EDD38A /* Duration.swift in Sources */,
+				7780184353CEBA0A3BB1AC5C /* Int+Timepiece.swift in Sources */,
+				4E0761D8A2BB142ED308DAF3 /* NSCalendar+Timepiece.swift in Sources */,
+				5E33A40827124DAB1C66278B /* NSCalendarUnit+Timepiece.swift in Sources */,
+				CCADBDEDE06D697D580A59D9 /* NSDate+Timepiece.swift in Sources */,
+				0AA2CC4CA1EDF5A349CF2D95 /* NSDateComponents+Timepiece.swift in Sources */,
+				ABF9484A334CDC469DE92652 /* NSTimeInterval+Timepiece.swift in Sources */,
+				3B6D274EBF111E6BBA8CCE42 /* Pods-try Extension-Timepiece-dummy.m in Sources */,
+				071ECCA9DCF256482B10EFE3 /* String+Timepiece.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8D6A9BD06E5CEFF7F6CD051253FDE6C /* Sources */ = {
+		9AAB2AE5139A0B2C3BDD591C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDAE2730611AEF6250382CE67A9AD99A /* DynamicColor-dummy.m in Sources */,
-				392A989FDF1FBFB5B1C1489E5517E36E /* DynamicColor.swift in Sources */,
-				8A186B05B11DA1C486C7B694F3C44D04 /* HSL.swift in Sources */,
+				78326BAF894DFCF81B3088D0 /* DynamicColor-dummy.m in Sources */,
+				E75F7006F94561CF7E2E9204 /* DynamicColor.swift in Sources */,
+				C0BC39FB939C13EEB2489FC7 /* HSL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D57F1B497FA7D7022D4D9B3887944D00 /* Sources */ = {
+		9EB055F18165717C32FF1E11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD06C999965B87BE7BD3600 /* VTAcknowledgement.m in Sources */,
+				3FEF44DF634A9E1659EC881B /* VTAcknowledgementsParser.m in Sources */,
+				0289DE8DC6869FA07D4F9A4D /* VTAcknowledgementsViewController-dummy.m in Sources */,
+				EEDF9738B5A4AC02EB5D9C10 /* VTAcknowledgementsViewController.m in Sources */,
+				C6C5A84B535B8623E0A03FB0 /* VTAcknowledgementViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAC00BD0F347D21DF3FF8C0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E12306267EFA6389AE143763 /* Duration.swift in Sources */,
+				4663D095EBC3C82D898A22ED /* Int+Timepiece.swift in Sources */,
+				2A85D4AB3E4E0B0DBCCCBEF1 /* NSCalendar+Timepiece.swift in Sources */,
+				EC018393F4DB5B9E943A04F8 /* NSCalendarUnit+Timepiece.swift in Sources */,
+				6C40BF61C121D75A52DF126F /* NSDate+Timepiece.swift in Sources */,
+				C2CA8AFF237DFB242E3B7545 /* NSDateComponents+Timepiece.swift in Sources */,
+				E395B43E97B43E0928A909AF /* NSTimeInterval+Timepiece.swift in Sources */,
+				0ADCFAB554892FA1C7948923 /* Pods-trySwift-Timepiece-dummy.m in Sources */,
+				20FAAE4E7A11923E9E5B68E7 /* String+Timepiece.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED6E5F52194445152D084A73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F041425578FCC65F71D0C7DE074C2272 /* Sources */ = {
+		EFF5BDB658DFEC689B31A792 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F19306BF20D394AE2799308CC2E5EC0 /* BarPagerTabStripViewController.swift in Sources */,
-				755A59AD8014C69F61F219B84004999D /* BarView.swift in Sources */,
-				F9B7187889BB72BCE63C7B0A33CBE214 /* BaseButtonBarPagerTabStripViewController.swift in Sources */,
-				7A544B6D77AAD058F1138A5B6D2CCA65 /* ButtonBarPagerTabStripViewController.swift in Sources */,
-				D318235400B685146C6B2EAD34016ED6 /* ButtonBarView.swift in Sources */,
-				6B072673BB21FB7CEA4DF0D5286B0B59 /* ButtonBarViewCell.swift in Sources */,
-				D505EBBA52FF5CE1DE7A75A200B9ED44 /* ButtonCell.xib in Sources */,
-				490A1A196CA64FB9D6A74CB24FADF075 /* FXPageControl.m in Sources */,
-				F54FCC110B39B17A1BF5D2AE7C3E7DC6 /* IndicatorInfo.swift in Sources */,
-				8CFCADC940422985F1D7543D2938C3DF /* PagerTabStripBehaviour.swift in Sources */,
-				5050C5542B6D6BF3E1B2F8AD4604A30C /* PagerTabStripError.swift in Sources */,
-				55D82AC102AD02E5BFF556C3C0A38E3A /* PagerTabStripViewController.swift in Sources */,
-				C39A159A93318D923144952B26063620 /* SegmentedPagerTabStripViewController.swift in Sources */,
-				14039EC49FDAA9F5322032B3FAF3B520 /* SwipeDirection.swift in Sources */,
-				162CACEF9A893A9D0392C7CAD6DAA415 /* TwitterPagerTabStripViewController.swift in Sources */,
-				24489D8F80980F1D2BC61325B09B42CD /* XLPagerTabStrip-dummy.m in Sources */,
+				33FEB9DDFC8D5AD0B8DAD27C /* Pods-trySwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		07F5B7485736DEA8DEB2CF257455CF91 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DynamicColor;
-			target = 08F6A5AF8E89681F880EB03F167AACB7 /* DynamicColor */;
-			targetProxy = ABDAB41FD2D52C2B15FAB078436A90E1 /* PBXContainerItemProxy */;
-		};
-		4DB9E8B4C05BF714BCFB869073578DCA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = XLPagerTabStrip;
-			target = ACB712198CB011AB357EB02F4E538031 /* XLPagerTabStrip */;
-			targetProxy = 38C5350663635EB5A2E13B342D3E45D7 /* PBXContainerItemProxy */;
-		};
-		65872040FCD8B799A74B4E344F9D72C7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Toucan;
-			target = 4B1EBFE997C640647C7138F67571C948 /* Toucan */;
-			targetProxy = 1328FF0FBC6B573BF3993419F9B0ACF7 /* PBXContainerItemProxy */;
-		};
-		B4816D194F7E0C67C5DE8439B809FF3F /* PBXTargetDependency */ = {
+		10DBE002D155BEF8415EE7BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "XLPagerTabStrip-XLPagerTabStrip";
-			target = 9654CA6D2236C868BA0EF4A3A9BEFCD5 /* XLPagerTabStrip-XLPagerTabStrip */;
-			targetProxy = 54705B32C83EAADCDEE27F4D179EC90C /* PBXContainerItemProxy */;
+			target = D6FAFB5162E54F325A2DE2AF /* XLPagerTabStrip-XLPagerTabStrip */;
+			targetProxy = C729D275C1330E7DAE25D60D /* PBXContainerItemProxy */;
 		};
-		C1549C66F36BD70C145AAB6BC7B49A3B /* PBXTargetDependency */ = {
+		53122DAC956814C31308C966 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VTAcknowledgementsViewController;
-			target = 6E9F42C9A789119EE7E79FFAAA1222D5 /* VTAcknowledgementsViewController */;
-			targetProxy = B8921A3C4A0289B0DE317F58F6DBF2D0 /* PBXContainerItemProxy */;
+			target = 7C3F5BA8A2C035BA06A29C82 /* VTAcknowledgementsViewController */;
+			targetProxy = 457268CAF05D06663D565D70 /* PBXContainerItemProxy */;
 		};
-		EA436C837E2321322CFD4386503D6E97 /* PBXTargetDependency */ = {
+		804028A3255B90BAE137FF92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Timepiece;
-			target = C334BE050C5AC37121E309B8727D8A40 /* Timepiece */;
-			targetProxy = 3F34F94D46827F33818147F9CA5F9DCE /* PBXContainerItemProxy */;
+			name = DynamicColor;
+			target = 5A8C1960A343DF103EA82BD0 /* DynamicColor */;
+			targetProxy = 5431ADD3D9E26363B81C5D6A /* PBXContainerItemProxy */;
+		};
+		84F399B844FD817D268FD82C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-trySwift-Timepiece";
+			target = 120D02C24D2097287617AAD4 /* Pods-trySwift-Timepiece */;
+			targetProxy = C2B5E69D56C7182865A28077 /* PBXContainerItemProxy */;
+		};
+		89DCB4B1C0D38192BC308760 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-try Extension-Timepiece";
+			target = ADEC5DD734E77641DF177AEB /* Pods-try Extension-Timepiece */;
+			targetProxy = E198F1EAD2F03232ECA83CD1 /* PBXContainerItemProxy */;
+		};
+		C8BBCCCA04E22ACEBD39A076 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = XLPagerTabStrip;
+			target = 263F14994627823F105D0D09 /* XLPagerTabStrip */;
+			targetProxy = 27D6B14E2828AE0D82FDB882 /* PBXContainerItemProxy */;
+		};
+		FD652BADDF73376E03F77256 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Toucan;
+			target = 7EA3368AF7DAC4A5E31834C0 /* Toucan */;
+			targetProxy = 606130688B12725FBC14832D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1F44E32EAE84E9471EE7C84FE1D078C3 /* Debug */ = {
+		06745A879683F8455C70D367 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51C1F0EFC325B9D693A344B71B566C25 /* XLPagerTabStrip.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = XLPagerTabStrip;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		283E67CD3A76D2EECA6487F33D1A12B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C91AFEF3CA6DDCD848486E20511A9C1B /* Timepiece.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Timepiece/Timepiece-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Timepiece/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Timepiece/Timepiece.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Timepiece;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2FDA25EA59A040EBCE9F2C2A2DB62A8D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F99DC026ECF04DEC5682781942DF1C9E /* VTAcknowledgementsViewController.xcconfig */;
+			baseConfigurationReference = 9D8D7403A00CC34D53DF44BA /* VTAcknowledgementsViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -960,9 +1079,36 @@
 			};
 			name = Release;
 		};
-		36A605B5FF7BA8EEC30646FFCCDDC239 /* Debug */ = {
+		1141AFF7275B0CD6AD56B3DB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5AE2A357F8283A290023F8244CCBAC8 /* Toucan.xcconfig */;
+			baseConfigurationReference = EFA1C37180340929E43CAFA8 /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		15BEA653A849153E1701B945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9808EA3660CF4220441B5D1 /* Toucan.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -988,9 +1134,37 @@
 			};
 			name = Debug;
 		};
-		4E3A27E40FC9CD95E9B292E91EA84E77 /* Release */ = {
+		338A990305AA969A01CB4903 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
+			baseConfigurationReference = E719892AD1D53E5DCB8A3553 /* Pods-try Extension.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-try Extension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-try Extension/Pods-try Extension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_try_Extension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		4D84A6C5E2C26D4132CA5189 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97BD4E0C04326EF4ED3DD5A3 /* Pods-trySwift-Timepiece.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -999,17 +1173,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-trySwift-Timepiece/Pods-trySwift-Timepiece-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-trySwift-Timepiece/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-trySwift-Timepiece/Pods-trySwift-Timepiece.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
+				PRODUCT_NAME = Timepiece;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1018,7 +1189,88 @@
 			};
 			name = Release;
 		};
-		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+		6C16414F57D3BB6630C51582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1087C12B624E68F6F6E09399 /* Pods-try Extension-Timepiece.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-try Extension-Timepiece/Pods-try Extension-Timepiece-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-try Extension-Timepiece/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-try Extension-Timepiece/Pods-try Extension-Timepiece.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Timepiece;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		8722A76E5899C9425A6E84F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D8D7403A00CC34D53DF44BA /* VTAcknowledgementsViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VTAcknowledgementsViewController/VTAcknowledgementsViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/VTAcknowledgementsViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/VTAcknowledgementsViewController/VTAcknowledgementsViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = VTAcknowledgementsViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		88C9F5CA09C44D7291C296C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ED2149764CD0EB432F2A836 /* DynamicColor.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DynamicColor/DynamicColor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DynamicColor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DynamicColor/DynamicColor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DynamicColor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		96B94A5D832CB073F2EB21AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1054,10 +1306,208 @@
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+		9F369A1BAAA42B2FB62CD858 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA1C37180340929E43CAFA8 /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		ACBADA50D15BF7DBEE10A90F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDC217AF3A350D753F496C44 /* Pods-trySwift.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-trySwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-trySwift/Pods-trySwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_trySwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BBCE0189988A1B6FDED14AE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA1C37180340929E43CAFA8 /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		C5C97F27D2EA8DC468148B61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97BD4E0C04326EF4ED3DD5A3 /* Pods-trySwift-Timepiece.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-trySwift-Timepiece/Pods-trySwift-Timepiece-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-trySwift-Timepiece/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-trySwift-Timepiece/Pods-trySwift-Timepiece.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Timepiece;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CDF4EAAC097C2C887EAA7FEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ED2149764CD0EB432F2A836 /* DynamicColor.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DynamicColor/DynamicColor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DynamicColor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DynamicColor/DynamicColor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DynamicColor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CFBF01DF1B84E9DC8E9CFE2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA1C37180340929E43CAFA8 /* XLPagerTabStrip.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = XLPagerTabStrip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9D4E56CCE261F9E18F8F29B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6470F79A629A3A8EEDBD72D3 /* Pods-try Extension.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-try Extension/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-try Extension/Pods-try Extension.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_try_Extension;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		F116201B7909E5BD77A32597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C49486C7159A0312B983789 /* Pods-trySwift.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-trySwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-trySwift/Pods-trySwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_trySwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F12D5EBAA60ADAEC12CE4851 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1088,12 +1538,13 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
-		77E20EDB1476472E43842BC23D8F4894 /* Release */ = {
+		F7B380EB16B0DEF2CA219C4A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5AE2A357F8283A290023F8244CCBAC8 /* Toucan.xcconfig */;
+			baseConfigurationReference = B9808EA3660CF4220441B5D1 /* Toucan.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1118,273 +1569,125 @@
 			};
 			name = Release;
 		};
-		89CE7CD7486FD51184102D1B63290300 /* Debug */ = {
+		FA55EFBB4519240332BE5074 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA67E528B45A98E08A29E36F8BE23863 /* DynamicColor.xcconfig */;
+			baseConfigurationReference = 1087C12B624E68F6F6E09399 /* Pods-try Extension-Timepiece.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DynamicColor/DynamicColor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DynamicColor/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-try Extension-Timepiece/Pods-try Extension-Timepiece-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-try Extension-Timepiece/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DynamicColor/DynamicColor.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = DynamicColor;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		955BE37CEF671E299515E3A266F34474 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51C1F0EFC325B9D693A344B71B566C25 /* XLPagerTabStrip.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = XLPagerTabStrip;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		98C41BCBBE888CE56EF0CF501DEA3B1E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F99DC026ECF04DEC5682781942DF1C9E /* VTAcknowledgementsViewController.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/VTAcknowledgementsViewController/VTAcknowledgementsViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/VTAcknowledgementsViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/VTAcknowledgementsViewController/VTAcknowledgementsViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = VTAcknowledgementsViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A0FF20E247DC0A7E54362B2F47A77CD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA67E528B45A98E08A29E36F8BE23863 /* DynamicColor.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DynamicColor/DynamicColor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DynamicColor/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DynamicColor/DynamicColor.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = DynamicColor;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A10DC1CFEC34B655B3A80094F1D074EB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C282B3769F62D2E3538EC9AD59553A9D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51C1F0EFC325B9D693A344B71B566C25 /* XLPagerTabStrip.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/XLPagerTabStrip/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/XLPagerTabStrip/XLPagerTabStrip.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = XLPagerTabStrip;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D991B4DD6C52A2727876A287D69290DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C91AFEF3CA6DDCD848486E20511A9C1B /* Timepiece.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Timepiece/Timepiece-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Timepiece/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Timepiece/Timepiece.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-try Extension-Timepiece/Pods-try Extension-Timepiece.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Timepiece;
-				SDKROOT = iphoneos;
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F9CC110F17957B1A07DDF89EE9636AC8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51C1F0EFC325B9D693A344B71B566C25 /* XLPagerTabStrip.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = XLPagerTabStrip;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0ED06FD56BC08655A7EAB3261A1E1473 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		011715A6916713E12E43B672 /* Build configuration list for PBXNativeTarget "Toucan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A10DC1CFEC34B655B3A80094F1D074EB /* Debug */,
-				4E3A27E40FC9CD95E9B292E91EA84E77 /* Release */,
+				15BEA653A849153E1701B945 /* Debug */,
+				F7B380EB16B0DEF2CA219C4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F5694708F8E130A77BD7A60108B4608 /* Build configuration list for PBXNativeTarget "Timepiece" */ = {
+		066CAF7472B93C044C7EAB79 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				283E67CD3A76D2EECA6487F33D1A12B6 /* Debug */,
-				D991B4DD6C52A2727876A287D69290DD /* Release */,
+				9F369A1BAAA42B2FB62CD858 /* Debug */,
+				BBCE0189988A1B6FDED14AE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		3382364DAA60E0EC009A5A3D /* Build configuration list for PBXNativeTarget "Pods-trySwift-Timepiece" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
-				74857149DC1E0D599B8A01A78349A926 /* Release */,
+				C5C97F27D2EA8DC468148B61 /* Debug */,
+				4D84A6C5E2C26D4132CA5189 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		57651C2D3F79A767FE83184678F39DFA /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */ = {
+		3D197A90DA94F88A7B6C638D /* Build configuration list for PBXNativeTarget "VTAcknowledgementsViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F44E32EAE84E9471EE7C84FE1D078C3 /* Debug */,
-				C282B3769F62D2E3538EC9AD59553A9D /* Release */,
+				8722A76E5899C9425A6E84F6 /* Debug */,
+				06745A879683F8455C70D367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9905EBE0989CCC37C3768D1742C96FA /* Build configuration list for PBXNativeTarget "VTAcknowledgementsViewController" */ = {
+		4F8A0837B3800697F4E72D42 /* Build configuration list for PBXNativeTarget "Pods-try Extension-Timepiece" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				98C41BCBBE888CE56EF0CF501DEA3B1E /* Debug */,
-				2FDA25EA59A040EBCE9F2C2A2DB62A8D /* Release */,
+				6C16414F57D3BB6630C51582 /* Debug */,
+				FA55EFBB4519240332BE5074 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0F5D154E793BD77EE1747B4380CB5CE /* Build configuration list for PBXNativeTarget "XLPagerTabStrip-XLPagerTabStrip" */ = {
+		544CE540B7A9948449C0EF3E /* Build configuration list for PBXNativeTarget "DynamicColor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				955BE37CEF671E299515E3A266F34474 /* Debug */,
-				F9CC110F17957B1A07DDF89EE9636AC8 /* Release */,
+				88C9F5CA09C44D7291C296C9 /* Debug */,
+				CDF4EAAC097C2C887EAA7FEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E3973EA6524E156A0A3C9E945FC9F45E /* Build configuration list for PBXNativeTarget "Toucan" */ = {
+		7EC6A9466D81C579DFEAA8BD /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				36A605B5FF7BA8EEC30646FFCCDDC239 /* Debug */,
-				77E20EDB1476472E43842BC23D8F4894 /* Release */,
+				96B94A5D832CB073F2EB21AA /* Debug */,
+				F12D5EBAA60ADAEC12CE4851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC4702B144C514B41D51E60E93CA52C5 /* Build configuration list for PBXNativeTarget "DynamicColor" */ = {
+		82D8DC730F7EE951DBA0FB85 /* Build configuration list for PBXNativeTarget "Pods-trySwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				89CE7CD7486FD51184102D1B63290300 /* Debug */,
-				A0FF20E247DC0A7E54362B2F47A77CD5 /* Release */,
+				ACBADA50D15BF7DBEE10A90F /* Debug */,
+				F116201B7909E5BD77A32597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF041BB1CBDE7EC500F59281 /* Build configuration list for PBXNativeTarget "XLPagerTabStrip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFBF01DF1B84E9DC8E9CFE2B /* Debug */,
+				1141AFF7275B0CD6AD56B3DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0D66F4EA85AA4CA00C776A9 /* Build configuration list for PBXNativeTarget "Pods-try Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9D4E56CCE261F9E18F8F29B /* Debug */,
+				338A990305AA969A01CB4903 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = 1F0CB4E4E98ABEEA48F2C7AE /* Project object */;
 }

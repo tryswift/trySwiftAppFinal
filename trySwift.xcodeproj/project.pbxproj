@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		048A9BF7A8D3C3DD26D50B41 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9600A9591D00647A023EE414 /* Pods.framework */; };
+		71FA80BF7F20F8E8E9C8903F /* Pods_try_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CAC6469D6AC2F99356E9DC /* Pods_try_Extension.framework */; };
+		EDE2ECE0888AE97C5817C447 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 080425B1A50FECCB51E84216 /* Pods_trySwift.framework */; };
 		FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */; };
 		FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */; };
 		FA39E8CD1C6AF8C80074B6BE /* NSLocaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8CC1C6AF8C80074B6BE /* NSLocaleExtension.swift */; };
@@ -131,9 +132,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		080425B1A50FECCB51E84216 /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38CAAC53F6ECFE1EAE2B3111 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		45B486A92C7FDE576D71BD2E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		9600A9591D00647A023EE414 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		580919BA601AC6D668E841CA /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
+		7F125C93D8CB5C5F3F01FDE2 /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
+		9D2670A6473564A2F232BACA /* Pods-try Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		D6CAC6469D6AC2F99356E9DC /* Pods_try_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9851AEDDD14C98F87FAEEC9 /* Pods-try Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.release.xcconfig"; sourceTree = "<group>"; };
 		FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavTabButtonCell.xib; sourceTree = "<group>"; };
 		FA39E8CC1C6AF8C80074B6BE /* NSLocaleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocaleExtension.swift; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71FA80BF7F20F8E8E9C8903F /* Pods_try_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048A9BF7A8D3C3DD26D50B41 /* Pods.framework in Frameworks */,
+				EDE2ECE0888AE97C5817C447 /* Pods_trySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +254,10 @@
 			children = (
 				45B486A92C7FDE576D71BD2E /* Pods.debug.xcconfig */,
 				38CAAC53F6ECFE1EAE2B3111 /* Pods.release.xcconfig */,
+				9D2670A6473564A2F232BACA /* Pods-try Extension.debug.xcconfig */,
+				F9851AEDDD14C98F87FAEEC9 /* Pods-try Extension.release.xcconfig */,
+				580919BA601AC6D668E841CA /* Pods-trySwift.debug.xcconfig */,
+				7F125C93D8CB5C5F3F01FDE2 /* Pods-trySwift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -254,7 +265,8 @@
 		F3DF73CDB86D2275A8937FFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9600A9591D00647A023EE414 /* Pods.framework */,
+				D6CAC6469D6AC2F99356E9DC /* Pods_try_Extension.framework */,
+				080425B1A50FECCB51E84216 /* Pods_trySwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -580,9 +592,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA65B5BB1C79895A00DCAF0B /* Build configuration list for PBXNativeTarget "try Extension" */;
 			buildPhases = (
+				48695D2D0CF82400C9CCBEB0 /* Check Pods Manifest.lock */,
 				FA65B5A01C79895A00DCAF0B /* Sources */,
 				FA65B5A11C79895A00DCAF0B /* Frameworks */,
 				FA65B5A21C79895A00DCAF0B /* Resources */,
+				983DE1EFB04202DBF487F6F2 /* Embed Pods Frameworks */,
+				530A88979F9C13BA5419843F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -769,7 +784,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trySwift/Pods-trySwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48695D2D0CF82400C9CCBEB0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		530A88979F9C13BA5419843F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-try Extension/Pods-try Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		55351C6257305CF734695696 /* Copy Pods Resources */ = {
@@ -784,7 +829,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trySwift/Pods-trySwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		983DE1EFB04202DBF487F6F2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-try Extension/Pods-try Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B47FFEDD4E9A58EF1BBFBF4A /* Check Pods Manifest.lock */ = {
@@ -966,6 +1026,7 @@
 		};
 		FA65B5B91C79895A00DCAF0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D2670A6473564A2F232BACA /* Pods-try Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				INFOPLIST_FILE = "try Extension/Info.plist";
@@ -981,6 +1042,7 @@
 		};
 		FA65B5BA1C79895A00DCAF0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9851AEDDD14C98F87FAEEC9 /* Pods-try Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				INFOPLIST_FILE = "try Extension/Info.plist";
@@ -1030,7 +1092,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1068,7 +1130,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1077,7 +1139,7 @@
 		};
 		FAFA15E11C69D31C00FEA4EA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 45B486A92C7FDE576D71BD2E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 580919BA601AC6D668E841CA /* Pods-trySwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1093,7 +1155,7 @@
 		};
 		FAFA15E21C69D31C00FEA4EA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38CAAC53F6ECFE1EAE2B3111 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 7F125C93D8CB5C5F3F01FDE2 /* Pods-trySwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

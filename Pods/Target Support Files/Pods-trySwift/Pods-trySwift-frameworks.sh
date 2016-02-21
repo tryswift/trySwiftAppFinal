@@ -84,16 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/DynamicColor.framework"
-  install_framework "Pods/Timepiece.framework"
-  install_framework "Pods/Toucan.framework"
-  install_framework "Pods/VTAcknowledgementsViewController.framework"
-  install_framework "Pods/XLPagerTabStrip.framework"
+  install_framework "Pods-trySwift/DynamicColor.framework"
+  install_framework "Pods-trySwift/Timepiece.framework"
+  install_framework "Pods-trySwift/Toucan.framework"
+  install_framework "Pods-trySwift/VTAcknowledgementsViewController.framework"
+  install_framework "Pods-trySwift/XLPagerTabStrip.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/DynamicColor.framework"
-  install_framework "Pods/Timepiece.framework"
-  install_framework "Pods/Toucan.framework"
-  install_framework "Pods/VTAcknowledgementsViewController.framework"
-  install_framework "Pods/XLPagerTabStrip.framework"
+  install_framework "Pods-trySwift/DynamicColor.framework"
+  install_framework "Pods-trySwift/Timepiece.framework"
+  install_framework "Pods-trySwift/Toucan.framework"
+  install_framework "Pods-trySwift/VTAcknowledgementsViewController.framework"
+  install_framework "Pods-trySwift/XLPagerTabStrip.framework"
 fi
