@@ -25,6 +25,14 @@ class SponsorsViewController: UITableViewController {
 
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -65,8 +73,6 @@ class SponsorsViewController: UITableViewController {
         webViewController.displayTitle = sponsor.name
         
         self.navigationController?.pushViewController(webViewController, animated: true)
-
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
 }

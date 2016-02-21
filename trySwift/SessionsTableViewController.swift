@@ -27,6 +27,14 @@ class SessionsTableViewController: UITableViewController {
         }
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -60,8 +68,6 @@ class SessionsTableViewController: UITableViewController {
             sessionDetailsVC.session = session
             sessionDetailsVC.speaker = speaker
             navigationController?.pushViewController(sessionDetailsVC, animated: true)
-
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
 
         if session.id == 319 { // TOMBOY106
@@ -69,8 +75,6 @@ class SessionsTableViewController: UITableViewController {
             webViewController.url = NSURL(string: "http://www.tomboy106.com/shibuya106/index.html")!
             webViewController.displayTitle = session.location
             navigationController?.pushViewController(webViewController, animated: true)
-
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
 
