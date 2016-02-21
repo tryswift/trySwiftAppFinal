@@ -31,6 +31,14 @@ class SpeakersViewController: UITableViewController {
         }
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let speakerDetailVC = segue.destinationViewController as? SpeakerDetailViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
