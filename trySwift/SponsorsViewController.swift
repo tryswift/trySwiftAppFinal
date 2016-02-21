@@ -65,6 +65,8 @@ class SponsorsViewController: UITableViewController {
         webViewController.displayTitle = sponsor.name
         
         self.navigationController?.pushViewController(webViewController, animated: true)
+
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
 }

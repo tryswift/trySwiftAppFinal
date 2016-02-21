@@ -73,6 +73,8 @@ class OrganizersTableViewController: UITableViewController {
             webViewController.displayTitle = "@\(username)"
             navigationController?.pushViewController(webViewController, animated: true)
         }
+
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
 }
