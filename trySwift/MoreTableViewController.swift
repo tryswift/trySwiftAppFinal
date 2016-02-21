@@ -94,6 +94,7 @@ class MoreTableViewController: UITableViewController {
             }
         }
 
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 

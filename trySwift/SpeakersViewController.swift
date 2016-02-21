@@ -59,6 +59,8 @@ class SpeakersViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier(speakerDetailSegue, sender: self)
+
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 
