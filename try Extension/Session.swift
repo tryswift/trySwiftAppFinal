@@ -6,7 +6,7 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import Foundation
+import Timepiece
 
 struct Session {
 
