@@ -27,7 +27,6 @@ class SpeakerDetailViewController: UITableViewController {
         
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
         tableView.separatorStyle = .None
     }
 

@@ -21,7 +21,7 @@ class SessionDetailsViewController: UITableViewController {
         super.viewDidLoad()
 
         title = session.description
-        
+
         tableView.registerNib(UINib(nibName: String(SessionHeaderTableViewCell), bundle: nil), forCellReuseIdentifier: String(SessionHeaderTableViewCell))
         tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
         tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
@@ -29,7 +29,6 @@ class SessionDetailsViewController: UITableViewController {
 
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
         tableView.separatorStyle = .None
     }
 
