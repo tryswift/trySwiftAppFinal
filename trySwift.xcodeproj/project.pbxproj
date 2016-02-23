@@ -60,7 +60,6 @@
 		FA65B59C1C79895A00DCAF0B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA65B59A1C79895A00DCAF0B /* Interface.storyboard */; };
 		FA65B59E1C79895A00DCAF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA65B59D1C79895A00DCAF0B /* Assets.xcassets */; };
 		FA65B5A51C79895A00DCAF0B /* try Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA65B5A41C79895A00DCAF0B /* try Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FA65B5AA1C79895A00DCAF0B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5A91C79895A00DCAF0B /* InterfaceController.swift */; };
 		FA65B5AC1C79895A00DCAF0B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */; };
 		FA65B5AE1C79895A00DCAF0B /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AD1C79895A00DCAF0B /* GlanceController.swift */; };
 		FA65B5B01C79895A00DCAF0B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */; };
@@ -70,6 +69,10 @@
 		FA65B5C51C79C9BF00DCAF0B /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C41C79C9BF00DCAF0B /* Speaker.swift */; };
 		FA65B5C71C79C9E200DCAF0B /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C61C79C9E200DCAF0B /* Presentation.swift */; };
 		FA65B5CA1C79CAF600DCAF0B /* NSLocaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C91C79CAF600DCAF0B /* NSLocaleExtension.swift */; };
+		FAED14CB1C7C1A1000F11E25 /* SessionTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */; };
+		FAED14CE1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */; };
+		FAED14D01C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CF1C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift */; };
+		FAED14D21C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14D11C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -197,7 +200,6 @@
 		FA65B59D1C79895A00DCAF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA65B59F1C79895A00DCAF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA65B5A41C79895A00DCAF0B /* try Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA65B5A91C79895A00DCAF0B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		FA65B5AD1C79895A00DCAF0B /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,10 @@
 		FA65B5C41C79C9BF00DCAF0B /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		FA65B5C61C79C9E200DCAF0B /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
 		FA65B5C91C79CAF600DCAF0B /* NSLocaleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocaleExtension.swift; sourceTree = "<group>"; };
+		FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableRowController.swift; sourceTree = "<group>"; };
+		FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay1InterfaceController.swift; sourceTree = "<group>"; };
+		FAED14CF1C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay2InterfaceController.swift; sourceTree = "<group>"; };
+		FAED14D11C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay3InterfaceController.swift; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -500,10 +506,11 @@
 		FA65B5A81C79895A00DCAF0B /* try Extension */ = {
 			isa = PBXGroup;
 			children = (
-				FA65B5A91C79895A00DCAF0B /* InterfaceController.swift */,
 				FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */,
+				FAED14CC1C7C1B0800F11E25 /* InterfaceControllers */,
 				FA65B5AD1C79895A00DCAF0B /* GlanceController.swift */,
 				FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */,
+				FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */,
 				FA65B5C31C79C9A600DCAF0B /* Models */,
 				FA65B5C81C79CAE000DCAF0B /* Utilities */,
 				FA65B5B11C79895A00DCAF0B /* Assets.xcassets */,
@@ -528,6 +535,16 @@
 				FA65B5C91C79CAF600DCAF0B /* NSLocaleExtension.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		FAED14CC1C7C1B0800F11E25 /* InterfaceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */,
+				FAED14CF1C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift */,
+				FAED14D11C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift */,
+			);
+			name = InterfaceControllers;
 			sourceTree = "<group>";
 		};
 		FAFA15AF1C69D31B00FEA4EA = {
@@ -895,13 +912,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAED14CE1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift in Sources */,
 				FA65B5CA1C79CAF600DCAF0B /* NSLocaleExtension.swift in Sources */,
 				FA65B5C21C79BE1D00DCAF0B /* Session.swift in Sources */,
 				FA65B5C71C79C9E200DCAF0B /* Presentation.swift in Sources */,
+				FAED14D01C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift in Sources */,
 				FA65B5AC1C79895A00DCAF0B /* ExtensionDelegate.swift in Sources */,
 				FA65B5B01C79895A00DCAF0B /* ComplicationController.swift in Sources */,
 				FA65B5C51C79C9BF00DCAF0B /* Speaker.swift in Sources */,
-				FA65B5AA1C79895A00DCAF0B /* InterfaceController.swift in Sources */,
+				FAED14D21C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift in Sources */,
+				FAED14CB1C7C1A1000F11E25 /* SessionTableRowController.swift in Sources */,
 				FA65B5AE1C79895A00DCAF0B /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
