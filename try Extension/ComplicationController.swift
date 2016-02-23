@@ -51,6 +51,17 @@ extension ComplicationController {
             
             let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: tmpl)
             handler(timelineEntry)
+        } else if NSDate() > Session.sessions.last!.endTime {
+            let tmpl = CLKComplicationTemplateModularLargeStandardBody()
+            
+            let firstSession = Session.sessions.first!
+            let lastSession = Session.sessions.last!
+            
+            tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! Conference")
+            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Tokyo, 🇯🇵")
+            tmpl.body2TextProvider = CLKTimeIntervalTextProvider(startDate: firstSession.startTime, endDate: lastSession.endTime)
+            let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: tmpl)
+            handler(timelineEntry)
         } else {
             getTimelineEntriesForComplication(complication, beforeDate: NSDate(), limit: 1) { entries in
                 handler(entries?.first)
@@ -60,11 +71,12 @@ extension ComplicationController {
     
     func getTimelineEntriesForComplication(complication: CLKComplication, beforeDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
         
-        let timelineEntries = Session.sessions
+        let timelineEntries = Array(Session.sessions
             .filter { timelineEntryDateForSession($0) < date }
             .map {
                 CLKComplicationTimelineEntry(date: timelineEntryDateForSession($0), complicationTemplate: templateForSession($0))
-        }
+        }.reverse())
+        
         
         if timelineEntries.count > limit {
             handler(Array(timelineEntries[0..<limit]))
