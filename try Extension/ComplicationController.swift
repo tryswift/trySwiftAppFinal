@@ -134,16 +134,16 @@ private extension ComplicationController {
     func templateForSession(session: Session) -> CLKComplicationTemplate {
         let tmpl = CLKComplicationTemplateModularLargeStandardBody()
         
-        if let image = UIImage(named: session.sessionType.rawValue) {
-            tmpl.headerImageProvider = CLKImageProvider(onePieceImage: image)
-        }
-        
         tmpl.headerTextProvider = CLKTimeIntervalTextProvider(startDate: session.startTime, endDate: session.endTime)
         
         if let speaker = session.speaker {
-            tmpl.body1TextProvider = CLKSimpleTextProvider(text: speaker.presentation.title)
+            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🤓 \(speaker.presentation.title)")
         } else {
-            tmpl.body1TextProvider = CLKSimpleTextProvider(text: session.description)
+            if session.sessionType == .Announcement {
+                tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🎙 \(session.description)")
+            } else {
+                tmpl.body1TextProvider = CLKSimpleTextProvider(text: session.description)
+            }
         }
         
         return tmpl

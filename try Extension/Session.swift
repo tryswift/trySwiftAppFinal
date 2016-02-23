@@ -21,15 +21,6 @@ struct Session {
     enum SessionType: String {
         case Speaker, Coffee, Announcement, Lunch, Party
     }
-    
-    var timeString: String {
-        return "\(startTime.stringFromFormat("H:mm")) - \(endTime.stringFromFormat("H:mm"))"
-    }
-    
-    var dateTimeString: String {
-        let format = isJapanese ? "MMMM d H:mm" : "EEEE, H:mm"
-        return "\(startTime.stringFromFormat(format)) - \(endTime.stringFromFormat("H:mm"))"
-    }
 }
 
 extension Session {
