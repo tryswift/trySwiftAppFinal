@@ -5,12 +5,121 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Sessions Day1 Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="try" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="SessionsDay1InterfaceController" customModule="try_Extension">
+                    <items>
+                        <table alignment="left" id="wvR-44-SKR">
+                            <items>
+                                <tableRow identifier="SessionTableRowController" selectable="NO" id="rmE-Bd-xXe" customClass="SessionTableRowController" customModule="try_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="0ZM-gi-0I6">
+                                        <items>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="wrB-z3-hXo">
+                                                <color key="textColor" red="0.72156862749999995" green="0.1960784314" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="Utx-yE-3Ro">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="Zdb-pS-kpb">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="subtitleInterfaceLabel" destination="Zdb-pS-kpb" id="EYR-75-btK"/>
+                                        <outlet property="timeInterfaceLabel" destination="wrB-z3-hXo" id="LuA-Cg-Vvk"/>
+                                        <outlet property="titleInterfaceLabel" destination="Utx-yE-3Ro" id="Vb6-NV-fPY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="sessionsTable" destination="wvR-44-SKR" id="wpD-SS-mPj"/>
+                        <segue destination="aKe-29-2M1" kind="relationship" relationship="nextPage" id="ECR-OW-HHc"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="164" y="217"/>
+        </scene>
+        <!--Sessions Day2 Interface Controller-->
+        <scene sceneID="tgC-5y-CtN">
+            <objects>
+                <controller id="aKe-29-2M1" customClass="SessionsDay2InterfaceController" customModule="try_Extension">
+                    <items>
+                        <table alignment="left" id="Tvs-OL-sTt">
+                            <items>
+                                <tableRow identifier="SessionTableRowController" selectable="NO" id="FIk-cC-Mvu" customClass="SessionTableRowController" customModule="try_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="IPW-ag-3wi">
+                                        <items>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="Z8M-qs-vd9">
+                                                <color key="textColor" red="0.72156862749999995" green="0.1960784314" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="RBI-fh-DAn">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="eoz-GG-FSt">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="subtitleInterfaceLabel" destination="eoz-GG-FSt" id="mQH-ou-XPr"/>
+                                        <outlet property="timeInterfaceLabel" destination="Z8M-qs-vd9" id="vO1-o1-NYv"/>
+                                        <outlet property="titleInterfaceLabel" destination="RBI-fh-DAn" id="uw4-IP-CGY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="sessionsTable" destination="Tvs-OL-sTt" id="dff-5X-JE9"/>
+                        <segue destination="GAW-pN-lDw" kind="relationship" relationship="nextPage" id="X72-vP-YAB"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="360" y="214"/>
+        </scene>
+        <!--Sessions Day3 Interface Controller-->
+        <scene sceneID="01n-G7-vNo">
+            <objects>
+                <controller id="GAW-pN-lDw" customClass="SessionsDay3InterfaceController" customModule="try_Extension">
+                    <items>
+                        <table alignment="left" id="kid-cq-zQC">
+                            <items>
+                                <tableRow identifier="SessionTableRowController" selectable="NO" id="mm2-SC-7rL" customClass="SessionTableRowController" customModule="try_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="wkS-jj-rda">
+                                        <items>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="slf-bY-Xni">
+                                                <color key="textColor" red="0.72156862749999995" green="0.1960784314" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="nHP-18-aDd">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="Nis-4q-y6I">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="subtitleInterfaceLabel" destination="Nis-4q-y6I" id="d3t-OJ-jNJ"/>
+                                        <outlet property="timeInterfaceLabel" destination="slf-bY-Xni" id="hYb-II-Nr2"/>
+                                        <outlet property="titleInterfaceLabel" destination="nHP-18-aDd" id="lvO-Cp-ioU"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="sessionsTable" destination="kid-cq-zQC" id="98z-IC-SeW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="535" y="214"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">

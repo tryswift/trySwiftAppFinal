@@ -21,6 +21,10 @@ struct Session {
     enum SessionType: String {
         case Speaker, Coffee, Announcement, Lunch, Party
     }
+    
+    var timeString: String {
+        return "\(startTime.stringFromFormat("H:mm")) - \(endTime.stringFromFormat("H:mm"))"
+    }
 }
 
 extension Session {
@@ -30,6 +34,10 @@ extension Session {
     static let Lunch = isJapanese ? "🍱 ランチ" : "🍱 Lunch"
     static let Coffee = isJapanese ? " ☕️ 休憩" : "☕️ & 🍩 Break"
     static let TOMBOY106 = isJapanese ? "TOMBOY INDIAN LOUNGE DINING 渋谷106道玄坂店" : "TOMBOY INDIAN LOUNGE DINING" // http://www.tomboy106.com/shibuya106/index.html
+    
+    static let sessionsDay1 = Array(sessions[0...16])
+    static let sessionsDay2 = Array(sessions[17...33])
+    static let sessionsDay3 = Array(sessions[34...51])
     
     static let sessions = [
         Session(id: 101,
