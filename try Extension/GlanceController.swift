@@ -32,7 +32,7 @@ class GlanceController: WKInterfaceController {
         let sessionForTime = sessions.filter { (($0.startTime - 5.minutes)...$0.endTime).contains(NSDate())}
         if let session = sessionForTime.first {
             configureSession(session)
-        } else if NSDate() < Session.sessions.first!.startTime {
+        } else if NSDate() < (Session.sessions.first!.startTime - 1.day ) {
             configureSession(Session.sessions.first!)
         } else {
             configureDefault()
@@ -50,7 +50,7 @@ private extension GlanceController {
     
     func configureDefault() {
         titleInterfaceLabel.setText("try! Conference Tokyo, 🇯🇵")
-        timeInterfaceLabel.setText("Mar 2 - Mar 4")
+        timeInterfaceLabel.setText(isJapanese ? "2016.3.2〜2016.3.4" : "Mar 2 - 4, 2016")
         speakerInterfaceImage.setImage(UIImage(named: "tryLogo"))
         nameInterfaceLabel.setText("try! 🤗")
         twitterInterfaceLabel.setText("@tryswiftconf")
