@@ -124,12 +124,28 @@
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
-                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="try" customModuleProvider="target">
+                <glanceController spacing="0.0" topTemplateType="body2Body1" bottomTemplateType="groupBody1Footer" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="try" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="gv7-I2-MZq"/>
-                        <group alignment="left" id="eew-Gs-W6Y"/>
+                        <label alignment="left" text="Dive into Swift Ecosystem" baselineAdjustment="alignCenters" id="wXx-zg-Oi8"/>
+                        <label alignment="left" text="10:00 -  10:25" id="6Mz-XT-62I">
+                            <color key="textColor" red="0.72156862749999995" green="0.1960784314" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <group alignment="left" id="eew-Gs-W6Y">
+                            <items>
+                                <imageView width="1" height="1" alignment="left" image="syo" contentMode="scaleAspectFill" id="4Yh-gX-OZL"/>
+                            </items>
+                        </group>
+                        <label alignment="left" text="Syo Ikeda" id="wbF-uE-JWw"/>
+                        <label alignment="left" text="@ikesyo" id="csj-ut-SOv"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="nameInterfaceLabel" destination="wbF-uE-JWw" id="O09-ZI-crx"/>
+                        <outlet property="speakerInterfaceImage" destination="4Yh-gX-OZL" id="RdV-Ko-MCP"/>
+                        <outlet property="timeInterfaceLabel" destination="6Mz-XT-62I" id="e80-b0-qgd"/>
+                        <outlet property="titleInterfaceLabel" destination="wXx-zg-Oi8" id="IQk-RH-oat"/>
+                        <outlet property="twitterInterfaceLabel" destination="csj-ut-SOv" id="gkP-ce-7yX"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="164" y="514"/>
