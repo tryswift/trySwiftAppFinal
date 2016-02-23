@@ -124,12 +124,12 @@
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
-                <glanceController spacing="0.0" topTemplateType="body2Body1" bottomTemplateType="groupBody1Footer" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="try" customModuleProvider="target">
+                <glanceController spacing="0.0" topTemplateType="body1Body2" bottomTemplateType="groupBody1Footer" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="try" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Dive into Swift Ecosystem" baselineAdjustment="alignCenters" id="wXx-zg-Oi8"/>
-                        <label alignment="left" text="10:00 -  10:25" id="6Mz-XT-62I">
+                        <label alignment="left" text="10:00 - 10:25" baselineAdjustment="alignCenters" id="wXx-zg-Oi8">
                             <color key="textColor" red="0.72156862749999995" green="0.1960784314" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
+                        <label alignment="left" text="Dive into Swift Ecosystem" id="6Mz-XT-62I"/>
                         <group alignment="left" id="eew-Gs-W6Y">
                             <items>
                                 <imageView width="1" height="1" alignment="left" image="syo" contentMode="scaleAspectFill" id="4Yh-gX-OZL"/>
@@ -142,8 +142,8 @@
                     <connections>
                         <outlet property="nameInterfaceLabel" destination="wbF-uE-JWw" id="O09-ZI-crx"/>
                         <outlet property="speakerInterfaceImage" destination="4Yh-gX-OZL" id="RdV-Ko-MCP"/>
-                        <outlet property="timeInterfaceLabel" destination="6Mz-XT-62I" id="e80-b0-qgd"/>
-                        <outlet property="titleInterfaceLabel" destination="wXx-zg-Oi8" id="IQk-RH-oat"/>
+                        <outlet property="timeInterfaceLabel" destination="wXx-zg-Oi8" id="1B0-MU-veT"/>
+                        <outlet property="titleInterfaceLabel" destination="6Mz-XT-62I" id="Kfy-v4-R2g"/>
                         <outlet property="twitterInterfaceLabel" destination="csj-ut-SOv" id="gkP-ce-7yX"/>
                     </connections>
                 </glanceController>
