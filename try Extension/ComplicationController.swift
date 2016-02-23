@@ -7,9 +7,10 @@
 //
 
 import ClockKit
+import Timepiece
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
-    
+    let conferenceStartDate = NSDate.date(year: 2016, month: 3, day: 2, hour: 0, minute: 0, second: 0)
 }
 
 // MARK: - Timeline Configuration
@@ -38,50 +39,53 @@ extension ComplicationController {
 extension ComplicationController {
     
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
-        getTimelineEntriesForComplication(complication, beforeDate: NSDate(), limit: 1) { entries in
-            handler(entries?.first)
+        
+        if NSDate() < conferenceStartDate {
+            let tmpl = CLKComplicationTemplateModularLargeStandardBody()
+            tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! Conference")
+            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Tokyo, 🇯🇵")
+            let startDate = Session.sessions.first!.startTime
+            let style = CLKRelativeDateStyle.Natural
+            let units: NSCalendarUnit = [.Day, .Hour, .Minute]
+            tmpl.body2TextProvider = CLKRelativeDateTextProvider(date: startDate, style: style, units: units)
+            
+            let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: tmpl)
+            handler(timelineEntry)
+        } else {
+            getTimelineEntriesForComplication(complication, beforeDate: NSDate(), limit: 1) { entries in
+                handler(entries?.first)
+            }
         }
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, beforeDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
-        var entries = [CLKComplicationTimelineEntry]()
         
-        var session = Session.sessions.last
-        while let thisSession = session {
-            let thisEntryDate = timelineEntryDateForSession(thisSession)
-            if date.compare(thisEntryDate) == .OrderedDescending {
-                let tmpl = templateForSession(thisSession)
-                let entry = CLKComplicationTimelineEntry(date: thisEntryDate, complicationTemplate: tmpl)
-                entries.append(entry)
-                if entries.count == limit { break }
-            }
-            if thisSession.index > 0 {
-                session = Session.sessions[thisSession.index - 1]
-            } else {
-                session = nil
-            }
-            
+        let timelineEntries = Session.sessions
+            .filter { timelineEntryDateForSession($0) < date }
+            .map {
+                CLKComplicationTimelineEntry(date: timelineEntryDateForSession($0), complicationTemplate: templateForSession($0))
         }
         
-        handler(entries)
+        if timelineEntries.count > limit {
+            handler(Array(timelineEntries[0..<limit]))
+        } else {
+            handler(timelineEntries)
+        }
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, afterDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
-        var entries = [CLKComplicationTimelineEntry]()
         
-        var session = Session.sessions.first
-        while let thisSession = session {
-            let thisEntryDate = timelineEntryDateForSession(thisSession)
-            if date.compare(thisEntryDate) == .OrderedAscending {
-                let tmpl = templateForSession(thisSession)
-                let entry = CLKComplicationTimelineEntry(date: thisEntryDate, complicationTemplate: tmpl)
-                entries.append(entry)
-                if entries.count == limit { break }
-            }
-            session = Session.sessions[thisSession.index + 1]
+        let timelineEntries = Session.sessions
+            .filter { timelineEntryDateForSession($0) > date }
+            .map {
+                CLKComplicationTimelineEntry(date: timelineEntryDateForSession($0), complicationTemplate: templateForSession($0))
         }
         
-        handler(entries)
+        if timelineEntries.count > limit {
+            handler(Array(timelineEntries[0..<limit]))
+        } else {
+            handler(timelineEntries)
+        }
     }
 }
 
@@ -105,7 +109,7 @@ extension ComplicationController {
         let lastSession = Session.sessions.last!
         
         tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! Conference")
-        tmpl.body1TextProvider = CLKSimpleTextProvider(text: "")
+        tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Tokyo, 🇯🇵")
         tmpl.body2TextProvider = CLKTimeIntervalTextProvider(startDate: firstSession.startTime, endDate: lastSession.endTime)
         
         handler(tmpl)
@@ -138,7 +142,7 @@ private extension ComplicationController {
             let previousSession = Session.sessions[session.index - 1]
             return previousSession.endTime
         } else {
-            return NSDate()
+            return conferenceStartDate
         }
     }
 }
