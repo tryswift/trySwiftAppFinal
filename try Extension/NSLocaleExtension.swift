@@ -6,8 +6,11 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class NSLocaleExtension: NSLocale {
-
-}
+let isJapanese: Bool = {
+    if let languageCode = NSLocale.currentLocale().objectForKey(NSLocaleLanguageCode) as? String {
+        return languageCode == "ja"
+    }
+    return false
+}()

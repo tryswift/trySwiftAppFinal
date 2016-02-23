@@ -8,7 +8,6 @@
 
 import ClockKit
 
-
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
 }
@@ -21,11 +20,13 @@ extension ComplicationController {
     }
     
     func getTimelineStartDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
-        handler(nil)
+        let startDate = timelineEntryDateForSession(Session.sessions.first!)
+        handler(startDate)
     }
     
     func getTimelineEndDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
-        handler(nil)
+        let endDate = Session.sessions.last?.endTime
+        handler(endDate)
     }
     
     func getPrivacyBehaviorForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationPrivacyBehavior) -> Void) {
@@ -37,18 +38,50 @@ extension ComplicationController {
 extension ComplicationController {
     
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
-        // Call the handler with the current timeline entry
-        handler(nil)
+        getTimelineEntriesForComplication(complication, beforeDate: NSDate(), limit: 1) { entries in
+            handler(entries?.first)
+        }
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, beforeDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
-        // Call the handler with the timeline entries prior to the given date
-        handler(nil)
+        var entries = [CLKComplicationTimelineEntry]()
+        
+        var session = Session.sessions.last
+        while let thisSession = session {
+            let thisEntryDate = timelineEntryDateForSession(thisSession)
+            if date.compare(thisEntryDate) == .OrderedDescending {
+                let tmpl = templateForSession(thisSession)
+                let entry = CLKComplicationTimelineEntry(date: thisEntryDate, complicationTemplate: tmpl)
+                entries.append(entry)
+                if entries.count == limit { break }
+            }
+            if thisSession.index > 0 {
+                session = Session.sessions[thisSession.index - 1]
+            } else {
+                session = nil
+            }
+            
+        }
+        
+        handler(entries)
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, afterDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
-        // Call the handler with the timeline entries after to the given date
-        handler(nil)
+        var entries = [CLKComplicationTimelineEntry]()
+        
+        var session = Session.sessions.first
+        while let thisSession = session {
+            let thisEntryDate = timelineEntryDateForSession(thisSession)
+            if date.compare(thisEntryDate) == .OrderedAscending {
+                let tmpl = templateForSession(thisSession)
+                let entry = CLKComplicationTimelineEntry(date: thisEntryDate, complicationTemplate: tmpl)
+                entries.append(entry)
+                if entries.count == limit { break }
+            }
+            session = Session.sessions[thisSession.index + 1]
+        }
+        
+        handler(entries)
     }
 }
 
@@ -66,6 +99,46 @@ extension ComplicationController {
     
     func getPlaceholderTemplateForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTemplate?) -> Void) {
         // This method will be called once per supported complication, and the results will be cached
-        handler(nil)
+        let tmpl = CLKComplicationTemplateModularLargeStandardBody()
+        
+        let firstSession = Session.sessions.first!
+        let lastSession = Session.sessions.last!
+        
+        tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! Conference")
+        tmpl.body1TextProvider = CLKSimpleTextProvider(text: "")
+        tmpl.body2TextProvider = CLKTimeIntervalTextProvider(startDate: firstSession.startTime, endDate: lastSession.endTime)
+        
+        handler(tmpl)
+    }
+}
+
+// MARK: Private Helper Methods
+private extension ComplicationController {
+    
+    func templateForSession(session: Session) -> CLKComplicationTemplate {
+        let tmpl = CLKComplicationTemplateModularLargeStandardBody()
+        
+        if let image = UIImage(named: session.sessionType.rawValue) {
+            tmpl.headerImageProvider = CLKImageProvider(onePieceImage: image)
+        }
+        
+        tmpl.headerTextProvider = CLKTimeIntervalTextProvider(startDate: session.startTime, endDate: session.endTime)
+        
+        if let speaker = session.speaker {
+            tmpl.body1TextProvider = CLKSimpleTextProvider(text: speaker.presentation.title)
+        } else {
+            tmpl.body1TextProvider = CLKSimpleTextProvider(text: session.description)
+        }
+        
+        return tmpl
+    }
+    
+    func timelineEntryDateForSession(session: Session) -> NSDate {
+        if session.index - 1 > 0 {
+            let previousSession = Session.sessions[session.index - 1]
+            return previousSession.endTime
+        } else {
+            return NSDate()
+        }
     }
 }

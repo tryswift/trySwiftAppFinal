@@ -6,8 +6,6 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import UIKit
-
-class Presentation: NSObject {
-
+struct Presentation {
+    let title: String
 }
