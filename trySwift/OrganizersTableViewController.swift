@@ -22,14 +22,6 @@ class OrganizersTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        }
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -81,6 +73,8 @@ class OrganizersTableViewController: UITableViewController {
             webViewController.displayTitle = "@\(username)"
             navigationController?.pushViewController(webViewController, animated: true)
         }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
 }
