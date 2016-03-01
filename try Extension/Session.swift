@@ -342,7 +342,7 @@ extension Session {
             endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 10, minute: 55, second: 0),
             description: (isJapanese ? "セッション" : "Presentation"),
             location: SeminarRoom13F,
-            speaker: Speaker.natalieBerdys,
+            speaker: Speaker.caesarWirth,
             sessionType: .Speaker,
             index: 37),
         Session(id: 306,

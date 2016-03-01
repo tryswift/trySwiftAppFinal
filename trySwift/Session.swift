@@ -269,7 +269,7 @@ extension Session {
             endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 10, minute: 55, second: 0),
             description: (isJapanese ? "セッション" : "Presentation"),
             location: SeminarRoom13F,
-            speaker: Speaker.natalieBerdys),
+            speaker: Speaker.caesarWirth),
         Session(id: 306,
             startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 11, minute: 0, second: 0),
             endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 11, minute: 25, second: 0),

@@ -19,7 +19,7 @@ struct Speaker {
 
 extension Speaker {
     
-    static let speakers = [ashFurrow, natalieBerdys, jesseSquires, syoIkeda, veronicaRay, chrisEidhof, timOliver, hirokiKato, dianaZmuda, yasuhiroInami, jeffHui, ayakaNonaka, simonGladman, cateHuston, danielSteinberg, matthewGillingham, lauraSavino, yutaKoshizawa, danielEggert, helenHolmes, yosukeIshikawa, adamBell, borisBugling, hectorMatos, micheleTitolo, rachelBobbins, danielHaight, stephanieShupe, himiSato, novallKhan, jpSimard, gwendolynWeston, maximCramer].sort { $0.name < $1.name }
+    static let speakers = [ashFurrow, caesarWirth, jesseSquires, syoIkeda, veronicaRay, chrisEidhof, timOliver, hirokiKato, dianaZmuda, yasuhiroInami, jeffHui, ayakaNonaka, simonGladman, cateHuston, danielSteinberg, matthewGillingham, lauraSavino, yutaKoshizawa, danielEggert, helenHolmes, yosukeIshikawa, adamBell, borisBugling, hectorMatos, micheleTitolo, rachelBobbins, danielHaight, stephanieShupe, himiSato, novallKhan, jpSimard, gwendolynWeston, maximCramer].sort { $0.name < $1.name }
     
     static let ashFurrow = Speaker(
         name: "Ash Furrow",
@@ -33,14 +33,14 @@ extension Speaker {
                 "Artsy has four iOS applications; all of them are open source, and all of them take different approaches to testing. Why? Because different testing techniques work better or worse in different circumstances. Come hear Ash Furrow discuss the motivations behind the Artsy iOS team's decisions, what struggles they encountered, and how they overcame those challenges. You will leave with a better understanding of when and why testing is important to building fantastic software.")
     )
     
-    static let natalieBerdys = Speaker(
-        name: "Natalia Berdys",
-        twitter: "batalia",
-        image: Toucan(image: UIImage(named: "natalia")!).maskWithEllipse().image,
-        bio: isJapanese ? "iOS開発のリードエンジニアとして、ポーランドのソフトウェアハウスTutu Labに勤務しています。この２年間で独学でエンジニアになり、モバイルエンジニアリングの学位を取得、さらに、WWDCにてスピーチをしました。また、彼女のアプリは47カ国でNo.1を獲得しました。アメリカ文学の学位保持者のため、プログラミングに対して人文的かつ詩的な視点を持っています。" : "Natalia Berdys is the lead iOS Developer at Tutu Lab, an indie studio in Poland. Within 2 years, she managed to become a self-taught developer, get a Mobile Engineering degree, speak at Apple WWDC and take her apps to #1 in 47 countries. Since she also holds a Master’s Degree in American Literature, she has a very humanistic and poetic view of programming.",
+    static let caesarWirth = Speaker(
+        name: "Caesar Wirth",
+        twitter: "cjwirth",
+        image: Toucan(image: UIImage(named: "caesar")!).maskWithEllipse().image,
+        bio: isJapanese ? "CyberAgentのソフトウェアエンジニアです。これまでEコマース、SNS、動画ストリーミングなど多くのiOSアプリを開発してきました。Swiftがクロスプラットフォームであるように、Androidアプリやバックエンドサーバのコードも書いてます。コードを書いてない時は、ハイキングやボルダリングをしたり、東京近郊のおいしいタコライスを探し回ってます！" : "Caesar Wirth is software engineer at CyberAgent, Inc. where he's made a number of iOS apps involving e-commerce, social networks, and streaming video. Just like Swift is cross-platform, he's also written Android apps and backend servers. When not writing code, you can often find him hiking, bouldering, or scouting out delicious Taco Rice around Tokyo.",
         presentation: Presentation(
-            title: isJapanese ? "SpriteKitにワクワクする" : "Livin’ on the edge with Sprite Kit",
-            summary: isJapanese ? "ゲームを開発することは、威圧し圧倒する、\"外人\"が初めての日本旅行でパチンコホールに入ってしまうようなことに少し似ています。SpriteKit、古いパチンコにインスパイアされたこの講演では、いくつかの便利なテクニックや非常に早くプロトタイピングをする方法を紹介します。SpriteKitの世界が今ひとつ理解できてなくても心配いりません。" : "Making games can be intimidating and overwhelming - a bit like a gaijin walking into a crazy pachinko parlor during their first trip to Japan. Sprite Kit, however, takes the edge off! This talk, inspired by a vintage pachinko game, will take you through some nifty techniques and lightning-fast prototyping to make your life easier - even if you’re a lost tourist in the Sprite Kit world.")
+            title: isJapanese ? "Swiftでサーバを書いてみよう" : "Soaring Swiftly - Server Side Swift.",
+            summary: isJapanese ? "多くのMacやiOSアプリはバックエンドのサーバと通信します。 今やSwiftはオープンソース化され、アプリ開発しているときと同じ言語でバックエンドの実装を行えるようになりました。サーバサイドSwiftを初める方法をお話しします。" : "Many Mac and iOS apps talk with a back-end server. Now that Swift is open source, we have the opportunity to write those back-end servers in the same language we write our apps in! I'll tell you how to get up and soaring with a server written in Swift!")
     )
     
     static let jesseSquires = Speaker(
