@@ -24,12 +24,12 @@ extension Speaker {
         )
     )
     
-    static let natalieBerdys = Speaker(
-        name: "Natalia Berdys",
-        twitter: "batalia",
-        image: "natalia",
+    static let caesarWirth = Speaker(
+        name: "Caesar Wirth",
+        twitter: "cjwirth",
+        image: "caesar",
         presentation: Presentation(
-            title: isJapanese ? "SpriteKitにワクワクする" : "Livin’ on the edge with Sprite Kit"
+            title: isJapanese ? "Swiftでサーバを書いてみよう" : "Soaring Swiftly - Server Side Swift."
         )
     )
     

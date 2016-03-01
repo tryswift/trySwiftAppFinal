@@ -94,7 +94,7 @@ extension QASession {
             id: 532,
             startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 11, minute: 30, second: 0),
             endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 12, minute: 55, second: 0),
-            speakers: [Speaker.hirokiKato, Speaker.natalieBerdys, Speaker.ashFurrow],
+            speakers: [Speaker.hirokiKato, Speaker.caesarWirth, Speaker.ashFurrow],
             location: SeminarRoom17F
         ),
         QASession(
