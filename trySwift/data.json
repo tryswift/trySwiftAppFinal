@@ -5,7 +5,7 @@
 				"name": "Realm",
 				"website": "realm.io",
 				"twitter": "realm",
-				"logo": "logo_realm",
+				"logo": "realm",
 				"logoURL": null,
 				"level": 0,
 				"description": "desc"
@@ -68,7 +68,7 @@
 				"id": 5,
 				"name": "Natalia Berdys",
 				"twitter": "batalia",
-				"image": "natlia_berdys",
+				"image": "natalia_berdys",
 				"imageURL": null,
 				"bio": "Natalia Berdys is the lead iOS Developer at Tutu Lab, an indie studio in Poland. Within 2 years, she managed to become a self-taught developer, get a Mobile Engineering degree, speak at Apple WWDC and take her apps to #1 in 47 countries. Since she also holds a Master’s Degree in American Literature, she has a very humanistic and poetic view of programming.",
 				"presentation": {
