@@ -1,5 +1,6 @@
 PODS:
   - DynamicColor (2.3.0)
+  - Freddy (2.0.2)
   - Timepiece (0.4.2)
   - Toucan (0.5.0)
   - VTAcknowledgementsViewController (0.17)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - DynamicColor (~> 2.3.0)
+  - Freddy
   - Timepiece
   - Toucan (~> 0.5.0)
   - VTAcknowledgementsViewController
@@ -14,6 +16,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   DynamicColor: 18badd22ee5edeefcbe0a8f5887a86640c592a1c
+  Freddy: e53713b8d5be02dbf5f4132c44d899d99eb09a6b
   Timepiece: cf53bb908bf542acc0e3d5f69cabfed869df4ebd
   Toucan: 0519c341148252ae114c5a657d2a85bb9ada9e40
   VTAcknowledgementsViewController: 6056f5f5e5ed995bbf0581bed6ddd29355ca9a80

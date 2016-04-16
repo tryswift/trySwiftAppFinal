@@ -6,6 +6,7 @@ target 'trySwift' do
     pod 'Timepiece'
     pod 'DynamicColor', '~> 2.3.0'
     pod 'VTAcknowledgementsViewController'
+    pod 'Freddy'
 end
 
 target 'try Extension' do
