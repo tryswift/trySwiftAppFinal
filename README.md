@@ -5,7 +5,7 @@ try! Swift Conference App
 - [x] Create `data.json` template
 - [x] Decode models from JSON
 - [ ] Get (Q&A) session for a specific day
-- [ ] Add UIImage assets
+- [x] Add UIImage assets
 - [ ] Add fallback with imageURL
 - [ ] Add API / JSON to website
 - [ ] Periodically (when?) check if the json file's version is still up-to-date
