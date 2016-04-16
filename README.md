@@ -2,6 +2,8 @@
 try! Swift Conference App
 
 ## TODO
+- [x] Create `data.json` template
+- [x] Decode models from JSON
 - [ ] Get (Q&A) session for a specific day
 - [ ] Add UIImage assets
 - [ ] Add fallback with imageURL
