@@ -23,7 +23,6 @@
 		FA39E8DF1C6B17DC0074B6BE /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */; };
 		FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E01C6B31150074B6BE /* SessionDataSourceDay1.swift */; };
 		FA39E8E31C6B31220074B6BE /* SessionDataSourceDay2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E21C6B31220074B6BE /* SessionDataSourceDay2.swift */; };
-		FA39E8E51C6B31300074B6BE /* SessionDataSourceDay3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E41C6B31300074B6BE /* SessionDataSourceDay3.swift */; };
 		FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E61C6B32F80074B6BE /* SessionTableViewCell.swift */; };
 		FA39E8E91C6B32F80074B6BE /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8E71C6B32F80074B6BE /* SessionTableViewCell.xib */; };
 		FA39E8EE1C6C034B0074B6BE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8ED1C6C034B0074B6BE /* UIColorExtension.swift */; };
@@ -31,7 +30,6 @@
 		FA39E8F41C6C24240074B6BE /* QASessionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8F31C6C24240074B6BE /* QASessionDataSourceProtocol.swift */; };
 		FA39E8F61C6C244A0074B6BE /* QASessionDataSourceDay1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8F51C6C244A0074B6BE /* QASessionDataSourceDay1.swift */; };
 		FA39E8F81C6C245B0074B6BE /* QASessionDataSourceDay2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8F71C6C245B0074B6BE /* QASessionDataSourceDay2.swift */; };
-		FA39E8FA1C6C24690074B6BE /* QASessionDataSourceDay3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8F91C6C24690074B6BE /* QASessionDataSourceDay3.swift */; };
 		FA39E8FE1C6C32510074B6BE /* QASessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8FD1C6C32510074B6BE /* QASessionsViewController.swift */; };
 		FA39E9001C6C32A50074B6BE /* QASessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8FF1C6C32A50074B6BE /* QASessionsTableViewController.swift */; };
 		FA39E9031C6C33870074B6BE /* QASessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9011C6C33870074B6BE /* QASessionTableViewCell.swift */; };
@@ -163,7 +161,6 @@
 		FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
 		FA39E8E01C6B31150074B6BE /* SessionDataSourceDay1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay1.swift; sourceTree = "<group>"; };
 		FA39E8E21C6B31220074B6BE /* SessionDataSourceDay2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay2.swift; sourceTree = "<group>"; };
-		FA39E8E41C6B31300074B6BE /* SessionDataSourceDay3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay3.swift; sourceTree = "<group>"; };
 		FA39E8E61C6B32F80074B6BE /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E8E71C6B32F80074B6BE /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
 		FA39E8ED1C6C034B0074B6BE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -171,7 +168,6 @@
 		FA39E8F31C6C24240074B6BE /* QASessionDataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		FA39E8F51C6C244A0074B6BE /* QASessionDataSourceDay1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionDataSourceDay1.swift; sourceTree = "<group>"; };
 		FA39E8F71C6C245B0074B6BE /* QASessionDataSourceDay2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionDataSourceDay2.swift; sourceTree = "<group>"; };
-		FA39E8F91C6C24690074B6BE /* QASessionDataSourceDay3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionDataSourceDay3.swift; sourceTree = "<group>"; };
 		FA39E8FD1C6C32510074B6BE /* QASessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionsViewController.swift; sourceTree = "<group>"; };
 		FA39E8FF1C6C32A50074B6BE /* QASessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionsTableViewController.swift; sourceTree = "<group>"; };
 		FA39E9011C6C33870074B6BE /* QASessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QASessionTableViewCell.swift; sourceTree = "<group>"; };
@@ -366,7 +362,6 @@
 				FA39E8D31C6AFE180074B6BE /* SessionDataSourceProtocol.swift */,
 				FA39E8E01C6B31150074B6BE /* SessionDataSourceDay1.swift */,
 				FA39E8E21C6B31220074B6BE /* SessionDataSourceDay2.swift */,
-				FA39E8E41C6B31300074B6BE /* SessionDataSourceDay3.swift */,
 			);
 			name = SessionDataSources;
 			sourceTree = "<group>";
@@ -377,7 +372,6 @@
 				FA39E8F31C6C24240074B6BE /* QASessionDataSourceProtocol.swift */,
 				FA39E8F51C6C244A0074B6BE /* QASessionDataSourceDay1.swift */,
 				FA39E8F71C6C245B0074B6BE /* QASessionDataSourceDay2.swift */,
-				FA39E8F91C6C24690074B6BE /* QASessionDataSourceDay3.swift */,
 			);
 			name = QASessionDataSources;
 			sourceTree = "<group>";
@@ -958,7 +952,6 @@
 				FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */,
 				FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */,
 				FA39E91D1C6C8D100074B6BE /* WebDisplayViewController.swift in Sources */,
-				FA39E8E51C6B31300074B6BE /* SessionDataSourceDay3.swift in Sources */,
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
 				FA39E8DD1C6B09DF0074B6BE /* Sponsor.swift in Sources */,
 				FA39E8F81C6C245B0074B6BE /* QASessionDataSourceDay2.swift in Sources */,
@@ -971,7 +964,6 @@
 				FA39E8E31C6B31220074B6BE /* SessionDataSourceDay2.swift in Sources */,
 				FA39E8D41C6AFE180074B6BE /* SessionDataSourceProtocol.swift in Sources */,
 				FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */,
-				FA39E8FA1C6C24690074B6BE /* QASessionDataSourceDay3.swift in Sources */,
 				FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */,
 				FA39E90B1C6C45FD0074B6BE /* SpeakerTableViewCell.swift in Sources */,
 				FA65B5911C6DA53600DCAF0B /* AboutTableViewController.swift in Sources */,

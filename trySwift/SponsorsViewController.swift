@@ -42,9 +42,9 @@ class SponsorsViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch Sponsor.Level(rawValue: section)! {
-            case .Diamond: return Sponsor.diamondSponsors.count
-            case .Gold: return Sponsor.goldSponsors.count
-            case .Silver: return Sponsor.silverSponsors.count
+        case .Diamond: return Sponsor.diamondSponsors.count
+        case .Gold: return Sponsor.goldSponsors.count
+        case .Silver: return Sponsor.silverSponsors.count
         }
     }
 
