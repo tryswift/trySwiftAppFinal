@@ -35,10 +35,7 @@ class QASessionsViewController: ButtonBarPagerTabStripViewController {
         let qaSessionDay2ViewController = QASessionsTableViewController()
         qaSessionDay2ViewController.dataSource = QASessionDataSourceDay2()
         
-        let qaSessionDay3ViewController = QASessionsTableViewController()
-        qaSessionDay3ViewController.dataSource = QASessionDataSourceDay3()
-        
-        return [qaSessionDay1ViewController, qaSessionDay2ViewController, qaSessionDay3ViewController]
+        return [qaSessionDay1ViewController, qaSessionDay2ViewController]
     }
 }
 

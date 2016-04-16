@@ -28,9 +28,9 @@ class QASessionTableViewCell: UITableViewCell {
         qaSessionTitleLabel.text = qaSession.title
         locationLabel.text = qaSession.location
 
-        speaker1ImageView.image = qaSession.speakers[0].image
-        speaker2ImageView.image = qaSession.speakers[1].image
-        speaker3ImageView.image = qaSession.speakers[2].image
+        speaker1ImageView.image = (qaSession.speakers.count >= 1) ? qaSession.speakers[0].image : nil
+        speaker2ImageView.image = (qaSession.speakers.count >= 2) ? qaSession.speakers[1].image : nil
+        speaker3ImageView.image = (qaSession.speakers.count >= 3) ? qaSession.speakers[2].image : nil
     }
     
 }

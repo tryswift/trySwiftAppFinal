@@ -6,8 +6,6 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import Foundation
-
 protocol QASessionDataSourceProtocol {
     var header: String { get }
     var qaSessions: [QASession] { get }
