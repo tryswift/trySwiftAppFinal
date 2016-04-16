@@ -1,0 +1,6 @@
+framework module Freddy {
+  umbrella header "Freddy-umbrella.h"
+
+  export *
+  module * { export * }
+}
