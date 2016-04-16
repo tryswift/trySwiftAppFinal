@@ -8,6 +8,7 @@
 
 import Foundation
 import Timepiece
+import Freddy
 
 struct QASession {
     let id: Int
@@ -17,99 +18,40 @@ struct QASession {
     let location: String
     
     var title: String {
-        let speakerNames = speakers.map { $0.name }
+        if let speaker = speakers.first where speakers.count == 1 {
+            return "Q&A with \(speaker.name)"
+        }
         
-        return "Q&A with \(speakerNames[0]), \(speakerNames[1]), & \(speakerNames[2])"
+        var speakerNames = speakers.map { $0.name }
+        if let lastName = speakerNames.last {
+            let newLast = "& \(lastName)"
+            speakerNames = Array(speakerNames.dropLast())
+            speakerNames.append(newLast)
+        }
+        
+        return "Q&A with \(speakerNames.joinWithSeparator(", "))"
+    }
+}
+
+extension QASession: JSONDecodable {
+    init(json: JSON) throws {
+        let jsonDateFormat = "yyyy-mm-dd'T'hh:mm:ss"
+        self.id = try json.int("id")
+        self.startTime = try json.string("startTime").dateFromFormat(jsonDateFormat)!
+        self.endTime = try json.string("endTime").dateFromFormat(jsonDateFormat)!
+        self.speakers = try Speaker.speakers.filter { try json.array("speakers").map(Int.init).contains($0.id) }
+        self.location = try json.string("location")
     }
 }
 
 extension QASession {
     
-    static let SeminarRoom17F = isJapanese ? "17F セミナールーム" : "17F Seminar Room"
-    
-    static let qaSessionsDay1 = [
-        QASession(
-            id: 511,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 11, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 12, minute: 55, second: 0),
-            speakers: [Speaker.syoIkeda, Speaker.jpSimard, Speaker.yasuhiroInami],
-            location: SeminarRoom17F
-        ),
-        QASession(
-            id: 512,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 14, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 15, minute: 55, second: 0),
-            speakers: [Speaker.lauraSavino, Speaker.borisBugling, Speaker.gwendolynWeston],
-            location: SeminarRoom17F
-        ),
-        QASession(
-            id: 513,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 16, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 17, minute: 55, second: 0),
-            speakers: [Speaker.yutaKoshizawa, Speaker.micheleTitolo, Speaker.danielSteinberg],
-            location: SeminarRoom17F
-        )
-    ]
-    
-    static let qaSessionsDay2 = [
-        QASession(
-            id: 521,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 10, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 10, minute: 55, second: 0),
-            speakers: [Speaker.timOliver, Speaker.stephanieShupe, Speaker.cateHuston],
-            location: SeminarRoom17F
-        ),
-        QASession(
-            id: 522,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 11, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 12, minute: 55, second: 0),
-            speakers: [Speaker.ayakaNonaka, Speaker.adamBell, Speaker.jesseSquires],
-            location: SeminarRoom17F
-        ),
-        QASession(
-            id: 523,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 14, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 15, minute: 55, second: 0),
-            speakers: [Speaker.matthewGillingham, Speaker.himiSato, Speaker.rachelBobbins],
-            location: SeminarRoom17F
-        ),
-        QASession(
-            id: 524,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 16, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 17, minute: 55, second: 0),
-            speakers: [Speaker.danielEggert, Speaker.novallKhan, Speaker.jeffHui],
-            location: SeminarRoom17F
-        )
-    ]
-    
-    static let qaSessionsDay3 = [
-        QASession(
-            id: 531,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 10, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 10, minute: 55, second: 0),
-            speakers: [Speaker.yosukeIshikawa, Speaker.maximCramer, Speaker.chrisEidhof],
-            location: SeminarRoom17F
-        ),
-        QASession(
-            id: 532,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 11, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 12, minute: 55, second: 0),
-            speakers: [Speaker.hirokiKato, Speaker.caesarWirth, Speaker.ashFurrow],
-            location: SeminarRoom17F
-        ),
-        QASession(
-            id: 533,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 14, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 15, minute: 55, second: 0),
-            speakers: [Speaker.veronicaRay, Speaker.hectorMatos, Speaker.simonGladman],
-            location: SeminarRoom17F
-        ),
-        QASession(
-            id: 534,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 16, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 17, minute: 55, second: 0),
-            speakers: [Speaker.dianaZmuda, Speaker.danielHaight, Speaker.helenHolmes],
-            location: SeminarRoom17F
-        )
-    ]
+    static let qaSessions: [QASession] = {
+        do {
+            return try dataJSON().array("sessions").filter { try $0.bool("qa") }.map(QASession.init)
+        } catch {
+            print(error)
+            return []
+        }
+    }()
 }
