@@ -18,7 +18,6 @@ struct Speaker {
     let imageURL: String?
     let bio: String
     let presentation: Presentation
-    let organizer: Bool
 }
 
 extension Speaker: JSONDecodable {
@@ -37,7 +36,6 @@ extension Speaker: JSONDecodable {
         self.imageURL = try json.string("imageURL", ifNull: true)
         self.bio = try json.string("bio")
         self.presentation = try Presentation(json: JSON(json.dictionary("presentation")))
-        self.organizer = try json.bool("organizer")
     }
 }
 
