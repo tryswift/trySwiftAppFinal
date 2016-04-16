@@ -16,7 +16,7 @@ struct Session {
     let endTime: NSDate
     let description: String
     let location: String
-    let speakers: [Speaker]
+    let speaker: Speaker?
     
     var timeString: String {
         return "\(startTime.stringFromFormat("H:mm")) - \(endTime.stringFromFormat("H:mm"))"
@@ -37,7 +37,8 @@ extension Session: JSONDecodable {
         self.endTime = try json.string("endTime").dateFromFormat(jsonDateFormat)!
         self.description = try json.string("description")
         self.location = try json.string("location")
-        self.speakers = /*try json.array("speakers").flatMap { $0 as? Int } ??*/ []
+        
+        self.speaker = try Speaker.speakers.filter { try (json.array("speakers", ifNull: true) ?? []).flatMap(Int.init).contains($0.id) }.first
     }
 }
 
