@@ -34,9 +34,9 @@ class QASessionTableViewCell: UITableViewCell {
             if let
                 imageURLString = qaSession.speakers[0].imageURL,
                 imageURL = NSURL(string: imageURLString) {
-                    speaker1ImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                    speaker1ImageView.hnk_setImageFromURL(imageURL, placeholder: qaSession.speakers[0].image) { image in
                         self.speaker1ImageView.image = Toucan(image: image).maskWithEllipse().image
-                    }, failure: nil)
+                    }
             } else {
                 speaker1ImageView.image = qaSession.speakers[0].image
             }
@@ -46,9 +46,9 @@ class QASessionTableViewCell: UITableViewCell {
             if let
                 imageURLString = qaSession.speakers[1].imageURL,
                 imageURL = NSURL(string: imageURLString) {
-                    speaker2ImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                    speaker2ImageView.hnk_setImageFromURL(imageURL, placeholder: qaSession.speakers[1].image) { image in
                         self.speaker2ImageView.image = Toucan(image: image).maskWithEllipse().image
-                    }, failure: nil)
+                    }
             } else {
                 speaker2ImageView.image = qaSession.speakers[1].image
             }
@@ -58,9 +58,9 @@ class QASessionTableViewCell: UITableViewCell {
             if let
                 imageURLString = qaSession.speakers[2].imageURL,
                 imageURL = NSURL(string: imageURLString) {
-                    speaker3ImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                    speaker3ImageView.hnk_setImageFromURL(imageURL, placeholder: qaSession.speakers[2].image) { image in
                         self.speaker3ImageView.image = Toucan(image: image).maskWithEllipse().image
-                    }, failure: nil)
+                    }
             } else {
                 speaker3ImageView.image = qaSession.speakers[2].image
             }

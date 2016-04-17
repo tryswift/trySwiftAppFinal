@@ -34,9 +34,9 @@ class SessionTableViewCell: UITableViewCell {
             if let
                 imageURLString = speaker.imageURL,
                 imageURL = NSURL(string: imageURLString) {
-                    speakerImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                    speakerImageView.hnk_setImageFromURL(imageURL, placeholder: speaker.image) { image in
                         self.speakerImageView.image = Toucan(image: image).maskWithEllipse().image
-                    }, failure: nil)
+                    }
             } else {
                 speakerImageView.image = speaker.image
             }

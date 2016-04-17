@@ -26,9 +26,9 @@ class SponsorTableViewCell: UITableViewCell {
         if let
             imageURLString = sponsor.logoURL,
             imageURL = NSURL(string: imageURLString) {
-                sponsorImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                sponsorImageView.hnk_setImageFromURL(imageURL, placeholder: sponsor.logo) { image in
                     self.sponsorImageView.image = Toucan(image: image).maskWithEllipse().image
-                }, failure: nil)
+                }
         } else {
             sponsorImageView.image = sponsor.logo
         }
