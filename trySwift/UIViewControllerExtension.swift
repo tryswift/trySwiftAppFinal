@@ -11,7 +11,7 @@ import SafariServices
 
 extension UIViewController: SFSafariViewControllerDelegate {
     
-    func safariViewController(withURL url: NSURL) {
+    func openSafariViewController(withURL url: NSURL) {
         let safariViewController = SFSafariViewController(URL: url)
         safariViewController.delegate = self
         presentViewController(safariViewController, animated: true, completion: nil)

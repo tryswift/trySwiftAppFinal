@@ -94,7 +94,7 @@ extension SessionDetailsViewController: TwitterFollowDelegate {
 
         if !applicationOpened {
             if let twitterURL = NSURL(string: "http://twitter.com/\(username)") {
-                safariViewController(withURL: twitterURL)
+                openSafariViewController(withURL: twitterURL)
             }
         }
     }
