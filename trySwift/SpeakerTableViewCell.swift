@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Haneke
+import Toucan
 
 class SpeakerTableViewCell: UITableViewCell {
 
@@ -21,7 +23,15 @@ class SpeakerTableViewCell: UITableViewCell {
     }
 
     func configure(withSpeaker speaker: Speaker, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {
-        speakerImageView.image = speaker.image
+        if let
+            imageURLString = speaker.imageURL,
+            imageURL = NSURL(string: imageURLString) {
+                speakerImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                    self.speakerImageView.image = Toucan(image: image).maskWithEllipse().image
+                }, failure: nil)
+        } else {
+            speakerImageView.image = speaker.image
+        }
         speakerNameLabel.text = speaker.name
         speakerTwitterLabel.text = "@\(speaker.twitter)"
 

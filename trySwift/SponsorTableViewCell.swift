@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Haneke
+import Toucan
 
 class SponsorTableViewCell: UITableViewCell {
 
@@ -21,7 +23,15 @@ class SponsorTableViewCell: UITableViewCell {
     }
     
     func configure(withSponsor sponsor: Sponsor) {
-        sponsorImageView.image = sponsor.logo
+        if let
+            imageURLString = sponsor.logoURL,
+            imageURL = NSURL(string: imageURLString) {
+                sponsorImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                    self.sponsorImageView.image = Toucan(image: image).maskWithEllipse().image
+                }, failure: nil)
+        } else {
+            sponsorImageView.image = sponsor.logo
+        }
         sponsorNameLabel.text = sponsor.name
         websiteLabel.text = sponsor.website
     }
