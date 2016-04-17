@@ -13,4 +13,5 @@ try! Swift Conference App
 - [ ] Add Code of conduct to API and display it *nicely* in the app
 - [ ] Generate acknowledgements to include new libraries (how can I do this?)
 - [ ] Make speaker images in Q&A tappable without 3D Touch (or was this intentional in any way?!)
+- [ ] Show speaker images in Q&A flexible; they should show as many speaker images as there are speakers (instead of a fixed 3)
 - [ ] ??
