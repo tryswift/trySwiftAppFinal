@@ -11,7 +11,7 @@
 		4992E3C41CC22C140038F13A /* NSFileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992E3C31CC22C140038F13A /* NSFileManagerExtension.swift */; };
 		499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */; };
 		499CCFF41CC37BC9007A5BBB /* DayComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF31CC37BC9007A5BBB /* DayComparable.swift */; };
-		499CCFFE1CC37E67007A5BBB /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 499CCFFD1CC37E67007A5BBB /* data.json */; };
+		499CD0001CC39D0F007A5BBB /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 499CCFFF1CC39D0F007A5BBB /* data.json */; };
 		71FA80BF7F20F8E8E9C8903F /* Pods_try_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CAC6469D6AC2F99356E9DC /* Pods_try_Extension.framework */; };
 		EDE2ECE0888AE97C5817C447 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 080425B1A50FECCB51E84216 /* Pods_trySwift.framework */; };
 		FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */; };
@@ -148,7 +148,7 @@
 		4992E3C31CC22C140038F13A /* NSFileManagerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFileManagerExtension.swift; sourceTree = "<group>"; };
 		499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		499CCFF31CC37BC9007A5BBB /* DayComparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayComparable.swift; sourceTree = "<group>"; };
-		499CCFFD1CC37E67007A5BBB /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		499CCFFF1CC39D0F007A5BBB /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		580919BA601AC6D668E841CA /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		7F125C93D8CB5C5F3F01FDE2 /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
 		9D2670A6473564A2F232BACA /* Pods-try Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -593,7 +593,7 @@
 				FA39E8CB1C6AF89D0074B6BE /* Utilities */,
 				FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */,
 				FAFA15C41C69D31C00FEA4EA /* LaunchScreen.storyboard */,
-				499CCFFD1CC37E67007A5BBB /* data.json */,
+				499CCFFF1CC39D0F007A5BBB /* data.json */,
 				4992E3C11CC20D1D0038F13A /* version.json */,
 				FAFA15C71C69D31C00FEA4EA /* Info.plist */,
 				FA65B5811C6D813200DCAF0B /* trySwift-Bridging-Header.h */,
@@ -806,7 +806,7 @@
 				FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */,
 				FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */,
 				FA39E92D1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib in Resources */,
-				499CCFFE1CC37E67007A5BBB /* data.json in Resources */,
+				499CD0001CC39D0F007A5BBB /* data.json in Resources */,
 				FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
