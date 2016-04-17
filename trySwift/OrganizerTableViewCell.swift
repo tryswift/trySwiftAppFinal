@@ -26,9 +26,9 @@ class OrganizerTableViewCell: UITableViewCell {
         if let
             imageURLString = organizer.imageURL,
             imageURL = NSURL(string: imageURLString) {
-                organizerImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                organizerImageView.hnk_setImageFromURL(imageURL, placeholder: organizer.image) { image in
                     self.organizerImageView.image = Toucan(image: image).maskWithEllipse().image
-                }, failure: nil)
+                }
         } else {
             organizerImageView.image = organizer.image
         }
