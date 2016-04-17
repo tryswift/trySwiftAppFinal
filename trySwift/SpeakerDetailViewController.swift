@@ -87,7 +87,7 @@ extension SpeakerDetailViewController: TwitterFollowDelegate {
 
         if !applicationOpened {
             if let twitterURL = NSURL(string: "http://twitter.com/\(username)") {
-                safariViewController(withURL: twitterURL)
+                openSafariViewController(withURL: twitterURL)
             }
 //            let webViewController = WebDisplayViewController()
 //            webViewController.url = NSURL(string: "http://twitter.com/\(username)")!

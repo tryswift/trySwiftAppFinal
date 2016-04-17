@@ -69,7 +69,7 @@ class OrganizersTableViewController: UITableViewController {
         
         if !applicationOpened {
             if let twitterURL = NSURL(string: "http://twitter.com/\(username)") {
-                safariViewController(withURL: twitterURL)
+                openSafariViewController(withURL: twitterURL)
             }
         }
         
