@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Haneke
+import Toucan
 
 class QASessionTableViewCell: UITableViewCell {
 
@@ -27,10 +29,42 @@ class QASessionTableViewCell: UITableViewCell {
     func configure(withQASession qaSession: QASession) {
         qaSessionTitleLabel.text = qaSession.title
         locationLabel.text = qaSession.location
-
-        speaker1ImageView.image = (qaSession.speakers.count >= 1) ? qaSession.speakers[0].image : nil
-        speaker2ImageView.image = (qaSession.speakers.count >= 2) ? qaSession.speakers[1].image : nil
-        speaker3ImageView.image = (qaSession.speakers.count >= 3) ? qaSession.speakers[2].image : nil
+    
+        if qaSession.speakers.count >= 1 {
+            if let
+                imageURLString = qaSession.speakers[0].imageURL,
+                imageURL = NSURL(string: imageURLString) {
+                    speaker1ImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                        self.speaker1ImageView.image = Toucan(image: image).maskWithEllipse().image
+                    }, failure: nil)
+            } else {
+                speaker1ImageView.image = qaSession.speakers[0].image
+            }
+        }
+        
+        if qaSession.speakers.count >= 2 {
+            if let
+                imageURLString = qaSession.speakers[1].imageURL,
+                imageURL = NSURL(string: imageURLString) {
+                    speaker2ImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                        self.speaker2ImageView.image = Toucan(image: image).maskWithEllipse().image
+                    }, failure: nil)
+            } else {
+                speaker2ImageView.image = qaSession.speakers[1].image
+            }
+        }
+        
+        if qaSession.speakers.count >= 3 {
+            if let
+                imageURLString = qaSession.speakers[2].imageURL,
+                imageURL = NSURL(string: imageURLString) {
+                    speaker3ImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                        self.speaker3ImageView.image = Toucan(image: image).maskWithEllipse().image
+                    }, failure: nil)
+            } else {
+                speaker3ImageView.image = qaSession.speakers[2].image
+            }
+        }
     }
     
 }

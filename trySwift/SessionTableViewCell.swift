@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Haneke
+import Toucan
 
 class SessionTableViewCell: UITableViewCell {
 
@@ -29,7 +31,15 @@ class SessionTableViewCell: UITableViewCell {
     func configure(withSession session: Session) {
         if let speaker = session.speaker {
             sessionTitleLabel.text = speaker.presentation.title
-            speakerImageView.image = speaker.image
+            if let
+                imageURLString = speaker.imageURL,
+                imageURL = NSURL(string: imageURLString) {
+                    speakerImageView.hnk_setImageFromURL(imageURL, placeholder: nil, success: { image in
+                        self.speakerImageView.image = Toucan(image: image).maskWithEllipse().image
+                    }, failure: nil)
+            } else {
+                speakerImageView.image = speaker.image
+            }
             speakerNameLabel.text = speaker.name
             sessionTypeLabel.text = session.description
             accessoryType = .DisclosureIndicator
