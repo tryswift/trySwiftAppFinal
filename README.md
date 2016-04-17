@@ -7,7 +7,7 @@ try! Swift Conference App
 - [x] Get (Q&A) session for a specific day
 - [x] Add UIImage assets
 - [x] Add fallback with imageURL
-- [ ] Cleanup imageURL fallbacks
+- [x] Cleanup imageURL fallbacks
 - [ ] Add API / JSON to website
 - [ ] Periodically (when?) check if the json file's version is still up-to-date
 - [ ] If there is a new version of the JSON, download it and persist it; use that until it becomes outdated again
