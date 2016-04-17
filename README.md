@@ -12,4 +12,5 @@ try! Swift Conference App
 - [ ] If there is a new version of the JSON, download it and persist it; use that until it becomes outdated again
 - [ ] Add Code of conduct to API and display it *nicely* in the app
 - [ ] Generate acknowledgements to include new libraries (how can I do this?)
+- [ ] Make speaker images in Q&A tappable without 3D Touch (or was this intentional in any way?!)
 - [ ] ??
