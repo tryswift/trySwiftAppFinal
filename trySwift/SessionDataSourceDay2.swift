@@ -8,5 +8,5 @@
 
 struct SessionDataSourceDay2: SessionDataSourceProtocol {
     var header = isJapanese ? "3月3日（木）" : "Fri, Sep 2"
-    var sessions = Session.sessions
+    var sessions = Session.sessions(forDate: NSDate.date(year: 2016, month: 09, day: 02))
 }
