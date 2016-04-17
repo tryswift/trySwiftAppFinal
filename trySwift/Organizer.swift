@@ -14,6 +14,7 @@ struct Organizer {
     let name: String
     let twitter: String
     let image: UIImage?
+    let imageURL: String?
 }
 
 extension Organizer: JSONDecodable {
@@ -27,6 +28,7 @@ extension Organizer: JSONDecodable {
         } else {
             self.image = nil
         }
+        self.imageURL = try json.string("imageURL", ifNull: true)
     }
 }
 
@@ -44,6 +46,7 @@ extension Organizer {
     static let trySwift = Organizer(
         name: "try! Conference",
         twitter: "tryswiftconf",
-        image: Toucan(image: UIImage(named: "logo")!).maskWithEllipse().image
+        image: Toucan(image: UIImage(named: "logo")!).maskWithEllipse().image,
+        imageURL: nil
     )
 }
