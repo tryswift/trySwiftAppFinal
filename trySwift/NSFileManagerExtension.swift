@@ -10,17 +10,19 @@ import Foundation
 import Freddy
 
 func dataJSON() throws -> JSON {
-    guard let path = NSBundle.mainBundle().pathForResource("data", ofType: "json") else { throw DecodeError.InvalidPath }
-    guard let data = NSFileManager.defaultManager().contentsAtPath(path) else { throw DecodeError.InvalidData }
-    let json = try JSON(data: data)
+    let json = try JSON(data: jsonData())
     return try JSON(json.dictionary("data"))
 }
 
 func jsonVersion() throws -> Double {
+    let json = try JSON(data: jsonData())
+    return try json.double("version")
+}
+
+private func jsonData() throws -> NSData {
     guard let path = NSBundle.mainBundle().pathForResource("data", ofType: "json") else { throw DecodeError.InvalidPath }
     guard let data = NSFileManager.defaultManager().contentsAtPath(path) else { throw DecodeError.InvalidData }
-    let json = try JSON(data: data)
-    return try json.double("version")
+    return data
 }
 
 enum DecodeError: ErrorType {
