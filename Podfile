@@ -7,7 +7,7 @@ target 'trySwift' do
     pod 'DynamicColor', '~> 2.3.0'
     pod 'VTAcknowledgementsViewController'
     pod 'Freddy'
-    pod 'Haneke'
+    pod 'HanekeSwift'
 end
 
 target 'try Extension' do
