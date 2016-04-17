@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-trySwift/DynamicColor.framework"
   install_framework "Pods-trySwift/Freddy.framework"
+  install_framework "Pods-trySwift/Haneke.framework"
   install_framework "Pods-trySwift/Timepiece.framework"
   install_framework "Pods-trySwift/Toucan.framework"
   install_framework "Pods-trySwift/VTAcknowledgementsViewController.framework"
@@ -94,6 +95,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-trySwift/DynamicColor.framework"
   install_framework "Pods-trySwift/Freddy.framework"
+  install_framework "Pods-trySwift/Haneke.framework"
   install_framework "Pods-trySwift/Timepiece.framework"
   install_framework "Pods-trySwift/Toucan.framework"
   install_framework "Pods-trySwift/VTAcknowledgementsViewController.framework"
