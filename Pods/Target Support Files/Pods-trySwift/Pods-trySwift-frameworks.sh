@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-trySwift/Alamofire.framework"
   install_framework "Pods-trySwift/DynamicColor.framework"
   install_framework "Pods-trySwift/Freddy.framework"
   install_framework "Pods-trySwift/Haneke.framework"
@@ -93,6 +94,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-trySwift/XLPagerTabStrip.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-trySwift/Alamofire.framework"
   install_framework "Pods-trySwift/DynamicColor.framework"
   install_framework "Pods-trySwift/Freddy.framework"
   install_framework "Pods-trySwift/Haneke.framework"

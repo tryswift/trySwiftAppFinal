@@ -8,6 +8,7 @@ target 'trySwift' do
     pod 'VTAcknowledgementsViewController'
     pod 'Freddy'
     pod 'HanekeSwift'
+    pod 'Alamofire', '~> 3.3.1'
 end
 
 target 'try Extension' do
