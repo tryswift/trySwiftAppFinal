@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (3.3.1)
   - DynamicColor (2.3.0)
   - Freddy (2.0.2)
   - HanekeSwift (0.10.1)
@@ -8,6 +9,7 @@ PODS:
   - XLPagerTabStrip (4.0.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.3.1)
   - DynamicColor (~> 2.3.0)
   - Freddy
   - HanekeSwift
@@ -17,6 +19,7 @@ DEPENDENCIES:
   - XLPagerTabStrip (~> 4.0)
 
 SPEC CHECKSUMS:
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   DynamicColor: 18badd22ee5edeefcbe0a8f5887a86640c592a1c
   Freddy: e53713b8d5be02dbf5f4132c44d899d99eb09a6b
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
