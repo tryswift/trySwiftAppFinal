@@ -12,7 +12,6 @@ import Freddy
 
 private let baseURL = "https://tryswift.basbroek.nl"
 private let defaults = NSUserDefaults.standardUserDefaults()
-private let fileManager = NSFileManager.defaultManager()
 
 // This is an enum, which prevents it from being instantiated.
 // See https://www.natashatherobot.com/swift-enum-no-cases/
@@ -52,7 +51,7 @@ enum Networking {
         networkJSONVersion { version in
             guard version != defaults.doubleForKey("version") else { return }
             networkJSONData(forVersion: version) { json in
-                fileManager.save(JSON: json, asVersion: version)
+                JSONManager.save(JSON: json, withVersion: version)
             }
         }
     }

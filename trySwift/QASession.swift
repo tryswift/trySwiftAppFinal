@@ -49,7 +49,7 @@ extension QASession {
     
     static let qaSessions: [QASession] = {
         do {
-            return try NSFileManager.defaultManager().dataJSON().array("sessions").filter { try $0.bool("qa") }.map(QASession.init)
+            return try JSONManager.dataJSON().array("sessions").filter { try $0.bool("qa") }.map(QASession.init)
         } catch {
             print(error)
             return []
