@@ -46,7 +46,7 @@ extension Session {
     
     static let sessions: [Session] = {
         do {
-            return try NSFileManager.defaultManager().dataJSON().array("sessions").filter { try !$0.bool("qa") }.map(Session.init)
+            return try JSONManager.dataJSON().array("sessions").filter { try !$0.bool("qa") }.map(Session.init)
         } catch {
             print(error)
             return []

@@ -43,7 +43,7 @@ extension Speaker {
     
     static let speakers: [Speaker] = {
         do {
-            return try NSFileManager.defaultManager().dataJSON().array("speakers").filter { try !$0.bool("organizer") }.map(Speaker.init)
+            return try JSONManager.dataJSON().array("speakers").filter { try !$0.bool("organizer") }.map(Speaker.init)
         } catch {
             print(error)
             return []
