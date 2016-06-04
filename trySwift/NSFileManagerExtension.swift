@@ -29,3 +29,25 @@ enum DecodeError: ErrorType {
     case InvalidPath
     case InvalidData
 }
+
+
+import Alamofire
+
+func networkJSONVersion() {
+    
+}
+
+func networkJSONData(forVersion version: Float, completionHandler: (json: JSON) -> Void) {
+    Alamofire.request(.GET, "https://tryswift.basbroek.nl/version/\(version)", parameters: [:], headers: [:]).responseJSON {
+        if let data = $0.data {
+            do {
+                let json = try JSON(data: data)
+                completionHandler(json: json)
+            } catch {
+                print(error)
+            }
+        } else {
+            print("rip life")
+        }
+    }
+}
