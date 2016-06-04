@@ -42,10 +42,10 @@ enum JSONManager {
     }
     
     static func save(JSON json: JSON, withVersion version: Double) {
-        defaults.setDouble(version, forKey: "version")
         guard let fileName = documentsDirectory?.stringByAppendingPathComponent("data-\(version).json") else { return }
         do {
             try json.serialize().writeToFile(fileName, atomically: true)
+            defaults.setDouble(version, forKey: "version")
         } catch {
             print(error)
         }
