@@ -37,7 +37,7 @@ extension Organizer {
 
     static let organizers: [Organizer] = {
         do {
-            return try dataJSON().array("speakers").filter { try $0.bool("organizer") }.map(Organizer.init)
+            return try NSFileManager.defaultManager().dataJSON().array("speakers").filter { try $0.bool("organizer") }.map(Organizer.init)
         } catch {
             print(error)
             return []

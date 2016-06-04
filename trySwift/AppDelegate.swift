@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         configureStyling()
+        Networking.refreshJSONData()
 
         NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "JST")!)
         return true
