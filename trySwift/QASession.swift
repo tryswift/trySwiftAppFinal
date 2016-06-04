@@ -34,6 +34,7 @@ struct QASession {
 }
 
 extension QASession: JSONDecodable {
+    
     init(json: JSON) throws {
         let jsonDateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         self.id = try json.int("id")

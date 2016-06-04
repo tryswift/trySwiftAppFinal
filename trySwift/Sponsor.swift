@@ -33,6 +33,7 @@ struct Sponsor {
 }
 
 extension Sponsor: JSONDecodable {
+    
     init(json: JSON) throws {
         self.name = try json.string("name")
         self.website = try json.string("website")

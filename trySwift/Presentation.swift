@@ -14,6 +14,7 @@ struct Presentation {
 }
 
 extension Presentation: JSONDecodable {
+    
     init(json: JSON) throws {
         self.title = try json.string("title")
         self.summary = try json.string("summary")
