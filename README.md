@@ -8,9 +8,10 @@ try! Swift Conference App
 - [x] Add UIImage assets
 - [x] Add fallback with imageURL
 - [x] Cleanup imageURL fallbacks
-- [ ] Add API / JSON to website
+- [ ] Add API / JSON to website (now hosted on my server).
 - [ ] Periodically (or just every startup?) check if the json file's version is still up-to-date
 - [x] If there is a new version of the JSON, download it and persist it; use that until it becomes outdated again
+- [ ] Add 1.2 version for the JSON / API including the new speakers
 - [ ] Add Code of conduct to API and display it *nicely* in the app
 - [ ] Generate acknowledgements to include new libraries (how can I do this?)
 - [ ] Make speaker images in Q&A tappable without 3D Touch (or was this intentional in any way?!)
