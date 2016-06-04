@@ -49,7 +49,7 @@ extension Sponsor {
     
     static let sponsors: [Sponsor] = {
         do {
-            return try dataJSON().array("sponsors").map(Sponsor.init)
+            return try NSFileManager.defaultManager().dataJSON().array("sponsors").map(Sponsor.init)
         } catch {
             print(error)
             return []
