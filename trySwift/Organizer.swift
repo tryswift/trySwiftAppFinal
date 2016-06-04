@@ -18,6 +18,7 @@ struct Organizer {
 }
 
 extension Organizer: JSONDecodable {
+    
     init(json: JSON) throws {
         self.name = try json.string("name")
         self.twitter = try json.string("twitter")
