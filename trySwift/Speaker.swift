@@ -29,7 +29,7 @@ extension Speaker: JSONDecodable {
         if let
             imageString = try json.string("image", ifNull: true),
             image = UIImage(named: imageString) {
-                self.image = Toucan(image: image).maskWithEllipse().image
+            self.image = Toucan(image: image).maskWithEllipse().image
         } else {
             self.image = nil
         }

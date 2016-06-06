@@ -10,25 +10,24 @@ import UIKit
 import DynamicColor
 
 extension UIColor {
-
-    class func trySwiftMainColor() -> UIColor {
+    
+    static func trySwiftMainColor() -> UIColor {
         return UIColor(hexString: "#B8322B")
     }
     
-    class func trySwiftTitleColor() -> UIColor {
+    static func trySwiftTitleColor() -> UIColor {
         return UIColor.trySwiftMainColor().lightenColor(0.1).desaturatedColor()
     }
     
-    class func trySwiftSubtitleColor() -> UIColor {
-        return UIColor.darkGrayColor()
+    static func trySwiftSubtitleColor() -> UIColor {
+        return .darkGrayColor()
     }
     
-    class func trySwiftAccentColor() -> UIColor {
+    static func trySwiftAccentColor() -> UIColor {
         return UIColor(hexString: "#4FD5D6")
     }
     
-    class func twitterBlue() -> UIColor {
+    static func twitterBlue() -> UIColor {
         return UIColor(hexString: "#4FD5D6").darkenColor(0.1).desaturatedColor()
-        //return UIColor(hexString: "#4099FF")
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 import XLPagerTabStrip
 
 class QASessionsViewController: ButtonBarPagerTabStripViewController {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -21,8 +21,8 @@ class QASessionsViewController: ButtonBarPagerTabStripViewController {
         super.viewDidLoad()
         
         buttonBarView.registerNib(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
-        buttonBarView.backgroundColor = UIColor.whiteColor()
-        buttonBarView.selectedBar.backgroundColor = UIColor.trySwiftAccentColor()
+        buttonBarView.backgroundColor = .whiteColor()
+        buttonBarView.selectedBar.backgroundColor = .trySwiftAccentColor()
         
         moveToCorrectDate()
     }

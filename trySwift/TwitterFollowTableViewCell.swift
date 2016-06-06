@@ -13,7 +13,7 @@ protocol TwitterFollowDelegate: class {
 }
 
 class TwitterFollowTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var followButton: UIButton!
     
     private var username: String?
@@ -21,10 +21,9 @@ class TwitterFollowTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         followButton.layer.borderWidth = 1.0
         followButton.layer.borderColor = UIColor.twitterBlue().CGColor
-        followButton.tintColor = UIColor.twitterBlue()
+        followButton.tintColor = .twitterBlue()
         followButton.layer.cornerRadius = 3.0
     }
     

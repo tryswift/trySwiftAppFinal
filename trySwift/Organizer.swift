@@ -34,7 +34,7 @@ extension Organizer: JSONDecodable {
 }
 
 extension Organizer {
-
+    
     static let organizers: [Organizer] = {
         do {
             return try JSONManager.dataJSON().array("speakers").filter { try $0.bool("organizer") }.map(Organizer.init)

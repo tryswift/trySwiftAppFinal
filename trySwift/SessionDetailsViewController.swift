@@ -9,7 +9,7 @@
 import UIKit
 
 class SessionDetailsViewController: UITableViewController {
-
+    
     var session: Session!
     var speaker: Speaker!
     
@@ -19,30 +19,31 @@ class SessionDetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = session.description
-
+        
         tableView.registerNib(UINib(nibName: String(SessionHeaderTableViewCell), bundle: nil), forCellReuseIdentifier: String(SessionHeaderTableViewCell))
         tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
         tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
         tableView.registerNib(UINib(nibName: String(TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(TwitterFollowTableViewCell))
-
+        
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .None
     }
-
-
-    // MARK: - Table view data source
-
+}
+    
+// MARK: - Table view data source
+extension SessionDetailsViewController {
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch SessionDetail(rawValue: indexPath.row)! {
         case .Header:
@@ -63,35 +64,21 @@ class SessionDetailsViewController: UITableViewController {
             return cell
         }
     }
-
 }
 
 extension SessionDetailsViewController: TwitterFollowDelegate {
-
+    
     func followUser(username: String) {
-        let twitterURLs = [
-            "twitter://user?screen_name=\(username)", // Twitter
-            "tweetbot://user_profile/\(username)", // TweetBot
-            "echofon://user_timeline?\(username)", // Echofon
-            "twit://user?screen_name=\(username)", // Twittelator Pro
-            "x-seesmic://twitter_profile?twitter_screen_name=\(username)", // Seesmic
-            "x-birdfeed://user?screen_name=\(username)", // Birdfeed
-            "tweetings://user?screen_name=\(username)", // Tweetings
-            "simplytweet://?link=http://twitter.com/\(username)", // SimplyTweet
-            "icebird://user?screen_name=\(username)", // IceBird
-            "fluttr://user/\(username)", // Fluttr
-        ]
-
-        var applicationOpened: Bool = false
+        var applicationOpened = false
         let application = UIApplication.sharedApplication()
-        for twitterURL in twitterURLs {
+        for twitterURL in Twitter.urls(forUsername: username) {
             if let url = NSURL(string: twitterURL) where application.canOpenURL(url) && !applicationOpened {
                 application.openURL(url)
                 applicationOpened = true
                 break
             }
         }
-
+        
         if !applicationOpened {
             if let twitterURL = NSURL(string: "http://twitter.com/\(username)") {
                 openSafariViewController(withURL: twitterURL)

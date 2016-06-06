@@ -9,7 +9,7 @@
 import UIKit
 
 class SponsorsViewController: UITableViewController {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,32 +22,36 @@ class SponsorsViewController: UITableViewController {
         tableView.registerNib(UINib(nibName: String(SponsorTableViewCell), bundle: nil), forCellReuseIdentifier: String(SponsorTableViewCell))
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
-
+        
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
+}
 
-    // MARK: - Table view data source
-
+// MARK: - Table view data source
+extension SponsorsViewController {
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         switch Sponsor.Level(rawValue: section)! {
-        case .Diamond: return Sponsor.diamondSponsors.count
-        case .Gold: return Sponsor.goldSponsors.count
-        case .Silver: return Sponsor.silverSponsors.count
+        case .Diamond:
+            return Sponsor.diamondSponsors.count
+        case .Gold:
+            return Sponsor.goldSponsors.count
+        case .Silver:
+            return Sponsor.silverSponsors.count
         }
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(SponsorTableViewCell), forIndexPath: indexPath) as! SponsorTableViewCell
@@ -59,13 +63,11 @@ class SponsorsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
         let sponsorLevel = Sponsor.Level(rawValue: section)!
         return sponsorLevel.title
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
         let sponsor = sponsorAtIndexPath(indexPath)
         
         let webViewController = WebDisplayViewController()
@@ -74,13 +76,11 @@ class SponsorsViewController: UITableViewController {
         
         self.navigationController?.pushViewController(webViewController, animated: true)
     }
-
 }
 
 private extension SponsorsViewController {
     
     func sponsorAtIndexPath(indexPath: NSIndexPath) -> Sponsor {
-
         switch Sponsor.Level(rawValue: indexPath.section)! {
         case .Diamond:
             return Sponsor.diamondSponsors[indexPath.row]
@@ -89,6 +89,5 @@ private extension SponsorsViewController {
         case .Silver:
             return Sponsor.silverSponsors[indexPath.row]
         }
-
     }
 }
