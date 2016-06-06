@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import XLPagerTabStrip 
+import XLPagerTabStrip
 
 class SessionsTableViewController: UITableViewController {
-
+    
     var dataSource: SessionDataSourceProtocol!
     private let sessionDetailsSegue = "sessionDetailsSegue"
     
@@ -26,28 +26,30 @@ class SessionsTableViewController: UITableViewController {
             registerForPreviewingWithDelegate(self, sourceView: tableView)
         }
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
+}
 
-    // MARK: - Table view data source
-
+// MARK: - Table view data source
+extension SessionsTableViewController {
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return dataSource.sessions.count
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(SessionTableViewCell), forIndexPath: indexPath) as! SessionTableViewCell
-
+        
         let session = dataSource.sessions[indexPath.section]
         cell.configure(withSession: session)
         
@@ -55,11 +57,14 @@ class SessionsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
         let session = dataSource.sessions[section]
         return session.timeString
     }
-    
+}
+
+// MARK: - Table view delegate
+extension SessionsTableViewController {
+
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let session = dataSource.sessions[indexPath.section]
         if let speaker = session.speaker {
@@ -69,15 +74,7 @@ class SessionsTableViewController: UITableViewController {
             sessionDetailsVC.speaker = speaker
             navigationController?.pushViewController(sessionDetailsVC, animated: true)
         }
-
-        if session.id == 319 { // TOMBOY106
-            let webViewController = WebDisplayViewController()
-            webViewController.url = NSURL(string: "http://www.tomboy106.com/shibuya106/index.html")!
-            webViewController.displayTitle = session.location
-            navigationController?.pushViewController(webViewController, animated: true)
-        }
     }
-
 }
 
 extension SessionsTableViewController: IndicatorInfoProvider {
@@ -91,7 +88,7 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         if let indexPath = tableView.indexPathForRowAtPoint(location) {
-            //This will show the cell clearly and blur the rest of the screen for our peek.
+            // This will show the cell clearly and blur the rest of the screen for our peek.
             previewingContext.sourceRect = tableView.rectForRowAtIndexPath(indexPath)
             let session = dataSource.sessions[indexPath.section]
             if let speaker = session.speaker {
@@ -109,4 +106,3 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
         navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }
 }
-

@@ -11,29 +11,27 @@ import Haneke
 import Toucan
 
 class OrganizerTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var organizerImageView: UIImageView!
     @IBOutlet weak var organizerNameLabel: UILabel!
     @IBOutlet weak var organizerTwitterLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        organizerTwitterLabel.textColor = UIColor.twitterBlue()
+        organizerTwitterLabel.textColor = .twitterBlue()
     }
-
+    
     func configure(withOrganizer organizer: Organizer) {
         if let
             imageURLString = organizer.imageURL,
             imageURL = NSURL(string: imageURLString) {
-                organizerImageView.hnk_setImageFromURL(imageURL, placeholder: organizer.image) { image in
-                    self.organizerImageView.image = Toucan(image: image).maskWithEllipse().image
-                }
+            organizerImageView.hnk_setImageFromURL(imageURL, placeholder: organizer.image) { image in
+                self.organizerImageView.image = Toucan(image: image).maskWithEllipse().image
+            }
         } else {
             organizerImageView.image = organizer.image
         }
         organizerNameLabel.text = organizer.name
         organizerTwitterLabel.text = "@\(organizer.twitter)"
-    }
-    
+    }    
 }

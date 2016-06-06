@@ -9,14 +9,13 @@
 import UIKit
 
 class TextTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var textView: UITextView!
-
+    
     func configure(withText text: String) {
         textView.text = text
         
         setNeedsUpdateConstraints()
         layoutIfNeeded()
     }
-    
 }

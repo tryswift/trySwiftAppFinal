@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4992E3C41CC22C140038F13A /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992E3C31CC22C140038F13A /* JSONManager.swift */; };
+		499BD62A1D05910200E74061 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BD6291D05910200E74061 /* Twitter.swift */; };
 		499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */; };
 		499CCFF41CC37BC9007A5BBB /* DayComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF31CC37BC9007A5BBB /* DayComparable.swift */; };
 		499CD0001CC39D0F007A5BBB /* data-1.0.json in Resources */ = {isa = PBXBuildFile; fileRef = 499CCFFF1CC39D0F007A5BBB /* data-1.0.json */; };
@@ -145,6 +146,7 @@
 		38CAAC53F6ECFE1EAE2B3111 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		45B486A92C7FDE576D71BD2E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4992E3C31CC22C140038F13A /* JSONManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		499CCFF31CC37BC9007A5BBB /* DayComparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayComparable.swift; sourceTree = "<group>"; };
 		499CCFFF1CC39D0F007A5BBB /* data-1.0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-1.0.json"; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */,
 				FA65B5871C6D844400DCAF0B /* Organizer.swift */,
 				499CCFF31CC37BC9007A5BBB /* DayComparable.swift */,
+				499BD6291D05910200E74061 /* Twitter.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -943,6 +946,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA65B5861C6D827B00DCAF0B /* Pods-acknowledgements.plist in Sources */,
+				499BD62A1D05910200E74061 /* Twitter.swift in Sources */,
 				FA39E90F1C6C81870074B6BE /* SponsorsViewController.swift in Sources */,
 				499CCFF41CC37BC9007A5BBB /* DayComparable.swift in Sources */,
 				FA39E8D71C6B05980074B6BE /* Session.swift in Sources */,

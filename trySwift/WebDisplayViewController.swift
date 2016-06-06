@@ -25,7 +25,6 @@ class WebDisplayViewController: UIViewController {
         
         title = displayTitle
     }
-
 }
 
 extension WebDisplayViewController: UIWebViewDelegate {

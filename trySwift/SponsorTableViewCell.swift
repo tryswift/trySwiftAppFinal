@@ -11,30 +11,27 @@ import Haneke
 import Toucan
 
 class SponsorTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var sponsorImageView: UIImageView!
     @IBOutlet weak var sponsorNameLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        websiteLabel.textColor = UIColor.twitterBlue()
+        websiteLabel.textColor = .twitterBlue()
     }
     
     func configure(withSponsor sponsor: Sponsor) {
         if let
             imageURLString = sponsor.logoURL,
             imageURL = NSURL(string: imageURLString) {
-                sponsorImageView.hnk_setImageFromURL(imageURL, placeholder: sponsor.logo) { image in
-                    self.sponsorImageView.image = Toucan(image: image).maskWithEllipse().image
-                }
+            sponsorImageView.hnk_setImageFromURL(imageURL, placeholder: sponsor.logo) { image in
+                self.sponsorImageView.image = Toucan(image: image).maskWithEllipse().image
+            }
         } else {
             sponsorImageView.image = sponsor.logo
         }
         sponsorNameLabel.text = sponsor.name
         websiteLabel.text = sponsor.website
     }
-
-    
 }

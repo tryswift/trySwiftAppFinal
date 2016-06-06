@@ -9,7 +9,7 @@
 import UIKit
 
 class SpeakersViewController: UITableViewController {
-
+    
     private let speakers = Speaker.speakers
     private let speakerDetailSegue = "speakerDetailSegue"
     
@@ -33,12 +33,12 @@ class SpeakersViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let speakerDetailVC = segue.destinationViewController as? SpeakerDetailViewController {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
@@ -46,13 +46,15 @@ class SpeakersViewController: UITableViewController {
             }
         }
     }
+}
 
-    // MARK: - Table view data source
-
+// MARK: - Table view data source
+extension SpeakersViewController {
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return speakers.count
     }

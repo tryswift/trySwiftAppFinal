@@ -11,7 +11,7 @@ import Haneke
 import Toucan
 
 class SessionTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var sessionTitleLabel: UILabel!
     @IBOutlet weak var speakerImageView: UIImageView!
     @IBOutlet weak var speakerNameLabel: UILabel!
@@ -20,23 +20,23 @@ class SessionTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         sessionTitleLabel.textColor = .trySwiftTitleColor()
         sessionTypeLabel.textColor = .trySwiftTitleColor()
         speakerNameLabel.textColor = .trySwiftSubtitleColor()
         sessionLocationLabel.textColor = .trySwiftSubtitleColor()
         sessionTitleLabel.clipsToBounds = false
     }
-
+    
     func configure(withSession session: Session) {
         if let speaker = session.speaker {
             sessionTitleLabel.text = speaker.presentation.title
             if let
                 imageURLString = speaker.imageURL,
                 imageURL = NSURL(string: imageURLString) {
-                    speakerImageView.hnk_setImageFromURL(imageURL, placeholder: speaker.image) { image in
-                        self.speakerImageView.image = Toucan(image: image).maskWithEllipse().image
-                    }
+                speakerImageView.hnk_setImageFromURL(imageURL, placeholder: speaker.image) { image in
+                    self.speakerImageView.image = Toucan(image: image).maskWithEllipse().image
+                }
             } else {
                 speakerImageView.image = speaker.image
             }
@@ -54,14 +54,9 @@ class SessionTableViewCell: UITableViewCell {
             } else {
                 sessionTypeLabel.text = "🐥"
             }
-
-            if session.id == 319 {  // TOMBOY106
-                accessoryType = .DisclosureIndicator
-                selectionStyle = .Default
-            } else {
-                accessoryType = .None
-                selectionStyle = .None
-            }
+            
+            accessoryType = .None
+            selectionStyle = .None
         }
         
         sessionLocationLabel.text = session.location
@@ -69,5 +64,3 @@ class SessionTableViewCell: UITableViewCell {
         layoutIfNeeded()
     }
 }
-
-

@@ -16,10 +16,11 @@ protocol DayFilterable {
 extension DayFilterable {
     
     func sameDay(asDate date: NSDate) -> Bool {
+        let currentCalendar = NSCalendar.currentCalendar()
         let flags: NSCalendarUnit = [.Year, .Month, .Day]
-        let components1 = NSCalendar.currentCalendar().components(flags, fromDate: startTime)
-        let components2 = NSCalendar.currentCalendar().components(flags, fromDate: date)
+        let startTimeComponents = currentCalendar.components(flags, fromDate: startTime)
+        let compareDateComponents = currentCalendar.components(flags, fromDate: date)
         
-        return components1.year == components2.year && components1.month == components2.month && components1.day == components2.day
+        return startTimeComponents.year == compareDateComponents.year && startTimeComponents.month == compareDateComponents.month && startTimeComponents.day == compareDateComponents.day
     }
 }

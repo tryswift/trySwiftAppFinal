@@ -9,7 +9,7 @@
 import UIKit
 
 class MoreTableViewController: UITableViewController {
-
+    
     private let cellIdentifier = "BasicCell"
     
     private enum MoreSection: Int {
@@ -33,21 +33,23 @@ class MoreTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
+}
 
-    // MARK: - Table view data source
-
+// MARK: - Table view data source
+extension MoreTableViewController {
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch MoreSection(rawValue: section)! {
         case .EventDetails:
@@ -56,10 +58,10 @@ class MoreTableViewController: UITableViewController {
             return 2
         }
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
-
+        
         switch MoreSection(rawValue: indexPath.section)! {
         case .EventDetails:
             switch EventDetailsRow(rawValue: indexPath.row)! {
@@ -78,7 +80,7 @@ class MoreTableViewController: UITableViewController {
                 cell.textLabel?.text = isJapanese ? "謝辞" : "Acknowledgements"
             }
         }
-
+        
         return cell
     }
     
@@ -101,7 +103,7 @@ class MoreTableViewController: UITableViewController {
                 showLibraries()
             }
         }
-
+        
     }
 }
 
@@ -135,11 +137,11 @@ private extension MoreTableViewController {
     func showLibraries() {
         if let acknowledgementesViewController = VTAcknowledgementsViewController.acknowledgementsViewController() {
             if #available(iOS 9.2, *) {
-               acknowledgementesViewController.headerText = "We 🤗 Open Source Software"
+                acknowledgementesViewController.headerText = "We 🤗 Open Source Software"
             } else {
                 acknowledgementesViewController.headerText = "We ❤️ Open Source Software"
             }
-
+            
             navigationController?.pushViewController(acknowledgementesViewController, animated: true)
         }
     }

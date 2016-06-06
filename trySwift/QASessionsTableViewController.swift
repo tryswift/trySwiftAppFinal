@@ -10,7 +10,7 @@ import UIKit
 import XLPagerTabStrip
 
 class QASessionsTableViewController: UITableViewController {
-
+    
     var dataSource: QASessionDataSourceProtocol!
     
     override func viewDidLoad() {
@@ -24,10 +24,12 @@ class QASessionsTableViewController: UITableViewController {
         if traitCollection.forceTouchCapability == .Available {
             registerForPreviewingWithDelegate(self, sourceView: tableView)
         }
-
+        
     }
-    
-    // MARK: - Table view data source
+}
+
+// MARK: - Table view data source
+extension QASessionsTableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return dataSource.qaSessions.count
@@ -51,7 +53,6 @@ class QASessionsTableViewController: UITableViewController {
         let session = dataSource.qaSessions[section]
         return "\(session.startTime.stringFromFormat("H:mm")) - \(session.endTime.stringFromFormat("H:mm"))"
     }
-
 }
 
 extension QASessionsTableViewController: IndicatorInfoProvider {
@@ -66,7 +67,7 @@ extension QASessionsTableViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         if let indexPath = tableView.indexPathForRowAtPoint(location) {
-
+            
             let cell = tableView.cellForRowAtIndexPath(indexPath) as! QASessionTableViewCell
             
             let viewsTo3DTouch = [cell.speaker1ImageView, cell.speaker2ImageView, cell.speaker3ImageView]
@@ -100,5 +101,4 @@ extension QASessionsTableViewController: UIViewControllerPreviewingDelegate {
         speakerDetailVC.speaker = speaker
         return speakerDetailVC
     }
-
 }
