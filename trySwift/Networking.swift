@@ -19,30 +19,26 @@ enum Networking {
     
     static func networkJSONVersion(completionHandler: (version: Double) -> Void) {
         Alamofire.request(.GET, "\(baseURL)/version").responseJSON {
-            if let data = $0.data {
-                do {
-                    let json = try JSON(data: data)
-                    let versionString = try json.string("data", "version")
-                    guard let version = Double(versionString) else { return }
-                    completionHandler(version: version)
-                } catch {
-                    print(error)
-                }
+            guard let data = $0.data else { return }
+            do {
+                let json = try JSON(data: data)
+                let versionString = try json.string("data", "version")
+                guard let version = Double(versionString) else { return }
+                completionHandler(version: version)
+            } catch {
+                print(error)
             }
         }
     }
     
     static func networkJSONData(forVersion version: Double, completionHandler: (json: JSON) -> Void) {
-        Alamofire.request(.GET, "\(baseURL)/version/\(version)", parameters: [:], headers: [:]).responseJSON {
-            if let data = $0.data {
-                do {
-                    let json = try JSON(data: data)
-                    completionHandler(json: json)
-                } catch {
-                    print(error)
-                }
-            } else {
-                print("No data")
+        Alamofire.request(.GET, "\(baseURL)/version/\(version)").responseJSON {
+            guard let data = $0.data else { return }
+            do {
+                let json = try JSON(data: data)
+                completionHandler(json: json)
+            } catch {
+                print(error)
             }
         }
     }
@@ -51,7 +47,7 @@ enum Networking {
         networkJSONVersion { version in
             guard version != defaults.doubleForKey("version") else { return }
             networkJSONData(forVersion: version) { json in
-                JSONManager.save(JSON: json, withVersion: version)
+                JSONManager.save(JSON: json, with: version)
             }
         }
     }
