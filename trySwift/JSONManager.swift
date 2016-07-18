@@ -10,6 +10,8 @@ import Foundation
 import Freddy
 
 private let defaults = NSUserDefaults.standardUserDefaults()
+private let fileManager = NSFileManager.defaultManager()
+private let bundle = NSBundle.mainBundle()
 
 // This is an enum, which prevents it from being instantiated.
 // See https://www.natashatherobot.com/swift-enum-no-cases/
@@ -30,19 +32,19 @@ enum JSONManager {
             fallthrough
         case 1.0:
             // Get the JSON from the main bundle.
-            guard let path = NSBundle.mainBundle().pathForResource("data-\(1.0)", ofType: "json") else { throw DecodeError.InvalidPath }
-            guard let data = NSFileManager.defaultManager().contentsAtPath(path) else { throw DecodeError.InvalidData }
+            guard let path = bundle.pathForResource("data-\(1.0)", ofType: "json") else { throw DecodeError.InvalidPath }
+            guard let data = fileManager.contentsAtPath(path) else { throw DecodeError.InvalidData }
             return data
         default:
             // Get the JSON from the file it was saved in.
-            guard let fileName = documentsDirectory?.stringByAppendingPathComponent("data-\(version).json") else { throw DecodeError.InvalidFileName }
+            guard let fileName = jsonFile(for: version) else { throw DecodeError.InvalidFileName }
             guard let data = NSData(contentsOfFile: fileName) else { throw DecodeError.NoData }
             return data
         }
     }
     
-    static func save(JSON json: JSON, withVersion version: Double) {
-        guard let fileName = documentsDirectory?.stringByAppendingPathComponent("data-\(version).json") else { return }
+    static func save(JSON json: JSON, with version: Double) {
+        guard let fileName = jsonFile(for: version) else { return }
         do {
             try json.serialize().writeToFile(fileName, atomically: true)
             defaults.setDouble(version, forKey: "version")
@@ -61,7 +63,11 @@ enum JSONManager {
     /// Returns the first path in the document directory.
     /// The return value is an NSString so it allows `stringByAppendingPathComponent(_:)`
     /// to be called on it.
-    static var documentsDirectory: NSString? {
+    private static var documentsDirectory: NSString? {
         return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
+    }
+    
+    static func jsonFile(for version: Double) -> String? {
+        return documentsDirectory?.stringByAppendingPathComponent("data-\(version).json")
     }
 }
