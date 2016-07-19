@@ -79,11 +79,7 @@ extension SponsorsViewController {
         webViewController.url = NSURL(string: "http://\(sponsor.website)")!
         webViewController.displayTitle = sponsor.name
         
-        if let splitViewController = splitViewController {
-            splitViewController.showDetailViewController(webViewController, sender: self)
-        } else {
-            navigationController?.pushViewController(webViewController, animated: true)
-        }
+        navigationController?.pushViewController(webViewController, animated: true)
     }
 }
 
