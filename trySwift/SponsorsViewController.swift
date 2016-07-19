@@ -38,17 +38,21 @@ class SponsorsViewController: UITableViewController {
 extension SponsorsViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Sponsor.Level(rawValue: section)! {
-        case .Diamond:
-            return Sponsor.diamondSponsors.count
+//        case .Diamond:
+//            return Sponsor.diamondSponsors.count
         case .Gold:
             return Sponsor.goldSponsors.count
         case .Silver:
             return Sponsor.silverSponsors.count
+        case .Diversity:
+            return Sponsor.diversitySponsors.count
+        case .Event:
+            return Sponsor.eventPartners.count
         }
     }
     
@@ -64,17 +68,22 @@ extension SponsorsViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let sponsorLevel = Sponsor.Level(rawValue: section)!
-        return sponsorLevel.title
+        return sponsorLevel.description
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let sponsor = sponsorAtIndexPath(indexPath)
         
         let webViewController = WebDisplayViewController()
         webViewController.url = NSURL(string: "http://\(sponsor.website)")!
         webViewController.displayTitle = sponsor.name
         
-        self.navigationController?.pushViewController(webViewController, animated: true)
+        if let splitViewController = splitViewController {
+            splitViewController.showDetailViewController(webViewController, sender: self)
+        } else {
+            navigationController?.pushViewController(webViewController, animated: true)
+        }
     }
 }
 
@@ -82,12 +91,16 @@ private extension SponsorsViewController {
     
     func sponsorAtIndexPath(indexPath: NSIndexPath) -> Sponsor {
         switch Sponsor.Level(rawValue: indexPath.section)! {
-        case .Diamond:
-            return Sponsor.diamondSponsors[indexPath.row]
+//        case .Diamond:
+//            return Sponsor.diamondSponsors[indexPath.row]
         case .Gold:
             return Sponsor.goldSponsors[indexPath.row]
         case .Silver:
             return Sponsor.silverSponsors[indexPath.row]
+        case .Diversity:
+            return Sponsor.diversitySponsors[indexPath.row]
+        case .Event:
+            return Sponsor.eventPartners[indexPath.row]
         }
     }
 }
