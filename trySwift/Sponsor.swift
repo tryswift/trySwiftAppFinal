@@ -11,17 +11,21 @@ import Freddy
 
 struct Sponsor {
     
-    enum Level: Int {
-        case Diamond, Gold, Silver
+    enum Level: Int, CustomStringConvertible {
+        case /*Diamond, */Gold, Silver, Diversity, Event
         
-        var title: String {
+        var description: String {
             switch self {
-            case .Diamond:
-                return "Diamond"
+//            case .Diamond:
+//                return "Diamond"
             case .Gold:
                 return "Gold"
             case .Silver:
                 return "Silver"
+            case .Diversity:
+                return "Diversity"
+            case .Event:
+                return "Event Partners"
             }
         }
     }
@@ -41,7 +45,7 @@ extension Sponsor: JSONDecodable {
         self.name = try json.string("name")
         self.website = try json.string("website")
         self.twitter = try json.string("twitter", ifNull: true)
-        self.logo = try UIImage(named: json.string("logo", ifNull: true) ?? "")
+        self.logo = try UIImage(named: json.string("logo", ifNull: true) ?? "invalid")
         self.logoURL = try json.string("logoURL", ifNull: true)
         self.level = try Level(rawValue: json.int("level"))!
         self.description = try json.string("description", ifNull: true)
@@ -59,9 +63,9 @@ extension Sponsor {
         }
     }()
     
-    static let diamondSponsors: [Sponsor] = {
-        return sponsors.filter { $0.level == .Diamond }
-    }()
+//    static let diamondSponsors: [Sponsor] = {
+//        return sponsors.filter { $0.level == .Diamond }
+//    }()
     
     static let goldSponsors: [Sponsor] = {
         return sponsors.filter { $0.level == .Gold }
@@ -69,5 +73,13 @@ extension Sponsor {
     
     static let silverSponsors: [Sponsor] = {
         return sponsors.filter { $0.level == .Silver }
+    }()
+    
+    static let diversitySponsors: [Sponsor] = {
+        return sponsors.filter { $0.level == .Diversity }
+    }()
+    
+    static let eventPartners: [Sponsor] = {
+        return sponsors.filter { $0.level == .Event }
     }()
 }
