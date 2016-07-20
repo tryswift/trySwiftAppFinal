@@ -38,7 +38,7 @@ class SponsorsViewController: UITableViewController {
 extension SponsorsViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,6 +51,8 @@ extension SponsorsViewController {
             return Sponsor.silverSponsors.count
         case .Diversity:
             return Sponsor.diversitySponsors.count
+        case .Student:
+            return Sponsor.studentSponsors.count
         case .Event:
             return Sponsor.eventPartners.count
         }
@@ -95,6 +97,8 @@ private extension SponsorsViewController {
             return Sponsor.silverSponsors[indexPath.row]
         case .Diversity:
             return Sponsor.diversitySponsors[indexPath.row]
+        case .Student:
+            return Sponsor.studentSponsors[indexPath.row]
         case .Event:
             return Sponsor.eventPartners[indexPath.row]
         }
