@@ -14,8 +14,8 @@ try! Swift Conference App
 - [x] Add a fallback to the "hardcoded" JSON if neccesary.
 - [x] Generate acknowledgements to include new libraries
 - [ ] Check how US-times (AM/PM) can be used in the API and (as such) in the app
-~~- [ ] Make speaker images in Q&A tappable without 3D Touch (or was this intentional in any way?!)~~
-~~- [ ] Show speaker images in Q&A flexible; they should show as many speaker images as there are speakers (instead of a fixed 3). Now, tapping on an "empty" speaker image crashes the app~~
+- [ ] ~~Make speaker images in Q&A tappable without 3D Touch (or was this intentional in any way?!)~~
+- [ ] ~~Show speaker images in Q&A flexible; they should show as many speaker images as there are speakers (instead of a fixed 3). Now, tapping on an "empty" speaker image crashes the app~~
 - [ ] Add API / JSON to website (now hosted on my server)
 - [ ] Immediately use newly downloaded JSON file. Now, a restart of the app is required
 - [ ] Support talks with multiple speakers (End-to-end application development in Swift)
