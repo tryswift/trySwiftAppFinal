@@ -23,13 +23,13 @@ extension Organizer: JSONDecodable {
         self.name = try json.string("name")
         self.twitter = try json.string("twitter")
         if let
-            imageString = try json.string("image", ifNull: true),
+            imageString = try json.string("image", alongPath: [.NullBecomesNil]),
             image = UIImage(named: imageString) {
             self.image = Toucan(image: image).maskWithEllipse().image
         } else {
             self.image = nil
         }
-        self.imageURL = try json.string("imageURL", ifNull: true)
+        self.imageURL = try json.string("imageURL", alongPath: [.NullBecomesNil])
     }
 }
 

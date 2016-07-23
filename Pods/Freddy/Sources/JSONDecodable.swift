@@ -48,7 +48,7 @@ extension Int: JSONDecodable {
     ///           passed to this initializer.
     public init(json: JSON) throws {
         switch json {
-        case let .Double(double):
+        case let .Double(double) where double <= Double(Swift.Int.max):
             self = Swift.Int(double)
         case let .Int(int):
             self = int
@@ -89,6 +89,22 @@ extension Bool: JSONDecodable {
         self = bool
     }
     
+}
+
+extension RawRepresentable where RawValue: JSONDecodable {
+
+    /// An initializer to create an instance of `RawRepresentable` from a `JSON` value.
+    /// - parameter json: An instance of `JSON`.
+    /// - throws: The initializer will throw an instance of `JSON.Error` if
+    ///           an instance of `RawRepresentable` cannot be created from the `JSON` value that was
+    ///           passed to this initializer.
+    public init(json: JSON) throws {
+        let raw = try json.decode(type: RawValue.self)
+        guard let value = Self(rawValue: raw) else {
+            throw JSON.Error.ValueNotConvertible(value: json, to: Self.self)
+        }
+        self = value
+    }
 }
 
 internal extension JSON {

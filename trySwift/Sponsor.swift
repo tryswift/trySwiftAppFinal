@@ -46,11 +46,11 @@ extension Sponsor: JSONDecodable {
     init(json: JSON) throws {
         self.name = try json.string("name")
         self.website = try json.string("website")
-        self.twitter = try json.string("twitter", ifNull: true)
-        self.logo = try UIImage(named: json.string("logo", ifNull: true) ?? "invalid")
-        self.logoURL = try json.string("logoURL", ifNull: true)
+        self.twitter = try json.string("twitter", alongPath: [.NullBecomesNil])
+        self.logo = try UIImage(named: json.string("logo", alongPath: [.NullBecomesNil]) ?? "invalid")
+        self.logoURL = try json.string("logoURL", alongPath: [.NullBecomesNil])
         self.level = try Level(rawValue: json.int("level"))!
-        self.description = try json.string("description", ifNull: true)
+        self.description = try json.string("description", alongPath: [.NullBecomesNil])
     }
 }
 
