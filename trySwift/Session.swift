@@ -46,7 +46,7 @@ extension Session: JSONDecodable {
         self.description = try json.string("description")
         self.location = try json.string("location")
         
-        self.speaker = try Speaker.speakers.filter { try (json.array("speakers", ifNull: true) ?? []).flatMap(Int.init).contains($0.id) }.first
+        self.speaker = try Speaker.speakers.filter { try (json.array("speakers", alongPath: [.NullBecomesNil]) ?? []).flatMap(Int.init).contains($0.id) }.first
     }
 }
 

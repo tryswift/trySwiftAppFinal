@@ -1,31 +1,34 @@
 PODS:
   - Alamofire (3.3.1)
-  - DynamicColor (2.3.0)
-  - Freddy (2.0.2)
+  - DynamicColor (2.4.0)
+  - Freddy (2.1.0)
   - HanekeSwift (0.10.1)
-  - Timepiece (0.4.2)
+  - Timepiece (0.4.3)
   - Toucan (0.5.0)
-  - VTAcknowledgementsViewController (0.17)
-  - XLPagerTabStrip (4.0.1)
+  - VTAcknowledgementsViewController (1.1)
+  - XLPagerTabStrip (5.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.3.1)
-  - DynamicColor (~> 2.3.0)
-  - Freddy
-  - HanekeSwift
+  - DynamicColor (~> 2.4.0)
+  - Freddy (~> 2.1.0)
+  - HanekeSwift (~> 0.10.1)
   - Timepiece
+  - Timepiece (~> 0.4.3)
   - Toucan (~> 0.5.0)
   - VTAcknowledgementsViewController
-  - XLPagerTabStrip (~> 4.0)
+  - XLPagerTabStrip (~> 5.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
-  DynamicColor: 18badd22ee5edeefcbe0a8f5887a86640c592a1c
-  Freddy: e53713b8d5be02dbf5f4132c44d899d99eb09a6b
+  DynamicColor: 2f3fd61053684667bad9f03045dcf9a2a5a007ea
+  Freddy: bbdca013977db29638b24baf6572ce94452bec29
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
-  Timepiece: cf53bb908bf542acc0e3d5f69cabfed869df4ebd
+  Timepiece: b5038887b91d6eb70653173f4270e06b3abeac41
   Toucan: 0519c341148252ae114c5a657d2a85bb9ada9e40
-  VTAcknowledgementsViewController: 6056f5f5e5ed995bbf0581bed6ddd29355ca9a80
-  XLPagerTabStrip: a39467a6e71017d2be92807ed9308b4d06557c80
+  VTAcknowledgementsViewController: 44da49d57a1dbf414e653688793a130d24af151e
+  XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 77cc436f2e88fde0473bdbda5459f1bced708a10
+
+COCOAPODS: 1.0.1
