@@ -19,12 +19,20 @@ struct Session {
     let speaker: Speaker?
     
     var timeString: String {
-        return "\(startTime.stringFromFormat("H:mm")) - \(endTime.stringFromFormat("H:mm"))"
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.timeStyle = .ShortStyle
+        
+        return "\(dateFormatter.stringFromDate(startTime)) - \(dateFormatter.stringFromDate(endTime))"
     }
     
     var dateTimeString: String {
-        let format = isJapanese ? "MMMM d H:mm" : "EEEE, H:mm"
-        return "\(startTime.stringFromFormat(format)) - \(endTime.stringFromFormat("H:mm"))"
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.setLocalizedDateFormatFromTemplate("EEEE hhmm")
+        let startTime = dateFormatter.stringFromDate(self.startTime)
+        
+        dateFormatter.setLocalizedDateFormatFromTemplate("hh:mm")
+        let endTime = dateFormatter.stringFromDate(self.endTime)
+        return "\(startTime) - \(endTime)"
     }
 }
 
