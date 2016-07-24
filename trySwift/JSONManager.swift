@@ -43,14 +43,17 @@ enum JSONManager {
         }
     }
     
-    static func save(JSON json: JSON, with version: Double) {
-        guard let fileName = jsonFile(for: version) else { return }
+    static func save(JSON json: JSON, with version: Double) -> Bool {
+        guard let fileName = jsonFile(for: version) else { return false }
         do {
-            try json.serialize().writeToFile(fileName, atomically: true)
+            let result = try json.serialize().writeToFile(fileName, atomically: true)
             defaults.setDouble(version, forKey: "version")
+            return result
         } catch {
             print(error)
         }
+        
+        return false
     }
     
     enum DecodeError: ErrorType {
@@ -59,7 +62,10 @@ enum JSONManager {
         case InvalidFileName
         case NoData
     }
-    
+}
+
+private extension JSONManager {
+
     /// Returns the first path in the document directory.
     /// The return value is an NSString so it allows `stringByAppendingPathComponent(_:)`
     /// to be called on it.
@@ -67,7 +73,7 @@ enum JSONManager {
         return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
     }
     
-    static func jsonFile(for version: Double) -> String? {
+    private static func jsonFile(for version: Double) -> String? {
         return documentsDirectory?.stringByAppendingPathComponent("data-\(version).json")
     }
 }
