@@ -78,7 +78,7 @@ extension SponsorsViewController {
         let sponsor = sponsorAtIndexPath(indexPath)
         
         let webViewController = WebDisplayViewController()
-        webViewController.url = NSURL(string: "http://\(sponsor.website)")!
+        webViewController.url = NSURL(string: sponsor.website)!
         webViewController.displayTitle = sponsor.name
         
         navigationController?.pushViewController(webViewController, animated: true)
