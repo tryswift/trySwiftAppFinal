@@ -7,34 +7,59 @@
 //
 
 import UIKit
+import WebKit
+
+private let application = UIApplication.sharedApplication()
 
 class WebDisplayViewController: UIViewController {
     
-    @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var url: NSURL!
     var displayTitle: String?
+    private var webView: WKWebView!
+    
+    var showNetworkActivityIndicator: Bool = false {
+        didSet {
+            if showNetworkActivityIndicator {
+                activityIndicator.startAnimating()
+                application.networkActivityIndicatorVisible = true
+            } else {
+                activityIndicator.stopAnimating()
+                application.networkActivityIndicatorVisible = false
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView.delegate = self
+        webView = WKWebView(frame: self.view.frame)
+        webView.subviews.forEach { $0.backgroundColor = .clearColor() }
+        webView.navigationDelegate = self
+        webView.allowsLinkPreview = true
+        view.insertSubview(webView, aboveSubview: activityIndicator)
+        
         webView.loadRequest(NSURLRequest(URL: url))
-        activityIndicator.startAnimating()
+        showNetworkActivityIndicator = true
         
         title = displayTitle
     }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        showNetworkActivityIndicator = false
+    }
 }
 
-extension WebDisplayViewController: UIWebViewDelegate {
+extension WebDisplayViewController: WKNavigationDelegate {
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        activityIndicator.stopAnimating()
+    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+        showNetworkActivityIndicator = false
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
-        print(error?.localizedDescription)
-        activityIndicator.stopAnimating()
+    func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
+        print(error.localizedDescription)
+        showNetworkActivityIndicator = false
     }
 }
