@@ -34,6 +34,7 @@ extension WebDisplayViewController: UIWebViewDelegate {
     }
     
     func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+        print(error?.localizedDescription)
         activityIndicator.stopAnimating()
     }
 }
