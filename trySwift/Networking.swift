@@ -43,11 +43,15 @@ enum Networking {
         }
     }
     
-    static func refreshJSONData() {
+    static func refreshJSONData(completionHandler: (updated: Bool) -> Void) {
         networkJSONVersion { version in
-            guard version != defaults.doubleForKey("version") else { return }
+            guard version != defaults.doubleForKey("version") else {
+                completionHandler(updated: false)
+                return
+            }
             networkJSONData(forVersion: version) { json in
-                JSONManager.save(JSON: json, with: version)
+                let result = JSONManager.save(JSON: json, with: version)
+                completionHandler(updated: result)
             }
         }
     }
