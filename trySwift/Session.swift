@@ -64,7 +64,7 @@ extension Session {
 
 extension Session: DayFilterable {
     
-    static func sessions(forDate date: NSDate) -> [Session] {
+    static func sessions(for date: NSDate) -> [Session] {
         return sessions.filter { $0.sameDay(asDate: date) }
     }
 }
