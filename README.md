@@ -17,7 +17,7 @@ try! Swift Conference App
 - [x] Show events on August 31
 - [ ] ~~Make speaker images in Q&A tappable without 3D Touch (or was this intentional in any way?!)~~
 - [ ] ~~Show speaker images in Q&A flexible; they should show as many speaker images as there are speakers (instead of a fixed 3). Now, tapping on an "empty" speaker image crashes the app~~
+- [x] Temporarily remove Q&A from the app
 - [ ] Add API / JSON to website (now hosted on my server)
 - [ ] Immediately use newly downloaded JSON file. Now, a restart of the app is required
 - [ ] Support talks with multiple speakers (End-to-end application development in Swift)
-- [ ] Temporarily remove Q&A from the app
