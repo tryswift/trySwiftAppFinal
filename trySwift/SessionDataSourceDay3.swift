@@ -10,5 +10,5 @@ import Foundation
 
 struct SessionDataSourceDay3: SessionDataSourceProtocol {
     var header = "Fri, Sep 2"
-    var sessions = Session.sessions(forDate: NSDate.date(year: 2016, month: 09, day: 02))
+    var sessions = Session.sessions(for: .date(year: 2016, month: 09, day: 02))
 }

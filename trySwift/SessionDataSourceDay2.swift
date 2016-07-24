@@ -10,5 +10,5 @@ import Timepiece
 
 struct SessionDataSourceDay2: SessionDataSourceProtocol {
     var header = isJapanese ? "3月2日（水）" : "Thu, Sep 1"
-    var sessions = Session.sessions(forDate: NSDate.date(year: 2016, month: 09, day: 01))
+    var sessions = Session.sessions(for: .date(year: 2016, month: 09, day: 01))
 }
