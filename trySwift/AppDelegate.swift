@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         configureStyling()
         Networking.refreshJSONData { updated in
+            print("updated JSON file: \(updated ? "yes" : "no")")
             guard updated else { return }
             // Use updated json file in app
         }
