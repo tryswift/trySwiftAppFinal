@@ -33,5 +33,19 @@ class OrganizerTableViewCell: UITableViewCell {
         }
         organizerNameLabel.text = organizer.name
         organizerTwitterLabel.text = "@\(organizer.twitter)"
-    }    
+    }
+    
+    func configure(withConference conference: Conference) {
+        if let
+            imageURLString = conference.imageURL,
+            imageURL = NSURL(string: imageURLString) {
+            organizerImageView.hnk_setImageFromURL(imageURL, placeholder: conference.image) { image in
+                self.organizerImageView.image = Toucan(image: image).maskWithEllipse().image
+            }
+        } else {
+            organizerImageView.image = conference.image
+        }
+        organizerNameLabel.text = conference.name
+        organizerTwitterLabel.text = "@\(conference.twitter)"
+    }
 }

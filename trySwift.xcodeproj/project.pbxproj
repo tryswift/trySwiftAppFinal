@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		497ABE6E1D53AE8E0010C970 /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497ABE6D1D53AE8E0010C970 /* Conference.swift */; };
 		498144EF1D43D41800D77B99 /* SessionDataSourceDay3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */; };
 		4992E3C41CC22C140038F13A /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992E3C31CC22C140038F13A /* JSONManager.swift */; };
 		499BD62A1D05910200E74061 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BD6291D05910200E74061 /* Twitter.swift */; };
@@ -145,6 +146,7 @@
 /* Begin PBXFileReference section */
 		097FFE9C34A02256B6D6DC80 /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		2ABFAAA9C8A10BE2D1721324 /* Pods_try_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		497ABE6D1D53AE8E0010C970 /* Conference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conference.swift; sourceTree = "<group>"; };
 		498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay3.swift; sourceTree = "<group>"; };
 		4992E3C31CC22C140038F13A /* JSONManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				FA65B5871C6D844400DCAF0B /* Organizer.swift */,
 				499CCFF31CC37BC9007A5BBB /* DayComparable.swift */,
 				499BD6291D05910200E74061 /* Twitter.swift */,
+				497ABE6D1D53AE8E0010C970 /* Conference.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -991,6 +994,7 @@
 				49AFE0171D02E97E004E716D /* Networking.swift in Sources */,
 				FA39E8F41C6C24240074B6BE /* QASessionDataSourceProtocol.swift in Sources */,
 				FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */,
+				497ABE6E1D53AE8E0010C970 /* Conference.swift in Sources */,
 				499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */,
 				FA39E8CD1C6AF8C80074B6BE /* NSLocaleExtension.swift in Sources */,
 				FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */,

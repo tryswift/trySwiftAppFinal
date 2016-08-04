@@ -43,11 +43,4 @@ extension Organizer {
             return []
         }
     }()
-    
-    static let trySwift = Organizer(
-        name: "try! Conference",
-        twitter: "tryswiftconf",
-        image: Toucan(image: UIImage(named: "logo")!).maskWithEllipse().image,
-        imageURL: nil
-    )
 }
