@@ -47,7 +47,11 @@ enum JSONManager {
         guard let fileName = jsonFile(for: version) else { return false }
         do {
             let result = try json.serialize().writeToFile(fileName, atomically: true)
+            let previousVersion = defaults.doubleForKey("version")
             defaults.setDouble(version, forKey: "version")
+            if let previousVersionFile = jsonFile(for: previousVersion) {
+                let _ = try? fileManager.removeItemAtPath(previousVersionFile)
+            }
             return result
         } catch {
             print(error)
