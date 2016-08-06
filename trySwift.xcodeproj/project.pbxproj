@@ -12,9 +12,9 @@
 		4992E3C41CC22C140038F13A /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992E3C31CC22C140038F13A /* JSONManager.swift */; };
 		499BD62A1D05910200E74061 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BD6291D05910200E74061 /* Twitter.swift */; };
 		499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */; };
-		499CCFF41CC37BC9007A5BBB /* DayComparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF31CC37BC9007A5BBB /* DayComparable.swift */; };
+		499CCFF41CC37BC9007A5BBB /* DayFilterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF31CC37BC9007A5BBB /* DayFilterable.swift */; };
 		499CD0001CC39D0F007A5BBB /* data-1.0.json in Resources */ = {isa = PBXBuildFile; fileRef = 499CCFFF1CC39D0F007A5BBB /* data-1.0.json */; };
-		49AFE0171D02E97E004E716D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFE0161D02E97E004E716D /* Networking.swift */; };
+		49AFE0171D02E97E004E716D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AFE0161D02E97E004E716D /* NetworkManager.swift */; };
 		A99FB38D56D5BFB191EFAE60 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6004E4BE6D0123525B468B8A /* Pods_trySwift.framework */; };
 		C0EBD91A760DA59295DFEEC9 /* Pods_try_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABFAAA9C8A10BE2D1721324 /* Pods_try_Extension.framework */; };
 		FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */; };
@@ -151,9 +151,9 @@
 		4992E3C31CC22C140038F13A /* JSONManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		499CCFF31CC37BC9007A5BBB /* DayComparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayComparable.swift; sourceTree = "<group>"; };
+		499CCFF31CC37BC9007A5BBB /* DayFilterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayFilterable.swift; sourceTree = "<group>"; };
 		499CCFFF1CC39D0F007A5BBB /* data-1.0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-1.0.json"; sourceTree = "<group>"; };
-		49AFE0161D02E97E004E716D /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		49AFE0161D02E97E004E716D /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4DC64B443CF176D0AEAD719F /* Pods-try Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.release.xcconfig"; sourceTree = "<group>"; };
 		6004E4BE6D0123525B468B8A /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		649E54409C43767E2F947F26 /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 				FA65B5941C7274EE00DCAF0B /* UIImageExtension.swift */,
 				4992E3C31CC22C140038F13A /* JSONManager.swift */,
 				499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */,
-				49AFE0161D02E97E004E716D /* Networking.swift */,
+				49AFE0161D02E97E004E716D /* NetworkManager.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -349,7 +349,7 @@
 				FA39E8DC1C6B09DF0074B6BE /* Sponsor.swift */,
 				FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */,
 				FA65B5871C6D844400DCAF0B /* Organizer.swift */,
-				499CCFF31CC37BC9007A5BBB /* DayComparable.swift */,
+				499CCFF31CC37BC9007A5BBB /* DayFilterable.swift */,
 				499BD6291D05910200E74061 /* Twitter.swift */,
 				497ABE6D1D53AE8E0010C970 /* Conference.swift */,
 			);
@@ -958,7 +958,7 @@
 				FA65B5861C6D827B00DCAF0B /* Pods-acknowledgements.plist in Sources */,
 				499BD62A1D05910200E74061 /* Twitter.swift in Sources */,
 				FA39E90F1C6C81870074B6BE /* SponsorsViewController.swift in Sources */,
-				499CCFF41CC37BC9007A5BBB /* DayComparable.swift in Sources */,
+				499CCFF41CC37BC9007A5BBB /* DayFilterable.swift in Sources */,
 				FA39E8D71C6B05980074B6BE /* Session.swift in Sources */,
 				FA39E8F61C6C244A0074B6BE /* QASessionDataSourceDay1.swift in Sources */,
 				FA39E9031C6C33870074B6BE /* QASessionTableViewCell.swift in Sources */,
@@ -991,7 +991,7 @@
 				FA65B58D1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift in Sources */,
 				FA39E9001C6C32A50074B6BE /* QASessionsTableViewController.swift in Sources */,
 				FA39E9251C6D29D20074B6BE /* TextTableViewCell.swift in Sources */,
-				49AFE0171D02E97E004E716D /* Networking.swift in Sources */,
+				49AFE0171D02E97E004E716D /* NetworkManager.swift in Sources */,
 				FA39E8F41C6C24240074B6BE /* QASessionDataSourceProtocol.swift in Sources */,
 				FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */,
 				497ABE6E1D53AE8E0010C970 /* Conference.swift in Sources */,

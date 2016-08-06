@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         configureStyling()
-        Networking.refreshJSONData { updated in
-            print("updated JSON file: \(updated ? "yes" : "no")")
+        NetworkManager.refreshJSONData { updated, version in
+            print("updated JSON file: \(updated ? "yes" : "no"), version: \(version)")
             guard updated else { return }
             // Use updated json file in app
         }
