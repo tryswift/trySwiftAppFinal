@@ -21,3 +21,4 @@ try! Swift Conference App
 - [ ] Add API / JSON to website (now hosted on my server)
 - [ ] Immediately use newly downloaded JSON file. Now, a restart of the app is required
 - [ ] Support talks with multiple speakers (End-to-end application development in Swift)
+- [ ] Update venue page (now https://gist.github.com/cjwirth/f462cce018171ddc0c79)
