@@ -1,5 +1,5 @@
 //
-//  Networking.swift
+//  NetworkManager.swift
 //  trySwift
 //
 //  Created by Bas Broek on 6/4/16.
@@ -15,9 +15,9 @@ private let defaults = NSUserDefaults.standardUserDefaults()
 
 // This is an enum, which prevents it from being instantiated.
 // See https://www.natashatherobot.com/swift-enum-no-cases/
-enum Networking {
+enum NetworkManager {
     
-    static func networkJSONVersion(completionHandler: (version: Double) -> Void) {
+    static func jsonVersion(completionHandler: (version: Double) -> Void) {
         Alamofire.request(.GET, "\(baseURL)/version").responseJSON {
             guard let data = $0.data else { return }
             do {
@@ -31,7 +31,7 @@ enum Networking {
         }
     }
     
-    static func networkJSONData(forVersion version: Double, completionHandler: (json: JSON) -> Void) {
+    static func jsonData(for version: Double, completionHandler: (json: JSON) -> Void) {
         Alamofire.request(.GET, "\(baseURL)/version/\(version)").responseJSON {
             guard let data = $0.data else { return }
             do {
@@ -43,15 +43,15 @@ enum Networking {
         }
     }
     
-    static func refreshJSONData(completionHandler: (updated: Bool) -> Void) {
-        networkJSONVersion { version in
+    static func refreshJSONData(completionHandler: (updated: Bool, version: Double) -> Void) {
+        jsonVersion { version in
             guard version != defaults.doubleForKey("version") else {
-                completionHandler(updated: false)
+                completionHandler(updated: false, version: version)
                 return
             }
-            networkJSONData(forVersion: version) { json in
+            jsonData(for: version) { json in
                 let result = JSONManager.save(JSON: json, with: version)
-                completionHandler(updated: result)
+                completionHandler(updated: result, version: version)
             }
         }
     }

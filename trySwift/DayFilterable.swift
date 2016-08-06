@@ -1,5 +1,5 @@
 //
-//  DayComparable.swift
+//  DayFilterable.swift
 //  trySwift
 //
 //  Created by Bas Broek on 4/17/16.
