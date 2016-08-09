@@ -22,3 +22,6 @@ try! Swift Conference App
 - [ ] Immediately use newly downloaded JSON file. Now, a restart of the app is required
 - [ ] Support talks with multiple speakers (End-to-end application development in Swift)
 - [ ] Update venue page (now https://gist.github.com/cjwirth/f462cce018171ddc0c79)
+- [ ] Support JSON on Apple Watch (now still uses the old, static data from March)
+- [ ] Favoriting of sessions (so they can be filtered)
+- [ ] Export sessions to Calendar.app
