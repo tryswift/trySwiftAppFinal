@@ -76,12 +76,8 @@ extension SponsorsViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         let sponsor = sponsorAtIndexPath(indexPath)
-        
-        let webViewController = WebDisplayViewController()
-        webViewController.url = NSURL(string: sponsor.website)!
-        webViewController.displayTitle = sponsor.name
-        
-        navigationController?.pushViewController(webViewController, animated: true)
+        guard let url = NSURL(string: sponsor.website) else { return }
+        openSafariViewController(withURL: url)
     }
 }
 
