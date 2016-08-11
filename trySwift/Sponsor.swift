@@ -12,12 +12,14 @@ import Freddy
 struct Sponsor {
     
     enum Level: Int, CustomStringConvertible {
-        case /*Diamond, */Gold, Silver, Diversity, Student, Event
+        case /*Diamond, */ Platinum, Gold, Silver, Diversity, Student, Event
         
         var description: String {
             switch self {
 //            case .Diamond:
 //                return "Diamond"
+            case .Platinum:
+                return "Platinum Sponsors"
             case .Gold:
                 return "Gold Sponsors"
             case .Silver:
@@ -68,6 +70,10 @@ extension Sponsor {
 //    static let diamondSponsors: [Sponsor] = {
 //        return sponsors.filter { $0.level == .Diamond }
 //    }()
+    
+    static let platinumSponsors: [Sponsor] = {
+        return sponsors.filter { $0.level == .Platinum }
+    }()
     
     static let goldSponsors: [Sponsor] = {
         return sponsors.filter { $0.level == .Gold }

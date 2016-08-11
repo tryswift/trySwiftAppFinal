@@ -38,13 +38,15 @@ class SponsorsViewController: UITableViewController {
 extension SponsorsViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 5
+        return 6
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Sponsor.Level(rawValue: section)! {
 //        case .Diamond:
 //            return Sponsor.diamondSponsors.count
+        case .Platinum:
+            return Sponsor.platinumSponsors.count
         case .Gold:
             return Sponsor.goldSponsors.count
         case .Silver:
@@ -87,6 +89,8 @@ private extension SponsorsViewController {
         switch Sponsor.Level(rawValue: indexPath.section)! {
 //        case .Diamond:
 //            return Sponsor.diamondSponsors[indexPath.row]
+        case .Platinum:
+            return Sponsor.platinumSponsors[indexPath.row]
         case .Gold:
             return Sponsor.goldSponsors[indexPath.row]
         case .Silver:
