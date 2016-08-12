@@ -115,14 +115,18 @@ private extension MoreTableViewController {
     }
     
     func showVenue() {
+        let webViewController = WebDisplayViewController()
         let instructionsURL = isJapanese ? "http://frontrend.github.io/blog/shibuya-markcity/" : "https://gist.github.com/cjwirth/f462cce018171ddc0c79"
-        guard let url =  NSURL(string: instructionsURL) else { return }
-        openSafariViewController(withURL: url)
+        webViewController.url = NSURL(string: instructionsURL)!
+        webViewController.displayTitle = isJapanese ? "会場" : "Venue"
+        navigationController?.pushViewController(webViewController, animated: true)
     }
     
     func showCodeOfConduct() {
-        guard let url =  NSURL(string: "https://github.com/NatashaTheRobot/trySwiftCodeOfConduct/blob/master/README.md") else { return }
-        openSafariViewController(withURL: url)
+        let webViewController = WebDisplayViewController()
+        webViewController.url = NSURL(string: "https://github.com/NatashaTheRobot/trySwiftCodeOfConduct/blob/master/README.md")!
+        webViewController.displayTitle = isJapanese ? "行動規範" : "Code of Conduct"
+        navigationController?.pushViewController(webViewController, animated: true)
     }
     
     func showOrganizers() {
