@@ -45,6 +45,8 @@
 		FA39E90F1C6C81870074B6BE /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E90E1C6C81870074B6BE /* SponsorsViewController.swift */; };
 		FA39E9161C6C83A40074B6BE /* SponsorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9141C6C83A40074B6BE /* SponsorTableViewCell.swift */; };
 		FA39E9171C6C83A40074B6BE /* SponsorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9151C6C83A40074B6BE /* SponsorTableViewCell.xib */; };
+		FA39E91D1C6C8D100074B6BE /* WebDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E91B1C6C8D100074B6BE /* WebDisplayViewController.swift */; };
+		FA39E91E1C6C8D100074B6BE /* WebDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E91C1C6C8D100074B6BE /* WebDisplayViewController.xib */; };
 		FA39E9201C6D25D00074B6BE /* SpeakerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E91F1C6D25D00074B6BE /* SpeakerDetailViewController.swift */; };
 		FA39E9251C6D29D20074B6BE /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9231C6D29D20074B6BE /* TextTableViewCell.swift */; };
 		FA39E9261C6D29D20074B6BE /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9241C6D29D20074B6BE /* TextTableViewCell.xib */; };
@@ -184,6 +186,8 @@
 		FA39E90E1C6C81870074B6BE /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; };
 		FA39E9141C6C83A40074B6BE /* SponsorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E9151C6C83A40074B6BE /* SponsorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewCell.xib; sourceTree = "<group>"; };
+		FA39E91B1C6C8D100074B6BE /* WebDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebDisplayViewController.swift; sourceTree = "<group>"; };
+		FA39E91C1C6C8D100074B6BE /* WebDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebDisplayViewController.xib; sourceTree = "<group>"; };
 		FA39E91F1C6D25D00074B6BE /* SpeakerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerDetailViewController.swift; sourceTree = "<group>"; };
 		FA39E9231C6D29D20074B6BE /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E9241C6D29D20074B6BE /* TextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
@@ -302,6 +306,7 @@
 				FA39E9061C6C43480074B6BE /* Speakers */,
 				FA39E9111C6C81940074B6BE /* SponsorsViewController */,
 				FA65B57D1C6D7AFC00DCAF0B /* More */,
+				FA65B57E1C6D7B0900DCAF0B /* Shared */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -488,6 +493,15 @@
 				FA65B5901C6DA53600DCAF0B /* AboutTableViewController.swift */,
 			);
 			name = More;
+			sourceTree = "<group>";
+		};
+		FA65B57E1C6D7B0900DCAF0B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FA39E91B1C6C8D100074B6BE /* WebDisplayViewController.swift */,
+				FA39E91C1C6C8D100074B6BE /* WebDisplayViewController.xib */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 		FA65B58F1C6D8B0A00DCAF0B /* OrganizerTableViewCell */ = {
@@ -798,6 +812,7 @@
 				FA39E90C1C6C45FD0074B6BE /* SpeakerTableViewCell.xib in Resources */,
 				FA65B58E1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib in Resources */,
 				FAFA15C61C69D31C00FEA4EA /* LaunchScreen.storyboard in Resources */,
+				FA39E91E1C6C8D100074B6BE /* WebDisplayViewController.xib in Resources */,
 				FA39E9261C6D29D20074B6BE /* TextTableViewCell.xib in Resources */,
 				FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */,
 				FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */,
@@ -956,6 +971,7 @@
 				FA39E8FE1C6C32510074B6BE /* QASessionsViewController.swift in Sources */,
 				FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */,
 				FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */,
+				FA39E91D1C6C8D100074B6BE /* WebDisplayViewController.swift in Sources */,
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
 				FA39E8DD1C6B09DF0074B6BE /* Sponsor.swift in Sources */,
 				FA39E8F81C6C245B0074B6BE /* QASessionDataSourceDay2.swift in Sources */,
