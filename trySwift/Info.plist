@@ -2,23 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fluttr</string>
-		<string>icebird</string>
-		<string>simplytweet</string>
-		<string>tweetings</string>
-		<string>x-birdfeed</string>
-		<string>tweetbot</string>
-		<string>echofon</string>
-		<string>twit</string>
-		<string>x-seesmic</string>
-		<string>twitter</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>try!</string>
+	<string>try! NYC</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -35,6 +22,19 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>3</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fluttr</string>
+		<string>icebird</string>
+		<string>simplytweet</string>
+		<string>tweetings</string>
+		<string>x-birdfeed</string>
+		<string>tweetbot</string>
+		<string>echofon</string>
+		<string>twit</string>
+		<string>x-seesmic</string>
+		<string>twitter</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

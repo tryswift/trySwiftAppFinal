@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.natashatherobot.trySwift</string>
+	<string>com.natashatherobot.trySwiftNYC</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
