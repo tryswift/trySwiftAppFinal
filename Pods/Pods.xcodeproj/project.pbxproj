@@ -21,7 +21,7 @@
 		1F06DDD482E1C79209E84CC6E95C01EB /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 116186F312753D00E271FC5EDC3BA7D8 /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2443B5523453B1364FCE544C2C64BA80 /* NSCalendar+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78345A6859A48C0CB8F27F7C6C1D8F86 /* NSCalendar+Timepiece.swift */; };
 		24E7FCE3DF42DC6D616DC39F8AC69566 /* UIImageView+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D352AA0092BE3C89C2F1FBA33DEC430 /* UIImageView+Haneke.swift */; };
-		2A7B6D3C33F50441969BB999F6F6CDD5 /* Timepiece-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D1E9C219C5DBDC976D45C831950098 /* Timepiece-watchOS-dummy.m */; };
+		2A7B6D3C33F50441969BB999F6F6CDD5 /* Timepiece-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C5B30E795AE59FA2FCBF8F8481ACCE /* Timepiece-watchOS-dummy.m */; };
 		2C3A54B39289091385FEC27F97FD9612 /* VTAcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17483449047D4D78F0062A52A50BB485 /* VTAcknowledgementsViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D0DB3F30BCFDE774121FCECFC7BFE4 /* Validation.swift */; };
 		3160F4952F3466B5BD7400BBF530A235 /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43646603C5156EB5EBDFEA6DB11CD270 /* Int+Timepiece.swift */; };
@@ -37,7 +37,7 @@
 		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB0EB893D1C04E30FACBD73FBDC46BA /* ResponseSerialization.swift */; };
 		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4864293C18F7B170EDF90B239C4A1641 /* Manager.swift */; };
 		410D0641B813947CA53F07D75F4624CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF7F5B43214FA9AAA6A575317BFCBDD /* Foundation.framework */; };
-		42FA2F08668ED5C47FC22D9DED27BB6A /* Timepiece-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B42F9C9FB76E395D956F9B71C5F8E5BC /* Timepiece-iOS-dummy.m */; };
+		42FA2F08668ED5C47FC22D9DED27BB6A /* Timepiece-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E6D3C921A636191266853C9A03B80B /* Timepiece-iOS-dummy.m */; };
 		4476EEDB89BD2BBE269BA25D9D6869BA /* JSONParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24C1244617029A302BE387BD245E90 /* JSONParsing.swift */; };
 		4845004740B5BA147A15EAADD82619A6 /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE286F88C9F13C7B71EC20537CB39DEA /* NSDateComponents+Timepiece.swift */; };
 		4846221CFB40FBC769B5358B6B6FF433 /* VTAcknowledgementsViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6086481A2CA0940A0397074272629B23 /* VTAcknowledgementsViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,8 +67,8 @@
 		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16408C251E4501C3028867843EF349 /* ServerTrustPolicy.swift */; };
 		7BA50E7766745BB4AF92B863EEA2512F /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43646603C5156EB5EBDFEA6DB11CD270 /* Int+Timepiece.swift */; };
 		7E09E2B73A1C1DE18C4F266BEDA874A6 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F2EF6D3CEEC4283B4108EEBA3C1F4 /* TwitterPagerTabStripViewController.swift */; };
-		83BB44B1548E54E0E63A97AF3A4628F6 /* Timepiece-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D63FC7EBB79FEFAD0DC40495FBC42F99 /* Timepiece-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		852DCE9329B3F83492E536C7880DE49D /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33E762611FF8FFC0B5DB66E10950B400 /* XLPagerTabStrip.bundle */; };
+		83BB44B1548E54E0E63A97AF3A4628F6 /* Timepiece-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 265203C739D132A7C6EA1C4CBA1232FF /* Timepiece-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		852DCE9329B3F83492E536C7880DE49D /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 727A7B30AF9EA2402A7AADC08291BB2C /* XLPagerTabStrip.bundle */; };
 		865057C55D0ACD07D856B9AA7DEE94A0 /* VTAcknowledgement.m in Sources */ = {isa = PBXBuildFile; fileRef = 6947D920E224D3BCC51392A5B33FEBD0 /* VTAcknowledgement.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		8A85C4CDF0FE775E0BD0C44B0C3E6159 /* NSURLResponse+Haneke.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF01DD03F6FE495B1BDB943CCCA782 /* NSURLResponse+Haneke.swift */; };
 		8B86F02992AEE2A8A77378C420F05AA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF7F5B43214FA9AAA6A575317BFCBDD /* Foundation.framework */; };
@@ -102,7 +102,7 @@
 		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA92BBDC7FCE0D2A1F5D270A9924240E /* Stream.swift */; };
 		AEB48C925DC8D4B812C4ABF9F15C822E /* DiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC86BFD473D0325CCD981869DD3C9C45 /* DiskCache.swift */; };
 		B1CCF02E757EE856275CE85BF171ED90 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2F0C1D94D8B68B45C0EA2133DCDB29 /* Fetch.swift */; };
-		B1DD3C194C0C81A677D4DBC03BD2FC4A /* Timepiece-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BFEDCE59CFC4337481E6F65D08F4F80 /* Timepiece-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1DD3C194C0C81A677D4DBC03BD2FC4A /* Timepiece-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 307C6960FD1E0B26139726F39F6A5188 /* Timepiece-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B5E18CD61714B39443C7DA2DA5832E4B /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C581F9B025582509D2D8723C7FBF57 /* XLPagerTabStrip-dummy.m */; };
 		B819EFED9A60EAAFB6D0BA7454B6DC5B /* Pods-try Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 408380C02B773B436218522CCFC38A9F /* Pods-try Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B992EFF6BC7CA34F3C306ED6353B9636 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320C547105DF4C77294CD1F3A6A4CF4 /* ButtonBarView.swift */; };
@@ -211,10 +211,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		022CA98EBFAC9CC49343E81F911FCC98 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		02AFB6CDE0CCD35E9CF2F108E8514E41 /* Timepiece-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Timepiece-watchOS.modulemap"; path = "../Timepiece-watchOS/Timepiece-watchOS.modulemap"; sourceTree = "<group>"; };
 		04492F5A4F9A2591E0F4038C71AB1C5E /* Fetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Fetcher.swift; path = Haneke/Fetcher.swift; sourceTree = "<group>"; };
 		05533D29F579C3001761E8F660C08B40 /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
 		061E9A967D3102BD462EBF9F96D102A7 /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
+		07E5B8ABC4696B0BEB60E281D036DA38 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07F4A92CD44A495DB13D664B16BD4666 /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
 		08CA70158176B01F63F3EE055D743957 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = Haneke/Log.swift; sourceTree = "<group>"; };
 		0B16408C251E4501C3028867843EF349 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
@@ -225,10 +226,9 @@
 		1419E7E4AA20930CB6685C1B3F58D266 /* JSONLiteralConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONLiteralConvertible.swift; path = Sources/JSONLiteralConvertible.swift; sourceTree = "<group>"; };
 		17483449047D4D78F0062A52A50BB485 /* VTAcknowledgementsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VTAcknowledgementsViewController.m; path = Classes/VTAcknowledgementsViewController.m; sourceTree = "<group>"; };
 		188B1521DEE18208F147FC2DF6A20D0A /* Pods-trySwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-trySwift-acknowledgements.plist"; sourceTree = "<group>"; };
-		19E03E7AC6D581B54495514DBBEC0100 /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2C8E7AA3601A276CC78F1FE09596C2 /* NetworkFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkFetcher.swift; path = Haneke/NetworkFetcher.swift; sourceTree = "<group>"; };
 		1D352AA0092BE3C89C2F1FBA33DEC430 /* UIImageView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Haneke.swift"; path = "Haneke/UIImageView+Haneke.swift"; sourceTree = "<group>"; };
-		1DAC078C7E6E6923CB6FE51DAA9AA4D4 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DB4B4CBEAD03CA28094B651777D0C0A /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0CC5379AA698616C5320658B93D18E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F4C7F307F11CAC1799DE434793705E4 /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
 		1F530286DFC50411823EF2213C3E86F9 /* Format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Format.swift; path = Haneke/Format.swift; sourceTree = "<group>"; };
@@ -236,35 +236,37 @@
 		21420FEBF2268BCD94F42A01E522C861 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		21A359E31AF8A34DE431138104F62462 /* NSDate+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDate+Timepiece.swift"; path = "Sources/NSDate+Timepiece.swift"; sourceTree = "<group>"; };
 		22C581F9B025582509D2D8723C7FBF57 /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
+		22E6D3C921A636191266853C9A03B80B /* Timepiece-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Timepiece-iOS-dummy.m"; sourceTree = "<group>"; };
 		23300DD256980F4E06DD4DCBFF70C1BE /* UIButton+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Haneke.swift"; path = "Haneke/UIButton+Haneke.swift"; sourceTree = "<group>"; };
 		2472B22BCF93E3EEBF566308F05BB945 /* Pods-trySwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-trySwift-acknowledgements.markdown"; sourceTree = "<group>"; };
 		24B5999D49E2446C2C7DA6E0534B7735 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		24FF494EC407930531448DB79045855D /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		25527577543E3138B40A6391A4830315 /* Freddy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Freddy.modulemap; sourceTree = "<group>"; };
 		257EDB6620E4A2AC99C176EE40D0D539 /* Pods-trySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-trySwift-dummy.m"; sourceTree = "<group>"; };
-		2A15594ECC0A81466DD50381C5ADE894 /* Timepiece-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Timepiece-iOS.xcconfig"; sourceTree = "<group>"; };
+		265203C739D132A7C6EA1C4CBA1232FF /* Timepiece-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-umbrella.h"; path = "../Timepiece-watchOS/Timepiece-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		281A92027B98C06BF0749637D111803B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Timepiece-watchOS/Info.plist"; sourceTree = "<group>"; };
 		2D4FCEAADEFEEEA411EAA1BF78B94FEF /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		307C6960FD1E0B26139726F39F6A5188 /* Timepiece-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-umbrella.h"; sourceTree = "<group>"; };
 		316F78C015A83E0A5E6045860201C483 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = Haneke/Data.swift; sourceTree = "<group>"; };
 		327249DEACD82770DAF13938FFBA21C8 /* NSFileManager+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFileManager+Haneke.swift"; path = "Haneke/NSFileManager+Haneke.swift"; sourceTree = "<group>"; };
 		32F95F5D8B22EA638D8F1EBDCEE7FA00 /* Pods-try Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-try Extension-acknowledgements.plist"; sourceTree = "<group>"; };
-		33E762611FF8FFC0B5DB66E10950B400 /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		35D1E9C219C5DBDC976D45C831950098 /* Timepiece-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Timepiece-watchOS-dummy.m"; path = "../Timepiece-watchOS/Timepiece-watchOS-dummy.m"; sourceTree = "<group>"; };
+		34EFD685C79D099B74B39E6F8D2F5255 /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		360752D9B4B8D1130A404934464182F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B5A41BE06B34FB61DB9EF0486BB4768 /* Toucan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toucan-dummy.m"; sourceTree = "<group>"; };
-		3BFEDCE59CFC4337481E6F65D08F4F80 /* Timepiece-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-umbrella.h"; sourceTree = "<group>"; };
+		3C0333315D15F6C73EBB43E59D37F3E6 /* Timepiece-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Timepiece-iOS.xcconfig"; sourceTree = "<group>"; };
 		408380C02B773B436218522CCFC38A9F /* Pods-try Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-try Extension-umbrella.h"; sourceTree = "<group>"; };
 		41FB879A3BB572C73372F65E76388E93 /* Duration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Duration.swift; path = Sources/Duration.swift; sourceTree = "<group>"; };
 		429B58384EDFB74B23774A4B7D9ADEEF /* Pods-try Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		43646603C5156EB5EBDFEA6DB11CD270 /* Int+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Timepiece.swift"; path = "Sources/Int+Timepiece.swift"; sourceTree = "<group>"; };
 		44BB03B4C72474D86F7ACAA7086492B3 /* Pods-trySwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-trySwift-frameworks.sh"; sourceTree = "<group>"; };
 		45777154B60B6C5CE786F77AEFF7090A /* Pods-trySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-trySwift-umbrella.h"; sourceTree = "<group>"; };
-		47883BF106C2D82F134D5EBB0BA9F60E /* Freddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Freddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4864293C18F7B170EDF90B239C4A1641 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
 		4B2ECE19D6B267EE36C2FBCE9FFE1F72 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		4BA804EB1878117BDED329D7FB292696 /* VTAcknowledgementViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgementViewController.h; path = Classes/VTAcknowledgementViewController.h; sourceTree = "<group>"; };
 		4D5F9B7F9B4E5EFE1E7A9E5AFAE7597B /* JSONDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONDecodable.swift; path = Sources/JSONDecodable.swift; sourceTree = "<group>"; };
 		4DC22128FAC9BDE005D61448D892C28D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		515045C048D8130F96D3378AE1E5336A /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		52F34FCAA0290670A85FFED7C230C9FA /* Timepiece-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Timepiece-watchOS.xcconfig"; path = "../Timepiece-watchOS/Timepiece-watchOS.xcconfig"; sourceTree = "<group>"; };
 		52FB8AABE7C9773F24CE060AFDC7017C /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		5399431D16C8C6E8E87F05365F48C314 /* HanekeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-prefix.pch"; sourceTree = "<group>"; };
 		53B768FDCCD428FE80E407F6CE82620A /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -273,8 +275,10 @@
 		582CCAABD2E3D29736D2BAB9D34B7D61 /* Cache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Haneke/Cache.swift; sourceTree = "<group>"; };
 		58C98634AC7AFA67EE0F5BA6FEBC23BF /* HanekeSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HanekeSwift.xcconfig; sourceTree = "<group>"; };
 		5AE8556B6C0FD367D959EFF0EE9A0593 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		5B97FA0C7C456D87C782BFC850F67475 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7E94CDF1329599009D43EBBA29687B /* Pods_try_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D24C1244617029A302BE387BD245E90 /* JSONParsing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONParsing.swift; path = Sources/JSONParsing.swift; sourceTree = "<group>"; };
-		5F2281001D2A5F876BDCE482F3235442 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DA951B4DF95F685266081C2087F6318 /* Freddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Freddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6086481A2CA0940A0397074272629B23 /* VTAcknowledgementsViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VTAcknowledgementsViewController-umbrella.h"; sourceTree = "<group>"; };
 		617496BFB8951359FEDFF14ECE4A2375 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		63C3B762B2CC7F2FE715E45757F2259D /* VTAcknowledgementsViewController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = VTAcknowledgementsViewController.bundle; sourceTree = "<group>"; };
@@ -285,16 +289,18 @@
 		6D21016862AFEBC1A2B179EEC2E380EA /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		6DA6CDFAA85EDE2A01F76B2774291AF0 /* Freddy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Freddy-umbrella.h"; sourceTree = "<group>"; };
 		6F357B00BEBDD3192342E804F4705867 /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
-		6FAA3306745E2570D71B1D5A9FE4725D /* Timepiece-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-prefix.pch"; sourceTree = "<group>"; };
 		6FF7F5B43214FA9AAA6A575317BFCBDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6FF9A97E44974C8FC6D9259627E50B14 /* Pods-try Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-try Extension-dummy.m"; sourceTree = "<group>"; };
 		70D0DB3F30BCFDE774121FCECFC7BFE4 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		7127C33A7F86C4AD6904B3F44136F365 /* JSONEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONEncodable.swift; path = Sources/JSONEncodable.swift; sourceTree = "<group>"; };
 		7244E58C7D3A9638A8FBEA2B60BB73AC /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
+		727A7B30AF9EA2402A7AADC08291BB2C /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		73220527BEF85F91555BC89AFA97060E /* VTAcknowledgementsParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VTAcknowledgementsParser.m; path = Classes/VTAcknowledgementsParser.m; sourceTree = "<group>"; };
 		7370850FDBE808C4B954743092F42B69 /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
+		737D528968C771B69C40BD707CA11E97 /* Haneke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Haneke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76FBB733B8DC8456220544C12E54A4C5 /* Timepiece-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-prefix.pch"; sourceTree = "<group>"; };
+		77CFF80779387710E27FB682A1BBF963 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78345A6859A48C0CB8F27F7C6C1D8F86 /* NSCalendar+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSCalendar+Timepiece.swift"; path = "Sources/NSCalendar+Timepiece.swift"; sourceTree = "<group>"; };
-		7A51389D78ECF717070D9DF76D3C7089 /* Timepiece-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-prefix.pch"; path = "../Timepiece-watchOS/Timepiece-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		7AC000DD8BE4E22207E463FCA73B0E2D /* Freddy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Freddy-prefix.pch"; sourceTree = "<group>"; };
 		7DF226AD89742EE062E23F6D92424B8D /* DynamicColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicColor-dummy.m"; sourceTree = "<group>"; };
 		8184C6B2A3CF7F88BCC80D26AC19F2E9 /* Pods-try Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-try Extension.modulemap"; sourceTree = "<group>"; };
@@ -302,13 +308,11 @@
 		828E4B07BA2B84838A07BD29ACCC961F /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
 		84725F1B72E63F2AB81CB251F93710D8 /* Toucan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toucan.xcconfig; sourceTree = "<group>"; };
 		84C332D3178942F0FD148706D8552BC6 /* VTAcknowledgementsViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VTAcknowledgementsViewController-prefix.pch"; sourceTree = "<group>"; };
-		86270F8072769C5C3757193BAD3179A0 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86462FE5B843F6AE7A7D3F2E52E0891B /* NSCalendarUnit+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSCalendarUnit+Timepiece.swift"; path = "Sources/NSCalendarUnit+Timepiece.swift"; sourceTree = "<group>"; };
 		8731981252C28CFC86E8D89C00B9652A /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
-		87601FDD620B0D24F6E1BEF4B36751DC /* VTAcknowledgementsViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTAcknowledgementsViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A1F2EF6D3CEEC4283B4108EEBA3C1F4 /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		8ABC24B5394FACF95357E526FA358BAC /* NSTimeInterval+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTimeInterval+Timepiece.swift"; path = "Sources/NSTimeInterval+Timepiece.swift"; sourceTree = "<group>"; };
-		8C8E876D1DACAD81256769CB88A894E4 /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C914148A927F7CA22D3D295FD6E3BC6 /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D243F900E25C295909F355A4E28FFA /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/JSON.swift; sourceTree = "<group>"; };
 		915F82FEFCB9F03A0A6F4B966A4B56E7 /* DiskFetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskFetcher.swift; path = Haneke/DiskFetcher.swift; sourceTree = "<group>"; };
 		939C25FAF1488A78572C1F60C8201F58 /* JSONEncodingDetector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONEncodingDetector.swift; path = Sources/JSONEncodingDetector.swift; sourceTree = "<group>"; };
@@ -317,10 +321,11 @@
 		94FACA14854EF95C5219C0BE67FC7C4E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		955477D20C86639E0E4C8193ACFE3F38 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		958F1B4978A225F4FB21708E2606A430 /* Toucan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-umbrella.h"; sourceTree = "<group>"; };
+		963A9580B89D398AC957E05B48869CED /* Timepiece-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Timepiece-iOS.modulemap"; sourceTree = "<group>"; };
 		96548003C7F20ACE56C7BB9DC6D24C96 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
-		9E7B1733FB4BA329158AAABBA80EBFF1 /* Timepiece-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Timepiece-iOS.modulemap"; sourceTree = "<group>"; };
 		9F6877A2BF6806C11E597A021A3D191E /* Pods-try Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-try Extension-resources.sh"; sourceTree = "<group>"; };
 		A498D694EBF86B6942DAFC3D55634DB5 /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
+		A5C5B30E795AE59FA2FCBF8F8481ACCE /* Timepiece-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Timepiece-watchOS-dummy.m"; path = "../Timepiece-watchOS/Timepiece-watchOS-dummy.m"; sourceTree = "<group>"; };
 		A6F3BBF8846E3F72656CFE056E55F5AE /* UIView+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Haneke.swift"; path = "Haneke/UIView+Haneke.swift"; sourceTree = "<group>"; };
 		A8590A29DD07E7E1A69D329444C136E6 /* NSHTTPURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSHTTPURLResponse+Haneke.swift"; path = "Haneke/NSHTTPURLResponse+Haneke.swift"; sourceTree = "<group>"; };
 		A95257E8D1A8BEECB7C027A020D99E7E /* Pods-try Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -328,32 +333,26 @@
 		B15998FD4622864243925EC06149B174 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		B18A1DDC20B042CB8FBB5A37749658BA /* String+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Haneke.swift"; path = "Haneke/String+Haneke.swift"; sourceTree = "<group>"; };
 		B4048FEADF0BB0B8F5A474A01B568F8F /* HanekeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HanekeSwift.modulemap; sourceTree = "<group>"; };
-		B42F9C9FB76E395D956F9B71C5F8E5BC /* Timepiece-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Timepiece-iOS-dummy.m"; sourceTree = "<group>"; };
 		B460733D5F030F65A633C6B71D4AA918 /* CryptoSwiftMD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CryptoSwiftMD5.swift; path = Haneke/CryptoSwiftMD5.swift; sourceTree = "<group>"; };
 		B4B2ADD108952220E3AFC5C38DF26061 /* JSONSerializing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONSerializing.swift; path = Sources/JSONSerializing.swift; sourceTree = "<group>"; };
 		B4C0FFC423CB428424A258427B7AF53E /* CGSize+Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Swift.swift"; path = "Haneke/CGSize+Swift.swift"; sourceTree = "<group>"; };
 		B69547F6F15836C763305F0AB06296B4 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
 		B6BE1152CC27DF3BC920EE10819B32B8 /* VTAcknowledgementsViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgementsViewController.h; path = Classes/VTAcknowledgementsViewController.h; sourceTree = "<group>"; };
-		B72F2EBC5252A01DBE8B08C1990D5817 /* Timepiece-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Timepiece-watchOS.modulemap"; path = "../Timepiece-watchOS/Timepiece-watchOS.modulemap"; sourceTree = "<group>"; };
-		B9F72C7D932071A5388FAB6FB1D8513C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBBFFD06CE1EEADD0C7890661441B81C /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = Sources/HSL.swift; sourceTree = "<group>"; };
 		BC86BFD473D0325CCD981869DD3C9C45 /* DiskCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskCache.swift; path = Haneke/DiskCache.swift; sourceTree = "<group>"; };
 		BD409E0DCC85181F11BA5892E0289915 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE286F88C9F13C7B71EC20537CB39DEA /* NSDateComponents+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDateComponents+Timepiece.swift"; path = "Sources/NSDateComponents+Timepiece.swift"; sourceTree = "<group>"; };
 		C07B779FE7AF9AF9C7A8A22D040BC0ED /* VTAcknowledgement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgement.h; path = Classes/VTAcknowledgement.h; sourceTree = "<group>"; };
 		C45F3B034106C245682153A6BDEE0388 /* Pods-try Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-try Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C53B2542C2230D9A7F15112036EC1025 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Timepiece-watchOS/Info.plist"; sourceTree = "<group>"; };
 		C54EE863118E159C6EE01DB02BA40855 /* Freddy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Freddy.h; path = Sources/Freddy.h; sourceTree = "<group>"; };
-		C595D93E14AECBE0AE34C7B2EC569243 /* Pods_try_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C876B0981CB63710482E2A68019643B3 /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
+		C9030E5837EC1EDDF003505500B9EB2B /* VTAcknowledgementsViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VTAcknowledgementsViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA796AABDF7641C2FE0B565FAC543288 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D107CF9F408BF9A7C259FC70D5AF6A2D /* Toucan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toucan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D241ADD7C52706E9F1499D0F4885CA98 /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
 		D320C547105DF4C77294CD1F3A6A4CF4 /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
 		D40EF5077340F75576FB4BA4BE5E2483 /* VTAcknowledgementsParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VTAcknowledgementsParser.h; path = Classes/VTAcknowledgementsParser.h; sourceTree = "<group>"; };
 		D49B6A883043AF4ECF753B6C959E07A6 /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = Sources/DynamicColor.swift; sourceTree = "<group>"; };
 		D4F0882D38A12AB1F561F0FDE5B29202 /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
-		D63FC7EBB79FEFAD0DC40495FBC42F99 /* Timepiece-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-umbrella.h"; path = "../Timepiece-watchOS/Timepiece-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		D7598E3240B779E713CDF59B0EB367EB /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
 		D855163CCCE87CBFE10A3D75CD5DD834 /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
 		D9E3BCA8D443018345A26ADD644AB712 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
@@ -361,24 +360,25 @@
 		DCAF01DD03F6FE495B1BDB943CCCA782 /* NSURLResponse+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLResponse+Haneke.swift"; path = "Haneke/NSURLResponse+Haneke.swift"; sourceTree = "<group>"; };
 		DCFBA78A8D355B4F4E0094BDC060CA50 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		DD71FE6D0FAF22EE58E2EDEDA4DC7831 /* JSONParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONParser.swift; path = Sources/JSONParser.swift; sourceTree = "<group>"; };
+		DDDA4EE16F3E46EF6EB19A864328FF13 /* Toucan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toucan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF35DFF7B49F69AA473EC783383EED46 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF3675A0CE5F25B4311BCE178E3B29CD /* Pods-try Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-try Extension-frameworks.sh"; sourceTree = "<group>"; };
 		E08CCEA905B12EB23D4ECA5EA620A053 /* HanekeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HanekeSwift-umbrella.h"; sourceTree = "<group>"; };
 		E191177DA9479CDAE9376F3732063B13 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		E43FD46727726C537ABB51DFABFD3EAC /* Pods-trySwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-trySwift.modulemap"; sourceTree = "<group>"; };
-		E629CE467178C4C69A68C4CD5B9B951E /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E596AED8B16FECBB29E042A52AFD12BE /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70571EE8B8A31F2E39777CFD61E2B45 /* VTAcknowledgementsViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = VTAcknowledgementsViewController.modulemap; sourceTree = "<group>"; };
 		E81366ED29EA6A7796E04BC31F32E9FE /* VTAcknowledgementsViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VTAcknowledgementsViewController.xcconfig; sourceTree = "<group>"; };
 		E8D27F74A012141C5416BA17DFD0E590 /* ResourceBundle-XLPagerTabStrip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XLPagerTabStrip-Info.plist"; sourceTree = "<group>"; };
 		E9CA5B83064B4A54E9A7BE58A081A007 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA819CF9FD1A84A449553E2778DDD87B /* String+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Timepiece.swift"; path = "Sources/String+Timepiece.swift"; sourceTree = "<group>"; };
 		ED5DFBE8289AE192E42CD34DCD22885F /* UIImage+Haneke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Haneke.swift"; path = "Haneke/UIImage+Haneke.swift"; sourceTree = "<group>"; };
+		EDA2ECA9482C937B984B585375E7B336 /* Timepiece-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-prefix.pch"; path = "../Timepiece-watchOS/Timepiece-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		EEB0EB893D1C04E30FACBD73FBDC46BA /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		EFA004F52656FBDB30D6039053059BB3 /* Pods-trySwift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-trySwift-resources.sh"; sourceTree = "<group>"; };
 		F0EC669E3D9D717C4DE3D95027654A13 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
 		F0FCECB102E66EC44371E36EBC8F4458 /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
 		F1D19614841DC2F9BC2E804A48EF4CFD /* Freddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Freddy-dummy.m"; sourceTree = "<group>"; };
-		F22F59CDA2734CF284EB479953BB9733 /* Timepiece-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Timepiece-watchOS.xcconfig"; path = "../Timepiece-watchOS/Timepiece-watchOS.xcconfig"; sourceTree = "<group>"; };
 		F32D4886587C08D76A04DF7790091B07 /* VTAcknowledgementsViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VTAcknowledgementsViewController-dummy.m"; sourceTree = "<group>"; };
 		F630624F38EBA022A809E82FE155EF06 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7E4C34950DE7FAD6F860353AF5B0F33 /* Freddy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Freddy.xcconfig; sourceTree = "<group>"; };
@@ -497,6 +497,25 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		214C29CB39B943392256442D2FFA2892 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07E5B8ABC4696B0BEB60E281D036DA38 /* Alamofire.framework */,
+				34EFD685C79D099B74B39E6F8D2F5255 /* DynamicColor.framework */,
+				5DA951B4DF95F685266081C2087F6318 /* Freddy.framework */,
+				737D528968C771B69C40BD707CA11E97 /* Haneke.framework */,
+				5C7E94CDF1329599009D43EBBA29687B /* Pods_try_Extension.framework */,
+				8C914148A927F7CA22D3D295FD6E3BC6 /* Pods_trySwift.framework */,
+				5B97FA0C7C456D87C782BFC850F67475 /* Timepiece.framework */,
+				E596AED8B16FECBB29E042A52AFD12BE /* Timepiece.framework */,
+				DDDA4EE16F3E46EF6EB19A864328FF13 /* Toucan.framework */,
+				C9030E5837EC1EDDF003505500B9EB2B /* VTAcknowledgementsViewController.framework */,
+				727A7B30AF9EA2402A7AADC08291BB2C /* XLPagerTabStrip.bundle */,
+				1DB4B4CBEAD03CA28094B651777D0C0A /* XLPagerTabStrip.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		31F710A1AC8BE5EE0873A06ADEB3DB46 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,26 +536,6 @@
 				63C3B762B2CC7F2FE715E45757F2259D /* VTAcknowledgementsViewController.bundle */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		3B42B68905F2E9BD757B5A6A8C85E857 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C53B2542C2230D9A7F15112036EC1025 /* Info.plist */,
-				B9F72C7D932071A5388FAB6FB1D8513C /* Info.plist */,
-				9E7B1733FB4BA329158AAABBA80EBFF1 /* Timepiece-iOS.modulemap */,
-				2A15594ECC0A81466DD50381C5ADE894 /* Timepiece-iOS.xcconfig */,
-				B42F9C9FB76E395D956F9B71C5F8E5BC /* Timepiece-iOS-dummy.m */,
-				6FAA3306745E2570D71B1D5A9FE4725D /* Timepiece-iOS-prefix.pch */,
-				3BFEDCE59CFC4337481E6F65D08F4F80 /* Timepiece-iOS-umbrella.h */,
-				B72F2EBC5252A01DBE8B08C1990D5817 /* Timepiece-watchOS.modulemap */,
-				F22F59CDA2734CF284EB479953BB9733 /* Timepiece-watchOS.xcconfig */,
-				35D1E9C219C5DBDC976D45C831950098 /* Timepiece-watchOS-dummy.m */,
-				7A51389D78ECF717070D9DF76D3C7089 /* Timepiece-watchOS-prefix.pch */,
-				D63FC7EBB79FEFAD0DC40495FBC42F99 /* Timepiece-watchOS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Timepiece-iOS";
 			sourceTree = "<group>";
 		};
 		41ADC8E4676F402BB54241324DD2D1D1 /* Support Files */ = {
@@ -674,25 +673,6 @@
 			path = Freddy;
 			sourceTree = "<group>";
 		};
-		6DC15BE71177826B69DC8979B8766623 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5F2281001D2A5F876BDCE482F3235442 /* Alamofire.framework */,
-				8C8E876D1DACAD81256769CB88A894E4 /* DynamicColor.framework */,
-				47883BF106C2D82F134D5EBB0BA9F60E /* Freddy.framework */,
-				022CA98EBFAC9CC49343E81F911FCC98 /* Haneke.framework */,
-				C595D93E14AECBE0AE34C7B2EC569243 /* Pods_try_Extension.framework */,
-				19E03E7AC6D581B54495514DBBEC0100 /* Pods_trySwift.framework */,
-				1DAC078C7E6E6923CB6FE51DAA9AA4D4 /* Timepiece.framework */,
-				E629CE467178C4C69A68C4CD5B9B951E /* Timepiece.framework */,
-				D107CF9F408BF9A7C259FC70D5AF6A2D /* Toucan.framework */,
-				87601FDD620B0D24F6E1BEF4B36751DC /* VTAcknowledgementsViewController.framework */,
-				33E762611FF8FFC0B5DB66E10950B400 /* XLPagerTabStrip.bundle */,
-				86270F8072769C5C3757193BAD3179A0 /* XLPagerTabStrip.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7914B611F0DA6E48B27DFA7211FDC8BD /* Timepiece */ = {
 			isa = PBXGroup;
 			children = (
@@ -704,7 +684,7 @@
 				BE286F88C9F13C7B71EC20537CB39DEA /* NSDateComponents+Timepiece.swift */,
 				8ABC24B5394FACF95357E526FA358BAC /* NSTimeInterval+Timepiece.swift */,
 				EA819CF9FD1A84A449553E2778DDD87B /* String+Timepiece.swift */,
-				3B42B68905F2E9BD757B5A6A8C85E857 /* Support Files */,
+				CEBE3CC92DD045D6C7D7D34522B67608 /* Support Files */,
 			);
 			path = Timepiece;
 			sourceTree = "<group>";
@@ -715,7 +695,7 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				8B6D968432DA454CBE7BE3761821A977 /* Frameworks */,
 				CB8AEFE5BB279DAA8279A8F4FEDA4E07 /* Pods */,
-				6DC15BE71177826B69DC8979B8766623 /* Products */,
+				214C29CB39B943392256442D2FFA2892 /* Products */,
 				0D5C3B2E4DFE0190BF4CFA441C4D9AEC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -848,6 +828,26 @@
 				BE6A67F39B6A49AA75B66D3B563195FF /* XLPagerTabStrip */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEBE3CC92DD045D6C7D7D34522B67608 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77CFF80779387710E27FB682A1BBF963 /* Info.plist */,
+				281A92027B98C06BF0749637D111803B /* Info.plist */,
+				963A9580B89D398AC957E05B48869CED /* Timepiece-iOS.modulemap */,
+				3C0333315D15F6C73EBB43E59D37F3E6 /* Timepiece-iOS.xcconfig */,
+				22E6D3C921A636191266853C9A03B80B /* Timepiece-iOS-dummy.m */,
+				76FBB733B8DC8456220544C12E54A4C5 /* Timepiece-iOS-prefix.pch */,
+				307C6960FD1E0B26139726F39F6A5188 /* Timepiece-iOS-umbrella.h */,
+				02AFB6CDE0CCD35E9CF2F108E8514E41 /* Timepiece-watchOS.modulemap */,
+				52F34FCAA0290670A85FFED7C230C9FA /* Timepiece-watchOS.xcconfig */,
+				A5C5B30E795AE59FA2FCBF8F8481ACCE /* Timepiece-watchOS-dummy.m */,
+				EDA2ECA9482C937B984B585375E7B336 /* Timepiece-watchOS-prefix.pch */,
+				265203C739D132A7C6EA1C4CBA1232FF /* Timepiece-watchOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Timepiece-iOS";
 			sourceTree = "<group>";
 		};
 		EBD2F06D0D63F9504E71B572354AA4BC /* VTAcknowledgementsViewController */ = {
@@ -1000,7 +1000,7 @@
 			);
 			name = DynamicColor;
 			productName = DynamicColor;
-			productReference = 8C8E876D1DACAD81256769CB88A894E4 /* DynamicColor.framework */;
+			productReference = 34EFD685C79D099B74B39E6F8D2F5255 /* DynamicColor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0DB38520FE11FCFDD3DD5E187787598B /* XLPagerTabStrip-XLPagerTabStrip */ = {
@@ -1017,7 +1017,7 @@
 			);
 			name = "XLPagerTabStrip-XLPagerTabStrip";
 			productName = "XLPagerTabStrip-XLPagerTabStrip";
-			productReference = 33E762611FF8FFC0B5DB66E10950B400 /* XLPagerTabStrip.bundle */;
+			productReference = 727A7B30AF9EA2402A7AADC08291BB2C /* XLPagerTabStrip.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		2A7C84251A158DB0978808A12B4D41E6 /* Toucan */ = {
@@ -1034,7 +1034,7 @@
 			);
 			name = Toucan;
 			productName = Toucan;
-			productReference = D107CF9F408BF9A7C259FC70D5AF6A2D /* Toucan.framework */;
+			productReference = DDDA4EE16F3E46EF6EB19A864328FF13 /* Toucan.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2C2B1953A91633859BF7AD238FF567A0 /* HanekeSwift */ = {
@@ -1051,7 +1051,7 @@
 			);
 			name = HanekeSwift;
 			productName = HanekeSwift;
-			productReference = 022CA98EBFAC9CC49343E81F911FCC98 /* Haneke.framework */;
+			productReference = 737D528968C771B69C40BD707CA11E97 /* Haneke.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		67F82E1A874314EEDD9AD23A63EDCCAB /* Timepiece-iOS */ = {
@@ -1068,7 +1068,7 @@
 			);
 			name = "Timepiece-iOS";
 			productName = "Timepiece-iOS";
-			productReference = 1DAC078C7E6E6923CB6FE51DAA9AA4D4 /* Timepiece.framework */;
+			productReference = E596AED8B16FECBB29E042A52AFD12BE /* Timepiece.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
@@ -1085,7 +1085,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 5F2281001D2A5F876BDCE482F3235442 /* Alamofire.framework */;
+			productReference = 07E5B8ABC4696B0BEB60E281D036DA38 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7B6E40B400C3FB5EE0731D2E536A8BC5 /* Timepiece-watchOS */ = {
@@ -1102,7 +1102,7 @@
 			);
 			name = "Timepiece-watchOS";
 			productName = "Timepiece-watchOS";
-			productReference = E629CE467178C4C69A68C4CD5B9B951E /* Timepiece.framework */;
+			productReference = 5B97FA0C7C456D87C782BFC850F67475 /* Timepiece.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9444368BFABBFDCE73593DF12C39DF12 /* VTAcknowledgementsViewController */ = {
@@ -1120,7 +1120,7 @@
 			);
 			name = VTAcknowledgementsViewController;
 			productName = VTAcknowledgementsViewController;
-			productReference = 87601FDD620B0D24F6E1BEF4B36751DC /* VTAcknowledgementsViewController.framework */;
+			productReference = C9030E5837EC1EDDF003505500B9EB2B /* VTAcknowledgementsViewController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AE88F157C01907732CFB79AF3F0FB294 /* Pods-trySwift */ = {
@@ -1145,7 +1145,7 @@
 			);
 			name = "Pods-trySwift";
 			productName = "Pods-trySwift";
-			productReference = 19E03E7AC6D581B54495514DBBEC0100 /* Pods_trySwift.framework */;
+			productReference = 8C914148A927F7CA22D3D295FD6E3BC6 /* Pods_trySwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C873224BD3884FD5C71C83231F5475BC /* Pods-try Extension */ = {
@@ -1163,7 +1163,7 @@
 			);
 			name = "Pods-try Extension";
 			productName = "Pods-try Extension";
-			productReference = C595D93E14AECBE0AE34C7B2EC569243 /* Pods_try_Extension.framework */;
+			productReference = 5C7E94CDF1329599009D43EBBA29687B /* Pods_try_Extension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D675C5BE67C87F157385F3F4D987D220 /* XLPagerTabStrip */ = {
@@ -1182,7 +1182,7 @@
 			);
 			name = XLPagerTabStrip;
 			productName = XLPagerTabStrip;
-			productReference = 86270F8072769C5C3757193BAD3179A0 /* XLPagerTabStrip.framework */;
+			productReference = 1DB4B4CBEAD03CA28094B651777D0C0A /* XLPagerTabStrip.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EEE4BFE3AC283ECEA2CF60A4C399216A /* Freddy */ = {
@@ -1199,7 +1199,7 @@
 			);
 			name = Freddy;
 			productName = Freddy;
-			productReference = 47883BF106C2D82F134D5EBB0BA9F60E /* Freddy.framework */;
+			productReference = 5DA951B4DF95F685266081C2087F6318 /* Freddy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1219,7 +1219,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6DC15BE71177826B69DC8979B8766623 /* Products */;
+			productRefGroup = 214C29CB39B943392256442D2FFA2892 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -1514,7 +1514,7 @@
 /* Begin XCBuildConfiguration section */
 		083D9E228E114C964C937C7C475CF76C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A15594ECC0A81466DD50381C5ADE894 /* Timepiece-iOS.xcconfig */;
+			baseConfigurationReference = 3C0333315D15F6C73EBB43E59D37F3E6 /* Timepiece-iOS.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1574,7 +1574,7 @@
 		};
 		2622C6B86F99BF035B514E4E4377D4C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F22F59CDA2734CF284EB479953BB9733 /* Timepiece-watchOS.xcconfig */;
+			baseConfigurationReference = 52F34FCAA0290670A85FFED7C230C9FA /* Timepiece-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1769,7 +1769,7 @@
 		};
 		52C4B49CAC2C18E0A6233DBEAE60BEA8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A15594ECC0A81466DD50381C5ADE894 /* Timepiece-iOS.xcconfig */;
+			baseConfigurationReference = 3C0333315D15F6C73EBB43E59D37F3E6 /* Timepiece-iOS.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1798,7 +1798,7 @@
 		};
 		5B25DB494F0BDDFD874FB34965FD4695 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F22F59CDA2734CF284EB479953BB9733 /* Timepiece-watchOS.xcconfig */;
+			baseConfigurationReference = 52F34FCAA0290670A85FFED7C230C9FA /* Timepiece-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CURRENT_PROJECT_VERSION = 1;
