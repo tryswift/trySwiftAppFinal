@@ -36,6 +36,7 @@ struct Sponsor {
     
     let name: String
     let website: String
+    let displayURL: String
     let twitter: String?
     let logo: UIImage?
     let logoURL: String?
@@ -48,6 +49,10 @@ extension Sponsor: JSONDecodable {
     init(json: JSON) throws {
         self.name = try json.string("name")
         self.website = try json.string("website")
+        self.displayURL = self.website
+            .stringByReplacingOccurrencesOfString("https://", withString: "")
+            .stringByReplacingOccurrencesOfString("http://", withString: "")
+            .stringByReplacingOccurrencesOfString("www.", withString: "")
         self.twitter = try json.string("twitter", alongPath: [.NullBecomesNil])
         self.logo = try UIImage(named: json.string("logo", alongPath: [.NullBecomesNil]) ?? "invalid")
         self.logoURL = try json.string("logoURL", alongPath: [.NullBecomesNil])
