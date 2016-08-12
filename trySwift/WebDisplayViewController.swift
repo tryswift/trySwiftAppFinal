@@ -33,8 +33,22 @@ class WebDisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = displayTitle
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        showNetworkActivityIndicator = false
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        webView = WKWebView(frame: self.view.frame)
+        var webViewFrame = view.frame
+        let tabBarHeight = tabBarController?.tabBar.frame.height ?? 0.0
+        webViewFrame.size.height = webViewFrame.size.height - tabBarHeight // To prevent the webpage sticking under the tabbar.
+        
+        webView = WKWebView(frame: webViewFrame)
         webView.subviews.forEach { $0.backgroundColor = .clearColor() }
         webView.navigationDelegate = self
         webView.allowsLinkPreview = true
@@ -42,13 +56,6 @@ class WebDisplayViewController: UIViewController {
         
         webView.loadRequest(NSURLRequest(URL: url))
         showNetworkActivityIndicator = true
-        
-        title = displayTitle
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        showNetworkActivityIndicator = false
     }
 }
 
