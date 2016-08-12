@@ -30,7 +30,7 @@ class SessionTableViewCell: UITableViewCell {
     
     func configure(withSession session: Session) {
         if let speaker = session.speaker {
-            sessionTitleLabel.text = speaker.presentation.title
+            sessionTitleLabel.text = speaker.presentation?.title
             if let
                 imageURLString = speaker.imageURL,
                 imageURL = NSURL(string: imageURLString) {

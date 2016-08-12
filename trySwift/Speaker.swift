@@ -17,7 +17,7 @@ struct Speaker {
     let image: UIImage?
     let imageURL: String?
     let bio: String
-    let presentation: Presentation
+    let presentation: Presentation?
 }
 
 extension Speaker: JSONDecodable {
@@ -35,7 +35,11 @@ extension Speaker: JSONDecodable {
         }
         self.imageURL = try json.string("imageURL", alongPath: [.NullBecomesNil])
         self.bio = try json.string("bio")
-        self.presentation = try Presentation(json: JSON(json.dictionary("presentation")))
+        if let presentationDictionary = try json.dictionary("presentation", alongPath: [.NullBecomesNil]) {
+            self.presentation = try Presentation(json: JSON(presentationDictionary))
+        } else {
+            self.presentation = nil
+        }
     }
 }
 
