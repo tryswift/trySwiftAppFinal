@@ -17,13 +17,12 @@ private let defaults = NSUserDefaults.standardUserDefaults()
 // See https://www.natashatherobot.com/swift-enum-no-cases/
 enum NetworkManager {
     
-    static func jsonVersion(completionHandler: (version: Double) -> Void) {
+    static func jsonVersion(completionHandler: (version: String) -> Void) {
         Alamofire.request(.GET, "\(baseURL)/version").responseJSON {
             guard let data = $0.data else { return }
             do {
                 let json = try JSON(data: data)
-                let versionString = try json.string("data", "version")
-                guard let version = Double(versionString) else { return }
+                let version = try json.string("data", "version")
                 completionHandler(version: version)
             } catch {
                 print(error)
@@ -31,7 +30,7 @@ enum NetworkManager {
         }
     }
     
-    static func jsonData(for version: Double, completionHandler: (json: JSON) -> Void) {
+    static func jsonData(for version: String, completionHandler: (json: JSON) -> Void) {
         Alamofire.request(.GET, "\(baseURL)/version/\(version)").responseJSON {
             guard let data = $0.data else { return }
             do {
@@ -43,9 +42,9 @@ enum NetworkManager {
         }
     }
     
-    static func refreshJSONData(completionHandler: (updated: Bool, version: Double) -> Void) {
+    static func refreshJSONData(completionHandler: (updated: Bool, version: String) -> Void) {
         jsonVersion { version in
-            guard version != defaults.doubleForKey("version") else {
+            guard version != defaults.stringForKey("version") else {
                 completionHandler(updated: false, version: version)
                 return
             }
