@@ -23,14 +23,14 @@ enum JSONManager {
     }
     
     private static func jsonData() throws -> NSData {
-        let version = defaults.doubleForKey("version")
+        let version = defaults.stringForKey("version") ?? "0.0"
         
         switch version {
-        case 0.0:
+        case "0.0":
             // No version, set to 1.0.
-            defaults.setDouble(1.0, forKey: "version")
+            defaults.setObject("1.0", forKey: "version")
             fallthrough
-        case 1.0:
+        case "1.0":
             // Get the JSON from the main bundle.
             guard let path = bundle.pathForResource("data-\(1.0)", ofType: "json") else { throw DecodeError.InvalidPath }
             guard let data = fileManager.contentsAtPath(path) else { throw DecodeError.InvalidData }
@@ -43,12 +43,12 @@ enum JSONManager {
         }
     }
     
-    static func save(JSON json: JSON, with version: Double) -> Bool {
+    static func save(JSON json: JSON, with version: String) -> Bool {
         guard let fileName = jsonFile(for: version) else { return false }
         do {
             let result = try json.serialize().writeToFile(fileName, atomically: true)
-            let previousVersion = defaults.doubleForKey("version")
-            defaults.setDouble(version, forKey: "version")
+            let previousVersion = defaults.stringForKey("version") ?? "0.0"
+            defaults.setObject(version, forKey: "version")
             if let previousVersionFile = jsonFile(for: previousVersion) {
                 let _ = try? fileManager.removeItemAtPath(previousVersionFile)
             }
@@ -77,7 +77,7 @@ private extension JSONManager {
         return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first
     }
     
-    private static func jsonFile(for version: Double) -> String? {
+    private static func jsonFile(for version: String) -> String? {
         return documentsDirectory?.stringByAppendingPathComponent("data-\(version).json")
     }
 }
