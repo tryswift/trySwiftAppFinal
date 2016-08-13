@@ -27,7 +27,6 @@ class AboutTableViewController: UITableViewController {
         
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         tableView.separatorStyle = .None
     }
 }
