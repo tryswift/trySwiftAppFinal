@@ -20,7 +20,6 @@
 		FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */; };
 		FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */; };
 		FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */; };
-		FA39E8CD1C6AF8C80074B6BE /* NSLocaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8CC1C6AF8C80074B6BE /* NSLocaleExtension.swift */; };
 		FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */; };
 		FA39E8D41C6AFE180074B6BE /* SessionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D31C6AFE180074B6BE /* SessionDataSourceProtocol.swift */; };
 		FA39E8D71C6B05980074B6BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D61C6B05980074B6BE /* Session.swift */; };
@@ -162,7 +161,6 @@
 		FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerDetailTableViewController.swift; sourceTree = "<group>"; };
 		FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavTabButtonCell.xib; sourceTree = "<group>"; };
-		FA39E8CC1C6AF8C80074B6BE /* NSLocaleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocaleExtension.swift; sourceTree = "<group>"; };
 		FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsTableViewController.swift; sourceTree = "<group>"; };
 		FA39E8D31C6AFE180074B6BE /* SessionDataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceProtocol.swift; sourceTree = "<group>"; };
 		FA39E8D61C6B05980074B6BE /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -341,7 +339,6 @@
 		FA39E8CB1C6AF89D0074B6BE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				FA39E8CC1C6AF8C80074B6BE /* NSLocaleExtension.swift */,
 				FA39E8ED1C6C034B0074B6BE /* UIColorExtension.swift */,
 				FA65B5941C7274EE00DCAF0B /* UIImageExtension.swift */,
 				4992E3C31CC22C140038F13A /* JSONManager.swift */,
@@ -1008,7 +1005,6 @@
 				FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */,
 				497ABE6E1D53AE8E0010C970 /* Conference.swift in Sources */,
 				499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */,
-				FA39E8CD1C6AF8C80074B6BE /* NSLocaleExtension.swift in Sources */,
 				FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */,
 				FA39E9201C6D25D00074B6BE /* SpeakerDetailViewController.swift in Sources */,
 			);

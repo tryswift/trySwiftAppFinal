@@ -14,7 +14,7 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = isJapanese ? "スケジュール" : "Schedule"
+        title = "Schedule"
     }
     
     override func viewDidLoad() {

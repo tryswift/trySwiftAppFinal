@@ -27,7 +27,7 @@ class MoreTableViewController: UITableViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = isJapanese ? "その他" : "More"
+        title = "More"
     }
     
     override func viewDidLoad() {
@@ -116,16 +116,16 @@ private extension MoreTableViewController {
     
     func showVenue() {
         let webViewController = WebDisplayViewController()
-        let instructionsURL = isJapanese ? "http://frontrend.github.io/blog/shibuya-markcity/" : "https://gist.github.com/cjwirth/f462cce018171ddc0c79"
+        let instructionsURL = "https://gist.github.com/cjwirth/f462cce018171ddc0c79"
         webViewController.url = NSURL(string: instructionsURL)!
-        webViewController.displayTitle = isJapanese ? "会場" : "Venue"
+        webViewController.displayTitle = "Venue"
         navigationController?.pushViewController(webViewController, animated: true)
     }
     
     func showCodeOfConduct() {
         let webViewController = WebDisplayViewController()
         webViewController.url = NSURL(string: "https://github.com/NatashaTheRobot/trySwiftCodeOfConduct/blob/master/README.md")!
-        webViewController.displayTitle = isJapanese ? "行動規範" : "Code of Conduct"
+        webViewController.displayTitle = "Code of Conduct"
         navigationController?.pushViewController(webViewController, animated: true)
     }
     
