@@ -66,18 +66,18 @@ extension MoreTableViewController {
         case .EventDetails:
             switch EventDetailsRow(rawValue: indexPath.row)! {
             case .About:
-                cell.textLabel?.text = isJapanese ? "try! Conferenceについて" : "About"
+                cell.textLabel?.text = "About"
             case .Venue:
-                cell.textLabel?.text = isJapanese ? "会場" : "Venue"
+                cell.textLabel?.text = "Venue"
             case .CodeOfConduct:
-                cell.textLabel?.text = isJapanese ? "行動規範" : "Code of Conduct"
+                cell.textLabel?.text = "Code of Conduct"
             }
         case .Acknowledgements:
             switch AcknowledgementsRow(rawValue: indexPath.row)! {
             case .Organizers:
-                cell.textLabel?.text = isJapanese ? "主催者" : "Organizers"
+                cell.textLabel?.text = "Organizer"
             case .Libraries:
-                cell.textLabel?.text = isJapanese ? "謝辞" : "Acknowledgements"
+                cell.textLabel?.text = "Acknowledgements"
             }
         }
         
@@ -130,8 +130,10 @@ private extension MoreTableViewController {
     }
     
     func showOrganizers() {
-        let organizersViewController = OrganizersTableViewController()
-        navigationController?.pushViewController(organizersViewController, animated: true)
+        // only one organizer for this conference, so just shows details
+        let organizerViewController = OrganizerDetailTableViewController()
+        organizerViewController.organizer = Organizer.organizers.first!
+        navigationController?.pushViewController(organizerViewController, animated: true)
     }
     
     func showLibraries() {

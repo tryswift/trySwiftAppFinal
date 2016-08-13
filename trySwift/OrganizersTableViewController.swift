@@ -15,7 +15,7 @@ class OrganizersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = isJapanese ? "主催者" : "Organizers"
+        title = "Organizer"
         
         tableView.registerNib(UINib(nibName: String(OrganizerTableViewCell), bundle: nil), forCellReuseIdentifier: String(OrganizerTableViewCell))
         tableView.estimatedRowHeight = 83

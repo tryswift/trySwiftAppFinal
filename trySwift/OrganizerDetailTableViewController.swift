@@ -1,27 +1,27 @@
 //
-//  SpeakerDetailViewController.swift
+//  OrganizerDetailTableViewController.swift
 //  trySwift
 //
-//  Created by Natasha Murashev on 2/12/16.
+//  Created by Natasha Murashev on 8/13/16.
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
 import UIKit
 
-class SpeakerDetailViewController: UITableViewController {
+class OrganizerDetailTableViewController: UITableViewController {
 
-    var speaker: Speaker!
+    var organizer: Organizer!
     
-    private enum SpeakerDetail: Int {
+    private enum OrganizerDetail: Int {
         case Header, Bio, Twitter
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = speaker.name
+        title = organizer.name
         
-        tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
+        tableView.registerNib(UINib(nibName: String(OrganizerTableViewCell), bundle: nil), forCellReuseIdentifier: String(OrganizerTableViewCell))
         tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
         tableView.registerNib(UINib(nibName: String(TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(TwitterFollowTableViewCell))
         
@@ -31,35 +31,35 @@ class SpeakerDetailViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        switch SpeakerDetail(rawValue: indexPath.row)! {
+        switch OrganizerDetail(rawValue: indexPath.row)! {
         case .Header:
-            let cell = tableView.dequeueReusableCellWithIdentifier(String(SpeakerTableViewCell), forIndexPath: indexPath) as! SpeakerTableViewCell
-            cell.configure(withSpeaker: speaker, selectionEnabled: false, accessoryEnabled: false)
+            let cell = tableView.dequeueReusableCellWithIdentifier(String(OrganizerTableViewCell), forIndexPath: indexPath) as! OrganizerTableViewCell
+            cell.configure(withOrganizer: organizer, selectionEnabled: false, accessoryEnabled: false)
             return cell
         case .Bio:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TextTableViewCell), forIndexPath: indexPath) as! TextTableViewCell
-            cell.configure(withText: speaker.bio)
+            cell.configure(withText: organizer.bio)
             return cell
         case .Twitter:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TwitterFollowTableViewCell), forIndexPath: indexPath) as! TwitterFollowTableViewCell
-            cell.configure(withUsername: speaker.twitter, delegate: self)
+            cell.configure(withUsername: organizer.twitter, delegate: self)
             return cell
         }
     }
-
+    
 }
 
-extension SpeakerDetailViewController: TwitterFollowDelegate {
+extension OrganizerDetailTableViewController: TwitterFollowDelegate {
     
     func followUser(username: String) {
         var applicationOpened = false
@@ -71,7 +71,7 @@ extension SpeakerDetailViewController: TwitterFollowDelegate {
                 break
             }
         }
-
+        
         if !applicationOpened {
             if let twitterURL = NSURL(string: "http://twitter.com/\(username)") {
                 openSafariViewController(withURL: twitterURL)
@@ -83,3 +83,5 @@ extension SpeakerDetailViewController: TwitterFollowDelegate {
         }
     }
 }
+
+
