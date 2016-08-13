@@ -13,7 +13,7 @@ class SponsorsViewController: UITableViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = isJapanese ? "スポンサー" : "Sponsors"
+        title = "Sponsors"
     }
     
     override func viewDidLoad() {
@@ -43,8 +43,6 @@ extension SponsorsViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Sponsor.Level(rawValue: section)! {
-//        case .Diamond:
-//            return Sponsor.diamondSponsors.count
         case .Platinum:
             return Sponsor.platinumSponsors.count
         case .Gold:
@@ -80,7 +78,7 @@ extension SponsorsViewController {
         let sponsor = sponsorAtIndexPath(indexPath)
         
         let webViewController = WebDisplayViewController()
-        webViewController.url = NSURL(string: sponsor.website)!
+        webViewController.url = NSURL(string: sponsor.url)!
         webViewController.displayTitle = sponsor.name
         
         navigationController?.pushViewController(webViewController, animated: true)
@@ -91,8 +89,6 @@ private extension SponsorsViewController {
     
     func sponsorAtIndexPath(indexPath: NSIndexPath) -> Sponsor {
         switch Sponsor.Level(rawValue: indexPath.section)! {
-//        case .Diamond:
-//            return Sponsor.diamondSponsors[indexPath.row]
         case .Platinum:
             return Sponsor.platinumSponsors[indexPath.row]
         case .Gold:
