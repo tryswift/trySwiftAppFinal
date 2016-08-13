@@ -22,13 +22,7 @@ class SponsorTableViewCell: UITableViewCell {
     }
     
     func configure(withSponsor sponsor: Sponsor) {
-        if let
-            imageURLString = sponsor.logoURL,
-            imageURL = NSURL(string: imageURLString) {
-            sponsorImageView.hnk_setImageFromURL(imageURL, placeholder: sponsor.logo)
-        } else {
-            sponsorImageView.image = sponsor.logo
-        }
+        sponsorImageView.image = sponsor.logo
         sponsorNameLabel.text = sponsor.name
         websiteLabel.text = sponsor.displayURL
     }
