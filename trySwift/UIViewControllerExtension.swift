@@ -21,3 +21,24 @@ extension UIViewController: SFSafariViewControllerDelegate {
         dismissViewControllerAnimated(true, completion: nil)
     }
 }
+
+extension UIViewController: TwitterFollowDelegate {
+    
+    func followUser(username: String) {
+        var applicationOpened = false
+        let application = UIApplication.sharedApplication()
+        for twitterURL in Twitter.urls(forUsername: username) {
+            if let url = NSURL(string: twitterURL) where application.canOpenURL(url) && !applicationOpened {
+                application.openURL(url)
+                applicationOpened = true
+                break
+            }
+        }
+        
+        if !applicationOpened {
+            if let twitterURL = NSURL(string: "http://twitter.com/\(username)") {
+                openSafariViewController(withURL: twitterURL)
+            }
+        }
+    }
+}
