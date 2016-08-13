@@ -16,7 +16,7 @@ class SpeakersViewController: UITableViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = isJapanese ? "講演者" : "Speakers"
+        title = "Speakers"
     }
     
     override func viewDidLoad() {
