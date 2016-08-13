@@ -10,7 +10,7 @@ import UIKit
 
 class SpeakersViewController: UITableViewController {
     
-    private let speakers = Speaker.speakers.sort { $0.name < $1.name }
+    private let speakers = Speaker.speakers
     private let speakerDetailSegue = "speakerDetailSegue"
     
     override func awakeFromNib() {

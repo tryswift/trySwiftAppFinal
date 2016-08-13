@@ -6,51 +6,49 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import UIKit
-import Toucan
-import Freddy
+import RealmSwift
 
-struct Speaker {
-    let id: Int
-    let name: String
-    let twitter: String
-    let image: UIImage?
-    let imageURL: String?
-    let bio: String
-    let presentation: Presentation?
+class Speaker: Object {
+    dynamic var id: Int = 0
+    dynamic var name: String = ""
+    dynamic var twitter: String = ""
+    dynamic var imageName: String? = nil
+    dynamic var bio: String = ""
+    
+    class var speakers: Results<Speaker> {
+        let realm = try! Realm()
+        return realm.objects(Speaker).sorted("name")
+    }
 }
 
-extension Speaker: JSONDecodable {
+extension Speaker {
     
-    init(json: JSON) throws {
-        self.id = try json.int("id")
-        self.name = try json.string("name")
-        self.twitter = try json.string("twitter", alongPath: [.NullBecomesNil]) ?? ""
-        if let
-            imageString = try json.string("image", alongPath: [.NullBecomesNil]),
-            image = UIImage(named: imageString) {
-            self.image = Toucan(image: image).maskWithEllipse().image
-        } else {
-            self.image = nil
-        }
-        self.imageURL = try json.string("imageURL", alongPath: [.NullBecomesNil])
-        self.bio = try json.string("bio")
-        if let presentationDictionary = try json.dictionary("presentation", alongPath: [.NullBecomesNil]) {
-            self.presentation = try Presentation(json: JSON(presentationDictionary))
-        } else {
-            self.presentation = nil
+    class func insertDefaultSpeakers() {
+        if Speaker.speakers.count == 0 {
+            
+            let realm = try! Realm()
+            try! realm.write {
+                defaultSpeakers.forEach {
+                    realm.add($0)
+                }
+            }
         }
     }
 }
 
 extension Speaker {
     
-    static let speakers: [Speaker] = {
-        do {
-            return try JSONManager.dataJSON().array("speakers").filter { try !$0.bool("organizer") }.map(Speaker.init)
-        } catch {
-            print(error)
-            return []
-        }
-    }()
+    private static let defaultSpeakers: [Speaker] = [
+        { let ellen = Speaker()
+            ellen.id = 1
+            ellen.name = "Ellen Shapiro"
+            ellen.twitter = "designatednerd"
+            ellen.imageName = "ellen_shapiro"
+            ellen.bio = "Ellen Shapiro is the Lead Mobile Developer for SpotHero and former Director of iOS Engineering at an Vokal in Chicago, IL. She also builds Android apps and runs the Chicago AndroidListener meetup. She works in her spare time to bring leading songwriting application Hum to life, and writes iOS tutorials for RayWenderlich.com."
+            return ellen
+        }(),
+        
+    ]
 }
+
+
