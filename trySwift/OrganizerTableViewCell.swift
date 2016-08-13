@@ -21,18 +21,19 @@ class OrganizerTableViewCell: UITableViewCell {
         organizerTwitterLabel.textColor = .twitterBlue()
     }
     
-    func configure(withOrganizer organizer: Organizer) {
-        if let
-            imageURLString = organizer.imageURL,
-            imageURL = NSURL(string: imageURLString) {
-            organizerImageView.hnk_setImageFromURL(imageURL, placeholder: organizer.image) { image in
-                self.organizerImageView.image = Toucan(image: image).maskWithEllipse().image
-            }
-        } else {
-            organizerImageView.image = organizer.image
-        }
+    func configure(withOrganizer organizer: Organizer, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {
+        
+        organizerImageView.image = Toucan(image: organizer.image).maskWithEllipse().image
         organizerNameLabel.text = organizer.name
         organizerTwitterLabel.text = "@\(organizer.twitter)"
+        
+        if !selectionEnabled {
+            selectionStyle = .None
+        }
+        
+        if !accessoryEnabled {
+            accessoryType = .None
+        }
     }
     
     func configure(withConference conference: Conference) {

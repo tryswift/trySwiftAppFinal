@@ -13,7 +13,7 @@ class SponsorsViewController: UITableViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = isJapanese ? "スポンサー" : "Sponsors"
+        title = "Sponsors"
     }
     
     override func viewDidLoad() {

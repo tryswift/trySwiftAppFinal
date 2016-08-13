@@ -8,39 +8,20 @@
 
 import UIKit
 import Toucan
-import Freddy
 
 struct Organizer {
     let name: String
     let twitter: String
-    let image: UIImage?
-    let imageURL: String?
-}
-
-extension Organizer: JSONDecodable {
-    
-    init(json: JSON) throws {
-        self.name = try json.string("name")
-        self.twitter = try json.string("twitter")
-        if let
-            imageString = try json.string("image", alongPath: [.NullBecomesNil]),
-            image = UIImage(named: imageString) {
-            self.image = Toucan(image: image).maskWithEllipse().image
-        } else {
-            self.image = nil
-        }
-        self.imageURL = try json.string("imageURL", alongPath: [.NullBecomesNil])
-    }
+    let image: UIImage
+    let bio: String
 }
 
 extension Organizer {
     
-    static let organizers: [Organizer] = {
-        do {
-            return try JSONManager.dataJSON().array("speakers").filter { try $0.bool("organizer") }.map(Organizer.init)
-        } catch {
-            print(error)
-            return []
-        }
-    }()
+    static let organizers = [
+        Organizer(name: "Natasha Murashev",
+            twitter: "NatashaTheRobot",
+            image: UIImage(named: "natasha_murashev")!,
+            bio: "Natasha is an iOS developer by day and a robot by night. She blogs about Swift, WatchOS, and iOS development on her blog, natashatherobot.com, curates a fast-growing weekly Swift newsletter, This Week in Swift, and organizes the try! Swift Conference around the world (including this one!). She's currently living the digital nomad life as her alter identity: @NatashaTheNomad.")
+    ]
 }
