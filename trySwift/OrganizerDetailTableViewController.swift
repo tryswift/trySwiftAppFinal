@@ -73,9 +73,6 @@ extension OrganizerDetailTableViewController: TwitterFollowDelegate {
         }
         
         if !applicationOpened {
-            if let twitterURL = NSURL(string: "http://twitter.com/\(username)") {
-                openSafariViewController(withURL: twitterURL)
-            }
             let webViewController = WebDisplayViewController()
             webViewController.url = NSURL(string: "http://twitter.com/\(username)")!
             webViewController.displayTitle = "@\(username)"
