@@ -232,6 +232,15 @@ extension Speaker {
             cate.bio = "Cate Huston is Director of Mobile Engineering at Ride. She's lived and worked in the UK, Australia, Canada, China and the United States, previously as an engineer at Google, an Extreme Blue intern at IBM, and a ski instructor. Cate speaks internationally on mobile development and her writing has been published on sites as varied as Lifehacker, The Daily Beast, The Eloquent Woman and Model View Culture. She is an advisor at Glowforge, co-curates Technically Speaking, blogs at Accidentally in Code and is @catehstn on Twitter."
             return cate
         }(),
+        {
+            let chrisBritt = Speaker()
+            chrisBritt.id = 25
+            chrisBritt.name = "Chris Britt"
+            chrisBritt.twitter = "chrisbritt"
+            chrisBritt.imageName = "chris_britt"
+            chrisBritt.bio = "Chris Britt mixes interactive stunts, comedy, tricks of perception together in his own way.  You'll see him between the conference's speakers doing his thing.  From Boston originally, he now lives in San Francisco."
+            return chrisBritt
+        }()
     ]
 }
 
