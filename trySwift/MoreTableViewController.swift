@@ -115,11 +115,8 @@ private extension MoreTableViewController {
     }
     
     func showVenue() {
-        let webViewController = WebDisplayViewController()
-        let instructionsURL = "https://gist.github.com/cjwirth/f462cce018171ddc0c79"
-        webViewController.url = NSURL(string: instructionsURL)!
-        webViewController.displayTitle = "Venue"
-        navigationController?.pushViewController(webViewController, animated: true)
+        let venueController = VenueTableViewController()
+        navigationController?.pushViewController(venueController, animated: true)
     }
     
     func showCodeOfConduct() {

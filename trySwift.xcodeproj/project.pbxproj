@@ -79,6 +79,11 @@
 		FAED14CE1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */; };
 		FAED14D01C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CF1C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift */; };
 		FAED14D21C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14D11C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift */; };
+		FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */; };
+		FAF1DE151D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */; };
+		FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */; };
+		FAF1DE1A1D5FE14500D710C3 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE181D5FE14500D710C3 /* MapTableViewCell.swift */; };
+		FAF1DE1B1D5FE14500D710C3 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE191D5FE14500D710C3 /* MapTableViewCell.xib */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -223,6 +228,11 @@
 		FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay1InterfaceController.swift; sourceTree = "<group>"; };
 		FAED14CF1C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay2InterfaceController.swift; sourceTree = "<group>"; };
 		FAED14D11C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay3InterfaceController.swift; sourceTree = "<group>"; };
+		FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTableViewController.swift; sourceTree = "<group>"; };
+		FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		FAF1DE181D5FE14500D710C3 /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		FAF1DE191D5FE14500D710C3 /* MapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -332,6 +342,8 @@
 				FA39E92E1C6D31120074B6BE /* TwitterFollowTableViewCell */,
 				FA39E9361C6D598C0074B6BE /* SessionHeaderTableViewCell */,
 				FA65B58F1C6D8B0A00DCAF0B /* OrganizerTableViewCell */,
+				FAF1DE171D5FDD3B00D710C3 /* VenueHeaderTableViewCell */,
+				FAF1DE1C1D5FE15200D710C3 /* MapTableViewCell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -499,6 +511,7 @@
 				FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */,
 				FA1C9D501D5F6E9000AC212A /* Organizers */,
 				FA65B5901C6DA53600DCAF0B /* AboutTableViewController.swift */,
+				FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -573,6 +586,24 @@
 				FAED14D11C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift */,
 			);
 			name = InterfaceControllers;
+			sourceTree = "<group>";
+		};
+		FAF1DE171D5FDD3B00D710C3 /* VenueHeaderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */,
+				FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */,
+			);
+			name = VenueHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		FAF1DE1C1D5FE15200D710C3 /* MapTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAF1DE181D5FE14500D710C3 /* MapTableViewCell.swift */,
+				FAF1DE191D5FE14500D710C3 /* MapTableViewCell.xib */,
+			);
+			name = MapTableViewCell;
 			sourceTree = "<group>";
 		};
 		FAFA15AF1C69D31B00FEA4EA = {
@@ -820,10 +851,12 @@
 				FA39E90C1C6C45FD0074B6BE /* SpeakerTableViewCell.xib in Resources */,
 				FA65B58E1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib in Resources */,
 				FAFA15C61C69D31C00FEA4EA /* LaunchScreen.storyboard in Resources */,
+				FAF1DE1B1D5FE14500D710C3 /* MapTableViewCell.xib in Resources */,
 				FA39E91E1C6C8D100074B6BE /* WebDisplayViewController.xib in Resources */,
 				FA39E9261C6D29D20074B6BE /* TextTableViewCell.xib in Resources */,
 				FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */,
 				FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */,
+				FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */,
 				FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */,
 				FA39E92D1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib in Resources */,
 				499CD0001CC39D0F007A5BBB /* data-1.0.json in Resources */,
@@ -969,6 +1002,7 @@
 				499CCFF41CC37BC9007A5BBB /* DayFilterable.swift in Sources */,
 				FA39E8D71C6B05980074B6BE /* Session.swift in Sources */,
 				FA39E8F61C6C244A0074B6BE /* QASessionDataSourceDay1.swift in Sources */,
+				FAF1DE151D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift in Sources */,
 				FA39E9031C6C33870074B6BE /* QASessionTableViewCell.swift in Sources */,
 				FA39E92C1C6D310E0074B6BE /* TwitterFollowTableViewCell.swift in Sources */,
 				FA39E9081C6C43760074B6BE /* SpeakersViewController.swift in Sources */,
@@ -980,6 +1014,7 @@
 				FA39E8FE1C6C32510074B6BE /* QASessionsViewController.swift in Sources */,
 				FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */,
 				FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */,
+				FAF1DE1A1D5FE14500D710C3 /* MapTableViewCell.swift in Sources */,
 				FA39E91D1C6C8D100074B6BE /* WebDisplayViewController.swift in Sources */,
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
 				FA39E8DD1C6B09DF0074B6BE /* Sponsor.swift in Sources */,
@@ -993,6 +1028,7 @@
 				FA39E8E31C6B31220074B6BE /* SessionDataSourceDay2.swift in Sources */,
 				FA39E8D41C6AFE180074B6BE /* SessionDataSourceProtocol.swift in Sources */,
 				FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */,
+				FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */,
 				FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */,
 				498144EF1D43D41800D77B99 /* SessionDataSourceDay3.swift in Sources */,
 				FA39E90B1C6C45FD0074B6BE /* SpeakerTableViewCell.swift in Sources */,
