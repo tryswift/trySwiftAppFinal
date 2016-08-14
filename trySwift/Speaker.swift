@@ -25,21 +25,19 @@ extension Speaker {
     
     class func insertDefaultSpeakers() {
         if Speaker.speakers.count == 0 {
-            dispatch_async(dispatch_queue_create("background", nil)) {
-                let realm = try! Realm()
-                try! realm.write {
-                    defaultSpeakers.forEach {
-                        realm.add($0)
-                    }
+            let realm = try! Realm()
+            try! realm.write {
+                defaultSpeakers.forEach {
+                    realm.add($0)
                 }
             }
         }
     }
 }
 
-extension Speaker {
+private extension Speaker {
     
-    private static let defaultSpeakers: [Speaker] = [
+    static let defaultSpeakers: [Speaker] = [
         { let ellen = Speaker()
             ellen.id = 1
             ellen.name = "Ellen Shapiro"
