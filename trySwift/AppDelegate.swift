@@ -50,6 +50,7 @@ private extension AppDelegate {
     }
     
     func insertDefaultData() {
+        
         Speaker.insertDefaultSpeakers()
     }
 }
