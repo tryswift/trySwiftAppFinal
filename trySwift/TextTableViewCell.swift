@@ -18,4 +18,11 @@ class TextTableViewCell: UITableViewCell {
         setNeedsUpdateConstraints()
         layoutIfNeeded()
     }
+    
+    func configure(withAttributedText text: NSAttributedString) {
+        textView.attributedText = text
+        
+        setNeedsUpdateConstraints()
+        layoutIfNeeded()
+    }
 }
