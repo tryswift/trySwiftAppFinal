@@ -363,11 +363,11 @@
 		FA39E8CE1C6AFBF20074B6BE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA39E8DA1C6B09CE0074B6BE /* Speaker.swift */,
+				FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */,
 				FA39E8D61C6B05980074B6BE /* Session.swift */,
 				FA39E8F01C6C13D70074B6BE /* QASession.swift */,
-				FA39E8DA1C6B09CE0074B6BE /* Speaker.swift */,
 				FA39E8DC1C6B09DF0074B6BE /* Sponsor.swift */,
-				FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */,
 				FA65B5871C6D844400DCAF0B /* Organizer.swift */,
 				499CCFF31CC37BC9007A5BBB /* DayFilterable.swift */,
 				499BD6291D05910200E74061 /* Twitter.swift */,

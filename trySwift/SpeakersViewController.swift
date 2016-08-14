@@ -107,7 +107,6 @@ extension SpeakersViewController {
             case .Initial:
                 // Results are now populated and can be accessed without blocking the UI
                 tableView.reloadData()
-                break
             case .Update(_, let deletions, let insertions, let modifications):
                 // Query results have changed, so apply them to the UITableView
                 tableView.beginUpdates()
@@ -118,11 +117,9 @@ extension SpeakersViewController {
                 tableView.reloadRowsAtIndexPaths(modifications.map { NSIndexPath(forRow: $0, inSection: 0) },
                     withRowAnimation: .Automatic)
                 tableView.endUpdates()
-                break
             case .Error(let error):
                 // An error occurred while opening the Realm file on the background worker thread
                 fatalError("\(error)")
-                break
             }
         }
     }
