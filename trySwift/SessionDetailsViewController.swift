@@ -20,7 +20,7 @@ class SessionDetailsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = session.description
+        // title = session.description
         
         tableView.registerNib(UINib(nibName: String(SessionHeaderTableViewCell), bundle: nil), forCellReuseIdentifier: String(SessionHeaderTableViewCell))
         tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))

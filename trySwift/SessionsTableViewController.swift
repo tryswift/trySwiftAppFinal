@@ -67,13 +67,13 @@ extension SessionsTableViewController {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let session = dataSource.sessions[indexPath.section]
-        if let speaker = session.speaker {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let sessionDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SessionDetailsViewController)) as! SessionDetailsViewController
-            sessionDetailsVC.session = session
-            sessionDetailsVC.speaker = speaker
-            navigationController?.pushViewController(sessionDetailsVC, animated: true)
-        }
+//        if let speaker = session.speaker {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let sessionDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SessionDetailsViewController)) as! SessionDetailsViewController
+//            sessionDetailsVC.session = session
+//            sessionDetailsVC.speaker = speaker
+//            navigationController?.pushViewController(sessionDetailsVC, animated: true)
+//        }
     }
 }
 
@@ -91,13 +91,13 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
             // This will show the cell clearly and blur the rest of the screen for our peek.
             previewingContext.sourceRect = tableView.rectForRowAtIndexPath(indexPath)
             let session = dataSource.sessions[indexPath.section]
-            if let speaker = session.speaker {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let sessionDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SessionDetailsViewController)) as! SessionDetailsViewController
-                sessionDetailsVC.session = session
-                sessionDetailsVC.speaker = speaker
-                return sessionDetailsVC
-            }
+//            if let speaker = session.speaker {
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let sessionDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SessionDetailsViewController)) as! SessionDetailsViewController
+//                sessionDetailsVC.session = session
+//                sessionDetailsVC.speaker = speaker
+//                return sessionDetailsVC
+//            }
         }
         return nil
     }

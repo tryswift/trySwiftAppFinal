@@ -8,7 +8,7 @@
 
 import Timepiece
 
-struct SessionDataSourceDay2: SessionDataSourceProtocol {
-    var header = "Thu, Sep 1"
-    var sessions = Session.sessions(for: .date(year: 2016, month: 09, day: 01))
-}
+//struct SessionDataSourceDay2: SessionDataSourceProtocol {
+//    var header = "Thu, Sep 1"
+//    var sessions = Session.sessions(for: .date(year: 2016, month: 09, day: 01))
+//}
