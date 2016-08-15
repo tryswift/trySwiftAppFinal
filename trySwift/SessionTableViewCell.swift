@@ -29,32 +29,32 @@ class SessionTableViewCell: UITableViewCell {
     }
     
     func configure(withSession session: Session) {
-        if let speaker = session.speaker {
-            sessionTitleLabel.text = "TITLE"
-            
-            let image = UIImage(named: speaker.imageName!)
-            speakerImageView.image = Toucan(image: image!).maskWithEllipse().image
-            speakerNameLabel.text = speaker.name
-            sessionTypeLabel.text = session.description
-            accessoryType = .DisclosureIndicator
-            selectionStyle = .Default
-        } else {
-            // coffee / tea / opening announcements
-            sessionTitleLabel.text = session.description
-            speakerImageView.image = UIImage.trySwiftDefaultImage
-            speakerNameLabel.text = "try! Conference"
-            if #available(iOS 9.2, *) {
-                sessionTypeLabel.text = "🤗"
-            } else {
-                sessionTypeLabel.text = "🐥"
-            }
-            
-            accessoryType = .None
-            selectionStyle = .None
-        }
-        
-        sessionLocationLabel.text = session.location
-        setNeedsUpdateConstraints()
-        layoutIfNeeded()
+//        if let speaker = session.speaker {
+//            sessionTitleLabel.text = "TITLE"
+//            
+//            let image = UIImage(named: speaker.imageName!)
+//            speakerImageView.image = Toucan(image: image!).maskWithEllipse().image
+//            speakerNameLabel.text = speaker.name
+//            sessionTypeLabel.text = session.description
+//            accessoryType = .DisclosureIndicator
+//            selectionStyle = .Default
+//        } else {
+//            // coffee / tea / opening announcements
+//            sessionTitleLabel.text = session.description
+//            speakerImageView.image = UIImage.trySwiftDefaultImage
+//            speakerNameLabel.text = "try! Conference"
+//            if #available(iOS 9.2, *) {
+//                sessionTypeLabel.text = "🤗"
+//            } else {
+//                sessionTypeLabel.text = "🐥"
+//            }
+//            
+//            accessoryType = .None
+//            selectionStyle = .None
+//        }
+//        
+//        sessionLocationLabel.text = session.location
+//        setNeedsUpdateConstraints()
+//        layoutIfNeeded()
     }
 }

@@ -31,10 +31,10 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
     override func viewControllersForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         
         let sessionDay1ViewController = SessionsTableViewController()
-        sessionDay1ViewController.dataSource = SessionDataSourceDay1()
+        // sessionDay1ViewController.dataSource = SessionDataSourceDay1()
         
         let sessionDay2ViewController = SessionsTableViewController()
-        sessionDay2ViewController.dataSource = SessionDataSourceDay2()
+        // sessionDay2ViewController.dataSource = SessionDataSourceDay2()
         
         let sessionDay3ViewController = SessionsTableViewController()
         sessionDay3ViewController.dataSource = SessionDataSourceDay3()

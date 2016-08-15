@@ -14,10 +14,15 @@ class Speaker: Object {
     dynamic var twitter: String = ""
     dynamic var imageName: String? = nil
     dynamic var bio: String = ""
+    dynamic var hidden: Bool = false
+    
+    override static func indexedProperties() -> [String] {
+        return ["id", "name", "hidden"]
+    }
     
     class var speakers: Results<Speaker> {
         let realm = try! Realm()
-        return realm.objects(Speaker).sorted("name")
+        return realm.objects(Speaker).filter("hidden == false").sorted("name")
     }
 }
 
@@ -238,6 +243,24 @@ private extension Speaker {
             chrisBritt.imageName = "chris_britt"
             chrisBritt.bio = "Chris Britt mixes interactive stunts, comedy, tricks of perception together in his own way.  You'll see him between the conference's speakers doing his thing.  From Boston originally, he now lives in San Francisco."
             return chrisBritt
+        }(),
+        {
+            let robert = Speaker()
+            robert.id = 26
+            robert.name = "Robert Dickerson"
+            robert.twitter = "rfdickerson"
+            robert.imageName = "robert"
+            robert.bio = "Robert F. Dickerson is a lead software engineer in Swift@IBM at Austin, TX. He is focused on enriching the `Swift on the server` community by being a developer for the web framework `Kitura`, Swift server libraries and SDKs, and also sample applications. He has taught computer science courses at the University of Texas (Austin) and the College of William and Mary and has written numerous research papers about mobile computing, Internet of Things, and virtual reality. When not busy writing code, he is busy swing dancing at nights. "
+            return robert
+        }(),
+        {
+            // special double speaker case
+            let chrisRobert = Speaker()
+            chrisRobert.id = 27
+            chrisRobert.name = "Chris Bailey & Robert Dickerson"
+            chrisRobert.imageName = "chris_robert"
+            chrisRobert.hidden = true
+            return chrisRobert
         }()
     ]
 }
