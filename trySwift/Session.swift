@@ -10,6 +10,15 @@ import Foundation
 import Timepiece
 
 struct Session {
+    
+    enum Description {
+        case Presentation
+        case CoffeeBreak(Sponsor?)
+        case Lunch
+        case OfficeHours(Speaker)
+        case Party(Venue)
+    }
+    
     let id: Int
     let startTime: NSDate
     let endTime: NSDate
