@@ -11,12 +11,19 @@ import Toucan
 
 class VenueHeaderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var venueImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        let venueLogo = UIImage(named: "venue")!
-        venueImageView.image = Toucan(image: venueLogo).maskWithEllipse().image
+    }
+    
+    func configure(withVenue venue: Venue) {
+        titleLabel.text = venue.title
+        websiteLabel.text = venue.website
+        if let venueLogo = UIImage(named: venue.logo) {
+            venueImageView.image = Toucan(image: venueLogo).maskWithEllipse().image
+        }
     }
 }

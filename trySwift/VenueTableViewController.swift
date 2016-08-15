@@ -7,26 +7,14 @@
 //
 
 import UIKit
-import Contacts
 
 class VenueTableViewController: UITableViewController {
 
+    var venue: Venue!
+    
     private enum VenueDetail: Int {
         case Header, Address, Map, Twitter
     }
-    
-    private let formattedAddress: NSAttributedString = {
-        let address = CNMutablePostalAddress()
-        address.street = "787 Seventh Ave"
-        address.city = "New York"
-        address.state = "NY"
-        address.postalCode = "10019"
-        address.country = "United States"
-        
-        let addressFormatter = CNPostalAddressFormatter()
-        let addressText = addressFormatter.attributedStringFromPostalAddress(address, withDefaultAttributes: [NSFontAttributeName : UIFont.systemFontOfSize(18.0)])
-        return addressText
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,17 +36,19 @@ class VenueTableViewController: UITableViewController {
         switch VenueDetail(rawValue: indexPath.row)! {
         case .Header:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(VenueHeaderTableViewCell), forIndexPath: indexPath) as! VenueHeaderTableViewCell
+            cell.configure(withVenue: Venue.axa)
             return cell
         case .Address:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TextTableViewCell), forIndexPath: indexPath) as! TextTableViewCell
-            cell.configure(withAttributedText: formattedAddress)
+            cell.configure(withAttributedText: venue.formattedAddress)
             return cell
         case .Map:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(MapTableViewCell), forIndexPath: indexPath) as! MapTableViewCell
+            cell.configure(withAddress: venue.address)
             return cell
         case .Twitter:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TwitterFollowTableViewCell), forIndexPath: indexPath) as! TwitterFollowTableViewCell
-            cell.configure(withUsername: "AXACenter_NYC", delegate: self)
+            cell.configure(withUsername: venue.twitter, delegate: self)
             return cell
 
         }

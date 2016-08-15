@@ -84,6 +84,7 @@
 		FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */; };
 		FAF1DE1A1D5FE14500D710C3 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE181D5FE14500D710C3 /* MapTableViewCell.swift */; };
 		FAF1DE1B1D5FE14500D710C3 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE191D5FE14500D710C3 /* MapTableViewCell.xib */; };
+		FAF1DE2D1D623B2C00D710C3 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE2C1D623B2C00D710C3 /* Venue.swift */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -233,6 +234,7 @@
 		FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		FAF1DE181D5FE14500D710C3 /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1DE191D5FE14500D710C3 /* MapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		FAF1DE2C1D623B2C00D710C3 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				499CCFF31CC37BC9007A5BBB /* DayFilterable.swift */,
 				499BD6291D05910200E74061 /* Twitter.swift */,
 				497ABE6D1D53AE8E0010C970 /* Conference.swift */,
+				FAF1DE2C1D623B2C00D710C3 /* Venue.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1021,6 +1024,7 @@
 				FA39E8F81C6C245B0074B6BE /* QASessionDataSourceDay2.swift in Sources */,
 				FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */,
 				FA39E9161C6C83A40074B6BE /* SponsorTableViewCell.swift in Sources */,
+				FAF1DE2D1D623B2C00D710C3 /* Venue.swift in Sources */,
 				FA39E8DB1C6B09CE0074B6BE /* Speaker.swift in Sources */,
 				FA65B5951C7274EE00DCAF0B /* UIImageExtension.swift in Sources */,
 				FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */,

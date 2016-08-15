@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="86.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="venue" translatesAutoresizingMaskIntoConstraints="NO" id="7l7-NP-8sf">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="axa" translatesAutoresizingMaskIntoConstraints="NO" id="7l7-NP-8sf">
                         <rect key="frame" x="8" y="8" width="67" height="67"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="67" id="OKJ-t2-8Af"/>
@@ -48,12 +48,14 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="titleLabel" destination="mwW-kN-j2r" id="QZu-OW-grp"/>
                 <outlet property="venueImageView" destination="7l7-NP-8sf" id="CWt-7k-4Sp"/>
+                <outlet property="websiteLabel" destination="qCp-dY-9hs" id="xXj-y3-ZKp"/>
             </connections>
             <point key="canvasLocation" x="243" y="366.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="venue" width="66" height="66"/>
+        <image name="axa" width="66" height="66"/>
     </resources>
 </document>
