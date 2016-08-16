@@ -50,9 +50,7 @@ private extension AppDelegate {
     }
     
     func insertDefaultData() {
-        dispatch_async(dispatch_queue_create("background", nil)) {
-            Speaker.insertDefaultSpeakers()
-            Presentation.insertDefaultPresentations()
-        }
+        Speaker.insertDefaultSpeakers()
+        Presentation.insertDefaultPresentations()
     }
 }
