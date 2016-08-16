@@ -66,14 +66,34 @@ extension SessionsTableViewController {
 extension SessionsTableViewController {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let session = dataSource.sessions[indexPath.section]
-//        if let speaker = session.speaker {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let sessionDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SessionDetailsViewController)) as! SessionDetailsViewController
-//            sessionDetailsVC.session = session
-//            sessionDetailsVC.speaker = speaker
-//            navigationController?.pushViewController(sessionDetailsVC, animated: true)
-//        }
+        let session = dataSource.sessions[indexPath.section][indexPath.row]
+        switch session.info {
+        case .Talk(let presentation):
+            let sessionDetailsVC = sessionDetails(presentation, session: session)
+            navigationController?.pushViewController(sessionDetailsVC, animated: true)
+        case .OfficeHours(let presentation):
+            let speakerDetailsVC = speakerDetails(presentation.speaker!)
+            navigationController?.pushViewController(speakerDetailsVC, animated: true)
+        case .Workshop(let event):
+            let webDisplayVC = webDisplay(event)
+            navigationController?.pushViewController(webDisplayVC, animated: true)
+        case .Meetup(let event):
+            let webDisplayVC = webDisplay(event)
+            navigationController?.pushViewController(webDisplayVC, animated: true)
+        case .CoffeeBreak(let sponsor):
+            if let sponsor = sponsor {
+                let webDisplayVC = webDisplay(sponsor)
+                navigationController?.pushViewController(webDisplayVC, animated: true)
+            }
+        case .SponsoredDemo(let sponsor):
+            let webDisplayVC = webDisplay(sponsor)
+            navigationController?.pushViewController(webDisplayVC, animated: true)
+        case .Party(let venue):
+            let venueVC = venueDetails(venue)
+            navigationController?.pushViewController(venueVC, animated: true)
+        default:
+            break
+        }
     }
 }
 
@@ -90,19 +110,71 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
         if let indexPath = tableView.indexPathForRowAtPoint(location) {
             // This will show the cell clearly and blur the rest of the screen for our peek.
             previewingContext.sourceRect = tableView.rectForRowAtIndexPath(indexPath)
-            let session = dataSource.sessions[indexPath.section]
-//            if let speaker = session.speaker {
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let sessionDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SessionDetailsViewController)) as! SessionDetailsViewController
-//                sessionDetailsVC.session = session
-//                sessionDetailsVC.speaker = speaker
-//                return sessionDetailsVC
-//            }
+            let session = dataSource.sessions[indexPath.section][indexPath.row]
+            switch session.info {
+            case .Talk(let presentation):
+                return sessionDetails(presentation, session: session)
+            case .OfficeHours(let presentation):
+                return speakerDetails(presentation.speaker!)
+            case .Workshop(let event):
+                return webDisplay(event)
+            case .Meetup(let event):
+                return webDisplay(event)
+            case .CoffeeBreak(let sponsor):
+                if let sponsor = sponsor {
+                    return webDisplay(sponsor)
+                }
+                return nil
+            case .SponsoredDemo(let sponsor):
+                return webDisplay(sponsor)
+            case .Party(let venue):
+                return venueDetails(venue)
+            default:
+                break
+            }
         }
         return nil
     }
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
         navigationController?.pushViewController(viewControllerToCommit, animated: true)
+    }
+}
+
+private extension SessionsTableViewController {
+    
+    func sessionDetails(presentation: Presentation, session: Session) -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sessionDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SessionDetailsViewController)) as! SessionDetailsViewController
+        sessionDetailsVC.session = session
+        sessionDetailsVC.presentation = presentation
+        return sessionDetailsVC
+    }
+    
+    func speakerDetails(speaker: Speaker) -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let speakerDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SpeakerDetailViewController)) as! SpeakerDetailViewController
+        speakerDetailsVC.speaker = speaker
+        return speakerDetailsVC
+    }
+    
+    func webDisplay(event: Event) -> UIViewController {
+        let webViewController = WebDisplayViewController()
+        webViewController.url = event.website
+        webViewController.displayTitle = event.title
+        return webViewController
+    }
+    
+    func webDisplay(sponsor: Sponsor) -> UIViewController {
+        let webViewController = WebDisplayViewController()
+        webViewController.url = NSURL(string: sponsor.url)
+        webViewController.displayTitle = sponsor.name
+        return webViewController
+    }
+    
+    func venueDetails(venue: Venue) -> UIViewController {
+        let venueDetailsVC = VenueTableViewController()
+        venueDetailsVC.venue = venue
+        return venueDetailsVC
     }
 }
