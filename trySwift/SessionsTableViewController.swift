@@ -44,21 +44,21 @@ extension SessionsTableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return dataSource.sessions[section].count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(String(SessionTableViewCell), forIndexPath: indexPath) as! SessionTableViewCell
         
-        let session = dataSource.sessions[indexPath.section]
+        let session = dataSource.sessions[indexPath.section][indexPath.row]
         cell.configure(withSession: session)
         
         return cell
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let session = dataSource.sessions[section]
-        return session.timeString
+        let session = dataSource.sessions[section].first
+        return session?.timeString
     }
 }
 
