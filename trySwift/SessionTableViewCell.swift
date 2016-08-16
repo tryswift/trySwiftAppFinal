@@ -13,8 +13,8 @@ import Toucan
 class SessionTableViewCell: UITableViewCell {
     
     @IBOutlet weak var sessionTitleLabel: UILabel!
-    @IBOutlet weak var speakerImageView: UIImageView!
-    @IBOutlet weak var speakerNameLabel: UILabel!
+    @IBOutlet weak var sessionImageView: UIImageView!
+    @IBOutlet weak var sessionSubtitleLabel: UILabel!
     @IBOutlet weak var sessionTypeLabel: UILabel!
     @IBOutlet weak var sessionLocationLabel: UILabel!
     
@@ -23,38 +23,31 @@ class SessionTableViewCell: UITableViewCell {
         
         sessionTitleLabel.textColor = .trySwiftTitleColor()
         sessionTypeLabel.textColor = .trySwiftTitleColor()
-        speakerNameLabel.textColor = .trySwiftSubtitleColor()
+        sessionSubtitleLabel.textColor = .trySwiftSubtitleColor()
         sessionLocationLabel.textColor = .trySwiftSubtitleColor()
         sessionTitleLabel.clipsToBounds = false
     }
     
     func configure(withSession session: Session) {
-//        if let speaker = session.speaker {
-//            sessionTitleLabel.text = "TITLE"
-//            
-//            let image = UIImage(named: speaker.imageName!)
-//            speakerImageView.image = Toucan(image: image!).maskWithEllipse().image
-//            speakerNameLabel.text = speaker.name
-//            sessionTypeLabel.text = session.description
-//            accessoryType = .DisclosureIndicator
-//            selectionStyle = .Default
-//        } else {
-//            // coffee / tea / opening announcements
-//            sessionTitleLabel.text = session.description
-//            speakerImageView.image = UIImage.trySwiftDefaultImage
-//            speakerNameLabel.text = "try! Conference"
-//            if #available(iOS 9.2, *) {
-//                sessionTypeLabel.text = "🤗"
-//            } else {
-//                sessionTypeLabel.text = "🐥"
-//            }
-//            
-//            accessoryType = .None
-//            selectionStyle = .None
-//        }
-//        
-//        sessionLocationLabel.text = session.location
-//        setNeedsUpdateConstraints()
-//        layoutIfNeeded()
+        let info = session.info
+        
+        sessionTitleLabel.text = info.title
+        sessionSubtitleLabel.text = info.subtitle
+        sessionTypeLabel.text = info.description
+        sessionLocationLabel.text = info.location
+        
+        let image = UIImage(named: info.logo)
+        sessionImageView.image = Toucan(image: image!).maskWithEllipse().image
+    
+        if info.selectable {
+            accessoryType = .DisclosureIndicator
+            selectionStyle = .Default
+        } else {
+            accessoryType = .None
+            selectionStyle = .None
+        }
+
+        setNeedsUpdateConstraints()
+        layoutIfNeeded()
     }
 }
