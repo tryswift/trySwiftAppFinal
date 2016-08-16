@@ -36,7 +36,7 @@ class VenueTableViewController: UITableViewController {
         switch VenueDetail(rawValue: indexPath.row)! {
         case .Header:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(VenueHeaderTableViewCell), forIndexPath: indexPath) as! VenueHeaderTableViewCell
-            cell.configure(withVenue: Venue.axa)
+            cell.configure(withVenue: venue)
             return cell
         case .Address:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TextTableViewCell), forIndexPath: indexPath) as! TextTableViewCell

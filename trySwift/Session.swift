@@ -173,7 +173,7 @@ extension Session {
         
         var selectable: Bool {
             switch self {
-            case .Workshop(_), .Meetup(_), .Talk(_), .OfficeHours(_), .Party(_):
+            case .Workshop(_), .Meetup(_), .Talk(_), .OfficeHours(_), .Party(_), .SponsoredDemo(_):
                 return true
             case .CoffeeBreak(let sponsor):
                 if sponsor != nil {

@@ -11,16 +11,16 @@ import UIKit
 class SessionDetailsViewController: UITableViewController {
     
     var session: Session!
-    var speaker: Speaker!
+    var presentation: Presentation!
     
-    private enum SessionDetail: Int {
+    private enum PresentationDetail: Int {
         case Header, SpeakerInfo, Summary, Twitter
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // title = session.description
+        title = "Presentation"
         
         tableView.registerNib(UINib(nibName: String(SessionHeaderTableViewCell), bundle: nil), forCellReuseIdentifier: String(SessionHeaderTableViewCell))
         tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
@@ -45,22 +45,22 @@ extension SessionDetailsViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        switch SessionDetail(rawValue: indexPath.row)! {
+        switch PresentationDetail(rawValue: indexPath.row)! {
         case .Header:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(SessionHeaderTableViewCell), forIndexPath: indexPath) as! SessionHeaderTableViewCell
             cell.configure(withSession: session)
             return cell
         case .SpeakerInfo:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(SpeakerTableViewCell), forIndexPath: indexPath) as! SpeakerTableViewCell
-            cell.configure(withSpeaker: speaker, selectionEnabled: false, accessoryEnabled: false)
+            cell.configure(withSpeaker: presentation.speaker!, selectionEnabled: false, accessoryEnabled: false)
             return cell
         case .Summary:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TextTableViewCell), forIndexPath: indexPath) as! TextTableViewCell
-            cell.configure(withText: "SUMMARY" ?? "TBD")
+            cell.configure(withText: presentation.summary ?? "TBD")
             return cell
         case .Twitter:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TwitterFollowTableViewCell), forIndexPath: indexPath) as! TwitterFollowTableViewCell
-            cell.configure(withUsername: speaker.twitter, delegate: self)
+            cell.configure(withUsername: presentation.speaker!.twitter, delegate: self)
             return cell
         }
     }
