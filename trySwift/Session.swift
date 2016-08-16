@@ -47,6 +47,7 @@ extension Session {
         case Breakfast(String)
         case Announcement(String)
         case Talk(Presentation)
+        case SponsoredDemo(Sponsor)
         case CoffeeBreak(Sponsor?)
         case Lunch
         case OfficeHours(Presentation)
@@ -64,6 +65,8 @@ extension Session {
                 return title
             case .Talk(let presentation):
                 return presentation.title
+            case .SponsoredDemo(_):
+                return "Sponsored Demo"
             case .CoffeeBreak(let sponsor):
                 if let sponsor = sponsor {
                     return "☕️ Break, by \(sponsor.name)"
@@ -91,6 +94,8 @@ extension Session {
                 return "try! NYC Conference"
             case .Talk(let presentation):
                 return presentation.speaker?.name ?? "try! NYC Conference"
+            case .SponsoredDemo(let sponsor):
+                return sponsor.name
             case .CoffeeBreak(let sponsor):
                 if let sponsor = sponsor {
                     return sponsor.name
@@ -122,6 +127,9 @@ extension Session {
                 return presentation.speaker?.imageName ?? "tryLogo"
             case .OfficeHours(let presentation):
                 return presentation.speaker?.imageName ?? "tryLogo"
+            case .SponsoredDemo(_):
+                // currently the only sponsor is Twilio
+                return "twilio-small"
             case .Party(_):
                 return "airplanemode-short"
             }
@@ -135,7 +143,7 @@ extension Session {
                 return event.location
             case .Breakfast(_), .CoffeeBreak(_), .Lunch:
                 return "North Lobby"
-            case .Announcement(_), .Talk(_):
+            case .Announcement(_), .Talk(_), .SponsoredDemo(_):
                 return "Auditorium"
             case .OfficeHours(_):
                 return "Attrium"
@@ -154,6 +162,8 @@ extension Session {
                 return "📣"
             case .Talk(_):
                 return "Presentation"
+            case .SponsoredDemo(_):
+                return "Demo"
             case .OfficeHours(_):
                 return "Q&A"
             case .Party(_):
@@ -230,7 +240,20 @@ extension Session {
             )
             
             return session
-        }()],
+            }(),
+            {
+                let realm = try! Realm()
+                let presentation = realm.objects(Presentation.self).filter("id == 20").first ?? defaultPresentations[19]
+                
+                let session = Session(
+                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
+                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
+                    info: .OfficeHours(presentation)
+                )
+                
+                return session
+            }()
+        ],
         [{
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 5").first ?? defaultPresentations[4]
@@ -575,7 +598,7 @@ extension Session {
             }()],
         [{
             let realm = try! Realm()
-            let presentation = realm.objects(Presentation.self).filter("id == 5").first ?? defaultPresentations[4]
+            let presentation = realm.objects(Presentation.self).filter("id == 7").first ?? defaultPresentations[6]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
@@ -607,7 +630,7 @@ extension Session {
         ],
         [{
             let realm = try! Realm()
-            let presentation = realm.objects(Presentation.self).filter("id == 12").first ?? defaultPresentations[11]
+            let presentation = realm.objects(Presentation.self).filter("id == 13").first ?? defaultPresentations[12]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
@@ -619,7 +642,7 @@ extension Session {
             }(),
             {
                 let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 5").first ?? defaultPresentations[4]
+                let presentation = realm.objects(Presentation.self).filter("id == 7").first ?? defaultPresentations[6]
                 
                 let session = Session(
                     startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
@@ -632,7 +655,7 @@ extension Session {
         ],
         [{
             let realm = try! Realm()
-            let presentation = realm.objects(Presentation.self).filter("id == 11").first ?? defaultPresentations[10]
+            let presentation = realm.objects(Presentation.self).filter("id == 16").first ?? defaultPresentations[15]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
@@ -644,7 +667,7 @@ extension Session {
             }(),
             {
                 let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 12").first ?? defaultPresentations[11]
+                let presentation = realm.objects(Presentation.self).filter("id == 13").first ?? defaultPresentations[12]
                 
                 let session = Session(
                     startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
@@ -657,11 +680,11 @@ extension Session {
         ],
         [{
             let realm = try! Realm()
-            let presentation = realm.objects(Presentation.self).filter("id == 19").first ?? defaultPresentations[18]
+            let presentation = realm.objects(Presentation.self).filter("id == 15").first ?? defaultPresentations[14]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
                 info: .Talk(presentation)
             )
             
@@ -669,7 +692,7 @@ extension Session {
             }(),
             {
                 let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 11").first ?? defaultPresentations[10]
+                let presentation = realm.objects(Presentation.self).filter("id == 16").first ?? defaultPresentations[15]
                 
                 let session = Session(
                     startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
@@ -682,6 +705,14 @@ extension Session {
         ],
         [{
             return Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
+                info: .SponsoredDemo(Sponsor.goldSponsors[6])
+            )
+            }(),
+        ],
+        [{
+            return Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
                 info: .Lunch)
@@ -689,7 +720,7 @@ extension Session {
         ],
         [{
             let realm = try! Realm()
-            let presentation = realm.objects(Presentation.self).filter("id == 14").first ?? defaultPresentations[13]
+            let presentation = realm.objects(Presentation.self).filter("id == 9").first ?? defaultPresentations[8]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
@@ -701,7 +732,7 @@ extension Session {
             }(),
             {
                 let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 19").first ?? defaultPresentations[18]
+                let presentation = realm.objects(Presentation.self).filter("id == 15").first ?? defaultPresentations[14]
                 
                 let session = Session(
                     startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
@@ -714,7 +745,7 @@ extension Session {
         ],
         [{
             let realm = try! Realm()
-            let presentation = realm.objects(Presentation.self).filter("id == 2").first ?? defaultPresentations[1]
+            let presentation = realm.objects(Presentation.self).filter("id == 22").first ?? defaultPresentations[21]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
@@ -726,7 +757,7 @@ extension Session {
             }(),
             {
                 let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 14").first ?? defaultPresentations[13]
+                let presentation = realm.objects(Presentation.self).filter("id == 9").first ?? defaultPresentations[8]
                 
                 let session = Session(
                     startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
@@ -739,7 +770,7 @@ extension Session {
         ],
         [{
             let realm = try! Realm()
-            let presentation = realm.objects(Presentation.self).filter("id == 4").first ?? defaultPresentations[3]
+            let presentation = realm.objects(Presentation.self).filter("id == 18").first ?? defaultPresentations[17]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
@@ -751,7 +782,7 @@ extension Session {
             }(),
             {
                 let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 2").first ?? defaultPresentations[1]
+                let presentation = realm.objects(Presentation.self).filter("id == 22").first ?? defaultPresentations[21]
                 
                 let session = Session(
                     startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
@@ -771,7 +802,7 @@ extension Session {
         ],
         [{
             let realm = try! Realm()
-            let presentation = realm.objects(Presentation.self).filter("id == 1").first ?? defaultPresentations[0]
+            let presentation = realm.objects(Presentation.self).filter("id == 17").first ?? defaultPresentations[16]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
@@ -783,7 +814,7 @@ extension Session {
             }(),
             {
                 let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 4").first ?? defaultPresentations[3]
+                let presentation = realm.objects(Presentation.self).filter("id == 18").first ?? defaultPresentations[17]
                 
                 let session = Session(
                     startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
@@ -796,7 +827,7 @@ extension Session {
         ],
         [{
             let realm = try! Realm()
-            let presentation = realm.objects(Presentation.self).filter("id == 10").first ?? defaultPresentations[9]
+            let presentation = realm.objects(Presentation.self).filter("id == 6").first ?? defaultPresentations[5]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
@@ -808,7 +839,7 @@ extension Session {
             }(),
             {
                 let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 1").first ?? defaultPresentations[0]
+                let presentation = realm.objects(Presentation.self).filter("id == 17").first ?? defaultPresentations[16]
                 
                 let session = Session(
                     startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
@@ -821,7 +852,7 @@ extension Session {
         ],
         [{
             let realm = try! Realm()
-            let presentation = realm.objects(Presentation.self).filter("id == 8").first ?? defaultPresentations[7]
+            let presentation = realm.objects(Presentation.self).filter("id == 20").first ?? defaultPresentations[19]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
@@ -833,7 +864,7 @@ extension Session {
             }(),
             {
                 let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 10").first ?? defaultPresentations[9]
+                let presentation = realm.objects(Presentation.self).filter("id == 6").first ?? defaultPresentations[5]
                 
                 let session = Session(
                     startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),

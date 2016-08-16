@@ -296,7 +296,7 @@ let defaultPresentations: [Presentation] = [
     {
         let presentation = Presentation()
         presentation.id = 22
-        presentation.title = "Making rich text editor in Swift"
+        presentation.title = "Making a Rich Text Editor in Swift"
         presentation.summary = "The handling of rich text is not easy. We may consider a lot of things like fonts, characters, glyphs, emojis, images, ligatures, etc. In this talk, I will show you the basics of laying out text and how to handle complex text layouts in Apple's OS."
         
         let realm = try! Realm()
