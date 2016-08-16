@@ -48,12 +48,12 @@ private extension ScheduleViewController {
     func moveToCorrectDate() {
         let today = NSDate.today()
         
-        let day2 = NSDate.date(year: 2016, month: 3, day: 3)
+        let day2 = NSDate.date(year: 2016, month: 9, day: 1)
         if today == day2 {
             moveToViewControllerAtIndex(1)
         }
         
-        let day3 = NSDate.date(year: 2016, month: 3, day: 4)
+        let day3 = NSDate.date(year: 2016, month: 9, day: 2)
         if today == day3 {
             moveToViewControllerAtIndex(2)
         }

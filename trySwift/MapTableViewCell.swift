@@ -15,8 +15,10 @@ class MapTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        let location = "787 Seventh Ave, New York, NY 10019"
+    }
+    
+    func configure(withAddress address: String) {
+        let location = address
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(location) { [weak self] placemarks, error in
             
@@ -27,6 +29,7 @@ class MapTableViewCell: UITableViewCell {
                 self?.mapView.addAnnotation(mark)
             }
         }
+
     }
     
 }

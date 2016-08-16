@@ -116,6 +116,7 @@ private extension MoreTableViewController {
     
     func showVenue() {
         let venueController = VenueTableViewController()
+        venueController.venue = Venue.axa
         navigationController?.pushViewController(venueController, animated: true)
     }
     

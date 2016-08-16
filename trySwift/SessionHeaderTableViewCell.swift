@@ -20,7 +20,7 @@ class SessionHeaderTableViewCell: UITableViewCell {
     }
     
     func configure(withSession session: Session) {
-        sessionTitleLabel.text = session.speaker?.presentation?.title
+        sessionTitleLabel.text = session.info.title
         sessionTimeLabel.text = session.dateTimeString
     }
 }
