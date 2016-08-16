@@ -8,19 +8,20 @@
 
 import UIKit
 import XLPagerTabStrip
+import RealmSwift
 
 class SessionsTableViewController: UITableViewController {
     
     var dataSource: SessionDataSourceProtocol!
     private let sessionDetailsSegue = "sessionDetailsSegue"
     
+    var token: NotificationToken? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerNib(UINib(nibName: String(SessionTableViewCell), bundle: nil), forCellReuseIdentifier: String(SessionTableViewCell))
-        
-        tableView.estimatedRowHeight = 160
-        tableView.rowHeight = UITableViewAutomaticDimension
+        subscribeToChangeNotification()
+        configureTableView()
         
         if traitCollection.forceTouchCapability == .Available {
             registerForPreviewingWithDelegate(self, sourceView: tableView)
@@ -33,6 +34,10 @@ class SessionsTableViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
+    }
+    
+    deinit {
+        token?.stop()
     }
 }
 
@@ -138,6 +143,35 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
         navigationController?.pushViewController(viewControllerToCommit, animated: true)
+    }
+}
+
+extension SessionsTableViewController {
+    
+    func configureTableView() {
+        tableView.registerNib(UINib(nibName: String(SessionTableViewCell), bundle: nil), forCellReuseIdentifier: String(SessionTableViewCell))
+        
+        tableView.estimatedRowHeight = 160
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+}
+
+extension SessionsTableViewController {
+    
+    func subscribeToChangeNotification() {
+        token = Presentation.presentations.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+            guard let tableView = self?.tableView else { return }
+            
+            switch changes {
+            case .Update(_, _, _, _):
+                tableView.reloadData()
+            case .Error(let error):
+                // An error occurred while opening the Realm file on the background worker thread
+                fatalError("\(error)")
+            default:
+                break
+            }
+        }
     }
 }
 
