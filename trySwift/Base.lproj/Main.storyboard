@@ -15,7 +15,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="FLe-Rw-VAv" kind="relationship" relationship="viewControllers" id="xnZ-vl-edi"/>
-                        <segue destination="sXe-eW-idO" kind="relationship" relationship="viewControllers" id="eFc-rS-DZp"/>
                         <segue destination="4Uc-bA-Fa1" kind="relationship" relationship="viewControllers" id="dQu-Cz-pQN"/>
                         <segue destination="Dl3-ih-gM8" kind="relationship" relationship="viewControllers" id="qmY-CM-8d0"/>
                         <segue destination="qm7-MC-Ro5" kind="relationship" relationship="viewControllers" id="5HF-Ds-kW7"/>
@@ -115,7 +114,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="581-ig-6d0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1555" y="405"/>
+            <point key="canvasLocation" x="1555" y="128"/>
         </scene>
         <!--Speaker Detail View Controller-->
         <scene sceneID="cT2-kN-3XL">
@@ -243,62 +242,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIR-7Q-bAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="393"/>
-        </scene>
-        <!--Q&A-->
-        <scene sceneID="z5a-Fi-Xhj">
-            <objects>
-                <navigationController storyboardIdentifier="qa-navigation" id="sXe-eW-idO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Q&amp;A" image="chat" id="YYC-eX-Epv"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n5R-gs-6ng">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="JNG-MG-GVZ" kind="relationship" relationship="rootViewController" id="ZCv-FY-3UF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iEw-93-IqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="764" y="-376"/>
-        </scene>
-        <!--Q&A Sessions View Controller-->
-        <scene sceneID="91W-FK-vvq">
-            <objects>
-                <viewController id="JNG-MG-GVZ" userLabel="Q&amp;A Sessions View Controller" customClass="QASessionsViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eON-q3-RA2"/>
-                        <viewControllerLayoutGuide type="bottom" id="cp8-0P-D8j"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CDc-Er-RQB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98Y-7i-ZD0">
-                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
-                                <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="98Y-7i-ZD0" firstAttribute="leading" secondItem="CDc-Er-RQB" secondAttribute="leading" id="H4N-Sy-Ije"/>
-                            <constraint firstItem="98Y-7i-ZD0" firstAttribute="top" secondItem="eON-q3-RA2" secondAttribute="bottom" constant="44" id="Hg8-fw-HDq"/>
-                            <constraint firstItem="cp8-0P-D8j" firstAttribute="top" secondItem="98Y-7i-ZD0" secondAttribute="bottom" id="ket-2O-Eqk"/>
-                            <constraint firstAttribute="trailing" secondItem="98Y-7i-ZD0" secondAttribute="trailing" id="w6V-iH-Fge"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="WLk-HI-aSw"/>
-                    <connections>
-                        <outlet property="containerView" destination="98Y-7i-ZD0" id="IgZ-1J-2f8"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uKI-aG-92Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1527" y="-376"/>
+            <point key="canvasLocation" x="787" y="128"/>
         </scene>
     </scenes>
     <resources>
-        <image name="chat" width="25" height="25"/>
         <image name="more" width="25" height="25"/>
         <image name="schedule" width="25" height="25"/>
         <image name="speakers" width="25" height="25"/>
