@@ -10,5 +10,5 @@ import Foundation
 
 protocol SessionDataSourceProtocol {
     var header: String { get }
-    var sessions: [Session] { get }
+    var sessions: [[Session]] { get }
 }

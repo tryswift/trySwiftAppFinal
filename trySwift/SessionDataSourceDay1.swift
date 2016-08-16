@@ -10,5 +10,5 @@ import Timepiece
 
 struct SessionDataSourceDay1: SessionDataSourceProtocol {
     var header = "Wed, Aug 31"
-    var sessions = Session.sessions(for: .date(year: 2016, month: 08, day: 31))
+    var sessions = Session.sessionsAug31
 }

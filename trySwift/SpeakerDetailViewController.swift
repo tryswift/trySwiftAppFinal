@@ -20,14 +20,7 @@ class SpeakerDetailViewController: UITableViewController {
         super.viewDidLoad()
 
         title = speaker.name
-        
-        tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
-        tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
-        tableView.registerNib(UINib(nibName: String(TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(TwitterFollowTableViewCell))
-        
-        tableView.estimatedRowHeight = 83
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.separatorStyle = .None
+        configureTableView()
     }
 
     // MARK: - Table view data source
@@ -57,4 +50,17 @@ class SpeakerDetailViewController: UITableViewController {
         }
     }
 
+}
+
+extension SpeakerDetailViewController {
+    
+    func configureTableView() {
+        tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
+        tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
+        tableView.registerNib(UINib(nibName: String(TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(TwitterFollowTableViewCell))
+        
+        tableView.estimatedRowHeight = 83
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .None
+    }
 }

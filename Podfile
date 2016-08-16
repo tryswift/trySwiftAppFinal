@@ -9,6 +9,7 @@ target 'trySwift' do
     pod 'Freddy', '~> 2.1.0'
     pod 'HanekeSwift', '~> 0.10.1'
     pod 'Alamofire', '~> 3.3.1'
+    pod 'RealmSwift', '~> 1.0.2'
 end
 
 target 'try Extension' do
