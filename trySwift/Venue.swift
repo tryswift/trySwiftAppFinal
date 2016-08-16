@@ -25,11 +25,11 @@ struct WifiInfo {
 }
 
 extension Venue {
-
-static let axa = Venue(
-    title: "AXA Event & Production Center",
-    address: "787 Seventh Ave, New York, NY 10019",
-    formattedAddress: {
+    
+    static let axa = Venue(
+        title: "AXA Event & Production Center",
+        address: "787 Seventh Ave, New York, NY 10019",
+        formattedAddress: {
             let address = CNMutablePostalAddress()
             address.street = "787 Seventh Ave"
             address.city = "New York"
@@ -40,11 +40,33 @@ static let axa = Venue(
             let addressFormatter = CNPostalAddressFormatter()
             let addressText = addressFormatter.attributedStringFromPostalAddress(address, withDefaultAttributes: [NSFontAttributeName : UIFont.systemFontOfSize(18.0)])
             return addressText
-    }(),
-    website: "axaeventproductioncenter.com",
-    twitter: "AXACenter_NYC",
-    logo: "axa",
-    wifiInfo: WifiInfo(networkName: "AXA Auditorium",
-        username: nil,
-        password: nil))
+        }(),
+        website: "axaeventproductioncenter.com",
+        twitter: "AXACenter_NYC",
+        logo: "axa",
+        wifiInfo: WifiInfo(networkName: "AXA Auditorium",
+            username: nil,
+            password: nil))
+    
+    static let americanBeauty = Venue(
+        title: "American Beauty NYC",
+        address: "251 W 30th St, New York, NY 10001",
+        formattedAddress: {
+            let address = CNMutablePostalAddress()
+            address.street = "251 W 30th St"
+            address.city = "New York"
+            address.state = "NY"
+            address.postalCode = "10001"
+            address.country = "United States"
+            
+            let addressFormatter = CNPostalAddressFormatter()
+            let addressText = addressFormatter.attributedStringFromPostalAddress(address, withDefaultAttributes: [NSFontAttributeName : UIFont.systemFontOfSize(18.0)])
+            return addressText
+        }(),
+        website: "americanbeautynyc.com",
+        twitter: "ambeauty_nyc",
+        logo: "americanBar",
+        wifiInfo: WifiInfo(networkName: "American Beauty NYC",
+            username: "251W30_Internal",
+            password: "Slake251"))
 }
