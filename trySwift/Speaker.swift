@@ -40,7 +40,7 @@ extension Speaker {
     }
 }
 
-private extension Speaker {
+extension Speaker {
     
     static let defaultSpeakers: [Speaker] = [
         { let ellen = Speaker()

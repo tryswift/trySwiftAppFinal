@@ -38,7 +38,7 @@ extension Presentation {
     }
 }
 
-private extension Presentation {
+extension Presentation {
     
     static let defaultPresentations: [Presentation] = [
         {
@@ -49,7 +49,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 1").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[0]
             
             return presentation
         }(),
@@ -61,7 +61,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 2").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[1]
             
             return presentation
         }(),
@@ -73,7 +73,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 3").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[2]
             
             return presentation
         }(),
@@ -85,7 +85,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 4").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[3]
             
             return presentation
         }(),
@@ -97,7 +97,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 5").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[4]
             
             return presentation
         }(),
@@ -109,7 +109,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 6").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[5]
             
             return presentation
         }(),
@@ -121,7 +121,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 7").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[6]
             
             return presentation
         }(),
@@ -133,7 +133,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 8").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[7]
             
             return presentation
         }(),
@@ -145,7 +145,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 9").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[8]
             
             return presentation
         }(),
@@ -157,7 +157,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 10").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[9]
             
             return presentation
         }(),
@@ -169,7 +169,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 11").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[10]
             
             return presentation
         }(),
@@ -181,7 +181,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 12").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[11]
             
             return presentation
         }(),
@@ -193,7 +193,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 14").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[13]
             
             return presentation
         }(),
@@ -205,7 +205,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 15").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[14]
             
             return presentation
         }(),
@@ -217,7 +217,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 16").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[15]
             
             return presentation
         }(),
@@ -229,7 +229,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 17").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[16]
             
             return presentation
         }(),
@@ -241,7 +241,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 18").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[17]
             
             return presentation
         }(),
@@ -253,7 +253,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 19").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[18]
             
             return presentation
         }(),
@@ -265,7 +265,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 20").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[19]
             
             return presentation
         }(),
@@ -277,7 +277,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 21").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[20]
             
             return presentation
         }(),
@@ -289,7 +289,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 27").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[26]
             
             return presentation
         }(),
@@ -301,7 +301,7 @@ private extension Presentation {
             
             let realm = try! Realm()
             let speaker = realm.objects(Speaker.self).filter("id == 23").first
-            presentation.speaker = speaker
+            presentation.speaker = speaker ?? Speaker.defaultSpeakers[22]
             
             return presentation
         }(),
