@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UIApplication.isFirstLaunch() {
             insertDefaultData()
             Speaker.updateAllSpeakers()
+            Presentation.updateAllPresentations()
         }
         
         NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "JST")!)

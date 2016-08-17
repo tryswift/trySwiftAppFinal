@@ -62,7 +62,7 @@ extension Speaker {
     }
 }
 
-extension Speaker {
+private extension Speaker {
     
     class func updateRecord(record: CKRecord) {
         if let changedFields = record["changedFields"] as? [String],
@@ -77,10 +77,10 @@ extension Speaker {
     }
     
     class func updateField(field: String, record: CKRecord, speaker: Speaker) {
-        let realm = try! Realm()
         
         if field == "name" {
             if let newValue = record["name"] {
+                let realm = try! Realm()
                 try! realm.write {
                     speaker.name = String(newValue)
                 }
@@ -88,6 +88,7 @@ extension Speaker {
         }
         if field == "twitter" {
             if let newValue = record["twitter"] {
+                let realm = try! Realm()
                 try! realm.write {
                     speaker.twitter = String(newValue)
                 }
@@ -95,6 +96,7 @@ extension Speaker {
         }
         if field == "imageName" {
             if let newValue = record["imageName"] {
+                let realm = try! Realm()
                 try! realm.write {
                     speaker.imageName = String(newValue)
                 }
@@ -102,6 +104,7 @@ extension Speaker {
         }
         if field == "bio" {
             if let newValue = record["bio"] {
+                let realm = try! Realm()
                 try! realm.write {
                     speaker.bio = String(newValue)
                 }
