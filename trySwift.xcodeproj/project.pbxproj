@@ -45,6 +45,7 @@
 		FA39E92D1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E92B1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib */; };
 		FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */; };
 		FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */; };
+		FA3A1C531D6520FC0042F8DD /* ChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */; };
 		FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */; };
 		FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */; };
 		FA65B5861C6D827B00DCAF0B /* Pods-acknowledgements.plist in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5851C6D827B00DCAF0B /* Pods-acknowledgements.plist */; };
@@ -77,7 +78,7 @@
 		FAF1DE1B1D5FE14500D710C3 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE191D5FE14500D710C3 /* MapTableViewCell.xib */; };
 		FAF1DE2D1D623B2C00D710C3 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE2C1D623B2C00D710C3 /* Venue.swift */; };
 		FAF1DE2F1D63353800D710C3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE2E1D63353800D710C3 /* Event.swift */; };
-		FAF1DE321D639DA400D710C3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1DE311D639DA400D710C3 /* CloudKit.framework */; };
+		FAF1DE341D646E6600D710C3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1DE331D646E6600D710C3 /* CloudKit.framework */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -185,6 +186,7 @@
 		FA39E92B1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterFollowTableViewCell.xib; sourceTree = "<group>"; };
 		FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeManager.swift; sourceTree = "<group>"; };
 		FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
 		FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		FA65B5811C6D813200DCAF0B /* trySwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "trySwift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -221,7 +223,7 @@
 		FAF1DE2C1D623B2C00D710C3 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		FAF1DE2E1D63353800D710C3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		FAF1DE301D639D9F00D710C3 /* trySwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = trySwift.entitlements; sourceTree = "<group>"; };
-		FAF1DE311D639DA400D710C3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FAF1DE331D646E6600D710C3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -257,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A99FB38D56D5BFB191EFAE60 /* Pods_trySwift.framework in Frameworks */,
-				FAF1DE321D639DA400D710C3 /* CloudKit.framework in Frameworks */,
+				FAF1DE341D646E6600D710C3 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +294,7 @@
 		411F0B1F9D6446FAAE23A50E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FAF1DE311D639DA400D710C3 /* CloudKit.framework */,
+				FAF1DE331D646E6600D710C3 /* CloudKit.framework */,
 				2ABFAAA9C8A10BE2D1721324 /* Pods_try_Extension.framework */,
 				6004E4BE6D0123525B468B8A /* Pods_trySwift.framework */,
 			);
@@ -340,6 +342,7 @@
 		FA39E8CB1C6AF89D0074B6BE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */,
 				FA39E8ED1C6C034B0074B6BE /* UIColorExtension.swift */,
 				FA65B5941C7274EE00DCAF0B /* UIImageExtension.swift */,
 				4992E3C31CC22C140038F13A /* JSONManager.swift */,
@@ -752,6 +755,9 @@
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = W6GNU64U6Q;
 						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.iCloud = {
 								enabled = 1;
 							};
@@ -992,6 +998,7 @@
 				FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */,
 				498144EF1D43D41800D77B99 /* SessionDataSourceDay3.swift in Sources */,
 				FA39E90B1C6C45FD0074B6BE /* SpeakerTableViewCell.swift in Sources */,
+				FA3A1C531D6520FC0042F8DD /* ChangeManager.swift in Sources */,
 				FA65B5911C6DA53600DCAF0B /* AboutTableViewController.swift in Sources */,
 				FA65B58D1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift in Sources */,
 				FAF1DE2F1D63353800D710C3 /* Event.swift in Sources */,

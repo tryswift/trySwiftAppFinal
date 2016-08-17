@@ -39,65 +39,7 @@ extension Presentation {
             }
         }
     }
-    
-    class func updateAllPresentations() {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let publicDB = CKContainer.defaultContainer().publicCloudDatabase
-            let predicate = NSPredicate(value: true)
-            let query = CKQuery(recordType: String(Presentation), predicate: predicate)
-            publicDB.performQuery(query, inZoneWithID: nil) { result, error in
-                
-                guard let result = result else {
-                    // try to update again on future launch
-                    NSUserDefaults.standardUserDefaults().setBool(false, forKey: presentationUpdatedNotification)
-                    return
-                }
-                
-                result.forEach {
-                    updateRecord($0)
-                }
-                NSUserDefaults.standardUserDefaults().setBool(true, forKey: presentationUpdatedNotification)
-            }
-        }
-    }
 }
-
-private extension Presentation {
-    
-    class func updateRecord(record: CKRecord) {
-        if let changedFields = record["changedFields"] as? [String],
-            let id = record["id"] {
-            let realm = try! Realm()
-            if let presentation = realm.objects(Presentation).filter("id == \(id)").first {
-                for field in changedFields {
-                    updateField(field, record: record, presentation: presentation)
-                }
-            }
-        }
-    }
-    
-    class func updateField(field: String, record: CKRecord, presentation: Presentation) {
-        
-        if field == "title" {
-            if let newValue = record["title"] {
-                let realm = try! Realm()
-                try! realm.write {
-                    presentation.title = String(newValue)
-                }
-            }
-        }
-        if field == "summary" {
-            if let newValue = record["summary"] {
-                let realm = try! Realm()
-                try! realm.write {
-                    presentation.summary = String(newValue)
-                }
-            }
-        }
-    }
-}
-
-
 
 let defaultPresentations: [Presentation] = [
     {
