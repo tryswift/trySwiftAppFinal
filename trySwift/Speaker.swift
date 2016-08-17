@@ -17,14 +17,11 @@ class Speaker: Object {
     dynamic var bio: String = "TBD"
     dynamic var hidden: Bool = false
     
-    static let speakersUpdatedNotification = "SpeakersUpdatedNotification"
-    
     override static func indexedProperties() -> [String] {
         return ["id", "name", "hidden"]
     }
     
     class var speakers: Results<Speaker> {
-        updateAllSpeakers()
         let realm = try! Realm()
         return realm.objects(Speaker).filter("hidden == false").sorted("name")
     }
@@ -38,78 +35,6 @@ extension Speaker {
             try! realm.write {
                 defaultSpeakers.forEach {
                     realm.add($0)
-                }
-            }
-        }
-    }
-    
-    class func updateAllSpeakers() {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let publicDB = CKContainer.defaultContainer().publicCloudDatabase
-            let predicate = NSPredicate(value: true)
-            let query = CKQuery(recordType: String(Speaker), predicate: predicate)
-            publicDB.performQuery(query, inZoneWithID: nil) { result, error in
-                
-                guard let result = result else {
-                    // try to update again on future launch
-                    NSUserDefaults.standardUserDefaults().setBool(false, forKey: speakersUpdatedNotification)
-                    return
-                }
-                
-                result.forEach {
-                    updateRecord($0)
-                }
-                NSUserDefaults.standardUserDefaults().setBool(true, forKey: speakersUpdatedNotification)
-            }
-        }
-    }
-}
-
-private extension Speaker {
-    
-    class func updateRecord(record: CKRecord) {
-        if let changedFields = record["changedFields"] as? [String],
-            let id = record["id"] {
-            let realm = try! Realm()
-            if let speaker = realm.objects(Speaker).filter("id == \(id)").first {
-                for field in changedFields {
-                    updateField(field, record: record, speaker: speaker)
-                }
-            }
-        }
-    }
-    
-    class func updateField(field: String, record: CKRecord, speaker: Speaker) {
-        
-        if field == "name" {
-            if let newValue = record["name"] {
-                let realm = try! Realm()
-                try! realm.write {
-                    speaker.name = String(newValue)
-                }
-            }
-        }
-        if field == "twitter" {
-            if let newValue = record["twitter"] {
-                let realm = try! Realm()
-                try! realm.write {
-                    speaker.twitter = String(newValue)
-                }
-            }
-        }
-        if field == "imageName" {
-            if let newValue = record["imageName"] {
-                let realm = try! Realm()
-                try! realm.write {
-                    speaker.imageName = String(newValue)
-                }
-            }
-        }
-        if field == "bio" {
-            if let newValue = record["bio"] {
-                let realm = try! Realm()
-                try! realm.write {
-                    speaker.bio = String(newValue)
                 }
             }
         }

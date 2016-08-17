@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CloudKit
+import Timepiece
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureStyling()
         configureData()
         
-        NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "JST")!)
+        let notificationSettings = UIUserNotificationSettings(forTypes: .None, categories: nil)
+        application.registerUserNotificationSettings(notificationSettings)
+        application.registerForRemoteNotifications()
+        
+        subscribeToCloudChangeNotifications()
+        
+        NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "EST")!)
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void)
+    {
+        ChangeManager.syncChanges()
+        completionHandler(.NoData)
     }
 }
 
@@ -45,20 +59,38 @@ private extension AppDelegate {
     func configureData() {
         if UIApplication.isFirstLaunch() {
             insertDefaultData()
+            let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+            NSUserDefaults.standardUserDefaults().setObject(appSubmitionDate, forKey: "LastChangeCreationData")
         }
         
-        if !NSUserDefaults.standardUserDefaults().boolForKey(Presentation.presentationUpdatedNotification) {
-            Presentation.updateAllPresentations()
-        }
-        
-        if !NSUserDefaults.standardUserDefaults().boolForKey(Speaker.speakersUpdatedNotification) {
-            Speaker.updateAllSpeakers()
-        }
+        ChangeManager.syncChanges()
     }
     
     func insertDefaultData() {
         Speaker.insertDefaultSpeakers()
         Presentation.insertDefaultPresentations()
+    }
+    
+    func subscribeToCloudChangeNotifications() {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            if !NSUserDefaults.standardUserDefaults().boolForKey("SubscribedToCloudChanges") {
+                let predicate = NSPredicate(value: true)
+                
+                let subscription = CKSubscription(recordType: "Change", predicate: predicate, options: .FiresOnRecordCreation)
+                
+                let notificationInfo = CKNotificationInfo()
+                notificationInfo.shouldSendContentAvailable = true
+                
+                subscription.notificationInfo = notificationInfo
+                
+                let publicDB = CKContainer.defaultContainer().publicCloudDatabase
+                publicDB.saveSubscription(subscription) { subscription, error in
+                    if subscription != nil {
+                        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "SubscribedToCloudChanges")
+                    }
+                }
+            }
+        }
     }
 }
 
