@@ -16,12 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         configureStyling()
-        
-        if UIApplication.isFirstLaunch() {
-            insertDefaultData()
-            Speaker.updateAllSpeakers()
-            Presentation.updateAllPresentations()
-        }
+        configureData()
         
         NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "JST")!)
         return true
@@ -47,6 +42,20 @@ private extension AppDelegate {
         UINavigationBar.appearance().barStyle = .BlackTranslucent
     }
     
+    func configureData() {
+        if UIApplication.isFirstLaunch() {
+            insertDefaultData()
+        }
+        
+        if !NSUserDefaults.standardUserDefaults().boolForKey(Presentation.presentationUpdatedNotification) {
+            Presentation.updateAllPresentations()
+        }
+        
+        if !NSUserDefaults.standardUserDefaults().boolForKey(Speaker.speakersUpdatedNotification) {
+            Speaker.updateAllSpeakers()
+        }
+    }
+    
     func insertDefaultData() {
         Speaker.insertDefaultSpeakers()
         Presentation.insertDefaultPresentations()
@@ -54,6 +63,7 @@ private extension AppDelegate {
 }
 
 extension UIApplication {
+    
     class func isFirstLaunch() -> Bool {
         if !NSUserDefaults.standardUserDefaults().boolForKey("HasAtLeastLaunchedOnce") {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasAtLeastLaunchedOnce")

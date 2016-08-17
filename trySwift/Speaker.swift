@@ -17,6 +17,8 @@ class Speaker: Object {
     dynamic var bio: String = "TBD"
     dynamic var hidden: Bool = false
     
+    static let speakersUpdatedNotification = "SpeakersUpdatedNotification"
+    
     override static func indexedProperties() -> [String] {
         return ["id", "name", "hidden"]
     }
@@ -50,13 +52,14 @@ extension Speaker {
                 
                 guard let result = result else {
                     // try to update again on future launch
-                    NSUserDefaults.standardUserDefaults().setBool(false, forKey: "HasAtLeastLaunchedOnce")
+                    NSUserDefaults.standardUserDefaults().setBool(false, forKey: speakersUpdatedNotification)
                     return
                 }
                 
                 result.forEach {
                     updateRecord($0)
                 }
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: speakersUpdatedNotification)
             }
         }
     }
