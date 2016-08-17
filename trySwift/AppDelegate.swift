@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CloudKit
+import Timepiece
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,17 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         configureStyling()
-        insertDefaultData()
+        configureData()
         
-        // get new data from iCloud
-//        NetworkManager.refreshJSONData { updated, version in
-//            print("updated JSON file: \(updated ? "yes" : "no"), version: \(version)")
-//            guard updated else { return }
-//            // Use updated json file in app
-//        }
+        let notificationSettings = UIUserNotificationSettings(forTypes: .None, categories: nil)
+        application.registerUserNotificationSettings(notificationSettings)
+        application.registerForRemoteNotifications()
         
-        NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "JST")!)
+        subscribeToCloudChangeNotifications()
+        
+        NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "EST")!)
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void)
+    {
+        ChangeManager.syncChanges()
+        completionHandler(.NoData)
     }
 }
 
@@ -49,8 +56,52 @@ private extension AppDelegate {
         UINavigationBar.appearance().barStyle = .BlackTranslucent
     }
     
+    func configureData() {
+        if UIApplication.isFirstLaunch() {
+            insertDefaultData()
+            let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+            NSUserDefaults.standardUserDefaults().setObject(appSubmitionDate, forKey: "LastChangeCreationData")
+        }
+        
+        ChangeManager.syncChanges()
+    }
+    
     func insertDefaultData() {
         Speaker.insertDefaultSpeakers()
         Presentation.insertDefaultPresentations()
+    }
+    
+    func subscribeToCloudChangeNotifications() {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            if !NSUserDefaults.standardUserDefaults().boolForKey("SubscribedToCloudChanges") {
+                let predicate = NSPredicate(value: true)
+                
+                let subscription = CKSubscription(recordType: "Change", predicate: predicate, options: .FiresOnRecordCreation)
+                
+                let notificationInfo = CKNotificationInfo()
+                notificationInfo.shouldSendContentAvailable = true
+                
+                subscription.notificationInfo = notificationInfo
+                
+                let publicDB = CKContainer.defaultContainer().publicCloudDatabase
+                publicDB.saveSubscription(subscription) { subscription, error in
+                    if subscription != nil {
+                        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "SubscribedToCloudChanges")
+                    }
+                }
+            }
+        }
+    }
+}
+
+extension UIApplication {
+    
+    class func isFirstLaunch() -> Bool {
+        if !NSUserDefaults.standardUserDefaults().boolForKey("HasAtLeastLaunchedOnce") {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasAtLeastLaunchedOnce")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            return true
+        }
+        return false
     }
 }
