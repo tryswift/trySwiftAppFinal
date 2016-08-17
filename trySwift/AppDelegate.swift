@@ -16,14 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         configureStyling()
-        insertDefaultData()
         
-        // get new data from iCloud
-//        NetworkManager.refreshJSONData { updated, version in
-//            print("updated JSON file: \(updated ? "yes" : "no"), version: \(version)")
-//            guard updated else { return }
-//            // Use updated json file in app
-//        }
+        if UIApplication.isFirstLaunch() {
+            insertDefaultData()
+            Speaker.updateAllSpeakers()
+        }
         
         NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "JST")!)
         return true
@@ -52,5 +49,16 @@ private extension AppDelegate {
     func insertDefaultData() {
         Speaker.insertDefaultSpeakers()
         Presentation.insertDefaultPresentations()
+    }
+}
+
+extension UIApplication {
+    class func isFirstLaunch() -> Bool {
+        if !NSUserDefaults.standardUserDefaults().boolForKey("HasAtLeastLaunchedOnce") {
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasAtLeastLaunchedOnce")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            return true
+        }
+        return false
     }
 }
