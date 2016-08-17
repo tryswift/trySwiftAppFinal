@@ -7,13 +7,14 @@
 //
 
 import RealmSwift
+import CloudKit
 
 class Speaker: Object {
     dynamic var id: Int = 0
-    dynamic var name: String = ""
-    dynamic var twitter: String = ""
-    dynamic var imageName: String? = nil
-    dynamic var bio: String = ""
+    dynamic var name: String = "TBD"
+    dynamic var twitter: String = "TBD"
+    dynamic var imageName: String = "tryLogo"
+    dynamic var bio: String = "TBD"
     dynamic var hidden: Bool = false
     
     override static func indexedProperties() -> [String] {

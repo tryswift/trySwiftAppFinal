@@ -7,12 +7,15 @@
 //
 
 import RealmSwift
+import CloudKit
 
 class Presentation: Object {
     dynamic var id: Int = 0
-    dynamic var title: String = ""
-    dynamic var summary: String = ""
+    dynamic var title: String = "TBD"
+    dynamic var summary: String = "TBD"
     dynamic var speaker: Speaker?
+    
+    static let presentationUpdatedNotification = "PresentationUpdated"
     
     override static func indexedProperties() -> [String] {
         return ["id"]
@@ -37,8 +40,6 @@ extension Presentation {
         }
     }
 }
-
-
 
 let defaultPresentations: [Presentation] = [
     {
