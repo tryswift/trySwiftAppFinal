@@ -15,6 +15,8 @@ class Presentation: Object {
     dynamic var summary: String = "TBD"
     dynamic var speaker: Speaker?
     
+    static let presentationUpdatedNotification = "PresentationUpdated"
+    
     override static func indexedProperties() -> [String] {
         return ["id"]
     }
@@ -47,13 +49,14 @@ extension Presentation {
                 
                 guard let result = result else {
                     // try to update again on future launch
-                    NSUserDefaults.standardUserDefaults().setBool(false, forKey: "HasAtLeastLaunchedOnce")
+                    NSUserDefaults.standardUserDefaults().setBool(false, forKey: presentationUpdatedNotification)
                     return
                 }
                 
                 result.forEach {
                     updateRecord($0)
                 }
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: presentationUpdatedNotification)
             }
         }
     }
