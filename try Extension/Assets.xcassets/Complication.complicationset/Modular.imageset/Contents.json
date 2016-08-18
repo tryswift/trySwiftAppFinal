@@ -2,6 +2,10 @@
   "images" : [
     {
       "idiom" : "watch",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "watch",
       "filename" : "Notification-38@2x.png",
       "screen-width" : "<=145",
       "scale" : "2x"

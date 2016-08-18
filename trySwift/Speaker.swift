@@ -71,7 +71,7 @@ let defaultSpeakers: [Speaker] = [
         dani.name = "Daniel Tomlinson"
         dani.twitter = "dantoml"
         dani.imageName = "daniel_tomlinson"
-        dani.bio = "Daniel hails from England, but is currently embracing jet lag as a way of life. They co-organize NSLondon and ran Fruitconf. They have been building things for Apple platforms for 8 years and currently works at Ride, as well as on a variety of open source libraries and tools."
+        dani.bio = "Danielle hails from England, but is currently embracing jet lag as a way of life. They co-organize NSLondon and ran Fruitconf. They have been building things for Apple platforms for 8 years, but now work at CircleCI and on open source libraries and tools such as CocoaPods."
         return dani
     }(),
     { let natalia = Speaker()
@@ -231,7 +231,7 @@ let defaultSpeakers: [Speaker] = [
         cate.name = "Cate Huston"
         cate.twitter = "catehstn"
         cate.imageName = "cate_huston"
-        cate.bio = "Cate Huston is Director of Mobile Engineering at Ride. She's lived and worked in the UK, Australia, Canada, China and the United States, previously as an engineer at Google, an Extreme Blue intern at IBM, and a ski instructor. Cate speaks internationally on mobile development and her writing has been published on sites as varied as Lifehacker, The Daily Beast, The Eloquent Woman and Model View Culture. She is an advisor at Glowforge, co-curates Technically Speaking, blogs at Accidentally in Code and is @catehstn on Twitter."
+        cate.bio = "Cate Huston has lived and worked in the UK, Australia, Canada, China and the United States, previously as Director of Mobile Engineering at Ride, an engineer at Google, an Extreme Blue intern at IBM, and a ski instructor. Cate speaks internationally on mobile development and her writing has been published on sites as varied as Lifehacker, The Daily Beast, The Eloquent Woman and Model View Culture. She is an advisor at Glowforge, co-curates Technically Speaking, blogs at Accidentally in Code and is @catehstn on Twitter."
         return cate
     }(),
     {
