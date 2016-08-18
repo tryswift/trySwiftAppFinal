@@ -6,309 +6,228 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-struct Speaker {
-    let name: String
-    let twitter: String
-    let image: String
-    let presentation: Presentation
+import Foundation
+import RealmSwift
+
+class Speaker: Object {
+    dynamic var id: Int = 0
+    dynamic var name: String = "TBD"
+    dynamic var twitter: String = "TBD"
+    dynamic var imageName: String = "tryLogo"
+    
+    override static func indexedProperties() -> [String] {
+        return ["id", "name"]
+    }
+    
+    class func insertDefaultSpeakers() {
+        if Speaker.speakers.count == 0 {
+            let realm = try! Realm()
+            try! realm.write {
+                defaultSpeakers.forEach {
+                    realm.add($0)
+                }
+            }
+        }
+    }
+    
+    private class var speakers: Results<Speaker> {
+        let realm = try! Realm()
+        return realm.objects(Speaker).filter("hidden == false").sorted("name")
+    }
 }
 
-extension Speaker {
-    
-    static let ashFurrow = Speaker(
-        name: "Ash Furrow",
-        twitter: "ashfurrow",
-        image: "ashfurrow",
-        presentation: Presentation(
-            title: isJapanese ? "Artsyにおけるテスト手法の紹介" : "An Artsy Testing Tour"
-        )
-    )
-    
-    static let caesarWirth = Speaker(
-        name: "Caesar Wirth",
-        twitter: "cjwirth",
-        image: "caesar",
-        presentation: Presentation(
-            title: isJapanese ? "Swiftでサーバを書いてみよう" : "Soaring Swiftly - Server Side Swift."
-        )
-    )
-    
-    static let jesseSquires = Speaker(
-        name: "Jesse Squires",
-        twitter: "jesse_squires",
-        image: "squires",
-        presentation: Presentation(
-            title: isJapanese ? "オープンソースSwiftへの貢献" : "Contributing to open source Swift"
-        )
-    )
-    
-    static let syoIkeda = Speaker(
-        name: "Syo Ikeda",
-        twitter: "ikesyo",
-        image: "syo",
-        presentation: Presentation(
-            title: isJapanese ? "Swiftのエコシステムに飛び込む" : "Dive into Swift Ecosystem"
-        )
-    )
-    
-    static let veronicaRay = Speaker(
-        name: "Veronica Ray",
-        twitter: "nerdonica",
-        image: "veronica",
-        presentation: Presentation(
-            title: isJapanese ? "Swiftにおける実践的なモック化について" : "Real World Mocking In Swift"
-        )
-    )
-    
-    static let chrisEidhof = Speaker(
-        name: "Chris Eidhof",
-        twitter: "chriseidhof",
-        image: "chris",
-        presentation: Presentation(
-            title: isJapanese ? "SwiftらしいTable View Controllerの使い方" : "Table View Controllers in Swift"
-        )
-    )
-    
-    static let timOliver = Speaker(
-        name: "Tim Oliver",
-        twitter: "TimOliverAU",
-        image: "timoliver",
-        presentation: Presentation(
-            title: isJapanese ? "Core Animationで作る高度なグラフィックス" : "Advanced Graphics with Core Animation"
-        )
-    )
-    
-    static let hirokiKato = Speaker(
-        name: "Hiroki Kato",
-        twitter: "cockscomb",
-        image: "hiroki",
-        presentation: Presentation(
-            title: isJapanese ? "Motivation based library abstraction" : "Motivation based library abstraction"
-        )
-    )
-    
-    static let dianaZmuda = Speaker(
-        name: "Diana Zmuda",
-        twitter: "dazmuda",
-        image: "diana",
-        presentation: Presentation(
-            title: isJapanese ? "Swiftトレーニング: 統計学を例に" : "How to Train Your Swift: Examples of Computational Statistics in Swift"
-        )
-    )
-    
-    static let yasuhiroInami = Speaker(
-        name: "Yasuhiro Inami",
-        twitter: "inamiy",
-        image: "inamiy",
-        presentation: Presentation(
-            title: isJapanese ? "パーサーコンビネーター in Swift" : "Parser Combinator in Swift"
-        )
-    )
-    
-    static let jeffHui = Speaker(
-        name: "Jeff Hui",
-        twitter: "jeffhui",
-        image: "jeff",
-        presentation: Presentation(
-            title: isJapanese ? "ライブラリの開発" : "Creating a Library"
-        )
-    )
-    
-    static let ayakaNonaka = Speaker(
-        name: "Ayaka Nonaka",
-        twitter: "ayanonagon",
-        image: "Ayaka",
-        presentation: Presentation(
-            title: isJapanese ? "実践的 “Boundaries”" : "Boundaries in Practice"
-        )
-    )
-    
-    static let simonGladman = Speaker(
-        name: "Simon Gladman",
-        twitter: "FlexMonkey",
-        image: "simon",
-        presentation: Presentation(
-            title: isJapanese ? "Core Imageによる高度な画像処理" : "Advanced Image Processing with Core Image"
-        )
-    )
-    
-    static let cateHuston = Speaker(
-        name: "Cate Huston",
-        twitter: "catehstn",
-        image: "cate",
-        presentation: Presentation(
-            title: isJapanese ? "目に見えないものを学ぶ" : "How To Be Invisible"
-        )
-    )
-    
-    static let danielSteinberg = Speaker(
-        name: "Daniel Steinberg",
-        twitter: "dimsumthinking",
-        image: "dimsumthinking",
-        presentation: Presentation(
-            title: isJapanese ? "文化を調和させる" : "Blending Cultures"
-        )
-    )
-    
-    static let matthewGillingham = Speaker(
-        name: "Matthew Gillingham",
-        twitter: "gillygize",
-        image: "matthewg",
-        presentation: Presentation(
-            title: isJapanese ? "プロトコルエクステンション: 歴史について" : "Protocol Extensions: A History"
-        )
-    )
-    
-    static let lauraSavino = Speaker(
-        name: "Laura Savino",
-        twitter: "savinola",
-        image: "laura",
-        presentation: Presentation(
-            title: isJapanese ? "コードリーディングについて" : "Learning to Read Again"
-        )
-    )
-    
-    static let yutaKoshizawa = Speaker(
-        name: "Yuta Koshizawa",
-        twitter: "koher",
-        image: "koher",
-        presentation: Presentation(
-            title: isJapanese ? "Swiftのエラー処理についての三つの話" : "Three Stories about Error Handling in Swift"
-        )
-    )
-    
-    static let danielEggert = Speaker(
-        name: "Daniel Eggert",
-        twitter: "danielboedewadt",
-        image: "danieleggert",
-        presentation: Presentation(
-            title: isJapanese ? "モダンCore Data" : "Modern Core Data"
-        )
-    )
-    
-    static let helenHolmes = Speaker(
-        name: "Helen Holmes",
-        twitter: "helenvholmes",
-        image: "helen",
-        presentation: Presentation(
-            title: isJapanese ? "デザイナーをSwiftのコードベースに巻き込む10の方法" : "10 Ways to Get Designers In Your Swift Codebase"
-        )
-    )
-    
-    static let yosukeIshikawa = Speaker(
-        name: "Yosuke Ishikawa",
-        twitter: "_ishkawa",
-        image: "ishkawa",
-        presentation: Presentation(
-            title: isJapanese ? "Protocol-Oriented Programming in Networking" : "Protocol-Oriented Programming in Networking"
-        )
-    )
-    
-    static let adamBell = Speaker(
-        name: "Adam Bell",
-        twitter: "b3ll",
-        image: "adambell",
-        presentation: Presentation(
-            title: isJapanese ? "プロトタイピングの魔法" : "Prototyping Magic"
-        )
-    )
-    
-    static let borisBugling = Speaker(
-        name: "Boris Bügling",
-        twitter: "NeoNacho",
-        image: "boris",
-        presentation: Presentation(
-            title: isJapanese ? "📺" : "📺"
-        )
-    )
-    
-    static let hectorMatos = Speaker(
-        name: "Hector Matos",
-        twitter: "allonsykraken",
-        image: "hectormatos",
-        presentation: Presentation(
-            title: isJapanese ? "Swiftヒップスター" : "Hipster Swift"
-        )
-    )
-    
-    static let micheleTitolo = Speaker(
-        name: "Michele Titolo",
-        twitter: "micheletitolo",
-        image: "michele",
-        presentation: Presentation(
-            title: isJapanese ? "プロトコルと約束の地" : "Protocols and the Promised Land"
-        )
-    )
-    
-    static let rachelBobbins = Speaker(
-        name: "Rachel Bobbins",
-        twitter: "bobbins",
-        image: "rachel",
-        presentation: Presentation(
-            title: isJapanese ? "Swift版「誰のためのデザイン？」" : "The Design of Everyday Swift"
-        )
-    )
-    
-    static let danielHaight = Speaker(
-        name: "Daniel Haight",
-        twitter: "daniel1of1",
-        image: "daniel",
-        presentation: Presentation(
-            title: isJapanese ? "xcodeless - the build system" : "xcodeless - the build system"
-        )
-    )
-    
-    static let stephanieShupe = Speaker(
-        name: "Stephanie Shupe",
-        twitter: "steph_shupe",
-        image: "stephanie",
-        presentation: Presentation(
-            title: isJapanese ? "スマートホームのためのコード" : "Code for the Smart Home"
-        )
-    )
-    
-    static let himiSato = Speaker(
-        name: "Himi Sato",
-        twitter: "himisanta",
-        image: "himi",
-        presentation: Presentation(
-            title: isJapanese ? "Building Women Who Code in Tokyo" : "Building Women Who Code in Tokyo"
-        )
-    )
-    
-    static let novallKhan = Speaker(
-        name: "Novall Khan",
-        twitter: "novallkhan",
-        image: "novall",
-        presentation: Presentation(
-            title: isJapanese ? "SwiftコンパイラとLLDBの連携" : "Swift compiler integration in LLDB"
-        )
-    )
-    
-    static let jpSimard = Speaker(
-        name: "JP Simard",
-        twitter: "simjp",
-        image: "jpsimard",
-        presentation: Presentation(
-            title: isJapanese ? "実践的クロスプラットフォームSwift" : "Practical Cross-Platform Swift"
-        )
-    )
-    
-    static let gwendolynWeston = Speaker(
-        name: "Gwendolyn Weston",
-        twitter: "purpleyay",
-        image: "gwen",
-        presentation: Presentation(
-            title: isJapanese ? "平常心で型を消し去る" : "Keep Calm and Type Erase On"
-        )
-    )
-    
-    static let maximCramer = Speaker(
-        name: "Maxim Cramer",
-        twitter: "mennenia",
-        image: "Maxim",
-        presentation: Presentation(
-            title: isJapanese ? "ライブデザイニング:🎙🎨 " : "Live Design:🎙🎨 "
-        )
-    )
-}
+let defaultSpeakers: [Speaker] = [
+    { let ellen = Speaker()
+        ellen.id = 1
+        ellen.name = "Ellen Shapiro"
+        ellen.twitter = "designatednerd"
+        ellen.imageName = "ellen_shapiro"
+        return ellen
+    }(),
+    { let marc = Speaker()
+        marc.id = 2
+        marc.name = "Marc Brown"
+        marc.twitter = "heymarcbrown"
+        marc.imageName = "marc_brown"
+        return marc
+    }(),
+    { let rob = Speaker()
+        rob.id = 3
+        rob.name = "Rob Napier"
+        rob.twitter = "cocoaphony"
+        rob.imageName = "rob_napier"
+        return rob
+    }(),
+    { let dani = Speaker()
+        dani.id = 4
+        dani.name = "Daniel Tomlinson"
+        dani.twitter = "dantoml"
+        dani.imageName = "daniel_tomlinson"
+        return dani
+    }(),
+    { let natalia = Speaker()
+        natalia.id = 5
+        natalia.name = "Natalia Berdys"
+        natalia.twitter = "batalia"
+        natalia.imageName = "natalia_berdys"
+        return natalia
+    }(),
+    { let andyy = Speaker()
+        andyy.id = 6
+        andyy.name = "Andyy Hope"
+        andyy.twitter = "AndyyHope"
+        andyy.imageName = "andyy_hope"
+        return andyy
+    }(),
+    { let kristina = Speaker()
+        kristina.id = 7
+        kristina.name = "Kristina Thai"
+        kristina.twitter = "kristinathai"
+        kristina.imageName = "kristina_thai"
+        return kristina
+    }(),
+    { let jorge = Speaker()
+        jorge.id = 8
+        jorge.name = "Jorge Ortiz"
+        jorge.twitter = "jdortiz"
+        jorge.imageName = "jorge_ortiz"
+        return jorge
+    }(),
+    { let vixentael = Speaker()
+        vixentael.id = 9
+        vixentael.name = "Anastasiia Voitova"
+        vixentael.twitter = "vixentael"
+        vixentael.imageName = "anastasiia_voitova"
+        return vixentael
+    }(),
+    { let anat = Speaker()
+        anat.id = 10
+        anat.name = "Anat Gilboa"
+        anat.twitter = "anat_gilboa"
+        anat.imageName = "anat_gilboa"
+        return anat
+    }(),
+    { let amy = Speaker()
+        amy.id = 11
+        amy.name = "Amy Dyer"
+        amy.twitter = "Etsy"
+        amy.imageName = "amy_dyer"
+        return amy
+    }(),
+    { let sam = Speaker()
+        sam.id = 12
+        sam.name = "Samuel Giddins"
+        sam.twitter = "segiddins"
+        sam.imageName = "samuel_giddins"
+        return sam
+    }(),
+    { let hector = Speaker()
+        hector.id = 13
+        hector.name = "Hector Matos"
+        hector.twitter = "allonsykraken"
+        hector.imageName = "hector_matos"
+        return hector
+    }(),
+    { let tj = Speaker()
+        tj.id = 14
+        tj.name = "T.J. Usiyan"
+        tj.twitter = "griotspeak"
+        tj.imageName = "tj_usiyan"
+        return tj
+    }(),
+    { let daniel = Speaker()
+        daniel.id = 15
+        daniel.name = "Daniel Jalkut"
+        daniel.twitter = "danielpunkass"
+        daniel.imageName = "daniel_jalkut"
+        return daniel
+    }(),
+    { let bojana = Speaker()
+        bojana.id = 16
+        bojana.name = "Bojana Jam"
+        bojana.twitter = "bojanajam"
+        bojana.imageName = "bojana_jam"
+        return bojana
+    }(),
+    { let saul = Speaker()
+        saul.id = 17
+        saul.name = "Saul Mora"
+        saul.twitter = "casademora"
+        saul.imageName = "saul_mora"
+        return saul
+    }(),
+    { let marin = Speaker()
+        marin.id = 18
+        marin.name = "Marin Todorov"
+        marin.twitter = "icanzilb"
+        marin.imageName = "marin_todorov"
+        return marin
+    }(),
+    { let natasha = Speaker()
+        natasha.id = 19
+        natasha.name = "Natasha Nazari"
+        natasha.twitter = "natasha_nazari"
+        natasha.imageName = "natasha_nazari"
+        return natasha
+    }(),
+    { let erik = Speaker()
+        erik.id = 20
+        erik.name = "Erik Romijn"
+        erik.twitter = "erikpub"
+        erik.imageName = "erik_romijn"
+        return erik
+    }(),
+    { let ryan = Speaker()
+        ryan.id = 21
+        ryan.name = "Ryan Nystrom"
+        ryan.twitter = "_ryannystrom"
+        ryan.imageName = "ryan_nystrom"
+        return ryan
+    }(),
+    { let chrisBailey = Speaker()
+        chrisBailey.id = 22
+        chrisBailey.name = "Chris Bailey"
+        chrisBailey.twitter = "Chris__Bailey"
+        chrisBailey.imageName = "chris_bailey"
+        return chrisBailey
+    }(),
+    { let katsumi = Speaker()
+        katsumi.id = 23
+        katsumi.name = "Katsumi Kishikawa"
+        katsumi.twitter = "k_katsumi"
+        katsumi.imageName = "katsumi_kishikawa"
+        return katsumi
+    }(),
+    { let cate = Speaker()
+        cate.id = 24
+        cate.name = "Cate Huston"
+        cate.twitter = "catehstn"
+        cate.imageName = "cate_huston"
+        return cate
+    }(),
+    {
+        let chrisBritt = Speaker()
+        chrisBritt.id = 25
+        chrisBritt.name = "Chris Britt"
+        chrisBritt.twitter = "chrisbritt"
+        chrisBritt.imageName = "chris_britt"
+        return chrisBritt
+    }(),
+    {
+        let robert = Speaker()
+        robert.id = 26
+        robert.name = "Robert Dickerson"
+        robert.twitter = "rfdickerson"
+        robert.imageName = "robert"
+        return robert
+    }(),
+    {
+        // special double speaker case
+        let chrisRobert = Speaker()
+        chrisRobert.id = 27
+        chrisRobert.name = "Chris Bailey & Robert Dickerson"
+        chrisRobert.twitter = "IBM"
+        chrisRobert.imageName = "chris_robert"
+        return chrisRobert
+    }()
+]
