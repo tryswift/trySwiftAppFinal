@@ -95,7 +95,7 @@ let defaultSpeakers: [Speaker] = [
         kristina.name = "Kristina Thai"
         kristina.twitter = "kristinathai"
         kristina.imageName = "kristina_thai"
-        kristina.bio = "Kristina Thai is an iOS Software Engineer at Intuit, where she works on the QuickBooks Self-Employed iOS application. She is an expert in Apple Watch development and regularly writes tutorials and technical commentary on the subject on her website kristinathai.com. As an international technical speaker, she has presented multiple times on Apple Watch development and has hosted workshops on how to build watch apps. Her past speaking events include talks at iOSDevUK, Swift Summit, Grace Hopper and many more. Kristina has a B.S. in Computer Science from the University of California, San Diego. Fun fact: she follows more animals on Instagram than people."
+        kristina.bio = "Kristina Thai is an iOS Software Engineer at Intuit, where she works on the QuickBooks Self-Employed iOS application. She is an expert in Apple Watch development and regularly writes tutorials and technical commentary on the subject on her website kristinathai.com. \n\nAs an international technical speaker, she has presented multiple times on Apple Watch development and has hosted workshops on how to build watch apps. Her past speaking events include talks at iOSDevUK, Swift Summit, Grace Hopper and many more. Kristina has a B.S. in Computer Science from the University of California, San Diego. Fun fact: she follows more animals on Instagram than people."
         return kristina
     }(),
     { let jorge = Speaker()
@@ -103,7 +103,7 @@ let defaultSpeakers: [Speaker] = [
         jorge.name = "Jorge Ortiz"
         jorge.twitter = "jdortiz"
         jorge.imageName = "jorge_ortiz"
-        jorge.bio = "Jorge is a freelance dedicated to mobile development, security, and systems architecture. As a developer he started to work for the M.I.T. in 1993 and since he has collaborated in many software projects. Most of them were internally for HP where he worked for more than 15 years. Since 2008 he has been working in different aspects of mobile development. After playing with PalmOS, he learned Android programming for the first Google App contest and immediately started to play with the first iPhone SDK. He often participates as instructor in the best iOS and Android Bootcamps in U.S.A. and Europe. He has recently founded Canonical Examples to help other developers to take a step forward and become senior developers in a very demanding market."
+        jorge.bio = "Jorge is a freelance dedicated to mobile development, security, and systems architecture. As a developer he started to work for the M.I.T. in 1993 and since he has collaborated in many software projects. Most of them were internally for HP where he worked for more than 15 years. \n\nSince 2008 he has been working in different aspects of mobile development. After playing with PalmOS, he learned Android programming for the first Google App contest and immediately started to play with the first iPhone SDK. He often participates as instructor in the best iOS and Android Bootcamps in U.S.A. and Europe. He has recently founded Canonical Examples to help other developers to take a step forward and become senior developers in a very demanding market."
         return jorge
     }(),
     { let vixentael = Speaker()
@@ -111,7 +111,7 @@ let defaultSpeakers: [Speaker] = [
         vixentael.name = "Anastasiia Voitova"
         vixentael.twitter = "vixentael"
         vixentael.imageName = "anastasiia_voitova"
-        vixentael.bio = "Anastasiia is building iOS applications for several years, participating in full lifecycle: from gathering business demands and cost estimation, through ux prototyping to developing and long-term supporting. Often builds both client and server sides and shares her knowledge with community from both sides of barricades. Got into computer security and cryptography when she was invited to fix a few lines of code in iOS port of cryptographic library, ended up taking over of all iOS development and some general mobile ideology part of the project. Physically lives in Kyiv, Ukraine, spends her time online twiting as @vixentael."
+        vixentael.bio = "Anastasiia has been building iOS applications for several years, participating in the full product lifecycle: from gathering business demands and cost estimation, through ux prototyping to developing and long-term supporting. Often building both client and server sides and sharing her knowledge with the community from both sides of the barricades. \n\nAnastasiia got into computer security and cryptography when she was invited to fix a few lines of code in an iOS port of a cryptographic library and ended up taking over all of iOS development and some general mobile ideology part of the project. She physically lives in Kyiv, Ukraine, spends her time online twiting as @vixentael."
         return vixentael
     }(),
     { let anat = Speaker()
@@ -199,7 +199,7 @@ let defaultSpeakers: [Speaker] = [
         erik.name = "Erik Romijn"
         erik.twitter = "erikpub"
         erik.imageName = "erik_romijn"
-        erik.bio = "Erik is the co-founder and CTO of a small company that helps governments manage healthcare. He is deeply involved in the community around Django, a popular Python web framework, being a Django core developer, chair of the Dutch Django Association and co-organiser of various conferences. A long time ago, stopping just around the time Swift was first introduced, Erik did iOS development as well. He won various local awards by building the most popular independent Dutch public transit app at the time. Erik cares about building communities and conferences in which everyone feels welcome, valued and at home, regardless of their background. He has specific interest in well-being and ethical issues around communities and development."
+        erik.bio = "Erik is the co-founder and CTO of a small company that helps governments manage healthcare. He is deeply involved in the community around Django, a popular Python web framework, being a Django core developer, chair of the Dutch Django Association and co-organiser of various conferences. A long time ago, stopping just around the time Swift was first introduced, Erik did iOS development as well. He won various local awards by building the most popular independent Dutch public transit app at the time. \n\nErik cares about building communities and conferences in which everyone feels welcome, valued and at home, regardless of their background. He has specific interest in well-being and ethical issues around communities and development."
         return erik
     }(),
     { let ryan = Speaker()
@@ -223,7 +223,7 @@ let defaultSpeakers: [Speaker] = [
         katsumi.name = "Katsumi Kishikawa"
         katsumi.twitter = "k_katsumi"
         katsumi.imageName = "katsumi_kishikawa"
-        katsumi.bio = "Katsumi Kishikawa is an iOS/OS X developer working at Realm. He has serial open source library developer, and has published some popular libraries on GitHub. He has large contributed to iOS developer community in Japan with his experience and knowledge."
+        katsumi.bio = "Katsumi Kishikawa is an iOS/OS X developer working at Realm. He is a serial open source library developer, and has published some popular libraries on GitHub. He has largely contributed to the iOS developer community in Japan with his experience and knowledge."
         return katsumi
     }(),
     { let cate = Speaker()
@@ -249,7 +249,7 @@ let defaultSpeakers: [Speaker] = [
         robert.name = "Robert Dickerson"
         robert.twitter = "rfdickerson"
         robert.imageName = "robert"
-        robert.bio = "Robert F. Dickerson is a lead software engineer in Swift@IBM at Austin, TX. He is focused on enriching the `Swift on the server` community by being a developer for the web framework `Kitura`, Swift server libraries and SDKs, and also sample applications. He has taught computer science courses at the University of Texas (Austin) and the College of William and Mary and has written numerous research papers about mobile computing, Internet of Things, and virtual reality. When not busy writing code, he is busy swing dancing at nights. "
+        robert.bio = "Robert F. Dickerson is a lead software engineer in Swift@IBM at Austin, TX. He is focused on enriching the `Swift on the server` community by being a developer for the web framework `Kitura`, Swift server libraries and SDKs, and also sample applications. He has taught computer science courses at the University of Texas (Austin) and the College of William and Mary and has written numerous research papers about mobile computing, Internet of Things, and virtual reality. When not busy writing code, he is busy swing dancing at nights."
         return robert
     }(),
     {
@@ -257,8 +257,10 @@ let defaultSpeakers: [Speaker] = [
         let chrisRobert = Speaker()
         chrisRobert.id = 27
         chrisRobert.name = "Chris Bailey & Robert Dickerson"
+        chrisRobert.twitter = "IBM"
         chrisRobert.imageName = "chris_robert"
         chrisRobert.hidden = true
+        chrisRobert.bio = "Chris Bailey is a developer and technical leader in the Runtime Technologies team at IBM. Chris has spent over 15 years working on runtimes, working with the open source communities for Java, Node.js and most recently, Swift. He has contributed to the Swift Language, Foundation and Dispatch projects, and is currently working on making more server-focused APIs available to the community. \n\nRobert F. Dickerson is a lead software engineer in Swift@IBM at Austin, TX. He is focused on enriching the `Swift on the server` community by being a developer for the web framework `Kitura`, Swift server libraries and SDKs, and also sample applications. He has taught computer science courses at the University of Texas (Austin) and the College of William and Mary and has written numerous research papers about mobile computing, Internet of Things, and virtual reality. When not busy writing code, he is busy swing dancing at nights."
         return chrisRobert
     }()
 ]
