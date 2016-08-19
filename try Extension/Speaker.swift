@@ -60,7 +60,7 @@ let defaultSpeakers: [Speaker] = [
     }(),
     { let dani = Speaker()
         dani.id = 4
-        dani.name = "Daniel Tomlinson"
+        dani.name = "Danielle Tomlinson"
         dani.twitter = "dantoml"
         dani.imageName = "daniel_tomlinson"
         return dani

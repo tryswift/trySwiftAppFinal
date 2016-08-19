@@ -68,7 +68,7 @@ let defaultSpeakers: [Speaker] = [
     }(),
     { let dani = Speaker()
         dani.id = 4
-        dani.name = "Daniel Tomlinson"
+        dani.name = "Danielle Tomlinson"
         dani.twitter = "dantoml"
         dani.imageName = "daniel_tomlinson"
         dani.bio = "Danielle hails from England, but is currently embracing jet lag as a way of life. They co-organize NSLondon and ran Fruitconf. They have been building things for Apple platforms for 8 years, but now work at CircleCI and on open source libraries and tools such as CocoaPods."
