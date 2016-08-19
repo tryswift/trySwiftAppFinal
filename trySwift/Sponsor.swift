@@ -74,6 +74,20 @@ extension Sponsor {
             logo: UIImage(named: "domo"),
             level: .Gold),
         Sponsor(
+            name: "Firebase",
+            url: "https://www.firebase.com/",
+            displayURL: "firebase.com",
+            twitter: "Firebase",
+            logo: UIImage(named: "firebase"),
+            level: .Gold),
+        Sponsor(
+            name: "Hired",
+            url: "https://hired.com/",
+            displayURL: "hired.com",
+            twitter: "Hired_HQ",
+            logo: UIImage(named: "hired"),
+            level: .Gold),
+        Sponsor(
             name: "Lyft",
             url: "https://www.lyft.com",
             displayURL: "lyft.com",
