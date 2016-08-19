@@ -95,7 +95,7 @@ let defaultSpeakers: [Speaker] = [
         kristina.name = "Kristina Thai"
         kristina.twitter = "kristinathai"
         kristina.imageName = "kristina_thai"
-        kristina.bio = "Kristina Thai is an iOS Software Engineer at Intuit, where she works on the QuickBooks Self-Employed iOS application. She is an expert in Apple Watch development and regularly writes tutorials and technical commentary on the subject on her website kristinathai.com. \n\nAs an international technical speaker, she has presented multiple times on Apple Watch development and has hosted workshops on how to build watch apps. Her past speaking events include talks at iOSDevUK, Swift Summit, Grace Hopper and many more. Kristina has a B.S. in Computer Science from the University of California, San Diego. Fun fact: she follows more animals on Instagram than people."
+        kristina.bio = "Kristina Thai is an iOS Software Engineer at Intuit, where she works on the QuickBooks Self-Employed iOS application. She is an expert in Apple Watch development and regularly writes tutorials and technical commentary on the subject on her website kristinathai.io. \n\nAs an international technical speaker, she has presented multiple times on Apple Watch development and has hosted workshops on how to build watch apps. Her past speaking events include talks at iOSDevUK, Swift Summit, Grace Hopper and many more. Kristina has a B.S. in Computer Science from the University of California, San Diego. Fun fact: she follows more animals on Instagram than people."
         return kristina
     }(),
     { let jorge = Speaker()
