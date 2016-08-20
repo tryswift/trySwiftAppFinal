@@ -247,6 +247,13 @@ extension Sponsor {
             logo: UIImage(named: "realm"),
             level: .Event),
         Sponsor(
+            name: "SoundCloud",
+            url: "https://soundcloud.com/",
+            displayURL: "soundcloud.com",
+            twitter: "SoundCloud",
+            logo: UIImage(named: "soundcloud"),
+            level: .Event),
+        Sponsor(
             name: "SpotHero",
             url: "https://spothero.com",
             displayURL: "spothero.com",
