@@ -6,458 +6,571 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
+import Foundation
 import Timepiece
+import RealmSwift
 
 struct Session {
-    let id: Int
     let startTime: NSDate
     let endTime: NSDate
-    let description: String
-    let location: String
-    let speaker: Speaker?
-    let sessionType: SessionType
+    let info: Info
     let index: Int
-    
-    enum SessionType: String {
-        case Speaker, Coffee, Announcement, Lunch, Party
-    }
     
     var timeString: String {
         return "\(startTime.stringFromFormat("H:mm")) - \(endTime.stringFromFormat("H:mm"))"
     }
+    
+    static let sessions: [Session] = {
+        return [Session.sessionsAug31, Session.sessionsSept1, Session.sessionsSept2].flatMap{ $0 }
+    }()
 }
 
+// Description Details
 extension Session {
     
-    static let SeminarRoom13F = isJapanese ? "13F セミナールーム" : "13F Seminar Room"
-    static let Breakfast = isJapanese ? "受付・朝食" : "☕️ & Breakfast"
-    static let Lunch = isJapanese ? "🍱 ランチ" : "🍱 Lunch"
-    static let Coffee = isJapanese ? " ☕️ 休憩" : "☕️ & 🍩 Break"
-    static let TOMBOY106 = isJapanese ? "TOMBOY INDIAN LOUNGE DINING 渋谷106道玄坂店" : "TOMBOY INDIAN LOUNGE DINING" // http://www.tomboy106.com/shibuya106/index.html
-    
-    static let sessionsDay1 = Array(sessions[0...16])
-    static let sessionsDay2 = Array(sessions[17...33])
-    static let sessionsDay3 = Array(sessions[34...51])
-    
-    static let sessions = [
-        Session(id: 101,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 8, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 9, minute: 25, second: 0),
-            description: Breakfast,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Coffee,
-            index: 0),
-        Session(id: 102,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 9, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 9, minute: 55, second: 0),
-            description: (isJapanese ? "開会の挨拶" : "Opening Announcements"),
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Announcement,
-            index: 1
-        ),
-        Session(id: 103,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 10, minute: 00, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 10, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.syoIkeda,
-            sessionType: .Speaker,
-            index: 2),
-        Session(id: 104,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 10, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 10, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.jpSimard,
-            sessionType: .Speaker,
-            index: 3),
-        Session(id: 106,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 11, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 11, minute: 25, second: 0),
-            description: Coffee,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Coffee,
-            index: 4),
-        Session(id: 107,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 11, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 11, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.lauraSavino,
-            sessionType: .Speaker,
-            index: 5),
-        Session(id: 108,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 12, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 12, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.borisBugling,
-            sessionType: .Speaker,
-            index: 6),
-        Session(id: 109,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 12, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 12, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.gwendolynWeston,
-            sessionType: .Speaker,
-            index: 7),
-        Session(id: 110,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 13, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 14, minute: 25, second: 0),
-            description: Lunch,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Lunch,
-            index: 8),
-        Session(id: 111,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 14, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 14, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.yutaKoshizawa,
-            sessionType: .Speaker,
-            index: 9),
-        Session(id: 112,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 15, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 15, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.micheleTitolo,
-            sessionType: .Speaker,
-            index: 10),
-        Session(id: 113,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 15, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 15, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.danielSteinberg,
-            sessionType: .Speaker,
-            index: 11),
-        Session(id: 114,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 16, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 16, minute: 25, second: 0),
-            description: Coffee,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Coffee,
-            index: 12),
-        Session(id: 115,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 16, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 16, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.timOliver,
-            sessionType: .Speaker,
-            index: 13),
-        Session(id: 116,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 17, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 17, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.stephanieShupe,
-            sessionType: .Speaker,
-            index: 14),
-        Session(id: 117,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 17, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 17, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.cateHuston,
-            sessionType: .Speaker,
-            index: 15),
-        Session(id: 118,
-            startTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 18, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 2, hour: 18, minute: 25, second: 0),
-            description: isJapanese ? "クロージング" : "Closing Announcements",
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Announcement,
-            index: 16),
-        Session(id: 201,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 8, minute: 45, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 9, minute: 40, second: 0),
-            description: Breakfast,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Coffee,
-            index: 17),
-        Session(id: 202,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 9, minute: 45, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 9, minute: 55, second: 0),
-            description: (isJapanese ? "オープニング" : "Opening Announcements"),
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Announcement,
-            index: 18),
-        Session(id: 203,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 10, minute: 00, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 10, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.ayakaNonaka,
-            sessionType: .Speaker,
-            index: 19),
-        Session(id: 204,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 10, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 10, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.adamBell,
-            sessionType: .Speaker,
-            index: 20),
-        Session(id: 206,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 11, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 11, minute: 25, second: 0),
-            description: Coffee,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Coffee,
-            index: 21),
-        Session(id: 207,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 11, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 11, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.matthewGillingham,
-            sessionType: .Speaker,
-            index: 22),
-        Session(id: 208,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 12, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 12, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.himiSato,
-            sessionType: .Speaker,
-            index: 23),
-        Session(id: 209,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 12, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 12, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.rachelBobbins,
-            sessionType: .Speaker,
-            index: 24),
-        Session(id: 210,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 13, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 14, minute: 25, second: 0),
-            description: Lunch,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Lunch,
-            index: 25),
-        Session(id: 211,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 14, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 14, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.danielEggert,
-            sessionType: .Speaker,
-            index: 26),
-        Session(id: 212,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 15, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 15, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.novallKhan,
-            sessionType: .Speaker,
-            index: 27),
-        Session(id: 213,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 15, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 15, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.jeffHui,
-            sessionType: .Speaker,
-            index: 28),
-        Session(id: 214,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 16, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 16, minute: 25, second: 0),
-            description: Coffee,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Coffee,
-            index: 29),
-        Session(id: 215,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 16, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 16, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.yosukeIshikawa,
-            sessionType: .Speaker,
-            index: 30),
-        Session(id: 216,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 17, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 17, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.maximCramer,
-            sessionType: .Speaker,
-            index: 31),
-        Session(id: 217,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 17, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 17, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.chrisEidhof,
-            sessionType: .Speaker,
-            index: 32),
-        Session(id: 218,
-            startTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 18, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 3, hour: 18, minute: 25, second: 0),
-            description: isJapanese ? "クロージング" : "Closing Announcements",
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Announcement,
-            index: 33),
-        Session(id: 301,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 8, minute: 45, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 9, minute: 40, second: 0),
-            description: Breakfast,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Coffee,
-            index: 34),
-        Session(id: 302,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 9, minute: 45, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 9, minute: 55, second: 0),
-            description: (isJapanese ? "オープニング" : "Opening Announcements"),
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Announcement,
-            index: 35),
-        Session(id: 303,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 10, minute: 00, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 10, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.hirokiKato,
-            sessionType: .Speaker,
-            index: 36),
-        Session(id: 304,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 10, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 10, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.caesarWirth,
-            sessionType: .Speaker,
-            index: 37),
-        Session(id: 306,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 11, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 11, minute: 25, second: 0),
-            description: Coffee,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Coffee,
-            index: 38),
-        Session(id: 307,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 11, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 11, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.veronicaRay,
-            sessionType: .Speaker,
-            index: 39),
-        Session(id: 308,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 12, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 12, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.hectorMatos,
-            sessionType: .Speaker,
-            index: 40),
-        Session(id: 309,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 12, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 12, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.simonGladman,
-            sessionType: .Speaker,
-            index: 41),
-        Session(id: 310,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 13, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 14, minute: 25, second: 0),
-            description: Lunch,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Lunch,
-            index: 42),
-        Session(id: 311,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 14, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 14, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.dianaZmuda,
-            sessionType: .Speaker,
-            index: 43),
-        Session(id: 312,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 15, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 15, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.danielHaight,
-            sessionType: .Speaker,
-            index: 44),
-        Session(id: 313,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 15, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 15, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.helenHolmes,
-            sessionType: .Speaker,
-            index: 45),
-        Session(id: 314,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 16, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 16, minute: 25, second: 0),
-            description: Coffee,
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Coffee,
-            index: 46),
-        Session(id: 315,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 16, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 16, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.yasuhiroInami,
-            sessionType: .Speaker,
-            index: 47),
-        Session(id: 316,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 17, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 17, minute: 25, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.jesseSquires,
-            sessionType: .Speaker,
-            index: 48),
-        Session(id: 317,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 17, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 17, minute: 55, second: 0),
-            description: (isJapanese ? "セッション" : "Presentation"),
-            location: SeminarRoom13F,
-            speaker: Speaker.ashFurrow,
-            sessionType: .Speaker,
-            index: 49),
-        Session(id: 318,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 18, minute: 0, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 18, minute: 25, second: 0),
-            description: isJapanese ? "クロージング" : "Closing Announcements",
-            location: SeminarRoom13F,
-            speaker: nil,
-            sessionType: .Announcement,
-            index: 50),
-        Session(id: 319,
-            startTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 18, minute: 30, second: 0),
-            endTime: NSDate.date(year: 2016, month: 3, day: 4, hour: 23, minute: 59, second: 0),
-            description: "🎉🎉🎉",
-            location: TOMBOY106,
-            speaker: nil,
-            sessionType: .Party,
-            index: 51)
-    ]
+    enum Info {
+        
+        case Workshop(Event)
+        case Meetup(Event)
+        case Breakfast(String)
+        case Announcement(String)
+        case Talk(Presentation)
+        case SponsoredDemo(Sponsor)
+        case CoffeeBreak(Sponsor?)
+        case Lunch
+        case Party
+        
+        var title: String {
+            switch self {
+            case .Workshop(let event):
+                return "💻 \(event.title)"
+            case .Meetup(let event):
+                return "🌇 \(event.title)"
+            case .Breakfast(let title):
+                return "🍩 \(title)"
+            case .Announcement(let title):
+                return "📣 \(title)"
+            case .Talk(let presentation):
+                return "🤓 \(presentation.title)"
+            case .SponsoredDemo(_):
+                return "🤓 Sponsored Demo"
+            case .CoffeeBreak(_):
+                return "☕️ Break"
+            case .Lunch:
+                return "🍴 Lunch"
+            case .Party:
+                return "🍕 & 🎸 Party with Airplane Mode"
+            }
+        }
+        
+        var subtitle: String {
+            switch self {
+            case .Meetup(let event):
+                return event.sponsor.name
+            case .Workshop(let event):
+                return event.sponsor.name
+            case .Breakfast(_), .Announcement(_), .Lunch:
+                return "try! NYC"
+            case .Talk(let presentation):
+                return presentation.speaker?.name ?? "try! NYC"
+            case .SponsoredDemo(let sponsor):
+                return sponsor.name
+            case .CoffeeBreak(let sponsor):
+                if let sponsor = sponsor {
+                    return sponsor.name
+                } else {
+                    return "try! NYC"
+                }
+            case .Party:
+                return "Perfect.org"
+            }
+        }
+        
+        var logo: String {
+            switch self {
+            case .Workshop(let event):
+                return event.sponsor.logo
+            case .Meetup(let event):
+                return event.sponsor.logo
+            case .Breakfast(_), .Lunch, .Announcement(_):
+                return "tryLogo"
+            case .CoffeeBreak(let sponsor):
+                if let sponsor = sponsor {
+                    // currently, the only sponsor is DOMO
+                    return sponsor.logo
+                }
+                return "tryLogo"
+            case .Talk(let presentation):
+                return presentation.speaker?.imageName ?? "tryLogo"
+            case .SponsoredDemo(_):
+                // currently the only sponsor is Twilio
+                return "twilio-small"
+            case .Party:
+                return "airplanemode-short"
+            }
+        }
+        
+        var twitter: String {
+            switch self {
+            case .Workshop(let event):
+                return event.sponsor.twitter
+            case .Meetup(let event):
+                return event.sponsor.twitter
+            case .CoffeeBreak(let sponsor):
+                if let sponsor = sponsor {
+                    return sponsor.twitter
+                }
+                return "tryswiftnyc"
+            case .Talk(let presentation):
+                return presentation.speaker?.twitter ?? "tryswiftnyc"
+            case .SponsoredDemo(let sponsor):
+                return sponsor.twitter
+            default:
+                return "@tryswiftnyc"
+            }
+        }
+    }
 }
 
-
+// default data
+extension Session {
+    
+    // MARK: August 31 Schedule
+    static let sessionsAug31: [Session] = [
+        {
+            return Session(
+                startTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 16, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
+                info: .Workshop(Event.gaWorkshop),
+                index: 0)
+            }(),
+        {
+            return Session(
+                startTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 19, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 21, minute: 15, second: 0),
+                info: .Meetup(Event.meetup),
+                index: 1)
+            }()
+        
+    ]
+    
+    // MARK: September 1 Schedule
+    static let sessionsSept1: [Session] = [
+        {
+            let title = "Breakfast & Registration"
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 8, minute: 45, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 9, minute: 45, second: 0),
+                info: .Breakfast(title),
+                index: 2
+            )
+            
+            return session
+            }(),
+        {
+            let title = "Opening Remarks"
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 9, minute: 45, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
+                info: .Announcement(title),
+                index: 3
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            var presentation = realm.objects(Presentation.self).filter("id == 3").first ?? defaultPresentations[2]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
+                info: .Talk(presentation),
+                index: 4
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 5").first ?? defaultPresentations[4]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 5
+            )
+            
+            return session
+            }(),
+        {
+            return Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
+                info: .CoffeeBreak(Sponsor.domo),
+                index: 6)
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 12").first ?? defaultPresentations[11]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 7
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 11").first ?? defaultPresentations[10]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
+                info: .Talk(presentation),
+                index: 8
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 19").first ?? defaultPresentations[18]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
+                info: .Talk(presentation),
+                index: 9
+            )
+            
+            return session
+            }(),
+        {
+            return Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
+                info: .Lunch,
+                index: 10)
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 14").first ?? defaultPresentations[13]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 11
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 2").first ?? defaultPresentations[1]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
+                info: .Talk(presentation),
+                index: 12
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 4").first ?? defaultPresentations[3]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 13
+            )
+            
+            return session
+            }(),
+        {
+            return Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
+                info: .CoffeeBreak(nil),
+                index: 14)
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 1").first ?? defaultPresentations[0]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 15
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 10").first ?? defaultPresentations[9]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
+                info: .Talk(presentation),
+                index: 16
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 8").first ?? defaultPresentations[7]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 17
+            )
+            
+            return session
+            }(),
+        {
+            let title = "Closing Announcements"
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 30, second: 0),
+                info: .Announcement(title),
+                index: 18
+            )
+            
+            return session
+            }(),
+        {
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 20, minute: 30, second: 0),
+                info: .Party,
+                index: 19
+            )
+            
+            return session
+            }()
+    ]
+    
+    // MARK: September 2 Schedule
+    static let sessionsSept2: [Session] = [
+        {
+            let title = "Breakfast"
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 9, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 9, minute: 45, second: 0),
+                info: .Breakfast(title),
+                index: 20
+            )
+            
+            return session
+            }(),
+        {
+            let title = "Opening Remarks"
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 9, minute: 45, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 0, second: 0),
+                info: .Announcement(title),
+                index: 21
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            var presentation = realm.objects(Presentation.self).filter("id == 21").first ?? defaultPresentations[20]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
+                info: .Talk(presentation),
+                index: 22
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 7").first ?? defaultPresentations[6]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 23
+            )
+            
+            return session
+            }(),
+        {
+            return Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
+                info: .CoffeeBreak(Sponsor.domo),
+                index: 24)
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 13").first ?? defaultPresentations[12]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 25
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 16").first ?? defaultPresentations[15]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
+                info: .Talk(presentation),
+                index: 26
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 15").first ?? defaultPresentations[14]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 27
+            )
+            
+            return session
+            }(),
+        {
+            return Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
+                info: .SponsoredDemo(Sponsor.twilio),
+                index: 28
+            )
+        }(),
+        {
+            return Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
+                info: .Lunch,
+                index: 29)
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 9").first ?? defaultPresentations[8]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 30
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 22").first ?? defaultPresentations[21]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
+                info: .Talk(presentation),
+                index: 31
+            )
+            
+            return session
+            }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 18").first ?? defaultPresentations[17]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 32
+            )
+            
+            return session
+        }(),
+        {
+            return Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
+                info: .CoffeeBreak(nil),
+                index: 33)
+        }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 17").first ?? defaultPresentations[16]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 34
+            )
+            
+            return session
+        }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 6").first ?? defaultPresentations[5]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
+                info: .Talk(presentation),
+                index: 35
+            )
+            
+            return session
+        }(),
+        {
+            let realm = try! Realm()
+            let presentation = realm.objects(Presentation.self).filter("id == 20").first ?? defaultPresentations[19]
+            
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
+                info: .Talk(presentation),
+                index: 36
+            )
+            
+            return session
+        }(),
+        {
+            let title = "Closing Announcements"
+            let session = Session(
+                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 30, second: 0),
+                info: .Announcement(title),
+                index: 37
+            )
+            
+            return session
+            }()
+    ]
+}

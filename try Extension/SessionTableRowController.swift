@@ -15,18 +15,11 @@ class SessionTableRowController: NSObject {
     @IBOutlet var timeInterfaceLabel: WKInterfaceLabel!
     
     func configure(session: Session) {
-        if let speaker = session.speaker {
-            titleInterfaceLabel.setText("🤓 \(speaker.presentation.title)")
-            subtitleInterfaceLabel.setText(speaker.name)
-        } else {
-            if session.sessionType == .Announcement {
-                titleInterfaceLabel.setText("🎙 \(session.description)")
-            } else {
-                titleInterfaceLabel.setText(session.description)   
-            }
-            subtitleInterfaceLabel.setText("try!")
-        }
-        
+
+        let info = session.info
+        titleInterfaceLabel.setText(info.title)
+        subtitleInterfaceLabel.setText(info.subtitle)
+
         timeInterfaceLabel.setText(session.timeString)
     }
 }

@@ -14,12 +14,12 @@ class SessionsDay3InterfaceController: WKInterfaceController {
 
     @IBOutlet private var sessionsTable: WKInterfaceTable!
     
-    private let sessions = Session.sessionsDay3
+    private let sessions = Session.sessionsSept2
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        setTitle(isJapanese ? "3月4日（金）" : "try! Mar 4")
+        setTitle("try! Sep 2")
         loadTableData()
     }
 
