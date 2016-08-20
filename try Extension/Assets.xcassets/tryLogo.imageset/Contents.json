@@ -2,18 +2,18 @@
   "images" : [
     {
       "idiom" : "watch",
-      "filename" : "tokyo-1.jpeg",
+      "filename" : "tryswift-2.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "watch",
-      "filename" : "tokyo-2.jpeg",
+      "filename" : "tryswift-1.jpg",
       "screen-width" : "<=145",
       "scale" : "2x"
     },
     {
       "idiom" : "watch",
-      "filename" : "tokyo.jpeg",
+      "filename" : "tryswift.jpg",
       "screen-width" : ">145",
       "scale" : "2x"
     }
