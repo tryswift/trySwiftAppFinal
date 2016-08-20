@@ -136,15 +136,8 @@ private extension ComplicationController {
         
         tmpl.headerTextProvider = CLKTimeIntervalTextProvider(startDate: session.startTime, endDate: session.endTime)
         
-        if let speaker = session.speaker {
-            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🤓 \(speaker.presentation.title)")
-        } else {
-            if session.sessionType == .Announcement {
-                tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🎙 \(session.description)")
-            } else {
-                tmpl.body1TextProvider = CLKSimpleTextProvider(text: session.description)
-            }
-        }
+        let info = session.info
+        tmpl.body1TextProvider = CLKSimpleTextProvider(text: info.title)
         
         return tmpl
     }

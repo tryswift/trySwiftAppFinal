@@ -7,11 +7,12 @@
 //
 
 import WatchKit
+import RealmSwift
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "JST")!)
+        NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "EST")!)
     }
 
     func applicationDidBecomeActive() {

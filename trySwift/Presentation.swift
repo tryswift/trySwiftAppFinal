@@ -15,8 +15,6 @@ class Presentation: Object {
     dynamic var summary: String = "TBD"
     dynamic var speaker: Speaker?
     
-    static let presentationUpdatedNotification = "PresentationUpdated"
-    
     override static func indexedProperties() -> [String] {
         return ["id"]
     }
