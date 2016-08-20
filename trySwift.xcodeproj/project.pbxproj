@@ -14,10 +14,10 @@
 		A99FB38D56D5BFB191EFAE60 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6004E4BE6D0123525B468B8A /* Pods_trySwift.framework */; };
 		C0EBD91A760DA59295DFEEC9 /* Pods_try_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABFAAA9C8A10BE2D1721324 /* Pods_try_Extension.framework */; };
 		FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */; };
-		FA20175E1D69152200B6E158 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA20175C1D69152200B6E158 /* Realm.framework */; };
-		FA20175F1D69152200B6E158 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA20175C1D69152200B6E158 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FA2017601D69152200B6E158 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA20175D1D69152200B6E158 /* RealmSwift.framework */; };
-		FA2017611D69152200B6E158 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA20175D1D69152200B6E158 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA2017641D6924DD00B6E158 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2017621D6924DD00B6E158 /* Realm.framework */; };
+		FA2017651D6924DD00B6E158 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2017621D6924DD00B6E158 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA2017661D6924DD00B6E158 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2017631D6924DD00B6E158 /* RealmSwift.framework */; };
+		FA2017671D6924DD00B6E158 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2017631D6924DD00B6E158 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */; };
 		FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */; };
 		FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */; };
@@ -128,8 +128,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA2017611D69152200B6E158 /* RealmSwift.framework in Embed Frameworks */,
-				FA20175F1D69152200B6E158 /* Realm.framework in Embed Frameworks */,
+				FA2017671D6924DD00B6E158 /* RealmSwift.framework in Embed Frameworks */,
+				FA2017651D6924DD00B6E158 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,8 +170,8 @@
 		649E54409C43767E2F947F26 /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
 		E853D2F1B6EE1DC0462E6AEB /* Pods-try Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerDetailTableViewController.swift; sourceTree = "<group>"; };
-		FA20175C1D69152200B6E158 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "try Extension/watchos/Realm.framework"; sourceTree = "<group>"; };
-		FA20175D1D69152200B6E158 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "try Extension/watchos/RealmSwift.framework"; sourceTree = "<group>"; };
+		FA2017621D6924DD00B6E158 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "try Extension/watchos/Realm.framework"; sourceTree = "<group>"; };
+		FA2017631D6924DD00B6E158 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "try Extension/watchos/RealmSwift.framework"; sourceTree = "<group>"; };
 		FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavTabButtonCell.xib; sourceTree = "<group>"; };
 		FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsTableViewController.swift; sourceTree = "<group>"; };
@@ -266,9 +266,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA20175E1D69152200B6E158 /* Realm.framework in Frameworks */,
+				FA2017641D6924DD00B6E158 /* Realm.framework in Frameworks */,
 				C0EBD91A760DA59295DFEEC9 /* Pods_try_Extension.framework in Frameworks */,
-				FA2017601D69152200B6E158 /* RealmSwift.framework in Frameworks */,
+				FA2017661D6924DD00B6E158 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,8 +590,8 @@
 		FAFA15AF1C69D31B00FEA4EA = {
 			isa = PBXGroup;
 			children = (
-				FA20175C1D69152200B6E158 /* Realm.framework */,
-				FA20175D1D69152200B6E158 /* RealmSwift.framework */,
+				FA2017621D6924DD00B6E158 /* Realm.framework */,
+				FA2017631D6924DD00B6E158 /* RealmSwift.framework */,
 				FAFA15BA1C69D31C00FEA4EA /* trySwift */,
 				FAFA15CF1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15DA1C69D31C00FEA4EA /* trySwiftUITests */,
@@ -1157,6 +1157,8 @@
 					Extension/watchos,
 					"$(PROJECT_DIR)/try",
 					Extension/watchos,
+					"$(PROJECT_DIR)/try",
+					Extension/watchos,
 				);
 				INFOPLIST_FILE = "try Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -1179,6 +1181,8 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/try",
+					Extension/watchos,
 					"$(PROJECT_DIR)/try",
 					Extension/watchos,
 					"$(PROJECT_DIR)/try",
