@@ -12,7 +12,8 @@ import RealmSwift
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        configureData()
+        insertDefaultData()
+        WatchSessionManager.sharedManager.startSession()
         NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "EST")!)
     }
 
@@ -28,12 +29,6 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 }
 
 private extension ExtensionDelegate {
-    
-    func configureData() {
-        insertDefaultData()
-        let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
-        NSUserDefaults.standardUserDefaults().setObject(appSubmitionDate, forKey: "LastChangeCreationData")
-    }
     
     func insertDefaultData() {
         Speaker.insertDefaultSpeakers()

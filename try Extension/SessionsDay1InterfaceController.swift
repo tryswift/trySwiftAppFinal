@@ -8,19 +8,33 @@
 
 import WatchKit
 import Foundation
+import RealmSwift
 
-
-class SessionsDay1InterfaceController: WKInterfaceController {
+class SessionsInterfaceController: WKInterfaceController {
 
     @IBOutlet private var sessionsTable: WKInterfaceTable!
     
-    private let sessions = Session.sessionsAug31
+    private var sessions = Session.sessionsAug31
+    
+    var token: NotificationToken? = nil
+    
+    static var first = true
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        setTitle("try! Aug 31")
+        if SessionsInterfaceController.first {
+            WKInterfaceController.reloadRootControllersWithNames(["Aug31", "Sep1", "Sep2"], contexts: [PageDetails.Aug31, PageDetails.Sep1, PageDetails.Sep2])
+            SessionsInterfaceController.first = false
+        }
+        
+        if let pageDetails = context as? PageDetails {
+            sessions = pageDetails.sessions
+            setTitle(pageDetails.title)
+        }
+        
         loadTableData()
+        subscribeToChangeNotification()
     }
 
     override func willActivate() {
@@ -32,10 +46,13 @@ class SessionsDay1InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
+    deinit {
+        token?.stop()
+    }
 }
 
-private extension SessionsDay1InterfaceController {
+private extension SessionsInterfaceController {
     
     func loadTableData() {
         sessionsTable.setNumberOfRows(sessions.count, withRowType: String(SessionTableRowController))
@@ -45,4 +62,25 @@ private extension SessionsDay1InterfaceController {
             row?.configure(session)
         }
     }
+    
+    func subscribeToChangeNotification() {
+        token = Presentation.presentations.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+            self?.loadTableData()
+        }
+    }
+}
+
+// holder for sessions since it cannot be case to AnyObject
+private class PageDetails: AnyObject {
+    let title: String
+    let sessions: [Session]
+    
+    init(title: String, sessions: [Session]) {
+        self.title = title
+        self.sessions = sessions
+    }
+    
+    static let Aug31 = PageDetails(title: "try! Aug 31", sessions: Session.sessionsAug31)
+    static let Sep1 = PageDetails(title: "try! Sep 1", sessions: Session.sessionsSept1)
+    static let Sep2 = PageDetails(title: "try! Sep 2", sessions: Session.sessionsSept2)
 }
