@@ -141,14 +141,14 @@ extension Session {
         {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 16, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
+                endTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 18, minute: 0, second: 0),
                 info: .Workshop(Event.gaWorkshop),
                 index: 0)
             }(),
         {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 19, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 21, minute: 15, second: 0),
+                endTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 21, minute: 15, second: 0),
                 info: .Meetup(Event.meetup),
                 index: 1)
             }()
