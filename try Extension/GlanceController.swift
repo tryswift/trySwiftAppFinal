@@ -49,25 +49,19 @@ class GlanceController: WKInterfaceController {
 private extension GlanceController {
     
     func configureDefault() {
-        titleInterfaceLabel.setText("try! Conference Tokyo, 🇯🇵")
-        timeInterfaceLabel.setText(isJapanese ? "2016.3.2〜2016.3.4" : "Mar 2 - 4, 2016")
+        titleInterfaceLabel.setText("try! NYC 🗽🐥🎉")
+        timeInterfaceLabel.setText("Sep 1 - 2, 2016")
         speakerInterfaceImage.setImage(UIImage(named: "tryLogo"))
         nameInterfaceLabel.setText("try! 🤗")
-        twitterInterfaceLabel.setText("@tryswiftconf")
+        twitterInterfaceLabel.setText("@tryswiftnyc")
     }
     
     func configureSession(session: Session) {
-        if let speaker = session.speaker {
-            titleInterfaceLabel.setText(speaker.presentation.title)
-            speakerInterfaceImage.setImage(UIImage(named: speaker.image))
-            nameInterfaceLabel.setText(speaker.name)
-            twitterInterfaceLabel.setText("@\(speaker.twitter)")
-        } else {
-            titleInterfaceLabel.setText(session.description)
-            speakerInterfaceImage.setImage(UIImage(named: "tryLogo"))
-            nameInterfaceLabel.setText("try! 🤗")
-            twitterInterfaceLabel.setText("@tryswiftconf")
-        }
+        let info = session.info
+        titleInterfaceLabel.setText(info.title)
+        speakerInterfaceImage.setImage(UIImage(named: info.logo))
+        nameInterfaceLabel.setText(info.subtitle)
+        twitterInterfaceLabel.setText(info.twitter)
         
         timeInterfaceLabel.setText(session.timeString)
     }

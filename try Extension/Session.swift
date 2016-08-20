@@ -14,16 +14,21 @@ struct Session {
     let startTime: NSDate
     let endTime: NSDate
     let info: Info
+    let index: Int
     
     var timeString: String {
         return "\(startTime.stringFromFormat("H:mm")) - \(endTime.stringFromFormat("H:mm"))"
     }
+    
+    static let sessions: [Session] = {
+        return [Session.sessionsAug31, Session.sessionsSept1, Session.sessionsSept2].flatMap{ $0 }
+    }()
 }
 
 // Description Details
 extension Session {
     
-    enum Info: CustomStringConvertible {
+    enum Info {
         
         case Workshop(Event)
         case Meetup(Event)
@@ -33,36 +38,27 @@ extension Session {
         case SponsoredDemo(Sponsor)
         case CoffeeBreak(Sponsor?)
         case Lunch
-        case OfficeHours(Presentation)
-        case Party(Venue)
+        case Party
         
         var title: String {
             switch self {
             case .Workshop(let event):
-                return event.title
+                return "💻 \(event.title)"
             case .Meetup(let event):
-                return event.title
+                return "🌇 \(event.title)"
             case .Breakfast(let title):
-                return title
+                return "🍩 \(title)"
             case .Announcement(let title):
-                return title
+                return "📣 \(title)"
             case .Talk(let presentation):
-                return presentation.title
+                return "🤓 \(presentation.title)"
             case .SponsoredDemo(_):
-                return "Sponsored Demo"
-            case .CoffeeBreak(let sponsor):
-                if let sponsor = sponsor {
-                    return "☕️ Break, by \(sponsor.name)"
-                }
+                return "🤓 Sponsored Demo"
+            case .CoffeeBreak(_):
                 return "☕️ Break"
             case .Lunch:
-                return "😋 Lunch"
-            case .OfficeHours(let presentation):
-                if let speaker = presentation.speaker?.name {
-                    return "Office Hours with \(speaker)"
-                }
-                return "Office Hours"
-            case .Party(_):
+                return "🍴 Lunch"
+            case .Party:
                 return "🍕 & 🎸 Party with Airplane Mode"
             }
         }
@@ -70,24 +66,22 @@ extension Session {
         var subtitle: String {
             switch self {
             case .Meetup(let event):
-                return event.sponsor
+                return event.sponsor.name
             case .Workshop(let event):
-                return event.sponsor
+                return event.sponsor.name
             case .Breakfast(_), .Announcement(_), .Lunch:
-                return "try! NYC Conference"
+                return "try! NYC"
             case .Talk(let presentation):
-                return presentation.speaker?.name ?? "try! NYC Conference"
+                return presentation.speaker?.name ?? "try! NYC"
             case .SponsoredDemo(let sponsor):
                 return sponsor.name
             case .CoffeeBreak(let sponsor):
                 if let sponsor = sponsor {
                     return sponsor.name
                 } else {
-                    return "try! NYC Conference"
+                    return "try! NYC"
                 }
-            case .OfficeHours(let presentation):
-                return presentation.speaker?.name ?? "⁉️"
-            case .Party(_):
+            case .Party:
                 return "Perfect.org"
             }
         }
@@ -95,62 +89,44 @@ extension Session {
         var logo: String {
             switch self {
             case .Workshop(let event):
-                return event.logo
+                return event.sponsor.logo
             case .Meetup(let event):
-                return event.logo
+                return event.sponsor.logo
             case .Breakfast(_), .Lunch, .Announcement(_):
                 return "tryLogo"
             case .CoffeeBreak(let sponsor):
-                if sponsor != nil {
+                if let sponsor = sponsor {
                     // currently, the only sponsor is DOMO
-                    return "domo"
+                    return sponsor.logo
                 }
                 return "tryLogo"
             case .Talk(let presentation):
                 return presentation.speaker?.imageName ?? "tryLogo"
-            case .OfficeHours(let presentation):
-                return presentation.speaker?.imageName ?? "tryLogo"
             case .SponsoredDemo(_):
                 // currently the only sponsor is Twilio
                 return "twilio-small"
-            case .Party(_):
+            case .Party:
                 return "airplanemode-short"
             }
         }
         
-        var location: String {
+        var twitter: String {
             switch self {
             case .Workshop(let event):
-                return event.location
+                return event.sponsor.twitter
             case .Meetup(let event):
-                return event.location
-            case .Breakfast(_), .CoffeeBreak(_), .Lunch:
-                return "North Lobby"
-            case .Announcement(_), .Talk(_), .SponsoredDemo(_):
-                return "Auditorium"
-            case .OfficeHours(_):
-                return "Attrium"
-            case .Party(let venue):
-                return venue.address
-            }
-        }
-        
-        var description: String {
-            switch self {
-            case .Workshop(_), .Meetup(_):
-                return "Special Event"
-            case .Breakfast(_), .CoffeeBreak(_), .Lunch:
-                return "❤️"
-            case .Announcement(_):
-                return "📣"
-            case .Talk(_):
-                return "Presentation"
-            case .SponsoredDemo(_):
-                return "Demo"
-            case .OfficeHours(_):
-                return "Q&A"
-            case .Party(_):
-                return "🎉🎉🎉"
+                return event.sponsor.twitter
+            case .CoffeeBreak(let sponsor):
+                if let sponsor = sponsor {
+                    return sponsor.twitter
+                }
+                return "tryswiftnyc"
+            case .Talk(let presentation):
+                return presentation.speaker?.twitter ?? "tryswiftnyc"
+            case .SponsoredDemo(let sponsor):
+                return sponsor.twitter
+            default:
+                return "@tryswiftnyc"
             }
         }
     }
@@ -161,699 +137,440 @@ extension Session {
     
     // MARK: August 31 Schedule
     static let sessionsAug31: [Session] = [
-        [{
+        {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 16, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
-                info: .Workshop(Event.gaWorkshop))
-            }()],
-        [{
+                info: .Workshop(Event.gaWorkshop),
+                index: 0)
+            }(),
+        {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 19, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 21, minute: 15, second: 0),
-                info: .Workshop(Event.meetup))
-            }()]
+                info: .Meetup(Event.meetup),
+                index: 1)
+            }()
         
     ]
     
     // MARK: September 1 Schedule
-    static let sessionsSept1: [[Session]] = [
-        [{
+    static let sessionsSept1: [Session] = [
+        {
             let title = "Breakfast & Registration"
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 8, minute: 45, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 9, minute: 45, second: 0),
-                info: .Breakfast(title)
+                info: .Breakfast(title),
+                index: 2
             )
             
             return session
-            }()],
-        [{
+            }(),
+        {
             let title = "Opening Remarks"
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 9, minute: 45, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
-                info: .Announcement(title)
+                info: .Announcement(title),
+                index: 3
             )
             
             return session
-            }()],
-        [{
+            }(),
+        {
             let realm = try! Realm()
             var presentation = realm.objects(Presentation.self).filter("id == 3").first ?? defaultPresentations[2]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 4
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 20").first ?? defaultPresentations[19]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 5").first ?? defaultPresentations[4]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 5
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 3").first ?? defaultPresentations[2]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
-                info: .CoffeeBreak(Sponsor.goldSponsors[2]))
-            }()
-        ],
-        [{
+                info: .CoffeeBreak(Sponsor.domo),
+                index: 6)
+            }(),
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 12").first ?? defaultPresentations[11]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 7
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 5").first ?? defaultPresentations[4]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 11").first ?? defaultPresentations[10]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 8
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 12").first ?? defaultPresentations[11]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 19").first ?? defaultPresentations[18]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 9
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 11").first ?? defaultPresentations[10]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
-                info: .Lunch)
-            }()
-        ],
-        [{
+                info: .Lunch,
+                index: 10)
+            }(),
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 14").first ?? defaultPresentations[13]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 11
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 19").first ?? defaultPresentations[18]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 2").first ?? defaultPresentations[1]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 12
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 14").first ?? defaultPresentations[13]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 4").first ?? defaultPresentations[3]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 13
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 2").first ?? defaultPresentations[1]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
-                info: .CoffeeBreak(nil))
-            }()
-        ],
-        [{
+                info: .CoffeeBreak(nil),
+                index: 14)
+            }(),
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 1").first ?? defaultPresentations[0]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 15
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 4").first ?? defaultPresentations[3]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 10").first ?? defaultPresentations[9]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 16
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 1").first ?? defaultPresentations[0]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 8").first ?? defaultPresentations[7]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 17
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 10").first ?? defaultPresentations[9]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let title = "Closing Announcements"
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 30, second: 0),
-                info: .Announcement(title)
+                info: .Announcement(title),
+                index: 18
             )
             
             return session
-            }()
-        ],
-        [{
+            }(),
+        {
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 20, minute: 30, second: 0),
-                info: .Party(Venue.americanBeauty)
+                info: .Party,
+                index: 19
             )
             
             return session
             }()
-        ]
-        
-        
     ]
     
     // MARK: September 2 Schedule
-    static let sessionsSept2: [[Session]] = [
-        [{
-            let title = "☕️ & Breakfast"
+    static let sessionsSept2: [Session] = [
+        {
+            let title = "Breakfast"
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 9, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 9, minute: 45, second: 0),
-                info: .Breakfast(title)
+                info: .Breakfast(title),
+                index: 20
             )
             
             return session
-            }()],
-        [{
+            }(),
+        {
             let title = "Opening Remarks"
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 9, minute: 45, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 0, second: 0),
-                info: .Announcement(title)
+                info: .Announcement(title),
+                index: 21
             )
             
             return session
-            }()],
-        [{
+            }(),
+        {
             let realm = try! Realm()
             var presentation = realm.objects(Presentation.self).filter("id == 21").first ?? defaultPresentations[20]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 22
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 8").first ?? defaultPresentations[7]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 7").first ?? defaultPresentations[6]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 23
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                var presentation = realm.objects(Presentation.self).filter("id == 21").first ?? defaultPresentations[20]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
-                info: .CoffeeBreak(Sponsor.goldSponsors[2]))
-            }()
-        ],
-        [{
+                info: .CoffeeBreak(Sponsor.domo),
+                index: 24)
+            }(),
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 13").first ?? defaultPresentations[12]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 25
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 7").first ?? defaultPresentations[6]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 16").first ?? defaultPresentations[15]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 26
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 13").first ?? defaultPresentations[12]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 15").first ?? defaultPresentations[14]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 27
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 16").first ?? defaultPresentations[15]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
-                info: .SponsoredDemo(Sponsor.goldSponsors[6])
+                info: .SponsoredDemo(Sponsor.twilio),
+                index: 28
             )
-            }(),
-        ],
-        [{
+        }(),
+        {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
-                info: .Lunch)
-            }()
-        ],
-        [{
+                info: .Lunch,
+                index: 29)
+            }(),
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 9").first ?? defaultPresentations[8]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 30
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 15").first ?? defaultPresentations[14]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 22").first ?? defaultPresentations[21]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 31
             )
             
             return session
             }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 9").first ?? defaultPresentations[8]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 18").first ?? defaultPresentations[17]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 32
             )
             
             return session
-            }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 22").first ?? defaultPresentations[21]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        }(),
+        {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
-                info: .CoffeeBreak(nil))
-            }()
-        ],
-        [{
+                info: .CoffeeBreak(nil),
+                index: 33)
+        }(),
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 17").first ?? defaultPresentations[16]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 34
             )
             
             return session
-            }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 18").first ?? defaultPresentations[17]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        }(),
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 6").first ?? defaultPresentations[5]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 35
             )
             
             return session
-            }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 17").first ?? defaultPresentations[16]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        }(),
+        {
             let realm = try! Realm()
             let presentation = realm.objects(Presentation.self).filter("id == 20").first ?? defaultPresentations[19]
             
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
-                info: .Talk(presentation)
+                info: .Talk(presentation),
+                index: 36
             )
             
             return session
-            }(),
-            {
-                let realm = try! Realm()
-                let presentation = realm.objects(Presentation.self).filter("id == 6").first ?? defaultPresentations[5]
-                
-                let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
-                )
-                
-                return session
-            }()
-        ],
-        [{
+        }(),
+        {
             let title = "Closing Announcements"
             let session = Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 30, second: 0),
-                info: .Announcement(title)
+                info: .Announcement(title),
+                index: 37
             )
             
             return session
             }()
-        ]
     ]
 }
