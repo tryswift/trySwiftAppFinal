@@ -57,24 +57,27 @@ struct ChangeManager {
                     return
                 }
                 
-                var changes = [[String: AnyObject]]()
-                
-                result.forEach {
-                    guard let object = $0["object"] as? String,
-                        let id = $0["id"] as? Int,
-                        let field = $0["field"] as? String,
-                        let newValue = $0["newValue"] as? String else {
-                            return
+                if result.count > 0 {
+                    
+                    var changes = [[String: AnyObject]]()
+                    
+                    result.forEach {
+                        guard let object = $0["object"] as? String,
+                            let id = $0["id"] as? Int,
+                            let field = $0["field"] as? String,
+                            let newValue = $0["newValue"] as? String else {
+                                return
+                        }
+                        
+                        changes.append([
+                            "object": object,
+                            "id": id, "field": field,
+                            "newValue": newValue
+                            ])
                     }
                     
-                    changes.append([
-                        "object": object,
-                        "id": id, "field": field,
-                        "newValue": newValue
-                        ])
+                    WatchSessionManager.sharedManager.transferUserInfo(["changes" : changes])
                 }
-                
-                WatchSessionManager.sharedManager.transferUserInfo(["changes" : changes])
             }
         }
     }
