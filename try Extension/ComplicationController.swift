@@ -10,7 +10,7 @@ import ClockKit
 import Timepiece
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
-    let conferenceStartDate = NSDate.date(year: 2016, month: 3, day: 2, hour: 0, minute: 0, second: 0)
+    let conferenceStartDate = NSDate.date(year: 2016, month: 8, day: 31, hour: 0, minute: 0, second: 0)
 }
 
 // MARK: - Timeline Configuration
@@ -42,8 +42,8 @@ extension ComplicationController {
         
         if NSDate() < conferenceStartDate {
             let tmpl = CLKComplicationTemplateModularLargeStandardBody()
-            tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! Conference")
-            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Tokyo, 🇯🇵")
+            tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! NYC")
+            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🗽🐥🎉")
             let startDate = Session.sessions.first!.startTime
             let style = CLKRelativeDateStyle.Natural
             let units: NSCalendarUnit = [.Day, .Hour, .Minute]
