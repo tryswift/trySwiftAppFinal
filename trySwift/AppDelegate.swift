@@ -17,8 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        configureStyling()
-        configureData()
+        insertDefaultData()
         
         let notificationSettings = UIUserNotificationSettings(forTypes: .None, categories: nil)
         application.registerUserNotificationSettings(notificationSettings)
@@ -26,13 +25,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         subscribeToCloudChangeNotifications()
         
+        WatchSessionManager.sharedManager.startSession()
+        
+        configureStyling()
+        configureData()
+        
         NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "EST")!)
+        
         return true
     }
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void)
     {
         ChangeManager.syncChanges()
+        ChangeManager.syncWatchChanges()
         completionHandler(.NoData)
     }
 }
@@ -58,13 +64,16 @@ private extension AppDelegate {
     
     func configureData() {
         
-        insertDefaultData()
-        
         let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
-        NSUserDefaults.standardUserDefaults().setObject(appSubmitionDate, forKey: "LastChangeCreationData")
-        
+        if NSUserDefaults.standardUserDefaults().objectForKey(ChangeManager.lastChangedDataNotification) == nil {
+            NSUserDefaults.standardUserDefaults().setObject(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
+        }
+        if NSUserDefaults.standardUserDefaults().objectForKey(WatchSessionManager.watchDataUpdatedNotification) == nil {
+            NSUserDefaults.standardUserDefaults().setObject(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
+        }
         
         ChangeManager.syncChanges()
+        ChangeManager.syncWatchChanges()
     }
     
     func insertDefaultData() {

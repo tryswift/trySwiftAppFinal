@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import RealmSwift
 
 class SessionsDay3InterfaceController: WKInterfaceController {
 
@@ -16,11 +16,14 @@ class SessionsDay3InterfaceController: WKInterfaceController {
     
     private let sessions = Session.sessionsSept2
     
+    var token: NotificationToken? = nil
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         setTitle("try! Sep 2")
         loadTableData()
+        subscribeToChangeNotification()
     }
 
     override func willActivate() {
@@ -31,6 +34,10 @@ class SessionsDay3InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    deinit {
+        token?.stop()
     }
 
 }
@@ -43,6 +50,12 @@ private extension SessionsDay3InterfaceController {
         for (index, session) in sessions.enumerate() {
             let row = sessionsTable.rowControllerAtIndex(index) as? SessionTableRowController
             row?.configure(session)
+        }
+    }
+    
+    func subscribeToChangeNotification() {
+        token = Presentation.presentations.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+            self?.loadTableData()
         }
     }
 }
