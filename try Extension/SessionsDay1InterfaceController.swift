@@ -19,7 +19,7 @@ class SessionsDay1InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        setTitle(isJapanese ? "3月2日（水）" : "try! Mar 2")
+        setTitle("try! Aug 31")
         loadTableData()
     }
 
