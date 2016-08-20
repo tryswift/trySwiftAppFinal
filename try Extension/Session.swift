@@ -17,7 +17,7 @@ struct Session {
     let index: Int
     
     var timeString: String {
-        return "\(startTime.stringFromFormat("H:mm")) - \(endTime.stringFromFormat("H:mm"))"
+        return "\(startTime.stringFromFormat("h:mm")) - \(endTime.stringFromFormat("h:mm a"))"
     }
     
     static let sessions: [Session] = {
@@ -113,18 +113,19 @@ extension Session {
         var twitter: String {
             switch self {
             case .Workshop(let event):
-                return event.sponsor.twitter
+                return "@\(event.sponsor.twitter)"
             case .Meetup(let event):
-                return event.sponsor.twitter
+                return "@\(event.sponsor.twitter)"
             case .CoffeeBreak(let sponsor):
                 if let sponsor = sponsor {
-                    return sponsor.twitter
+                    return "@\(sponsor.twitter)"
                 }
                 return "tryswiftnyc"
             case .Talk(let presentation):
-                return presentation.speaker?.twitter ?? "tryswiftnyc"
+                let twitterHandle = presentation.speaker?.twitter ?? "tryswiftnyc"
+                return "@\(twitterHandle)"
             case .SponsoredDemo(let sponsor):
-                return sponsor.twitter
+                return "@\(sponsor.twitter)"
             default:
                 return "@tryswiftnyc"
             }
