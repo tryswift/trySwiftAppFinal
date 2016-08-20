@@ -19,8 +19,8 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     private let session: WCSession? = WCSession.isSupported() ? WCSession.defaultSession() : nil
     
     func startSession() {
-        validSession?.delegate = self
-        validSession?.activateSession()
+        session?.delegate = self
+        session?.activateSession()
     }
 }
 
