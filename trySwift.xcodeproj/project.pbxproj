@@ -44,10 +44,12 @@
 		FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */; };
 		FA3A1C531D6520FC0042F8DD /* ChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */; };
 		FA3A1C551D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */; };
-		FA3A1C971D6637BA0042F8DD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3A1C961D6637BA0042F8DD /* Realm.framework */; };
-		FA3A1C981D6637BA0042F8DD /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA3A1C961D6637BA0042F8DD /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FA3A1C9B1D6637C40042F8DD /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3A1C9A1D6637C40042F8DD /* RealmSwift.framework */; };
-		FA3A1C9C1D6637C40042F8DD /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA3A1C9A1D6637C40042F8DD /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA3A1C9E1D68644F0042F8DD /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3A1C9D1D68644F0042F8DD /* Realm.framework */; };
+		FA3A1C9F1D68644F0042F8DD /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA3A1C9D1D68644F0042F8DD /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA3A1CA21D6864560042F8DD /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3A1CA11D6864560042F8DD /* RealmSwift.framework */; };
+		FA3A1CA31D6864560042F8DD /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA3A1CA11D6864560042F8DD /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA3A1CA51D6864910042F8DD /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CA41D6864910042F8DD /* Sponsor.swift */; };
+		FA3A1CA71D6864DA0042F8DD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CA61D6864DA0042F8DD /* Event.swift */; };
 		FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */; };
 		FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */; };
 		FA65B5881C6D844400DCAF0B /* Organizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5871C6D844400DCAF0B /* Organizer.swift */; };
@@ -67,7 +69,6 @@
 		FA65B5C21C79BE1D00DCAF0B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C11C79BE1D00DCAF0B /* Session.swift */; };
 		FA65B5C51C79C9BF00DCAF0B /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C41C79C9BF00DCAF0B /* Speaker.swift */; };
 		FA65B5C71C79C9E200DCAF0B /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C61C79C9E200DCAF0B /* Presentation.swift */; };
-		FA65B5CA1C79CAF600DCAF0B /* NSLocaleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C91C79CAF600DCAF0B /* NSLocaleExtension.swift */; };
 		FAED14CB1C7C1A1000F11E25 /* SessionTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */; };
 		FAED14CE1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */; };
 		FAED14D01C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CF1C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift */; };
@@ -120,14 +121,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FA3A1C991D6637BA0042F8DD /* Embed Frameworks */ = {
+		FA3A1CA01D68644F0042F8DD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA3A1C9C1D6637C40042F8DD /* RealmSwift.framework in Embed Frameworks */,
-				FA3A1C981D6637BA0042F8DD /* Realm.framework in Embed Frameworks */,
+				FA3A1CA31D6864560042F8DD /* RealmSwift.framework in Embed Frameworks */,
+				FA3A1C9F1D68644F0042F8DD /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +201,10 @@
 		FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-trySwift-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		FA3A1C961D6637BA0042F8DD /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "try Extension/watchos/Realm.framework"; sourceTree = "<group>"; };
 		FA3A1C9A1D6637C40042F8DD /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "try Extension/watchos/RealmSwift.framework"; sourceTree = "<group>"; };
+		FA3A1C9D1D68644F0042F8DD /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "try Extension/watchos/Realm.framework"; sourceTree = "<group>"; };
+		FA3A1CA11D6864560042F8DD /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "try Extension/watchos/RealmSwift.framework"; sourceTree = "<group>"; };
+		FA3A1CA41D6864910042F8DD /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
+		FA3A1CA61D6864DA0042F8DD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
 		FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		FA65B5811C6D813200DCAF0B /* trySwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "trySwift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -222,7 +227,6 @@
 		FA65B5C11C79BE1D00DCAF0B /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		FA65B5C41C79C9BF00DCAF0B /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		FA65B5C61C79C9E200DCAF0B /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
-		FA65B5C91C79CAF600DCAF0B /* NSLocaleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocaleExtension.swift; sourceTree = "<group>"; };
 		FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableRowController.swift; sourceTree = "<group>"; };
 		FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay1InterfaceController.swift; sourceTree = "<group>"; };
 		FAED14CF1C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay2InterfaceController.swift; sourceTree = "<group>"; };
@@ -262,9 +266,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA3A1C971D6637BA0042F8DD /* Realm.framework in Frameworks */,
+				FA3A1C9E1D68644F0042F8DD /* Realm.framework in Frameworks */,
 				C0EBD91A760DA59295DFEEC9 /* Pods_try_Extension.framework in Frameworks */,
-				FA3A1C9B1D6637C40042F8DD /* RealmSwift.framework in Frameworks */,
+				FA3A1CA21D6864560042F8DD /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +532,6 @@
 				FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */,
 				FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */,
 				FA65B5C31C79C9A600DCAF0B /* Models */,
-				FA65B5C81C79CAE000DCAF0B /* Utilities */,
 				FA65B5B11C79895A00DCAF0B /* Assets.xcassets */,
 				FA65B5B31C79895A00DCAF0B /* Info.plist */,
 			);
@@ -541,16 +544,10 @@
 				FA65B5C11C79BE1D00DCAF0B /* Session.swift */,
 				FA65B5C41C79C9BF00DCAF0B /* Speaker.swift */,
 				FA65B5C61C79C9E200DCAF0B /* Presentation.swift */,
+				FA3A1CA41D6864910042F8DD /* Sponsor.swift */,
+				FA3A1CA61D6864DA0042F8DD /* Event.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		FA65B5C81C79CAE000DCAF0B /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				FA65B5C91C79CAF600DCAF0B /* NSLocaleExtension.swift */,
-			);
-			name = Utilities;
 			sourceTree = "<group>";
 		};
 		FAED14CC1C7C1B0800F11E25 /* InterfaceControllers */ = {
@@ -584,6 +581,8 @@
 		FAFA15AF1C69D31B00FEA4EA = {
 			isa = PBXGroup;
 			children = (
+				FA3A1CA11D6864560042F8DD /* RealmSwift.framework */,
+				FA3A1C9D1D68644F0042F8DD /* Realm.framework */,
 				FA3A1C9A1D6637C40042F8DD /* RealmSwift.framework */,
 				FA3A1C961D6637BA0042F8DD /* Realm.framework */,
 				FAFA15BA1C69D31C00FEA4EA /* trySwift */,
@@ -678,7 +677,7 @@
 				FA65B5A21C79895A00DCAF0B /* Resources */,
 				E92CCE9B71F7E4360DCC02CF /* [CP] Embed Pods Frameworks */,
 				9DF79D57EF0C85D0DBE82AFE /* [CP] Copy Pods Resources */,
-				FA3A1C991D6637BA0042F8DD /* Embed Frameworks */,
+				FA3A1CA01D68644F0042F8DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -964,9 +963,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAED14CE1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift in Sources */,
-				FA65B5CA1C79CAF600DCAF0B /* NSLocaleExtension.swift in Sources */,
 				FA65B5C21C79BE1D00DCAF0B /* Session.swift in Sources */,
 				FA65B5C71C79C9E200DCAF0B /* Presentation.swift in Sources */,
+				FA3A1CA51D6864910042F8DD /* Sponsor.swift in Sources */,
+				FA3A1CA71D6864DA0042F8DD /* Event.swift in Sources */,
 				FAED14D01C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift in Sources */,
 				FA65B5AC1C79895A00DCAF0B /* ExtensionDelegate.swift in Sources */,
 				FA65B5B01C79895A00DCAF0B /* ComplicationController.swift in Sources */,
@@ -1137,9 +1137,10 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/try",
+					Extension/watchos,
 					"$(PROJECT_DIR)/try",
 					Extension/watchos,
 				);
@@ -1162,9 +1163,10 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/try",
+					Extension/watchos,
 					"$(PROJECT_DIR)/try",
 					Extension/watchos,
 				);

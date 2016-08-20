@@ -73,7 +73,7 @@ extension Session {
                 }
                 return "☕️ Break"
             case .Lunch:
-                return "😋 Lunch"
+                return "🍴 Lunch"
             case .OfficeHours(let presentation):
                 if let speaker = presentation.speaker?.name {
                     return "Office Hours with \(speaker)"
