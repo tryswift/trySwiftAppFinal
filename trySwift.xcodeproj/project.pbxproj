@@ -74,8 +74,6 @@
 		FAC936E41D68F2CE00E2D6B0 /* ChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC936E31D68F2CE00E2D6B0 /* ChangeManager.swift */; };
 		FAED14CB1C7C1A1000F11E25 /* SessionTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */; };
 		FAED14CE1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */; };
-		FAED14D01C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CF1C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift */; };
-		FAED14D21C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14D11C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift */; };
 		FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */; };
 		FAF1DE151D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */; };
 		FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */; };
@@ -233,8 +231,6 @@
 		FAC936E31D68F2CE00E2D6B0 /* ChangeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeManager.swift; sourceTree = "<group>"; };
 		FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableRowController.swift; sourceTree = "<group>"; };
 		FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay1InterfaceController.swift; sourceTree = "<group>"; };
-		FAED14CF1C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay2InterfaceController.swift; sourceTree = "<group>"; };
-		FAED14D11C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay3InterfaceController.swift; sourceTree = "<group>"; };
 		FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTableViewController.swift; sourceTree = "<group>"; };
 		FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -541,10 +537,9 @@
 			isa = PBXGroup;
 			children = (
 				FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */,
-				FAED14CC1C7C1B0800F11E25 /* InterfaceControllers */,
+				FAED14CC1C7C1B0800F11E25 /* SessionSchedule */,
 				FA65B5AD1C79895A00DCAF0B /* GlanceController.swift */,
 				FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */,
-				FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */,
 				FA65B5C31C79C9A600DCAF0B /* Models */,
 				FA3A1CB71D68E36F0042F8DD /* Utilities */,
 				FA65B5B11C79895A00DCAF0B /* Assets.xcassets */,
@@ -565,14 +560,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		FAED14CC1C7C1B0800F11E25 /* InterfaceControllers */ = {
+		FAED14CC1C7C1B0800F11E25 /* SessionSchedule */ = {
 			isa = PBXGroup;
 			children = (
 				FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */,
-				FAED14CF1C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift */,
-				FAED14D11C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift */,
+				FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */,
 			);
-			name = InterfaceControllers;
+			name = SessionSchedule;
 			sourceTree = "<group>";
 		};
 		FAF1DE171D5FDD3B00D710C3 /* VenueHeaderTableViewCell */ = {
@@ -981,12 +975,10 @@
 				FAC936E41D68F2CE00E2D6B0 /* ChangeManager.swift in Sources */,
 				FA3A1CA51D6864910042F8DD /* Sponsor.swift in Sources */,
 				FA3A1CA71D6864DA0042F8DD /* Event.swift in Sources */,
-				FAED14D01C7C1B3400F11E25 /* SessionsDay2InterfaceController.swift in Sources */,
 				FA65B5AC1C79895A00DCAF0B /* ExtensionDelegate.swift in Sources */,
 				FA65B5B01C79895A00DCAF0B /* ComplicationController.swift in Sources */,
 				FA3A1CB91D68E3AB0042F8DD /* WatchSessionManager.swift in Sources */,
 				FA65B5C51C79C9BF00DCAF0B /* Speaker.swift in Sources */,
-				FAED14D21C7C1B4500F11E25 /* SessionsDay3InterfaceController.swift in Sources */,
 				FAED14CB1C7C1A1000F11E25 /* SessionTableRowController.swift in Sources */,
 				FA65B5AE1C79895A00DCAF0B /* GlanceController.swift in Sources */,
 			);
