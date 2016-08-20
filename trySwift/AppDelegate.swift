@@ -57,11 +57,12 @@ private extension AppDelegate {
     }
     
     func configureData() {
-        if UIApplication.isFirstLaunch() {
-            insertDefaultData()
-            let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
-            NSUserDefaults.standardUserDefaults().setObject(appSubmitionDate, forKey: "LastChangeCreationData")
-        }
+        
+        insertDefaultData()
+        
+        let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+        NSUserDefaults.standardUserDefaults().setObject(appSubmitionDate, forKey: "LastChangeCreationData")
+        
         
         ChangeManager.syncChanges()
     }
@@ -91,17 +92,5 @@ private extension AppDelegate {
                 }
             }
         }
-    }
-}
-
-extension UIApplication {
-    
-    class func isFirstLaunch() -> Bool {
-        if !NSUserDefaults.standardUserDefaults().boolForKey("HasAtLeastLaunchedOnce") {
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasAtLeastLaunchedOnce")
-            NSUserDefaults.standardUserDefaults().synchronize()
-            return true
-        }
-        return false
     }
 }

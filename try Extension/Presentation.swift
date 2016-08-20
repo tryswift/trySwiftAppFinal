@@ -14,6 +14,10 @@ class Presentation: Object {
     dynamic var title: String = "TBD"
     dynamic var speaker: Speaker?
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
     override static func indexedProperties() -> [String] {
         return ["id"]
     }

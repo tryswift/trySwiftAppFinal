@@ -17,6 +17,10 @@ class Speaker: Object {
     dynamic var bio: String = "TBD"
     dynamic var hidden: Bool = false
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
     override static func indexedProperties() -> [String] {
         return ["id", "name", "hidden"]
     }

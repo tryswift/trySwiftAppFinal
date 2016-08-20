@@ -15,6 +15,10 @@ class Speaker: Object {
     dynamic var twitter: String = "TBD"
     dynamic var imageName: String = "tryLogo"
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
     override static func indexedProperties() -> [String] {
         return ["id", "name"]
     }
@@ -32,7 +36,7 @@ class Speaker: Object {
     
     private class var speakers: Results<Speaker> {
         let realm = try! Realm()
-        return realm.objects(Speaker).filter("hidden == false").sorted("name")
+        return realm.objects(Speaker).sorted("name")
     }
 }
 
