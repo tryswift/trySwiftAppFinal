@@ -57,8 +57,8 @@ extension ComplicationController {
             let firstSession = Session.sessions.first!
             let lastSession = Session.sessions.last!
             
-            tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! Conference")
-            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Tokyo, 🇯🇵")
+            tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! NYC")
+            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🗽🐥🎉")
             tmpl.body2TextProvider = CLKTimeIntervalTextProvider(startDate: firstSession.startTime, endDate: lastSession.endTime)
             let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: tmpl)
             handler(timelineEntry)
@@ -120,8 +120,8 @@ extension ComplicationController {
         let firstSession = Session.sessions.first!
         let lastSession = Session.sessions.last!
         
-        tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! Conference")
-        tmpl.body1TextProvider = CLKSimpleTextProvider(text: "Tokyo, 🇯🇵")
+        tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! NYC")
+        tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🗽🐥🎉")
         tmpl.body2TextProvider = CLKTimeIntervalTextProvider(startDate: firstSession.startTime, endDate: lastSession.endTime)
         
         handler(tmpl)
