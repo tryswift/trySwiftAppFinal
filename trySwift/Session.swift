@@ -708,7 +708,7 @@ extension Session {
             return Session(
                 startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
                 endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
-                info: .SponsoredDemo(Sponsor.goldSponsors[6])
+                info: .SponsoredDemo(Sponsor.goldSponsors.last!)
             )
             }(),
         ],
