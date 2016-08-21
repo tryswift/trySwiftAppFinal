@@ -21,9 +21,11 @@ class VenueTableViewController: UITableViewController {
         title = "Venue"
         configureTableView()
     }
+}
 
-    // MARK: - Table view data source
-
+// MARK: - Table view data source
+extension VenueTableViewController {
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
