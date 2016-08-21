@@ -62,7 +62,7 @@ extension Sponsor {
         Sponsor(
             name: "contentful",
             url: "https://www.contentful.com",
-            displayURL: "thoughtworks.com",
+            displayURL: "contentful.com",
             twitter: "contentful",
             logo: UIImage(named: "contentful"),
             level: .Gold),
