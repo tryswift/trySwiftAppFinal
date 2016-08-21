@@ -93,11 +93,24 @@ private extension ChangeManager {
                 return
         }
         
+        
         let realm = try! Realm()
         if object == "Speaker" {
             if let speaker = realm.objects(Speaker).filter("id == \(id)").first {
-                try! realm.write {
-                    speaker[field] = newValue
+                if field == "imagePath" {
+                    guard let imageAsset = record["image"] as? CKAsset else {
+                        return
+                    }
+                    
+                    try! realm.write {
+                        speaker["imageName"] = nil
+                        speaker[field] = imageAsset.fileURL.path
+                    }
+                    
+                } else {
+                    try! realm.write {
+                        speaker[field] = newValue
+                    }
                 }
             }
         } else if object == "Presentation" {

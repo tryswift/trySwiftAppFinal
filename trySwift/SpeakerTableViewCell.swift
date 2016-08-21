@@ -23,8 +23,7 @@ class SpeakerTableViewCell: UITableViewCell {
     
     func configure(withSpeaker speaker: Speaker, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {
         
-        let image = UIImage(named: speaker.imageName)!
-        speakerImageView.image = Toucan(image: image).maskWithEllipse().image
+        speakerImageView.image = Toucan(image: speaker.getImage()).maskWithEllipse().image
         speakerNameLabel.text = speaker.name
         speakerTwitterLabel.text = "@\(speaker.twitter)"
         

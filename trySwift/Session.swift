@@ -109,29 +109,30 @@ extension Session {
             }
         }
         
-        var logo: String {
+        var logo: UIImage {
+            let defaultImage = UIImage(named: "tryLogo")!
             switch self {
             case .Workshop(let event):
-                return event.logo
+                return UIImage(named: event.logo)!
             case .Meetup(let event):
-                return event.logo
+                return UIImage(named: event.logo)!
             case .Breakfast(_), .Lunch, .Announcement(_):
-                return "tryLogo"
+                return defaultImage
             case .CoffeeBreak(let sponsor):
                 if sponsor != nil {
                     // currently, the only sponsor is DOMO
-                    return "domo"
+                    return UIImage(named: "domo")!
                 }
-                return "tryLogo"
+                return defaultImage
             case .Talk(let presentation):
-                return presentation.speaker?.imageName ?? "tryLogo"
+                return presentation.speaker?.getImage() ?? defaultImage
             case .OfficeHours(let presentation):
-                return presentation.speaker?.imageName ?? "tryLogo"
+                return presentation.speaker?.getImage() ?? defaultImage
             case .SponsoredDemo(_):
                 // currently the only sponsor is Twilio
-                return "twilio-small"
+                return UIImage(named: "twilio-small")!
             case .Party(_):
-                return "airplanemode-short"
+                return UIImage(named: "airplanemode-short")!
             }
         }
         
