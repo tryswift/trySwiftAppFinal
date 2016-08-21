@@ -8,12 +8,14 @@
 
 import Foundation
 import RealmSwift
+import WatchKit
 
 class Speaker: Object {
     dynamic var id: Int = 0
     dynamic var name: String = "TBD"
     dynamic var twitter: String = "TBD"
-    dynamic var imageName: String = "tryLogo"
+    dynamic var imageName: String? = nil
+    dynamic var imagePath: String? = nil
     
     override static func primaryKey() -> String? {
         return "id"
@@ -37,6 +39,19 @@ class Speaker: Object {
     private class var speakers: Results<Speaker> {
         let realm = try! Realm()
         return realm.objects(Speaker).sorted("name")
+    }
+    
+    func getImage() -> UIImage {
+        let defaultImage = UIImage(named: "tryLogo")!
+        
+        if let imageName = imageName {
+            return UIImage(named: imageName) ?? defaultImage
+        }
+        if let imagePath = imagePath {
+            return UIImage(contentsOfFile: imagePath) ?? defaultImage
+        }
+        
+        return defaultImage
     }
 }
 

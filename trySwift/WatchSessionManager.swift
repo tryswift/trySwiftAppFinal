@@ -37,7 +37,20 @@ extension WatchSessionManager {
     
     func session(session: WCSession,
                  didFinishUserInfoTransfer userInfoTransfer: WCSessionUserInfoTransfer, error: NSError?) {
-        NSUserDefaults.standardUserDefaults().setObject(NSDate(), forKey: WatchSessionManager.watchDataUpdatedNotification)
+        if let creationDate = userInfoTransfer.userInfo["creationDate"] {
+            NSUserDefaults.standardUserDefaults().setObject(creationDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
+        }
+    }
+    
+    // MARK: File Transfer
+    func transferFile(file: NSURL, metadata: [String : AnyObject]) -> WCSessionFileTransfer? {
+        return validSession?.transferFile(file, metadata: metadata)
+    }
+    
+    func session(session: WCSession, didFinishFileTransfer fileTransfer: WCSessionFileTransfer, error: NSError?) {
+        if let creationDate = fileTransfer.file.metadata?["creationDate"] as? NSDate {
+            NSUserDefaults.standardUserDefaults().setObject(creationDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
+        }
     }
 }
 

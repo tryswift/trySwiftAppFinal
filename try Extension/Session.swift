@@ -9,6 +9,7 @@
 import Foundation
 import Timepiece
 import RealmSwift
+import WatchKit
 
 struct Session {
     let startTime: NSDate
@@ -86,27 +87,29 @@ extension Session {
             }
         }
         
-        var logo: String {
+        var logo: UIImage {
+            let defaultImage = UIImage(named: "tryLogo")!
+            
             switch self {
             case .Workshop(let event):
-                return event.sponsor.logo
+                return UIImage(named: event.sponsor.logo) ?? defaultImage
             case .Meetup(let event):
-                return event.sponsor.logo
+                return UIImage(named: event.sponsor.logo) ?? defaultImage
             case .Breakfast(_), .Lunch, .Announcement(_):
-                return "tryLogo"
+                return defaultImage
             case .CoffeeBreak(let sponsor):
                 if let sponsor = sponsor {
                     // currently, the only sponsor is DOMO
-                    return sponsor.logo
+                    return UIImage(named: sponsor.logo) ?? defaultImage
                 }
-                return "tryLogo"
+                return defaultImage
             case .Talk(let presentation):
-                return presentation.speaker?.imageName ?? "tryLogo"
+                return presentation.speaker?.getImage() ?? defaultImage
             case .SponsoredDemo(_):
                 // currently the only sponsor is Twilio
-                return "twilio-small"
+                return UIImage(named: "twilio-small") ?? defaultImage
             case .Party:
-                return "airplanemode-short"
+                return UIImage(named: "airplanemode-short") ?? defaultImage
             }
         }
         
