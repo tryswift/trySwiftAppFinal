@@ -8,14 +8,17 @@
 
 import RealmSwift
 import CloudKit
+import UIKit
 
 class Speaker: Object {
     dynamic var id: Int = 0
     dynamic var name: String = "TBD"
     dynamic var twitter: String = "TBD"
-    dynamic var imageName: String = "tryLogo"
+    dynamic var imageName: String? = nil
+    dynamic var imagePath: String? = nil
     dynamic var bio: String = "TBD"
     dynamic var hidden: Bool = false
+    
     
     override static func primaryKey() -> String? {
         return "id"
@@ -28,6 +31,19 @@ class Speaker: Object {
     class var speakers: Results<Speaker> {
         let realm = try! Realm()
         return realm.objects(Speaker).filter("hidden == false").sorted("name")
+    }
+    
+    func getImage() -> UIImage {
+        let defaultImage = UIImage(named: "tryLogo")!
+        
+        if let imageName = imageName {
+            return UIImage(named: imageName) ?? defaultImage
+        }
+        if let imagePath = imagePath {
+            return UIImage(contentsOfFile: imagePath) ?? defaultImage
+        }
+        
+        return defaultImage
     }
 }
 

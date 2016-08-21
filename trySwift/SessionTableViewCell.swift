@@ -36,8 +36,7 @@ class SessionTableViewCell: UITableViewCell {
         sessionTypeLabel.text = info.description
         sessionLocationLabel.text = info.location
         
-        let image = UIImage(named: info.logo)
-        sessionImageView.image = Toucan(image: image!).maskWithEllipse().image
+        sessionImageView.image = Toucan(image: info.logo).maskWithEllipse().image
     
         if info.selectable {
             accessoryType = .DisclosureIndicator
