@@ -13,7 +13,7 @@ class VenueTableViewController: UITableViewController {
     var venue: Venue!
     
     private enum VenueDetail: Int {
-        case Header, Address, Map, Twitter
+        case Header, Wifi, Address, Map, Twitter
     }
     
     override func viewDidLoad() {
@@ -37,6 +37,10 @@ class VenueTableViewController: UITableViewController {
         case .Header:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(VenueHeaderTableViewCell), forIndexPath: indexPath) as! VenueHeaderTableViewCell
             cell.configure(withVenue: venue)
+            return cell
+        case .Wifi:
+            let cell = tableView.dequeueReusableCellWithIdentifier(String(WifiInfoTableViewCell), forIndexPath: indexPath) as! WifiInfoTableViewCell
+            cell.configure(withWifiInfo: venue.wifiInfo)
             return cell
         case .Address:
             let cell = tableView.dequeueReusableCellWithIdentifier(String(TextTableViewCell), forIndexPath: indexPath) as! TextTableViewCell
@@ -67,6 +71,7 @@ private extension VenueTableViewController {
     
     func configureTableView() {
         tableView.registerNib(UINib(nibName: String(VenueHeaderTableViewCell), bundle: nil), forCellReuseIdentifier: String(VenueHeaderTableViewCell))
+        tableView.registerNib(UINib(nibName: String(WifiInfoTableViewCell), bundle: nil), forCellReuseIdentifier: String(WifiInfoTableViewCell))
         tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
         tableView.registerNib(UINib(nibName: String(MapTableViewCell), bundle: nil), forCellReuseIdentifier: String(MapTableViewCell))
         tableView.registerNib(UINib(nibName: String(TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(TwitterFollowTableViewCell))
