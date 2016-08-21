@@ -22,12 +22,11 @@ class MapTableViewCell: UITableViewCell {
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(location) { [weak self] placemarks, error in
             
-            if let placemark = placemarks?.first, let location = placemark.location {
-                let mark = MKPlacemark(placemark: placemark)
-                let viewRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
-                self?.mapView.setRegion(viewRegion, animated: true)
-                self?.mapView.addAnnotation(mark)
-            }
+            guard let placemark = placemarks?.first, let location = placemark.location else { return }
+            let mark = MKPlacemark(placemark: placemark)
+            let viewRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
+            self?.mapView.setRegion(viewRegion, animated: true)
+            self?.mapView.addAnnotation(mark)
         }
 
     }

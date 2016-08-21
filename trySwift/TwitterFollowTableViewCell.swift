@@ -21,6 +21,7 @@ class TwitterFollowTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         followButton.layer.borderWidth = 1.0
         followButton.layer.borderColor = UIColor.twitterBlue().CGColor
         followButton.tintColor = .twitterBlue()

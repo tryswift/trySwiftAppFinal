@@ -18,6 +18,7 @@ class OrganizerTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         organizerTwitterLabel.textColor = .twitterBlue()
     }
     
