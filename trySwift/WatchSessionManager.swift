@@ -67,5 +67,3 @@ extension WatchSessionManager {
         return nil
     }
 }
-
-
