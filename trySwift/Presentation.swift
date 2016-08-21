@@ -32,12 +32,11 @@ class Presentation: Object {
 extension Presentation {
     
     class func insertDefaultPresentations() {
-        if Presentation.presentations.count == 0 {
-            let realm = try! Realm()
-            try! realm.write {
-                defaultPresentations.forEach {
-                    realm.add($0)
-                }
+        guard Presentation.presentations.isEmpty else { return }
+        let realm = try! Realm()
+        try! realm.write {
+            defaultPresentations.forEach {
+                realm.add($0)
             }
         }
     }

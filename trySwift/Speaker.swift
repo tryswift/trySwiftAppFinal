@@ -50,12 +50,11 @@ class Speaker: Object {
 extension Speaker {
     
     class func insertDefaultSpeakers() {
-        if Speaker.speakers.count == 0 {
-            let realm = try! Realm()
-            try! realm.write {
-                defaultSpeakers.forEach {
-                    realm.add($0)
-                }
+        guard Speaker.speakers.isEmpty else { return }
+        let realm = try! Realm()
+        try! realm.write {
+            defaultSpeakers.forEach {
+                realm.add($0)
             }
         }
     }
