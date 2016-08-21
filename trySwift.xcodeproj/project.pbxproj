@@ -49,7 +49,7 @@
 		FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */; };
 		FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */; };
 		FA3A1C531D6520FC0042F8DD /* ChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */; };
-		FA3A1C551D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */; };
+		FA3A1C551D652DDC0042F8DD /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA3A1C541D652DDC0042F8DD /* Pods-acknowledgements.plist */; };
 		FA3A1CA51D6864910042F8DD /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CA41D6864910042F8DD /* Sponsor.swift */; };
 		FA3A1CA71D6864DA0042F8DD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CA61D6864DA0042F8DD /* Event.swift */; };
 		FA3A1CB61D68E1950042F8DD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */; };
@@ -205,7 +205,7 @@
 		FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeManager.swift; sourceTree = "<group>"; };
-		FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-trySwift-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		FA3A1C541D652DDC0042F8DD /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-trySwift/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		FA3A1CA41D6864910042F8DD /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
 		FA3A1CA61D6864DA0042F8DD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
@@ -643,7 +643,7 @@
 				FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */,
 				FAFA15C41C69D31C00FEA4EA /* LaunchScreen.storyboard */,
 				FAFA15C71C69D31C00FEA4EA /* Info.plist */,
-				FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */,
+				FA3A1C541D652DDC0042F8DD /* Pods-acknowledgements.plist */,
 				FA65B5811C6D813200DCAF0B /* trySwift-Bridging-Header.h */,
 			);
 			path = trySwift;
@@ -865,7 +865,7 @@
 				FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */,
 				FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */,
 				FA39E92D1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib in Resources */,
-				FA3A1C551D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist in Resources */,
+				FA3A1C551D652DDC0042F8DD /* Pods-acknowledgements.plist in Resources */,
 				FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
