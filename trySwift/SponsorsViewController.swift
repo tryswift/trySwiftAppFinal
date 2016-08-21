@@ -69,8 +69,8 @@ extension SponsorsViewController {
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let sponsorLevel = Sponsor.Level(rawValue: section)!
-        return sponsorLevel.description
+        let sponsorLevel = Sponsor.Level(rawValue: section)
+        return sponsorLevel?.description
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
