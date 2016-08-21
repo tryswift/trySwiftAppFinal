@@ -62,21 +62,31 @@ struct ChangeManager {
                     var changes = [[String: AnyObject]]()
                     
                     result.forEach {
-                        guard let object = $0["object"] as? String,
+                        guard let creationDate = $0.creationDate,
+                            let object = $0["object"] as? String,
                             let id = $0["id"] as? Int,
                             let field = $0["field"] as? String,
                             let newValue = $0["newValue"] as? String else {
                                 return
                         }
                         
-                        changes.append([
+                        let changeDict: [String : AnyObject] = [
+                            "creationDate" : creationDate,
                             "object": object,
-                            "id": id, "field": field,
-                            "newValue": newValue
-                            ])
+                            "id": id,
+                            "field": field,
+                            "newValue": newValue]
+                        
+                        if field == "imagePath" {
+                            guard let imageAsset = $0["image"] as? CKAsset else {
+                                return
+                            }
+                            WatchSessionManager.sharedManager.transferFile(imageAsset.fileURL, metadata: changeDict)
+                        } else {
+                            changes.append(changeDict)
+                            WatchSessionManager.sharedManager.transferUserInfo(["changes" : changes])
+                        }
                     }
-                    
-                    WatchSessionManager.sharedManager.transferUserInfo(["changes" : changes])
                 }
             }
         }

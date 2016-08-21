@@ -59,7 +59,7 @@ private extension GlanceController {
     func configureSession(session: Session) {
         let info = session.info
         titleInterfaceLabel.setText(info.title)
-        speakerInterfaceImage.setImage(UIImage(named: info.logo))
+        speakerInterfaceImage.setImage(info.logo)
         nameInterfaceLabel.setText(info.subtitle)
         twitterInterfaceLabel.setText(info.twitter)
         

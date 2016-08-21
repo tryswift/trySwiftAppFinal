@@ -7,6 +7,7 @@
 //
 
 import RealmSwift
+import WatchConnectivity
 
 struct ChangeManager {
     
@@ -35,5 +36,28 @@ struct ChangeManager {
                 }
             }
         }
+    }
+    
+    static func updateRecordFromFile(file: WCSessionFile) {
+        guard let metadata = file.metadata else {
+            return
+        }
+        
+        guard let object = metadata["object"] as? String,
+            let id = metadata["id"] as? Int,
+            let field = metadata["field"] as? String else {
+                return
+        }
+        
+        let realm = try! Realm()
+        if object == "Speaker" {
+            if let speaker = realm.objects(Speaker).filter("id == \(id)").first {
+                try! realm.write {
+                    speaker["imageName"] = nil
+                    speaker[field] = file.fileURL.path
+                }
+            }
+        }
+        
     }
 }

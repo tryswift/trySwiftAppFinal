@@ -38,5 +38,10 @@ extension WatchSessionManager {
         }
     }
     
+    // MARK: File Transfer
+    func session(session: WCSession, didReceiveFile file: WCSessionFile) {
+        ChangeManager.updateRecordFromFile(file)
+    }
+    
 }
 
