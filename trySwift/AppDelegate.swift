@@ -63,13 +63,14 @@ private extension AppDelegate {
     }
     
     func configureData() {
+        let defaults = NSUserDefaults.standardUserDefaults()
         
         let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
-        if NSUserDefaults.standardUserDefaults().objectForKey(ChangeManager.lastChangedDataNotification) == nil {
-            NSUserDefaults.standardUserDefaults().setObject(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
+        if defaults.objectForKey(ChangeManager.lastChangedDataNotification) == nil {
+            defaults.setObject(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
         }
-        if NSUserDefaults.standardUserDefaults().objectForKey(WatchSessionManager.watchDataUpdatedNotification) == nil {
-            NSUserDefaults.standardUserDefaults().setObject(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
+        if defaults.objectForKey(WatchSessionManager.watchDataUpdatedNotification) == nil {
+            defaults.setObject(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
         }
         
         ChangeManager.syncChanges()
@@ -82,8 +83,9 @@ private extension AppDelegate {
     }
     
     func subscribeToCloudChangeNotifications() {
+        let defaults = NSUserDefaults.standardUserDefaults()
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            if !NSUserDefaults.standardUserDefaults().boolForKey("SubscribedToCloudChanges") {
+            if !defaults.boolForKey("SubscribedToCloudChanges") {
                 let predicate = NSPredicate(value: true)
                 
                 let subscription = CKSubscription(recordType: "Change", predicate: predicate, options: .FiresOnRecordCreation)
@@ -95,8 +97,8 @@ private extension AppDelegate {
                 
                 let publicDB = CKContainer.defaultContainer().publicCloudDatabase
                 publicDB.saveSubscription(subscription) { subscription, error in
-                    if subscription != nil {
-                        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "SubscribedToCloudChanges")
+                    if let _ = subscription {
+                        defaults.setBool(true, forKey: "SubscribedToCloudChanges")
                     }
                 }
             }
