@@ -135,14 +135,13 @@ private extension MoreTableViewController {
     }
     
     func showLibraries() {
-        if let acknowledgementesViewController = VTAcknowledgementsViewController.acknowledgementsViewController() {
-            if #available(iOS 9.2, *) {
-                acknowledgementesViewController.headerText = "We 🤗 Open Source Software"
-            } else {
-                acknowledgementesViewController.headerText = "We ❤️ Open Source Software"
-            }
-            
-            navigationController?.pushViewController(acknowledgementesViewController, animated: true)
+        guard let acknowledgementesViewController = VTAcknowledgementsViewController.acknowledgementsViewController() else { return }
+        if #available(iOS 9.2, *) {
+            acknowledgementesViewController.headerText = "We 🤗 Open Source Software"
+        } else {
+            acknowledgementesViewController.headerText = "We ❤️ Open Source Software"
         }
+        
+        navigationController?.pushViewController(acknowledgementesViewController, animated: true)
     }
 }
