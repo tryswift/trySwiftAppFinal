@@ -29,8 +29,10 @@ class OrganizerDetailTableViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .None
     }
+}
 
-    // MARK: - Table view data source
+// MARK: - Table view data source
+extension OrganizerDetailTableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -58,5 +60,3 @@ class OrganizerDetailTableViewController: UITableViewController {
     }
     
 }
-
-
