@@ -10,15 +10,26 @@ import UIKit
 
 class WifiInfoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var networkNameLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        networkNameLabel.textColor = UIColor.trySwiftAccentColor()
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configure(withWifiInfo wifiInfo: WifiInfo) {
+        networkNameLabel.text = "Wifi: \(wifiInfo.networkName)"
+        
+        if let username = wifiInfo.username, password = wifiInfo.password {
+            usernameLabel.text = "username: \(username)"
+            passwordLabel.text = "password: \(password)"
+        } else {
+            usernameLabel.text = nil
+            passwordLabel.text = nil
+        }
     }
     
 }
