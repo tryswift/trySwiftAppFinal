@@ -6,7 +6,7 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import Timepiece
+import Foundation
 
 struct SessionDataSourceDay1: SessionDataSourceProtocol {
     var header = "Wed, Aug 31"
