@@ -21,15 +21,7 @@ class SessionDetailsViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "Presentation"
-        
-        tableView.registerNib(UINib(nibName: String(SessionHeaderTableViewCell), bundle: nil), forCellReuseIdentifier: String(SessionHeaderTableViewCell))
-        tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
-        tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
-        tableView.registerNib(UINib(nibName: String(TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(TwitterFollowTableViewCell))
-        
-        tableView.estimatedRowHeight = 83
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.separatorStyle = .None
+        configureTableView()
     }
 }
     
@@ -63,5 +55,19 @@ extension SessionDetailsViewController {
             cell.configure(withUsername: presentation.speaker!.twitter, delegate: self)
             return cell
         }
+    }
+}
+
+extension SessionDetailsViewController {
+    
+    func configureTableView() {
+        tableView.registerNib(UINib(nibName: String(SessionHeaderTableViewCell), bundle: nil), forCellReuseIdentifier: String(SessionHeaderTableViewCell))
+        tableView.registerNib(UINib(nibName: String(SpeakerTableViewCell), bundle: nil), forCellReuseIdentifier: String(SpeakerTableViewCell))
+        tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
+        tableView.registerNib(UINib(nibName: String(TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(TwitterFollowTableViewCell))
+        
+        tableView.estimatedRowHeight = 83
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .None
     }
 }
