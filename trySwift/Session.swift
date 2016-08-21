@@ -177,10 +177,7 @@ extension Session {
             case .Workshop(_), .Meetup(_), .Talk(_), .OfficeHours(_), .Party(_), .SponsoredDemo(_):
                 return true
             case .CoffeeBreak(let sponsor):
-                if sponsor != nil {
-                    return true
-                }
-                return false
+                return sponsor != nil
             default:
                 return false
             }
