@@ -14,7 +14,7 @@ struct ChangeManager {
     static let lastChangedDataNotification = "LastChangedDataNotification"
     
     static func syncChanges() {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
             let publicDB = CKContainer.defaultContainer().publicCloudDatabase
             guard let lastChangeDate = NSUserDefaults.standardUserDefaults().objectForKey(ChangeManager.lastChangedDataNotification) as? NSDate else {
                 let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
