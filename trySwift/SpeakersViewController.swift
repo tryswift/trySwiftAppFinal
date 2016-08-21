@@ -14,7 +14,7 @@ class SpeakersViewController: UITableViewController {
     private let speakers = Speaker.speakers
     private let speakerDetailSegue = "speakerDetailSegue"
     
-    var token: NotificationToken? = nil
+    var token: NotificationToken?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,11 +48,10 @@ class SpeakersViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let speakerDetailVC = segue.destinationViewController as? SpeakerDetailViewController {
-            if let selectedIndexPath = tableView.indexPathForSelectedRow {
-                speakerDetailVC.speaker = speakers[selectedIndexPath.row]
-            }
-        }
+        guard let speakerDetailVC = segue.destinationViewController as? SpeakerDetailViewController,
+            let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
+        
+        speakerDetailVC.speaker = speakers[selectedIndexPath.row]
     }
 }
 
@@ -83,14 +82,12 @@ extension SpeakersViewController {
 extension SpeakersViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        if let indexPath = tableView.indexPathForRowAtPoint(location) {
-            //This will show the cell clearly and blur the rest of the screen for our peek.
-            previewingContext.sourceRect = tableView.rectForRowAtIndexPath(indexPath)
-            let speakerDetailVC = SpeakerDetailViewController()
-            speakerDetailVC.speaker = speakers[indexPath.row]
-            return speakerDetailVC
-        }
-        return nil
+        guard let indexPath = tableView.indexPathForRowAtPoint(location) else { return nil }
+        //This will show the cell clearly and blur the rest of the screen for our peek.
+        previewingContext.sourceRect = tableView.rectForRowAtIndexPath(indexPath)
+        let speakerDetailVC = SpeakerDetailViewController()
+        speakerDetailVC.speaker = speakers[indexPath.row]
+        return speakerDetailVC
     }
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
@@ -101,7 +98,7 @@ extension SpeakersViewController: UIViewControllerPreviewingDelegate {
 extension SpeakersViewController {
     
     func subscribeToChangeNotification() {
-        token = speakers.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+        token = speakers.addNotificationBlock { [weak self] changes in
             guard let tableView = self?.tableView else { return }
             switch changes {
             case .Initial:
