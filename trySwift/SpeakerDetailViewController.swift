@@ -22,9 +22,11 @@ class SpeakerDetailViewController: UITableViewController {
         title = speaker.name
         configureTableView()
     }
+}
 
-    // MARK: - Table view data source
-
+// MARK: - Table view data source
+extension SpeakerDetailViewController {
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
