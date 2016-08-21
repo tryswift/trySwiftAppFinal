@@ -15,7 +15,7 @@ class SessionsTableViewController: UITableViewController {
     var dataSource: SessionDataSourceProtocol!
     private let sessionDetailsSegue = "sessionDetailsSegue"
     
-    var token: NotificationToken? = nil
+    var token: NotificationToken?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,10 +86,9 @@ extension SessionsTableViewController {
             let webDisplayVC = webDisplay(event)
             navigationController?.pushViewController(webDisplayVC, animated: true)
         case .CoffeeBreak(let sponsor):
-            if let sponsor = sponsor {
-                let webDisplayVC = webDisplay(sponsor)
-                navigationController?.pushViewController(webDisplayVC, animated: true)
-            }
+            guard let sponsor = sponsor else { break }
+            let webDisplayVC = webDisplay(sponsor)
+            navigationController?.pushViewController(webDisplayVC, animated: true)
         case .SponsoredDemo(let sponsor):
             let webDisplayVC = webDisplay(sponsor)
             navigationController?.pushViewController(webDisplayVC, animated: true)
@@ -112,33 +111,29 @@ extension SessionsTableViewController: IndicatorInfoProvider {
 extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        if let indexPath = tableView.indexPathForRowAtPoint(location) {
-            // This will show the cell clearly and blur the rest of the screen for our peek.
-            previewingContext.sourceRect = tableView.rectForRowAtIndexPath(indexPath)
-            let session = dataSource.sessions[indexPath.section][indexPath.row]
-            switch session.info {
-            case .Talk(let presentation):
-                return sessionDetails(presentation, session: session)
-            case .OfficeHours(let presentation):
-                return speakerDetails(presentation.speaker!)
-            case .Workshop(let event):
-                return webDisplay(event)
-            case .Meetup(let event):
-                return webDisplay(event)
-            case .CoffeeBreak(let sponsor):
-                if let sponsor = sponsor {
-                    return webDisplay(sponsor)
-                }
-                return nil
-            case .SponsoredDemo(let sponsor):
-                return webDisplay(sponsor)
-            case .Party(let venue):
-                return venueDetails(venue)
-            default:
-                break
-            }
+        guard let indexPath = tableView.indexPathForRowAtPoint(location) else { return nil }
+        // This will show the cell clearly and blur the rest of the screen for our peek.
+        previewingContext.sourceRect = tableView.rectForRowAtIndexPath(indexPath)
+        let session = dataSource.sessions[indexPath.section][indexPath.row]
+        switch session.info {
+        case .Talk(let presentation):
+            return sessionDetails(presentation, session: session)
+        case .OfficeHours(let presentation):
+            return speakerDetails(presentation.speaker!)
+        case .Workshop(let event):
+            return webDisplay(event)
+        case .Meetup(let event):
+            return webDisplay(event)
+        case .CoffeeBreak(let sponsor):
+            guard let sponsor = sponsor else { return nil }
+            return webDisplay(sponsor)
+        case .SponsoredDemo(let sponsor):
+            return webDisplay(sponsor)
+        case .Party(let venue):
+            return venueDetails(venue)
+        default:
+            return nil
         }
-        return nil
     }
     
     func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
@@ -159,7 +154,7 @@ extension SessionsTableViewController {
 extension SessionsTableViewController {
     
     func subscribeToChangeNotification() {
-        token = Presentation.presentations.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+        token = Presentation.presentations.addNotificationBlock { [weak self] changes in
             guard let tableView = self?.tableView else { return }
             
             switch changes {
