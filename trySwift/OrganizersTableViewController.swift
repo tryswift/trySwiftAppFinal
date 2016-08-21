@@ -45,23 +45,7 @@ extension OrganizersTableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let organizer = organizers[indexPath.row]
         let username = organizer.twitter
-        
-        var applicationOpened = false
-        let application = UIApplication.sharedApplication()
-        for twitterURL in Twitter.urls(forUsername: username) {
-            if let url = NSURL(string: twitterURL) where application.canOpenURL(url) && !applicationOpened {
-                application.openURL(url)
-                applicationOpened = true
-                break
-            }
-        }
-        
-        if !applicationOpened {
-            if let twitterURL = NSURL(string: "http://twitter.com/\(username)") {
-                openSafariViewController(withURL: twitterURL)
-            }
-        }
-        
+        followUser(username)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
