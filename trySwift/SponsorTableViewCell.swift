@@ -18,6 +18,7 @@ class SponsorTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         websiteLabel.textColor = .twitterBlue()
     }
     

@@ -18,6 +18,7 @@ class SpeakerTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         speakerTwitterLabel.textColor = .twitterBlue()
     }
     

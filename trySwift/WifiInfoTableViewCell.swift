@@ -16,8 +16,8 @@ class WifiInfoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        networkNameLabel.textColor = UIColor.trySwiftAccentColor()
+        
+        networkNameLabel.textColor = .trySwiftAccentColor()
     }
 
     func configure(withWifiInfo wifiInfo: WifiInfo) {
