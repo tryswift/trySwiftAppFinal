@@ -18,6 +18,8 @@
 		FA2017651D6924DD00B6E158 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2017621D6924DD00B6E158 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA2017661D6924DD00B6E158 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2017631D6924DD00B6E158 /* RealmSwift.framework */; };
 		FA2017671D6924DD00B6E158 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA2017631D6924DD00B6E158 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */; };
+		FA20176B1D69D81600B6E158 /* WifiInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */; };
 		FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */; };
 		FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */; };
 		FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */; };
@@ -172,6 +174,8 @@
 		FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerDetailTableViewController.swift; sourceTree = "<group>"; };
 		FA2017621D6924DD00B6E158 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "try Extension/watchos/Realm.framework"; sourceTree = "<group>"; };
 		FA2017631D6924DD00B6E158 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "try Extension/watchos/RealmSwift.framework"; sourceTree = "<group>"; };
+		FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiInfoTableViewCell.swift; sourceTree = "<group>"; };
+		FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiInfoTableViewCell.xib; sourceTree = "<group>"; };
 		FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavTabButtonCell.xib; sourceTree = "<group>"; };
 		FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsTableViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +332,15 @@
 			name = Organizers;
 			sourceTree = "<group>";
 		};
+		FA20176C1D69D81B00B6E158 /* WifiInfoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */,
+				FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */,
+			);
+			name = WifiInfoTableViewCell;
+			sourceTree = "<group>";
+		};
 		FA39E8C51C6AB7310074B6BE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +366,7 @@
 				FA65B58F1C6D8B0A00DCAF0B /* OrganizerTableViewCell */,
 				FAF1DE171D5FDD3B00D710C3 /* VenueHeaderTableViewCell */,
 				FAF1DE1C1D5FE15200D710C3 /* MapTableViewCell */,
+				FA20176C1D69D81B00B6E158 /* WifiInfoTableViewCell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -845,6 +859,7 @@
 				FAF1DE1B1D5FE14500D710C3 /* MapTableViewCell.xib in Resources */,
 				FA39E91E1C6C8D100074B6BE /* WebDisplayViewController.xib in Resources */,
 				FA39E9261C6D29D20074B6BE /* TextTableViewCell.xib in Resources */,
+				FA20176B1D69D81600B6E158 /* WifiInfoTableViewCell.xib in Resources */,
 				FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */,
 				FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */,
 				FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */,
@@ -1005,6 +1020,7 @@
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
 				FA39E8DD1C6B09DF0074B6BE /* Sponsor.swift in Sources */,
 				FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */,
+				FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */,
 				FA39E9161C6C83A40074B6BE /* SponsorTableViewCell.swift in Sources */,
 				FAF1DE2D1D623B2C00D710C3 /* Venue.swift in Sources */,
 				FA39E8DB1C6B09CE0074B6BE /* Speaker.swift in Sources */,
