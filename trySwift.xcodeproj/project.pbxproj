@@ -1154,23 +1154,6 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-				);
 				INFOPLIST_FILE = "try Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp.watchkitextension;
@@ -1190,23 +1173,6 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-				);
 				INFOPLIST_FILE = "try Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp.watchkitextension;
