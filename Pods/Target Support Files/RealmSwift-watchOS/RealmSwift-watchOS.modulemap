@@ -1,0 +1,6 @@
+framework module RealmSwift {
+  umbrella header "RealmSwift-watchOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
