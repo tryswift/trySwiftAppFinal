@@ -80,10 +80,6 @@
 		FAF1DE2D1D623B2C00D710C3 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE2C1D623B2C00D710C3 /* Venue.swift */; };
 		FAF1DE2F1D63353800D710C3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE2E1D63353800D710C3 /* Event.swift */; };
 		FAF1DE341D646E6600D710C3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1DE331D646E6600D710C3 /* CloudKit.framework */; };
-		FAF334241D6A03BE00FB803A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF334221D6A03BE00FB803A /* Realm.framework */; };
-		FAF334251D6A03BE00FB803A /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAF334221D6A03BE00FB803A /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FAF334261D6A03BE00FB803A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF334231D6A03BE00FB803A /* RealmSwift.framework */; };
-		FAF334271D6A03BE00FB803A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAF334231D6A03BE00FB803A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -152,8 +148,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FAF334271D6A03BE00FB803A /* RealmSwift.framework in Embed Frameworks */,
-				FAF334251D6A03BE00FB803A /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,8 +237,6 @@
 		FAF1DE2E1D63353800D710C3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		FAF1DE301D639D9F00D710C3 /* trySwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = trySwift.entitlements; sourceTree = "<group>"; };
 		FAF1DE331D646E6600D710C3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		FAF334221D6A03BE00FB803A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "try Extension/watchos/Realm.framework"; sourceTree = "<group>"; };
-		FAF334231D6A03BE00FB803A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "try Extension/watchos/RealmSwift.framework"; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -271,9 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF334241D6A03BE00FB803A /* Realm.framework in Frameworks */,
 				C0EBD91A760DA59295DFEEC9 /* Pods_try_Extension.framework in Frameworks */,
-				FAF334261D6A03BE00FB803A /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,8 +596,6 @@
 		FAFA15AF1C69D31B00FEA4EA = {
 			isa = PBXGroup;
 			children = (
-				FAF334221D6A03BE00FB803A /* Realm.framework */,
-				FAF334231D6A03BE00FB803A /* RealmSwift.framework */,
 				FAFA15BA1C69D31C00FEA4EA /* trySwift */,
 				FAFA15CF1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15DA1C69D31C00FEA4EA /* trySwiftUITests */,
