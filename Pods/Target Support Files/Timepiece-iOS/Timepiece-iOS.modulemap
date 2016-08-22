@@ -1,6 +1,0 @@
-framework module Timepiece {
-  umbrella header "Timepiece-iOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

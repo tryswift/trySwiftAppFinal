@@ -1,6 +1,0 @@
-framework module Toucan {
-  umbrella header "Toucan-umbrella.h"
-
-  export *
-  module * { export * }
-}
