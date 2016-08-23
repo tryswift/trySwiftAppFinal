@@ -11,8 +11,8 @@
 		498144EF1D43D41800D77B99 /* SessionDataSourceDay3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */; };
 		499BD62A1D05910200E74061 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BD6291D05910200E74061 /* Twitter.swift */; };
 		499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */; };
-		A99FB38D56D5BFB191EFAE60 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6004E4BE6D0123525B468B8A /* Pods_trySwift.framework */; };
-		C0EBD91A760DA59295DFEEC9 /* Pods_try_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABFAAA9C8A10BE2D1721324 /* Pods_try_Extension.framework */; };
+		EFEB65B6BD4635C22A340AF6 /* Pods_try_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EB6C4D5FB4DFBE959AAF10 /* Pods_try_Extension.framework */; };
+		F95EF1A858E90B600E081F16 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCED18CFD217B29B8A0855B /* Pods_trySwift.framework */; };
 		FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */; };
 		FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */; };
 		FA20176B1D69D81600B6E158 /* WifiInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */; };
@@ -45,7 +45,7 @@
 		FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */; };
 		FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */; };
 		FA3A1C531D6520FC0042F8DD /* ChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */; };
-		FA3A1C551D652DDC0042F8DD /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA3A1C541D652DDC0042F8DD /* Pods-acknowledgements.plist */; };
+		FA3A1C551D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */; };
 		FA3A1CA51D6864910042F8DD /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CA41D6864910042F8DD /* Sponsor.swift */; };
 		FA3A1CA71D6864DA0042F8DD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CA61D6864DA0042F8DD /* Event.swift */; };
 		FA3A1CB61D68E1950042F8DD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */; };
@@ -80,10 +80,6 @@
 		FAF1DE2D1D623B2C00D710C3 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE2C1D623B2C00D710C3 /* Venue.swift */; };
 		FAF1DE2F1D63353800D710C3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE2E1D63353800D710C3 /* Event.swift */; };
 		FAF1DE341D646E6600D710C3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1DE331D646E6600D710C3 /* CloudKit.framework */; };
-		FAF334241D6A03BE00FB803A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF334221D6A03BE00FB803A /* Realm.framework */; };
-		FAF334251D6A03BE00FB803A /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAF334221D6A03BE00FB803A /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FAF334261D6A03BE00FB803A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF334231D6A03BE00FB803A /* RealmSwift.framework */; };
-		FAF334271D6A03BE00FB803A /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FAF334231D6A03BE00FB803A /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -152,8 +148,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FAF334271D6A03BE00FB803A /* RealmSwift.framework in Embed Frameworks */,
-				FAF334251D6A03BE00FB803A /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,16 +155,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		097FFE9C34A02256B6D6DC80 /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
-		2ABFAAA9C8A10BE2D1721324 /* Pods_try_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08EB6C4D5FB4DFBE959AAF10 /* Pods_try_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3581FB5C1C8BBC0A2DB0ED33 /* Pods-try Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		497ABE6D1D53AE8E0010C970 /* Conference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conference.swift; sourceTree = "<group>"; };
 		498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay3.swift; sourceTree = "<group>"; };
 		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-		4DC64B443CF176D0AEAD719F /* Pods-try Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.release.xcconfig"; sourceTree = "<group>"; };
-		6004E4BE6D0123525B468B8A /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		649E54409C43767E2F947F26 /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
-		E853D2F1B6EE1DC0462E6AEB /* Pods-try Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		6DD539D6D451E6119347CE7B /* Pods-try Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.release.xcconfig"; sourceTree = "<group>"; };
+		73E5734F4245C39D5E57338B /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
+		AD801DCB7F4C021016950B62 /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
+		DFCED18CFD217B29B8A0855B /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerDetailTableViewController.swift; sourceTree = "<group>"; };
 		FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiInfoTableViewCell.swift; sourceTree = "<group>"; };
 		FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -204,7 +198,7 @@
 		FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeManager.swift; sourceTree = "<group>"; };
-		FA3A1C541D652DDC0042F8DD /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-trySwift/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-trySwift-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		FA3A1CA41D6864910042F8DD /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
 		FA3A1CA61D6864DA0042F8DD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
@@ -243,8 +237,6 @@
 		FAF1DE2E1D63353800D710C3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		FAF1DE301D639D9F00D710C3 /* trySwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = trySwift.entitlements; sourceTree = "<group>"; };
 		FAF1DE331D646E6600D710C3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		FAF334221D6A03BE00FB803A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "try Extension/watchos/Realm.framework"; sourceTree = "<group>"; };
-		FAF334231D6A03BE00FB803A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "try Extension/watchos/RealmSwift.framework"; sourceTree = "<group>"; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -271,9 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF334241D6A03BE00FB803A /* Realm.framework in Frameworks */,
-				C0EBD91A760DA59295DFEEC9 /* Pods_try_Extension.framework in Frameworks */,
-				FAF334261D6A03BE00FB803A /* RealmSwift.framework in Frameworks */,
+				EFEB65B6BD4635C22A340AF6 /* Pods_try_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +271,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A99FB38D56D5BFB191EFAE60 /* Pods_trySwift.framework in Frameworks */,
 				FAF1DE341D646E6600D710C3 /* CloudKit.framework in Frameworks */,
+				F95EF1A858E90B600E081F16 /* Pods_trySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,13 +293,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		196542A53DF07CF17D264503 /* Pods */ = {
+		031120EC2CBC90F9C2A65970 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E853D2F1B6EE1DC0462E6AEB /* Pods-try Extension.debug.xcconfig */,
-				4DC64B443CF176D0AEAD719F /* Pods-try Extension.release.xcconfig */,
-				097FFE9C34A02256B6D6DC80 /* Pods-trySwift.debug.xcconfig */,
-				649E54409C43767E2F947F26 /* Pods-trySwift.release.xcconfig */,
+				3581FB5C1C8BBC0A2DB0ED33 /* Pods-try Extension.debug.xcconfig */,
+				6DD539D6D451E6119347CE7B /* Pods-try Extension.release.xcconfig */,
+				AD801DCB7F4C021016950B62 /* Pods-trySwift.debug.xcconfig */,
+				73E5734F4245C39D5E57338B /* Pods-trySwift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -318,8 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				FAF1DE331D646E6600D710C3 /* CloudKit.framework */,
-				2ABFAAA9C8A10BE2D1721324 /* Pods_try_Extension.framework */,
-				6004E4BE6D0123525B468B8A /* Pods_trySwift.framework */,
+				08EB6C4D5FB4DFBE959AAF10 /* Pods_try_Extension.framework */,
+				DFCED18CFD217B29B8A0855B /* Pods_trySwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -606,16 +596,14 @@
 		FAFA15AF1C69D31B00FEA4EA = {
 			isa = PBXGroup;
 			children = (
-				FAF334221D6A03BE00FB803A /* Realm.framework */,
-				FAF334231D6A03BE00FB803A /* RealmSwift.framework */,
 				FAFA15BA1C69D31C00FEA4EA /* trySwift */,
 				FAFA15CF1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15DA1C69D31C00FEA4EA /* trySwiftUITests */,
 				FA65B5991C79895A00DCAF0B /* try */,
 				FA65B5A81C79895A00DCAF0B /* try Extension */,
 				FAFA15B91C69D31C00FEA4EA /* Products */,
-				196542A53DF07CF17D264503 /* Pods */,
 				411F0B1F9D6446FAAE23A50E /* Frameworks */,
+				031120EC2CBC90F9C2A65970 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -645,7 +633,7 @@
 				FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */,
 				FAFA15C41C69D31C00FEA4EA /* LaunchScreen.storyboard */,
 				FAFA15C71C69D31C00FEA4EA /* Info.plist */,
-				FA3A1C541D652DDC0042F8DD /* Pods-acknowledgements.plist */,
+				FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */,
 				FA65B5811C6D813200DCAF0B /* trySwift-Bridging-Header.h */,
 			);
 			path = trySwift;
@@ -872,7 +860,7 @@
 				FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */,
 				FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */,
 				FA39E92D1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib in Resources */,
-				FA3A1C551D652DDC0042F8DD /* Pods-acknowledgements.plist in Resources */,
+				FA3A1C551D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist in Resources */,
 				FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1129,7 +1117,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				IBSC_MODULE = try_Extension;
 				INFOPLIST_FILE = try/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp;
@@ -1148,7 +1135,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				IBSC_MODULE = try_Extension;
 				INFOPLIST_FILE = try/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp;
@@ -1163,28 +1149,11 @@
 		};
 		FA65B5B91C79895A00DCAF0B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E853D2F1B6EE1DC0462E6AEB /* Pods-try Extension.debug.xcconfig */;
+			baseConfigurationReference = 3581FB5C1C8BBC0A2DB0ED33 /* Pods-try Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-				);
 				INFOPLIST_FILE = "try Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp.watchkitextension;
@@ -1199,28 +1168,11 @@
 		};
 		FA65B5BA1C79895A00DCAF0B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DC64B443CF176D0AEAD719F /* Pods-try Extension.release.xcconfig */;
+			baseConfigurationReference = 6DD539D6D451E6119347CE7B /* Pods-try Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-					"$(PROJECT_DIR)/try",
-					Extension/watchos,
-				);
 				INFOPLIST_FILE = "try Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp.watchkitextension;
@@ -1316,14 +1268,13 @@
 		};
 		FAFA15E11C69D31C00FEA4EA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 097FFE9C34A02256B6D6DC80 /* Pods-trySwift.debug.xcconfig */;
+			baseConfigurationReference = AD801DCB7F4C021016950B62 /* Pods-trySwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1337,14 +1288,13 @@
 		};
 		FAFA15E21C69D31C00FEA4EA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 649E54409C43767E2F947F26 /* Pods-trySwift.release.xcconfig */;
+			baseConfigurationReference = 73E5734F4245C39D5E57338B /* Pods-trySwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
