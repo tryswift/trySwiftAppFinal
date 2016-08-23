@@ -15,7 +15,6 @@ DEPENDENCIES:
   - DynamicColor (~> 2.4.0)
   - HanekeSwift (~> 0.10.1)
   - RealmSwift (~> 1.0.2)
-  - Timepiece
   - Timepiece (~> 0.4.3)
   - Toucan (~> 0.5.0)
   - VTAcknowledgementsViewController
@@ -31,6 +30,6 @@ SPEC CHECKSUMS:
   VTAcknowledgementsViewController: 44da49d57a1dbf414e653688793a130d24af151e
   XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965
 
-PODFILE CHECKSUM: 706e777ee0640eb4efd4bd17ee88ae60765c5d41
+PODFILE CHECKSUM: e1945ffa5a83a8c02618c2e8e6f80918752200a7
 
 COCOAPODS: 1.0.1

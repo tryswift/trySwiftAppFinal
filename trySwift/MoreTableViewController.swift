@@ -135,7 +135,8 @@ private extension MoreTableViewController {
     }
     
     func showLibraries() {
-        guard let acknowledgementesViewController = VTAcknowledgementsViewController.acknowledgementsViewController() else { return }
+        let path = NSBundle.mainBundle().pathForResource("Pods-trySwift-acknowledgements", ofType: "plist")
+        guard let acknowledgementesViewController = VTAcknowledgementsViewController(path: path) else { return }
         if #available(iOS 9.2, *) {
             acknowledgementesViewController.headerText = "We 🤗 Open Source Software"
         } else {
