@@ -698,8 +698,8 @@
 				FA65B5A01C79895A00DCAF0B /* Sources */,
 				FA65B5A11C79895A00DCAF0B /* Frameworks */,
 				FA65B5A21C79895A00DCAF0B /* Resources */,
-				E92CCE9B71F7E4360DCC02CF /* [CP] Embed Pods Frameworks */,
 				9DF79D57EF0C85D0DBE82AFE /* [CP] Copy Pods Resources */,
+				E92CCE9B71F7E4360DCC02CF /* [CP] Embed Pods Frameworks */,
 				FAF334281D6A03BF00FB803A /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -719,8 +719,8 @@
 				FAFA15B41C69D31B00FEA4EA /* Sources */,
 				FAFA15B51C69D31B00FEA4EA /* Frameworks */,
 				FAFA15B61C69D31B00FEA4EA /* Resources */,
-				FA65B5BE1C79895A00DCAF0B /* Embed Watch Content */,
 				B96782878317E851423AECA6 /* [CP] Embed Pods Frameworks */,
+				FA65B5BE1C79895A00DCAF0B /* Embed Watch Content */,
 				CA626BD93D58E72126937652 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (

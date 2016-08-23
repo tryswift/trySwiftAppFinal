@@ -98,7 +98,7 @@ let defaultSpeakers: [Speaker] = [
         natalia.name = "Natalia Berdys"
         natalia.twitter = "batalia"
         natalia.imageName = "natalia_berdys"
-        natalia.bio = "Natalia Berdys is the lead iOS Developer at Tutu Lab, an indie studio in Poland. Within 2 years, she managed to become a self-taught developer, get a Mobile Engineering degree, speak at Apple WWDC and take her apps to #1 in 47 countries. Since she also holds a Master's Degree in American Literature, she has a very humanistic and poetic view of programming."
+        natalia.bio = "Natalia Berdys is an independent iOS developer from Poland. Within 2 years, she managed to become a self-taught developer, get a Mobile Engineering degree, speak at Apple WWDC and take her apps to #1 in 47 countries. Since she also holds a Master's Degree in American Literature, she has a very humanistic and poetic view of programming. Previously with Tutu Lab, now evolving into her next form."
         return natalia
     }(),
     { let andyy = Speaker()
