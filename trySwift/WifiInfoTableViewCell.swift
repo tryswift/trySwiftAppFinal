@@ -30,6 +30,9 @@ class WifiInfoTableViewCell: UITableViewCell {
             usernameLabel.text = nil
             passwordLabel.text = nil
         }
+        
+        setNeedsUpdateConstraints()
+        layoutIfNeeded()
     }
     
 }

@@ -35,5 +35,8 @@ class SpeakerTableViewCell: UITableViewCell {
         if !accessoryEnabled {
             accessoryType = .None
         }
+        
+        setNeedsUpdateConstraints()
+        layoutIfNeeded()
     }
 }

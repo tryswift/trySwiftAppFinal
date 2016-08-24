@@ -25,5 +25,8 @@ class VenueHeaderTableViewCell: UITableViewCell {
         if let venueLogo = UIImage(named: venue.logo) {
             venueImageView.image = Toucan(image: venueLogo).maskWithEllipse().image
         }
+        
+        setNeedsUpdateConstraints()
+        layoutIfNeeded()
     }
 }

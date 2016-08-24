@@ -26,5 +26,8 @@ class SponsorTableViewCell: UITableViewCell {
         sponsorImageView.image = sponsor.logo
         sponsorNameLabel.text = sponsor.name
         websiteLabel.text = sponsor.displayURL
+        
+        setNeedsUpdateConstraints()
+        layoutIfNeeded()
     }
 }
