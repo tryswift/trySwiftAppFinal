@@ -33,6 +33,9 @@ class TwitterFollowTableViewCell: UITableViewCell {
         self.delegate = delegate
         
         followButton.setTitle("Follow @\(username)", forState: .Normal)
+        
+        setNeedsUpdateConstraints()
+        layoutIfNeeded()
     }
     
     @IBAction func onFollowButtonTap(sender: AnyObject) {

@@ -49,5 +49,8 @@ class OrganizerTableViewCell: UITableViewCell {
         }
         organizerNameLabel.text = conference.name
         organizerTwitterLabel.text = "@\(conference.twitter)"
+        
+        setNeedsUpdateConstraints()
+        layoutIfNeeded()
     }
 }
