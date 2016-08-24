@@ -77,8 +77,8 @@ extension SessionsTableViewController {
             let sessionDetailsVC = sessionDetails(presentation, session: session)
             navigationController?.pushViewController(sessionDetailsVC, animated: true)
         case .OfficeHours(let presentation):
-            let speakerDetailsVC = speakerDetails(presentation.speaker!)
-            navigationController?.pushViewController(speakerDetailsVC, animated: true)
+            let officeHoursDetailVC = officeHourDetails(presentation.speaker!, session: session)
+            navigationController?.pushViewController(officeHoursDetailVC, animated: true)
         case .Workshop(let event):
             let webDisplayVC = webDisplay(event)
             navigationController?.pushViewController(webDisplayVC, animated: true)
@@ -119,7 +119,7 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
         case .Talk(let presentation):
             return sessionDetails(presentation, session: session)
         case .OfficeHours(let presentation):
-            return speakerDetails(presentation.speaker!)
+            return officeHourDetails(presentation.speaker!, session: session)
         case .Workshop(let event):
             return webDisplay(event)
         case .Meetup(let event):
@@ -180,11 +180,11 @@ private extension SessionsTableViewController {
         return sessionDetailsVC
     }
     
-    func speakerDetails(speaker: Speaker) -> UIViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let speakerDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SpeakerDetailViewController)) as! SpeakerDetailViewController
-        speakerDetailsVC.speaker = speaker
-        return speakerDetailsVC
+    func officeHourDetails(speaker: Speaker, session: Session) -> UIViewController {
+        let officeHoursVC = OfficeHoursDetailViewController()
+        officeHoursVC.speaker = speaker
+        officeHoursVC.session = session
+        return officeHoursVC
     }
     
     func webDisplay(event: Event) -> UIViewController {
