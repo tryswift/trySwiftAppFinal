@@ -147,7 +147,7 @@ extension Session {
             case .Announcement(_), .Talk(_), .SponsoredDemo(_):
                 return "Auditorium"
             case .OfficeHours(_):
-                return "Attrium"
+                return "Atrium"
             case .Party(let venue):
                 return venue.address
             }
