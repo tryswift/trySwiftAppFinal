@@ -1,4 +1,5 @@
 PODS:
+  - AcknowList (1.0.1)
   - DynamicColor (2.4.0)
   - HanekeSwift (0.10.1)
   - Realm (1.0.2):
@@ -8,28 +9,27 @@ PODS:
     - Realm (= 1.0.2)
   - Timepiece (0.4.3)
   - Toucan (0.5.0)
-  - VTAcknowledgementsViewController (1.1)
   - XLPagerTabStrip (5.0.0)
 
 DEPENDENCIES:
+  - AcknowList (~> 1.0.1)
   - DynamicColor (~> 2.4.0)
   - HanekeSwift (~> 0.10.1)
   - RealmSwift (~> 1.0.2)
   - Timepiece (~> 0.4.3)
   - Toucan (~> 0.5.0)
-  - VTAcknowledgementsViewController
   - XLPagerTabStrip (~> 5.0.0)
 
 SPEC CHECKSUMS:
+  AcknowList: 211494ed7fb94dca4b63e26679c528532fc5fe86
   DynamicColor: 2f3fd61053684667bad9f03045dcf9a2a5a007ea
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
   RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
   Timepiece: b5038887b91d6eb70653173f4270e06b3abeac41
   Toucan: 0519c341148252ae114c5a657d2a85bb9ada9e40
-  VTAcknowledgementsViewController: 44da49d57a1dbf414e653688793a130d24af151e
   XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965
 
-PODFILE CHECKSUM: e1945ffa5a83a8c02618c2e8e6f80918752200a7
+PODFILE CHECKSUM: a684e359a011e9d4f04d761932a933b24cbad485
 
 COCOAPODS: 1.0.1
