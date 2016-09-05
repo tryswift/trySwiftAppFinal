@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AcknowList
 
 class MoreTableViewController: UITableViewController {
     
@@ -136,7 +137,7 @@ private extension MoreTableViewController {
     
     func showLibraries() {
         let path = NSBundle.mainBundle().pathForResource("Pods-trySwift-acknowledgements", ofType: "plist")
-        guard let acknowledgementesViewController = VTAcknowledgementsViewController(path: path) else { return }
+        let acknowledgementesViewController = AcknowListViewController(acknowledgementsPlistPath: path)
         if #available(iOS 9.2, *) {
             acknowledgementesViewController.headerText = "We 🤗 Open Source Software"
         } else {

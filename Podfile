@@ -6,7 +6,7 @@ target 'trySwift' do
     pod 'Toucan', '~> 0.5.0'
     pod 'Timepiece', '~> 0.4.3'
     pod 'DynamicColor', '~> 2.4.0'
-    pod 'VTAcknowledgementsViewController'
+    pod 'AcknowList', '~> 1.0.1'
     pod 'HanekeSwift', '~> 0.10.1'
     pod 'RealmSwift', '~> 1.0.2'
 end

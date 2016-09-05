@@ -1,7 +1,7 @@
 //
-// VTAcknowledgementViewController.h
+// Acknow.swift
 //
-// Copyright (c) 2013-2016 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2015-2016 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,31 +21,30 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#if __has_feature(modules)
-@import UIKit;
-#else
-#import <UIKit/UIKit.h>
-#endif
 
-/**
- `VTAcknowledgementViewController` is a subclass of `UIViewController` that displays
- a single acknowledgement.
- */
-@interface VTAcknowledgementViewController : UIViewController
+/// Represents a single acknowledgement.
+public struct Acknow {
 
-/**
- The main text view.
- */
-@property (nonatomic, weak, nullable) UITextView *textView;
+    /**
+     The acknowledgement title (for instance the pod’s name).
+     */
+    public let title: String
 
-/**
- Initializes an acknowledgement view controller with a title and a body text.
+    /**
+     The acknowledgement body text (for instance the pod’s license).
+     */
+    public let text: String
 
- @param title The acknowledgement title.
- @param text The acknowledgement body text.
+    /**
+     Initializes the `Acknow` instance with a title and a text.
 
- @return A newly created `VTAcknowledgementViewController` instance.
- */
-- (nullable instancetype)initWithTitle:(nonnull NSString *)title text:(nonnull NSString *)text;
+     - parameter title: The acknowledgement title (for instance the pod’s name).
+     - parameter text:  The acknowledgement body text (for instance the pod’s license).
 
-@end
+     - returns: The new `Acknow` instance.
+     */
+    public init(title: String, text: String) {
+        self.title = title
+        self.text  = text
+    }
+}
