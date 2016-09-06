@@ -22,3 +22,6 @@
 | Marin Todorov                   | [@icanzilb](https://twitter.com/icanzilb)                                                             | I make iOS apps - is RxSwift for me?                              |             [x](https://speakerdeck.com/icanzilb/is-rxswift-for-me-at-try-swift-nyc)            |       |
 | Andyy Hope                      | [@AndyyHope](https://twitter.com/AndyyHope)                                                           | Swift eye for the Stringly typed API                              |                                                                                                 |       |
 | Ryan Nystrom                    | [@_ryannystrom](https://twitter.com/_ryannystrom)                                                     | Refactoring at scale – Lessons learned rewriting Instagram’s feed |                                                                                                 |       |
+
+
+Thanks [Jason](https://github.com/jcsquatrito) for helping to find uploaded slides!
