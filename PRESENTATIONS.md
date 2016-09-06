@@ -24,4 +24,4 @@
 | Ryan Nystrom                    | [@_ryannystrom](https://twitter.com/_ryannystrom)                                                     | Refactoring at scale – Lessons learned rewriting Instagram’s feed |                                                                                                 |       |
 
 
-Thanks [Jason](https://github.com/jcsquatrito) for helping to find uploaded slides!
+Thanks [Jason](https://github.com/jcsquatrito) and [Gustavo](https://github.com/barbosa) for helping to find uploaded slides!
