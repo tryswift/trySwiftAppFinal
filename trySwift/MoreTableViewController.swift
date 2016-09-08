@@ -14,7 +14,7 @@ class MoreTableViewController: UITableViewController {
     private let cellIdentifier = "BasicCell"
     
     private enum MoreSection: Int {
-        case EventDetails, Acknowledgements
+        case EventDetails, Acknowledgements, Feedback
     }
     
     private enum EventDetailsRow: Int {
@@ -23,6 +23,10 @@ class MoreTableViewController: UITableViewController {
     
     private enum AcknowledgementsRow: Int {
         case Organizers, Libraries
+    }
+    
+    private enum FeedbackRow: Int {
+        case App
     }
     
     override func awakeFromNib() {
@@ -48,7 +52,7 @@ class MoreTableViewController: UITableViewController {
 extension MoreTableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,6 +61,8 @@ extension MoreTableViewController {
             return 3
         case .Acknowledgements:
             return 2
+        case .Feedback:
+            return 1
         }
     }
     
@@ -80,6 +86,11 @@ extension MoreTableViewController {
             case .Libraries:
                 cell.textLabel?.text = "Acknowledgements"
             }
+        case .Feedback:
+            switch FeedbackRow(rawValue: indexPath.row)! {
+            case .App:
+                cell.textLabel?.text = "App feedback"
+            }
         }
         
         return cell
@@ -102,6 +113,11 @@ extension MoreTableViewController {
                 showOrganizers()
             case .Libraries:
                 showLibraries()
+            }
+        case .Feedback:
+            switch FeedbackRow(rawValue: indexPath.row)! {
+            case .App:
+                showAppFeedback()
             }
         }
         
@@ -145,5 +161,10 @@ private extension MoreTableViewController {
         }
         
         navigationController?.pushViewController(acknowledgementesViewController, animated: true)
+    }
+    
+    func showAppFeedback() {
+        let url = NSURL(string: "https://github.com/tryswift/trySwiftNYC/issues")!
+        openSafariViewController(withURL: url)
     }
 }
