@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E50AF345BAF3D4FC07D959B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F8855FDC17ABDFA46C086 /* QuartzCore.framework */; };
 		2E977335936DA827A6D9E87C /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B6F88DC3156B1169287F39 /* BuddyBuildSDK.framework */; };
+		496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496328931D81F3560033E3C1 /* MailConfiguration.swift */; };
 		497ABE6E1D53AE8E0010C970 /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497ABE6D1D53AE8E0010C970 /* Conference.swift */; };
 		498144EF1D43D41800D77B99 /* SessionDataSourceDay3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */; };
 		499BD62A1D05910200E74061 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BD6291D05910200E74061 /* Twitter.swift */; };
@@ -170,6 +171,7 @@
 		14346AF2A8784D962D2C2A7F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		168F8855FDC17ABDFA46C086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3581FB5C1C8BBC0A2DB0ED33 /* Pods-try Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		496328931D81F3560033E3C1 /* MailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailConfiguration.swift; sourceTree = "<group>"; };
 		497ABE6D1D53AE8E0010C970 /* Conference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conference.swift; sourceTree = "<group>"; };
 		498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay3.swift; sourceTree = "<group>"; };
 		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 		FA39E8CE1C6AFBF20074B6BE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				496328931D81F3560033E3C1 /* MailConfiguration.swift */,
 				FA39E8DA1C6B09CE0074B6BE /* Speaker.swift */,
 				FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */,
 				FA39E8D61C6B05980074B6BE /* Session.swift */,
@@ -1080,6 +1083,7 @@
 				FA65B5911C6DA53600DCAF0B /* AboutTableViewController.swift in Sources */,
 				FA65B58D1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift in Sources */,
 				FAF1DE2F1D63353800D710C3 /* Event.swift in Sources */,
+				496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */,
 				FA39E9251C6D29D20074B6BE /* TextTableViewCell.swift in Sources */,
 				FA3A1CB61D68E1950042F8DD /* WatchSessionManager.swift in Sources */,
 				FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */,
