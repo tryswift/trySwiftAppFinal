@@ -26,7 +26,7 @@ class MoreTableViewController: UITableViewController {
     }
     
     private enum FeedbackRow: Int {
-        case App
+        case App, Conference
     }
     
     override func awakeFromNib() {
@@ -62,7 +62,7 @@ extension MoreTableViewController {
         case .Acknowledgements:
             return 2
         case .Feedback:
-            return 1
+            return 2
         }
     }
     
@@ -90,6 +90,8 @@ extension MoreTableViewController {
             switch FeedbackRow(rawValue: indexPath.row)! {
             case .App:
                 cell.textLabel?.text = "App feedback"
+            case .Conference:
+                cell.textLabel?.text = "Conference feedback"
             }
         }
         
@@ -118,6 +120,8 @@ extension MoreTableViewController {
             switch FeedbackRow(rawValue: indexPath.row)! {
             case .App:
                 showAppFeedback()
+            case .Conference:
+                showConferenceFeedback()
             }
         }
         
@@ -166,5 +170,10 @@ private extension MoreTableViewController {
     func showAppFeedback() {
         let url = NSURL(string: "https://github.com/tryswift/trySwiftNYC/issues")!
         openSafariViewController(withURL: url)
+    }
+    
+    func showConferenceFeedback() {
+        let configuration = MailConfiguration(recipients: ["info@tryswiftnyc.com"], subject: "Conference feedback via try! NYC app")
+        sendMail(withConfiguration: configuration)
     }
 }
