@@ -14,7 +14,7 @@ class MoreTableViewController: UITableViewController {
     private let cellIdentifier = "BasicCell"
     
     private enum MoreSection: Int {
-        case EventDetails, Acknowledgements, Feedback
+        case EventDetails, Acknowledgements, Feedback, Slack
     }
     
     private enum EventDetailsRow: Int {
@@ -27,6 +27,10 @@ class MoreTableViewController: UITableViewController {
     
     private enum FeedbackRow: Int {
         case App, Conference
+    }
+    
+    private enum SlackRow: Int {
+        case Open
     }
     
     override func awakeFromNib() {
@@ -52,7 +56,7 @@ class MoreTableViewController: UITableViewController {
 extension MoreTableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,6 +67,8 @@ extension MoreTableViewController {
             return 2
         case .Feedback:
             return 2
+        case .Slack:
+            return 1
         }
     }
     
@@ -93,6 +99,11 @@ extension MoreTableViewController {
             case .Conference:
                 cell.textLabel?.text = "Conference feedback"
             }
+        case .Slack:
+            switch SlackRow(rawValue: indexPath.row)! {
+            case .Open:
+                cell.textLabel?.text = "Open Slack"
+            }
         }
         
         return cell
@@ -122,6 +133,11 @@ extension MoreTableViewController {
                 showAppFeedback()
             case .Conference:
                 showConferenceFeedback()
+            }
+        case .Slack:
+            switch SlackRow(rawValue: indexPath.row)! {
+            case .Open:
+                openSlack()
             }
         }
         
@@ -175,5 +191,16 @@ private extension MoreTableViewController {
     func showConferenceFeedback() {
         let configuration = MailConfiguration(recipients: ["info@tryswiftnyc.com"], subject: "Conference feedback via try! NYC app")
         sendMail(withConfiguration: configuration)
+    }
+    
+    func openSlack() {
+        let application = UIApplication.sharedApplication()
+        let appURL = NSURL(string: "slack://open")!
+        if application.canOpenURL(appURL) {
+            application.openURL(appURL)
+        } else {
+            let url = NSURL(string: "https://tryswiftnyc.slack.com")!
+            openSafariViewController(withURL: url)
+        }
     }
 }
