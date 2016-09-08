@@ -34,6 +34,7 @@
 		<string>twit</string>
 		<string>x-seesmic</string>
 		<string>twitter</string>
+		<string>slack</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
