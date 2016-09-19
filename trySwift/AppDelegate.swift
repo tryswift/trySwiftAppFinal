@@ -15,13 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         BuddyBuildSDK.setup()
         
         
         insertDefaultData()
         
-        let notificationSettings = UIUserNotificationSettings(forTypes: .None, categories: nil)
+        let notificationSettings = UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
         application.registerUserNotificationSettings(notificationSettings)
         application.registerForRemoteNotifications()
         
@@ -32,16 +32,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureStyling()
         configureData()
         
-        NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "EST")!)
+        NSTimeZone.setDefaultTimeZone(TimeZone(abbreviation: "EST")!)
         
         return true
     }
     
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void)
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     {
         ChangeManager.syncChanges()
         ChangeManager.syncWatchChanges()
-        completionHandler(.NoData)
+        completionHandler(.noData)
     }
 }
 
@@ -54,24 +54,24 @@ private extension AppDelegate {
         window?.tintColor = tintColor
         
         UINavigationBar.appearance().titleTextAttributes = [
-            NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSFontAttributeName: UIFont.systemFontOfSize(18)
+            NSForegroundColorAttributeName: UIColor.white,
+            NSFontAttributeName: UIFont.systemFont(ofSize: 18)
         ]
         
         UINavigationBar.appearance().barTintColor = tintColor
-        UINavigationBar.appearance().tintColor = .whiteColor()
-        UINavigationBar.appearance().translucent = false
-        UINavigationBar.appearance().barStyle = .BlackTranslucent
+        UINavigationBar.appearance().tintColor = .white()
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().barStyle = .blackTranslucent
     }
     
     func configureData() {
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         
-        let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
-        if defaults.objectForKey(ChangeManager.lastChangedDataNotification) == nil {
+        let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+        if defaults.object(forKey: ChangeManager.lastChangedDataNotification) == nil {
             defaults.setObject(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
         }
-        if defaults.objectForKey(WatchSessionManager.watchDataUpdatedNotification) == nil {
+        if defaults.object(forKey: WatchSessionManager.watchDataUpdatedNotification) == nil {
             defaults.setObject(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
         }
         
@@ -85,24 +85,24 @@ private extension AppDelegate {
     }
     
     func subscribeToCloudChangeNotifications() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            if !defaults.boolForKey("SubscribedToCloudChanges") {
+        let defaults = UserDefaults.standard
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+            if !defaults.bool(forKey: "SubscribedToCloudChanges") {
                 let predicate = NSPredicate(value: true)
                 
-                let subscription = CKSubscription(recordType: "Change", predicate: predicate, options: .FiresOnRecordCreation)
+                let subscription = CKSubscription(recordType: "Change", predicate: predicate, options: .firesOnRecordCreation)
                 
                 let notificationInfo = CKNotificationInfo()
                 notificationInfo.shouldSendContentAvailable = true
                 
                 subscription.notificationInfo = notificationInfo
                 
-                let publicDB = CKContainer.defaultContainer().publicCloudDatabase
-                publicDB.saveSubscription(subscription) { subscription, error in
+                let publicDB = CKContainer.default().publicCloudDatabase
+                publicDB.save(subscription, completionHandler: { subscription, error in
                     if let _ = subscription {
-                        defaults.setBool(true, forKey: "SubscribedToCloudChanges")
+                        defaults.set(true, forKey: "SubscribedToCloudChanges")
                     }
-                }
+                }) 
             }
         }
     }

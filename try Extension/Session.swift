@@ -12,8 +12,8 @@ import RealmSwift
 import WatchKit
 
 struct Session {
-    let startTime: NSDate
-    let endTime: NSDate
+    let startTime: Date
+    let endTime: Date
     let info: Info
     let index: Int
     
@@ -31,58 +31,58 @@ extension Session {
     
     enum Info {
         
-        case Workshop(Event)
-        case Meetup(Event)
-        case Breakfast(String)
-        case Announcement(String)
-        case Talk(Presentation)
-        case SponsoredDemo(Sponsor)
-        case CoffeeBreak(Sponsor?)
-        case Lunch
-        case Party
+        case workshop(Event)
+        case meetup(Event)
+        case breakfast(String)
+        case announcement(String)
+        case talk(Presentation)
+        case sponsoredDemo(Sponsor)
+        case coffeeBreak(Sponsor?)
+        case lunch
+        case party
         
         var title: String {
             switch self {
-            case .Workshop(let event):
+            case .workshop(let event):
                 return "💻 \(event.title)"
-            case .Meetup(let event):
+            case .meetup(let event):
                 return "🌇 \(event.title)"
-            case .Breakfast(let title):
+            case .breakfast(let title):
                 return "🍩 \(title)"
-            case .Announcement(let title):
+            case .announcement(let title):
                 return "📣 \(title)"
-            case .Talk(let presentation):
+            case .talk(let presentation):
                 return "🤓 \(presentation.title)"
-            case .SponsoredDemo(_):
+            case .sponsoredDemo(_):
                 return "🤓 Sponsored Demo"
-            case .CoffeeBreak(_):
+            case .coffeeBreak(_):
                 return "☕️ Break"
-            case .Lunch:
+            case .lunch:
                 return "🍴 Lunch"
-            case .Party:
+            case .party:
                 return "🍕 & 🎸 Party with Airplane Mode"
             }
         }
         
         var subtitle: String {
             switch self {
-            case .Meetup(let event):
+            case .meetup(let event):
                 return event.sponsor.name
-            case .Workshop(let event):
+            case .workshop(let event):
                 return event.sponsor.name
-            case .Breakfast(_), .Announcement(_), .Lunch:
+            case .breakfast(_), .announcement(_), .lunch:
                 return "try! NYC"
-            case .Talk(let presentation):
+            case .talk(let presentation):
                 return presentation.speaker?.name ?? "try! NYC"
-            case .SponsoredDemo(let sponsor):
+            case .sponsoredDemo(let sponsor):
                 return sponsor.name
-            case .CoffeeBreak(let sponsor):
+            case .coffeeBreak(let sponsor):
                 if let sponsor = sponsor {
                     return sponsor.name
                 } else {
                     return "try! NYC"
                 }
-            case .Party:
+            case .party:
                 return "Perfect.org"
             }
         }
@@ -91,43 +91,43 @@ extension Session {
             let defaultImage = UIImage(named: "tryLogo")!
             
             switch self {
-            case .Workshop(let event):
+            case .workshop(let event):
                 return UIImage(named: event.sponsor.logo) ?? defaultImage
-            case .Meetup(let event):
+            case .meetup(let event):
                 return UIImage(named: event.sponsor.logo) ?? defaultImage
-            case .Breakfast(_), .Lunch, .Announcement(_):
+            case .breakfast(_), .lunch, .announcement(_):
                 return defaultImage
-            case .CoffeeBreak(let sponsor):
+            case .coffeeBreak(let sponsor):
                 if let sponsor = sponsor {
                     // currently, the only sponsor is DOMO
                     return UIImage(named: sponsor.logo) ?? defaultImage
                 }
                 return defaultImage
-            case .Talk(let presentation):
+            case .talk(let presentation):
                 return presentation.speaker?.getImage() ?? defaultImage
-            case .SponsoredDemo(_):
+            case .sponsoredDemo(_):
                 // currently the only sponsor is Twilio
                 return UIImage(named: "twilio-small") ?? defaultImage
-            case .Party:
+            case .party:
                 return UIImage(named: "airplanemode-short") ?? defaultImage
             }
         }
         
         var twitter: String {
             switch self {
-            case .Workshop(let event):
+            case .workshop(let event):
                 return "@\(event.sponsor.twitter)"
-            case .Meetup(let event):
+            case .meetup(let event):
                 return "@\(event.sponsor.twitter)"
-            case .CoffeeBreak(let sponsor):
+            case .coffeeBreak(let sponsor):
                 if let sponsor = sponsor {
                     return "@\(sponsor.twitter)"
                 }
                 return "tryswiftnyc"
-            case .Talk(let presentation):
+            case .talk(let presentation):
                 let twitterHandle = presentation.speaker?.twitter ?? "tryswiftnyc"
                 return "@\(twitterHandle)"
-            case .SponsoredDemo(let sponsor):
+            case .sponsoredDemo(let sponsor):
                 return "@\(sponsor.twitter)"
             default:
                 return "@tryswiftnyc"
@@ -143,15 +143,15 @@ extension Session {
     static let sessionsAug31: [Session] = [
         {
             return Session(
-                startTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 16, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 18, minute: 0, second: 0),
+                startTime: Date.date(year: 2016, month: 8, day: 31, hour: 16, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 8, day: 31, hour: 18, minute: 0, second: 0),
                 info: .Workshop(Event.gaWorkshop),
                 index: 0)
             }(),
         {
             return Session(
-                startTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 19, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 21, minute: 15, second: 0),
+                startTime: Date.date(year: 2016, month: 8, day: 31, hour: 19, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 8, day: 31, hour: 21, minute: 15, second: 0),
                 info: .Meetup(Event.meetup),
                 index: 1)
             }()
@@ -210,8 +210,8 @@ extension Session {
             }(),
         {
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
                 info: .CoffeeBreak(Sponsor.domo),
                 index: 6)
             }(),
@@ -256,8 +256,8 @@ extension Session {
             }(),
         {
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
                 info: .Lunch,
                 index: 10)
             }(),
@@ -302,8 +302,8 @@ extension Session {
             }(),
         {
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
                 info: .CoffeeBreak(nil),
                 index: 14)
             }(),
@@ -421,8 +421,8 @@ extension Session {
             }(),
         {
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
                 info: .CoffeeBreak(Sponsor.domo),
                 index: 24)
             }(),
@@ -467,16 +467,16 @@ extension Session {
             }(),
         {
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
                 info: .SponsoredDemo(Sponsor.twilio),
                 index: 28
             )
         }(),
         {
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
                 info: .Lunch,
                 index: 29)
             }(),
@@ -521,8 +521,8 @@ extension Session {
         }(),
         {
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
                 info: .CoffeeBreak(nil),
                 index: 33)
         }(),

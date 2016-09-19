@@ -10,48 +10,48 @@ import ClockKit
 import Timepiece
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
-    let conferenceStartDate = NSDate.date(year: 2016, month: 8, day: 31, hour: 0, minute: 0, second: 0)
+    let conferenceStartDate = Date.date(year: 2016, month: 8, day: 31, hour: 0, minute: 0, second: 0)
 }
 
 // MARK: - Timeline Configuration
 extension ComplicationController {
     
-    func getSupportedTimeTravelDirectionsForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTimeTravelDirections) -> Void) {
-        handler([.Forward, .Backward])
+    func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
+        handler([.forward, .backward])
     }
     
-    func getTimelineStartDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
+    func getTimelineStartDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
         let startDate = timelineEntryDateForSession(Session.sessions.first!)
         handler(startDate)
     }
     
-    func getTimelineEndDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
+    func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
         let endDate = Session.sessions.last?.endTime
-        handler(endDate)
+        handler(endDate as Date?)
     }
     
-    func getPrivacyBehaviorForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationPrivacyBehavior) -> Void) {
-        handler(.ShowOnLockScreen)
+    func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
+        handler(.showOnLockScreen)
     }
 }
 
 // MARK: - Timeline Population
 extension ComplicationController {
     
-    func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
+    func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: (@escaping (CLKComplicationTimelineEntry?) -> Void)) {
         
-        if NSDate() < conferenceStartDate {
+        if Date() < conferenceStartDate {
             let tmpl = CLKComplicationTemplateModularLargeStandardBody()
             tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! NYC")
             tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🗽🐥🎉")
             let startDate = Session.sessions.first!.startTime
-            let style = CLKRelativeDateStyle.Natural
-            let units: NSCalendarUnit = [.Day, .Hour, .Minute]
-            tmpl.body2TextProvider = CLKRelativeDateTextProvider(date: startDate, style: style, units: units)
+            let style = CLKRelativeDateStyle.natural
+            let units: NSCalendar.Unit = [.day, .hour, .minute]
+            tmpl.body2TextProvider = CLKRelativeDateTextProvider(date: startDate as Date, style: style, units: units)
             
-            let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: tmpl)
+            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tmpl)
             handler(timelineEntry)
-        } else if NSDate() > Session.sessions.last!.endTime {
+        } else if Date() > Session.sessions.last!.endTime as Date {
             let tmpl = CLKComplicationTemplateModularLargeStandardBody()
             
             let firstSession = Session.sessions.first!
@@ -59,23 +59,23 @@ extension ComplicationController {
             
             tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! NYC")
             tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🗽🐥🎉")
-            tmpl.body2TextProvider = CLKTimeIntervalTextProvider(startDate: firstSession.startTime, endDate: lastSession.endTime)
-            let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: tmpl)
+            tmpl.body2TextProvider = CLKTimeIntervalTextProvider(start: firstSession.startTime as Date, end: lastSession.endTime as Date)
+            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tmpl)
             handler(timelineEntry)
         } else {
-            getTimelineEntriesForComplication(complication, beforeDate: NSDate(), limit: 1) { entries in
+            getTimelineEntries(for: complication, before: Date(), limit: 1) { entries in
                 handler(entries?.first)
             }
         }
     }
     
-    func getTimelineEntriesForComplication(complication: CLKComplication, beforeDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
+    func getTimelineEntries(for complication: CLKComplication, before date: Date, limit: Int, withHandler handler: (@escaping ([CLKComplicationTimelineEntry]?) -> Void)) {
         
         let timelineEntries = Array(Session.sessions
             .filter { timelineEntryDateForSession($0) < date }
             .map {
                 CLKComplicationTimelineEntry(date: timelineEntryDateForSession($0), complicationTemplate: templateForSession($0))
-        }.reverse())
+        }.reversed())
         
         
         if timelineEntries.count > limit {
@@ -85,7 +85,7 @@ extension ComplicationController {
         }
     }
     
-    func getTimelineEntriesForComplication(complication: CLKComplication, afterDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
+    func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: (@escaping ([CLKComplicationTimelineEntry]?) -> Void)) {
         
         let timelineEntries = Session.sessions
             .filter { timelineEntryDateForSession($0) > date }
@@ -104,7 +104,7 @@ extension ComplicationController {
 // MARK: - Update Scheduling
 extension ComplicationController {
     
-    func getNextRequestedUpdateDateWithHandler(handler: (NSDate?) -> Void) {
+    func getNextRequestedUpdateDate(handler: @escaping (Date?) -> Void) {
         // Call the handler with the date when you would next like to be given the opportunity to update your complication content
         handler(nil)
     }
@@ -113,7 +113,7 @@ extension ComplicationController {
 // MARK: - Placeholder Templates
 extension ComplicationController {
     
-    func getPlaceholderTemplateForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTemplate?) -> Void) {
+    func getPlaceholderTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
         // This method will be called once per supported complication, and the results will be cached
         let tmpl = CLKComplicationTemplateModularLargeStandardBody()
         
@@ -122,7 +122,7 @@ extension ComplicationController {
         
         tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! NYC")
         tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🗽🐥🎉")
-        tmpl.body2TextProvider = CLKTimeIntervalTextProvider(startDate: firstSession.startTime, endDate: lastSession.endTime)
+        tmpl.body2TextProvider = CLKTimeIntervalTextProvider(start: firstSession.startTime as Date, end: lastSession.endTime as Date)
         
         handler(tmpl)
     }
@@ -131,10 +131,10 @@ extension ComplicationController {
 // MARK: Private Helper Methods
 private extension ComplicationController {
     
-    func templateForSession(session: Session) -> CLKComplicationTemplate {
+    func templateForSession(_ session: Session) -> CLKComplicationTemplate {
         let tmpl = CLKComplicationTemplateModularLargeStandardBody()
         
-        tmpl.headerTextProvider = CLKTimeIntervalTextProvider(startDate: session.startTime, endDate: session.endTime)
+        tmpl.headerTextProvider = CLKTimeIntervalTextProvider(start: session.startTime as Date, end: session.endTime as Date)
         
         let info = session.info
         tmpl.body1TextProvider = CLKSimpleTextProvider(text: info.title)
@@ -142,10 +142,10 @@ private extension ComplicationController {
         return tmpl
     }
     
-    func timelineEntryDateForSession(session: Session) -> NSDate {
+    func timelineEntryDateForSession(_ session: Session) -> Date {
         if session.index - 1 > 0 {
             let previousSession = Session.sessions[session.index - 1]
-            return previousSession.endTime
+            return previousSession.endTime as Date
         } else {
             return conferenceStartDate
         }

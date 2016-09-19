@@ -29,11 +29,11 @@ class SpeakerTableViewCell: UITableViewCell {
         speakerTwitterLabel.text = "@\(speaker.twitter)"
         
         if !selectionEnabled {
-            selectionStyle = .None
+            selectionStyle = .none
         }
         
         if !accessoryEnabled {
-            accessoryType = .None
+            accessoryType = .none
         }
         
         setNeedsUpdateConstraints()

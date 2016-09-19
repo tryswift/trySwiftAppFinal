@@ -14,18 +14,18 @@ struct ChangeManager {
     static let lastChangedDataNotification = "LastChangedDataNotification"
     
     static func syncChanges() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
-            let publicDB = CKContainer.defaultContainer().publicCloudDatabase
-            guard let lastChangeDate = defaults.objectForKey(ChangeManager.lastChangedDataNotification) as? NSDate else {
-                let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+        let defaults = UserDefaults.standard
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.high).async {
+            let publicDB = CKContainer.default().publicCloudDatabase
+            guard let lastChangeDate = defaults.object(forKey: ChangeManager.lastChangedDataNotification) as? Date else {
+                let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
                 defaults.setObject(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
                 return
             }
             
-            let predicate = NSPredicate(format: "creationDate > %@", lastChangeDate)
+            let predicate = NSPredicate(format: "creationDate > %@", lastChangeDate as CVarArg)
             let query = CKQuery(recordType: "Change", predicate: predicate)
-            publicDB.performQuery(query, inZoneWithID: nil) { result, error in
+            publicDB.perform(query, inZoneWith: nil) { result, error in
                 
                 guard let result = result else {
                     // will update again on future launch
@@ -35,24 +35,24 @@ struct ChangeManager {
                 result.forEach {
                     updateRecord($0)
                 }
-                defaults.setObject(NSDate(), forKey: ChangeManager.lastChangedDataNotification)
+                defaults.set(Date(), forKey: ChangeManager.lastChangedDataNotification)
             }
         }
     }
     
     static func syncWatchChanges() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let publicDB = CKContainer.defaultContainer().publicCloudDatabase
-            guard let lastChangeDate = defaults.objectForKey(WatchSessionManager.watchDataUpdatedNotification) as? NSDate else {
-                let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+        let defaults = UserDefaults.standard
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+            let publicDB = CKContainer.default().publicCloudDatabase
+            guard let lastChangeDate = defaults.object(forKey: WatchSessionManager.watchDataUpdatedNotification) as? Date else {
+                let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
                 defaults.setObject(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
                 return
             }
             
-            let predicate = NSPredicate(format: "creationDate > %@", lastChangeDate)
+            let predicate = NSPredicate(format: "creationDate > %@", lastChangeDate as CVarArg)
             let query = CKQuery(recordType: "Change", predicate: predicate)
-            publicDB.performQuery(query, inZoneWithID: nil) { result, error in
+            publicDB.perform(query, inZoneWith: nil) { result, error in
                 
                 guard let result = result else {
                     // will update again on future launch
@@ -73,11 +73,11 @@ struct ChangeManager {
                     }
                     
                     let changeDict: [String : AnyObject] = [
-                        "creationDate" : creationDate,
-                        "object": object,
-                        "id": id,
-                        "field": field,
-                        "newValue": newValue]
+                        "creationDate" : creationDate as AnyObject,
+                        "object": object as AnyObject,
+                        "id": id as AnyObject,
+                        "field": field as AnyObject,
+                        "newValue": newValue as AnyObject]
                     
                     if field == "imagePath" {
                         guard let imageAsset = $0["image"] as? CKAsset else { return }
@@ -94,7 +94,7 @@ struct ChangeManager {
 
 private extension ChangeManager {
     
-    static func updateRecord(record: CKRecord) {
+    static func updateRecord(_ record: CKRecord) {
         guard let object = record["object"] as? String,
             let id = record["id"] as? Int,
             let field = record["field"] as? String,

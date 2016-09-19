@@ -11,16 +11,16 @@ import WatchConnectivity
 class WatchSessionManager: NSObject, WCSessionDelegate {
     
     static let sharedManager = WatchSessionManager()
-    private override init() {
+    fileprivate override init() {
         super.init()
     }
     
     static let watchDataUpdatedNotification = "LastUpdatedWatchChangeCreationData"
-    private let session: WCSession? = WCSession.isSupported() ? WCSession.defaultSession() : nil
+    fileprivate let session: WCSession? = WCSession.isSupported() ? WCSession.default() : nil
     
     func startSession() {
         session?.delegate = self
-        session?.activateSession()
+        session?.activate()
     }
 }
 
@@ -31,37 +31,37 @@ extension WatchSessionManager {
     // use when your app needs all the data
     // FIFO queue
     // Sender
-    func transferUserInfo(userInfo: [String : AnyObject]) -> WCSessionUserInfoTransfer? {
+    func transferUserInfo(_ userInfo: [String : AnyObject]) -> WCSessionUserInfoTransfer? {
         return validSession?.transferUserInfo(userInfo)
     }
     
-    func session(session: WCSession,
-                 didFinishUserInfoTransfer userInfoTransfer: WCSessionUserInfoTransfer, error: NSError?) {
+    func session(_ session: WCSession,
+                 didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
         if let creationDate = userInfoTransfer.userInfo["creationDate"] {
-            NSUserDefaults.standardUserDefaults().setObject(creationDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
+            UserDefaults.standard.set(creationDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
         }
     }
     
     // MARK: File Transfer
-    func transferFile(file: NSURL, metadata: [String : AnyObject]) -> WCSessionFileTransfer? {
+    func transferFile(_ file: URL, metadata: [String : AnyObject]) -> WCSessionFileTransfer? {
         return validSession?.transferFile(file, metadata: metadata)
     }
     
-    func session(session: WCSession, didFinishFileTransfer fileTransfer: WCSessionFileTransfer, error: NSError?) {
-        if let creationDate = fileTransfer.file.metadata?["creationDate"] as? NSDate {
-            NSUserDefaults.standardUserDefaults().setObject(creationDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
+    func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
+        if let creationDate = fileTransfer.file.metadata?["creationDate"] as? Date {
+            UserDefaults.standard.set(creationDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
         }
     }
 }
 
 extension WatchSessionManager {
     
-    private var validSession: WCSession? {
+    fileprivate var validSession: WCSession? {
         
         // paired - the user has to have their device paired to the watch
         // watchAppInstalled - the user must have your watch app installed
         
-        if let session = session where session.paired && session.watchAppInstalled {
+        if let session = session , session.isPaired && session.isWatchAppInstalled {
             return session
         }
         return nil

@@ -1,35 +1,47 @@
 PODS:
-  - DynamicColor (2.4.0)
-  - HanekeSwift (0.10.1)
-  - Realm (1.0.2):
-    - Realm/Headers (= 1.0.2)
-  - Realm/Headers (1.0.2)
-  - RealmSwift (1.0.2):
-    - Realm (= 1.0.2)
+  - DynamicColor (3.1.0)
+  - Realm (1.1.0):
+    - Realm/Headers (= 1.1.0)
+  - Realm/Headers (1.1.0)
+  - RealmSwift (1.1.0):
+    - Realm (= 1.1.0)
   - Timepiece (0.4.3)
   - Toucan (0.5.0)
   - VTAcknowledgementsViewController (1.1)
-  - XLPagerTabStrip (5.0.0)
+  - XLPagerTabStrip (6.0.0)
 
 DEPENDENCIES:
-  - DynamicColor (~> 2.4.0)
-  - HanekeSwift (~> 0.10.1)
-  - RealmSwift (~> 1.0.2)
-  - Timepiece (~> 0.4.3)
-  - Toucan (~> 0.5.0)
+  - DynamicColor (~> 3.1.0)
+  - RealmSwift (~> 1.1.0)
+  - Timepiece (from `https://github.com/NatashaTheRobot/Timepiece`)
+  - Toucan (from `https://github.com/vinzen/Toucan`, branch `swift3.0`)
   - VTAcknowledgementsViewController
-  - XLPagerTabStrip (~> 5.0.0)
+  - XLPagerTabStrip (~> 6.0.0)
+
+EXTERNAL SOURCES:
+  Timepiece:
+    :git: https://github.com/NatashaTheRobot/Timepiece
+  Toucan:
+    :branch: swift3.0
+    :git: https://github.com/vinzen/Toucan
+
+CHECKOUT OPTIONS:
+  Timepiece:
+    :commit: 515fe4b2bac80e6bc41bb805fe807403e76ead75
+    :git: https://github.com/NatashaTheRobot/Timepiece
+  Toucan:
+    :commit: 5196980bc1c839221f6b1932293a0404f183a648
+    :git: https://github.com/vinzen/Toucan
 
 SPEC CHECKSUMS:
-  DynamicColor: 2f3fd61053684667bad9f03045dcf9a2a5a007ea
-  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
-  Realm: 9d5c46a4d7d27958530a8dfc58f63a99e5c2cba3
-  RealmSwift: 82f3ac5e24530143dddfde2033acc0d308f27d96
+  DynamicColor: 4dec283a881f7f9d9f3bc88fb5f306724242575f
+  Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
+  RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
   Timepiece: b5038887b91d6eb70653173f4270e06b3abeac41
   Toucan: 0519c341148252ae114c5a657d2a85bb9ada9e40
   VTAcknowledgementsViewController: 44da49d57a1dbf414e653688793a130d24af151e
-  XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965
+  XLPagerTabStrip: c46e802a8dcac29edbcea573de8fe920e052455b
 
-PODFILE CHECKSUM: e1945ffa5a83a8c02618c2e8e6f80918752200a7
+PODFILE CHECKSUM: 33ad488afbcec92292057a18249d9cb9f4c307bb
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2

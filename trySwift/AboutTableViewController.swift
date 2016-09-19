@@ -10,10 +10,10 @@ import UIKit
 
 class AboutTableViewController: UITableViewController {
 
-    private let trySwift = Conference.trySwift
+    fileprivate let trySwift = Conference.trySwift
     
-    private enum AboutInfo: Int {
-        case Header, Detail, Twitter
+    fileprivate enum AboutInfo: Int {
+        case header, detail, twitter
     }
     
     override func viewDidLoad() {
@@ -21,41 +21,41 @@ class AboutTableViewController: UITableViewController {
         
         title = "About"
         
-        tableView.registerNib(UINib(nibName: String(OrganizerTableViewCell), bundle: nil), forCellReuseIdentifier: String(OrganizerTableViewCell))
-        tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
-        tableView.registerNib(UINib(nibName: String(TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(TwitterFollowTableViewCell))
+        tableView.register(UINib(nibName: String(describing: OrganizerTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: OrganizerTableViewCell))
+        tableView.register(UINib(nibName: String(describing: TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: TextTableViewCell))
+        tableView.register(UINib(nibName: String(describing: TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: TwitterFollowTableViewCell))
         
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.separatorStyle = .None
+        tableView.separatorStyle = .none
     }
 }
 
 // MARK: - Table view data source
 extension AboutTableViewController {
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        switch AboutInfo(rawValue: indexPath.row)! {
-        case .Header:
-            let cell = tableView.dequeueReusableCellWithIdentifier(String(OrganizerTableViewCell), forIndexPath: indexPath) as! OrganizerTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch AboutInfo(rawValue: (indexPath as NSIndexPath).row)! {
+        case .header:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrganizerTableViewCell), for: indexPath) as! OrganizerTableViewCell
             cell.configure(withConference: trySwift)
-            cell.selectionStyle = .None
-            cell.accessoryType = .None
+            cell.selectionStyle = .none
+            cell.accessoryType = .none
             return cell
-        case .Detail:
-            let cell = tableView.dequeueReusableCellWithIdentifier(String(TextTableViewCell), forIndexPath: indexPath) as! TextTableViewCell
+        case .detail:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextTableViewCell), for: indexPath) as! TextTableViewCell
             cell.configure(withText: trySwift.description)
             return cell
-        case .Twitter:
-            let cell = tableView.dequeueReusableCellWithIdentifier(String(TwitterFollowTableViewCell), forIndexPath: indexPath) as! TwitterFollowTableViewCell
+        case .twitter:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TwitterFollowTableViewCell), for: indexPath) as! TwitterFollowTableViewCell
             cell.configure(withUsername: trySwift.twitter, delegate: self)
             return cell
         }

@@ -11,24 +11,24 @@ import SafariServices
 
 extension UIViewController: SFSafariViewControllerDelegate {
     
-    func openSafariViewController(withURL url: NSURL) {
-        let safariViewController = SFSafariViewController(URL: url)
+    func openSafariViewController(withURL url: URL) {
+        let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self
-        presentViewController(safariViewController, animated: true, completion: nil)
+        present(safariViewController, animated: true, completion: nil)
     }
     
-    public func safariViewControllerDidFinish(controller: SFSafariViewController) {
-        dismissViewControllerAnimated(true, completion: nil)
+    public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
 extension UIViewController: TwitterFollowDelegate {
     
-    func followUser(username: String) {
+    func followUser(_ username: String) {
         var applicationOpened = false
-        let application = UIApplication.sharedApplication()
+        let application = UIApplication.shared
         for twitterURL in Twitter.urls(forUsername: username) {
-            if let url = NSURL(string: twitterURL) where application.canOpenURL(url) && !applicationOpened {
+            if let url = URL(string: twitterURL) , application.canOpenURL(url) && !applicationOpened {
                 application.openURL(url)
                 applicationOpened = true
                 break
@@ -36,7 +36,7 @@ extension UIViewController: TwitterFollowDelegate {
         }
         
         if !applicationOpened {
-            if let twitterURL = NSURL(string: "http://twitter.com/\(username)") {
+            if let twitterURL = URL(string: "http://twitter.com/\(username)") {
                 openSafariViewController(withURL: twitterURL)
             }
         }

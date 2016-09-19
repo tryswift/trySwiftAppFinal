@@ -29,18 +29,18 @@ class OrganizerTableViewCell: UITableViewCell {
         organizerTwitterLabel.text = "@\(organizer.twitter)"
         
         if !selectionEnabled {
-            selectionStyle = .None
+            selectionStyle = .none
         }
         
         if !accessoryEnabled {
-            accessoryType = .None
+            accessoryType = .none
         }
     }
     
     func configure(withConference conference: Conference) {
         if let
             imageURLString = conference.imageURL,
-            imageURL = NSURL(string: imageURLString) {
+            let imageURL = URL(string: imageURLString) {
             organizerImageView.hnk_setImageFromURL(imageURL, placeholder: conference.image) { image in
                 self.organizerImageView.image = Toucan(image: image).maskWithEllipse().image
             }
