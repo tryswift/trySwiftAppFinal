@@ -12,19 +12,19 @@ import RealmSwift
 
 class SessionsInterfaceController: WKInterfaceController {
 
-    @IBOutlet private var sessionsTable: WKInterfaceTable!
+    @IBOutlet fileprivate var sessionsTable: WKInterfaceTable!
     
-    private var sessions = Session.sessionsAug31
+    fileprivate var sessions = Session.sessionsAug31
     
     var token: NotificationToken? = nil
     
     static var first = true
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         if SessionsInterfaceController.first {
-            WKInterfaceController.reloadRootControllersWithNames(["Aug31", "Sep1", "Sep2"], contexts: [PageDetails.Aug31, PageDetails.Sep1, PageDetails.Sep2])
+            WKInterfaceController.reloadRootControllers(withNames: ["Aug31", "Sep1", "Sep2"], contexts: [PageDetails.Aug31, PageDetails.Sep1, PageDetails.Sep2])
             SessionsInterfaceController.first = false
         }
         
@@ -55,10 +55,10 @@ class SessionsInterfaceController: WKInterfaceController {
 private extension SessionsInterfaceController {
     
     func loadTableData() {
-        sessionsTable.setNumberOfRows(sessions.count, withRowType: String(SessionTableRowController))
+        sessionsTable.setNumberOfRows(sessions.count, withRowType: String(describing: SessionTableRowController))
         
-        for (index, session) in sessions.enumerate() {
-            let row = sessionsTable.rowControllerAtIndex(index) as? SessionTableRowController
+        for (index, session) in sessions.enumerated() {
+            let row = sessionsTable.rowController(at: index) as? SessionTableRowController
             row?.configure(session)
         }
     }

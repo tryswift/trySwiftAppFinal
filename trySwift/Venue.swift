@@ -38,7 +38,7 @@ extension Venue {
             address.country = "United States"
             
             let addressFormatter = CNPostalAddressFormatter()
-            let addressText = addressFormatter.attributedStringFromPostalAddress(address, withDefaultAttributes: [NSFontAttributeName : UIFont.systemFontOfSize(18.0)])
+            let addressText = addressFormatter.attributedString(from: address, withDefaultAttributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 18.0)])
             return addressText
         }(),
         website: "axaeventproductioncenter.com",
@@ -60,7 +60,7 @@ extension Venue {
             address.country = "United States"
             
             let addressFormatter = CNPostalAddressFormatter()
-            let addressText = addressFormatter.attributedStringFromPostalAddress(address, withDefaultAttributes: [NSFontAttributeName : UIFont.systemFontOfSize(18.0)])
+            let addressText = addressFormatter.attributedString(from: address, withDefaultAttributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 18.0)])
             return addressText
         }(),
         website: "americanbeautynyc.com",

@@ -11,14 +11,14 @@ import Timepiece
 
 class GlanceController: WKInterfaceController {
 
-    @IBOutlet private var titleInterfaceLabel: WKInterfaceLabel!
-    @IBOutlet private var timeInterfaceLabel: WKInterfaceLabel!
-    @IBOutlet private var speakerInterfaceImage: WKInterfaceImage!
-    @IBOutlet private var nameInterfaceLabel: WKInterfaceLabel!
-    @IBOutlet private var twitterInterfaceLabel: WKInterfaceLabel!
+    @IBOutlet fileprivate var titleInterfaceLabel: WKInterfaceLabel!
+    @IBOutlet fileprivate var timeInterfaceLabel: WKInterfaceLabel!
+    @IBOutlet fileprivate var speakerInterfaceImage: WKInterfaceImage!
+    @IBOutlet fileprivate var nameInterfaceLabel: WKInterfaceLabel!
+    @IBOutlet fileprivate var twitterInterfaceLabel: WKInterfaceLabel!
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         configureDefault()
     }
@@ -29,10 +29,10 @@ class GlanceController: WKInterfaceController {
         
         let sessions = Session.sessions
         
-        let sessionForTime = sessions.filter { (($0.startTime - 5.minutes)...$0.endTime).contains(NSDate())}
+        let sessionForTime = sessions.filter { (($0.startTime - 5.minutes)...$0.endTime).contains(Date())}
         if let session = sessionForTime.first {
             configureSession(session)
-        } else if NSDate() > (Session.sessions.first!.startTime - 1.day ) {
+        } else if Date() > (Session.sessions.first!.startTime - 1.day ) {
             configureSession(Session.sessions.first!)
         } else {
             configureDefault()
@@ -56,7 +56,7 @@ private extension GlanceController {
         twitterInterfaceLabel.setText("@tryswiftnyc")
     }
     
-    func configureSession(session: Session) {
+    func configureSession(_ session: Session) {
         let info = session.info
         titleInterfaceLabel.setText(info.title)
         speakerInterfaceImage.setImage(info.logo)

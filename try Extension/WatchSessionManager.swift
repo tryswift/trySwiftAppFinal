@@ -14,15 +14,15 @@ import WatchConnectivity
 class WatchSessionManager: NSObject, WCSessionDelegate {
     
     static let sharedManager = WatchSessionManager()
-    private override init() {
+    fileprivate override init() {
         super.init()
     }
     
-    private let session = WCSession.defaultSession()
+    fileprivate let session = WCSession.default()
     
     func startSession() {
         session.delegate = self
-        session.activateSession()
+        session.activate()
     }
 }
 
@@ -32,14 +32,14 @@ extension WatchSessionManager {
     // use when your app needs all the data
     // FIFO queue
     // Receiver
-    func session(session: WCSession, didReceiveUserInfo userInfo: [String : AnyObject]) {
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any]) {
         if let changes = userInfo["changes"] as? [[String: AnyObject]] {
             ChangeManager.updateRecordsFromChanges(changes)
         }
     }
     
     // MARK: File Transfer
-    func session(session: WCSession, didReceiveFile file: WCSessionFile) {
+    func session(_ session: WCSession, didReceive file: WCSessionFile) {
         ChangeManager.updateRecordFromFile(file)
     }
     

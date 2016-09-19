@@ -20,7 +20,7 @@ extension UIColor {
     }
     
     static func trySwiftSubtitleColor() -> UIColor {
-        return .darkGrayColor()
+        return .darkGray()
     }
     
     static func trySwiftAccentColor() -> UIColor {

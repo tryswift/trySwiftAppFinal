@@ -11,7 +11,7 @@ struct Event {
     let sponsor: String
     let logo: String
     let location: String
-    let website: NSURL
+    let website: URL
 }
 
 extension Event {
@@ -21,12 +21,12 @@ extension Event {
         sponsor: "General Assembly",
         logo: "ga_trimmed",
         location: "10 East 21st Street, New York",
-        website: NSURL(string: "https://generalassemb.ly/education/try-swift-workshop/new-york-city/27431")!)
+        website: URL(string: "https://generalassemb.ly/education/try-swift-workshop/new-york-city/27431")!)
     
     static let meetup = Event(
         title: "Pre-conference Meetup",
         sponsor: "Meetup",
         logo: "meetup-square",
         location: "632 Broadway, New York",
-        website: NSURL(string: "http://www.meetup.com/Tech-Talks-at-Meetup/events/233150456/")!)
+        website: URL(string: "http://www.meetup.com/Tech-Talks-at-Meetup/events/233150456/")!)
 }

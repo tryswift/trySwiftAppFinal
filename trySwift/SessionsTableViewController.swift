@@ -13,7 +13,7 @@ import RealmSwift
 class SessionsTableViewController: UITableViewController {
     
     var dataSource: SessionDataSourceProtocol!
-    private let sessionDetailsSegue = "sessionDetailsSegue"
+    fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
     
     var token: NotificationToken?
     
@@ -23,16 +23,16 @@ class SessionsTableViewController: UITableViewController {
         subscribeToChangeNotification()
         configureTableView()
         
-        if traitCollection.forceTouchCapability == .Available {
-            registerForPreviewingWithDelegate(self, sourceView: tableView)
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: tableView)
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
@@ -44,24 +44,24 @@ class SessionsTableViewController: UITableViewController {
 // MARK: - Table view data source
 extension SessionsTableViewController {
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.sessions.count
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.sessions[section].count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(SessionTableViewCell), forIndexPath: indexPath) as! SessionTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SessionTableViewCell), for: indexPath) as! SessionTableViewCell
         
-        let session = dataSource.sessions[indexPath.section][indexPath.row]
+        let session = dataSource.sessions[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
         cell.configure(withSession: session)
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let session = dataSource.sessions[section].first
         return session?.timeString
     }
@@ -70,29 +70,29 @@ extension SessionsTableViewController {
 // MARK: - Table view delegate
 extension SessionsTableViewController {
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let session = dataSource.sessions[indexPath.section][indexPath.row]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let session = dataSource.sessions[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
         switch session.info {
-        case .Talk(let presentation):
+        case .talk(let presentation):
             let sessionDetailsVC = sessionDetails(presentation, session: session)
             navigationController?.pushViewController(sessionDetailsVC, animated: true)
-        case .OfficeHours(let presentation):
+        case .officeHours(let presentation):
             let officeHoursDetailVC = officeHourDetails(presentation.speaker!, session: session)
             navigationController?.pushViewController(officeHoursDetailVC, animated: true)
-        case .Workshop(let event):
+        case .workshop(let event):
             let webDisplayVC = webDisplay(event)
             navigationController?.pushViewController(webDisplayVC, animated: true)
-        case .Meetup(let event):
+        case .meetup(let event):
             let webDisplayVC = webDisplay(event)
             navigationController?.pushViewController(webDisplayVC, animated: true)
-        case .CoffeeBreak(let sponsor):
+        case .coffeeBreak(let sponsor):
             guard let sponsor = sponsor else { break }
             let webDisplayVC = webDisplay(sponsor)
             navigationController?.pushViewController(webDisplayVC, animated: true)
-        case .SponsoredDemo(let sponsor):
+        case .sponsoredDemo(let sponsor):
             let webDisplayVC = webDisplay(sponsor)
             navigationController?.pushViewController(webDisplayVC, animated: true)
-        case .Party(let venue):
+        case .party(let venue):
             let venueVC = venueDetails(venue)
             navigationController?.pushViewController(venueVC, animated: true)
         default:
@@ -103,40 +103,40 @@ extension SessionsTableViewController {
 
 extension SessionsTableViewController: IndicatorInfoProvider {
     
-    func indicatorInfoForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+    func indicatorInfoForPagerTabStrip(_ pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: dataSource.header)
     }
 }
 
 extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
     
-    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        guard let indexPath = tableView.indexPathForRowAtPoint(location) else { return nil }
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
         // This will show the cell clearly and blur the rest of the screen for our peek.
-        previewingContext.sourceRect = tableView.rectForRowAtIndexPath(indexPath)
-        let session = dataSource.sessions[indexPath.section][indexPath.row]
+        previewingContext.sourceRect = tableView.rectForRow(at: indexPath)
+        let session = dataSource.sessions[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
         switch session.info {
-        case .Talk(let presentation):
+        case .talk(let presentation):
             return sessionDetails(presentation, session: session)
-        case .OfficeHours(let presentation):
+        case .officeHours(let presentation):
             return officeHourDetails(presentation.speaker!, session: session)
-        case .Workshop(let event):
+        case .workshop(let event):
             return webDisplay(event)
-        case .Meetup(let event):
+        case .meetup(let event):
             return webDisplay(event)
-        case .CoffeeBreak(let sponsor):
+        case .coffeeBreak(let sponsor):
             guard let sponsor = sponsor else { return nil }
             return webDisplay(sponsor)
-        case .SponsoredDemo(let sponsor):
+        case .sponsoredDemo(let sponsor):
             return webDisplay(sponsor)
-        case .Party(let venue):
+        case .party(let venue):
             return venueDetails(venue)
         default:
             return nil
         }
     }
     
-    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }
 }
@@ -144,7 +144,7 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
 extension SessionsTableViewController {
     
     func configureTableView() {
-        tableView.registerNib(UINib(nibName: String(SessionTableViewCell), bundle: nil), forCellReuseIdentifier: String(SessionTableViewCell))
+        tableView.register(UINib(nibName: String(describing: SessionTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: SessionTableViewCell))
         
         tableView.estimatedRowHeight = 160
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -172,36 +172,36 @@ extension SessionsTableViewController {
 
 private extension SessionsTableViewController {
     
-    func sessionDetails(presentation: Presentation, session: Session) -> UIViewController {
+    func sessionDetails(_ presentation: Presentation, session: Session) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sessionDetailsVC = storyboard.instantiateViewControllerWithIdentifier(String(SessionDetailsViewController)) as! SessionDetailsViewController
+        let sessionDetailsVC = storyboard.instantiateViewController(withIdentifier: String(describing: SessionDetailsViewController)) as! SessionDetailsViewController
         sessionDetailsVC.session = session
         sessionDetailsVC.presentation = presentation
         return sessionDetailsVC
     }
     
-    func officeHourDetails(speaker: Speaker, session: Session) -> UIViewController {
+    func officeHourDetails(_ speaker: Speaker, session: Session) -> UIViewController {
         let officeHoursVC = OfficeHoursDetailViewController()
         officeHoursVC.speaker = speaker
         officeHoursVC.session = session
         return officeHoursVC
     }
     
-    func webDisplay(event: Event) -> UIViewController {
+    func webDisplay(_ event: Event) -> UIViewController {
         let webViewController = WebDisplayViewController()
         webViewController.url = event.website
         webViewController.displayTitle = event.title
         return webViewController
     }
     
-    func webDisplay(sponsor: Sponsor) -> UIViewController {
+    func webDisplay(_ sponsor: Sponsor) -> UIViewController {
         let webViewController = WebDisplayViewController()
-        webViewController.url = NSURL(string: sponsor.url)
+        webViewController.url = URL(string: sponsor.url)
         webViewController.displayTitle = sponsor.name
         return webViewController
     }
     
-    func venueDetails(venue: Venue) -> UIViewController {
+    func venueDetails(_ venue: Venue) -> UIViewController {
         let venueDetailsVC = VenueTableViewController()
         venueDetailsVC.venue = venue
         return venueDetailsVC
