@@ -16,10 +16,7 @@ class OrganizersTableViewController: UITableViewController {
         super.viewDidLoad()
 
         title = "Organizer"
-        
-        tableView.register(UINib(nibName: String(describing: OrganizerTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: OrganizerTableViewCell.self))
-        tableView.estimatedRowHeight = 83
-        tableView.rowHeight = UITableViewAutomaticDimension
+        configureTableView()
     }
 }
 
@@ -35,7 +32,7 @@ extension OrganizersTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrganizerTableViewCell.self), for: indexPath) as! OrganizerTableViewCell
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as OrganizerTableViewCell
         
         cell.configure(withOrganizer: organizers[(indexPath as NSIndexPath).row])
         
@@ -47,5 +44,14 @@ extension OrganizersTableViewController {
         let username = organizer.twitter
         followUser(username)
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+fileprivate extension OrganizersTableViewController {
+    
+    func configureTableView() {
+        tableView.register(OrganizerTableViewCell.self)
+        tableView.estimatedRowHeight = 83
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 }

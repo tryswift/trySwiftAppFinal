@@ -79,6 +79,9 @@
 		FA65B5C21C79BE1D00DCAF0B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C11C79BE1D00DCAF0B /* Session.swift */; };
 		FA65B5C51C79C9BF00DCAF0B /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C41C79C9BF00DCAF0B /* Speaker.swift */; };
 		FA65B5C71C79C9E200DCAF0B /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C61C79C9E200DCAF0B /* Presentation.swift */; };
+		FAA54F101D912FF300EC9E80 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F0F1D912FF300EC9E80 /* ReusableView.swift */; };
+		FAA54F121D91305200EC9E80 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F111D91305200EC9E80 /* NibLoadableView.swift */; };
+		FAA54F141D9130F900EC9E80 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */; };
 		FABA73BE1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */; };
 		FAC936E41D68F2CE00E2D6B0 /* ChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC936E31D68F2CE00E2D6B0 /* ChangeManager.swift */; };
 		FAED14CB1C7C1A1000F11E25 /* SessionTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */; };
@@ -245,6 +248,9 @@
 		FA65B5C11C79BE1D00DCAF0B /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		FA65B5C41C79C9BF00DCAF0B /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		FA65B5C61C79C9E200DCAF0B /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		FAA54F0F1D912FF300EC9E80 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		FAA54F111D91305200EC9E80 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeHoursDetailViewController.swift; sourceTree = "<group>"; };
 		FAC936E31D68F2CE00E2D6B0 /* ChangeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeManager.swift; sourceTree = "<group>"; };
 		FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableRowController.swift; sourceTree = "<group>"; };
@@ -399,6 +405,8 @@
 				FAF1DE171D5FDD3B00D710C3 /* VenueHeaderTableViewCell */,
 				FAF1DE1C1D5FE15200D710C3 /* MapTableViewCell */,
 				FA20176C1D69D81B00B6E158 /* WifiInfoTableViewCell */,
+				FAA54F0F1D912FF300EC9E80 /* ReusableView.swift */,
+				FAA54F111D91305200EC9E80 /* NibLoadableView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -411,6 +419,7 @@
 				FA65B5941C7274EE00DCAF0B /* UIImageExtension.swift */,
 				499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */,
 				FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */,
+				FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -1056,6 +1065,7 @@
 				499BD62A1D05910200E74061 /* Twitter.swift in Sources */,
 				FA39E90F1C6C81870074B6BE /* SponsorsViewController.swift in Sources */,
 				FA39E8D71C6B05980074B6BE /* Session.swift in Sources */,
+				FAA54F141D9130F900EC9E80 /* UITableViewExtension.swift in Sources */,
 				FABA73BE1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift in Sources */,
 				FAF1DE151D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift in Sources */,
 				FA39E92C1C6D310E0074B6BE /* TwitterFollowTableViewCell.swift in Sources */,
@@ -1068,11 +1078,13 @@
 				FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */,
 				FAF1DE1A1D5FE14500D710C3 /* MapTableViewCell.swift in Sources */,
 				FA39E91D1C6C8D100074B6BE /* WebDisplayViewController.swift in Sources */,
+				FAA54F101D912FF300EC9E80 /* ReusableView.swift in Sources */,
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
 				FA39E8DD1C6B09DF0074B6BE /* Sponsor.swift in Sources */,
 				FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */,
 				FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */,
 				FA39E9161C6C83A40074B6BE /* SponsorTableViewCell.swift in Sources */,
+				FAA54F121D91305200EC9E80 /* NibLoadableView.swift in Sources */,
 				FAF1DE2D1D623B2C00D710C3 /* Venue.swift in Sources */,
 				FA39E8DB1C6B09CE0074B6BE /* Speaker.swift in Sources */,
 				FA65B5951C7274EE00DCAF0B /* UIImageExtension.swift in Sources */,

@@ -30,7 +30,7 @@ class SpeakersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: String(describing: SpeakerTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SpeakerTableViewCell.self))
+        tableView.register(SpeakerTableViewCell.self)
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -67,7 +67,7 @@ extension SpeakersViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SpeakerTableViewCell.self), for: indexPath) as! SpeakerTableViewCell
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SpeakerTableViewCell
         
         cell.configure(withSpeaker: speakers[indexPath.row])
         
