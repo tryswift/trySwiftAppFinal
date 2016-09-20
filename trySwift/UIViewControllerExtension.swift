@@ -8,6 +8,7 @@
 
 import Foundation
 import SafariServices
+import MessageUI
 
 extension UIViewController: SFSafariViewControllerDelegate {
     
@@ -40,5 +41,30 @@ extension UIViewController: TwitterFollowDelegate {
                 openSafariViewController(withURL: twitterURL)
             }
         }
+    }
+}
+
+extension UIViewController: MFMailComposeViewControllerDelegate {
+    
+    func sendMail(withConfiguration configuration: MailConfiguration) {
+        if MFMailComposeViewController.canSendMail() {
+            let mailViewController: MFMailComposeViewController = {
+                let mailViewController = MFMailComposeViewController()
+                mailViewController.mailComposeDelegate = self
+                mailViewController.setToRecipients(configuration.recipients)
+                mailViewController.setSubject(configuration.subject)
+                return mailViewController
+            }()
+            
+            present(mailViewController, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Could not send mail", message: "Please reach out to us via \(configuration.recipients.first ?? "")", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    public func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        dismiss(animated: true, completion: nil)
     }
 }

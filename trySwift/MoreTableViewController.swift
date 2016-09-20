@@ -12,8 +12,9 @@ class MoreTableViewController: UITableViewController {
     
     fileprivate let cellIdentifier = "BasicCell"
     
+
     fileprivate enum MoreSection: Int {
-        case eventDetails, acknowledgements
+        case eventDetails, acknowledgements, feedback, slack
     }
     
     fileprivate enum EventDetailsRow: Int {
@@ -22,6 +23,14 @@ class MoreTableViewController: UITableViewController {
     
     fileprivate enum AcknowledgementsRow: Int {
         case organizers, libraries
+    }
+    
+    fileprivate enum FeedbackRow: Int {
+        case app, conference
+    }
+    
+    fileprivate enum SlackRow: Int {
+        case open
     }
     
     override func awakeFromNib() {
@@ -47,7 +56,7 @@ class MoreTableViewController: UITableViewController {
 extension MoreTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,6 +65,10 @@ extension MoreTableViewController {
             return 3
         case .acknowledgements:
             return 2
+        case .feedback:
+            return 2
+        case .slack:
+            return 1
         }
     }
     
@@ -79,6 +92,18 @@ extension MoreTableViewController {
             case .libraries:
                 cell.textLabel?.text = "Acknowledgements"
             }
+        case .feedback:
+            switch FeedbackRow(rawValue: indexPath.row)! {
+            case .app:
+                cell.textLabel?.text = "App feedback"
+            case .conference:
+                cell.textLabel?.text = "Conference feedback"
+            }
+        case .slack:
+            switch SlackRow(rawValue: indexPath.row)! {
+            case .open:
+                cell.textLabel?.text = "Open Slack"
+            }
         }
         
         return cell
@@ -101,6 +126,18 @@ extension MoreTableViewController {
                 showOrganizers()
             case .libraries:
                 showLibraries()
+            }
+        case .feedback:
+            switch FeedbackRow(rawValue: indexPath.row)! {
+            case .app:
+                showAppFeedback()
+            case .conference:
+                showConferenceFeedback()
+            }
+        case .slack:
+            switch SlackRow(rawValue: indexPath.row)! {
+            case .open:
+                openSlack()
             }
         }
         
@@ -144,5 +181,26 @@ private extension MoreTableViewController {
         }
         
         navigationController?.pushViewController(acknowledgementesViewController, animated: true)
+    }
+    
+    func showAppFeedback() {
+        let url = URL(string: "https://github.com/tryswift/trySwiftNYC/issues")!
+        openSafariViewController(withURL: url)
+    }
+    
+    func showConferenceFeedback() {
+        let configuration = MailConfiguration(recipients: ["info@tryswiftnyc.com"], subject: "Conference feedback via try! NYC app")
+        sendMail(withConfiguration: configuration)
+    }
+    
+    func openSlack() {
+        let application = UIApplication.shared
+        let appURL = URL(string: "slack://open")!
+        if application.canOpenURL(appURL) {
+            application.openURL(appURL)
+        } else {
+            let url = URL(string: "https://tryswiftnyc.slack.com")!
+            openSafariViewController(withURL: url)
+        }
     }
 }
