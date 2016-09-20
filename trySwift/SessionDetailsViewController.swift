@@ -39,19 +39,19 @@ extension SessionDetailsViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch PresentationDetail(rawValue: (indexPath as NSIndexPath).row)! {
         case .header:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SessionHeaderTableViewCell.self), for: indexPath) as! SessionHeaderTableViewCell
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SessionHeaderTableViewCell
             cell.configure(withSession: session)
             return cell
         case .speakerInfo:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SpeakerTableViewCell.self), for: indexPath) as! SpeakerTableViewCell
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SpeakerTableViewCell
             cell.configure(withSpeaker: presentation.speaker!, selectionEnabled: false, accessoryEnabled: false)
             return cell
         case .summary:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextTableViewCell.self), for: indexPath) as! TextTableViewCell
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
             cell.configure(withText: presentation.summary)
             return cell
         case .twitter:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TwitterFollowTableViewCell.self), for: indexPath) as! TwitterFollowTableViewCell
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TwitterFollowTableViewCell
             cell.configure(withUsername: presentation.speaker!.twitter, delegate: self)
             return cell
         }
@@ -61,10 +61,10 @@ extension SessionDetailsViewController {
 extension SessionDetailsViewController {
     
     func configureTableView() {
-        tableView.register(UINib(nibName: String(describing: SessionHeaderTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SessionHeaderTableViewCell.self))
-        tableView.register(UINib(nibName: String(describing: SpeakerTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SpeakerTableViewCell.self))
-        tableView.register(UINib(nibName: String(describing: TextTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TextTableViewCell.self))
-        tableView.register(UINib(nibName: String(describing: TwitterFollowTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TwitterFollowTableViewCell.self))
+        tableView.register(SessionHeaderTableViewCell.self)
+        tableView.register(SpeakerTableViewCell.self)
+        tableView.register(TextTableViewCell.self)
+        tableView.register(TwitterFollowTableViewCell.self)
         
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension

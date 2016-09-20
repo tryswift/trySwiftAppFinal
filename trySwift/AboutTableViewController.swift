@@ -18,16 +18,8 @@ class AboutTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "About"
-        
-        tableView.register(UINib(nibName: String(describing: OrganizerTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: OrganizerTableViewCell.self))
-        tableView.register(UINib(nibName: String(describing: TextTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TextTableViewCell.self))
-        tableView.register(UINib(nibName: String(describing: TwitterFollowTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TwitterFollowTableViewCell.self))
-        
-        tableView.estimatedRowHeight = 83
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.separatorStyle = .none
+        configureTableView()
     }
 }
 
@@ -43,22 +35,34 @@ extension AboutTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch AboutInfo(rawValue: (indexPath as NSIndexPath).row)! {
+        switch AboutInfo(rawValue: (indexPath as IndexPath).row)! {
         case .header:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrganizerTableViewCell.self), for: indexPath) as! OrganizerTableViewCell
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as OrganizerTableViewCell
             cell.configure(withConference: trySwift)
             cell.selectionStyle = .none
             cell.accessoryType = .none
             return cell
         case .detail:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextTableViewCell.self), for: indexPath) as! TextTableViewCell
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
             cell.configure(withText: trySwift.description)
             return cell
         case .twitter:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TwitterFollowTableViewCell.self), for: indexPath) as! TwitterFollowTableViewCell
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TwitterFollowTableViewCell
             cell.configure(withUsername: trySwift.twitter, delegate: self)
             return cell
         }
     }
+}
+
+fileprivate extension AboutTableViewController {
     
+    func configureTableView() {
+        tableView.register(OrganizerTableViewCell.self)
+        tableView.register(TextTableViewCell.self)
+        tableView.register(TwitterFollowTableViewCell.self)
+        
+        tableView.estimatedRowHeight = 83
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.separatorStyle = .none
+    }
 }

@@ -53,7 +53,7 @@ extension SessionsTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SessionTableViewCell.self), for: indexPath) as! SessionTableViewCell
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SessionTableViewCell
         
         let session = dataSource.sessions[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
         cell.configure(withSession: session)
@@ -144,7 +144,7 @@ extension SessionsTableViewController {
     
     func configureTableView() {
         
-        tableView.register(UINib(nibName: String(describing: SessionTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing:SessionTableViewCell.self))
+        tableView.register(SessionTableViewCell.self)
         
         tableView.estimatedRowHeight = 160
         tableView.rowHeight = UITableViewAutomaticDimension
