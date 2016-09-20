@@ -11,21 +11,21 @@ import UIKit
 struct Sponsor {
     
     enum Level: Int, CustomStringConvertible {
-        case Platinum, Gold, Silver, Diversity, Student, Event
+        case platinum, gold, silver, diversity, student, event
         
         var description: String {
             switch self {
-            case .Platinum:
+            case .platinum:
                 return "Platinum Sponsor"
-            case .Gold:
+            case .gold:
                 return "Gold Sponsors"
-            case .Silver:
+            case .silver:
                 return "Silver Sponsors"
-            case .Diversity:
+            case .diversity:
                 return "Diversity Sponsors"
-            case .Student:
+            case .student:
                 return "Student Sponsor"
-            case .Event:
+            case .event:
                 return "Event Partners"
             }
         }
@@ -48,7 +48,7 @@ extension Sponsor {
             displayURL: "ibm.com",
             twitter: "IBM",
             logo: UIImage(named: "ibm"),
-            level: .Platinum)
+            level: .platinum)
     ]
     
     static let goldSponsors = [
@@ -58,63 +58,63 @@ extension Sponsor {
             displayURL: "buddybuild.com",
             twitter: "buddybuild",
             logo: UIImage(named: "buddybuild"),
-            level: .Gold),
+            level: .gold),
         Sponsor(
             name: "contentful",
             url: "https://www.contentful.com",
             displayURL: "contentful.com",
             twitter: "contentful",
             logo: UIImage(named: "contentful"),
-            level: .Gold),
+            level: .gold),
         Sponsor(
             name: "Domo",
             url: "https://www.domo.com",
             displayURL: "domo.com",
             twitter: "Domotalk",
             logo: UIImage(named: "domo"),
-            level: .Gold),
+            level: .gold),
         Sponsor(
             name: "Firebase",
             url: "https://www.firebase.com/",
             displayURL: "firebase.com",
             twitter: "Firebase",
             logo: UIImage(named: "firebase"),
-            level: .Gold),
+            level: .gold),
         Sponsor(
             name: "Hired",
             url: "https://hired.com/",
             displayURL: "hired.com",
             twitter: "Hired_HQ",
             logo: UIImage(named: "hired"),
-            level: .Gold),
+            level: .gold),
         Sponsor(
             name: "Lyft",
             url: "https://www.lyft.com",
             displayURL: "lyft.com",
             twitter: "lyft",
             logo: UIImage(named: "lyft"),
-            level: .Gold),
+            level: .gold),
         Sponsor(
             name: "Perfect.org",
             url: "https://perfect.org",
             displayURL: "perfect.org",
             twitter: "perfectlysoft",
             logo: UIImage(named: "perfectorg"),
-            level: .Gold),
+            level: .gold),
         Sponsor(
             name: "ThoughtWorks",
             url: "https://www.thoughtworks.com",
             displayURL: "thoughtworks.com",
             twitter: "thoughtworks",
             logo: UIImage(named: "thoughtworks"),
-            level: .Gold),
+            level: .gold),
         Sponsor(
             name: "Twilio",
             url: "https://www.twilio.com",
             displayURL: "twilio.com",
             twitter: "twilio",
             logo: UIImage(named: "twilio"),
-            level: .Gold)
+            level: .gold)
     ]
     
     static let silverSponsors = [
@@ -124,14 +124,14 @@ extension Sponsor {
             displayURL: "aol.com",
             twitter: "AOL",
             logo: UIImage(named: "aol"),
-            level: .Silver),
+            level: .silver),
         Sponsor(
             name: "Small Planet",
             url: "https://www.smallplanet.com/",
             displayURL: "smallplanet.com",
             twitter: "smallplanetapps",
             logo: UIImage(named: "smallplanet"),
-            level: .Silver)
+            level: .silver)
     ]
     
     static let diversitySponsors = [
@@ -141,70 +141,70 @@ extension Sponsor {
             displayURL: "dominos.com",
             twitter: "dominos",
             logo: UIImage(named: "dominos"),
-            level: .Diversity),
+            level: .diversity),
         Sponsor(
             name: "Etsy",
             url: "https://www.etsy.com",
             displayURL: "etsy.com",
             twitter: "Etsy",
             logo: UIImage(named: "etsy"),
-            level: .Diversity),
+            level: .diversity),
         Sponsor(
             name: "Instagram",
             url: "https://www.instagram.com",
             displayURL: "instagram.com",
             twitter: "instagram",
             logo: UIImage(named: "instagram"),
-            level: .Diversity),
+            level: .diversity),
         Sponsor(
             name: "Meetup",
             url: "https://www.meetup.com",
             displayURL: "meetup.com",
             twitter: "Meetup",
             logo: UIImage(named: "meetup"),
-            level: .Diversity),
+            level: .diversity),
         Sponsor(
             name: "The New York Times Developers",
             url: "https://developer.nytimes.com/",
             displayURL: "developer.nytimes.com",
             twitter: "nytdevs",
             logo: UIImage(named: "nyt"),
-            level: .Diversity),
+            level: .diversity),
         Sponsor(
             name: "Swift Studies",
             url: "http://www.swift-studies.com",
             displayURL: "swift-studies.com",
             twitter: "Swift_Studies",
             logo: UIImage(named: "swift_studies"),
-            level: .Diversity),
+            level: .diversity),
         Sponsor(
             name: "Technically Speaking",
             url: "https://tinyletter.com/techspeak",
             displayURL: "tinyletter.com/techspeak",
             twitter: "techspeakdigest",
             logo: UIImage(named: "technically_speaking"),
-            level: .Diversity),
+            level: .diversity),
         Sponsor(
             name: "thoughtbot",
             url: "https://thoughtbot.com/services/ios-development",
             displayURL: "thoughtbot.com",
             twitter: "thoughtbot",
             logo: UIImage(named: "thoughtbot"),
-            level: .Diversity),
+            level: .diversity),
         Sponsor(
             name: "Twitter",
             url: "https://twitter.com",
             displayURL: "twitter.com",
             twitter: "twitter",
             logo: UIImage(named: "twitter"),
-            level: .Diversity),
+            level: .diversity),
         Sponsor(
             name: "XO Group",
             url: "https://xogroupinc.com/",
             displayURL: "xogroupinc.com",
             twitter: "XOGroupInc",
             logo: UIImage(named: "xogroup"),
-            level: .Diversity)
+            level: .diversity)
     ]
     
     static let studentSponsors = [
@@ -214,7 +214,7 @@ extension Sponsor {
             displayURL: "jetbrains.com",
             twitter: "jetbrains",
             logo: UIImage(named: "jetbrains"),
-            level: .Student)
+            level: .student)
     ]
     
     static let eventPartners = [
@@ -224,48 +224,48 @@ extension Sponsor {
             displayURL: "airplanemo.de",
             twitter: "airplanemode",
             logo: UIImage(named: "airplane_mode"),
-            level: .Event),
+            level: .event),
         Sponsor(
             name: "General Assembly",
             url: "https://generalassemb.ly/",
             displayURL: "generalassemb.ly",
             twitter: "GA",
             logo: UIImage(named: "ga"),
-            level: .Event),
+            level: .event),
         Sponsor(
             name: "LiuLiShuo",
             url: "https://www.liulishuo.com",
             displayURL: "liulishuo.com",
             twitter: nil,
             logo: UIImage(named: "liulishuo"),
-            level: .Event),
+            level: .event),
         Sponsor(
             name: "Realm",
             url: "https://realm.io",
             displayURL: "realm.io",
             twitter: "realm",
             logo: UIImage(named: "realm"),
-            level: .Event),
+            level: .event),
         Sponsor(
             name: "SoundCloud",
             url: "https://soundcloud.com/",
             displayURL: "soundcloud.com",
             twitter: "SoundCloud",
             logo: UIImage(named: "soundcloud"),
-            level: .Event),
+            level: .event),
         Sponsor(
             name: "SpotHero",
             url: "https://spothero.com",
             displayURL: "spothero.com",
             twitter: "SpotHero",
             logo: UIImage(named: "spothero"),
-            level: .Event),
+            level: .event),
         Sponsor(
             name: "Stanfy",
             url: "https://stanfy.com",
             displayURL: "stanfy.com",
             twitter: "stanfy",
             logo: UIImage(named: "stanfy"),
-            level: .Event)
+            level: .event)
     ]
 }

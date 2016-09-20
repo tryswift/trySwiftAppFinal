@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Haneke
 import Toucan
 
 class SessionTableViewCell: UITableViewCell {
@@ -39,11 +38,11 @@ class SessionTableViewCell: UITableViewCell {
         sessionImageView.image = Toucan(image: info.logo).maskWithEllipse().image
     
         if info.selectable {
-            accessoryType = .DisclosureIndicator
-            selectionStyle = .Default
+            accessoryType = .disclosureIndicator
+            selectionStyle = .default
         } else {
-            accessoryType = .None
-            selectionStyle = .None
+            accessoryType = .none
+            selectionStyle = .none
         }
 
         setNeedsUpdateConstraints()

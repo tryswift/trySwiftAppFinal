@@ -9,21 +9,21 @@
 import UIKit
 
 protocol TwitterFollowDelegate: class {
-    func followUser(username: String)
+    func followUser(_ username: String)
 }
 
 class TwitterFollowTableViewCell: UITableViewCell {
     
     @IBOutlet weak var followButton: UIButton!
     
-    private var username: String?
-    private weak var delegate: TwitterFollowDelegate?
+    fileprivate var username: String?
+    fileprivate weak var delegate: TwitterFollowDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         followButton.layer.borderWidth = 1.0
-        followButton.layer.borderColor = UIColor.twitterBlue().CGColor
+        followButton.layer.borderColor = UIColor.twitterBlue().cgColor
         followButton.tintColor = .twitterBlue()
         followButton.layer.cornerRadius = 3.0
     }
@@ -32,13 +32,13 @@ class TwitterFollowTableViewCell: UITableViewCell {
         self.username = username
         self.delegate = delegate
         
-        followButton.setTitle("Follow @\(username)", forState: .Normal)
+        followButton.setTitle("Follow @\(username)", for: UIControlState())
         
         setNeedsUpdateConstraints()
         layoutIfNeeded()
     }
     
-    @IBAction func onFollowButtonTap(sender: AnyObject) {
+    @IBAction func onFollowButtonTap(_ sender: AnyObject) {
         if let username = username {
             delegate?.followUser(username)
         }

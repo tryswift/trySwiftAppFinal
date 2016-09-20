@@ -10,11 +10,11 @@ import WatchKit
 
 class SessionTableRowController: NSObject {
 
-    @IBOutlet private var titleInterfaceLabel: WKInterfaceLabel!
-    @IBOutlet private var subtitleInterfaceLabel: WKInterfaceLabel!
+    @IBOutlet fileprivate var titleInterfaceLabel: WKInterfaceLabel!
+    @IBOutlet fileprivate var subtitleInterfaceLabel: WKInterfaceLabel!
     @IBOutlet var timeInterfaceLabel: WKInterfaceLabel!
     
-    func configure(session: Session) {
+    func configure(_ session: Session) {
 
         let info = session.info
         titleInterfaceLabel.setText(info.title)

@@ -23,7 +23,7 @@ class WifiInfoTableViewCell: UITableViewCell {
     func configure(withWifiInfo wifiInfo: WifiInfo) {
         networkNameLabel.text = "Wifi: \(wifiInfo.networkName)"
         
-        if let username = wifiInfo.username, password = wifiInfo.password {
+        if let username = wifiInfo.username, let password = wifiInfo.password {
             usernameLabel.text = "username: \(username)"
             passwordLabel.text = "password: \(password)"
         } else {

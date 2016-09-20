@@ -14,7 +14,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     func applicationDidFinishLaunching() {
         insertDefaultData()
         WatchSessionManager.sharedManager.startSession()
-        NSTimeZone.setDefaultTimeZone(NSTimeZone(abbreviation: "EST")!)
+        NSTimeZone.default = TimeZone(abbreviation: "EST")!
     }
 
     func applicationDidBecomeActive() {

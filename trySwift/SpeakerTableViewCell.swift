@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Haneke
 import Toucan
 
 class SpeakerTableViewCell: UITableViewCell {
@@ -29,11 +28,11 @@ class SpeakerTableViewCell: UITableViewCell {
         speakerTwitterLabel.text = "@\(speaker.twitter)"
         
         if !selectionEnabled {
-            selectionStyle = .None
+            selectionStyle = .none
         }
         
         if !accessoryEnabled {
-            accessoryType = .None
+            accessoryType = .none
         }
         
         setNeedsUpdateConstraints()

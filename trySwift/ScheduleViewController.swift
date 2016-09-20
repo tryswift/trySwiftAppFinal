@@ -20,16 +20,15 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buttonBarView.registerNib(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
-        buttonBarView.backgroundColor = .whiteColor()
-        settings.style.selectedBarBackgroundColor = .whiteColor()
+        buttonBarView.register(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
+        buttonBarView.backgroundColor = .white
+        settings.style.selectedBarBackgroundColor = .white
         buttonBarView.selectedBar.backgroundColor = .trySwiftAccentColor()
         
         moveToCorrectDate()
     }
     
-    override func viewControllersForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        
+    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let sessionDay1ViewController = SessionsTableViewController()
         sessionDay1ViewController.dataSource = SessionDataSourceDay1()
         
@@ -40,22 +39,23 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         sessionDay3ViewController.dataSource = SessionDataSourceDay3()
         
         return [sessionDay1ViewController, sessionDay2ViewController, sessionDay3ViewController]
+
     }
 }
 
 private extension ScheduleViewController {
     
     func moveToCorrectDate() {
-        let today = NSDate.today()
+        let today = Date.today()
         
-        let day2 = NSDate.date(year: 2016, month: 9, day: 1)
+        let day2 = Date.date(year: 2016, month: 9, day: 1)
         if today == day2 {
-            moveToViewControllerAtIndex(1)
+            moveToViewController(at: 1)
         }
         
-        let day3 = NSDate.date(year: 2016, month: 9, day: 2)
+        let day3 = Date.date(year: 2016, month: 9, day: 2)
         if today == day3 {
-            moveToViewControllerAtIndex(2)
+            moveToViewController(at: 2)
         }
     }
 }

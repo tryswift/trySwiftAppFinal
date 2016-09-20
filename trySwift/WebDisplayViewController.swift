@@ -9,24 +9,24 @@
 import UIKit
 import WebKit
 
-private let application = UIApplication.sharedApplication()
+private let application = UIApplication.shared
 
 class WebDisplayViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    var url: NSURL!
+    var url: URL!
     var displayTitle: String?
-    private var webView: WKWebView!
+    fileprivate var webView: WKWebView!
     
     var showNetworkActivityIndicator: Bool = false {
         didSet {
             if showNetworkActivityIndicator {
                 activityIndicator.startAnimating()
-                application.networkActivityIndicatorVisible = true
+                application.isNetworkActivityIndicatorVisible = true
             } else {
                 activityIndicator.stopAnimating()
-                application.networkActivityIndicatorVisible = false
+                application.isNetworkActivityIndicatorVisible = false
             }
         }
     }
@@ -36,7 +36,7 @@ class WebDisplayViewController: UIViewController {
         title = displayTitle
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         showNetworkActivityIndicator = false
     }
@@ -49,23 +49,23 @@ class WebDisplayViewController: UIViewController {
         webViewFrame.size.height = webViewFrame.size.height - tabBarHeight // To prevent the webpage sticking under the tabbar.
         
         webView = WKWebView(frame: webViewFrame)
-        webView.subviews.forEach { $0.backgroundColor = .clearColor() }
+        webView.subviews.forEach { $0.backgroundColor = UIColor.clear }
         webView.navigationDelegate = self
         webView.allowsLinkPreview = true
         view.insertSubview(webView, aboveSubview: activityIndicator)
         
-        webView.loadRequest(NSURLRequest(URL: url))
+        webView.load(URLRequest(url: url))
         showNetworkActivityIndicator = true
     }
 }
 
 extension WebDisplayViewController: WKNavigationDelegate {
     
-    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         showNetworkActivityIndicator = false
     }
     
-    func webView(webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: NSError) {
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         print(error.localizedDescription)
         showNetworkActivityIndicator = false
     }

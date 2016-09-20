@@ -14,18 +14,18 @@ struct ChangeManager {
     static let lastChangedDataNotification = "LastChangedDataNotification"
     
     static func syncChanges() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
-            let publicDB = CKContainer.defaultContainer().publicCloudDatabase
-            guard let lastChangeDate = defaults.objectForKey(ChangeManager.lastChangedDataNotification) as? NSDate else {
-                let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
-                defaults.setObject(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
+        let defaults = UserDefaults.standard
+        DispatchQueue.global().async {
+            let publicDB = CKContainer.default().publicCloudDatabase
+            guard let lastChangeDate = defaults.object(forKey: ChangeManager.lastChangedDataNotification) as? Date else {
+                let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+                defaults.set(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
                 return
             }
             
-            let predicate = NSPredicate(format: "creationDate > %@", lastChangeDate)
+            let predicate = NSPredicate(format: "creationDate > %@", lastChangeDate as CVarArg)
             let query = CKQuery(recordType: "Change", predicate: predicate)
-            publicDB.performQuery(query, inZoneWithID: nil) { result, error in
+            publicDB.perform(query, inZoneWith: nil) { result, error in
                 
                 guard let result = result else {
                     // will update again on future launch
@@ -35,24 +35,24 @@ struct ChangeManager {
                 result.forEach {
                     updateRecord($0)
                 }
-                defaults.setObject(NSDate(), forKey: ChangeManager.lastChangedDataNotification)
+                defaults.set(Date(), forKey: ChangeManager.lastChangedDataNotification)
             }
         }
     }
     
     static func syncWatchChanges() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let publicDB = CKContainer.defaultContainer().publicCloudDatabase
-            guard let lastChangeDate = defaults.objectForKey(WatchSessionManager.watchDataUpdatedNotification) as? NSDate else {
-                let appSubmitionDate = NSDate.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
-                defaults.setObject(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
+        let defaults = UserDefaults.standard
+        DispatchQueue.global().async {
+            let publicDB = CKContainer.default().publicCloudDatabase
+            guard let lastChangeDate = defaults.object(forKey: WatchSessionManager.watchDataUpdatedNotification) as? Date else {
+                let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+                defaults.set(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
                 return
             }
             
-            let predicate = NSPredicate(format: "creationDate > %@", lastChangeDate)
+            let predicate = NSPredicate(format: "creationDate > %@", lastChangeDate as CVarArg)
             let query = CKQuery(recordType: "Change", predicate: predicate)
-            publicDB.performQuery(query, inZoneWithID: nil) { result, error in
+            publicDB.perform(query, inZoneWith: nil) { result, error in
                 
                 guard let result = result else {
                     // will update again on future launch
@@ -73,18 +73,18 @@ struct ChangeManager {
                     }
                     
                     let changeDict: [String : AnyObject] = [
-                        "creationDate" : creationDate,
-                        "object": object,
-                        "id": id,
-                        "field": field,
-                        "newValue": newValue]
+                        "creationDate" : creationDate as AnyObject,
+                        "object": object as AnyObject,
+                        "id": id as AnyObject,
+                        "field": field as AnyObject,
+                        "newValue": newValue as AnyObject]
                     
                     if field == "imagePath" {
                         guard let imageAsset = $0["image"] as? CKAsset else { return }
-                        WatchSessionManager.sharedManager.transferFile(imageAsset.fileURL, metadata: changeDict)
+                        _ = WatchSessionManager.sharedManager.transferFile(imageAsset.fileURL, metadata: changeDict)
                     } else {
                         changes.append(changeDict)
-                        WatchSessionManager.sharedManager.transferUserInfo(["changes" : changes])
+                        _ = WatchSessionManager.sharedManager.transferUserInfo(["changes" : changes as AnyObject])
                     }
                 }
             }
@@ -94,7 +94,7 @@ struct ChangeManager {
 
 private extension ChangeManager {
     
-    static func updateRecord(record: CKRecord) {
+    static func updateRecord(_ record: CKRecord) {
         guard let object = record["object"] as? String,
             let id = record["id"] as? Int,
             let field = record["field"] as? String,
@@ -105,7 +105,7 @@ private extension ChangeManager {
         
         let realm = try! Realm()
         if object == "Speaker" {
-            if let speaker = realm.objects(Speaker).filter("id == \(id)").first {
+            if let speaker = realm.objects(Speaker.self).filter("id == \(id)").first {
                 if field == "imagePath" {
                     guard let imageAsset = record["image"] as? CKAsset else {
                         return
@@ -123,7 +123,7 @@ private extension ChangeManager {
                 }
             }
         } else if object == "Presentation" {
-            if let presentation = realm.objects(Presentation).filter("id == \(id)").first {
+            if let presentation = realm.objects(Presentation.self).filter("id == \(id)").first {
                 try! realm.write {
                     presentation[field] = newValue
                 }
