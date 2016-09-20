@@ -10,14 +10,14 @@ import UIKit
 
 class OrganizersTableViewController: UITableViewController {
 
-    private let organizers = Organizer.organizers
+    fileprivate let organizers = Organizer.organizers
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Organizer"
         
-        tableView.registerNib(UINib(nibName: String(OrganizerTableViewCell), bundle: nil), forCellReuseIdentifier: String(OrganizerTableViewCell))
+        tableView.register(UINib(nibName: String(describing: OrganizerTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: OrganizerTableViewCell.self))
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -26,26 +26,26 @@ class OrganizersTableViewController: UITableViewController {
 // MARK: - Table view data source
 extension OrganizersTableViewController {
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return organizers.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(OrganizerTableViewCell), forIndexPath: indexPath) as! OrganizerTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrganizerTableViewCell.self), for: indexPath) as! OrganizerTableViewCell
         
-        cell.configure(withOrganizer: organizers[indexPath.row])
+        cell.configure(withOrganizer: organizers[(indexPath as NSIndexPath).row])
         
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let organizer = organizers[indexPath.row]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let organizer = organizers[(indexPath as NSIndexPath).row]
         let username = organizer.twitter
         followUser(username)
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

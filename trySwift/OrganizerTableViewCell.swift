@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Haneke
 import Toucan
 
 class OrganizerTableViewCell: UITableViewCell {
@@ -29,24 +28,16 @@ class OrganizerTableViewCell: UITableViewCell {
         organizerTwitterLabel.text = "@\(organizer.twitter)"
         
         if !selectionEnabled {
-            selectionStyle = .None
+            selectionStyle = .none
         }
         
         if !accessoryEnabled {
-            accessoryType = .None
+            accessoryType = .none
         }
     }
     
     func configure(withConference conference: Conference) {
-        if let
-            imageURLString = conference.imageURL,
-            imageURL = NSURL(string: imageURLString) {
-            organizerImageView.hnk_setImageFromURL(imageURL, placeholder: conference.image) { image in
-                self.organizerImageView.image = Toucan(image: image).maskWithEllipse().image
-            }
-        } else {
-            organizerImageView.image = conference.image
-        }
+        organizerImageView.image = conference.image
         organizerNameLabel.text = conference.name
         organizerTwitterLabel.text = "@\(conference.twitter)"
         

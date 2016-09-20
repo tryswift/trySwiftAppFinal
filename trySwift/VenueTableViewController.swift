@@ -12,8 +12,8 @@ class VenueTableViewController: UITableViewController {
 
     var venue: Venue!
     
-    private enum VenueDetail: Int {
-        case Header, Wifi, Address, Map, Twitter
+    fileprivate enum VenueDetail: Int {
+        case header, wifi, address, map, twitter
     }
     
     override func viewDidLoad() {
@@ -26,42 +26,42 @@ class VenueTableViewController: UITableViewController {
 // MARK: - Table view data source
 extension VenueTableViewController {
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        switch VenueDetail(rawValue: indexPath.row)! {
-        case .Header:
-            let cell = tableView.dequeueReusableCellWithIdentifier(String(VenueHeaderTableViewCell), forIndexPath: indexPath) as! VenueHeaderTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch VenueDetail(rawValue: (indexPath as NSIndexPath).row)! {
+        case .header:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: VenueHeaderTableViewCell.self), for: indexPath) as! VenueHeaderTableViewCell
             cell.configure(withVenue: venue)
             return cell
-        case .Wifi:
-            let cell = tableView.dequeueReusableCellWithIdentifier(String(WifiInfoTableViewCell), forIndexPath: indexPath) as! WifiInfoTableViewCell
+        case .wifi:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: WifiInfoTableViewCell.self), for: indexPath) as! WifiInfoTableViewCell
             cell.configure(withWifiInfo: venue.wifiInfo)
             return cell
-        case .Address:
-            let cell = tableView.dequeueReusableCellWithIdentifier(String(TextTableViewCell), forIndexPath: indexPath) as! TextTableViewCell
+        case .address:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextTableViewCell.self), for: indexPath) as! TextTableViewCell
             cell.configure(withAttributedText: venue.formattedAddress)
             return cell
-        case .Map:
-            let cell = tableView.dequeueReusableCellWithIdentifier(String(MapTableViewCell), forIndexPath: indexPath) as! MapTableViewCell
+        case .map:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MapTableViewCell.self), for: indexPath) as! MapTableViewCell
             cell.configure(withAddress: venue.address)
             return cell
-        case .Twitter:
-            let cell = tableView.dequeueReusableCellWithIdentifier(String(TwitterFollowTableViewCell), forIndexPath: indexPath) as! TwitterFollowTableViewCell
+        case .twitter:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TwitterFollowTableViewCell.self), for: indexPath) as! TwitterFollowTableViewCell
             cell.configure(withUsername: venue.twitter, delegate: self)
             return cell
 
         }
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if case VenueDetail.Map = VenueDetail(rawValue: indexPath.row)! {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if case VenueDetail.map = VenueDetail(rawValue: (indexPath as NSIndexPath).row)! {
             return 300
         }
         
@@ -72,14 +72,14 @@ extension VenueTableViewController {
 private extension VenueTableViewController {
     
     func configureTableView() {
-        tableView.registerNib(UINib(nibName: String(VenueHeaderTableViewCell), bundle: nil), forCellReuseIdentifier: String(VenueHeaderTableViewCell))
-        tableView.registerNib(UINib(nibName: String(WifiInfoTableViewCell), bundle: nil), forCellReuseIdentifier: String(WifiInfoTableViewCell))
-        tableView.registerNib(UINib(nibName: String(TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(TextTableViewCell))
-        tableView.registerNib(UINib(nibName: String(MapTableViewCell), bundle: nil), forCellReuseIdentifier: String(MapTableViewCell))
-        tableView.registerNib(UINib(nibName: String(TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(TwitterFollowTableViewCell))
+        tableView.register(UINib(nibName: String(describing: VenueHeaderTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: VenueHeaderTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: WifiInfoTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: WifiInfoTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: TextTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TextTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: MapTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MapTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: TwitterFollowTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TwitterFollowTableViewCell.self))
         
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.separatorStyle = .None
+        tableView.separatorStyle = .none
     }
 }

@@ -10,18 +10,18 @@ import UIKit
 
 class MoreTableViewController: UITableViewController {
     
-    private let cellIdentifier = "BasicCell"
+    fileprivate let cellIdentifier = "BasicCell"
     
-    private enum MoreSection: Int {
-        case EventDetails, Acknowledgements
+    fileprivate enum MoreSection: Int {
+        case eventDetails, acknowledgements
     }
     
-    private enum EventDetailsRow: Int {
-        case About, Venue, CodeOfConduct
+    fileprivate enum EventDetailsRow: Int {
+        case about, venue, codeOfConduct
     }
     
-    private enum AcknowledgementsRow: Int {
-        case Organizers, Libraries
+    fileprivate enum AcknowledgementsRow: Int {
+        case organizers, libraries
     }
     
     override func awakeFromNib() {
@@ -34,11 +34,11 @@ class MoreTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 }
@@ -46,37 +46,37 @@ class MoreTableViewController: UITableViewController {
 // MARK: - Table view data source
 extension MoreTableViewController {
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch MoreSection(rawValue: section)! {
-        case .EventDetails:
+        case .eventDetails:
             return 3
-        case .Acknowledgements:
+        case .acknowledgements:
             return 2
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
-        switch MoreSection(rawValue: indexPath.section)! {
-        case .EventDetails:
-            switch EventDetailsRow(rawValue: indexPath.row)! {
-            case .About:
+        switch MoreSection(rawValue: (indexPath as NSIndexPath).section)! {
+        case .eventDetails:
+            switch EventDetailsRow(rawValue: (indexPath as NSIndexPath).row)! {
+            case .about:
                 cell.textLabel?.text = "About"
-            case .Venue:
+            case .venue:
                 cell.textLabel?.text = "Venue"
-            case .CodeOfConduct:
+            case .codeOfConduct:
                 cell.textLabel?.text = "Code of Conduct"
             }
-        case .Acknowledgements:
-            switch AcknowledgementsRow(rawValue: indexPath.row)! {
-            case .Organizers:
+        case .acknowledgements:
+            switch AcknowledgementsRow(rawValue: (indexPath as NSIndexPath).row)! {
+            case .organizers:
                 cell.textLabel?.text = "Organizer"
-            case .Libraries:
+            case .libraries:
                 cell.textLabel?.text = "Acknowledgements"
             }
         }
@@ -84,22 +84,22 @@ extension MoreTableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch MoreSection(rawValue: indexPath.section)! {
-        case .EventDetails:
-            switch EventDetailsRow(rawValue: indexPath.row)! {
-            case .About:
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch MoreSection(rawValue: (indexPath as NSIndexPath).section)! {
+        case .eventDetails:
+            switch EventDetailsRow(rawValue: (indexPath as NSIndexPath).row)! {
+            case .about:
                 showAbout()
-            case .Venue:
+            case .venue:
                 showVenue()
-            case .CodeOfConduct:
+            case .codeOfConduct:
                 showCodeOfConduct()
             }
-        case .Acknowledgements:
-            switch AcknowledgementsRow(rawValue: indexPath.row)! {
-            case .Organizers:
+        case .acknowledgements:
+            switch AcknowledgementsRow(rawValue: (indexPath as NSIndexPath).row)! {
+            case .organizers:
                 showOrganizers()
-            case .Libraries:
+            case .libraries:
                 showLibraries()
             }
         }
@@ -122,7 +122,7 @@ private extension MoreTableViewController {
     
     func showCodeOfConduct() {
         let webViewController = WebDisplayViewController()
-        webViewController.url = NSURL(string: "https://github.com/NatashaTheRobot/trySwiftCodeOfConduct/blob/master/README.md")!
+        webViewController.url = URL(string: "https://github.com/NatashaTheRobot/trySwiftCodeOfConduct/blob/master/README.md")!
         webViewController.displayTitle = "Code of Conduct"
         navigationController?.pushViewController(webViewController, animated: true)
     }
@@ -135,7 +135,7 @@ private extension MoreTableViewController {
     }
     
     func showLibraries() {
-        let path = NSBundle.mainBundle().pathForResource("Pods-trySwift-acknowledgements", ofType: "plist")
+        let path = Bundle.main.path(forResource: "Pods-trySwift-acknowledgements", ofType: "plist")
         guard let acknowledgementesViewController = VTAcknowledgementsViewController(path: path) else { return }
         if #available(iOS 9.2, *) {
             acknowledgementesViewController.headerText = "We 🤗 Open Source Software"

@@ -36,9 +36,9 @@ class Speaker: Object {
         }
     }
     
-    private class var speakers: Results<Speaker> {
+    fileprivate class var speakers: Results<Speaker> {
         let realm = try! Realm()
-        return realm.objects(Speaker).sorted("name")
+        return realm.objects(Speaker.self).sorted(byProperty: "name")
     }
     
     func getImage() -> UIImage {

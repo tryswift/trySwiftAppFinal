@@ -13,16 +13,23 @@ import WatchConnectivity
 
 class WatchSessionManager: NSObject, WCSessionDelegate {
     
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(watchOS 2.2, *)
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+
+    
     static let sharedManager = WatchSessionManager()
-    private override init() {
+    fileprivate override init() {
         super.init()
     }
     
-    private let session = WCSession.defaultSession()
+    fileprivate let session = WCSession.default()
     
     func startSession() {
         session.delegate = self
-        session.activateSession()
+        session.activate()
     }
 }
 
@@ -32,15 +39,15 @@ extension WatchSessionManager {
     // use when your app needs all the data
     // FIFO queue
     // Receiver
-    func session(session: WCSession, didReceiveUserInfo userInfo: [String : AnyObject]) {
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any]) {
         if let changes = userInfo["changes"] as? [[String: AnyObject]] {
-            ChangeManager.updateRecordsFromChanges(changes)
+            ChangeManager.updateRecordsFromChanges(changes: changes)
         }
     }
     
     // MARK: File Transfer
-    func session(session: WCSession, didReceiveFile file: WCSessionFile) {
-        ChangeManager.updateRecordFromFile(file)
+    @objc(session:didReceiveFile:) func session(_ session: WCSession, didReceive file: WCSessionFile) {
+        ChangeManager.updateRecordFromFile(file: file)
     }
     
 }

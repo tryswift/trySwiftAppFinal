@@ -11,8 +11,8 @@ import Timepiece
 import RealmSwift
 
 struct Session {
-    let startTime: NSDate
-    let endTime: NSDate
+    let startTime: Date
+    let endTime: Date
     let info: Info
 }
 
@@ -20,19 +20,19 @@ struct Session {
 extension Session {
     
     var timeString: String {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.timeStyle = .ShortStyle
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .short
         
-        return "\(dateFormatter.stringFromDate(startTime)) - \(dateFormatter.stringFromDate(endTime))"
+        return "\(dateFormatter.string(from: startTime)) - \(dateFormatter.string(from: endTime))"
     }
     
     var dateTimeString: String {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.setLocalizedDateFormatFromTemplate("EEEE hhmm")
-        let startTime = dateFormatter.stringFromDate(self.startTime)
+        let startTime = dateFormatter.string(from: self.startTime)
         
         dateFormatter.setLocalizedDateFormatFromTemplate("hh:mm")
-        let endTime = dateFormatter.stringFromDate(self.endTime)
+        let endTime = dateFormatter.string(from: self.endTime)
         return "\(startTime) - \(endTime)"
     }
 }
@@ -42,69 +42,69 @@ extension Session {
     
     enum Info: CustomStringConvertible {
 
-        case Workshop(Event)
-        case Meetup(Event)
-        case Breakfast(String)
-        case Announcement(String)
-        case Talk(Presentation)
-        case SponsoredDemo(Sponsor)
-        case CoffeeBreak(Sponsor?)
-        case Lunch
-        case OfficeHours(Presentation)
-        case Party(Venue)
+        case workshop(Event)
+        case meetup(Event)
+        case breakfast(String)
+        case announcement(String)
+        case talk(Presentation)
+        case sponsoredDemo(Sponsor)
+        case coffeeBreak(Sponsor?)
+        case lunch
+        case officeHours(Presentation)
+        case party(Venue)
         
         var title: String {
             switch self {
-            case .Workshop(let event):
+            case .workshop(let event):
                 return event.title
-            case .Meetup(let event):
+            case .meetup(let event):
                 return event.title
-            case .Breakfast(let title):
+            case .breakfast(let title):
                 return title
-            case .Announcement(let title):
+            case .announcement(let title):
                 return title
-            case .Talk(let presentation):
+            case .talk(let presentation):
                 return presentation.title
-            case .SponsoredDemo(_):
+            case .sponsoredDemo(_):
                 return "Sponsored Demo"
-            case .CoffeeBreak(let sponsor):
+            case .coffeeBreak(let sponsor):
                 if let sponsor = sponsor {
                     return "☕️ Break, by \(sponsor.name)"
                 }
                 return "☕️ Break"
-            case .Lunch:
+            case .lunch:
                 return "🍴 Lunch"
-            case .OfficeHours(let presentation):
+            case .officeHours(let presentation):
                 if let speaker = presentation.speaker?.name {
                     return "Office Hours with \(speaker)"
                 }
                 return "Office Hours"
-            case .Party(_):
+            case .party(_):
                 return "🍕 & 🎸 Party with Airplane Mode"
             }
         }
         
         var subtitle: String {
             switch self {
-            case .Meetup(let event):
+            case .meetup(let event):
                 return event.sponsor
-            case .Workshop(let event):
+            case .workshop(let event):
                 return event.sponsor
-            case .Breakfast(_), .Announcement(_), .Lunch:
+            case .breakfast(_), .announcement(_), .lunch:
                 return "try! NYC Conference"
-            case .Talk(let presentation):
+            case .talk(let presentation):
                 return presentation.speaker?.name ?? "try! NYC Conference"
-            case .SponsoredDemo(let sponsor):
+            case .sponsoredDemo(let sponsor):
                 return sponsor.name
-            case .CoffeeBreak(let sponsor):
+            case .coffeeBreak(let sponsor):
                 if let sponsor = sponsor {
                     return sponsor.name
                 } else {
                     return "try! NYC Conference"
                 }
-            case .OfficeHours(let presentation):
+            case .officeHours(let presentation):
                 return presentation.speaker?.name ?? "⁉️"
-            case .Party(_):
+            case .party(_):
                 return "Perfect.org"
             }
         }
@@ -112,71 +112,71 @@ extension Session {
         var logo: UIImage {
             let defaultImage = UIImage(named: "tryLogo")!
             switch self {
-            case .Workshop(let event):
+            case .workshop(let event):
                 return UIImage(named: event.logo)!
-            case .Meetup(let event):
+            case .meetup(let event):
                 return UIImage(named: event.logo)!
-            case .Breakfast(_), .Lunch, .Announcement(_):
+            case .breakfast(_), .lunch, .announcement(_):
                 return defaultImage
-            case .CoffeeBreak(let sponsor):
+            case .coffeeBreak(let sponsor):
                 if sponsor != nil {
                     // currently, the only sponsor is DOMO
                     return UIImage(named: "domo")!
                 }
                 return defaultImage
-            case .Talk(let presentation):
+            case .talk(let presentation):
                 return presentation.speaker?.getImage() ?? defaultImage
-            case .OfficeHours(let presentation):
+            case .officeHours(let presentation):
                 return presentation.speaker?.getImage() ?? defaultImage
-            case .SponsoredDemo(_):
+            case .sponsoredDemo(_):
                 // currently the only sponsor is Twilio
                 return UIImage(named: "twilio-small")!
-            case .Party(_):
+            case .party(_):
                 return UIImage(named: "airplanemode-short")!
             }
         }
         
         var location: String {
             switch self {
-            case .Workshop(let event):
+            case .workshop(let event):
                 return event.location
-            case .Meetup(let event):
+            case .meetup(let event):
                 return event.location
-            case .Breakfast(_), .CoffeeBreak(_), .Lunch:
+            case .breakfast(_), .coffeeBreak(_), .lunch:
                 return "North Lobby"
-            case .Announcement(_), .Talk(_), .SponsoredDemo(_):
+            case .announcement(_), .talk(_), .sponsoredDemo(_):
                 return "Auditorium"
-            case .OfficeHours(_):
+            case .officeHours(_):
                 return "Atrium"
-            case .Party(let venue):
+            case .party(let venue):
                 return venue.address
             }
         }
         
         var description: String {
             switch self {
-            case .Workshop(_), .Meetup(_):
+            case .workshop(_), .meetup(_):
                 return "Special Event"
-            case .Breakfast(_), .CoffeeBreak(_), .Lunch:
+            case .breakfast(_), .coffeeBreak(_), .lunch:
                 return "❤️"
-            case .Announcement(_):
+            case .announcement(_):
                 return "📣"
-            case .Talk(_):
+            case .talk(_):
                 return "Presentation"
-            case .SponsoredDemo(_):
+            case .sponsoredDemo(_):
                 return "Demo"
-            case .OfficeHours(_):
+            case .officeHours(_):
                 return "Q&A"
-            case .Party(_):
+            case .party(_):
                 return "🎉🎉🎉"
             }
         }
         
         var selectable: Bool {
             switch self {
-            case .Workshop(_), .Meetup(_), .Talk(_), .OfficeHours(_), .Party(_), .SponsoredDemo(_):
+            case .workshop(_), .meetup(_), .talk(_), .officeHours(_), .party(_), .sponsoredDemo(_):
                 return true
-            case .CoffeeBreak(let sponsor):
+            case .coffeeBreak(let sponsor):
                 return sponsor != nil
             default:
                 return false
@@ -192,15 +192,15 @@ extension Session {
     static let sessionsAug31: [[Session]] = [
         [{
             return Session(
-                startTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 16, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
-                info: .Workshop(Event.gaWorkshop))
+                startTime: Date.date(year: 2016, month: 8, day: 31, hour: 16, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
+                info: .workshop(Event.gaWorkshop))
             }()],
         [{
             return Session(
-                startTime: NSDate.date(year: 2016, month: 8, day: 31, hour: 19, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 21, minute: 15, second: 0),
-                info: .Workshop(Event.meetup))
+                startTime: Date.date(year: 2016, month: 8, day: 31, hour: 19, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 21, minute: 15, second: 0),
+                info: .workshop(Event.meetup))
             }()]
         
     ]
@@ -210,9 +210,9 @@ extension Session {
         [{
             let title = "Breakfast & Registration"
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 8, minute: 45, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 9, minute: 45, second: 0),
-                info: .Breakfast(title)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 8, minute: 45, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 9, minute: 45, second: 0),
+                info: .breakfast(title)
             )
             
             return session
@@ -220,9 +220,9 @@ extension Session {
         [{
             let title = "Opening Remarks"
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 9, minute: 45, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
-                info: .Announcement(title)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 9, minute: 45, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
+                info: .announcement(title)
             )
             
             return session
@@ -232,9 +232,9 @@ extension Session {
             var presentation = realm.objects(Presentation.self).filter("id == 3").first ?? defaultPresentations[2]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -244,9 +244,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 20").first ?? defaultPresentations[19]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 10, minute: 0, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -257,9 +257,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 5").first ?? defaultPresentations[4]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -269,9 +269,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 3").first ?? defaultPresentations[2]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 10, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -279,9 +279,9 @@ extension Session {
         ],
         [{
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
-                info: .CoffeeBreak(Sponsor.goldSponsors[2]))
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 11, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
+                info: .coffeeBreak(Sponsor.goldSponsors[2]))
             }()
         ],
         [{
@@ -289,9 +289,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 12").first ?? defaultPresentations[11]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -301,9 +301,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 5").first ?? defaultPresentations[4]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 11, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -314,9 +314,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 11").first ?? defaultPresentations[10]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -326,9 +326,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 12").first ?? defaultPresentations[11]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 12, minute: 0, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -339,9 +339,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 19").first ?? defaultPresentations[18]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -351,9 +351,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 11").first ?? defaultPresentations[10]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 12, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -361,9 +361,9 @@ extension Session {
         ],
         [{
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
-                info: .Lunch)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 13, minute: 15, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
+                info: .lunch)
             }()
         ],
         [{
@@ -371,9 +371,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 14").first ?? defaultPresentations[13]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -383,9 +383,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 19").first ?? defaultPresentations[18]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 14, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -396,9 +396,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 2").first ?? defaultPresentations[1]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -408,9 +408,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 14").first ?? defaultPresentations[13]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 15, minute: 0, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -421,9 +421,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 4").first ?? defaultPresentations[3]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -433,9 +433,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 2").first ?? defaultPresentations[1]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 15, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -443,9 +443,9 @@ extension Session {
         ],
         [{
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
-                info: .CoffeeBreak(nil))
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 16, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
+                info: .coffeeBreak(nil))
             }()
         ],
         [{
@@ -453,9 +453,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 1").first ?? defaultPresentations[0]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -465,9 +465,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 4").first ?? defaultPresentations[3]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 16, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -478,9 +478,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 10").first ?? defaultPresentations[9]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -490,9 +490,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 1").first ?? defaultPresentations[0]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 17, minute: 0, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -503,9 +503,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 8").first ?? defaultPresentations[7]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -515,9 +515,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 10").first ?? defaultPresentations[9]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 1, hour: 17, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -526,9 +526,9 @@ extension Session {
         [{
             let title = "Closing Announcements"
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 1, hour: 18, minute: 30, second: 0),
-                info: .Announcement(title)
+                startTime: Date.date(year: 2016, month: 9, day: 1, hour: 18, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 1, hour: 18, minute: 30, second: 0),
+                info: .announcement(title)
             )
             
             return session
@@ -536,9 +536,9 @@ extension Session {
         ],
         [{
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 20, minute: 30, second: 0),
-                info: .Party(Venue.americanBeauty)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 18, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 20, minute: 30, second: 0),
+                info: .party(Venue.americanBeauty)
             )
             
             return session
@@ -553,9 +553,9 @@ extension Session {
         [{
             let title = "☕️ & Breakfast"
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 9, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 9, minute: 45, second: 0),
-                info: .Breakfast(title)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 9, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 9, minute: 45, second: 0),
+                info: .breakfast(title)
             )
             
             return session
@@ -563,9 +563,9 @@ extension Session {
         [{
             let title = "Opening Remarks"
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 9, minute: 45, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 0, second: 0),
-                info: .Announcement(title)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 9, minute: 45, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 10, minute: 0, second: 0),
+                info: .announcement(title)
             )
             
             return session
@@ -575,9 +575,9 @@ extension Session {
             var presentation = realm.objects(Presentation.self).filter("id == 21").first ?? defaultPresentations[20]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 10, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -587,9 +587,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 8").first ?? defaultPresentations[7]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -599,9 +599,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 7").first ?? defaultPresentations[6]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -611,9 +611,9 @@ extension Session {
                 var presentation = realm.objects(Presentation.self).filter("id == 21").first ?? defaultPresentations[20]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 10, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -621,9 +621,9 @@ extension Session {
         ],
         [{
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
-                info: .CoffeeBreak(Sponsor.goldSponsors[2]))
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 11, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
+                info: .coffeeBreak(Sponsor.goldSponsors[2]))
             }()
         ],
         [{
@@ -631,9 +631,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 13").first ?? defaultPresentations[12]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -643,9 +643,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 7").first ?? defaultPresentations[6]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 11, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -656,9 +656,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 16").first ?? defaultPresentations[15]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -668,9 +668,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 13").first ?? defaultPresentations[12]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 12, minute: 0, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -681,9 +681,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 15").first ?? defaultPresentations[14]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -693,9 +693,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 16").first ?? defaultPresentations[15]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 12, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -703,17 +703,17 @@ extension Session {
         ],
         [{
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
-                info: .SponsoredDemo(Sponsor.goldSponsors.last!)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 13, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
+                info: .sponsoredDemo(Sponsor.goldSponsors.last!)
             )
             }(),
         ],
         [{
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
-                info: .Lunch)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 13, minute: 15, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
+                info: .lunch)
             }()
         ],
         [{
@@ -721,9 +721,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 9").first ?? defaultPresentations[8]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -733,9 +733,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 15").first ?? defaultPresentations[14]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 14, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -746,9 +746,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 22").first ?? defaultPresentations[21]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -758,9 +758,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 9").first ?? defaultPresentations[8]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 15, minute: 0, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -771,9 +771,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 18").first ?? defaultPresentations[17]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -783,9 +783,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 22").first ?? defaultPresentations[21]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 15, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -793,9 +793,9 @@ extension Session {
         ],
         [{
             return Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
-                info: .CoffeeBreak(nil))
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 16, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
+                info: .coffeeBreak(nil))
             }()
         ],
         [{
@@ -803,9 +803,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 17").first ?? defaultPresentations[16]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -815,9 +815,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 18").first ?? defaultPresentations[17]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 16, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -828,9 +828,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 6").first ?? defaultPresentations[5]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -840,9 +840,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 17").first ?? defaultPresentations[16]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 17, minute: 0, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -853,9 +853,9 @@ extension Session {
             let presentation = realm.objects(Presentation.self).filter("id == 20").first ?? defaultPresentations[19]
             
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
-                info: .Talk(presentation)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
+                info: .talk(presentation)
             )
             
             return session
@@ -865,9 +865,9 @@ extension Session {
                 let presentation = realm.objects(Presentation.self).filter("id == 6").first ?? defaultPresentations[5]
                 
                 let session = Session(
-                    startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
-                    endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
-                    info: .OfficeHours(presentation)
+                    startTime: Date.date(year: 2016, month: 9, day: 2, hour: 17, minute: 30, second: 0),
+                    endTime: Date.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
+                    info: .officeHours(presentation)
                 )
                 
                 return session
@@ -876,9 +876,9 @@ extension Session {
         [{
             let title = "Closing Announcements"
             let session = Session(
-                startTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
-                endTime: NSDate.date(year: 2016, month: 9, day: 2, hour: 18, minute: 30, second: 0),
-                info: .Announcement(title)
+                startTime: Date.date(year: 2016, month: 9, day: 2, hour: 18, minute: 0, second: 0),
+                endTime: Date.date(year: 2016, month: 9, day: 2, hour: 18, minute: 30, second: 0),
+                info: .announcement(title)
             )
             
             return session
