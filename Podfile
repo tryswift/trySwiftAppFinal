@@ -11,7 +11,7 @@ target 'trySwift' do
 end
 
 target 'try Extension' do
-    platform :watchos, '2.0'
+    platform :watchos, '3.0'
     pod 'Timepiece', :git => 'https://github.com/NatashaTheRobot/Timepiece'
     pod 'RealmSwift', '~> 1.1.0'
 end
