@@ -30,7 +30,7 @@ CHECKOUT OPTIONS:
     :commit: 515fe4b2bac80e6bc41bb805fe807403e76ead75
     :git: https://github.com/NatashaTheRobot/Timepiece
   Toucan:
-    :commit: 5196980bc1c839221f6b1932293a0404f183a648
+    :commit: 154d3299fb1371243d6713447f2091c82424fa34
     :git: https://github.com/vinzen/Toucan
 
 SPEC CHECKSUMS:
@@ -42,6 +42,6 @@ SPEC CHECKSUMS:
   VTAcknowledgementsViewController: 44da49d57a1dbf414e653688793a130d24af151e
   XLPagerTabStrip: c46e802a8dcac29edbcea573de8fe920e052455b
 
-PODFILE CHECKSUM: 33ad488afbcec92292057a18249d9cb9f4c307bb
+PODFILE CHECKSUM: 4646fbc6ff2fa2d508d02d8d22c4963292faeb8d
 
 COCOAPODS: 1.1.0.rc.2
