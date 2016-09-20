@@ -15,11 +15,11 @@ struct ChangeManager {
     
     static func syncChanges() {
         let defaults = UserDefaults.standard
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.high).async {
+        DispatchQueue.global().async {
             let publicDB = CKContainer.default().publicCloudDatabase
             guard let lastChangeDate = defaults.object(forKey: ChangeManager.lastChangedDataNotification) as? Date else {
                 let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
-                defaults.setObject(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
+                defaults.set(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
                 return
             }
             
@@ -42,11 +42,11 @@ struct ChangeManager {
     
     static func syncWatchChanges() {
         let defaults = UserDefaults.standard
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+        DispatchQueue.global().async {
             let publicDB = CKContainer.default().publicCloudDatabase
             guard let lastChangeDate = defaults.object(forKey: WatchSessionManager.watchDataUpdatedNotification) as? Date else {
                 let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
-                defaults.setObject(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
+                defaults.set(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
                 return
             }
             
@@ -81,10 +81,10 @@ struct ChangeManager {
                     
                     if field == "imagePath" {
                         guard let imageAsset = $0["image"] as? CKAsset else { return }
-                        WatchSessionManager.sharedManager.transferFile(imageAsset.fileURL, metadata: changeDict)
+                        _ = WatchSessionManager.sharedManager.transferFile(imageAsset.fileURL, metadata: changeDict)
                     } else {
                         changes.append(changeDict)
-                        WatchSessionManager.sharedManager.transferUserInfo(["changes" : changes])
+                        _ = WatchSessionManager.sharedManager.transferUserInfo(["changes" : changes as AnyObject])
                     }
                 }
             }
@@ -105,7 +105,7 @@ private extension ChangeManager {
         
         let realm = try! Realm()
         if object == "Speaker" {
-            if let speaker = realm.objects(Speaker).filter("id == \(id)").first {
+            if let speaker = realm.objects(Speaker.self).filter("id == \(id)").first {
                 if field == "imagePath" {
                     guard let imageAsset = record["image"] as? CKAsset else {
                         return
@@ -123,7 +123,7 @@ private extension ChangeManager {
                 }
             }
         } else if object == "Presentation" {
-            if let presentation = realm.objects(Presentation).filter("id == \(id)").first {
+            if let presentation = realm.objects(Presentation.self).filter("id == \(id)").first {
                 try! realm.write {
                     presentation[field] = newValue
                 }

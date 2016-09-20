@@ -30,7 +30,7 @@ class Speaker: Object {
     
     class var speakers: Results<Speaker> {
         let realm = try! Realm()
-        return realm.objects(Speaker).filter("hidden == false").sorted(byProperty: "name")
+        return realm.objects(Speaker.self).filter("hidden == false").sorted(byProperty: "name")
     }
     
     func getImage() -> UIImage {

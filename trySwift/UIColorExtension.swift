@@ -16,11 +16,11 @@ extension UIColor {
     }
     
     static func trySwiftTitleColor() -> UIColor {
-        return UIColor.trySwiftMainColor().lightenColor(0.1).desaturatedColor()
+        return UIColor.trySwiftMainColor().lighter(amount: 0.1).desaturated()
     }
     
     static func trySwiftSubtitleColor() -> UIColor {
-        return .darkGray()
+        return .darkGray
     }
     
     static func trySwiftAccentColor() -> UIColor {
@@ -28,6 +28,6 @@ extension UIColor {
     }
     
     static func twitterBlue() -> UIColor {
-        return UIColor(hexString: "#4FD5D6").darkenColor(0.1).desaturatedColor()
+        return UIColor(hexString: "#4FD5D6").darkened(amount: 0.1).desaturated()
     }
 }

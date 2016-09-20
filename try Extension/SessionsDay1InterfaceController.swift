@@ -55,7 +55,7 @@ class SessionsInterfaceController: WKInterfaceController {
 private extension SessionsInterfaceController {
     
     func loadTableData() {
-        sessionsTable.setNumberOfRows(sessions.count, withRowType: String(describing: SessionTableRowController))
+        sessionsTable.setNumberOfRows(sessions.count, withRowType: String(describing: SessionTableRowController()))
         
         for (index, session) in sessions.enumerated() {
             let row = sessionsTable.rowController(at: index) as? SessionTableRowController

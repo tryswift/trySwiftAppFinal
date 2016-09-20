@@ -21,9 +21,9 @@ class OrganizerDetailTableViewController: UITableViewController {
 
         title = organizer.name
         
-        tableView.register(UINib(nibName: String(describing: OrganizerTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: OrganizerTableViewCell))
-        tableView.register(UINib(nibName: String(describing: TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: TextTableViewCell))
-        tableView.register(UINib(nibName: String(describing: TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: TwitterFollowTableViewCell))
+        tableView.register(UINib(nibName: String(describing: OrganizerTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: OrganizerTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: TextTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TextTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: TwitterFollowTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TwitterFollowTableViewCell.self))
         
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -45,15 +45,15 @@ extension OrganizerDetailTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch OrganizerDetail(rawValue: (indexPath as NSIndexPath).row)! {
         case .header:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrganizerTableViewCell), for: indexPath) as! OrganizerTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrganizerTableViewCell.self), for: indexPath) as! OrganizerTableViewCell
             cell.configure(withOrganizer: organizer, selectionEnabled: false, accessoryEnabled: false)
             return cell
         case .bio:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextTableViewCell), for: indexPath) as! TextTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextTableViewCell.self), for: indexPath) as! TextTableViewCell
             cell.configure(withText: organizer.bio)
             return cell
         case .twitter:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TwitterFollowTableViewCell), for: indexPath) as! TwitterFollowTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TwitterFollowTableViewCell.self), for: indexPath) as! TwitterFollowTableViewCell
             cell.configure(withUsername: organizer.twitter, delegate: self)
             return cell
         }

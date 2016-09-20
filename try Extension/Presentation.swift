@@ -24,7 +24,7 @@ class Presentation: Object {
     
     class var presentations: Results<Presentation> {
         let realm = try! Realm()
-        return realm.objects(Presentation)
+        return realm.objects(Presentation.self)
     }
 }
 

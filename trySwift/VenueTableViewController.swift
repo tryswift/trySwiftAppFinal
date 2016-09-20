@@ -37,23 +37,23 @@ extension VenueTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch VenueDetail(rawValue: (indexPath as NSIndexPath).row)! {
         case .header:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: VenueHeaderTableViewCell), for: indexPath) as! VenueHeaderTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: VenueHeaderTableViewCell.self), for: indexPath) as! VenueHeaderTableViewCell
             cell.configure(withVenue: venue)
             return cell
         case .wifi:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: WifiInfoTableViewCell), for: indexPath) as! WifiInfoTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: WifiInfoTableViewCell.self), for: indexPath) as! WifiInfoTableViewCell
             cell.configure(withWifiInfo: venue.wifiInfo)
             return cell
         case .address:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextTableViewCell), for: indexPath) as! TextTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextTableViewCell.self), for: indexPath) as! TextTableViewCell
             cell.configure(withAttributedText: venue.formattedAddress)
             return cell
         case .map:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MapTableViewCell), for: indexPath) as! MapTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MapTableViewCell.self), for: indexPath) as! MapTableViewCell
             cell.configure(withAddress: venue.address)
             return cell
         case .twitter:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TwitterFollowTableViewCell), for: indexPath) as! TwitterFollowTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TwitterFollowTableViewCell.self), for: indexPath) as! TwitterFollowTableViewCell
             cell.configure(withUsername: venue.twitter, delegate: self)
             return cell
 
@@ -72,11 +72,11 @@ extension VenueTableViewController {
 private extension VenueTableViewController {
     
     func configureTableView() {
-        tableView.register(UINib(nibName: String(describing: VenueHeaderTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: VenueHeaderTableViewCell))
-        tableView.register(UINib(nibName: String(describing: WifiInfoTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: WifiInfoTableViewCell))
-        tableView.register(UINib(nibName: String(describing: TextTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: TextTableViewCell))
-        tableView.register(UINib(nibName: String(describing: MapTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: MapTableViewCell))
-        tableView.register(UINib(nibName: String(describing: TwitterFollowTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: TwitterFollowTableViewCell))
+        tableView.register(UINib(nibName: String(describing: VenueHeaderTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: VenueHeaderTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: WifiInfoTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: WifiInfoTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: TextTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TextTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: MapTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MapTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: TwitterFollowTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: TwitterFollowTableViewCell.self))
         
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension

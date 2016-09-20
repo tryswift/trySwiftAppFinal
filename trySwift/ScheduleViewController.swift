@@ -21,15 +21,14 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         super.viewDidLoad()
         
         buttonBarView.register(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
-        buttonBarView.backgroundColor = .whiteColor()
-        settings.style.selectedBarBackgroundColor = .whiteColor()
+        buttonBarView.backgroundColor = .white
+        settings.style.selectedBarBackgroundColor = .white
         buttonBarView.selectedBar.backgroundColor = .trySwiftAccentColor()
         
         moveToCorrectDate()
     }
     
-    override func viewControllersForPagerTabStrip(_ pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        
+    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let sessionDay1ViewController = SessionsTableViewController()
         sessionDay1ViewController.dataSource = SessionDataSourceDay1()
         
@@ -40,6 +39,7 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         sessionDay3ViewController.dataSource = SessionDataSourceDay3()
         
         return [sessionDay1ViewController, sessionDay2ViewController, sessionDay3ViewController]
+
     }
 }
 
@@ -50,12 +50,12 @@ private extension ScheduleViewController {
         
         let day2 = Date.date(year: 2016, month: 9, day: 1)
         if today == day2 {
-            moveToViewControllerAtIndex(1)
+            moveToViewController(at: 1)
         }
         
         let day3 = Date.date(year: 2016, month: 9, day: 2)
         if today == day3 {
-            moveToViewControllerAtIndex(2)
+            moveToViewController(at: 2)
         }
     }
 }

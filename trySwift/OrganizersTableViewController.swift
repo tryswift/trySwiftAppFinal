@@ -17,7 +17,7 @@ class OrganizersTableViewController: UITableViewController {
 
         title = "Organizer"
         
-        tableView.register(UINib(nibName: String(describing: OrganizerTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: OrganizerTableViewCell))
+        tableView.register(UINib(nibName: String(describing: OrganizerTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: OrganizerTableViewCell.self))
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -35,7 +35,7 @@ extension OrganizersTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrganizerTableViewCell), for: indexPath) as! OrganizerTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrganizerTableViewCell.self), for: indexPath) as! OrganizerTableViewCell
         
         cell.configure(withOrganizer: organizers[(indexPath as NSIndexPath).row])
         

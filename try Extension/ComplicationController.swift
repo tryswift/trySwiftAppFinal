@@ -16,21 +16,21 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 // MARK: - Timeline Configuration
 extension ComplicationController {
     
-    func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
+    @objc(getSupportedTimeTravelDirectionsForComplication:withHandler:) public func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Swift.Void) {
         handler([.forward, .backward])
     }
     
-    func getTimelineStartDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
+    @objc(getTimelineStartDateForComplication:withHandler:) func getTimelineStartDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
         let startDate = timelineEntryDateForSession(Session.sessions.first!)
         handler(startDate)
     }
     
-    func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
+    @objc(getTimelineEndDateForComplication:withHandler:) func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
         let endDate = Session.sessions.last?.endTime
         handler(endDate as Date?)
     }
     
-    func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
+    @objc(getPrivacyBehaviorForComplication:withHandler:) func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
         handler(.showOnLockScreen)
     }
 }
@@ -38,7 +38,7 @@ extension ComplicationController {
 // MARK: - Timeline Population
 extension ComplicationController {
     
-    func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: (@escaping (CLKComplicationTimelineEntry?) -> Void)) {
+    @objc(getCurrentTimelineEntryForComplication:withHandler:) func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: (@escaping (CLKComplicationTimelineEntry?) -> Void)) {
         
         if Date() < conferenceStartDate {
             let tmpl = CLKComplicationTemplateModularLargeStandardBody()
@@ -69,7 +69,7 @@ extension ComplicationController {
         }
     }
     
-    func getTimelineEntries(for complication: CLKComplication, before date: Date, limit: Int, withHandler handler: (@escaping ([CLKComplicationTimelineEntry]?) -> Void)) {
+    @objc(getTimelineEntriesForComplication:beforeDate:limit:withHandler:) func getTimelineEntries(for complication: CLKComplication, before date: Date, limit: Int, withHandler handler: (@escaping ([CLKComplicationTimelineEntry]?) -> Void)) {
         
         let timelineEntries = Array(Session.sessions
             .filter { timelineEntryDateForSession($0) < date }
@@ -85,7 +85,7 @@ extension ComplicationController {
         }
     }
     
-    func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: (@escaping ([CLKComplicationTimelineEntry]?) -> Void)) {
+    @objc(getTimelineEntriesForComplication:afterDate:limit:withHandler:) func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: (@escaping ([CLKComplicationTimelineEntry]?) -> Void)) {
         
         let timelineEntries = Session.sessions
             .filter { timelineEntryDateForSession($0) > date }
@@ -113,7 +113,7 @@ extension ComplicationController {
 // MARK: - Placeholder Templates
 extension ComplicationController {
     
-    func getPlaceholderTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
+    @objc(getPlaceholderTemplateForComplication:withHandler:) func getPlaceholderTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
         // This method will be called once per supported complication, and the results will be cached
         let tmpl = CLKComplicationTemplateModularLargeStandardBody()
         
