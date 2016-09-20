@@ -23,13 +23,13 @@ struct ChangeManager {
             
             let realm = try! Realm()
             if object == "Speaker" {
-                if let speaker = realm.objects(Speaker).filter("id == \(id)").first {
+                if let speaker = realm.objects(Speaker.self).filter("id == \(id)").first {
                     try! realm.write {
                         speaker[field] = newValue
                     }
                 }
             } else if object == "Presentation" {
-                if let presentation = realm.objects(Presentation).filter("id == \(id)").first {
+                if let presentation = realm.objects(Presentation.self).filter("id == \(id)").first {
                     try! realm.write {
                         presentation[field] = newValue
                     }
@@ -51,7 +51,7 @@ struct ChangeManager {
         
         let realm = try! Realm()
         if object == "Speaker" {
-            if let speaker = realm.objects(Speaker).filter("id == \(id)").first {
+            if let speaker = realm.objects(Speaker.self).filter("id == \(id)").first {
                 try! realm.write {
                     speaker["imageName"] = nil
                     speaker[field] = file.fileURL.path

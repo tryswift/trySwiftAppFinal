@@ -49,7 +49,7 @@ class WebDisplayViewController: UIViewController {
         webViewFrame.size.height = webViewFrame.size.height - tabBarHeight // To prevent the webpage sticking under the tabbar.
         
         webView = WKWebView(frame: webViewFrame)
-        webView.subviews.forEach { $0.backgroundColor = .clear() }
+        webView.subviews.forEach { $0.backgroundColor = UIColor.clear }
         webView.navigationDelegate = self
         webView.allowsLinkPreview = true
         view.insertSubview(webView, aboveSubview: activityIndicator)

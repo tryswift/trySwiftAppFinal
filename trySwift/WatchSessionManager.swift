@@ -9,6 +9,26 @@
 import WatchConnectivity
 
 class WatchSessionManager: NSObject, WCSessionDelegate {
+   
+    /** Called when all delegate callbacks for the previously selected watch has occurred. The session can be re-activated for the now selected watch using activateSession. */
+    @available(iOS 9.3, *)
+    public func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+
+    
+    /** Called when the session can no longer be used to modify or add any new transfers and, all interactive messages will be cancelled, but delegate callbacks for background transfers can still occur. This will happen when the selected watch is being changed. */
+    @available(iOS 9.3, *)
+    public func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+
+    /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+    @available(iOS 9.3, *)
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+
     
     static let sharedManager = WatchSessionManager()
     fileprivate override init() {
@@ -35,7 +55,7 @@ extension WatchSessionManager {
         return validSession?.transferUserInfo(userInfo)
     }
     
-    func session(_ session: WCSession,
+    @objc(session:didFinishUserInfoTransfer:error:) func session(_ session: WCSession,
                  didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
         if let creationDate = userInfoTransfer.userInfo["creationDate"] {
             UserDefaults.standard.set(creationDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
@@ -47,7 +67,7 @@ extension WatchSessionManager {
         return validSession?.transferFile(file, metadata: metadata)
     }
     
-    func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
+    @objc(session:didFinishFileTransfer:error:) func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
         if let creationDate = fileTransfer.file.metadata?["creationDate"] as? Date {
             UserDefaults.standard.set(creationDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
         }

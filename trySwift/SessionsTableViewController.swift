@@ -53,7 +53,7 @@ extension SessionsTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SessionTableViewCell), for: indexPath) as! SessionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SessionTableViewCell.self), for: indexPath) as! SessionTableViewCell
         
         let session = dataSource.sessions[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
         cell.configure(withSession: session)
@@ -102,8 +102,7 @@ extension SessionsTableViewController {
 }
 
 extension SessionsTableViewController: IndicatorInfoProvider {
-    
-    func indicatorInfoForPagerTabStrip(_ pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+    public func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: dataSource.header)
     }
 }
@@ -144,7 +143,8 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
 extension SessionsTableViewController {
     
     func configureTableView() {
-        tableView.register(UINib(nibName: String(describing: SessionTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: SessionTableViewCell))
+        
+        tableView.register(UINib(nibName: String(describing: SessionTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing:SessionTableViewCell.self))
         
         tableView.estimatedRowHeight = 160
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -158,9 +158,9 @@ extension SessionsTableViewController {
             guard let tableView = self?.tableView else { return }
             
             switch changes {
-            case .Update(_, _, _, _):
+            case .update(_, _, _, _):
                 tableView.reloadData()
-            case .Error(let error):
+            case .error(let error):
                 // An error occurred while opening the Realm file on the background worker thread
                 fatalError("\(error)")
             default:
@@ -174,7 +174,7 @@ private extension SessionsTableViewController {
     
     func sessionDetails(_ presentation: Presentation, session: Session) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sessionDetailsVC = storyboard.instantiateViewController(withIdentifier: String(describing: SessionDetailsViewController)) as! SessionDetailsViewController
+        let sessionDetailsVC = storyboard.instantiateViewController(withIdentifier: String(describing: SessionDetailsViewController.self)) as! SessionDetailsViewController
         sessionDetailsVC.session = session
         sessionDetailsVC.presentation = presentation
         return sessionDetailsVC

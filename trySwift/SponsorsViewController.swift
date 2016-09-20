@@ -19,7 +19,7 @@ class SponsorsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: String(describing: SponsorTableViewCell), bundle: nil), forCellReuseIdentifier: String(describing: SponsorTableViewCell))
+        tableView.register(UINib(nibName: String(describing: SponsorTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SponsorTableViewCell.self))
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -60,7 +60,7 @@ extension SponsorsViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SponsorTableViewCell), for: indexPath) as! SponsorTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SponsorTableViewCell.self), for: indexPath) as! SponsorTableViewCell
         
         let sponsor = sponsorAtIndexPath(indexPath)
         cell.configure(withSponsor: sponsor)

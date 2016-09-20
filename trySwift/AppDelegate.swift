@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         configureStyling()
         configureData()
         
-        NSTimeZone.setDefaultTimeZone(TimeZone(abbreviation: "EST")!)
+        NSTimeZone.default = TimeZone(abbreviation: "EST")!
         
         return true
     }
@@ -59,7 +59,7 @@ private extension AppDelegate {
         ]
         
         UINavigationBar.appearance().barTintColor = tintColor
-        UINavigationBar.appearance().tintColor = .white()
+        UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barStyle = .blackTranslucent
     }
@@ -69,10 +69,10 @@ private extension AppDelegate {
         
         let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
         if defaults.object(forKey: ChangeManager.lastChangedDataNotification) == nil {
-            defaults.setObject(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
+            defaults.set(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
         }
         if defaults.object(forKey: WatchSessionManager.watchDataUpdatedNotification) == nil {
-            defaults.setObject(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
+            defaults.set(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
         }
         
         ChangeManager.syncChanges()
@@ -86,7 +86,7 @@ private extension AppDelegate {
     
     func subscribeToCloudChangeNotifications() {
         let defaults = UserDefaults.standard
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+        DispatchQueue.global().async {
             if !defaults.bool(forKey: "SubscribedToCloudChanges") {
                 let predicate = NSPredicate(value: true)
                 
@@ -102,7 +102,7 @@ private extension AppDelegate {
                     if let _ = subscription {
                         defaults.set(true, forKey: "SubscribedToCloudChanges")
                     }
-                }) 
+                })
             }
         }
     }

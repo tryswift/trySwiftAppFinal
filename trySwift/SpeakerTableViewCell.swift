@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Haneke
 import Toucan
 
 class SpeakerTableViewCell: UITableViewCell {
