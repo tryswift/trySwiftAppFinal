@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import TrySwiftData
 
 protocol SessionDataSourceProtocol {
     var header: String { get }

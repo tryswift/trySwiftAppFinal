@@ -10,7 +10,6 @@
 		2E50AF345BAF3D4FC07D959B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F8855FDC17ABDFA46C086 /* QuartzCore.framework */; };
 		2E977335936DA827A6D9E87C /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B6F88DC3156B1169287F39 /* BuddyBuildSDK.framework */; };
 		496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496328931D81F3560033E3C1 /* MailConfiguration.swift */; };
-		497ABE6E1D53AE8E0010C970 /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497ABE6D1D53AE8E0010C970 /* Conference.swift */; };
 		498144EF1D43D41800D77B99 /* SessionDataSourceDay3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */; };
 		499BD62A1D05910200E74061 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BD6291D05910200E74061 /* Twitter.swift */; };
 		499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */; };
@@ -30,10 +29,6 @@
 		FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */; };
 		FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */; };
 		FA39E8D41C6AFE180074B6BE /* SessionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D31C6AFE180074B6BE /* SessionDataSourceProtocol.swift */; };
-		FA39E8D71C6B05980074B6BE /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D61C6B05980074B6BE /* Session.swift */; };
-		FA39E8DB1C6B09CE0074B6BE /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8DA1C6B09CE0074B6BE /* Speaker.swift */; };
-		FA39E8DD1C6B09DF0074B6BE /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8DC1C6B09DF0074B6BE /* Sponsor.swift */; };
-		FA39E8DF1C6B17DC0074B6BE /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */; };
 		FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E01C6B31150074B6BE /* SessionDataSourceDay1.swift */; };
 		FA39E8E31C6B31220074B6BE /* SessionDataSourceDay2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E21C6B31220074B6BE /* SessionDataSourceDay2.swift */; };
 		FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E61C6B32F80074B6BE /* SessionTableViewCell.swift */; };
@@ -64,7 +59,6 @@
 		FA5C9E341D967C0A0080B608 /* TrySwiftData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA5C9E2C1D967BB40080B608 /* TrySwiftData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */; };
 		FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */; };
-		FA65B5881C6D844400DCAF0B /* Organizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5871C6D844400DCAF0B /* Organizer.swift */; };
 		FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5891C6D8A5200DCAF0B /* OrganizersTableViewController.swift */; };
 		FA65B58D1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B58B1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift */; };
 		FA65B58E1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA65B58C1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib */; };
@@ -93,8 +87,6 @@
 		FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */; };
 		FAF1DE1A1D5FE14500D710C3 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE181D5FE14500D710C3 /* MapTableViewCell.swift */; };
 		FAF1DE1B1D5FE14500D710C3 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE191D5FE14500D710C3 /* MapTableViewCell.xib */; };
-		FAF1DE2D1D623B2C00D710C3 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE2C1D623B2C00D710C3 /* Venue.swift */; };
-		FAF1DE2F1D63353800D710C3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE2E1D63353800D710C3 /* Event.swift */; };
 		FAF1DE341D646E6600D710C3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1DE331D646E6600D710C3 /* CloudKit.framework */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
@@ -199,7 +191,6 @@
 		168F8855FDC17ABDFA46C086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3581FB5C1C8BBC0A2DB0ED33 /* Pods-try Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		496328931D81F3560033E3C1 /* MailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailConfiguration.swift; sourceTree = "<group>"; };
-		497ABE6D1D53AE8E0010C970 /* Conference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conference.swift; sourceTree = "<group>"; };
 		498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay3.swift; sourceTree = "<group>"; };
 		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -220,10 +211,6 @@
 		FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavTabButtonCell.xib; sourceTree = "<group>"; };
 		FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsTableViewController.swift; sourceTree = "<group>"; };
 		FA39E8D31C6AFE180074B6BE /* SessionDataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceProtocol.swift; sourceTree = "<group>"; };
-		FA39E8D61C6B05980074B6BE /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		FA39E8DA1C6B09CE0074B6BE /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
-		FA39E8DC1C6B09DF0074B6BE /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
-		FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
 		FA39E8E01C6B31150074B6BE /* SessionDataSourceDay1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay1.swift; sourceTree = "<group>"; };
 		FA39E8E21C6B31220074B6BE /* SessionDataSourceDay2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay2.swift; sourceTree = "<group>"; };
 		FA39E8E61C6B32F80074B6BE /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
@@ -254,7 +241,6 @@
 		FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
 		FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		FA65B5811C6D813200DCAF0B /* trySwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "trySwift-Bridging-Header.h"; sourceTree = "<group>"; };
-		FA65B5871C6D844400DCAF0B /* Organizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organizer.swift; sourceTree = "<group>"; };
 		FA65B5891C6D8A5200DCAF0B /* OrganizersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizersTableViewController.swift; sourceTree = "<group>"; };
 		FA65B58B1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerTableViewCell.swift; sourceTree = "<group>"; };
 		FA65B58C1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrganizerTableViewCell.xib; sourceTree = "<group>"; };
@@ -285,8 +271,6 @@
 		FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		FAF1DE181D5FE14500D710C3 /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1DE191D5FE14500D710C3 /* MapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
-		FAF1DE2C1D623B2C00D710C3 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
-		FAF1DE2E1D63353800D710C3 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		FAF1DE301D639D9F00D710C3 /* trySwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = trySwift.entitlements; sourceTree = "<group>"; };
 		FAF1DE331D646E6600D710C3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -454,15 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				496328931D81F3560033E3C1 /* MailConfiguration.swift */,
-				FA39E8DA1C6B09CE0074B6BE /* Speaker.swift */,
-				FA39E8DE1C6B17DC0074B6BE /* Presentation.swift */,
-				FA39E8D61C6B05980074B6BE /* Session.swift */,
-				FA39E8DC1C6B09DF0074B6BE /* Sponsor.swift */,
-				FA65B5871C6D844400DCAF0B /* Organizer.swift */,
 				499BD6291D05910200E74061 /* Twitter.swift */,
-				497ABE6D1D53AE8E0010C970 /* Conference.swift */,
-				FAF1DE2C1D623B2C00D710C3 /* Venue.swift */,
-				FAF1DE2E1D63353800D710C3 /* Event.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1124,29 +1100,23 @@
 			files = (
 				499BD62A1D05910200E74061 /* Twitter.swift in Sources */,
 				FA39E90F1C6C81870074B6BE /* SponsorsViewController.swift in Sources */,
-				FA39E8D71C6B05980074B6BE /* Session.swift in Sources */,
 				FAA54F141D9130F900EC9E80 /* UITableViewExtension.swift in Sources */,
 				FABA73BE1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift in Sources */,
 				FAF1DE151D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift in Sources */,
 				FA39E92C1C6D310E0074B6BE /* TwitterFollowTableViewCell.swift in Sources */,
 				FA39E9081C6C43760074B6BE /* SpeakersViewController.swift in Sources */,
-				FA65B5881C6D844400DCAF0B /* Organizer.swift in Sources */,
 				FA39E8EE1C6C034B0074B6BE /* UIColorExtension.swift in Sources */,
 				FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */,
-				FA39E8DF1C6B17DC0074B6BE /* Presentation.swift in Sources */,
 				FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */,
 				FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */,
 				FAF1DE1A1D5FE14500D710C3 /* MapTableViewCell.swift in Sources */,
 				FA39E91D1C6C8D100074B6BE /* WebDisplayViewController.swift in Sources */,
 				FAA54F101D912FF300EC9E80 /* ReusableView.swift in Sources */,
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
-				FA39E8DD1C6B09DF0074B6BE /* Sponsor.swift in Sources */,
 				FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */,
 				FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */,
 				FA39E9161C6C83A40074B6BE /* SponsorTableViewCell.swift in Sources */,
 				FAA54F121D91305200EC9E80 /* NibLoadableView.swift in Sources */,
-				FAF1DE2D1D623B2C00D710C3 /* Venue.swift in Sources */,
-				FA39E8DB1C6B09CE0074B6BE /* Speaker.swift in Sources */,
 				FA65B5951C7274EE00DCAF0B /* UIImageExtension.swift in Sources */,
 				FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */,
 				FA39E8E31C6B31220074B6BE /* SessionDataSourceDay2.swift in Sources */,
@@ -1159,12 +1129,10 @@
 				FA3A1C531D6520FC0042F8DD /* ChangeManager.swift in Sources */,
 				FA65B5911C6DA53600DCAF0B /* AboutTableViewController.swift in Sources */,
 				FA65B58D1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift in Sources */,
-				FAF1DE2F1D63353800D710C3 /* Event.swift in Sources */,
 				496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */,
 				FA39E9251C6D29D20074B6BE /* TextTableViewCell.swift in Sources */,
 				FA3A1CB61D68E1950042F8DD /* WatchSessionManager.swift in Sources */,
 				FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */,
-				497ABE6E1D53AE8E0010C970 /* Conference.swift in Sources */,
 				499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */,
 				FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */,
 				FA39E9201C6D25D00074B6BE /* SpeakerDetailViewController.swift in Sources */,

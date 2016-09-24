@@ -9,6 +9,7 @@
 import UIKit
 import XLPagerTabStrip
 import RealmSwift
+import TrySwiftData
 
 class SessionsTableViewController: UITableViewController {
     
