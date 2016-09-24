@@ -6,7 +6,7 @@ target 'trySwift' do
     pod 'Toucan', :git => 'https://github.com/vinzen/Toucan', :branch => 'swift3.0'
     pod 'Timepiece', :git => 'https://github.com/NatashaTheRobot/Timepiece'
     pod 'DynamicColor', '~> 3.1.0'
-    pod 'VTAcknowledgementsViewController'
+    pod 'AcknowList', '~> 1.1'
     pod 'RealmSwift', '~> 1.1.0'
 end
 
