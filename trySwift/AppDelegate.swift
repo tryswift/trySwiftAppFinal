@@ -9,6 +9,7 @@
 import UIKit
 import CloudKit
 import Timepiece
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         insertDefaultData()
         
-        let notificationSettings = UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
+        let notificationSettings =
+            UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
         application.registerUserNotificationSettings(notificationSettings)
         application.registerForRemoteNotifications()
         
@@ -90,7 +92,7 @@ private extension AppDelegate {
             if !defaults.bool(forKey: "SubscribedToCloudChanges") {
                 let predicate = NSPredicate(value: true)
                 
-                let subscription = CKSubscription(recordType: "Change", predicate: predicate, options: .firesOnRecordCreation)
+                let subscription = CKQuerySubscription(recordType: "Change", predicate: predicate, options: .firesOnRecordCreation)
                 
                 let notificationInfo = CKNotificationInfo()
                 notificationInfo.shouldSendContentAvailable = true

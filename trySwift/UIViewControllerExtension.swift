@@ -30,7 +30,7 @@ extension UIViewController: TwitterFollowDelegate {
         let application = UIApplication.shared
         for twitterURL in Twitter.urls(forUsername: username) {
             if let url = URL(string: twitterURL) , application.canOpenURL(url) && !applicationOpened {
-                application.openURL(url)
+                application.open(url, options: [String:Any](), completionHandler: nil)
                 applicationOpened = true
                 break
             }
