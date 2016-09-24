@@ -6,14 +6,15 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-struct Conference {
-    let name: String
-    let twitter: String
-    let image: UIImage?
-    let imageURL: String?
-    let description: String
+public struct Conference {
+    public let name: String
+    public let twitter: String
+    public let image: UIImage?
+    public let imageURL: String?
+    public let description: String
 }
-extension Conference {
+
+public extension Conference {
     
     static let trySwift = Conference(
         name: "try! Conference",

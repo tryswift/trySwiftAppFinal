@@ -7,33 +7,32 @@
 //
 
 import RealmSwift
-import CloudKit
 import UIKit
 
-class Speaker: Object {
-    dynamic var id: Int = 0
-    dynamic var name: String = "TBD"
-    dynamic var twitter: String = "TBD"
-    dynamic var imageName: String? = nil
-    dynamic var imagePath: String? = nil
-    dynamic var bio: String = "TBD"
-    dynamic var hidden: Bool = false
+public class Speaker: Object {
+    open dynamic var id: Int = 0
+    open dynamic var name: String = "TBD"
+    open dynamic var twitter: String = "TBD"
+    open dynamic var imageName: String? = nil
+    open dynamic var imagePath: String? = nil
+    open dynamic var bio: String = "TBD"
+    open dynamic var hidden: Bool = false
     
     
-    override static func primaryKey() -> String? {
+    public override static func primaryKey() -> String? {
         return "id"
     }
     
-    override static func indexedProperties() -> [String] {
+    public override static func indexedProperties() -> [String] {
         return ["id", "name", "hidden"]
     }
     
-    class var speakers: Results<Speaker> {
+    public class var speakers: Results<Speaker> {
         let realm = try! Realm()
         return realm.objects(Speaker.self).filter("hidden == false").sorted(byProperty: "name")
     }
     
-    func getImage() -> UIImage {
+    public func getImage() -> UIImage {
         let defaultImage = UIImage(named: "tryLogo")!
         
         if let imageName = imageName {
@@ -47,7 +46,7 @@ class Speaker: Object {
     }
 }
 
-extension Speaker {
+public extension Speaker {
     
     class func insertDefaultSpeakers() {
         guard Speaker.speakers.isEmpty else { return }
@@ -60,7 +59,7 @@ extension Speaker {
     }
 }
 
-let defaultSpeakers: [Speaker] = [
+public let defaultSpeakers: [Speaker] = [
     { let ellen = Speaker()
         ellen.id = 1
         ellen.name = "Ellen Shapiro"

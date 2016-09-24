@@ -7,29 +7,28 @@
 //
 
 import RealmSwift
-import CloudKit
 
-class Presentation: Object {
-    dynamic var id: Int = 0
-    dynamic var title: String = "TBD"
-    dynamic var summary: String = "TBD"
-    dynamic var speaker: Speaker?
+public class Presentation: Object {
+    public dynamic var id: Int = 0
+    public dynamic var title: String = "TBD"
+    public dynamic var summary: String = "TBD"
+    public dynamic var speaker: Speaker?
     
-    override static func primaryKey() -> String? {
+    public override static func primaryKey() -> String? {
         return "id"
     }
     
-    override static func indexedProperties() -> [String] {
+    public override static func indexedProperties() -> [String] {
         return ["id"]
     }
     
-    class var presentations: Results<Presentation> {
+    public class var presentations: Results<Presentation> {
         let realm = try! Realm()
         return realm.objects(Presentation.self)
     }
 }
 
-extension Presentation {
+public extension Presentation {
     
     class func insertDefaultPresentations() {
         guard Presentation.presentations.isEmpty else { return }
@@ -42,7 +41,7 @@ extension Presentation {
     }
 }
 
-let defaultPresentations: [Presentation] = [
+public let defaultPresentations: [Presentation] = [
     {
         let presentation = Presentation()
         presentation.id = 1

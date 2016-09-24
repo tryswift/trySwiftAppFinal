@@ -12,6 +12,15 @@
 		FA5C9E1D1D967BB30080B608 /* TrySwiftData.h in Headers */ = {isa = PBXBuildFile; fileRef = FA5C9E0F1D967BB30080B608 /* TrySwiftData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA6363CE1D968B8E009450A6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6363CC1D968B8E009450A6 /* RealmSwift.framework */; };
 		FA6363CF1D968B8E009450A6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6363CD1D968B8E009450A6 /* Realm.framework */; };
+		FA6363D21D96D4E8009450A6 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6363D11D96D4E8009450A6 /* Speaker.swift */; };
+		FAC831AA1D96D8ED00BBEC16 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC831A91D96D8ED00BBEC16 /* Presentation.swift */; };
+		FAC831AD1D96D98000BBEC16 /* Organizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC831AC1D96D98000BBEC16 /* Organizer.swift */; };
+		FAC831AF1D96DA1200BBEC16 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC831AE1D96DA1200BBEC16 /* Sponsor.swift */; };
+		FAC831B11D96DAA000BBEC16 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC831B01D96DAA000BBEC16 /* Session.swift */; };
+		FAC831B51D96DB2D00BBEC16 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC831B41D96DB2D00BBEC16 /* Event.swift */; };
+		FAC831B71D96DB3C00BBEC16 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC831B61D96DB3C00BBEC16 /* Venue.swift */; };
+		FAC831B91D96DD6300BBEC16 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC831B81D96DD6300BBEC16 /* DateExtension.swift */; };
+		FAC831BB1D96DF1000BBEC16 /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC831BA1D96DF1000BBEC16 /* Conference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +42,15 @@
 		FA5C9E1C1D967BB30080B608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA6363CC1D968B8E009450A6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		FA6363CD1D968B8E009450A6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		FA6363D11D96D4E8009450A6 /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		FAC831A91D96D8ED00BBEC16 /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		FAC831AC1D96D98000BBEC16 /* Organizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organizer.swift; sourceTree = "<group>"; };
+		FAC831AE1D96DA1200BBEC16 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
+		FAC831B01D96DAA000BBEC16 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		FAC831B41D96DB2D00BBEC16 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		FAC831B61D96DB3C00BBEC16 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		FAC831B81D96DD6300BBEC16 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		FAC831BA1D96DF1000BBEC16 /* Conference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +96,15 @@
 			isa = PBXGroup;
 			children = (
 				FA5C9E0F1D967BB30080B608 /* TrySwiftData.h */,
+				FA6363D11D96D4E8009450A6 /* Speaker.swift */,
+				FAC831A91D96D8ED00BBEC16 /* Presentation.swift */,
+				FAC831B01D96DAA000BBEC16 /* Session.swift */,
+				FAC831B41D96DB2D00BBEC16 /* Event.swift */,
+				FAC831B61D96DB3C00BBEC16 /* Venue.swift */,
+				FAC831AE1D96DA1200BBEC16 /* Sponsor.swift */,
+				FAC831AC1D96D98000BBEC16 /* Organizer.swift */,
+				FAC831B81D96DD6300BBEC16 /* DateExtension.swift */,
+				FAC831BA1D96DF1000BBEC16 /* Conference.swift */,
 				FA5C9E101D967BB30080B608 /* Info.plist */,
 				FA6363D01D968BDB009450A6 /* Frameworks */,
 			);
@@ -215,6 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC831BB1D96DF1000BBEC16 /* Conference.swift in Sources */,
+				FAC831B11D96DAA000BBEC16 /* Session.swift in Sources */,
+				FAC831B91D96DD6300BBEC16 /* DateExtension.swift in Sources */,
+				FAC831AF1D96DA1200BBEC16 /* Sponsor.swift in Sources */,
+				FAC831AD1D96D98000BBEC16 /* Organizer.swift in Sources */,
+				FAC831B71D96DB3C00BBEC16 /* Venue.swift in Sources */,
+				FA6363D21D96D4E8009450A6 /* Speaker.swift in Sources */,
+				FAC831B51D96DB2D00BBEC16 /* Event.swift in Sources */,
+				FAC831AA1D96D8ED00BBEC16 /* Presentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +436,7 @@
 		FA5C9E241D967BB30080B608 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				FRAMEWORK_SEARCH_PATHS = "$(parent)";
 				INFOPLIST_FILE = TrySwiftDataTests/Info.plist;
@@ -413,6 +450,7 @@
 		FA5C9E251D967BB30080B608 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				FRAMEWORK_SEARCH_PATHS = "$(parent)";
 				INFOPLIST_FILE = TrySwiftDataTests/Info.plist;

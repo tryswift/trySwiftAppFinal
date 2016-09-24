@@ -8,12 +8,12 @@
 
 import UIKit
 
-struct Sponsor {
+public struct Sponsor {
     
-    enum Level: Int, CustomStringConvertible {
+    public enum Level: Int, CustomStringConvertible {
         case platinum, gold, silver, diversity, student, event
         
-        var description: String {
+        public var description: String {
             switch self {
             case .platinum:
                 return "Platinum Sponsor"
@@ -31,15 +31,15 @@ struct Sponsor {
         }
     }
     
-    let name: String
-    let url: String
-    let displayURL: String
-    let twitter: String?
-    let logo: UIImage?
-    let level: Level
+    public let name: String
+    public let url: String
+    public let displayURL: String
+    public let twitter: String?
+    public let logo: UIImage?
+    public let level: Level
 }
 
-extension Sponsor {
+public extension Sponsor {
     
     static let platinumSponsors = [
         Sponsor(

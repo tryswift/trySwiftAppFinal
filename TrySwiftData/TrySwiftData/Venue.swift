@@ -8,23 +8,23 @@
 
 import Contacts
 
-struct Venue {
-    let title: String
-    let address: String
-    let formattedAddress: NSAttributedString
-    let website: String
-    let twitter: String
-    let logo: String
-    let wifiInfo: WifiInfo
+public struct Venue {
+    public let title: String
+    public let address: String
+    public let formattedAddress: NSAttributedString
+    public let website: String
+    public let twitter: String
+    public let logo: String
+    public let wifiInfo: WifiInfo
 }
 
-struct WifiInfo {
-    let networkName: String
-    let username: String?
-    let password: String?
+public struct WifiInfo {
+    public let networkName: String
+    public let username: String?
+    public let password: String?
 }
 
-extension Venue {
+public extension Venue {
     
     static let axa = Venue(
         title: "AXA Event & Production Center",

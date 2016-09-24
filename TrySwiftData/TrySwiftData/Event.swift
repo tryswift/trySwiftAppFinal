@@ -6,12 +6,12 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-struct Event {
-    let title: String
-    let sponsor: String
-    let logo: String
-    let location: String
-    let website: URL
+public struct Event {
+    public let title: String
+    public let sponsor: String
+    public let logo: String
+    public let location: String
+    public let website: URL
 }
 
 extension Event {
