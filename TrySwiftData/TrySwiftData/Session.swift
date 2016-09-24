@@ -7,17 +7,16 @@
 //
 
 import Foundation
-import Timepiece
 import RealmSwift
 
-struct Session {
-    let startTime: Date
-    let endTime: Date
-    let info: Info
+public struct Session {
+    public let startTime: Date
+    public let endTime: Date
+    public let info: Info
 }
 
 // date / time formatting
-extension Session {
+public extension Session {
     
     var timeString: String {
         let dateFormatter = DateFormatter()
@@ -38,9 +37,9 @@ extension Session {
 }
 
 // Description Details
-extension Session {
+public extension Session {
     
-    enum Info: CustomStringConvertible {
+    public enum Info: CustomStringConvertible {
 
         case workshop(Event)
         case meetup(Event)
@@ -53,7 +52,7 @@ extension Session {
         case officeHours(Presentation)
         case party(Venue)
         
-        var title: String {
+        public var title: String {
             switch self {
             case .workshop(let event):
                 return event.title
@@ -84,7 +83,7 @@ extension Session {
             }
         }
         
-        var subtitle: String {
+        public var subtitle: String {
             switch self {
             case .meetup(let event):
                 return event.sponsor
@@ -109,7 +108,7 @@ extension Session {
             }
         }
         
-        var logo: UIImage {
+        public var logo: UIImage {
             let defaultImage = UIImage(named: "tryLogo")!
             switch self {
             case .workshop(let event):
@@ -136,7 +135,7 @@ extension Session {
             }
         }
         
-        var location: String {
+        public var location: String {
             switch self {
             case .workshop(let event):
                 return event.location
@@ -153,7 +152,7 @@ extension Session {
             }
         }
         
-        var description: String {
+        public var description: String {
             switch self {
             case .workshop(_), .meetup(_):
                 return "Special Event"
@@ -172,7 +171,7 @@ extension Session {
             }
         }
         
-        var selectable: Bool {
+        public var selectable: Bool {
             switch self {
             case .workshop(_), .meetup(_), .talk(_), .officeHours(_), .party(_), .sponsoredDemo(_):
                 return true
@@ -186,7 +185,7 @@ extension Session {
 }
 
 // default data
-extension Session {
+public extension Session {
     
     // MARK: August 31 Schedule
     static let sessionsAug31: [[Session]] = [

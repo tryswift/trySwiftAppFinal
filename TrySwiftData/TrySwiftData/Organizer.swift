@@ -7,18 +7,17 @@
 //
 
 import UIKit
-import Toucan
 
-struct Organizer {
-    let name: String
-    let twitter: String
-    let image: UIImage
-    let bio: String
+public struct Organizer {
+    public let name: String
+    public let twitter: String
+    public let image: UIImage
+    public let bio: String
 }
 
-extension Organizer {
+public extension Organizer {
     
-    static let organizers = [
+    public static let organizers = [
         Organizer(name: "Natasha Murashev",
             twitter: "NatashaTheRobot",
             image: UIImage(named: "natasha_murashev")!,
