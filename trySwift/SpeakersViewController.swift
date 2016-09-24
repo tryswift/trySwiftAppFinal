@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import TrySwiftData
 
 class SpeakersViewController: UITableViewController {
     
