@@ -10,6 +10,7 @@ import UIKit
 import CloudKit
 import Timepiece
 import UserNotifications
+import TrySwiftData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
