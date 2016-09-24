@@ -197,7 +197,7 @@ private extension MoreTableViewController {
         let application = UIApplication.shared
         let appURL = URL(string: "slack://open")!
         if application.canOpenURL(appURL) {
-            application.openURL(appURL)
+            application.open(appURL, options: [String:Any](), completionHandler: nil)
         } else {
             let url = URL(string: "https://tryswiftnyc.slack.com")!
             openSafariViewController(withURL: url)
