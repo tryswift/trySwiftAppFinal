@@ -6,8 +6,9 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import RealmSwift
 import WatchConnectivity
+import TrySwiftDataWatch
+import RealmSwift
 
 struct ChangeManager {
     

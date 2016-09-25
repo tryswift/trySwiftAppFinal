@@ -48,7 +48,7 @@
 		205F08BA9F09C6C5DE37B492288AD5F3 /* RLMOptionalBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = FE6BFCA1DA7C281E15B9DF4F7294563B /* RLMOptionalBase.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
 		206D2FE703B87EF4AB4B187F1CD097FC /* RLMOptionalBase.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = A2AE80B11E7D0A30C3F9ADA545DD2465 /* RLMOptionalBase.h */; };
 		21DD56B49B33B6BBA3FA4426316970F4 /* RLMRealmUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5DB946EE34CEDBA8B58D5C5947EE8BA0 /* RLMRealmUtil.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
-		21F2410BD61388417A979252DCA5FA2E /* RealmSwift-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 620B93A7B05AF7CB56AEBC734FE2B031 /* RealmSwift-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21F2410BD61388417A979252DCA5FA2E /* RealmSwift-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D90B5BE132C876F3BB3CCE92E16750 /* RealmSwift-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22F9C5D5BAA2577F45C44BE3D2DBA6F8 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274684C9975A632BE5BE32AA5D2B83F2 /* Duration.swift */; };
 		2348FDAFE2B6BC5C86F1825E4EA8FD52 /* RLMMigration.h in Headers */ = {isa = PBXBuildFile; fileRef = 6679E0F8A2DEB3EC5E563908FAC871B4 /* RLMMigration.h */; };
 		2364652F175D5695DAD0B11FEFA2A73C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B406A711885194F5AA9C6E294BD9D /* Array.swift */; };
@@ -60,7 +60,7 @@
 		2635D533E9BDC1867DA24294AD278179 /* RLMObject_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = ECC8B11678B54DB69C18A6CFA06193F8 /* RLMObject_Private.h */; };
 		271DB4B2036CD792D37F37C93A1D3236 /* RLMClassInfo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 724BD071F12861D7870A31E6B9DB16F0 /* RLMClassInfo.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
 		27F2B47512619CD57C20A4695FD2CEFF /* RLMConstants.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = B4C14889B0882BAB1339D0D536B29F22 /* RLMConstants.h */; };
-		2807CC5C5FCBAB7ED6B9E71C030F402D /* Timepiece-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FE567C0B4AF576A49144E85CABCF71 /* Timepiece-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2807CC5C5FCBAB7ED6B9E71C030F402D /* Timepiece-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 96EEA1526EC5BD5A0008E2C7DFE0795A /* Timepiece-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28E222DA485CE534FDAE5AEA640B01EC /* transact_log_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA62B926A703AFCF598B9717F744F2AC /* transact_log_handler.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
 		29677DAB2A0DFD576819C5451D6459CD /* RLMObjectBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 941C993303F8AA3AEFFCE12FF1F835A8 /* RLMObjectBase.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
 		297AB9D08133D990986DA8AA26E1DCC5 /* RLMObjectBase.h in Headers */ = {isa = PBXBuildFile; fileRef = ECDC24E05F4BAAB79B301D9DBE0938F2 /* RLMObjectBase.h */; };
@@ -148,7 +148,7 @@
 		6EE24EBC51E6E2C97E8F65F35312BD04 /* external_commit_helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7448C1BA9EF5B2E4AE1CC4B4C52A1D /* external_commit_helper.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
 		6EE377D43B94534219085B481903D559 /* RLMSchema_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 78505AB47DB17001377BBC123AAAFADB /* RLMSchema_Private.h */; };
 		70D493E72A4B7CEAB0156CDAF5345CC1 /* placeholder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A022F1F02F96D27FDB871C255E6BA9C /* placeholder.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
-		7221D593DFF038D053A26543F6164D42 /* RealmSwift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9020A10D02E3F71CFE8BAEAA0592052 /* RealmSwift-iOS-dummy.m */; };
+		7221D593DFF038D053A26543F6164D42 /* RealmSwift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 901477BAE60A5AB09B55272E7B191D50 /* RealmSwift-iOS-dummy.m */; };
 		72C9A378313FB47FB4D16E886CDF7C70 /* RLMSchema.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = BE40983A8B51F77E47FB016A4EA27A9C /* RLMSchema.h */; };
 		72DBB5E912BCD77730DD82B33CDAB906 /* results_notifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FB6C3D13ED5AE8572E9DFD1CEABF067 /* results_notifier.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
 		733A7AC8D4391F9F7C4025DD5673C10B /* RLMUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 788FA2CE6612809CE5A6D1D2856CC652 /* RLMUtil.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
@@ -171,7 +171,7 @@
 		803917F57321877A080F4F4730CCF728 /* RLMCollection.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 5327EF53423806F1219C7F2679397C73 /* RLMCollection.h */; };
 		80490FE7424471C56EE4FF0AE73BFE93 /* RLMAnalytics.mm in Sources */ = {isa = PBXBuildFile; fileRef = EBE9447A825F0977D424DCF02B219CA6 /* RLMAnalytics.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
 		81D9B9BC76A138FEBAF62D7CBAC38FC5 /* RLMObjectBase_Dynamic.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 1FB3D7BAE54E63CB147631893C506676 /* RLMObjectBase_Dynamic.h */; };
-		82003793B909015837F6B0DF1E3F0863 /* RealmSwift-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5F174BEB7D0ED8A7772C522DBFED46 /* RealmSwift-watchOS-dummy.m */; };
+		82003793B909015837F6B0DF1E3F0863 /* RealmSwift-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B21C515EF22C48A00183D53566C4733 /* RealmSwift-watchOS-dummy.m */; };
 		827A76EA8C4AF87FE77D8A08D3776D6C /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF39C25B13DCB6891A6E787DB5FC87 /* Realm.swift */; };
 		84008CCBDAF901A008F6A9EF770A47B8 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26076FB208F7DD24C0EF83E416E91CBE /* ButtonCell.xib */; };
 		8464E4026014757950023B48B2FA7BB6 /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73B07B10DE02150BE9C0F6F63CB624 /* AcknowViewController.swift */; };
@@ -204,7 +204,7 @@
 		9D4D21B64F5B0725D402C98D905FE8D1 /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1237F369B1CEE745C3634DA61D782D8 /* Int+Timepiece.swift */; };
 		9D76B2704CAAFF411BA5D92B5CCE38F5 /* RLMRealm_Dynamic.h in Headers */ = {isa = PBXBuildFile; fileRef = 89C6F5147515FBD8B3592C7D5055911E /* RLMRealm_Dynamic.h */; };
 		9E4FEDCE8FFBCD0F86A2464847A32979 /* RLMListBase.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 0441639E2B2C566E738169F4A487ACAE /* RLMListBase.h */; };
-		9E9C20E04D5EA3A18780BCAC7CDA1379 /* RealmSwift-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E94FB9F6D9DDA26DD30501C4EF6EFC /* RealmSwift-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E9C20E04D5EA3A18780BCAC7CDA1379 /* RealmSwift-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C54BD73014A7037C101B950A9B693629 /* RealmSwift-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9ECE37E0EEBE73AA4B09412D87914E8C /* RLMRealm_Private.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = ED34C7B66662F64783A8B70B71C40AB1 /* RLMRealm_Private.h */; };
 		A0EBB891BA9517F9701487F7A930C8EA /* DynamicColorSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071D39EC69A3EE6EA57F93594D8F19AF /* DynamicColorSpace.swift */; };
 		A2354F5454DC823D00918E061766F895 /* RLMObject.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 8AE295720B052C0249B85976CCFDAACB /* RLMObject.h */; };
@@ -308,7 +308,7 @@
 		E34E91C5D77D4910427C3A967A9E0123 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC1F744C75F5E8BBB83ADBD4644BBA7 /* Property.swift */; };
 		E37219BBE8766B28AD8DD76F6A9416FA /* RLMProperty.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 7C53D58D571859C08D90EBFCE8A641FC /* RLMProperty.h */; };
 		E5154648EF23A5D8C5EB2C04B8BC8635 /* RLMObjectSchema.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = DC90CC6035DCC459509C7CF4A3980265 /* RLMObjectSchema.h */; };
-		E5982D602126EE74F44D91F1FCAD8BA4 /* Timepiece-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0415146A15FE8CC9A98586A3089A54 /* Timepiece-watchOS-dummy.m */; };
+		E5982D602126EE74F44D91F1FCAD8BA4 /* Timepiece-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 471DFE6879A5A27CA865D86728719F26 /* Timepiece-watchOS-dummy.m */; };
 		E5FFA2BD0A3A4C556E5EADAD32D6D6A4 /* RLMArrayLinkView.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5021E8989BFA5A505202DCA7634B958 /* RLMArrayLinkView.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
 		E6ADDCD3C507C322679A7E2E93BD0FEF /* RLMUpdateChecker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03969DB719B52DD43B519FF8097653F9 /* RLMUpdateChecker.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
 		E70F853C123A4CA96AB77E4502AD7897 /* RLMRealmConfiguration.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7C0ADF887480D51DC212A9297F4506E /* RLMRealmConfiguration.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
@@ -340,8 +340,8 @@
 		F6F53BF29FE1DED41168B53F2162807E /* LinkingObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344CAF049E20CF756BF708DA2054915E /* LinkingObjects.swift */; };
 		F6FD4BBD89217C2198B201F52520710F /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184084F47AE0F72ACD2217514D20BE28 /* Migration.swift */; };
 		F8BB94D7EDC96634A9CDCF62EC61B728 /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE21B5D058BFD9C3CB3A36B0F3E7AA0 /* SortDescriptor.swift */; };
-		F96E1E8A989B0F06DCA42CCC6C949F5B /* Timepiece-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F6AE1A8F53DBBE3E21C32FFA3E99098 /* Timepiece-iOS-dummy.m */; };
-		FA3D4C90C50968C06862B35D17F1E6AA /* Timepiece-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58DC9C0EB5328C489E5F7170F43E6DB2 /* Timepiece-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F96E1E8A989B0F06DCA42CCC6C949F5B /* Timepiece-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417933D02F8F34D446A148073FF6B07 /* Timepiece-iOS-dummy.m */; };
+		FA3D4C90C50968C06862B35D17F1E6AA /* Timepiece-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9A1474EF332B563AA739EAB267B2610 /* Timepiece-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA415132C46A1D80F95B6909D424EE5D /* format.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 362612166C39D078633B4573AE2DE7FF /* format.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
 		FB86810699FD70C4AC35375548FAFF5D /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AF39C25B13DCB6891A6E787DB5FC87 /* Realm.swift */; };
 		FBA790D6695CE3B696F4E7F865FA02DC /* shared_realm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B817CB4653F274965BA9641F23F96501 /* shared_realm.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"1.1.0\"' -D__ASSERTMACROS__"; }; };
@@ -550,10 +550,9 @@
 /* Begin PBXFileReference section */
 		029E92FCD131D6732C9DFBE261A1F120 /* RLMAccessor.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMAccessor.mm; path = Realm/RLMAccessor.mm; sourceTree = "<group>"; };
 		03969DB719B52DD43B519FF8097653F9 /* RLMUpdateChecker.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMUpdateChecker.mm; path = Realm/RLMUpdateChecker.mm; sourceTree = "<group>"; };
-		03E626195BF9B1E4C4F6F2A887501485 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0417933D02F8F34D446A148073FF6B07 /* Timepiece-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Timepiece-iOS-dummy.m"; sourceTree = "<group>"; };
 		0441639E2B2C566E738169F4A487ACAE /* RLMListBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMListBase.h; path = include/RLMListBase.h; sourceTree = "<group>"; };
 		049598D56D30905ABC856E0E6FD39273 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04E94FB9F6D9DDA26DD30501C4EF6EFC /* RealmSwift-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RealmSwift-watchOS-umbrella.h"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		04F7A4C7A1E79F82B205F60B3DF9EFC1 /* RLMRealmConfiguration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealmConfiguration_Private.h; path = include/RLMRealmConfiguration_Private.h; sourceTree = "<group>"; };
 		0528181B3F38F93B7764F90F8257EADE /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
 		05F26FE0034A1FFD594A7A3C067778A1 /* collection_notifier.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = collection_notifier.cpp; path = Realm/ObjectStore/src/impl/collection_notifier.cpp; sourceTree = "<group>"; };
@@ -581,13 +580,13 @@
 		204CF29D03B455F63F7D638439C1AD90 /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
 		21453F2A844FCC588AA5A4C90B02345D /* Toucan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toucan.xcconfig; sourceTree = "<group>"; };
 		214B3F5A6E14626ECB72FDD78655AB28 /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
-		224FBB52A9696AA6E040A87898748C1B /* RealmSwift-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RealmSwift-watchOS-prefix.pch"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		227584F2BAFD20324ED8A928E4755C07 /* DynamicColor+Deriving.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Deriving.swift"; path = "Sources/DynamicColor+Deriving.swift"; sourceTree = "<group>"; };
 		23A916EAE1EFBA924DB08750CFD48757 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		2472B22BCF93E3EEBF566308F05BB945 /* Pods-trySwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-trySwift-acknowledgements.markdown"; sourceTree = "<group>"; };
 		257EDB6620E4A2AC99C176EE40D0D539 /* Pods-trySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-trySwift-dummy.m"; sourceTree = "<group>"; };
 		2600BE4CA0245CCDBD19B799C7CEA90E /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = Sources/HSL.swift; sourceTree = "<group>"; };
 		26076FB208F7DD24C0EF83E416E91CBE /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
+		264595794A7C500AE205C23097099CFF /* RealmSwift-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "RealmSwift-iOS.xcconfig"; sourceTree = "<group>"; };
 		265CFC631D22BA986DBD6DA3C06282CE /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = Sources/DynamicColor.swift; sourceTree = "<group>"; };
 		274684C9975A632BE5BE32AA5D2B83F2 /* Duration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Duration.swift; path = Sources/Duration.swift; sourceTree = "<group>"; };
 		2777C91BD7191AD6A700AA2FFD4DD94C /* index_set.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = index_set.cpp; path = Realm/ObjectStore/src/index_set.cpp; sourceTree = "<group>"; };
@@ -607,7 +606,6 @@
 		362612166C39D078633B4573AE2DE7FF /* format.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = format.cpp; path = Realm/ObjectStore/src/util/format.cpp; sourceTree = "<group>"; };
 		36A9B0087B768E3AD4326FD3E75E4A3D /* RLMObjectStore.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObjectStore.mm; path = Realm/RLMObjectStore.mm; sourceTree = "<group>"; };
 		3B1FEB3B0E63181D54B4E1E8612DF3D0 /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
-		405E3325279285151DDB7118363B5BDD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408380C02B773B436218522CCFC38A9F /* Pods-try Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-try Extension-umbrella.h"; sourceTree = "<group>"; };
 		40AF39C25B13DCB6891A6E787DB5FC87 /* Realm.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Realm.swift; path = RealmSwift/Realm.swift; sourceTree = "<group>"; };
 		41BB2FF79D481C74C70564727138C95A /* librealm-ios.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "librealm-ios.a"; path = "core/librealm-ios.a"; sourceTree = "<group>"; };
@@ -616,10 +614,13 @@
 		446712E6AD1003F690775BA478CB1EFD /* NSDateComponents+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDateComponents+Timepiece.swift"; path = "Sources/NSDateComponents+Timepiece.swift"; sourceTree = "<group>"; };
 		44BB03B4C72474D86F7ACAA7086492B3 /* Pods-trySwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-trySwift-frameworks.sh"; sourceTree = "<group>"; };
 		45777154B60B6C5CE786F77AEFF7090A /* Pods-trySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-trySwift-umbrella.h"; sourceTree = "<group>"; };
+		471DFE6879A5A27CA865D86728719F26 /* Timepiece-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Timepiece-watchOS-dummy.m"; path = "../Timepiece-watchOS/Timepiece-watchOS-dummy.m"; sourceTree = "<group>"; };
 		47F80FA7C656D5738243122F3B7CF732 /* AcknowListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListViewController.swift; path = Source/AcknowListViewController.swift; sourceTree = "<group>"; };
 		49BF1CAC3FA70665151DBD4EF696398F /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3D2DE8A7D532F2715AA8F8EBC1FEC5 /* RLMResults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMResults.h; path = include/RLMResults.h; sourceTree = "<group>"; };
 		4A543282081FF377D97BC86FD8846689 /* Toucan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toucan-dummy.m"; sourceTree = "<group>"; };
+		4A773F3FFE6E271A57307E7669D6EB8D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B21C515EF22C48A00183D53566C4733 /* RealmSwift-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RealmSwift-watchOS-dummy.m"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-dummy.m"; sourceTree = "<group>"; };
 		4B9D6F5B2C3FCC6B36FCA9C6A9F35D76 /* realm_coordinator.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = realm_coordinator.cpp; path = Realm/ObjectStore/src/impl/realm_coordinator.cpp; sourceTree = "<group>"; };
 		4C2CB5FD8055CE2543420C4744227068 /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
 		4DC22128FAC9BDE005D61448D892C28D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -627,40 +628,41 @@
 		4E6826E10596641581BACB03A232017B /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6E2C1376303C0A0E3230F7104BDC0F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Realm-watchOS/Info.plist"; sourceTree = "<group>"; };
 		4F7448C1BA9EF5B2E4AE1CC4B4C52A1D /* external_commit_helper.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = external_commit_helper.cpp; path = Realm/ObjectStore/src/impl/apple/external_commit_helper.cpp; sourceTree = "<group>"; };
+		50FC8FE9389441FAF6C51CE937F41B04 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		527B2A79F2C4B7532D92378D02F76931 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Timepiece-watchOS/Info.plist"; sourceTree = "<group>"; };
 		5327EF53423806F1219C7F2679397C73 /* RLMCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMCollection.h; path = include/RLMCollection.h; sourceTree = "<group>"; };
 		5328EE6BF567207FCFDCE454A97181A4 /* Realm-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Realm-iOS.modulemap"; sourceTree = "<group>"; };
 		53B768FDCCD428FE80E407F6CE82620A /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
 		53D70C5E07EA7ADEB23CC0E1C9EA0EB6 /* librealm-watchos.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "librealm-watchos.a"; path = "core/librealm-watchos.a"; sourceTree = "<group>"; };
 		53DEB0C40DB6FB1D95AC1ACF9404B169 /* RLMRealmConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealmConfiguration.h; path = include/RLMRealmConfiguration.h; sourceTree = "<group>"; };
 		5823698A3F37D46F625DF9B3B503AA3A /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58DC9C0EB5328C489E5F7170F43E6DB2 /* Timepiece-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-umbrella.h"; sourceTree = "<group>"; };
 		590CF32F100319515E2D883C3FE5F223 /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
 		59F90A2E64EB8DA9086FD89125106525 /* AcknowParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowParser.swift; path = Source/AcknowParser.swift; sourceTree = "<group>"; };
 		5B0FA9BC3949A38709B66B669B2690C6 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = RealmSwift/Error.swift; sourceTree = "<group>"; };
 		5C2DC5DEE9E5F701B6F304654C6DAC69 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB946EE34CEDBA8B58D5C5947EE8BA0 /* RLMRealmUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMRealmUtil.mm; path = Realm/RLMRealmUtil.mm; sourceTree = "<group>"; };
 		5EDE43E3853D14A5C22E938AD1FAA517 /* Results.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Results.swift; path = RealmSwift/Results.swift; sourceTree = "<group>"; };
-		5F6AE1A8F53DBBE3E21C32FFA3E99098 /* Timepiece-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Timepiece-iOS-dummy.m"; sourceTree = "<group>"; };
 		5F8C18E136982B18495CDC60B56BD606 /* RealmConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RealmConfiguration.swift; path = RealmSwift/RealmConfiguration.swift; sourceTree = "<group>"; };
 		60DFABA22971A70D990997A5DB748770 /* RLMResults_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMResults_Private.h; path = include/RLMResults_Private.h; sourceTree = "<group>"; };
+		60E26358A9FFBB49E75140C57D88BA91 /* RealmSwift-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "RealmSwift-watchOS.xcconfig"; path = "../RealmSwift-watchOS/RealmSwift-watchOS.xcconfig"; sourceTree = "<group>"; };
 		618BE4389F61B788700D1D490E7E78F6 /* list.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = list.cpp; path = Realm/ObjectStore/src/list.cpp; sourceTree = "<group>"; };
+		61A1E1063EBEC33F0FCB44B1C83F2BFA /* RealmSwift-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "RealmSwift-watchOS.modulemap"; path = "../RealmSwift-watchOS/RealmSwift-watchOS.modulemap"; sourceTree = "<group>"; };
 		61A5927D2DC2ED9EE444F0E3DF8EB234 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		620B93A7B05AF7CB56AEBC734FE2B031 /* RealmSwift-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-iOS-umbrella.h"; sourceTree = "<group>"; };
+		6438A24CF4645E0FB223FA07E62797CA /* RealmSwift-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "RealmSwift-iOS.modulemap"; sourceTree = "<group>"; };
 		6679E0F8A2DEB3EC5E563908FAC871B4 /* RLMMigration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMMigration.h; path = include/RLMMigration.h; sourceTree = "<group>"; };
 		682A3A1C90C71015662BD215D1FC7309 /* RLMMigration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMMigration_Private.h; path = include/RLMMigration_Private.h; sourceTree = "<group>"; };
 		6AFB40292985B554CF562241332E2BA5 /* AcknowList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AcknowList-dummy.m"; sourceTree = "<group>"; };
-		6B302EF6DA382C4746872DD9B4671810 /* Timepiece-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Timepiece-watchOS.modulemap"; path = "../Timepiece-watchOS/Timepiece-watchOS.modulemap"; sourceTree = "<group>"; };
 		6B6965EEAC8D6A48883D1FE33554DA6B /* Util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Util.swift; path = RealmSwift/Util.swift; sourceTree = "<group>"; };
 		6B76F3C045C0165B32DC652DA0B3C63F /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		6C424363DA33582A4EF0643F63A6CC57 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../RealmSwift-watchOS/Info.plist"; sourceTree = "<group>"; };
 		6D30697874DBD0BBB8FEB89FED2B6BA2 /* NSCalendarUnit+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSCalendarUnit+Timepiece.swift"; path = "Sources/NSCalendarUnit+Timepiece.swift"; sourceTree = "<group>"; };
 		6DF8C83973BCB0B0EB520546FA6C9FDA /* RLMSchema.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMSchema.mm; path = Realm/RLMSchema.mm; sourceTree = "<group>"; };
 		6E30A3DC34929C8C7CF137F75ADAE03F /* RLMArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMArray.h; path = include/RLMArray.h; sourceTree = "<group>"; };
 		6E4711CD0AC0171DC5A3560D6C47F40E /* Pods_try_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EA977F2F0FD9D02F8391A3DFE564F5A /* Timepiece-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-prefix.pch"; sourceTree = "<group>"; };
 		6FF9A97E44974C8FC6D9259627E50B14 /* Pods-try Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-try Extension-dummy.m"; sourceTree = "<group>"; };
-		703937C4A4EB6767C0EABBF2B08D5380 /* Timepiece-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Timepiece-iOS.xcconfig"; sourceTree = "<group>"; };
 		70A5AEEA2B6732A6CBB145E8AC747AB3 /* RLMResults.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMResults.mm; path = Realm/RLMResults.mm; sourceTree = "<group>"; };
 		712588B17D2900B0A403BC40AB40D47E /* NSDate+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDate+Timepiece.swift"; path = "Sources/NSDate+Timepiece.swift"; sourceTree = "<group>"; };
-		71677158575C23ED6A9C839B45ADC6A8 /* Timepiece-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Timepiece-watchOS.xcconfig"; path = "../Timepiece-watchOS/Timepiece-watchOS.xcconfig"; sourceTree = "<group>"; };
 		723245E43882CC2FC61B276F43A5452E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		724BD071F12861D7870A31E6B9DB16F0 /* RLMClassInfo.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMClassInfo.mm; path = Realm/RLMClassInfo.mm; sourceTree = "<group>"; };
 		77A4190E250EA15F10BCD86039D7401D /* Toucan-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toucan-prefix.pch"; sourceTree = "<group>"; };
@@ -668,29 +670,28 @@
 		788FA2CE6612809CE5A6D1D2856CC652 /* RLMUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMUtil.mm; path = Realm/RLMUtil.mm; sourceTree = "<group>"; };
 		79C49DAA3D846CD9FDB0E7F01504A445 /* RLMRealm.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMRealm.mm; path = Realm/RLMRealm.mm; sourceTree = "<group>"; };
 		7A48E54796DB4ECA866B06603C3CD732 /* object_schema.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = object_schema.cpp; path = Realm/ObjectStore/src/object_schema.cpp; sourceTree = "<group>"; };
+		7A4BCEDD55BB98ED14417116D6721D79 /* Timepiece-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Timepiece-watchOS.modulemap"; path = "../Timepiece-watchOS/Timepiece-watchOS.modulemap"; sourceTree = "<group>"; };
 		7C38A63D35CC66127EBEFDBF7B44AED9 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C53D58D571859C08D90EBFCE8A641FC /* RLMProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMProperty.h; path = include/RLMProperty.h; sourceTree = "<group>"; };
-		7F57AD1A9C85EA5F664986A737C6E919 /* Timepiece-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-prefix.pch"; sourceTree = "<group>"; };
-		810FA0A80F5F655563464FA749DE6B87 /* RealmSwift-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "RealmSwift-iOS.modulemap"; sourceTree = "<group>"; };
 		8184C6B2A3CF7F88BCC80D26AC19F2E9 /* Pods-try Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-try Extension.modulemap"; sourceTree = "<group>"; };
 		81FC9C2537017CECF26F26A9DA27949A /* DynamicGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicGradient.swift; path = Sources/DynamicGradient.swift; sourceTree = "<group>"; };
 		838A48B9D37C923AA75E75C709C84E38 /* DynamicColor+HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+HSL.swift"; path = "Sources/DynamicColor+HSL.swift"; sourceTree = "<group>"; };
-		84B6F55881717997A43A2B87C34838A9 /* RealmSwift-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "RealmSwift-iOS.xcconfig"; sourceTree = "<group>"; };
-		862C7252A1733B63506215EC746B755D /* Timepiece-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-prefix.pch"; path = "../Timepiece-watchOS/Timepiece-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		83B94A7D747B634A1F8F31ED5F0DDEB2 /* Timepiece-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Timepiece-iOS.xcconfig"; sourceTree = "<group>"; };
 		8671FC5518C769910CC3494DE62D541A /* ObjectSchema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectSchema.swift; path = RealmSwift/ObjectSchema.swift; sourceTree = "<group>"; };
 		88B0B8DCD2967C2FDE4251C50BF35609 /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
+		89AD101E3967137440D41E26B1CDA2C6 /* RealmSwift-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-iOS-prefix.pch"; sourceTree = "<group>"; };
 		89C6F5147515FBD8B3592C7D5055911E /* RLMRealm_Dynamic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealm_Dynamic.h; path = include/RLMRealm_Dynamic.h; sourceTree = "<group>"; };
 		8AE295720B052C0249B85976CCFDAACB /* RLMObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObject.h; path = include/RLMObject.h; sourceTree = "<group>"; };
 		8B4648361180F176892395D82B4BE7F3 /* DynamicColor+RGBA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+RGBA.swift"; path = "Sources/DynamicColor+RGBA.swift"; sourceTree = "<group>"; };
-		8C0415146A15FE8CC9A98586A3089A54 /* Timepiece-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Timepiece-watchOS-dummy.m"; path = "../Timepiece-watchOS/Timepiece-watchOS-dummy.m"; sourceTree = "<group>"; };
-		8DCB2B23C1088CAB61E3BC4CB14769F6 /* RealmSwift-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "RealmSwift-watchOS.xcconfig"; path = "../RealmSwift-watchOS/RealmSwift-watchOS.xcconfig"; sourceTree = "<group>"; };
 		8E574EB85EF89AD25A1C8F8107D66691 /* Realm-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Realm-watchOS-prefix.pch"; path = "../Realm-watchOS/Realm-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		8EA22B00F2523E9A42656E57EA0D0291 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		901477BAE60A5AB09B55272E7B191D50 /* RealmSwift-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RealmSwift-iOS-dummy.m"; sourceTree = "<group>"; };
 		907BC98AA7B023D26F40E01D58507B2F /* object_store.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = object_store.cpp; path = Realm/ObjectStore/src/object_store.cpp; sourceTree = "<group>"; };
-		9346894D91BBBD20E1E4BFBBD4A2F817 /* RealmSwift-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "RealmSwift-watchOS.modulemap"; path = "../RealmSwift-watchOS/RealmSwift-watchOS.modulemap"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		941C993303F8AA3AEFFCE12FF1F835A8 /* RLMObjectBase.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObjectBase.mm; path = Realm/RLMObjectBase.mm; sourceTree = "<group>"; };
+		95D90B5BE132C876F3BB3CCE92E16750 /* RealmSwift-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-iOS-umbrella.h"; sourceTree = "<group>"; };
 		96EB99DD69EFD390D202D8F894A525A5 /* AcknowList.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.xcconfig; sourceTree = "<group>"; };
+		96EEA1526EC5BD5A0008E2C7DFE0795A /* Timepiece-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-umbrella.h"; path = "../Timepiece-watchOS/Timepiece-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		977FDC7C68B5CFBC279BF9372012E00A /* DynamicColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-umbrella.h"; sourceTree = "<group>"; };
 		9A4BC9483307E86C84AD9EB70079AE57 /* DynamicColor+Mixing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Mixing.swift"; path = "Sources/DynamicColor+Mixing.swift"; sourceTree = "<group>"; };
 		9A5791DA48A7C49D8B3EB12C88B630FF /* DynamicColor+Lab.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Lab.swift"; path = "Sources/DynamicColor+Lab.swift"; sourceTree = "<group>"; };
@@ -707,12 +708,12 @@
 		A498D694EBF86B6942DAFC3D55634DB5 /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		A5467AD952DBE78AF20EB6280AF9D3CB /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
 		A7C0ADF887480D51DC212A9297F4506E /* RLMRealmConfiguration.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMRealmConfiguration.mm; path = Realm/RLMRealmConfiguration.mm; sourceTree = "<group>"; };
-		A9020A10D02E3F71CFE8BAEAA0592052 /* RealmSwift-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RealmSwift-iOS-dummy.m"; sourceTree = "<group>"; };
 		A95257E8D1A8BEECB7C027A020D99E7E /* Pods-try Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try Extension.release.xcconfig"; sourceTree = "<group>"; };
+		A9A1474EF332B563AA739EAB267B2610 /* Timepiece-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-umbrella.h"; sourceTree = "<group>"; };
 		AA62B926A703AFCF598B9717F744F2AC /* transact_log_handler.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = transact_log_handler.cpp; path = Realm/ObjectStore/src/impl/transact_log_handler.cpp; sourceTree = "<group>"; };
 		AE08913EA18F713640FB81BECE12A3ED /* handover.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = handover.cpp; path = Realm/ObjectStore/src/impl/handover.cpp; sourceTree = "<group>"; };
 		AF02C6006419DFE16FF8B99164ED6492 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
-		AF6A226EB98A1F6A33055902A5ECD2F9 /* RealmSwift-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-iOS-prefix.pch"; sourceTree = "<group>"; };
+		AF1A8A0FDB680EA7408EB54B8C54B932 /* Timepiece-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Timepiece-watchOS.xcconfig"; path = "../Timepiece-watchOS/Timepiece-watchOS.xcconfig"; sourceTree = "<group>"; };
 		AF9188777ADF274EF98DD37FABB0CD65 /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04FDFEA9F56263D97113E2B94DD9C0F /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1DAE8C7AEF0147BDC85FAE5C9D138E0 /* RLMArray_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMArray_Private.h; path = include/RLMArray_Private.h; sourceTree = "<group>"; };
@@ -733,6 +734,7 @@
 		C4578DAD5DD29A18FD0744C3222C3500 /* RLMMigration.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMMigration.mm; path = Realm/RLMMigration.mm; sourceTree = "<group>"; };
 		C45F3B034106C245682153A6BDEE0388 /* Pods-try Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-try Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C5021E8989BFA5A505202DCA7634B958 /* RLMArrayLinkView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMArrayLinkView.mm; path = Realm/RLMArrayLinkView.mm; sourceTree = "<group>"; };
+		C54BD73014A7037C101B950A9B693629 /* RealmSwift-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RealmSwift-watchOS-umbrella.h"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		CB5165D64ED8DED712616E899AA1E020 /* RealmCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RealmCollection.swift; path = RealmSwift/RealmCollection.swift; sourceTree = "<group>"; };
 		CB8F01ECDBA2B619EFBF5C6E1035D535 /* NSCalendar+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSCalendar+Timepiece.swift"; path = "Sources/NSCalendar+Timepiece.swift"; sourceTree = "<group>"; };
 		CE0CD8A466F81848EF9A934C78CA05A9 /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = RealmSwift/Optional.swift; sourceTree = "<group>"; };
@@ -742,6 +744,7 @@
 		CF3799A8E647DC6089153CC4F7AF3757 /* String+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Timepiece.swift"; path = "Sources/String+Timepiece.swift"; sourceTree = "<group>"; };
 		CFB589D538EDF1880DA6D0761CBF7CBC /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
 		D00E9C8BC4CFE264FDA085B59B393F0E /* results.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = results.cpp; path = Realm/ObjectStore/src/results.cpp; sourceTree = "<group>"; };
+		D02CF04FE98F7AB528672C56D7833151 /* Timepiece-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-prefix.pch"; path = "../Timepiece-watchOS/Timepiece-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		D25042A4E3B729616AAA3F1B60628E95 /* Realm-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Realm-watchOS-dummy.m"; path = "../Realm-watchOS/Realm-watchOS-dummy.m"; sourceTree = "<group>"; };
 		D48E431DF11244B398CD574904CE2582 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timepiece.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F0A7404012CA3ABCFE94462BCE9449 /* RLMAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMAccessor.h; path = include/RLMAccessor.h; sourceTree = "<group>"; };
@@ -763,26 +766,23 @@
 		E744C047E455E4823A807E911933DEA9 /* collection_change_builder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = collection_change_builder.cpp; path = Realm/ObjectStore/src/impl/collection_change_builder.cpp; sourceTree = "<group>"; };
 		EB73B07B10DE02150BE9C0F6F63CB624 /* AcknowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowViewController.swift; path = Source/AcknowViewController.swift; sourceTree = "<group>"; };
 		EBE9447A825F0977D424DCF02B219CA6 /* RLMAnalytics.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMAnalytics.mm; path = Realm/RLMAnalytics.mm; sourceTree = "<group>"; };
-		EC7B1B7176EBC4AACE41468F1B91986D /* Timepiece-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Timepiece-iOS.modulemap"; sourceTree = "<group>"; };
 		ECC8B11678B54DB69C18A6CFA06193F8 /* RLMObject_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObject_Private.h; path = include/RLMObject_Private.h; sourceTree = "<group>"; };
 		ECDC24E05F4BAAB79B301D9DBE0938F2 /* RLMObjectBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObjectBase.h; path = include/RLMObjectBase.h; sourceTree = "<group>"; };
 		ECF14011439DE4D5117680F4D8FED65C /* RLMQueryUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMQueryUtil.mm; path = Realm/RLMQueryUtil.mm; sourceTree = "<group>"; };
 		ED34C7B66662F64783A8B70B71C40AB1 /* RLMRealm_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealm_Private.h; path = include/RLMRealm_Private.h; sourceTree = "<group>"; };
 		EFA004F52656FBDB30D6039053059BB3 /* Pods-trySwift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-trySwift-resources.sh"; sourceTree = "<group>"; };
-		F257B77A3FB7303C32D7D306BDD15903 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../RealmSwift-watchOS/Info.plist"; sourceTree = "<group>"; };
 		F58B8754BF62C1449F7CDBFD6027D60E /* DynamicColor+XYZ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+XYZ.swift"; path = "Sources/DynamicColor+XYZ.swift"; sourceTree = "<group>"; };
 		F6432E7E2F32A18E0A1923A0D5159306 /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
 		F6F9449718E468363FD975769AB862D5 /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		F8FE567C0B4AF576A49144E85CABCF71 /* Timepiece-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-umbrella.h"; path = "../Timepiece-watchOS/Timepiece-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		F9B0C05A8F62C991C6C1470A7191021F /* Timepiece-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Timepiece-iOS.modulemap"; sourceTree = "<group>"; };
 		F9BFEE51C079E40CEE55DDFE0D3C0181 /* RLMObservation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMObservation.mm; path = Realm/RLMObservation.mm; sourceTree = "<group>"; };
 		FAD4ACCA9E40A268031FA1D3967810C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBC0B03F4112FDD6C35B8DD9E9741607 /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DynamicColor.modulemap; sourceTree = "<group>"; };
 		FC2402D60E0971C3EA4E242C5D313632 /* list_notifier.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = list_notifier.cpp; path = Realm/ObjectStore/src/impl/list_notifier.cpp; sourceTree = "<group>"; };
 		FCD48C79DA709811C93319D98AE9341A /* weak_realm_notifier.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = weak_realm_notifier.cpp; path = Realm/ObjectStore/src/impl/weak_realm_notifier.cpp; sourceTree = "<group>"; };
 		FDD7C04FA3B22DAD88B45E04CACD2714 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		FE5F174BEB7D0ED8A7772C522DBFED46 /* RealmSwift-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RealmSwift-watchOS-dummy.m"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-dummy.m"; sourceTree = "<group>"; };
+		FE5900DD71609696CE4E2471B956588B /* RealmSwift-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RealmSwift-watchOS-prefix.pch"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		FE6BFCA1DA7C281E15B9DF4F7294563B /* RLMOptionalBase.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = RLMOptionalBase.mm; path = Realm/RLMOptionalBase.mm; sourceTree = "<group>"; };
-		FE8E958825E958E742C14B62889891C8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Timepiece-watchOS/Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -935,6 +935,26 @@
 			path = "../Target Support Files/XLPagerTabStrip";
 			sourceTree = "<group>";
 		};
+		34048FACDAE32AADAF90E24B32070366 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				50FC8FE9389441FAF6C51CE937F41B04 /* Info.plist */,
+				6C424363DA33582A4EF0643F63A6CC57 /* Info.plist */,
+				6438A24CF4645E0FB223FA07E62797CA /* RealmSwift-iOS.modulemap */,
+				264595794A7C500AE205C23097099CFF /* RealmSwift-iOS.xcconfig */,
+				901477BAE60A5AB09B55272E7B191D50 /* RealmSwift-iOS-dummy.m */,
+				89AD101E3967137440D41E26B1CDA2C6 /* RealmSwift-iOS-prefix.pch */,
+				95D90B5BE132C876F3BB3CCE92E16750 /* RealmSwift-iOS-umbrella.h */,
+				61A1E1063EBEC33F0FCB44B1C83F2BFA /* RealmSwift-watchOS.modulemap */,
+				60E26358A9FFBB49E75140C57D88BA91 /* RealmSwift-watchOS.xcconfig */,
+				4B21C515EF22C48A00183D53566C4733 /* RealmSwift-watchOS-dummy.m */,
+				FE5900DD71609696CE4E2471B956588B /* RealmSwift-watchOS-prefix.pch */,
+				C54BD73014A7037C101B950A9B693629 /* RealmSwift-watchOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RealmSwift-iOS";
+			sourceTree = "<group>";
+		};
 		3618822A519C8B862DDED817463B30DE /* Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1003,26 +1023,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6983F3F736C2248ABDF928AF8ECC09B6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F257B77A3FB7303C32D7D306BDD15903 /* Info.plist */,
-				03E626195BF9B1E4C4F6F2A887501485 /* Info.plist */,
-				810FA0A80F5F655563464FA749DE6B87 /* RealmSwift-iOS.modulemap */,
-				84B6F55881717997A43A2B87C34838A9 /* RealmSwift-iOS.xcconfig */,
-				A9020A10D02E3F71CFE8BAEAA0592052 /* RealmSwift-iOS-dummy.m */,
-				AF6A226EB98A1F6A33055902A5ECD2F9 /* RealmSwift-iOS-prefix.pch */,
-				620B93A7B05AF7CB56AEBC734FE2B031 /* RealmSwift-iOS-umbrella.h */,
-				9346894D91BBBD20E1E4BFBBD4A2F817 /* RealmSwift-watchOS.modulemap */,
-				8DCB2B23C1088CAB61E3BC4CB14769F6 /* RealmSwift-watchOS.xcconfig */,
-				FE5F174BEB7D0ED8A7772C522DBFED46 /* RealmSwift-watchOS-dummy.m */,
-				224FBB52A9696AA6E040A87898748C1B /* RealmSwift-watchOS-prefix.pch */,
-				04E94FB9F6D9DDA26DD30501C4EF6EFC /* RealmSwift-watchOS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/RealmSwift-iOS";
-			sourceTree = "<group>";
-		};
 		6D1B527F8AB0CB303AF180B5CB86F621 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1035,26 +1035,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/DynamicColor";
-			sourceTree = "<group>";
-		};
-		6D6FA2136268150FB16D08247EDFD810 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FE8E958825E958E742C14B62889891C8 /* Info.plist */,
-				405E3325279285151DDB7118363B5BDD /* Info.plist */,
-				EC7B1B7176EBC4AACE41468F1B91986D /* Timepiece-iOS.modulemap */,
-				703937C4A4EB6767C0EABBF2B08D5380 /* Timepiece-iOS.xcconfig */,
-				5F6AE1A8F53DBBE3E21C32FFA3E99098 /* Timepiece-iOS-dummy.m */,
-				7F57AD1A9C85EA5F664986A737C6E919 /* Timepiece-iOS-prefix.pch */,
-				58DC9C0EB5328C489E5F7170F43E6DB2 /* Timepiece-iOS-umbrella.h */,
-				6B302EF6DA382C4746872DD9B4671810 /* Timepiece-watchOS.modulemap */,
-				71677158575C23ED6A9C839B45ADC6A8 /* Timepiece-watchOS.xcconfig */,
-				8C0415146A15FE8CC9A98586A3089A54 /* Timepiece-watchOS-dummy.m */,
-				862C7252A1733B63506215EC746B755D /* Timepiece-watchOS-prefix.pch */,
-				F8FE567C0B4AF576A49144E85CABCF71 /* Timepiece-watchOS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Timepiece-iOS";
 			sourceTree = "<group>";
 		};
 		75C7230D4165561B71C1BD6A3A1BBC2A /* AcknowList */ = {
@@ -1134,7 +1114,7 @@
 				1DE21B5D058BFD9C3CB3A36B0F3E7AA0 /* SortDescriptor.swift */,
 				DD4BF7FB1E87A27B5733E66DAE7008F0 /* SwiftVersion.swift */,
 				6B6965EEAC8D6A48883D1FE33554DA6B /* Util.swift */,
-				6983F3F736C2248ABDF928AF8ECC09B6 /* Support Files */,
+				34048FACDAE32AADAF90E24B32070366 /* Support Files */,
 			);
 			path = RealmSwift;
 			sourceTree = "<group>";
@@ -1305,7 +1285,7 @@
 				446712E6AD1003F690775BA478CB1EFD /* NSDateComponents+Timepiece.swift */,
 				B61173F6687E249C81BED32688BC6878 /* NSTimeInterval+Timepiece.swift */,
 				CF3799A8E647DC6089153CC4F7AF3757 /* String+Timepiece.swift */,
-				6D6FA2136268150FB16D08247EDFD810 /* Support Files */,
+				E653DEC90069D0585D2826AFEF184C1D /* Support Files */,
 			);
 			path = Timepiece;
 			sourceTree = "<group>";
@@ -1331,6 +1311,26 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/AcknowList";
+			sourceTree = "<group>";
+		};
+		E653DEC90069D0585D2826AFEF184C1D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A773F3FFE6E271A57307E7669D6EB8D /* Info.plist */,
+				527B2A79F2C4B7532D92378D02F76931 /* Info.plist */,
+				F9B0C05A8F62C991C6C1470A7191021F /* Timepiece-iOS.modulemap */,
+				83B94A7D747B634A1F8F31ED5F0DDEB2 /* Timepiece-iOS.xcconfig */,
+				0417933D02F8F34D446A148073FF6B07 /* Timepiece-iOS-dummy.m */,
+				6EA977F2F0FD9D02F8391A3DFE564F5A /* Timepiece-iOS-prefix.pch */,
+				A9A1474EF332B563AA739EAB267B2610 /* Timepiece-iOS-umbrella.h */,
+				7A4BCEDD55BB98ED14417116D6721D79 /* Timepiece-watchOS.modulemap */,
+				AF1A8A0FDB680EA7408EB54B8C54B932 /* Timepiece-watchOS.xcconfig */,
+				471DFE6879A5A27CA865D86728719F26 /* Timepiece-watchOS-dummy.m */,
+				D02CF04FE98F7AB528672C56D7833151 /* Timepiece-watchOS-prefix.pch */,
+				96EEA1526EC5BD5A0008E2C7DFE0795A /* Timepiece-watchOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Timepiece-iOS";
 			sourceTree = "<group>";
 		};
 		F6C432CAA2AE53F285FC386878822DD7 /* Resources */ = {
@@ -2185,7 +2185,7 @@
 /* Begin XCBuildConfiguration section */
 		0A1CED9F60E5812380CBCFD1B72188BE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71677158575C23ED6A9C839B45ADC6A8 /* Timepiece-watchOS.xcconfig */;
+			baseConfigurationReference = AF1A8A0FDB680EA7408EB54B8C54B932 /* Timepiece-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2218,7 +2218,7 @@
 		};
 		11E04641A206C90EE1FFE9F549B4C75E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 703937C4A4EB6767C0EABBF2B08D5380 /* Timepiece-iOS.xcconfig */;
+			baseConfigurationReference = 83B94A7D747B634A1F8F31ED5F0DDEB2 /* Timepiece-iOS.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2463,7 +2463,7 @@
 		};
 		572F15FA02392AEE34C9F2FDD5D514D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71677158575C23ED6A9C839B45ADC6A8 /* Timepiece-watchOS.xcconfig */;
+			baseConfigurationReference = AF1A8A0FDB680EA7408EB54B8C54B932 /* Timepiece-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2515,7 +2515,7 @@
 		};
 		677C7895D1BAC5DBA68D04418A50B501 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 703937C4A4EB6767C0EABBF2B08D5380 /* Timepiece-iOS.xcconfig */;
+			baseConfigurationReference = 83B94A7D747B634A1F8F31ED5F0DDEB2 /* Timepiece-iOS.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2788,7 +2788,7 @@
 		};
 		B8D42AB8FCEE3BB3C7F8AC661298084A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84B6F55881717997A43A2B87C34838A9 /* RealmSwift-iOS.xcconfig */;
+			baseConfigurationReference = 264595794A7C500AE205C23097099CFF /* RealmSwift-iOS.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2821,7 +2821,7 @@
 		};
 		BC41E8431CE735EE713C2336DF646431 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84B6F55881717997A43A2B87C34838A9 /* RealmSwift-iOS.xcconfig */;
+			baseConfigurationReference = 264595794A7C500AE205C23097099CFF /* RealmSwift-iOS.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2991,7 +2991,7 @@
 		};
 		D7ECCE62AB88213FE2ADC6B69B5FD55E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DCB2B23C1088CAB61E3BC4CB14769F6 /* RealmSwift-watchOS.xcconfig */;
+			baseConfigurationReference = 60E26358A9FFBB49E75140C57D88BA91 /* RealmSwift-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -3076,7 +3076,7 @@
 		};
 		FCC2B1C203F7135FB9440D649A9E9F63 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DCB2B23C1088CAB61E3BC4CB14769F6 /* RealmSwift-watchOS.xcconfig */;
+			baseConfigurationReference = 60E26358A9FFBB49E75140C57D88BA91 /* RealmSwift-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

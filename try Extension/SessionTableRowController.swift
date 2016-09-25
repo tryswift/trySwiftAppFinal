@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import TrySwiftDataWatch
 
 class SessionTableRowController: NSObject {
 

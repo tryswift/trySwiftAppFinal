@@ -7,7 +7,7 @@
 //
 
 import WatchKit
-import RealmSwift
+import TrySwiftDataWatch
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 

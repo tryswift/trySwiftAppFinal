@@ -8,6 +8,7 @@
 
 import WatchKit
 import Timepiece
+import TrySwiftDataWatch
 
 class GlanceController: WKInterfaceController {
 
