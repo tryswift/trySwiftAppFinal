@@ -8,6 +8,7 @@
 
 import UIKit
 import AcknowList
+import TrySwiftData
 
 class MoreTableViewController: UITableViewController {
     

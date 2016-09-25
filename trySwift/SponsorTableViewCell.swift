@@ -8,6 +8,7 @@
 
 import UIKit
 import Toucan
+import TrySwiftData
 
 class SponsorTableViewCell: UITableViewCell {
     

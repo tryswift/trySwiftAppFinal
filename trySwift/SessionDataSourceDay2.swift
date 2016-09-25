@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import TrySwiftData
 
 struct SessionDataSourceDay2: SessionDataSourceProtocol {
     var header = "Thu, Sep 1"
