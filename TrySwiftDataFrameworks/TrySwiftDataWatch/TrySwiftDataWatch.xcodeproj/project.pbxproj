@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA14F1151D97BFC200DA3537 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA14F1131D97BFC200DA3537 /* Realm.framework */; };
+		FA14F1161D97BFC200DA3537 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA14F1141D97BFC200DA3537 /* RealmSwift.framework */; };
 		FA44F8A31D96E9C300BE6C53 /* TrySwiftDataWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = FA44F8A11D96E9C300BE6C53 /* TrySwiftDataWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA44F8D91D96EA7C00BE6C53 /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44F8D01D96EA7C00BE6C53 /* Conference.swift */; };
 		FA44F8DB1D96EA7C00BE6C53 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44F8D21D96EA7C00BE6C53 /* Event.swift */; };
@@ -16,13 +18,12 @@
 		FA44F8DF1D96EA7C00BE6C53 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44F8D61D96EA7C00BE6C53 /* Speaker.swift */; };
 		FA44F8E01D96EA7C00BE6C53 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44F8D71D96EA7C00BE6C53 /* Sponsor.swift */; };
 		FA44F8E11D96EA7C00BE6C53 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44F8D81D96EA7C00BE6C53 /* Venue.swift */; };
-		FAAAF58C1D97A8360074EE84 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0612C51D979E0B00A5C6E6 /* Realm.framework */; };
-		FAAAF58D1D97A8360074EE84 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0612C61D979E0B00A5C6E6 /* RealmSwift.framework */; };
+		FAAAF5911D97B4610074EE84 /* ChangeNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAAF5901D97B4610074EE84 /* ChangeNotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA0612C51D979E0B00A5C6E6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "realm-swift-1.1.0 2/watchos/swift-3.0/Realm.framework"; sourceTree = "<group>"; };
-		FA0612C61D979E0B00A5C6E6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "realm-swift-1.1.0 2/watchos/swift-3.0/RealmSwift.framework"; sourceTree = "<group>"; };
+		FA14F1131D97BFC200DA3537 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "realm-swift-1.1.0 2/watchos/swift-3.0/Realm.framework"; sourceTree = "<group>"; };
+		FA14F1141D97BFC200DA3537 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "realm-swift-1.1.0 2/watchos/swift-3.0/RealmSwift.framework"; sourceTree = "<group>"; };
 		FA44F89E1D96E9C300BE6C53 /* TrySwiftDataWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrySwiftDataWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA44F8A11D96E9C300BE6C53 /* TrySwiftDataWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrySwiftDataWatch.h; sourceTree = "<group>"; };
 		FA44F8A21D96E9C300BE6C53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		FA44F8D61D96EA7C00BE6C53 /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Speaker.swift; path = ../../Models/Speaker.swift; sourceTree = "<group>"; };
 		FA44F8D71D96EA7C00BE6C53 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sponsor.swift; path = ../../Models/Sponsor.swift; sourceTree = "<group>"; };
 		FA44F8D81D96EA7C00BE6C53 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Venue.swift; path = ../../Models/Venue.swift; sourceTree = "<group>"; };
+		FAAAF5901D97B4610074EE84 /* ChangeNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChangeNotificationManager.swift; path = ../../Models/ChangeNotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,8 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAAAF58C1D97A8360074EE84 /* Realm.framework in Frameworks */,
-				FAAAF58D1D97A8360074EE84 /* RealmSwift.framework in Frameworks */,
+				FA14F1151D97BFC200DA3537 /* Realm.framework in Frameworks */,
+				FA14F1161D97BFC200DA3537 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +54,8 @@
 		FA0612C41D979E0A00A5C6E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA0612C51D979E0B00A5C6E6 /* Realm.framework */,
-				FA0612C61D979E0B00A5C6E6 /* RealmSwift.framework */,
+				FA14F1131D97BFC200DA3537 /* Realm.framework */,
+				FA14F1141D97BFC200DA3537 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -86,6 +88,7 @@
 				FA44F8D61D96EA7C00BE6C53 /* Speaker.swift */,
 				FA44F8D71D96EA7C00BE6C53 /* Sponsor.swift */,
 				FA44F8D81D96EA7C00BE6C53 /* Venue.swift */,
+				FAAAF5901D97B4610074EE84 /* ChangeNotificationManager.swift */,
 				FA44F8A11D96E9C300BE6C53 /* TrySwiftDataWatch.h */,
 				FA44F8A21D96E9C300BE6C53 /* Info.plist */,
 			);
@@ -176,6 +179,7 @@
 				FA44F8D91D96EA7C00BE6C53 /* Conference.swift in Sources */,
 				FA44F8DB1D96EA7C00BE6C53 /* Event.swift in Sources */,
 				FA44F8DE1D96EA7C00BE6C53 /* Session.swift in Sources */,
+				FAAAF5911D97B4610074EE84 /* ChangeNotificationManager.swift in Sources */,
 				FA44F8E11D96EA7C00BE6C53 /* Venue.swift in Sources */,
 				FA44F8E01D96EA7C00BE6C53 /* Sponsor.swift in Sources */,
 				FA44F8DF1D96EA7C00BE6C53 /* Speaker.swift in Sources */,

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 import TrySwiftData
 
 class SpeakersViewController: UITableViewController {
@@ -15,17 +14,13 @@ class SpeakersViewController: UITableViewController {
     fileprivate let speakers = Speaker.speakers
     fileprivate let speakerDetailSegue = "speakerDetailSegue"
     
-    var token: NotificationToken?
+    fileprivate let changeNotificationManager = ChangeNotificationManager()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         title = "Speakers"
         subscribeToChangeNotification()
-    }
-
-    deinit {
-        token?.stop()
     }
     
     override func viewDidLoad() {
@@ -99,24 +94,8 @@ extension SpeakersViewController: UIViewControllerPreviewingDelegate {
 extension SpeakersViewController {
     
     func subscribeToChangeNotification() {
-        token = speakers.addNotificationBlock { [weak self] changes in
-            guard let tableView = self?.tableView else { return }
-            switch changes {
-            case .initial:
-                // Results are now populated and can be accessed without blocking the UI
-                tableView.reloadData()
-            case .update(_, let deletions, let insertions, let modifications):
-                // Query results have changed, so apply them to the UITableView
-                tableView.beginUpdates()
-                tableView.insertRows(at: insertions.map { IndexPath(row: $0, section: 0)}, with: .automatic)
-                tableView.deleteRows(at: deletions.map { IndexPath(row: $0, section: 0) }, with: .automatic)
-                tableView.reloadRows(at: modifications.map { IndexPath(row: $0, section: 0) }, with: .automatic)
- 
-                tableView.endUpdates()
-            case .error(let error):
-                // An error occurred while opening the Realm file on the background worker thread
-                fatalError("\(error)")
-            }
+        changeNotificationManager.subscribeToSpeakerChange { [weak self] in
+            self?.tableView.reloadData()
         }
     }
 }

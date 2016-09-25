@@ -57,8 +57,6 @@
 		FA44F8EA1D96EAE700BE6C53 /* TrySwiftData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA44F8B51D96EA5000BE6C53 /* TrySwiftData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA44F8ED1D96EAF200BE6C53 /* TrySwiftDataWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA44F8BD1D96EA5500BE6C53 /* TrySwiftDataWatch.framework */; };
 		FA44F8EE1D96EAF200BE6C53 /* TrySwiftDataWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA44F8BD1D96EA5500BE6C53 /* TrySwiftDataWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FA44F8F31D96EDD400BE6C53 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA44F8F11D96EDD400BE6C53 /* Realm.framework */; };
-		FA44F8F41D96EDD400BE6C53 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA44F8F21D96EDD400BE6C53 /* RealmSwift.framework */; };
 		FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */; };
 		FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */; };
 		FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5891C6D8A5200DCAF0B /* OrganizersTableViewController.swift */; };
@@ -325,8 +323,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA44F8ED1D96EAF200BE6C53 /* TrySwiftDataWatch.framework in Frameworks */,
-				FA44F8F31D96EDD400BE6C53 /* Realm.framework in Frameworks */,
-				FA44F8F41D96EDD400BE6C53 /* RealmSwift.framework in Frameworks */,
 				E299B5681B70B841CD50169F /* Pods_try_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1303,11 +1299,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D812ED17A67E581C5B161D3 /* Pods-try Extension.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftDataWatch/realm-swift-1.1.0\\ 2/watchos/swift-3.0",
+					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftDataWatch/realm-swift-1.1.0\\ 2/watchos/swift-3.0",
+				);
 				INFOPLIST_FILE = "try Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp.watchkitextension;
@@ -1325,11 +1325,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FADBBCB9E66B6F27F8B20D8D /* Pods-try Extension.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftDataWatch/realm-swift-1.1.0\\ 2/watchos/swift-3.0",
+					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftDataWatch/realm-swift-1.1.0\\ 2/watchos/swift-3.0",
+				);
 				INFOPLIST_FILE = "try Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp.watchkitextension;
@@ -1423,6 +1427,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -1433,7 +1438,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AD801DCB7F4C021016950B62 /* Pods-trySwift.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
@@ -1442,6 +1447,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftData/TrySwiftData/realm-swift-1.1.0\\ 2/ios/swift-3.0",
+					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftData/TrySwiftData/realm-swift-1.1.0\\ 2/ios/swift-3.0",
 				);
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1459,7 +1466,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73E5734F4245C39D5E57338B /* Pods-trySwift.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
@@ -1468,6 +1475,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftData/TrySwiftData/realm-swift-1.1.0\\ 2/ios/swift-3.0",
+					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftData/TrySwiftData/realm-swift-1.1.0\\ 2/ios/swift-3.0",
 				);
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
