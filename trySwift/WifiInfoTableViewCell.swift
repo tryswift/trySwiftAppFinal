@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TrySwiftData
 
 class WifiInfoTableViewCell: UITableViewCell {
 

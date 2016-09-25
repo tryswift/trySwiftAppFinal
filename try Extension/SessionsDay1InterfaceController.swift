@@ -8,15 +8,15 @@
 
 import WatchKit
 import Foundation
-import RealmSwift
+import TrySwiftDataWatch
 
 class SessionsInterfaceController: WKInterfaceController {
 
     @IBOutlet fileprivate var sessionsTable: WKInterfaceTable!
     
-    fileprivate var sessions = Session.sessionsAug31
+    fileprivate var sessions = Session.sessionsAug31Filtered
     
-    var token: NotificationToken? = nil
+    fileprivate let changeNotificationManager = ChangeNotificationManager()
     
     static var first = true
     
@@ -46,16 +46,12 @@ class SessionsInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    
-    deinit {
-        token?.stop()
-    }
 }
 
 private extension SessionsInterfaceController {
     
     func loadTableData() {
-        sessionsTable.setNumberOfRows(sessions.count, withRowType: String(describing: SessionTableRowController()))
+        sessionsTable.setNumberOfRows(sessions.count, withRowType: String(describing: SessionTableRowController.self))
         
         for (index, session) in sessions.enumerated() {
             let row = sessionsTable.rowController(at: index) as? SessionTableRowController
@@ -64,7 +60,7 @@ private extension SessionsInterfaceController {
     }
     
     func subscribeToChangeNotification() {
-        token = Presentation.presentations.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+        changeNotificationManager.subscribeToPresenationChange { [weak self] in
             self?.loadTableData()
         }
     }
@@ -80,7 +76,7 @@ private class PageDetails: AnyObject {
         self.sessions = sessions
     }
     
-    static let Aug31 = PageDetails(title: "try! Aug 31", sessions: Session.sessionsAug31)
-    static let Sep1 = PageDetails(title: "try! Sep 1", sessions: Session.sessionsSept1)
-    static let Sep2 = PageDetails(title: "try! Sep 2", sessions: Session.sessionsSept2)
+    static let Aug31 = PageDetails(title: "try! Aug 31", sessions: Session.sessionsAug31Filtered)
+    static let Sep1 = PageDetails(title: "try! Sep 1", sessions: Session.sessionsSept1Filtered)
+    static let Sep2 = PageDetails(title: "try! Sep 2", sessions: Session.sessionsSept2Filtered)
 }
