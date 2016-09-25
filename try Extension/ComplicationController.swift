@@ -7,7 +7,7 @@
 //
 
 import ClockKit
-import Timepiece
+import TrySwiftDataWatch
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     let conferenceStartDate = Date.date(year: 2016, month: 8, day: 31, hour: 0, minute: 0, second: 0)
@@ -143,8 +143,8 @@ private extension ComplicationController {
     }
     
     func timelineEntryDateForSession(_ session: Session) -> Date {
-        if session.index - 1 > 0 {
-            let previousSession = Session.sessions[session.index - 1]
+        if session.index! - 1 > 0 {
+            let previousSession = Session.sessions[session.index! - 1]
             return previousSession.endTime as Date
         } else {
             return conferenceStartDate

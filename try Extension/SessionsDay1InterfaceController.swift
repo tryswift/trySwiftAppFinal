@@ -8,13 +8,14 @@
 
 import WatchKit
 import Foundation
+import TrySwiftDataWatch
 import RealmSwift
 
 class SessionsInterfaceController: WKInterfaceController {
 
     @IBOutlet fileprivate var sessionsTable: WKInterfaceTable!
     
-    fileprivate var sessions = Session.sessionsAug31
+    fileprivate var sessions = Session.sessionsAug31Filtered
     
     var token: NotificationToken? = nil
     
@@ -80,7 +81,7 @@ private class PageDetails: AnyObject {
         self.sessions = sessions
     }
     
-    static let Aug31 = PageDetails(title: "try! Aug 31", sessions: Session.sessionsAug31)
-    static let Sep1 = PageDetails(title: "try! Sep 1", sessions: Session.sessionsSept1)
-    static let Sep2 = PageDetails(title: "try! Sep 2", sessions: Session.sessionsSept2)
+    static let Aug31 = PageDetails(title: "try! Aug 31", sessions: Session.sessionsAug31Filtered)
+    static let Sep1 = PageDetails(title: "try! Sep 1", sessions: Session.sessionsSept1Filtered)
+    static let Sep2 = PageDetails(title: "try! Sep 2", sessions: Session.sessionsSept2Filtered)
 }
