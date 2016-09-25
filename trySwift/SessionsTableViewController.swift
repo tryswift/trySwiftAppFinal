@@ -8,15 +8,13 @@
 
 import UIKit
 import XLPagerTabStrip
-import RealmSwift
 import TrySwiftData
 
 class SessionsTableViewController: UITableViewController {
     
     var dataSource: SessionDataSourceProtocol!
     fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
-    
-    var token: NotificationToken?
+    fileprivate let changeNotificationManager = ChangeNotificationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +33,6 @@ class SessionsTableViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: indexPath, animated: true)
         }
-    }
-    
-    deinit {
-        token?.stop()
     }
 }
 
@@ -155,18 +149,8 @@ extension SessionsTableViewController {
 extension SessionsTableViewController {
     
     func subscribeToChangeNotification() {
-        token = Presentation.presentations.addNotificationBlock { [weak self] changes in
-            guard let tableView = self?.tableView else { return }
-            
-            switch changes {
-            case .update(_, _, _, _):
-                tableView.reloadData()
-            case .error(let error):
-                // An error occurred while opening the Realm file on the background worker thread
-                fatalError("\(error)")
-            default:
-                break
-            }
+        changeNotificationManager.subscribeToPresenationChange { [weak self] in
+            self?.tableView?.reloadData()
         }
     }
 }

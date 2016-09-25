@@ -9,7 +9,6 @@
 import WatchKit
 import Foundation
 import TrySwiftDataWatch
-import RealmSwift
 
 class SessionsInterfaceController: WKInterfaceController {
 
@@ -17,7 +16,7 @@ class SessionsInterfaceController: WKInterfaceController {
     
     fileprivate var sessions = Session.sessionsAug31Filtered
     
-    var token: NotificationToken? = nil
+    fileprivate let changeNotificationManager = ChangeNotificationManager()
     
     static var first = true
     
@@ -47,10 +46,6 @@ class SessionsInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    
-    deinit {
-        token?.stop()
-    }
 }
 
 private extension SessionsInterfaceController {
@@ -65,7 +60,7 @@ private extension SessionsInterfaceController {
     }
     
     func subscribeToChangeNotification() {
-        token = Presentation.presentations.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+        changeNotificationManager.subscribeToPresenationChange { [weak self] in
             self?.loadTableData()
         }
     }
