@@ -24,13 +24,12 @@ class SessionsInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         if SessionsInterfaceController.first {
-            WKInterfaceController.reloadRootControllers(withNames: ["Aug31", "Sep1", "Sep2"], contexts: [PageDetails.Aug31, PageDetails.Sep1, PageDetails.Sep2])
+            WKInterfaceController.reloadRootControllers(withNames: ["Aug31", "Sep1", "Sep2"], contexts: [Session.sessionsAug31Filtered, Session.sessionsSept1Filtered, Session.sessionsSept2Filtered])
             SessionsInterfaceController.first = false
         }
-        
-        if let pageDetails = context as? PageDetails {
-            sessions = pageDetails.sessions
-            setTitle(pageDetails.title)
+
+        if let sessionsContext = context as? [Session] {
+            sessions = sessionsContext
         }
         
         loadTableData()
@@ -64,19 +63,4 @@ private extension SessionsInterfaceController {
             self?.loadTableData()
         }
     }
-}
-
-// holder for sessions since it cannot be case to AnyObject
-private class PageDetails: AnyObject {
-    let title: String
-    let sessions: [Session]
-    
-    init(title: String, sessions: [Session]) {
-        self.title = title
-        self.sessions = sessions
-    }
-    
-    static let Aug31 = PageDetails(title: "try! Aug 31", sessions: Session.sessionsAug31Filtered)
-    static let Sep1 = PageDetails(title: "try! Sep 1", sessions: Session.sessionsSept1Filtered)
-    static let Sep2 = PageDetails(title: "try! Sep 2", sessions: Session.sessionsSept2Filtered)
 }
