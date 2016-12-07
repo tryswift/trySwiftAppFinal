@@ -30,10 +30,10 @@ class GlanceController: WKInterfaceController {
         
         let sessions = Session.sessions
         
-        let sessionForTime = sessions.filter { (($0.startTime - 5.minutes)...$0.endTime).contains(Date())}
+        let sessionForTime = sessions.filter { (($0.startTime - 5.minutes)!...$0.endTime).contains(Date())}
         if let session = sessionForTime.first {
             configureSession(session)
-        } else if Date() > (Session.sessions.first!.startTime - 1.day ) {
+        } else if Date() > (Session.sessions.first!.startTime - 1.day )! {
             configureSession(Session.sessions.first!)
         } else {
             configureDefault()

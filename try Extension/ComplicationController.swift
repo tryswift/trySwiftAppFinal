@@ -10,7 +10,7 @@ import ClockKit
 import TrySwiftDataWatch
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
-    let conferenceStartDate = Date.date(year: 2016, month: 8, day: 31, hour: 0, minute: 0, second: 0)
+    let conferenceStartDate = Date(year: 2017, month: 3, day: 2)        
 }
 
 // MARK: - Timeline Configuration
