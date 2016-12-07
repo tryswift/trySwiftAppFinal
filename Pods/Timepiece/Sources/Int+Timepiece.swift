@@ -9,52 +9,67 @@
 import Foundation
 
 public extension Int {
-    var year: Duration {
-        return Duration(value: self, unit: .year)
+    var year: DateComponents {
+        return DateComponents(year: self)
     }
-    var years: Duration {
+
+    var years: DateComponents {
         return year
     }
-    
-    var month: Duration {
-        return Duration(value: self, unit: .month)
+
+    var month: DateComponents {
+        return DateComponents(month: self)
     }
-    var months: Duration {
+
+    var months: DateComponents {
         return month
     }
-    
-    var week: Duration {
-        return Duration(value: self, unit: .weekOfYear)
+
+    var week: DateComponents {
+        return DateComponents(day: 7 * self)
     }
-    var weeks: Duration {
+
+    var weeks: DateComponents {
         return week
     }
-    
-    var day: Duration {
-        return Duration(value: self, unit: .day)
+
+    var day: DateComponents {
+        return DateComponents(day: self)
     }
-    var days: Duration {
+
+    var days: DateComponents {
         return day
     }
-    
-    var hour: Duration {
-        return Duration(value: self, unit: .hour)
+
+    var hour: DateComponents {
+        return DateComponents(hour: self)
     }
-    var hours: Duration {
+
+    var hours: DateComponents {
         return hour
     }
-    
-    var minute: Duration {
-        return Duration(value: self, unit: .minute)
+
+    var minute: DateComponents {
+        return DateComponents(minute: self)
     }
-    var minutes: Duration {
+
+    var minutes: DateComponents {
         return minute
     }
-    
-    var second: Duration {
-        return Duration(value: self, unit: .second)
+
+    var second: DateComponents {
+        return DateComponents(second: self)
     }
-    var seconds: Duration {
+
+    var seconds: DateComponents {
         return second
+    }
+
+    var nanosecond: DateComponents {
+        return DateComponents(nanosecond: self)
+    }
+
+    var nanoseconds: DateComponents {
+        return nanosecond
     }
 }

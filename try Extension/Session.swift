@@ -12,7 +12,7 @@ import TrySwiftDataWatch
 extension Session {
     
     var timeString: String {
-        return "\(startTime.stringFromFormat("h:mm")) - \(endTime.stringFromFormat("h:mm a"))"
+        return "\(startTime.timeString(in: .short)) - \(endTime.timeString(in: .short))"
     }
     
     static let sessionsAug31Filtered = Session.sessionsAug31.flatMap{ $0 }.filter{ $0.index != nil}

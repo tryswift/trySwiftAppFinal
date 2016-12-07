@@ -1,47 +1,32 @@
 PODS:
-  - AcknowList (1.1)
+  - AcknowList (1.2)
   - DynamicColor (3.1.0)
-  - Realm (1.1.0):
-    - Realm/Headers (= 1.1.0)
-  - Realm/Headers (1.1.0)
-  - RealmSwift (1.1.0):
-    - Realm (= 1.1.0)
-  - Timepiece (0.4.3)
-  - Toucan (0.5.0)
+  - Realm (2.1.1):
+    - Realm/Headers (= 2.1.1)
+  - Realm/Headers (2.1.1)
+  - RealmSwift (2.1.1):
+    - Realm (= 2.1.1)
+  - Timepiece (1.0.1)
+  - Toucan (0.6.0)
   - XLPagerTabStrip (6.0.0)
 
 DEPENDENCIES:
-  - AcknowList (~> 1.1)
+  - AcknowList (~> 1.2)
   - DynamicColor (~> 3.1.0)
-  - RealmSwift (~> 1.1.0)
-  - Timepiece (from `https://github.com/NatashaTheRobot/Timepiece`)
-  - Toucan (from `https://github.com/vinzen/Toucan`, branch `swift3.0`)
+  - RealmSwift (~> 2.1.1)
+  - Timepiece (~> 1.0.1)
+  - Toucan (~> 0.6.0)
   - XLPagerTabStrip (~> 6.0.0)
 
-EXTERNAL SOURCES:
-  Timepiece:
-    :git: https://github.com/NatashaTheRobot/Timepiece
-  Toucan:
-    :branch: swift3.0
-    :git: https://github.com/vinzen/Toucan
-
-CHECKOUT OPTIONS:
-  Timepiece:
-    :commit: 515fe4b2bac80e6bc41bb805fe807403e76ead75
-    :git: https://github.com/NatashaTheRobot/Timepiece
-  Toucan:
-    :commit: 154d3299fb1371243d6713447f2091c82424fa34
-    :git: https://github.com/vinzen/Toucan
-
 SPEC CHECKSUMS:
-  AcknowList: b3c0bfaec365465991cff3d4315d8ba95186bb82
+  AcknowList: 18ccee4d933a153622416cce2d36e6864ec147ea
   DynamicColor: 4dec283a881f7f9d9f3bc88fb5f306724242575f
-  Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
-  RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
-  Timepiece: b5038887b91d6eb70653173f4270e06b3abeac41
-  Toucan: 0519c341148252ae114c5a657d2a85bb9ada9e40
+  Realm: a55959c0b171a5fe5267406d17f314fec3cefaae
+  RealmSwift: 749fd955bf8d6471c21d218b9389a47aaeccfe3f
+  Timepiece: 59cdc48089645cce07803c15116293b346ca457d
+  Toucan: 47485bbc9cb4541ef6318d6886103e6eaf16e919
   XLPagerTabStrip: c46e802a8dcac29edbcea573de8fe920e052455b
 
-PODFILE CHECKSUM: 3fb0340e7097a821e0c8a1d72433420aadf9d2d2
+PODFILE CHECKSUM: 0b529c8b61e53939f7e6c4a0836b37a96fecb7da
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.2.0.beta.1
