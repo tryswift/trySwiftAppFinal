@@ -52,10 +52,6 @@
 		FA3A1C531D6520FC0042F8DD /* ChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */; };
 		FA3A1CB61D68E1950042F8DD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */; };
 		FA3A1CB91D68E3AB0042F8DD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CB81D68E3AB0042F8DD /* WatchSessionManager.swift */; };
-		FA44F8E91D96EAE700BE6C53 /* TrySwiftData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA44F8B51D96EA5000BE6C53 /* TrySwiftData.framework */; };
-		FA44F8EA1D96EAE700BE6C53 /* TrySwiftData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA44F8B51D96EA5000BE6C53 /* TrySwiftData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FA44F8ED1D96EAF200BE6C53 /* TrySwiftDataWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA44F8BD1D96EA5500BE6C53 /* TrySwiftDataWatch.framework */; };
-		FA44F8EE1D96EAF200BE6C53 /* TrySwiftDataWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA44F8BD1D96EA5500BE6C53 /* TrySwiftDataWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */; };
 		FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */; };
 		FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5891C6D8A5200DCAF0B /* OrganizersTableViewController.swift */; };
@@ -94,41 +90,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA44F8B41D96EA5000BE6C53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA44F8AF1D96EA4F00BE6C53 /* TrySwiftData.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA5C9E0C1D967BB30080B608;
-			remoteInfo = TrySwiftData;
-		};
-		FA44F8B61D96EA5000BE6C53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA44F8AF1D96EA4F00BE6C53 /* TrySwiftData.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA5C9E151D967BB30080B608;
-			remoteInfo = TrySwiftDataTests;
-		};
-		FA44F8BC1D96EA5500BE6C53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA44F8B81D96EA5500BE6C53 /* TrySwiftDataWatch.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FA44F89E1D96E9C300BE6C53;
-			remoteInfo = TrySwiftDataWatch;
-		};
-		FA44F8EB1D96EAE700BE6C53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA44F8AF1D96EA4F00BE6C53 /* TrySwiftData.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FA5C9E0B1D967BB30080B608;
-			remoteInfo = TrySwiftData;
-		};
-		FA44F8EF1D96EAF200BE6C53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA44F8B81D96EA5500BE6C53 /* TrySwiftDataWatch.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FA44F89D1D96E9C300BE6C53;
-			remoteInfo = TrySwiftDataWatch;
-		};
 		FA65B5A61C79895A00DCAF0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
@@ -166,7 +127,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA44F8EA1D96EAE700BE6C53 /* TrySwiftData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,7 +159,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FA44F8EE1D96EAF200BE6C53 /* TrySwiftDataWatch.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +215,6 @@
 		FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-trySwift-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		FA3A1CB81D68E3AB0042F8DD /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
-		FA44F8AF1D96EA4F00BE6C53 /* TrySwiftData.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TrySwiftData.xcodeproj; path = TrySwiftDataFrameworks/TrySwiftData/TrySwiftData.xcodeproj; sourceTree = "<group>"; };
-		FA44F8B81D96EA5500BE6C53 /* TrySwiftDataWatch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TrySwiftDataWatch.xcodeproj; path = TrySwiftDataFrameworks/TrySwiftDataWatch/TrySwiftDataWatch.xcodeproj; sourceTree = "<group>"; };
 		FA44F8F11D96EDD400BE6C53 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = TrySwiftDataFrameworks/TrySwiftDataWatch/RealmWatchOS/Realm.framework; sourceTree = "<group>"; };
 		FA44F8F21D96EDD400BE6C53 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = TrySwiftDataFrameworks/TrySwiftDataWatch/RealmWatchOS/RealmSwift.framework; sourceTree = "<group>"; };
 		FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
@@ -321,7 +278,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA44F8ED1D96EAF200BE6C53 /* TrySwiftDataWatch.framework in Frameworks */,
 				E299B5681B70B841CD50169F /* Pods_try_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,7 +290,6 @@
 				F95EF1A858E90B600E081F16 /* Pods_trySwift.framework in Frameworks */,
 				2E977335936DA827A6D9E87C /* BuddyBuildSDK.framework in Frameworks */,
 				95AAB60A3AF87982F03E3CD7 /* AssetsLibrary.framework in Frameworks */,
-				FA44F8E91D96EAE700BE6C53 /* TrySwiftData.framework in Frameworks */,
 				4FBC8D84065DB905DEC53AFD /* CoreText.framework in Frameworks */,
 				517003D35102F78461C10908 /* CoreTelephony.framework in Frameworks */,
 				F0E0044EA2AF1A7AEFB06624 /* SystemConfiguration.framework in Frameworks */,
@@ -576,23 +531,6 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
-		FA44F8B01D96EA4F00BE6C53 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA44F8B51D96EA5000BE6C53 /* TrySwiftData.framework */,
-				FA44F8B71D96EA5000BE6C53 /* TrySwiftDataTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FA44F8B91D96EA5500BE6C53 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FA44F8BD1D96EA5500BE6C53 /* TrySwiftDataWatch.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		FA65B57D1C6D7AFC00DCAF0B /* More */ = {
 			isa = PBXGroup;
 			children = (
@@ -694,8 +632,6 @@
 		FAFA15AF1C69D31B00FEA4EA = {
 			isa = PBXGroup;
 			children = (
-				FA44F8AF1D96EA4F00BE6C53 /* TrySwiftData.xcodeproj */,
-				FA44F8B81D96EA5500BE6C53 /* TrySwiftDataWatch.xcodeproj */,
 				FAFA15BA1C69D31C00FEA4EA /* trySwift */,
 				FAFA15CF1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15DA1C69D31C00FEA4EA /* trySwiftUITests */,
@@ -793,7 +729,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FA44F8F01D96EAF200BE6C53 /* PBXTargetDependency */,
 			);
 			name = "try Extension";
 			productName = "try Extension";
@@ -817,7 +752,6 @@
 			);
 			dependencies = (
 				FA65B5B51C79895A00DCAF0B /* PBXTargetDependency */,
-				FA44F8EC1D96EAE700BE6C53 /* PBXTargetDependency */,
 			);
 			name = trySwift;
 			productName = trySwift;
@@ -921,16 +855,6 @@
 			mainGroup = FAFA15AF1C69D31B00FEA4EA;
 			productRefGroup = FAFA15B91C69D31C00FEA4EA /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = FA44F8B01D96EA4F00BE6C53 /* Products */;
-					ProjectRef = FA44F8AF1D96EA4F00BE6C53 /* TrySwiftData.xcodeproj */;
-				},
-				{
-					ProductGroup = FA44F8B91D96EA5500BE6C53 /* Products */;
-					ProjectRef = FA44F8B81D96EA5500BE6C53 /* TrySwiftDataWatch.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				FAFA15B71C69D31B00FEA4EA /* trySwift */,
@@ -941,30 +865,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		FA44F8B51D96EA5000BE6C53 /* TrySwiftData.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TrySwiftData.framework;
-			remoteRef = FA44F8B41D96EA5000BE6C53 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FA44F8B71D96EA5000BE6C53 /* TrySwiftDataTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = TrySwiftDataTests.xctest;
-			remoteRef = FA44F8B61D96EA5000BE6C53 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FA44F8BD1D96EA5500BE6C53 /* TrySwiftDataWatch.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = TrySwiftDataWatch.framework;
-			remoteRef = FA44F8BC1D96EA5500BE6C53 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FA65B5961C79895A00DCAF0B /* Resources */ = {
@@ -1195,16 +1095,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FA44F8EC1D96EAE700BE6C53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TrySwiftData;
-			targetProxy = FA44F8EB1D96EAE700BE6C53 /* PBXContainerItemProxy */;
-		};
-		FA44F8F01D96EAF200BE6C53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TrySwiftDataWatch;
-			targetProxy = FA44F8EF1D96EAF200BE6C53 /* PBXContainerItemProxy */;
-		};
 		FA65B5A71C79895A00DCAF0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA65B5A31C79895A00DCAF0B /* try Extension */;
