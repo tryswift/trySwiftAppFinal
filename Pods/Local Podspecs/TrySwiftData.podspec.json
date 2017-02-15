@@ -1,0 +1,39 @@
+{
+  "name": "TrySwiftData",
+  "version": "0.1.0",
+  "summary": "TrySwiftData",
+  "description": "trySwiftData",
+  "homepage": "https://github.com/tryswift/trySwiftData.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Alvin Varghese": "alvinvarghese@live.com",
+    "Natasha Murashev": "natasha@tryswift.co"
+  },
+  "source": {
+    "git": "https://github.com/tryswift/trySwiftData.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0",
+    "watchos": "3.1",
+    "tvos": "10.1"
+  },
+  "source_files": "TrySwiftData/**/*.{swift}",
+  "resource_bundles": {
+    "TrySwiftData": [
+      "TrySwiftData/Assets/*.{jpg,realm}"
+    ]
+  },
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
+  "dependencies": {
+    "RealmSwift": [
+
+    ]
+  }
+}

@@ -8,12 +8,12 @@
 
 #define REALM_VERSION               "unknown"
 
-#define REALM_INSTALL_PREFIX        "/Users/realm/workspace/ealm_realm-core_jed_release-YGQB2PVKDDWIOF4AUR65UBRZXF6KQQXMSIJBK4GREIG4T4XI73JA/install"
-#define REALM_INSTALL_EXEC_PREFIX   "/Users/realm/workspace/ealm_realm-core_jed_release-YGQB2PVKDDWIOF4AUR65UBRZXF6KQQXMSIJBK4GREIG4T4XI73JA/install"
-#define REALM_INSTALL_INCLUDEDIR    "/Users/realm/workspace/ealm_realm-core_jed_release-YGQB2PVKDDWIOF4AUR65UBRZXF6KQQXMSIJBK4GREIG4T4XI73JA/install/include"
-#define REALM_INSTALL_BINDIR        "/Users/realm/workspace/ealm_realm-core_jed_release-YGQB2PVKDDWIOF4AUR65UBRZXF6KQQXMSIJBK4GREIG4T4XI73JA/install/bin"
-#define REALM_INSTALL_LIBDIR        "/Users/realm/workspace/ealm_realm-core_jed_release-YGQB2PVKDDWIOF4AUR65UBRZXF6KQQXMSIJBK4GREIG4T4XI73JA/install/lib"
-#define REALM_INSTALL_LIBEXECDIR    "/Users/realm/workspace/ealm_realm-core_jed_release-YGQB2PVKDDWIOF4AUR65UBRZXF6KQQXMSIJBK4GREIG4T4XI73JA/install/libexec"
+#define REALM_INSTALL_PREFIX        "/Users/realm/workspace/realm_realm-core_master-ZBP7YYGK7EEKLBWAJKZQMIXPK7BHX4IZSAMXTSGLQ5SXVPPKKJMQ/install"
+#define REALM_INSTALL_EXEC_PREFIX   "/Users/realm/workspace/realm_realm-core_master-ZBP7YYGK7EEKLBWAJKZQMIXPK7BHX4IZSAMXTSGLQ5SXVPPKKJMQ/install"
+#define REALM_INSTALL_INCLUDEDIR    "/Users/realm/workspace/realm_realm-core_master-ZBP7YYGK7EEKLBWAJKZQMIXPK7BHX4IZSAMXTSGLQ5SXVPPKKJMQ/install/include"
+#define REALM_INSTALL_BINDIR        "/Users/realm/workspace/realm_realm-core_master-ZBP7YYGK7EEKLBWAJKZQMIXPK7BHX4IZSAMXTSGLQ5SXVPPKKJMQ/install/bin"
+#define REALM_INSTALL_LIBDIR        "/Users/realm/workspace/realm_realm-core_master-ZBP7YYGK7EEKLBWAJKZQMIXPK7BHX4IZSAMXTSGLQ5SXVPPKKJMQ/install/lib"
+#define REALM_INSTALL_LIBEXECDIR    "/Users/realm/workspace/realm_realm-core_master-ZBP7YYGK7EEKLBWAJKZQMIXPK7BHX4IZSAMXTSGLQ5SXVPPKKJMQ/install/libexec"
 
 #ifdef REALM_DEBUG
 #  define REALM_MAX_BPNODE_SIZE     1000

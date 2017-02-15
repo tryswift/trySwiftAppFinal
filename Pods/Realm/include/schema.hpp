@@ -22,6 +22,8 @@
 #include <string>
 #include <vector>
 
+#include "util/compiler.hpp"
+
 namespace realm {
 class ObjectSchema;
 class SchemaChange;
@@ -61,6 +63,7 @@ public:
     void copy_table_columns_from(Schema const&);
 
     friend bool operator==(Schema const&, Schema const&);
+    friend bool operator!=(Schema const& a, Schema const& b) { return !(a == b); }
 
     using base::iterator;
     using base::const_iterator;
@@ -142,7 +145,7 @@ public:
         REALM_FOR_EACH_SCHEMA_CHANGE_TYPE(REALM_SWITCH_CASE)
 #undef REALM_SWITCH_CASE
         }
-        __builtin_unreachable();
+        REALM_COMPILER_HINT_UNREACHABLE();
     }
 
     friend bool operator==(SchemaChange const& lft, SchemaChange const& rgt);

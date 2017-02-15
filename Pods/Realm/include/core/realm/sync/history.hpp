@@ -30,23 +30,19 @@
 namespace realm {
 namespace sync {
 
-/// SyncProgress is the progress sent by the server in
-/// the download message. The server scans through its
-/// history in connection with every download message.
-/// scan_server_version is the server_version of the changeset
-/// at which the server ended the scan. scan_client_version
-/// is the client_version for this client that was last integrated before
-/// scan_server_version.
+/// SyncProgress is the progress sent by the server in the download message. The
+/// server scans through its history in connection with every download message.
+/// scan_server_version is the server_version of the changeset at which the
+/// server ended the scan. scan_client_version is the client_version for this
+/// client that was last integrated before scan_server_version.
 /// latest_server_version is the end of the server history, and
-/// latest_server_session_ident is the server_session_ident
-/// corresponding to latest_sever_version.
-/// latest_client_version is the corresponding client_version.
-/// In other words, latest_client_version is the very latest version
-/// of a changeset originating from this client.
+/// latest_server_session_ident is the server_session_ident corresponding to
+/// latest_sever_version.  latest_client_version is the corresponding
+/// client_version.  In other words, latest_client_version is the very latest
+/// version of a changeset originating from this client.
 ///
-/// The client persists the entire progress. It is not very important to
-/// persist latest_server_version, but for consistency the entire
-/// progress is persisted.
+/// The client persists the entire progress. It is not very important to persist
+/// latest_server_version, but for consistency the entire progress is persisted.
 struct SyncProgress {
     using version_type = HistoryEntry::version_type;
 
@@ -55,6 +51,7 @@ struct SyncProgress {
     version_type latest_server_version = 0;
     int_fast64_t latest_server_session_ident = 0;
     version_type latest_client_version = 0;
+    int_fast64_t downloadable_bytes = 0;
 };
 
 
@@ -96,7 +93,7 @@ public:
     /// \param server_file_ident The server assigned server-side file
     /// identifier. This can be any non-zero integer strictly less than 2**64.
     /// The server is supposed to choose a cryptic value that cannot easily be
-    /// guessed by clients (intentionally or not), and its only puspose is to
+    /// guessed by clients (intentionally or not), and its only purpose is to
     /// provide a higher level of fidelity during subsequent identification of
     /// the server Realm. The server does not have to guarantee that this
     /// identifier is unique, but in almost all cases it will be. Since the
@@ -112,34 +109,34 @@ public:
     /// different server Realms.
     ///
     /// The client is required to obtain the file identifiers before engaging in
-    /// synchronization proper, and it must store the identifiers and use
-    /// them to reestablish the connection between the client file and the server
+    /// synchronization proper, and it must store the identifiers and use them
+    /// to reestablish the connection between the client file and the server
     /// file when engaging in future synchronization sessions.
     virtual void set_file_ident_pair(file_ident_type server_file_ident,
                                      file_ident_type client_file_ident,
                                      int_fast64_t client_file_ident_secret) = 0;
 
-    /// Stores the SyncProgress progress in the
-    /// associated Realm file in a way that makes it available via get_status()
-    /// during future synchronization sessions. Progress is reported by the
-    /// server in the DOWNLOAD message.
+    /// Stores the SyncProgress progress in the associated Realm file in a way
+    /// that makes it available via get_status() during future synchronization
+    /// sessions. Progress is reported by the server in the DOWNLOAD message.
     ///
     /// See struct SyncProgress for a description of \param progress.
     ///
-    /// `progress.scan_client_version` has an effect on the process by which
-    /// old history entries are discarded.
+    /// `progress.scan_client_version` has an effect on the process by which old
+    /// history entries are discarded.
     ///
-    /// `progress.scan_client_version` The version produced on this client by the last
-    /// changeset, that was sent to, and integrated by the server at the time
-    /// `progress.scan_server_version was produced, or zero if
+    /// `progress.scan_client_version` The version produced on this client by
+    /// the last changeset, that was sent to, and integrated by the server at
+    /// the time `progress.scan_server_version was produced, or zero if
     /// `progress.scan_server_version` is zero.
     ///
-    /// Since all changesets produced after `progres.scan_client_version` are potentially
-    /// needed during operational transformation of the next changeset received
-    /// from the server, the implementation of this class must promise to retain
-    /// all history entries produced after `progress.scan_client_version`. That is, a history
-    /// entry with a changeset, that produces version V, is guaranteed to be
-    /// retained as long as V is strictly greater than `progress.scan_client_version`.
+    /// Since all changesets produced after `progress.scan_client_version` are
+    /// potentially needed during operational transformation of the next
+    /// changeset received from the server, the implementation of this class
+    /// must promise to retain all history entries produced after
+    /// `progress.scan_client_version`. That is, a history entry with a
+    /// changeset, that produces version V, is guaranteed to be retained as long
+    /// as V is strictly greater than `progress.scan_client_version`.
     ///
     /// It is an error to specify a client version that is less than the
     /// currently stored version, since there is no way to get discarded history
@@ -153,12 +150,11 @@ public:
     ///
     /// \param begin_version, end_version The range of versions to consider. If
     /// `begin_version` is equal to `end_version`, this is the empty range. If
-    /// `begin_version` is zero, it means that everything preceeding
+    /// `begin_version` is zero, it means that everything preceding
     /// `end_version` is to be considered, which is again the empty range if
-    /// `end_version` is also zero. Zero is is special value in that no
-    /// changeset produces that version. It is an error if `end_version`
-    /// preceeds `begin_version`, or if `end_version` is zero and
-    /// `begin_version` is not.
+    /// `end_version` is also zero. Zero is a special value in that no changeset
+    /// produces that version. It is an error if `end_version` precedes
+    /// `begin_version`, or if `end_version` is zero and `begin_version` is not.
     ///
     /// \param buffer Owner of memory referenced by entry.changeset upon return.
     ///
@@ -198,6 +194,12 @@ public:
                                                      size_t num_changesets,
                                                      util::Logger* replay_logger,
                                                      std::function<SyncTransactCallback>& callback) = 0;
+
+    /// Get the persisted upload/download progress in bytes.
+    virtual void get_upload_download_bytes(uint_fast64_t& downloaded_bytes,
+                                           uint_fast64_t& downloadable_bytes,
+                                           uint_fast64_t& uploaded_bytes,
+                                           uint_fast64_t& uploadable_bytes) = 0;
 };
 
 

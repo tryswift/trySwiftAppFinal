@@ -23,7 +23,6 @@
 #include <cstddef>
 #include <memory>
 #include <chrono>
-#include <tuple>
 #include <string>
 #include <system_error>
 #include <ostream>
@@ -37,7 +36,6 @@
 #include <realm/util/assert.hpp>
 #include <realm/util/buffer.hpp>
 #include <realm/util/basic_system_errors.hpp>
-#include <realm/util/call_with_tuple.hpp>
 
 // Linux epoll
 //
@@ -274,13 +272,16 @@ class Endpoint::List {
 public:
     using iterator = const Endpoint*;
 
-    iterator begin() const;
-    iterator end() const;
-    std::size_t size() const;
+    iterator begin() const noexcept;
+    iterator end() const noexcept;
+    std::size_t size() const noexcept;
+    bool empty() const noexcept;
 
-    List() = default;
+    List() noexcept = default;
     List(List&&) noexcept = default;
     ~List() noexcept = default;
+
+    List& operator=(List&&) noexcept = default;
 
 private:
     Buffer<Endpoint> m_endpoints;
@@ -503,18 +504,82 @@ public:
     class Query;
 
     Resolver(Service&);
-    ~Resolver() noexcept {}
+    ~Resolver() noexcept;
 
     /// Thread-safe.
     Service& get_service() noexcept;
 
     /// @{ \brief Resolve the specified query to one or more endpoints.
-    void resolve(const Query&, Endpoint::List&);
-    std::error_code resolve(const Query&, Endpoint::List&, std::error_code&);
+    Endpoint::List resolve(const Query&);
+    Endpoint::List resolve(const Query&, std::error_code&);
     /// @}
 
+    /// \brief Perform an asynchronous resolve operation.
+    ///
+    /// Initiate an asynchronous resolve operation. The completion handler will
+    /// be called when the operation completes. The operation completes when it
+    /// succeeds, or an error occurs.
+    ///
+    /// The completion handler is always executed by the event loop thread,
+    /// i.e., by a thread that is executing Service::run(). Conversely, the
+    /// completion handler is guaranteed to not be called while no thread is
+    /// executing Service::run(). The execution of the completion handler is
+    /// always deferred to the event loop, meaning that it never happens as a
+    /// synchronous side effect of the execution of async_resolve(), even when
+    /// async_resolve() is executed by the event loop thread. The completion
+    /// handler is guaranteed to be called eventually, as long as there is time
+    /// enough for the operation to complete or fail, and a thread is executing
+    /// Service::run() for long enough.
+    ///
+    /// The operation can be canceled by calling cancel(), and will be
+    /// automatically canceled if the resolver object is destroyed. If the
+    /// operation is canceled, it will fail with `error::operation_aborted`. The
+    /// operation remains cancelable up until the point in time where the
+    /// completion handler starts to execute. This means that if cancel() is
+    /// called before the completion handler starts to execute, then the
+    /// completion handler is guaranteed to have `error::operation_aborted`
+    /// passed to it. This is true regardless of whether cancel() is called
+    /// explicitly or implicitly, such as when the resolver is destroyed.
+    ///
+    /// The specified handler will be executed by an expression on the form
+    /// `handler(ec, endpoints)` where `ec` is the error code and `endpoints` is
+    /// an object of type `Endpoint::List`. If the the handler object is
+    /// movable, it will never be copied. Otherwise, it will be copied as
+    /// necessary.
+    ///
+    /// It is an error to start a new resolve operation (synchronous or
+    /// asynchronous) while an asynchronous resolve operation is in progress via
+    /// the same resolver object. An asynchronous resolve operation is
+    /// considered complete as soon as the completion handler starts to
+    /// execute. This means that a new resolve operation can be started from the
+    /// completion handler.
+    template<class H> void async_resolve(Query, H handler);
+
+    /// \brief Cancel all asynchronous operations.
+    ///
+    /// Cause all incomplete asynchronous operations, that are associated with
+    /// this resolver (at most one), to fail with `error::operation_aborted`. An
+    /// asynchronous operation is complete precisely when its completion handler
+    /// starts executing.
+    ///
+    /// Completion handlers of canceled operations will become immediately ready
+    /// to execute, but will never be executed directly as part of the execution
+    /// of cancel().
+    ///
+    /// Cancellation happens automatically when the resolver object is destroyed.
+    void cancel() noexcept;
+
 private:
+    class ResolveOperBase;
+    template<class H> class ResolveOper;
+
+    using LendersResolveOperPtr = std::unique_ptr<ResolveOperBase, Service::LendersOperDeleter>;
+
     Service::Impl& m_service_impl;
+
+    Service::OwnersOperPtr m_resolve_oper;
+
+    void initiate_oper(LendersResolveOperPtr);
 };
 
 
@@ -1211,6 +1276,8 @@ public:
     /// Completion handlers of canceled operations will become immediately ready
     /// to execute, but will never be executed directly as part of the execution
     /// of cancel().
+    ///
+    /// Cancellation happens automatically when the timer object is destroyed.
     void cancel() noexcept;
 
 private:
@@ -1490,19 +1557,24 @@ inline Endpoint::Endpoint(const Address& addr, port_type port)
     }
 }
 
-inline Endpoint::List::iterator Endpoint::List::begin() const
+inline Endpoint::List::iterator Endpoint::List::begin() const noexcept
 {
     return m_endpoints.data();
 }
 
-inline Endpoint::List::iterator Endpoint::List::end() const
+inline Endpoint::List::iterator Endpoint::List::end() const noexcept
 {
     return m_endpoints.data() + m_endpoints.size();
 }
 
-inline std::size_t Endpoint::List::size() const
+inline std::size_t Endpoint::List::size() const noexcept
 {
     return m_endpoints.size();
+}
+
+inline bool Endpoint::List::empty() const noexcept
+{
+    return m_endpoints.size() == 0;
 }
 
 // ---------------- Service::OperQueue ----------------
@@ -1729,6 +1801,8 @@ private:
     // Set to true when the operation is canceled. Always false when not in use.
     bool m_canceled = false;
     AsyncOper* m_next = nullptr; // Always null when not in use
+    template<class H, class... Args>
+    void do_recycle_and_execute_helper(bool orphaned, bool& was_recycled, H handler, Args...);
     friend class Service;
 };
 
@@ -1752,7 +1826,7 @@ public:
     }
     void orphan() noexcept override final
     {
-        m_timer = 0;
+        m_timer = nullptr;
     }
 protected:
     DeadlineTimer* m_timer;
@@ -2537,25 +2611,36 @@ inline void Service::AsyncOper::do_recycle_and_execute(bool orphaned, H& handler
     // during the execution of the handler.
     bool was_recycled = false;
     try {
-        H handler_2 = std::move(handler); // Throws
-        // The caller (various subclasses of `AsyncOper`) must not pass any
-        // arguments to the completion handler by reference if they refer to
-        // this operation object, or parts of it. Due to the recycling of the
-        // operation object (`do_recycle()`), such references would become
-        // dangling before the invocation of the completion handler. Due to
-        // `std::decay`, the following tuple will introduce a copy of all
-        // nonconst lvalue reference arguments, preventing such references from
-        // being passed through.
-        std::tuple<typename std::decay<Args>::type...> copy_of_args(args...); // Throws
-        do_recycle(orphaned);
-        was_recycled = true;
-        util::call_with_tuple(std::move(handler_2), std::move(copy_of_args)); // Throws
+        // We need to copy or move all arguments to be passed to the handler,
+        // such that there is no risk of references to the recycled operation
+        // object being passed to the handler (the passed arguments may be
+        // references to members of the recycled operation object). The easiest
+        // way to achive this, is by forwarding the reference arguments (passed
+        // to this function) to a helper function whose arguments have
+        // nonreference type (`Args...` rather than `Args&&...`).
+        //
+        // Note that the copying and moving of arguments may throw, and it is
+        // important that the operation is still recycled even if that
+        // happens. For that reason, copying and moving of arguments must not
+        // happen until we are in a scope (this scope) that catches and deals
+        // correctly with such exceptions.
+        do_recycle_and_execute_helper(orphaned, was_recycled, std::move(handler),
+                                      std::forward<Args>(args)...); // Throws
     }
     catch (...) {
         if (!was_recycled)
             do_recycle(orphaned);
         throw;
     }
+}
+
+template<class H, class... Args>
+inline void Service::AsyncOper::do_recycle_and_execute_helper(bool orphaned, bool& was_recycled,
+                                                              H handler, Args... args)
+{
+    do_recycle(orphaned);
+    was_recycled = true;
+    handler(std::move(args)...); // Throws
 }
 
 inline void Service::AsyncOper::do_recycle(bool orphaned) noexcept
@@ -2574,16 +2659,84 @@ inline void Service::AsyncOper::do_recycle(bool orphaned) noexcept
 
 // ---------------- Resolver ----------------
 
+class Resolver::ResolveOperBase: public Service::AsyncOper {
+public:
+    ResolveOperBase(std::size_t size, Resolver& r, Query q) noexcept:
+        AsyncOper{size, true},
+        m_resolver{&r},
+        m_query{std::move(q)}
+    {
+    }
+    void perform()
+    {
+        // FIXME: Temporary hack until we get a true asynchronous resolver
+        m_endpoints = m_resolver->resolve(std::move(m_query), m_error_code); // Throws
+        set_is_complete(true);
+    }
+    void recycle() noexcept override final
+    {
+        bool orphaned = !m_resolver;
+        // Note: do_recycle() commits suicide.
+        do_recycle(orphaned);
+    }
+    void orphan() noexcept override final
+    {
+        m_resolver = nullptr;
+    }
+protected:
+    Resolver* m_resolver;
+    Query m_query;
+    Endpoint::List m_endpoints;
+    std::error_code m_error_code;
+};
+
+template<class H> class Resolver::ResolveOper: public ResolveOperBase {
+public:
+    ResolveOper(std::size_t size, Resolver& r, Query q, H handler):
+        ResolveOperBase{size, r, std::move(q)},
+        m_handler{std::move(handler)}
+    {
+    }
+    void recycle_and_execute() override final
+    {
+        REALM_ASSERT(is_complete() || (is_canceled() && !m_error_code));
+        REALM_ASSERT(is_canceled() || m_error_code || !m_endpoints.empty());
+        bool orphaned = !m_resolver;
+        std::error_code ec = m_error_code;
+        if (is_canceled())
+            ec = error::operation_aborted;
+        // Note: do_recycle_and_execute() commits suicide.
+        do_recycle_and_execute<H>(orphaned, m_handler, ec, std::move(m_endpoints)); // Throws
+    }
+private:
+    H m_handler;
+};
+
 inline Resolver::Resolver(Service& service):
     m_service_impl{*service.m_impl}
 {
 }
 
-inline void Resolver::resolve(const Query& q, Endpoint::List& l)
+inline Resolver::~Resolver() noexcept
+{
+    cancel();
+}
+
+inline Endpoint::List Resolver::resolve(const Query& q)
 {
     std::error_code ec;
-    if (resolve(q, l, ec))
+    Endpoint::List list = resolve(q, ec);
+    if (REALM_UNLIKELY(ec))
         throw std::system_error(ec);
+    return list;
+}
+
+template<class H> void Resolver::async_resolve(Query query, H handler)
+{
+    LendersResolveOperPtr op = Service::alloc<ResolveOper<H>>(m_resolve_oper, *this,
+                                                              std::move(query),
+                                                              std::move(handler)); // Throws
+    initiate_oper(std::move(op)); // Throws
 }
 
 inline Resolver::Query::Query(std::string service_port, int init_flags):
@@ -3104,7 +3257,7 @@ public:
     }
     void orphan() noexcept override final
     {
-        m_acceptor = 0;
+        m_acceptor = nullptr;
     }
     Service::Descriptor& descriptor() noexcept override final
     {
@@ -3258,6 +3411,10 @@ template<class R, class P, class H>
 inline void DeadlineTimer::async_wait(std::chrono::duration<R,P> delay, H handler)
 {
     clock::time_point now = clock::now();
+    // FIXME: This method of detecting overflow does not work. Comparison
+    // between distinct duration types is not overflow safe. Overflow easily
+    // happens in the implied conversion of arguments to the common duration
+    // type (std::common_type<>).
     auto max_add = clock::time_point::max() - now;
     if (delay > max_add)
         throw std::runtime_error("Expiration time overflow");

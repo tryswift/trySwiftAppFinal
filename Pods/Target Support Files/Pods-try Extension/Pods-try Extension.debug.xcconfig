@@ -1,10 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Timepiece-watchOS"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Realm-watchOS" "$PODS_CONFIGURATION_BUILD_DIR/RealmSwift-watchOS" "$PODS_CONFIGURATION_BUILD_DIR/Timepiece-watchOS"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Realm" "${PODS_ROOT}/Headers/Public/RealmSwift"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Timepiece-watchOS/Timepiece.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Realm" -isystem "${PODS_ROOT}/Headers/Public/RealmSwift"
-OTHER_LDFLAGS = $(inherited) -l"c++" -l"z" -framework "Timepiece"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Realm-watchOS/Realm.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/RealmSwift-watchOS/RealmSwift.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Timepiece-watchOS/Timepiece.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "Realm" -framework "RealmSwift" -framework "Timepiece"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
