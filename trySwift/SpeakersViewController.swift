@@ -11,7 +11,7 @@ import TrySwiftData
 
 class SpeakersViewController: UITableViewController {
     
-    fileprivate let speakers = Speaker.speakers
+    fileprivate let speakers = Speaker.all
     fileprivate let speakerDetailSegue = "speakerDetailSegue"
     
     fileprivate let changeNotificationManager = ChangeNotificationManager()
