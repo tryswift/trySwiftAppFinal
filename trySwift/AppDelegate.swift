@@ -20,9 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         BuddyBuildSDK.setup()
         
-        
-        insertDefaultData()
-        
         let notificationSettings =
             UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
         application.registerUserNotificationSettings(notificationSettings)
@@ -70,7 +67,7 @@ private extension AppDelegate {
     func configureData() {
         let defaults = UserDefaults.standard
         
-        let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+        let appSubmitionDate = Date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
         if defaults.object(forKey: ChangeManager.lastChangedDataNotification) == nil {
             defaults.set(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
         }
@@ -81,12 +78,7 @@ private extension AppDelegate {
         ChangeManager.syncChanges()
         ChangeManager.syncWatchChanges()
     }
-    
-    func insertDefaultData() {
-        Speaker.insertDefaultSpeakers()
-        Presentation.insertDefaultPresentations()
-    }
-    
+
     func subscribeToCloudChangeNotifications() {
         let defaults = UserDefaults.standard
         DispatchQueue.global().async {
