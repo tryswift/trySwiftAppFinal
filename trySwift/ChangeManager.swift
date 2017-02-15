@@ -20,7 +20,7 @@ struct ChangeManager {
         DispatchQueue.global().async {
             let publicDB = CKContainer.default().publicCloudDatabase
             guard let lastChangeDate = defaults.object(forKey: ChangeManager.lastChangedDataNotification) as? Date else {
-                let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+                let appSubmitionDate = Date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
                 defaults.set(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
                 return
             }
@@ -47,7 +47,7 @@ struct ChangeManager {
         DispatchQueue.global().async {
             let publicDB = CKContainer.default().publicCloudDatabase
             guard let lastChangeDate = defaults.object(forKey: WatchSessionManager.watchDataUpdatedNotification) as? Date else {
-                let appSubmitionDate = Date.date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
+                let appSubmitionDate = Date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
                 defaults.set(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
                 return
             }
