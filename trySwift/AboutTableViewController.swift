@@ -11,7 +11,7 @@ import TrySwiftData
 
 class AboutTableViewController: UITableViewController {
 
-    fileprivate let trySwift = Conference.trySwift
+    fileprivate let trySwift = Conference.current
     
     fileprivate enum AboutInfo: Int {
         case header, detail, twitter
