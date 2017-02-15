@@ -61,7 +61,6 @@
 		FA65B5951C7274EE00DCAF0B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5941C7274EE00DCAF0B /* UIImageExtension.swift */; };
 		FA65B59C1C79895A00DCAF0B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA65B59A1C79895A00DCAF0B /* Interface.storyboard */; };
 		FA65B59E1C79895A00DCAF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA65B59D1C79895A00DCAF0B /* Assets.xcassets */; };
-		FA65B5A51C79895A00DCAF0B /* try Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA65B5A41C79895A00DCAF0B /* try Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA65B5AC1C79895A00DCAF0B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */; };
 		FA65B5AE1C79895A00DCAF0B /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AD1C79895A00DCAF0B /* GlanceController.swift */; };
 		FA65B5B01C79895A00DCAF0B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */; };
@@ -90,13 +89,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FA65B5A61C79895A00DCAF0B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA65B5A31C79895A00DCAF0B;
-			remoteInfo = "try Extension";
-		};
 		FA65B5B41C79895A00DCAF0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
@@ -129,17 +121,6 @@
 			files = (
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA65B5BC1C79895A00DCAF0B /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				FA65B5A51C79895A00DCAF0B /* try Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA65B5BE1C79895A00DCAF0B /* Embed Watch Content */ = {
@@ -701,13 +682,11 @@
 			buildConfigurationList = FA65B5BD1C79895A00DCAF0B /* Build configuration list for PBXNativeTarget "try" */;
 			buildPhases = (
 				FA65B5961C79895A00DCAF0B /* Resources */,
-				FA65B5BC1C79895A00DCAF0B /* Embed App Extensions */,
 				39ACAFF9933FC717AE5A129E /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FA65B5A71C79895A00DCAF0B /* PBXTargetDependency */,
 			);
 			name = try;
 			productName = try;
@@ -821,7 +800,7 @@
 					};
 					FAFA15B71C69D31B00FEA4EA = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = W6GNU64U6Q;
+						DevelopmentTeam = 6LF3GMKZAB;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1095,11 +1074,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FA65B5A71C79895A00DCAF0B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA65B5A31C79895A00DCAF0B /* try Extension */;
-			targetProxy = FA65B5A61C79895A00DCAF0B /* PBXContainerItemProxy */;
-		};
 		FA65B5B51C79895A00DCAF0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA65B5971C79895A00DCAF0B /* try */;
@@ -1334,6 +1308,7 @@
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1362,6 +1337,7 @@
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
