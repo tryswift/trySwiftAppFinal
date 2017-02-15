@@ -2,7 +2,7 @@ use_frameworks!
 
 def shared_pods
     pod 'Timepiece', '~> 1.0.1'
-    pod 'RealmSwift', '~> 2.1.1'
+    pod 'RealmSwift', '~> 2.4.2'
 end
 
 target 'trySwift' do
@@ -12,6 +12,8 @@ target 'trySwift' do
     pod 'Toucan', '~> 0.6.0'
     pod 'DynamicColor', '~> 3.1.0'
     pod 'AcknowList', '~> 1.2'
+    pod 'BuddyBuildSDK'
+    pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
 end
 
 target 'try Extension' do
