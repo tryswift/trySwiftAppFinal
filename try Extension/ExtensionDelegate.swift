@@ -12,7 +12,6 @@ import TrySwiftDataWatch
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        insertDefaultData()
         WatchSessionManager.sharedManager.startSession()
         NSTimeZone.default = TimeZone(abbreviation: "EST")!
     }
@@ -27,12 +26,3 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
 
 }
-
-private extension ExtensionDelegate {
-    
-    func insertDefaultData() {
-        Speaker.insertDefaultSpeakers()
-        Presentation.insertDefaultPresentations()
-    }
-}
-
