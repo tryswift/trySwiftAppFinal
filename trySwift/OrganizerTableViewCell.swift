@@ -24,7 +24,7 @@ class OrganizerTableViewCell: UITableViewCell {
     
     func configure(withOrganizer organizer: Organizer, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {
         
-        organizerImageView.image = Toucan(image: organizer.image).maskWithEllipse().image
+        organizerImageView.image = Toucan(image: organizer.getImage()).maskWithEllipse().image
         organizerNameLabel.text = organizer.name
         organizerTwitterLabel.text = "@\(organizer.twitter)"
         
@@ -38,7 +38,7 @@ class OrganizerTableViewCell: UITableViewCell {
     }
     
     func configure(withConference conference: Conference) {
-        organizerImageView.image = conference.image
+        //organizerImageView.image = conference.image
         organizerNameLabel.text = conference.name
         organizerTwitterLabel.text = "@\(conference.twitter)"
         

@@ -23,7 +23,7 @@ class SponsorTableViewCell: UITableViewCell {
     }
     
     func configure(withSponsor sponsor: Sponsor) {
-        sponsorImageView.image = sponsor.logo
+        sponsorImageView.image = UIImage(named: sponsor.logo!)
         sponsorNameLabel.text = sponsor.name
         websiteLabel.text = sponsor.displayURL
         

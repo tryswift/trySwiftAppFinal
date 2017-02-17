@@ -29,16 +29,14 @@ class SessionTableViewCell: UITableViewCell {
     }
     
     func configure(withSession session: Session) {
-        let info = session.info
+        sessionTitleLabel.text = session.formattedTitle
+        sessionSubtitleLabel.text = session.formattedSubtitle
+        sessionTypeLabel.text = session.sessionDescription
+        sessionLocationLabel.text = session.formattedLocation
         
-        sessionTitleLabel.text = info.title
-        sessionSubtitleLabel.text = info.subtitle
-        sessionTypeLabel.text = info.description
-        sessionLocationLabel.text = info.location
-        
-        sessionImageView.image = Toucan(image: info.logo).maskWithEllipse().image
+        sessionImageView.image = Toucan(image: session.logo).maskWithEllipse().image
     
-        if info.selectable {
+        if session.selectable {
             accessoryType = .disclosureIndicator
             selectionStyle = .default
         } else {

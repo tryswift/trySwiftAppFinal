@@ -49,7 +49,7 @@ extension AboutTableViewController {
             return cell
         case .twitter:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TwitterFollowTableViewCell
-            cell.configure(withUsername: trySwift.twitter, delegate: self)
+            cell.configure(withUsername: trySwift.twitter!, delegate: self)
             return cell
         }
     }

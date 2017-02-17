@@ -43,11 +43,11 @@ extension VenueTableViewController {
             return cell
         case .wifi:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as WifiInfoTableViewCell
-            cell.configure(withWifiInfo: venue.wifiInfo)
+            cell.configure(withNetworkName: venue.wifiNetworkName!, username: venue.wifiUsername, password: venue.wifiPassword)
             return cell
         case .address:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
-            cell.configure(withAttributedText: venue.formattedAddress)
+            //cell.configure(withAttributedText: venue.address)
             return cell
         case .map:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as MapTableViewCell
@@ -55,7 +55,7 @@ extension VenueTableViewController {
             return cell
         case .twitter:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TwitterFollowTableViewCell
-            cell.configure(withUsername: venue.twitter, delegate: self)
+            cell.configure(withUsername: venue.twitter!, delegate: self)
             return cell
 
         }
