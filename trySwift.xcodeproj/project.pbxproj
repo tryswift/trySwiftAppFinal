@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		226E7B331E56EDE10018E2F9 /* try.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA65B5981C79895A00DCAF0B /* try.app */; };
+		226E7B341E5789BB0018E2F9 /* try.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA65B5981C79895A00DCAF0B /* try.app */; };
+		226E7B351E5789C00018E2F9 /* try Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA65B5A41C79895A00DCAF0B /* try Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E50AF345BAF3D4FC07D959B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F8855FDC17ABDFA46C086 /* QuartzCore.framework */; };
 		2E977335936DA827A6D9E87C /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B6F88DC3156B1169287F39 /* BuddyBuildSDK.framework */; };
 		496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496328931D81F3560033E3C1 /* MailConfiguration.swift */; };
@@ -58,7 +61,6 @@
 		FA65B59C1C79895A00DCAF0B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA65B59A1C79895A00DCAF0B /* Interface.storyboard */; };
 		FA65B59E1C79895A00DCAF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA65B59D1C79895A00DCAF0B /* Assets.xcassets */; };
 		FA65B5AC1C79895A00DCAF0B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */; };
-		FA65B5AE1C79895A00DCAF0B /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AD1C79895A00DCAF0B /* GlanceController.swift */; };
 		FA65B5B01C79895A00DCAF0B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */; };
 		FA65B5B21C79895A00DCAF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA65B5B11C79895A00DCAF0B /* Assets.xcassets */; };
 		FA65B5B61C79895A00DCAF0B /* try.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA65B5981C79895A00DCAF0B /* try.app */; };
@@ -85,6 +87,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		226E7B361E5789C00018E2F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA65B5A31C79895A00DCAF0B;
+			remoteInfo = "try Extension";
+		};
 		FA65B5B41C79895A00DCAF0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
@@ -109,6 +118,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		226E7B381E5789C00018E2F9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				226E7B351E5789C00018E2F9 /* try Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA5C9E371D967C0A0080B608 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,7 +145,9 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				226E7B341E5789BB0018E2F9 /* try.app in Embed Watch Content */,
 				FA65B5B61C79895A00DCAF0B /* try.app in Embed Watch Content */,
+				226E7B331E56EDE10018E2F9 /* try.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,7 +226,6 @@
 		FA65B59F1C79895A00DCAF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA65B5A41C79895A00DCAF0B /* try Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		FA65B5AD1C79895A00DCAF0B /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		FA65B5B11C79895A00DCAF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA65B5B31C79895A00DCAF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -530,7 +551,6 @@
 				FA20176D1D69E16D00B6E158 /* try Extension.entitlements */,
 				FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */,
 				FAED14CC1C7C1B0800F11E25 /* SessionSchedule */,
-				FA65B5AD1C79895A00DCAF0B /* GlanceController.swift */,
 				FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */,
 				FA65B5C31C79C9A600DCAF0B /* Models */,
 				FA3A1CB71D68E36F0042F8DD /* Utilities */,
@@ -698,11 +718,13 @@
 				FA65B5BE1C79895A00DCAF0B /* Embed Watch Content */,
 				CA626BD93D58E72126937652 /* [CP] Copy Pods Resources */,
 				FA5C9E371D967C0A0080B608 /* Embed Frameworks */,
+				226E7B381E5789C00018E2F9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				FA65B5B51C79895A00DCAF0B /* PBXTargetDependency */,
+				226E7B371E5789C00018E2F9 /* PBXTargetDependency */,
 			);
 			name = trySwift;
 			productName = trySwift;
@@ -757,12 +779,12 @@
 				TargetAttributes = {
 					FA65B5971C79895A00DCAF0B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = W6GNU64U6Q;
+						DevelopmentTeam = 6LF3GMKZAB;
 						LastSwiftMigration = 0800;
 					};
 					FA65B5A31C79895A00DCAF0B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = W6GNU64U6Q;
+						DevelopmentTeam = 6LF3GMKZAB;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.iCloud = {
@@ -978,7 +1000,6 @@
 				FA65B5B01C79895A00DCAF0B /* ComplicationController.swift in Sources */,
 				FA3A1CB91D68E3AB0042F8DD /* WatchSessionManager.swift in Sources */,
 				FAED14CB1C7C1A1000F11E25 /* SessionTableRowController.swift in Sources */,
-				FA65B5AE1C79895A00DCAF0B /* GlanceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,6 +1063,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		226E7B371E5789C00018E2F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA65B5A31C79895A00DCAF0B /* try Extension */;
+			targetProxy = 226E7B361E5789C00018E2F9 /* PBXContainerItemProxy */;
+		};
 		FA65B5B51C79895A00DCAF0B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FA65B5971C79895A00DCAF0B /* try */;
@@ -1092,7 +1118,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				IBSC_MODULE = try_Extension;
 				INFOPLIST_FILE = try/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp;
@@ -1111,7 +1139,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				IBSC_MODULE = try_Extension;
 				INFOPLIST_FILE = try/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp;
@@ -1132,7 +1162,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftDataWatch/realm-swift-1.1.0\\ 2/watchos/swift-3.0",
@@ -1158,7 +1190,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftDataWatch/realm-swift-1.1.0\\ 2/watchos/swift-3.0",
@@ -1270,7 +1304,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AD801DCB7F4C021016950B62 /* Pods-trySwift.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
@@ -1299,7 +1333,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73E5734F4245C39D5E57338B /* Pods-trySwift.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
