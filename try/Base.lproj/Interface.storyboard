@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GAW-pN-lDw">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GAW-pN-lDw">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
         <!--try! Aug 31-->
@@ -120,36 +123,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="684" y="214"/>
-        </scene>
-        <!--Glance Interface Controller-->
-        <scene sceneID="rjY-Ar-IMT">
-            <objects>
-                <glanceController spacing="0.0" topTemplateType="body1Body2" bottomTemplateType="groupBody1Footer" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="try" customModuleProvider="target">
-                    <items>
-                        <label alignment="left" text="10:00 - 10:25" baselineAdjustment="alignCenters" id="wXx-zg-Oi8">
-                            <color key="textColor" red="0.72156862749999995" green="0.1960784314" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </label>
-                        <label alignment="left" text="Dive into Swift Ecosystem" id="6Mz-XT-62I"/>
-                        <group alignment="left" id="eew-Gs-W6Y">
-                            <items>
-                                <imageView width="1" height="1" alignment="left" image="syo" contentMode="scaleAspectFill" id="4Yh-gX-OZL"/>
-                            </items>
-                        </group>
-                        <label alignment="left" text="Syo Ikeda" id="wbF-uE-JWw"/>
-                        <label alignment="left" text="@ikesyo" id="csj-ut-SOv"/>
-                    </items>
-                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
-                    <connections>
-                        <outlet property="nameInterfaceLabel" destination="wbF-uE-JWw" id="O09-ZI-crx"/>
-                        <outlet property="speakerInterfaceImage" destination="4Yh-gX-OZL" id="RdV-Ko-MCP"/>
-                        <outlet property="timeInterfaceLabel" destination="wXx-zg-Oi8" id="1B0-MU-veT"/>
-                        <outlet property="titleInterfaceLabel" destination="6Mz-XT-62I" id="Kfy-v4-R2g"/>
-                        <outlet property="twitterInterfaceLabel" destination="csj-ut-SOv" id="gkP-ce-7yX"/>
-                    </connections>
-                </glanceController>
-            </objects>
-            <point key="canvasLocation" x="164" y="514"/>
+            <point key="canvasLocation" x="827" y="195"/>
         </scene>
     </scenes>
 </document>
