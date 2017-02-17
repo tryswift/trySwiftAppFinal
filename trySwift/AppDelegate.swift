@@ -27,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         WatchSessionManager.sharedManager.startSession()
         
         configureStyling()
-        configureData()
         
         NSTimeZone.default = TimeZone(abbreviation: "EST")!
         
@@ -36,8 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     {
-        ChangeManager.syncChanges()
-        ChangeManager.syncWatchChanges()
         completionHandler(.noData)
     }
 }
@@ -59,20 +56,5 @@ private extension AppDelegate {
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barStyle = .blackTranslucent
-    }
-    
-    func configureData() {
-        let defaults = UserDefaults.standard
-        
-        let appSubmitionDate = Date(year: 2016, month: 8, day: 16, hour: 5, minute: 0, second: 0)
-        if defaults.object(forKey: ChangeManager.lastChangedDataNotification) == nil {
-            defaults.set(appSubmitionDate, forKey: ChangeManager.lastChangedDataNotification)
-        }
-        if defaults.object(forKey: WatchSessionManager.watchDataUpdatedNotification) == nil {
-            defaults.set(appSubmitionDate, forKey: WatchSessionManager.watchDataUpdatedNotification)
-        }
-        
-        ChangeManager.syncChanges()
-        ChangeManager.syncWatchChanges()
     }
 }

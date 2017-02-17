@@ -109,11 +109,11 @@ extension SessionsTableViewController {
     }
 }
 
-//extension SessionsTableViewController: IndicatorInfoProvider {
-//    public func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-//        return IndicatorInfo(title: dataSource.header)
-//    }
-//}
+extension SessionsTableViewController: IndicatorInfoProvider {
+    public func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "Day")
+    }
+}
 
 extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
     
