@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		226E7B331E56EDE10018E2F9 /* try.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA65B5981C79895A00DCAF0B /* try.app */; };
-		226E7B341E5789BB0018E2F9 /* try.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA65B5981C79895A00DCAF0B /* try.app */; };
-		226E7B351E5789C00018E2F9 /* try Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FA65B5A41C79895A00DCAF0B /* try Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E50AF345BAF3D4FC07D959B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F8855FDC17ABDFA46C086 /* QuartzCore.framework */; };
 		2E977335936DA827A6D9E87C /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B6F88DC3156B1169287F39 /* BuddyBuildSDK.framework */; };
 		496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496328931D81F3560033E3C1 /* MailConfiguration.swift */; };
@@ -21,7 +18,6 @@
 		828D6CB6A2E13E36F3CB9E0D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14346AF2A8784D962D2C2A7F /* CoreVideo.framework */; };
 		95AAB60A3AF87982F03E3CD7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838CADC0521E9A416B75D42 /* AssetsLibrary.framework */; };
 		E2567889D43BE2B22F55781E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1F9C27BCD8099DCA758F7A /* CoreMedia.framework */; };
-		E299B5681B70B841CD50169F /* Pods_try_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EB6C4D5FB4DFBE959AAF10 /* Pods_try_Extension.framework */; };
 		F0E0044EA2AF1A7AEFB06624 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5C53D439AAF00D63047E8 /* SystemConfiguration.framework */; };
 		F95EF1A858E90B600E081F16 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFCED18CFD217B29B8A0855B /* Pods_trySwift.framework */; };
 		FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */; };
@@ -48,9 +44,7 @@
 		FA39E92D1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E92B1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib */; };
 		FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */; };
 		FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */; };
-		FA3A1C531D6520FC0042F8DD /* ChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */; };
 		FA3A1CB61D68E1950042F8DD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */; };
-		FA3A1CB91D68E3AB0042F8DD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CB81D68E3AB0042F8DD /* WatchSessionManager.swift */; };
 		FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */; };
 		FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */; };
 		FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5891C6D8A5200DCAF0B /* OrganizersTableViewController.swift */; };
@@ -58,26 +52,15 @@
 		FA65B58E1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA65B58C1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib */; };
 		FA65B5911C6DA53600DCAF0B /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5901C6DA53600DCAF0B /* AboutTableViewController.swift */; };
 		FA65B5951C7274EE00DCAF0B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5941C7274EE00DCAF0B /* UIImageExtension.swift */; };
-		FA65B59C1C79895A00DCAF0B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA65B59A1C79895A00DCAF0B /* Interface.storyboard */; };
-		FA65B59E1C79895A00DCAF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA65B59D1C79895A00DCAF0B /* Assets.xcassets */; };
-		FA65B5AC1C79895A00DCAF0B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */; };
-		FA65B5B01C79895A00DCAF0B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */; };
-		FA65B5B21C79895A00DCAF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA65B5B11C79895A00DCAF0B /* Assets.xcassets */; };
-		FA65B5B61C79895A00DCAF0B /* try.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA65B5981C79895A00DCAF0B /* try.app */; };
-		FA65B5C21C79BE1D00DCAF0B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5C11C79BE1D00DCAF0B /* Session.swift */; };
 		FAA54F101D912FF300EC9E80 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F0F1D912FF300EC9E80 /* ReusableView.swift */; };
 		FAA54F121D91305200EC9E80 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F111D91305200EC9E80 /* NibLoadableView.swift */; };
 		FAA54F141D9130F900EC9E80 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */; };
 		FABA73BE1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */; };
-		FAC936E41D68F2CE00E2D6B0 /* ChangeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC936E31D68F2CE00E2D6B0 /* ChangeManager.swift */; };
-		FAED14CB1C7C1A1000F11E25 /* SessionTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */; };
-		FAED14CE1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */; };
 		FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */; };
 		FAF1DE151D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */; };
 		FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */; };
 		FAF1DE1A1D5FE14500D710C3 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE181D5FE14500D710C3 /* MapTableViewCell.swift */; };
 		FAF1DE1B1D5FE14500D710C3 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE191D5FE14500D710C3 /* MapTableViewCell.xib */; };
-		FAF1DE341D646E6600D710C3 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF1DE331D646E6600D710C3 /* CloudKit.framework */; };
 		FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */; };
 		FAFA15C11C69D31C00FEA4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */; };
 		FAFA15C31C69D31C00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */; };
@@ -87,20 +70,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		226E7B361E5789C00018E2F9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA65B5A31C79895A00DCAF0B;
-			remoteInfo = "try Extension";
-		};
-		FA65B5B41C79895A00DCAF0B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA65B5971C79895A00DCAF0B;
-			remoteInfo = try;
-		};
 		FAFA15CD1C69D31C00FEA4EA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
@@ -116,53 +85,6 @@
 			remoteInfo = trySwift;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		226E7B381E5789C00018E2F9 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				226E7B351E5789C00018E2F9 /* try Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA5C9E371D967C0A0080B608 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA65B5BE1C79895A00DCAF0B /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				226E7B341E5789BB0018E2F9 /* try.app in Embed Watch Content */,
-				FA65B5B61C79895A00DCAF0B /* try.app in Embed Watch Content */,
-				226E7B331E56EDE10018E2F9 /* try.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FAC831C71D96E5DC00BBEC16 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0838CADC0521E9A416B75D42 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -184,7 +106,6 @@
 		FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerDetailTableViewController.swift; sourceTree = "<group>"; };
 		FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiInfoTableViewCell.swift; sourceTree = "<group>"; };
 		FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiInfoTableViewCell.xib; sourceTree = "<group>"; };
-		FA20176D1D69E16D00B6E158 /* try Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "try Extension.entitlements"; sourceTree = "<group>"; };
 		FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavTabButtonCell.xib; sourceTree = "<group>"; };
 		FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsTableViewController.swift; sourceTree = "<group>"; };
@@ -206,12 +127,8 @@
 		FA39E92B1C6D310E0074B6BE /* TwitterFollowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterFollowTableViewCell.xib; sourceTree = "<group>"; };
 		FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeManager.swift; sourceTree = "<group>"; };
 		FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-trySwift-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
-		FA3A1CB81D68E3AB0042F8DD /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
-		FA44F8F11D96EDD400BE6C53 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = TrySwiftDataFrameworks/TrySwiftDataWatch/RealmWatchOS/Realm.framework; sourceTree = "<group>"; };
-		FA44F8F21D96EDD400BE6C53 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = TrySwiftDataFrameworks/TrySwiftDataWatch/RealmWatchOS/RealmSwift.framework; sourceTree = "<group>"; };
 		FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
 		FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		FA65B5811C6D813200DCAF0B /* trySwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "trySwift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -220,31 +137,17 @@
 		FA65B58C1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrganizerTableViewCell.xib; sourceTree = "<group>"; };
 		FA65B5901C6DA53600DCAF0B /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		FA65B5941C7274EE00DCAF0B /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
-		FA65B5981C79895A00DCAF0B /* try.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = try.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA65B59B1C79895A00DCAF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		FA65B59D1C79895A00DCAF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA65B59F1C79895A00DCAF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA65B5A41C79895A00DCAF0B /* try Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		FA65B5B11C79895A00DCAF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA65B5B31C79895A00DCAF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA65B5C11C79BE1D00DCAF0B /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		FAA54F0F1D912FF300EC9E80 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		FAA54F111D91305200EC9E80 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeHoursDetailViewController.swift; sourceTree = "<group>"; };
-		FAC936E31D68F2CE00E2D6B0 /* ChangeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeManager.swift; sourceTree = "<group>"; };
 		FADBBCB9E66B6F27F8B20D8D /* Pods-try Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.release.xcconfig"; sourceTree = "<group>"; };
-		FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableRowController.swift; sourceTree = "<group>"; };
-		FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsDay1InterfaceController.swift; sourceTree = "<group>"; };
 		FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTableViewController.swift; sourceTree = "<group>"; };
 		FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		FAF1DE181D5FE14500D710C3 /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1DE191D5FE14500D710C3 /* MapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
 		FAF1DE301D639D9F00D710C3 /* trySwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = trySwift.entitlements; sourceTree = "<group>"; };
-		FAF1DE331D646E6600D710C3 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FAFA15B81C69D31C00FEA4EA /* trySwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trySwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAFA15C01C69D31C00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -261,26 +164,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		39ACAFF9933FC717AE5A129E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA65B5A11C79895A00DCAF0B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E299B5681B70B841CD50169F /* Pods_try_Extension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FAFA15B51C69D31B00FEA4EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF1DE341D646E6600D710C3 /* CloudKit.framework in Frameworks */,
 				F95EF1A858E90B600E081F16 /* Pods_trySwift.framework in Frameworks */,
 				2E977335936DA827A6D9E87C /* BuddyBuildSDK.framework in Frameworks */,
 				95AAB60A3AF87982F03E3CD7 /* AssetsLibrary.framework in Frameworks */,
@@ -325,9 +212,6 @@
 		411F0B1F9D6446FAAE23A50E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA44F8F11D96EDD400BE6C53 /* Realm.framework */,
-				FA44F8F21D96EDD400BE6C53 /* RealmSwift.framework */,
-				FAF1DE331D646E6600D710C3 /* CloudKit.framework */,
 				08EB6C4D5FB4DFBE959AAF10 /* Pods_try_Extension.framework */,
 				DFCED18CFD217B29B8A0855B /* Pods_trySwift.framework */,
 				A0B6F88DC3156B1169287F39 /* BuddyBuildSDK.framework */,
@@ -397,7 +281,6 @@
 		FA39E8CB1C6AF89D0074B6BE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				FA3A1C521D6520FC0042F8DD /* ChangeManager.swift */,
 				FA39E8ED1C6C034B0074B6BE /* UIColorExtension.swift */,
 				FA65B5941C7274EE00DCAF0B /* UIImageExtension.swift */,
 				499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */,
@@ -497,15 +380,6 @@
 			name = SessionHeaderTableViewCell;
 			sourceTree = "<group>";
 		};
-		FA3A1CB71D68E36F0042F8DD /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				FA3A1CB81D68E3AB0042F8DD /* WatchSessionManager.swift */,
-				FAC936E31D68F2CE00E2D6B0 /* ChangeManager.swift */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
 		FA65B57D1C6D7AFC00DCAF0B /* More */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,54 +409,12 @@
 			name = OrganizerTableViewCell;
 			sourceTree = "<group>";
 		};
-		FA65B5991C79895A00DCAF0B /* try */ = {
-			isa = PBXGroup;
-			children = (
-				FA65B59A1C79895A00DCAF0B /* Interface.storyboard */,
-				FA65B59D1C79895A00DCAF0B /* Assets.xcassets */,
-				FA65B59F1C79895A00DCAF0B /* Info.plist */,
-			);
-			path = try;
-			sourceTree = "<group>";
-		};
-		FA65B5A81C79895A00DCAF0B /* try Extension */ = {
-			isa = PBXGroup;
-			children = (
-				FA20176D1D69E16D00B6E158 /* try Extension.entitlements */,
-				FA65B5AB1C79895A00DCAF0B /* ExtensionDelegate.swift */,
-				FAED14CC1C7C1B0800F11E25 /* SessionSchedule */,
-				FA65B5AF1C79895A00DCAF0B /* ComplicationController.swift */,
-				FA65B5C31C79C9A600DCAF0B /* Models */,
-				FA3A1CB71D68E36F0042F8DD /* Utilities */,
-				FA65B5B11C79895A00DCAF0B /* Assets.xcassets */,
-				FA65B5B31C79895A00DCAF0B /* Info.plist */,
-			);
-			path = "try Extension";
-			sourceTree = "<group>";
-		};
-		FA65B5C31C79C9A600DCAF0B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FA65B5C11C79BE1D00DCAF0B /* Session.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		FABA73BF1D6D9ACE0081D887 /* OfficeHours */ = {
 			isa = PBXGroup;
 			children = (
 				FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */,
 			);
 			name = OfficeHours;
-			sourceTree = "<group>";
-		};
-		FAED14CC1C7C1B0800F11E25 /* SessionSchedule */ = {
-			isa = PBXGroup;
-			children = (
-				FAED14CD1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift */,
-				FAED14CA1C7C1A1000F11E25 /* SessionTableRowController.swift */,
-			);
-			name = SessionSchedule;
 			sourceTree = "<group>";
 		};
 		FAF1DE171D5FDD3B00D710C3 /* VenueHeaderTableViewCell */ = {
@@ -609,8 +441,6 @@
 				FAFA15BA1C69D31C00FEA4EA /* trySwift */,
 				FAFA15CF1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15DA1C69D31C00FEA4EA /* trySwiftUITests */,
-				FA65B5991C79895A00DCAF0B /* try */,
-				FA65B5A81C79895A00DCAF0B /* try Extension */,
 				FAFA15B91C69D31C00FEA4EA /* Products */,
 				411F0B1F9D6446FAAE23A50E /* Frameworks */,
 				031120EC2CBC90F9C2A65970 /* Pods */,
@@ -623,8 +453,6 @@
 				FAFA15B81C69D31C00FEA4EA /* trySwift.app */,
 				FAFA15CC1C69D31C00FEA4EA /* trySwiftTests.xctest */,
 				FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */,
-				FA65B5981C79895A00DCAF0B /* try.app */,
-				FA65B5A41C79895A00DCAF0B /* try Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -669,43 +497,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA65B5971C79895A00DCAF0B /* try */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA65B5BD1C79895A00DCAF0B /* Build configuration list for PBXNativeTarget "try" */;
-			buildPhases = (
-				FA65B5961C79895A00DCAF0B /* Resources */,
-				39ACAFF9933FC717AE5A129E /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = try;
-			productName = try;
-			productReference = FA65B5981C79895A00DCAF0B /* try.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		FA65B5A31C79895A00DCAF0B /* try Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA65B5BB1C79895A00DCAF0B /* Build configuration list for PBXNativeTarget "try Extension" */;
-			buildPhases = (
-				E22704A2F98DCA416A42081A /* [CP] Check Pods Manifest.lock */,
-				FA65B5A01C79895A00DCAF0B /* Sources */,
-				FA65B5A11C79895A00DCAF0B /* Frameworks */,
-				FA65B5A21C79895A00DCAF0B /* Resources */,
-				FAC831C71D96E5DC00BBEC16 /* Embed Frameworks */,
-				318876EF9B770866E09AE3EC /* [CP] Embed Pods Frameworks */,
-				7E1F9691924F7BDB1E37AA29 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "try Extension";
-			productName = "try Extension";
-			productReference = FA65B5A41C79895A00DCAF0B /* try Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 		FAFA15B71C69D31B00FEA4EA /* trySwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAFA15E01C69D31C00FEA4EA /* Build configuration list for PBXNativeTarget "trySwift" */;
@@ -715,16 +506,11 @@
 				FAFA15B51C69D31B00FEA4EA /* Frameworks */,
 				FAFA15B61C69D31B00FEA4EA /* Resources */,
 				B96782878317E851423AECA6 /* [CP] Embed Pods Frameworks */,
-				FA65B5BE1C79895A00DCAF0B /* Embed Watch Content */,
 				CA626BD93D58E72126937652 /* [CP] Copy Pods Resources */,
-				FA5C9E371D967C0A0080B608 /* Embed Frameworks */,
-				226E7B381E5789C00018E2F9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FA65B5B51C79895A00DCAF0B /* PBXTargetDependency */,
-				226E7B371E5789C00018E2F9 /* PBXTargetDependency */,
 			);
 			name = trySwift;
 			productName = trySwift;
@@ -777,21 +563,6 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = NatashaTheRobot;
 				TargetAttributes = {
-					FA65B5971C79895A00DCAF0B = {
-						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 6LF3GMKZAB;
-						LastSwiftMigration = 0800;
-					};
-					FA65B5A31C79895A00DCAF0B = {
-						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 6LF3GMKZAB;
-						LastSwiftMigration = 0800;
-						SystemCapabilities = {
-							com.apple.iCloud = {
-								enabled = 0;
-							};
-						};
-					};
 					FAFA15B71C69D31B00FEA4EA = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 6LF3GMKZAB;
@@ -801,7 +572,7 @@
 								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -833,30 +604,11 @@
 				FAFA15B71C69D31B00FEA4EA /* trySwift */,
 				FAFA15CB1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15D61C69D31C00FEA4EA /* trySwiftUITests */,
-				FA65B5971C79895A00DCAF0B /* try */,
-				FA65B5A31C79895A00DCAF0B /* try Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FA65B5961C79895A00DCAF0B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA65B59E1C79895A00DCAF0B /* Assets.xcassets in Resources */,
-				FA65B59C1C79895A00DCAF0B /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA65B5A21C79895A00DCAF0B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA65B5B21C79895A00DCAF0B /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FAFA15B61C69D31B00FEA4EA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -896,36 +648,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		318876EF9B770866E09AE3EC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-try Extension/Pods-try Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7E1F9691924F7BDB1E37AA29 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-try Extension/Pods-try Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		834A1901CA04DD2823306F2E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -971,38 +693,9 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trySwift/Pods-trySwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E22704A2F98DCA416A42081A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FA65B5A01C79895A00DCAF0B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FAED14CE1C7C1B2600F11E25 /* SessionsDay1InterfaceController.swift in Sources */,
-				FA65B5C21C79BE1D00DCAF0B /* Session.swift in Sources */,
-				FAC936E41D68F2CE00E2D6B0 /* ChangeManager.swift in Sources */,
-				FA65B5AC1C79895A00DCAF0B /* ExtensionDelegate.swift in Sources */,
-				FA65B5B01C79895A00DCAF0B /* ComplicationController.swift in Sources */,
-				FA3A1CB91D68E3AB0042F8DD /* WatchSessionManager.swift in Sources */,
-				FAED14CB1C7C1A1000F11E25 /* SessionTableRowController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FAFA15B41C69D31B00FEA4EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1032,7 +725,6 @@
 				FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */,
 				FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */,
 				FA39E90B1C6C45FD0074B6BE /* SpeakerTableViewCell.swift in Sources */,
-				FA3A1C531D6520FC0042F8DD /* ChangeManager.swift in Sources */,
 				FA65B5911C6DA53600DCAF0B /* AboutTableViewController.swift in Sources */,
 				FA65B58D1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift in Sources */,
 				496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */,
@@ -1063,16 +755,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		226E7B371E5789C00018E2F9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA65B5A31C79895A00DCAF0B /* try Extension */;
-			targetProxy = 226E7B361E5789C00018E2F9 /* PBXContainerItemProxy */;
-		};
-		FA65B5B51C79895A00DCAF0B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA65B5971C79895A00DCAF0B /* try */;
-			targetProxy = FA65B5B41C79895A00DCAF0B /* PBXContainerItemProxy */;
-		};
 		FAFA15CE1C69D31C00FEA4EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FAFA15B71C69D31B00FEA4EA /* trySwift */;
@@ -1086,14 +768,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FA65B59A1C79895A00DCAF0B /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA65B59B1C79895A00DCAF0B /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 		FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1113,104 +787,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FA65B5B71C79895A00DCAF0B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
-				IBSC_MODULE = try_Extension;
-				INFOPLIST_FILE = try/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
-			};
-			name = Debug;
-		};
-		FA65B5B81C79895A00DCAF0B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
-				IBSC_MODULE = try_Extension;
-				INFOPLIST_FILE = try/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
-			};
-			name = Release;
-		};
-		FA65B5B91C79895A00DCAF0B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D812ED17A67E581C5B161D3 /* Pods-try Extension.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftDataWatch/realm-swift-1.1.0\\ 2/watchos/swift-3.0",
-					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftDataWatch/realm-swift-1.1.0\\ 2/watchos/swift-3.0",
-				);
-				INFOPLIST_FILE = "try Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Debug;
-		};
-		FA65B5BA1C79895A00DCAF0B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FADBBCB9E66B6F27F8B20D8D /* Pods-try Extension.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftDataWatch/realm-swift-1.1.0\\ 2/watchos/swift-3.0",
-					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftDataWatch/realm-swift-1.1.0\\ 2/watchos/swift-3.0",
-				);
-				INFOPLIST_FILE = "try Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Release;
-		};
 		FAFA15DE1C69D31C00FEA4EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1304,23 +880,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AD801DCB7F4C021016950B62 /* Pods-trySwift.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftData/TrySwiftData/realm-swift-1.1.0\\ 2/ios/swift-3.0",
-					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftData/TrySwiftData/realm-swift-1.1.0\\ 2/ios/swift-3.0",
-				);
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC;
+				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "trySwift/trySwift-Bridging-Header.h";
@@ -1333,23 +902,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73E5734F4245C39D5E57338B /* Pods-trySwift.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftData/TrySwiftData/realm-swift-1.1.0\\ 2/ios/swift-3.0",
-					"$(PROJECT_DIR)/TrySwiftDataFrameworks/TrySwiftData/TrySwiftData/realm-swift-1.1.0\\ 2/ios/swift-3.0",
-				);
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYC;
+				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "trySwift/trySwift-Bridging-Header.h";
@@ -1412,24 +974,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA65B5BB1C79895A00DCAF0B /* Build configuration list for PBXNativeTarget "try Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA65B5B91C79895A00DCAF0B /* Debug */,
-				FA65B5BA1C79895A00DCAF0B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FA65B5BD1C79895A00DCAF0B /* Build configuration list for PBXNativeTarget "try" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA65B5B71C79895A00DCAF0B /* Debug */,
-				FA65B5B81C79895A00DCAF0B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		FAFA15B31C69D31B00FEA4EA /* Build configuration list for PBXProject "trySwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
