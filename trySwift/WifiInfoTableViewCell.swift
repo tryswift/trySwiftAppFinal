@@ -21,10 +21,10 @@ class WifiInfoTableViewCell: UITableViewCell {
         networkNameLabel.textColor = .trySwiftAccentColor()
     }
 
-    func configure(withWifiInfo wifiInfo: WifiInfo) {
-        networkNameLabel.text = "Wifi: \(wifiInfo.networkName)"
+    func configure(withNetworkName networkName: String, username: String?, password: String?) {
+        networkNameLabel.text = "Wifi: \(networkName)"
         
-        if let username = wifiInfo.username, let password = wifiInfo.password {
+        if let username = username, let password = password {
             usernameLabel.text = "username: \(username)"
             passwordLabel.text = "password: \(password)"
         } else {

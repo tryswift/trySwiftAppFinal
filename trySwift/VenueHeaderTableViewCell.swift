@@ -23,7 +23,7 @@ class VenueHeaderTableViewCell: UITableViewCell {
     func configure(withVenue venue: Venue) {
         titleLabel.text = venue.title
         websiteLabel.text = venue.website
-        if let venueLogo = UIImage(named: venue.logo) {
+        if let venueLogo = UIImage(named: venue.logo!) {
             venueImageView.image = Toucan(image: venueLogo).maskWithEllipse().image
         }
         

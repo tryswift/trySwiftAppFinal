@@ -22,8 +22,8 @@ class SessionHeaderTableViewCell: UITableViewCell {
     }
     
     func configure(withSession session: Session) {
-        sessionTitleLabel.text = session.info.title
-        sessionTimeLabel.text = session.dateTimeString
+        sessionTitleLabel.text = session.formattedTitle
+        //sessionTimeLabel.text = session.dateTimeString
         
         setNeedsUpdateConstraints()
         layoutIfNeeded()

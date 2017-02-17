@@ -20,13 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         BuddyBuildSDK.setup()
         
-        let notificationSettings =
-            UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
+        let notificationSettings = UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
         application.registerUserNotificationSettings(notificationSettings)
         application.registerForRemoteNotifications()
-        
-        subscribeToCloudChangeNotifications()
-        
+
         WatchSessionManager.sharedManager.startSession()
         
         configureStyling()
@@ -77,28 +74,5 @@ private extension AppDelegate {
         
         ChangeManager.syncChanges()
         ChangeManager.syncWatchChanges()
-    }
-
-    func subscribeToCloudChangeNotifications() {
-        let defaults = UserDefaults.standard
-        DispatchQueue.global().async {
-            if !defaults.bool(forKey: "SubscribedToCloudChanges") {
-                let predicate = NSPredicate(value: true)
-                
-                let subscription = CKQuerySubscription(recordType: "Change", predicate: predicate, options: .firesOnRecordCreation)
-                
-                let notificationInfo = CKNotificationInfo()
-                notificationInfo.shouldSendContentAvailable = true
-                
-                subscription.notificationInfo = notificationInfo
-                
-                let publicDB = CKContainer.default().publicCloudDatabase
-                publicDB.save(subscription, completionHandler: { subscription, error in
-                    if let _ = subscription {
-                        defaults.set(true, forKey: "SubscribedToCloudChanges")
-                    }
-                })
-            }
-        }
     }
 }

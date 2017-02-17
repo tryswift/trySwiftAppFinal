@@ -11,8 +11,8 @@ import TrySwiftData
 
 class OrganizersTableViewController: UITableViewController {
 
-    fileprivate let organizers = Organizer.organizers
-    
+    fileprivate let organizers = Conference.current.organizers
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -10,7 +10,6 @@
 		2E50AF345BAF3D4FC07D959B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F8855FDC17ABDFA46C086 /* QuartzCore.framework */; };
 		2E977335936DA827A6D9E87C /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B6F88DC3156B1169287F39 /* BuddyBuildSDK.framework */; };
 		496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496328931D81F3560033E3C1 /* MailConfiguration.swift */; };
-		498144EF1D43D41800D77B99 /* SessionDataSourceDay3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */; };
 		499BD62A1D05910200E74061 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BD6291D05910200E74061 /* Twitter.swift */; };
 		499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */; };
 		4E6E3B84BCD00B2750C57828 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F81AD508535BD405F98215 /* AVFoundation.framework */; };
@@ -28,9 +27,6 @@
 		FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */; };
 		FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */; };
 		FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */; };
-		FA39E8D41C6AFE180074B6BE /* SessionDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D31C6AFE180074B6BE /* SessionDataSourceProtocol.swift */; };
-		FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E01C6B31150074B6BE /* SessionDataSourceDay1.swift */; };
-		FA39E8E31C6B31220074B6BE /* SessionDataSourceDay2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E21C6B31220074B6BE /* SessionDataSourceDay2.swift */; };
 		FA39E8E81C6B32F80074B6BE /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8E61C6B32F80074B6BE /* SessionTableViewCell.swift */; };
 		FA39E8E91C6B32F80074B6BE /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8E71C6B32F80074B6BE /* SessionTableViewCell.xib */; };
 		FA39E8EE1C6C034B0074B6BE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8ED1C6C034B0074B6BE /* UIColorExtension.swift */; };
@@ -153,7 +149,6 @@
 		168F8855FDC17ABDFA46C086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3D812ED17A67E581C5B161D3 /* Pods-try Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try Extension/Pods-try Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		496328931D81F3560033E3C1 /* MailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailConfiguration.swift; sourceTree = "<group>"; };
-		498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay3.swift; sourceTree = "<group>"; };
 		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		58F81AD508535BD405F98215 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -171,9 +166,6 @@
 		FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavTabButtonCell.xib; sourceTree = "<group>"; };
 		FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsTableViewController.swift; sourceTree = "<group>"; };
-		FA39E8D31C6AFE180074B6BE /* SessionDataSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceProtocol.swift; sourceTree = "<group>"; };
-		FA39E8E01C6B31150074B6BE /* SessionDataSourceDay1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay1.swift; sourceTree = "<group>"; };
-		FA39E8E21C6B31220074B6BE /* SessionDataSourceDay2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDataSourceDay2.swift; sourceTree = "<group>"; };
 		FA39E8E61C6B32F80074B6BE /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		FA39E8E71C6B32F80074B6BE /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
 		FA39E8ED1C6C034B0074B6BE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -403,14 +395,6 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		FA39E8D51C6AFE200074B6BE /* DataSources */ = {
-			isa = PBXGroup;
-			children = (
-				FA39E8EF1C6C13B70074B6BE /* SessionDataSources */,
-			);
-			name = DataSources;
-			sourceTree = "<group>";
-		};
 		FA39E8EA1C6BF13D0074B6BE /* SessionTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,17 +402,6 @@
 				FA39E8E71C6B32F80074B6BE /* SessionTableViewCell.xib */,
 			);
 			name = SessionTableViewCell;
-			sourceTree = "<group>";
-		};
-		FA39E8EF1C6C13B70074B6BE /* SessionDataSources */ = {
-			isa = PBXGroup;
-			children = (
-				FA39E8D31C6AFE180074B6BE /* SessionDataSourceProtocol.swift */,
-				FA39E8E01C6B31150074B6BE /* SessionDataSourceDay1.swift */,
-				FA39E8E21C6B31220074B6BE /* SessionDataSourceDay2.swift */,
-				498144EE1D43D41800D77B99 /* SessionDataSourceDay3.swift */,
-			);
-			name = SessionDataSources;
 			sourceTree = "<group>";
 		};
 		FA39E8FB1C6C26150074B6BE /* Schedule */ = {
@@ -644,7 +617,6 @@
 				FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */,
 				FA39E8C51C6AB7310074B6BE /* ViewControllers */,
 				FA39E8C81C6AE3E50074B6BE /* Views */,
-				FA39E8D51C6AFE200074B6BE /* DataSources */,
 				FA39E8CE1C6AFBF20074B6BE /* Models */,
 				FA39E8CB1C6AF89D0074B6BE /* Utilities */,
 				FAFA15C21C69D31C00FEA4EA /* Assets.xcassets */,
@@ -1035,12 +1007,9 @@
 				FAA54F121D91305200EC9E80 /* NibLoadableView.swift in Sources */,
 				FA65B5951C7274EE00DCAF0B /* UIImageExtension.swift in Sources */,
 				FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */,
-				FA39E8E31C6B31220074B6BE /* SessionDataSourceDay2.swift in Sources */,
-				FA39E8D41C6AFE180074B6BE /* SessionDataSourceProtocol.swift in Sources */,
 				FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */,
 				FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */,
 				FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */,
-				498144EF1D43D41800D77B99 /* SessionDataSourceDay3.swift in Sources */,
 				FA39E90B1C6C45FD0074B6BE /* SpeakerTableViewCell.swift in Sources */,
 				FA3A1C531D6520FC0042F8DD /* ChangeManager.swift in Sources */,
 				FA65B5911C6DA53600DCAF0B /* AboutTableViewController.swift in Sources */,
@@ -1048,7 +1017,6 @@
 				496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */,
 				FA39E9251C6D29D20074B6BE /* TextTableViewCell.swift in Sources */,
 				FA3A1CB61D68E1950042F8DD /* WatchSessionManager.swift in Sources */,
-				FA39E8E11C6B31150074B6BE /* SessionDataSourceDay1.swift in Sources */,
 				499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */,
 				FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */,
 				FA39E9201C6D25D00074B6BE /* SpeakerDetailViewController.swift in Sources */,

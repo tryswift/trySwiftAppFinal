@@ -10,7 +10,10 @@ import UIKit
 import TrySwiftData
 
 class SponsorsViewController: UITableViewController {
-    
+
+    /* An array of `Result` objects representing each sponsor level */
+    let sponsors = Sponsor.all
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -39,69 +42,37 @@ class SponsorsViewController: UITableViewController {
 extension SponsorsViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return sponsors.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch Sponsor.Level(rawValue: section)! {
-        case .platinum:
-            return Sponsor.platinumSponsors.count
-        case .gold:
-            return Sponsor.goldSponsors.count
-        case .silver:
-            return Sponsor.silverSponsors.count
-        case .diversity:
-            return Sponsor.diversitySponsors.count
-        case .student:
-            return Sponsor.studentSponsors.count
-        case .event:
-            return Sponsor.eventPartners.count
-        }
+        let sponsorLevel = sponsors[section]
+        return sponsorLevel.count
     }
-    
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SponsorTableViewCell
         
-        let sponsor = sponsorAtIndexPath(indexPath)
+        let sponsor = sponsors[indexPath.section][indexPath.row]
         cell.configure(withSponsor: sponsor)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let sponsorLevel = Sponsor.Level(rawValue: section)
-        return sponsorLevel?.description
+        let firstSponsor = sponsors[section].first!
+        return localizedSponsorName(for: firstSponsor.level)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let sponsor = sponsorAtIndexPath(indexPath)
+        let sponsor = sponsors[indexPath.section][indexPath.row]
         
         let webViewController = WebDisplayViewController()
-        webViewController.url = URL(string: sponsor.url)!
+        webViewController.url = URL(string: sponsor.url!)!
         webViewController.displayTitle = sponsor.name
         
         navigationController?.pushViewController(webViewController, animated: true)
     }
 }
 
-private extension SponsorsViewController {
-    
-    func sponsorAtIndexPath(_ indexPath: IndexPath) -> Sponsor {
-        switch Sponsor.Level(rawValue: (indexPath as NSIndexPath).section)! {
-        case .platinum:
-            return Sponsor.platinumSponsors[(indexPath as NSIndexPath).row]
-        case .gold:
-            return Sponsor.goldSponsors[(indexPath as NSIndexPath).row]
-        case .silver:
-            return Sponsor.silverSponsors[(indexPath as NSIndexPath).row]
-        case .diversity:
-            return Sponsor.diversitySponsors[(indexPath as NSIndexPath).row]
-        case .student:
-            return Sponsor.studentSponsors[(indexPath as NSIndexPath).row]
-        case .event:
-            return Sponsor.eventPartners[(indexPath as NSIndexPath).row]
-        }
-    }
-}

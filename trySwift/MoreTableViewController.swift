@@ -155,7 +155,7 @@ private extension MoreTableViewController {
     
     func showVenue() {
         let venueController = VenueTableViewController()
-        venueController.venue = Venue.axa
+        venueController.venue = Conference.current.venue
         navigationController?.pushViewController(venueController, animated: true)
     }
     
@@ -167,9 +167,7 @@ private extension MoreTableViewController {
     }
     
     func showOrganizers() {
-        // only one organizer for this conference, so just shows details
-        let organizerViewController = OrganizerDetailTableViewController()
-        organizerViewController.organizer = Organizer.organizers.first!
+        let organizerViewController = OrganizersTableViewController()
         navigationController?.pushViewController(organizerViewController, animated: true)
     }
     
