@@ -12,8 +12,9 @@ target 'trySwift' do
     pod 'Toucan', '~> 0.6.0'
     pod 'DynamicColor', '~> 3.2.1'
     pod 'AcknowList', '~> 1.2'
+    pod 'Kingfisher', '~> 3.4.0'
     pod 'BuddyBuildSDK'
-    pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
+    pod 'TrySwiftData', :git => 'https://github.com/tryswift/TrySwiftData.git'
 end
 
 post_install do |installer|
