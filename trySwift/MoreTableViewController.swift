@@ -141,6 +141,8 @@ extension MoreTableViewController {
             case .open:
                 openSlack()
             }
+
+            tableView.deselectRow(at: indexPath, animated: true)
         }
         
     }

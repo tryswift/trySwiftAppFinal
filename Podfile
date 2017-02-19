@@ -9,7 +9,6 @@ target 'trySwift' do
     platform :ios, '10.0'
     shared_pods
     pod 'XLPagerTabStrip', '~> 7.0.0'
-    pod 'Toucan', '~> 0.6.0'
     pod 'DynamicColor', '~> 3.2.1'
     pod 'AcknowList', '~> 1.2'
     pod 'Kingfisher', '~> 3.4.0'
