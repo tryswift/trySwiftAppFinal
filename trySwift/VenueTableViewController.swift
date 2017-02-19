@@ -43,7 +43,7 @@ extension VenueTableViewController {
             return cell
         case .wifi:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as WifiInfoTableViewCell
-            cell.configure(withNetworkName: venue.wifiNetworkName!, username: venue.wifiUsername, password: venue.wifiPassword)
+            cell.configure(withNetworkName: venue.wifiNetworkName, username: venue.wifiUsername, password: venue.wifiPassword)
             return cell
         case .address:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
