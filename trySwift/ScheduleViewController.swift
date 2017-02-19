@@ -7,10 +7,13 @@
 //
 
 import XLPagerTabStrip
+import TrySwiftData
 import Timepiece
 
 class ScheduleViewController: ButtonBarPagerTabStripViewController {
-    
+
+    let days = ConferenceDay.all
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -29,15 +32,9 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let sessionDay1ViewController = SessionsTableViewController()
-        sessionDay1ViewController.dataSource = SessionDataSourceDay1()
-        
-        let sessionDay2ViewController = SessionsTableViewController()
-        sessionDay2ViewController.dataSource = SessionDataSourceDay2()
-        
-        let sessionDay3ViewController = SessionsTableViewController()
-        sessionDay3ViewController.dataSource = SessionDataSourceDay3()
-        
+        let sessionDay1ViewController = SessionsTableViewController(conferenceDay: days[0])
+        let sessionDay2ViewController = SessionsTableViewController(conferenceDay: days[1])
+        let sessionDay3ViewController = SessionsTableViewController(conferenceDay: days[2])
         return [sessionDay1ViewController, sessionDay2ViewController, sessionDay3ViewController]
 
     }
@@ -48,12 +45,12 @@ private extension ScheduleViewController {
     func moveToCorrectDate() {
         let today = Date.today()
         
-        let day2 = Date.date(year: 2016, month: 9, day: 1)
+        let day2 = days[1].date
         if today == day2 {
             moveToViewController(at: 1)
         }
         
-        let day3 = Date.date(year: 2016, month: 9, day: 2)
+        let day3 = days[2].date
         if today == day3 {
             moveToViewController(at: 2)
         }

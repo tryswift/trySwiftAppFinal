@@ -16,7 +16,16 @@ class OrganizerDetailTableViewController: UITableViewController {
     fileprivate enum OrganizerDetail: Int {
         case header, bio, twitter
     }
+
+    init(organizer: Organizer) {
+        super.init(style: .plain)
+        self.organizer = organizer
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

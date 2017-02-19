@@ -11,7 +11,7 @@ import TrySwiftData
 
 class AboutTableViewController: UITableViewController {
 
-    fileprivate let trySwift = Conference.trySwift
+    fileprivate let trySwift = Conference.current
     
     fileprivate enum AboutInfo: Int {
         case header, detail, twitter
@@ -45,11 +45,11 @@ extension AboutTableViewController {
             return cell
         case .detail:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
-            cell.configure(withText: trySwift.description)
+            cell.configure(withText: trySwift.localizedDescription)
             return cell
         case .twitter:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TwitterFollowTableViewCell
-            cell.configure(withUsername: trySwift.twitter, delegate: self)
+            cell.configure(withUsername: trySwift.twitter!, delegate: self)
             return cell
         }
     }
