@@ -53,6 +53,7 @@ extension UIViewController: MFMailComposeViewControllerDelegate {
                 mailViewController.mailComposeDelegate = self
                 mailViewController.setToRecipients(configuration.recipients)
                 mailViewController.setSubject(configuration.subject)
+                mailViewController.navigationBar.tintColor = .white
                 return mailViewController
             }()
             
@@ -64,7 +65,7 @@ extension UIViewController: MFMailComposeViewControllerDelegate {
         }
     }
     
-    public func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true, completion: nil)
     }
 }
