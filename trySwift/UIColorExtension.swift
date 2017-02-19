@@ -28,6 +28,6 @@ extension UIColor {
     }
     
     static func twitterBlue() -> UIColor {
-        return UIColor(hexString: "#4FD5D6").darkened(amount: 0.1).desaturated()
+        return UIColor(hexString: "#ff5a00").darkened(amount: 0.1).desaturated()
     }
 }
