@@ -45,7 +45,7 @@ extension AboutTableViewController {
             return cell
         case .detail:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
-            cell.configure(withText: trySwift.description)
+            cell.configure(withText: trySwift.localizedDescription)
             return cell
         case .twitter:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TwitterFollowTableViewCell
