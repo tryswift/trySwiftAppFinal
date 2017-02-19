@@ -34,7 +34,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TrySwiftData:
-    :commit: ded1d24aa5c73db704991fbd997ca2db9537f6c9
+    :commit: a2be2d69f697bccee4ae5521ae9b1ebed17da06a
     :git: https://github.com/tryswift/trySwiftData.git
 
 SPEC CHECKSUMS:
