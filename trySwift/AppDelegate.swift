@@ -28,8 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         configureStyling()
         
-        NSTimeZone.default = TimeZone(abbreviation: "EST")!
-        
         return true
     }
     

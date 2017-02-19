@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Toucan
+import Kingfisher
 import TrySwiftData
 
 class SessionTableViewCell: UITableViewCell {
@@ -17,7 +17,11 @@ class SessionTableViewCell: UITableViewCell {
     @IBOutlet weak var sessionSubtitleLabel: UILabel!
     @IBOutlet weak var sessionTypeLabel: UILabel!
     @IBOutlet weak var sessionLocationLabel: UILabel!
-    
+
+    private lazy var defaultLocation: String = {
+        return Conference.current.name!
+    }()
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -29,12 +33,14 @@ class SessionTableViewCell: UITableViewCell {
     }
     
     func configure(withSession session: Session) {
-        sessionTitleLabel.text = session.formattedTitle
+        sessionTitleLabel.text = session.formattedTitle ?? defaultLocation
         sessionSubtitleLabel.text = session.formattedSubtitle
         sessionTypeLabel.text = session.sessionDescription
         sessionLocationLabel.text = session.formattedLocation
-        
-        sessionImageView.image = Toucan(image: session.logo).maskWithEllipse().image
+
+        let scale = UIScreen.main.scale
+        let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
+        sessionImageView.kf.setImage(with: session.logoURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
     
         if session.selectable {
             accessoryType = .disclosureIndicator
