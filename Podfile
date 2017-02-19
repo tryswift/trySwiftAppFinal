@@ -14,7 +14,7 @@ target 'trySwift' do
     pod 'AcknowList', '~> 1.2'
     pod 'Kingfisher', '~> 3.4.0'
     pod 'BuddyBuildSDK'
-    pod 'TrySwiftData', :git => 'https://github.com/tryswift/TrySwiftData.git'
+    pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
 end
 
 post_install do |installer|

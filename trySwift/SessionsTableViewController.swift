@@ -13,7 +13,8 @@ import TrySwiftData
 class SessionsTableViewController: UITableViewController {
     
     var conferenceDay: ConferenceDay
-    let dateFormatter = DateFormatter()
+    let sessionDateFormatter = DateFormatter()
+    let dayDateFormatter = DateFormatter()
 
     fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
 
@@ -29,7 +30,7 @@ class SessionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dateFormatter.dateFormat = "hh:mm a"
+        sessionDateFormatter.dateFormat = "hh:mm a"
         
         configureTableView()
         
@@ -69,8 +70,8 @@ extension SessionsTableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let session = conferenceDay.sessionBlocks[section]
-        let startString = dateFormatter.string(from: session.startTime)
-        let endString = dateFormatter.string(from: session.endTime)
+        let startString = sessionDateFormatter.string(from: session.startTime)
+        let endString = sessionDateFormatter.string(from: session.endTime)
         return "\(startString) - \(endString)"
     }
 }
