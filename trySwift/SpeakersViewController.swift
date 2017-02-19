@@ -11,16 +11,13 @@ import TrySwiftData
 
 class SpeakersViewController: UITableViewController {
     
-    fileprivate let speakers = Speaker.speakers
+    fileprivate let speakers = Speaker.all
     fileprivate let speakerDetailSegue = "speakerDetailSegue"
-    
-    fileprivate let changeNotificationManager = ChangeNotificationManager()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         title = "Speakers"
-        subscribeToChangeNotification()
     }
     
     override func viewDidLoad() {
@@ -88,14 +85,5 @@ extension SpeakersViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         navigationController?.pushViewController(viewControllerToCommit, animated: true)
-    }
-}
-
-extension SpeakersViewController {
-    
-    func subscribeToChangeNotification() {
-        changeNotificationManager.subscribeToSpeakerChange { [weak self] in
-            self?.tableView.reloadData()
-        }
     }
 }

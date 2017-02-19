@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Toucan
 import TrySwiftData
+import Kingfisher
 
 class VenueHeaderTableViewCell: UITableViewCell {
 
@@ -23,9 +23,10 @@ class VenueHeaderTableViewCell: UITableViewCell {
     func configure(withVenue venue: Venue) {
         titleLabel.text = venue.title
         websiteLabel.text = venue.website
-        if let venueLogo = UIImage(named: venue.logo) {
-            venueImageView.image = Toucan(image: venueLogo).maskWithEllipse().image
-        }
+
+        let scale = UIScreen.main.scale
+        let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
+        venueImageView.kf.setImage(with: venue.logoURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
         
         setNeedsUpdateConstraints()
         layoutIfNeeded()
