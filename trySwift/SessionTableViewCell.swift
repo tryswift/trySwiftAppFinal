@@ -34,7 +34,7 @@ class SessionTableViewCell: UITableViewCell {
     
     func configure(withSession session: Session) {
         sessionTitleLabel.text = session.formattedTitle ?? defaultLocation
-        sessionSubtitleLabel.text = session.formattedSubtitle
+        sessionSubtitleLabel.text = session.formattedSubtitle ?? defaultLocation
         sessionTypeLabel.text = session.sessionDescription
         sessionLocationLabel.text = session.formattedLocation
 
