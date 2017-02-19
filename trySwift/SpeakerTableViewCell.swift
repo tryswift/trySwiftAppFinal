@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Toucan
+import Kingfisher
 import TrySwiftData
 
 class SpeakerTableViewCell: UITableViewCell {
@@ -23,8 +23,10 @@ class SpeakerTableViewCell: UITableViewCell {
     }
     
     func configure(withSpeaker speaker: Speaker, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {
-        
-        speakerImageView.image = Toucan(image: speaker.getImage()).maskWithEllipse().image
+
+        let scale = UIScreen.main.scale
+        let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
+        speakerImageView.kf.setImage(with: speaker.imageURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
         speakerNameLabel.text = speaker.name
         speakerTwitterLabel.text = "@\(speaker.twitter)"
         

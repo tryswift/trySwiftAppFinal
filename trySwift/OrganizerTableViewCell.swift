@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Toucan
+import Kingfisher
 import TrySwiftData
 
 class OrganizerTableViewCell: UITableViewCell {
@@ -23,8 +23,10 @@ class OrganizerTableViewCell: UITableViewCell {
     }
     
     func configure(withOrganizer organizer: Organizer, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {
-        
-        organizerImageView.image = Toucan(image: organizer.getImage()).maskWithEllipse().image
+
+        let scale = UIScreen.main.scale
+        let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
+        organizerImageView.kf.setImage(with: organizer.imageURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
         organizerNameLabel.text = organizer.name
         organizerTwitterLabel.text = "@\(organizer.twitter)"
         

@@ -13,8 +13,17 @@ import TrySwiftData
 class SessionsTableViewController: UITableViewController {
     
     var conferenceDay: ConferenceDay
-    let sessionDateFormatter = DateFormatter()
-    let dayDateFormatter = DateFormatter()
+    lazy var sessionDateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        return dateFormatter
+    }()
+
+    lazy var dayDateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E, MMM d"
+        return dateFormatter
+    }()
 
     fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
 
@@ -22,7 +31,7 @@ class SessionsTableViewController: UITableViewController {
         self.conferenceDay = conferenceDay
         super.init(style: .plain)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -30,8 +39,6 @@ class SessionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sessionDateFormatter.dateFormat = "hh:mm a"
-        
         configureTableView()
         
         if traitCollection.forceTouchCapability == .available {
@@ -112,7 +119,7 @@ extension SessionsTableViewController {
 
 extension SessionsTableViewController: IndicatorInfoProvider {
     public func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Day")
+        return IndicatorInfo(title: dayDateFormatter.string(from: conferenceDay.date))
     }
 }
 

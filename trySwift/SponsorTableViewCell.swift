@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Toucan
+import Kingfisher
 import TrySwiftData
 
 class SponsorTableViewCell: UITableViewCell {
@@ -23,7 +23,10 @@ class SponsorTableViewCell: UITableViewCell {
     }
     
     func configure(withSponsor sponsor: Sponsor) {
-        sponsorImageView.image = UIImage(named: sponsor.logo!)
+
+        let scale = UIScreen.main.scale
+        let processor = AspectResizingImageProcessor(targetSize: CGSize(width: 67, height: 67), contentMode: .scaleAspectFit)
+        sponsorImageView.kf.setImage(with: sponsor.logoURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
         sponsorNameLabel.text = sponsor.name
         websiteLabel.text = sponsor.displayURL
         
