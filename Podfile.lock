@@ -9,7 +9,6 @@ PODS:
   - RealmSwift (2.4.2):
     - Realm (= 2.4.2)
   - Timepiece (1.1.0)
-  - Toucan (0.6.0)
   - TrySwiftData (0.1.0):
     - RealmSwift
     - TrySwiftData/Tokyo2017 (= 0.1.0)
@@ -24,7 +23,6 @@ DEPENDENCIES:
   - Kingfisher (~> 3.4.0)
   - RealmSwift (~> 2.4.2)
   - Timepiece (~> 1.1.0)
-  - Toucan (~> 0.6.0)
   - TrySwiftData (from `https://github.com/tryswift/trySwiftData.git`)
   - XLPagerTabStrip (~> 7.0.0)
 
@@ -45,10 +43,9 @@ SPEC CHECKSUMS:
   Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
   RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
   Timepiece: 4190a7bc5ae1c05c87531fd75b14e17d2a017902
-  Toucan: 47485bbc9cb4541ef6318d6886103e6eaf16e919
   TrySwiftData: b3babf2200282011904ded0cb2f6cb06167ccd20
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: 92bb480af80faa5eb69c3f2710344b78d060daca
+PODFILE CHECKSUM: 936d701141e48b2ac6f1495ba4cb7a930ae0902f
 
 COCOAPODS: 1.2.0
