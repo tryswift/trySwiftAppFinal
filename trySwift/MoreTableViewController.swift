@@ -90,7 +90,7 @@ extension MoreTableViewController {
         case .acknowledgements:
             switch AcknowledgementsRow(rawValue: (indexPath as NSIndexPath).row)! {
             case .organizers:
-                cell.textLabel?.text = "Organizer"
+                cell.textLabel?.text = "Organizers"
             case .libraries:
                 cell.textLabel?.text = "Acknowledgements"
             }

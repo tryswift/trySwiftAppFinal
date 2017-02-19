@@ -16,7 +16,7 @@ class OrganizersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Organizer"
+        title = "Organizers"
         configureTableView()
     }
 }
@@ -42,9 +42,8 @@ extension OrganizersTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let organizer = organizers[(indexPath as NSIndexPath).row]
-        let username = organizer.twitter
-        followUser(username)
-        tableView.deselectRow(at: indexPath, animated: true)
+        let organizerVC = OrganizerDetailTableViewController(organizer: organizer)
+        self.navigationController?.pushViewController(organizerVC, animated: true)
     }
 }
 
