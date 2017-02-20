@@ -21,7 +21,7 @@ class SessionDetailsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Presentation"
+        title = "Presentation".localized()
         configureTableView()
     }
 }

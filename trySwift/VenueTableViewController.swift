@@ -19,7 +19,7 @@ class VenueTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Venue"
+        title = "Venue".localized()
         configureTableView()
     }
 }
