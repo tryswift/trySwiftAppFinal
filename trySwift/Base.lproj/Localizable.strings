@@ -18,3 +18,5 @@
 "Conference Feedback" = "Conference Feedback";
 "Open Slack" = "Open Slack";
 "About" = "About";
+"**Session.Time**" = "h:mm a";
+"**Conference.Date**" = "E, MMM d";

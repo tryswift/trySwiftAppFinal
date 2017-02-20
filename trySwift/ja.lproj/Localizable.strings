@@ -18,3 +18,5 @@
 "Conference Feedback" = "イベントの感想";
 "Open Slack" = "Slackを開く";
 "About" = "try!について";
+"**Session.Time**" = "HH:mm";
+"**Conference.Date**" = "MM月dd日 (E)";
