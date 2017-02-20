@@ -19,20 +19,27 @@ class WifiInfoTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         networkNameLabel.textColor = .trySwiftAccentColor()
+        passwordLabel.textColor = .trySwiftMainColor()
     }
 
     func configure(withNetworkName networkName: String?, username: String?, password: String?) {
         let ssid = networkName ?? "N/A"
         networkNameLabel.text = "Wi-Fi: \(ssid)"
         
-        if let username = username, let password = password {
-            usernameLabel.text = "username: \(username)"
-            passwordLabel.text = "password: \(password)"
-        } else {
+        if let usernameValue = username {
+            usernameLabel.text = "Username: \(usernameValue)"
+        }
+        else {
             usernameLabel.text = nil
-            passwordLabel.text = nil
         }
         
+        if let passwordValue = password {
+            passwordLabel.text = "Password: \(passwordValue)"
+        }
+        else {
+            passwordLabel.text = nil
+        }
+
         setNeedsUpdateConstraints()
         layoutIfNeeded()
     }
