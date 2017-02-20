@@ -186,12 +186,12 @@ private extension MoreTableViewController {
     }
     
     func showAppFeedback() {
-        let url = URL(string: "https://github.com/tryswift/trySwiftNYC/issues")!
+        let url = URL(string: "https://github.com/tryswift/trySwiftAppFinal/issues")!
         openSafariViewController(withURL: url)
     }
     
     func showConferenceFeedback() {
-        let configuration = MailConfiguration(recipients: ["info@tryswiftnyc.com"], subject: "Conference feedback via try! NYC app")
+        let configuration = MailConfiguration(recipients: ["info@tryswift.co"], subject: "Conference feedback via try! NYC app")
         sendMail(withConfiguration: configuration)
     }
     
