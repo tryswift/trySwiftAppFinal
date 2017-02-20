@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		22C9804E1E5978B900C8C756 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */; };
-		22CE18CE1E5A2456002C035F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE18CD1E5A2456002C035F /* UIImageExtension.swift */; };
 		22CE18D11E5A2EB6002C035F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22CE18D31E5A2EB6002C035F /* Localizable.strings */; };
 		22CE18D71E5A2F85002C035F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE18D61E5A2F85002C035F /* StringExtension.swift */; };
 		2E50AF345BAF3D4FC07D959B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F8855FDC17ABDFA46C086 /* QuartzCore.framework */; };
@@ -94,7 +93,6 @@
 		14346AF2A8784D962D2C2A7F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		168F8855FDC17ABDFA46C086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
-		22CE18CD1E5A2456002C035F /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		22CE18D21E5A2EB6002C035F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22CE18D51E5A2ECB002C035F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22CE18D61E5A2F85002C035F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -287,7 +285,6 @@
 				FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */,
 				FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */,
 				22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */,
-				22CE18CD1E5A2456002C035F /* UIImageExtension.swift */,
 				22CE18D61E5A2F85002C035F /* StringExtension.swift */,
 			);
 			name = Utilities;
@@ -725,7 +722,6 @@
 				FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */,
 				FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */,
 				FA39E9161C6C83A40074B6BE /* SponsorTableViewCell.swift in Sources */,
-				22CE18CE1E5A2456002C035F /* UIImageExtension.swift in Sources */,
 				FAA54F121D91305200EC9E80 /* NibLoadableView.swift in Sources */,
 				FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */,
 				22CE18D71E5A2F85002C035F /* StringExtension.swift in Sources */,

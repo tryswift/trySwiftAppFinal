@@ -24,10 +24,19 @@ extension UIColor {
     }
     
     static func trySwiftAccentColor() -> UIColor {
-        return UIColor(hexString: "#ef551a")
+        return UIColor(red: 0, green: 178 / 255, blue: 234 / 255, alpha: 1.0)
+    }
+    
+    static func trySwiftNavigationBarColor() -> UIColor {
+        return UIColor(red: 1, green: 17 / 255, blue: 0, alpha: 1.0)
     }
     
     static func twitterBlue() -> UIColor {
         return UIColor(hexString: "#ff5a00").darkened(amount: 0.1).desaturated()
     }
 }
+
+
+
+
+

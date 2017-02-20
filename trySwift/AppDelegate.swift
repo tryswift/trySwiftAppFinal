@@ -41,7 +41,7 @@ private extension AppDelegate {
     
     func configureStyling() {
         
-        let tintColor = UIColor.trySwiftMainColor()
+        let tintColor = UIColor.trySwiftAccentColor()
         
         window?.tintColor = tintColor
         
@@ -50,7 +50,8 @@ private extension AppDelegate {
             NSFontAttributeName: UIFont.systemFont(ofSize: 18)
         ]
         
-        UINavigationBar.appearance().setBackgroundImage(UIImage.trySwiftNavigationBarBackground(), for: .default)
+        UINavigationBar.appearance().backgroundColor = UIColor.trySwiftNavigationBarColor()
+        UINavigationBar.appearance().barTintColor = UIColor.trySwiftNavigationBarColor()
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barStyle = .blackTranslucent
