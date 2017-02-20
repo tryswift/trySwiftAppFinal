@@ -19,7 +19,7 @@ class AboutTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "About"
+        title = "About".localized()
         configureTableView()
     }
 }

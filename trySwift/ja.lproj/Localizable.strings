@@ -1,0 +1,20 @@
+/* 
+  trySwift.strings
+  trySwift
+
+  Created by Tim Oliver on 2/19/17.
+  Copyright © 2017 NatashaTheRobot. All rights reserved.
+*/
+
+"Schedule" = "スケジュール";
+"Speakers" = "講演者";
+"Sponsors" = "スポンサー";
+"More" = "その他";
+"Venue" = "会場";
+"Code of Conduct" = "行動規範";
+"Organizers" = "主催者";
+"Acknowledgements" = "謝辞";
+"App Feedback" = "アプリの感想";
+"Conference Feedback" = "イベントの感想";
+"Open Slack" = "Slackを開く";
+"About" = "try!について";
