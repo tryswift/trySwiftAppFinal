@@ -14,6 +14,7 @@
 		2E977335936DA827A6D9E87C /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B6F88DC3156B1169287F39 /* BuddyBuildSDK.framework */; };
 		401B31312C27CB29D5A896F5 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEC1F3C735D6F1068D803AA /* Pods_trySwift.framework */; };
 		496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496328931D81F3560033E3C1 /* MailConfiguration.swift */; };
+		496DB2CC1E5B8678004A4946 /* Pods-trySwift-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */; };
 		499BD62A1D05910200E74061 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BD6291D05910200E74061 /* Twitter.swift */; };
 		499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */; };
 		4E6E3B84BCD00B2750C57828 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F81AD508535BD405F98215 /* AVFoundation.framework */; };
@@ -620,6 +621,7 @@
 				FA39E90C1C6C45FD0074B6BE /* SpeakerTableViewCell.xib in Resources */,
 				FA65B58E1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib in Resources */,
 				22CE18D11E5A2EB6002C035F /* Localizable.strings in Resources */,
+				496DB2CC1E5B8678004A4946 /* Pods-trySwift-acknowledgements.plist in Resources */,
 				FAFA15C61C69D31C00FEA4EA /* LaunchScreen.storyboard in Resources */,
 				FAF1DE1B1D5FE14500D710C3 /* MapTableViewCell.xib in Resources */,
 				FA39E91E1C6C8D100074B6BE /* WebDisplayViewController.xib in Resources */,
