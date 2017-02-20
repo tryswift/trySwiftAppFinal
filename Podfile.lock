@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TrySwiftData:
-    :commit: 00612a6ead174d15a1c328b91177226f83a59b05
+    :commit: e16a5989ac959701ea9ce38fc8282393cd05fec7
     :git: https://github.com/tryswift/trySwiftData.git
 
 SPEC CHECKSUMS:
@@ -43,7 +43,7 @@ SPEC CHECKSUMS:
   Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
   RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
   Timepiece: 4190a7bc5ae1c05c87531fd75b14e17d2a017902
-  TrySwiftData: b3babf2200282011904ded0cb2f6cb06167ccd20
+  TrySwiftData: 9c8acd05db49d952e0fbb69790b01f3b7441dbe8
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
 PODFILE CHECKSUM: 936d701141e48b2ac6f1495ba4cb7a930ae0902f

@@ -38,7 +38,7 @@ class MoreTableViewController: UITableViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = "More"
+        title = "More".localized()
     }
     
     override func viewDidLoad() {
@@ -81,30 +81,30 @@ extension MoreTableViewController {
         case .eventDetails:
             switch EventDetailsRow(rawValue: (indexPath as NSIndexPath).row)! {
             case .about:
-                cell.textLabel?.text = "About"
+                cell.textLabel?.text = "About".localized()
             case .venue:
-                cell.textLabel?.text = "Venue"
+                cell.textLabel?.text = "Venue".localized()
             case .codeOfConduct:
-                cell.textLabel?.text = "Code of Conduct"
+                cell.textLabel?.text = "Code of Conduct".localized()
             }
         case .acknowledgements:
             switch AcknowledgementsRow(rawValue: (indexPath as NSIndexPath).row)! {
             case .organizers:
-                cell.textLabel?.text = "Organizers"
+                cell.textLabel?.text = "Organizers".localized()
             case .libraries:
-                cell.textLabel?.text = "Acknowledgements"
+                cell.textLabel?.text = "Acknowledgements".localized()
             }
         case .feedback:
             switch FeedbackRow(rawValue: indexPath.row)! {
             case .app:
-                cell.textLabel?.text = "App feedback"
+                cell.textLabel?.text = "App Feedback".localized()
             case .conference:
-                cell.textLabel?.text = "Conference feedback"
+                cell.textLabel?.text = "Conference Feedback".localized()
             }
         case .slack:
             switch SlackRow(rawValue: indexPath.row)! {
             case .open:
-                cell.textLabel?.text = "Open Slack"
+                cell.textLabel?.text = "Open Slack".localized()
             }
         }
         
@@ -201,7 +201,7 @@ private extension MoreTableViewController {
         if application.canOpenURL(appURL) {
             application.open(appURL, options: [String:Any](), completionHandler: nil)
         } else {
-            let url = URL(string: "https://tryswiftnyc.slack.com")!
+            let url = URL(string: "https://tryswiftjp2017.slack.com")!
             openSafariViewController(withURL: url)
         }
     }

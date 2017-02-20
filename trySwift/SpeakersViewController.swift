@@ -17,7 +17,7 @@ class SpeakersViewController: UITableViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = "Speakers"
+        title = "Speakers".localized()
     }
     
     override func viewDidLoad() {

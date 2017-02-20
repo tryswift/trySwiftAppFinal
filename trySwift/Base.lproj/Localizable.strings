@@ -1,0 +1,20 @@
+/* 
+  trySwift.strings
+  trySwift
+
+  Created by Tim Oliver on 2/19/17.
+  Copyright © 2017 NatashaTheRobot. All rights reserved.
+*/
+
+"Schedule" = "Schedule";
+"Speakers" = "Speakers";
+"Sponsors" = "Sponsors";
+"More" = "More";
+"Venue" = "Venue";
+"Code of Conduct" = "Code of Conduct";
+"Organizers" = "Organizers";
+"Acknowledgements" = "Acknowledgements";
+"App Feedback" = "App Feedback";
+"Conference Feedback" = "Conference Feedback";
+"Open Slack" = "Open Slack";
+"About" = "About";
