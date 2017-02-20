@@ -27,7 +27,7 @@ class OrganizerTableViewCell: UITableViewCell {
         let scale = UIScreen.main.scale
         let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
         organizerImageView.kf.setImage(with: organizer.imageURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
-        organizerNameLabel.text = organizer.name
+        organizerNameLabel.text = organizer.localizedName
         organizerTwitterLabel.text = "@\(organizer.twitter)"
         
         if !selectionEnabled {

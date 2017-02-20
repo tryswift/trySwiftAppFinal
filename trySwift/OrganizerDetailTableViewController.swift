@@ -60,7 +60,7 @@ extension OrganizerDetailTableViewController {
             return cell
         case .bio:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
-            cell.configure(withText: organizer.bio)
+            cell.configure(withText: organizer.localizedBio)
             return cell
         case .twitter:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TwitterFollowTableViewCell
