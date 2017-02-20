@@ -19,7 +19,7 @@ class SpeakerTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        speakerTwitterLabel.textColor = .twitterBlue()
+        speakerTwitterLabel.textColor = .trySwiftAccentColor()
     }
     
     func configure(withSpeaker speaker: Speaker, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {

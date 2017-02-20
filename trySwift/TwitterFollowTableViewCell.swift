@@ -23,8 +23,8 @@ class TwitterFollowTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         followButton.layer.borderWidth = 1.0
-        followButton.layer.borderColor = UIColor.twitterBlue().cgColor
-        followButton.tintColor = .twitterBlue()
+        followButton.layer.borderColor = UIColor.trySwiftAccentColor().cgColor
+        followButton.tintColor = .trySwiftAccentColor()
         followButton.layer.cornerRadius = 3.0
     }
     

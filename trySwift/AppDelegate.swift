@@ -40,10 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 private extension AppDelegate {
     
     func configureStyling() {
-        
-        let tintColor = UIColor.trySwiftAccentColor()
-        
-        window?.tintColor = tintColor
+                
+        window?.tintColor = UIColor.trySwiftNavigationBarColor()
         
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName: UIColor.white,
