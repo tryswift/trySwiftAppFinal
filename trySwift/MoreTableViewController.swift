@@ -164,7 +164,7 @@ private extension MoreTableViewController {
     func showCodeOfConduct() {
         let webViewController = WebDisplayViewController()
         webViewController.url = URL(string: "https://github.com/NatashaTheRobot/trySwiftCodeOfConduct/blob/master/README.md")!
-        webViewController.displayTitle = "Code of Conduct"
+        webViewController.displayTitle = "Code of Conduct".localized()
         navigationController?.pushViewController(webViewController, animated: true)
     }
     

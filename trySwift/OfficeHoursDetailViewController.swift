@@ -21,7 +21,7 @@ class OfficeHoursDetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Q&A"
+        title = "Q&A".localized()
         configureTableView()
     }
 
