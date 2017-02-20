@@ -27,7 +27,7 @@ class SpeakerTableViewCell: UITableViewCell {
         let scale = UIScreen.main.scale
         let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
         speakerImageView.kf.setImage(with: speaker.imageURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
-        speakerNameLabel.text = speaker.name
+        speakerNameLabel.text = speaker.localizedName
         speakerTwitterLabel.text = "@\(speaker.twitter)"
         
         if !selectionEnabled {

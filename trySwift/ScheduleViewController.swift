@@ -17,7 +17,7 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = "Schedule"
+        title = "Schedule".localized()
     }
     
     override func viewDidLoad() {

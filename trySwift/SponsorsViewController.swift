@@ -17,7 +17,7 @@ class SponsorsViewController: UITableViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        title = "Sponsors"
+        title = "Sponsors".localized()
     }
     
     override func viewDidLoad() {

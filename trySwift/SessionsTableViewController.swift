@@ -15,13 +15,13 @@ class SessionsTableViewController: UITableViewController {
     var conferenceDay: ConferenceDay
     lazy var sessionDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.dateFormat = "**Session.Time**".localized()
         return dateFormatter
     }()
 
     lazy var dayDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "E, MMM d"
+        dateFormatter.dateFormat = "**Conference.Date**".localized()
         return dateFormatter
     }()
 

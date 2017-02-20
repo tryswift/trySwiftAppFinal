@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		22C9804E1E5978B900C8C756 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */; };
 		22CE18CE1E5A2456002C035F /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE18CD1E5A2456002C035F /* UIImageExtension.swift */; };
+		22CE18D11E5A2EB6002C035F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22CE18D31E5A2EB6002C035F /* Localizable.strings */; };
+		22CE18D71E5A2F85002C035F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE18D61E5A2F85002C035F /* StringExtension.swift */; };
 		2E50AF345BAF3D4FC07D959B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F8855FDC17ABDFA46C086 /* QuartzCore.framework */; };
 		2E977335936DA827A6D9E87C /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B6F88DC3156B1169287F39 /* BuddyBuildSDK.framework */; };
 		401B31312C27CB29D5A896F5 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEC1F3C735D6F1068D803AA /* Pods_trySwift.framework */; };
@@ -93,6 +95,9 @@
 		168F8855FDC17ABDFA46C086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		22CE18CD1E5A2456002C035F /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		22CE18D21E5A2EB6002C035F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22CE18D51E5A2ECB002C035F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		22CE18D61E5A2F85002C035F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2E77AAF3446A13C83CAB4A77 /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		496328931D81F3560033E3C1 /* MailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailConfiguration.swift; sourceTree = "<group>"; };
 		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
@@ -283,6 +288,7 @@
 				FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */,
 				22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */,
 				22CE18CD1E5A2456002C035F /* UIImageExtension.swift */,
+				22CE18D61E5A2F85002C035F /* StringExtension.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -457,6 +463,7 @@
 		FAFA15BA1C69D31C00FEA4EA /* trySwift */ = {
 			isa = PBXGroup;
 			children = (
+				22CE18D31E5A2EB6002C035F /* Localizable.strings */,
 				FAF1DE301D639D9F00D710C3 /* trySwift.entitlements */,
 				FAFA15BB1C69D31C00FEA4EA /* AppDelegate.swift */,
 				FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */,
@@ -592,6 +599,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = FAFA15AF1C69D31B00FEA4EA;
 			productRefGroup = FAFA15B91C69D31C00FEA4EA /* Products */;
@@ -614,6 +622,7 @@
 				FA39E8E91C6B32F80074B6BE /* SessionTableViewCell.xib in Resources */,
 				FA39E90C1C6C45FD0074B6BE /* SpeakerTableViewCell.xib in Resources */,
 				FA65B58E1C6D8B0600DCAF0B /* OrganizerTableViewCell.xib in Resources */,
+				22CE18D11E5A2EB6002C035F /* Localizable.strings in Resources */,
 				FAFA15C61C69D31C00FEA4EA /* LaunchScreen.storyboard in Resources */,
 				FAF1DE1B1D5FE14500D710C3 /* MapTableViewCell.xib in Resources */,
 				FA39E91E1C6C8D100074B6BE /* WebDisplayViewController.xib in Resources */,
@@ -719,6 +728,7 @@
 				22CE18CE1E5A2456002C035F /* UIImageExtension.swift in Sources */,
 				FAA54F121D91305200EC9E80 /* NibLoadableView.swift in Sources */,
 				FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */,
+				22CE18D71E5A2F85002C035F /* StringExtension.swift in Sources */,
 				FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */,
 				FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */,
 				FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */,
@@ -766,6 +776,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		22CE18D31E5A2EB6002C035F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22CE18D21E5A2EB6002C035F /* Base */,
+				22CE18D51E5A2ECB002C035F /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -789,6 +808,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -836,6 +856,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

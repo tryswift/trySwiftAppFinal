@@ -21,7 +21,7 @@ class OfficeHoursDetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Q&A"
+        title = "Q&A".localized()
         configureTableView()
     }
 
@@ -50,7 +50,7 @@ extension OfficeHoursDetailViewController {
             return cell
         case .bio:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
-            cell.configure(withText: speaker.bio)
+            cell.configure(withText: speaker.localizedBio)
             return cell
         case .twitter:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TwitterFollowTableViewCell

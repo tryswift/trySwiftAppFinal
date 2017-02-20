@@ -16,7 +16,7 @@ class OrganizersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Organizers"
+        title = "Organizers".localized()
         configureTableView()
     }
 }
