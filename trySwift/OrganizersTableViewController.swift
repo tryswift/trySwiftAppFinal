@@ -35,13 +35,13 @@ extension OrganizersTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as OrganizerTableViewCell
         
-        cell.configure(withOrganizer: organizers[(indexPath as NSIndexPath).row])
+        cell.configure(withOrganizer: organizers[indexPath.row])
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let organizer = organizers[(indexPath as NSIndexPath).row]
+        let organizer = organizers[indexPath.row]
         let organizerVC = OrganizerDetailTableViewController(organizer: organizer)
         self.navigationController?.pushViewController(organizerVC, animated: true)
     }

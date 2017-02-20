@@ -37,7 +37,7 @@ extension SpeakerDetailViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch SpeakerDetail(rawValue: (indexPath as NSIndexPath).row)! {
+        switch SpeakerDetail(rawValue: indexPath.row)! {
         case .header:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SpeakerTableViewCell
             cell.configure(withSpeaker: speaker, selectionEnabled: false, accessoryEnabled: false)

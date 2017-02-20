@@ -77,9 +77,9 @@ extension MoreTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         
-        switch MoreSection(rawValue: (indexPath as NSIndexPath).section)! {
+        switch MoreSection(rawValue: indexPath.section)! {
         case .eventDetails:
-            switch EventDetailsRow(rawValue: (indexPath as NSIndexPath).row)! {
+            switch EventDetailsRow(rawValue: indexPath.row)! {
             case .about:
                 cell.textLabel?.text = "About".localized()
             case .venue:
@@ -88,7 +88,7 @@ extension MoreTableViewController {
                 cell.textLabel?.text = "Code of Conduct".localized()
             }
         case .acknowledgements:
-            switch AcknowledgementsRow(rawValue: (indexPath as NSIndexPath).row)! {
+            switch AcknowledgementsRow(rawValue: indexPath.row)! {
             case .organizers:
                 cell.textLabel?.text = "Organizers".localized()
             case .libraries:
@@ -112,9 +112,9 @@ extension MoreTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch MoreSection(rawValue: (indexPath as NSIndexPath).section)! {
+        switch MoreSection(rawValue: indexPath.section)! {
         case .eventDetails:
-            switch EventDetailsRow(rawValue: (indexPath as NSIndexPath).row)! {
+            switch EventDetailsRow(rawValue: indexPath.row)! {
             case .about:
                 showAbout()
             case .venue:
@@ -123,7 +123,7 @@ extension MoreTableViewController {
                 showCodeOfConduct()
             }
         case .acknowledgements:
-            switch AcknowledgementsRow(rawValue: (indexPath as NSIndexPath).row)! {
+            switch AcknowledgementsRow(rawValue: indexPath.row)! {
             case .organizers:
                 showOrganizers()
             case .libraries:

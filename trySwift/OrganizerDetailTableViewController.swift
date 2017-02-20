@@ -53,7 +53,7 @@ extension OrganizerDetailTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch OrganizerDetail(rawValue: (indexPath as NSIndexPath).row)! {
+        switch OrganizerDetail(rawValue: indexPath.row)! {
         case .header:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as OrganizerTableViewCell
             cell.configure(withOrganizer: organizer, selectionEnabled: false, accessoryEnabled: false)

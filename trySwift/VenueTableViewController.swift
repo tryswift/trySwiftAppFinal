@@ -36,7 +36,7 @@ extension VenueTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch VenueDetail(rawValue: (indexPath as NSIndexPath).row)! {
+        switch VenueDetail(rawValue: indexPath.row)! {
         case .header:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as VenueHeaderTableViewCell
             cell.configure(withVenue: venue)
@@ -62,7 +62,7 @@ extension VenueTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if case VenueDetail.map = VenueDetail(rawValue: (indexPath as NSIndexPath).row)! {
+        if case VenueDetail.map = VenueDetail(rawValue: indexPath.row)! {
             return 300
         }
         

@@ -39,7 +39,7 @@ extension OfficeHoursDetailViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch OfficeHoursDetail(rawValue: (indexPath as NSIndexPath).row)! {
+        switch OfficeHoursDetail(rawValue: indexPath.row)! {
         case .header:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SessionHeaderTableViewCell
             cell.configure(withSession: session)
