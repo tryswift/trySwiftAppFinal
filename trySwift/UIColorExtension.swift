@@ -28,7 +28,7 @@ extension UIColor {
     }
     
     static func trySwiftNavigationBarColor() -> UIColor {
-        return UIColor(red: 1, green: 17 / 255, blue: 0, alpha: 1.0)
+        return  UIColor(hexString: "#f06d00")
     }
     
     static func twitterBlue() -> UIColor {
