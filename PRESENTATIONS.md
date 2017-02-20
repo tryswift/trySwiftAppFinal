@@ -1,5 +1,5 @@
 | Name | Twitter | Presentation | Slides | Video |
-| -- | -- | -- | -- | -- |
+| ---- | ------- | ------------ | ------ | ----- |
 | Alexis Gallagher | [@alexisgallagher](https://twitter.com/alexisgallagher) | TBA | TBA | TBA |
 | Eric Wing | [@ewingfighter](https://twitter.com/ewingfighter) | Swift on Android | TBA | TBA |
 | Nate Cook | [@nnnnnnnn](https://twitter.com/nnnnnnnn) | Swift's Pointy Bits | TBA | TBA |
