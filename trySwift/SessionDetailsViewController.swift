@@ -49,7 +49,7 @@ extension SessionDetailsViewController {
             return cell
         case .summary:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
-            cell.configure(withText: presentation.summary)
+            cell.configure(withText: presentation.localizedSummary)
             return cell
         case .twitter:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TwitterFollowTableViewCell
