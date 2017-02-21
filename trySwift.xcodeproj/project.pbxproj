@@ -13,9 +13,7 @@
 		22F823D81E5BBB62003BD6BB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F823D61E5BBB62003BD6BB /* Interface.storyboard */; };
 		22F823DA1E5BBB62003BD6BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F823D91E5BBB62003BD6BB /* Assets.xcassets */; };
 		22F823E11E5BBB62003BD6BB /* try! Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 22F823E01E5BBB62003BD6BB /* try! Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		22F823E81E5BBB62003BD6BB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F823E71E5BBB62003BD6BB /* InterfaceController.swift */; };
 		22F823EA1E5BBB62003BD6BB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F823E91E5BBB62003BD6BB /* ExtensionDelegate.swift */; };
-		22F823EC1E5BBB62003BD6BB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F823EB1E5BBB62003BD6BB /* NotificationController.swift */; };
 		22F823EE1E5BBB62003BD6BB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F823ED1E5BBB62003BD6BB /* ComplicationController.swift */; };
 		22F823F01E5BBB62003BD6BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F823EF1E5BBB62003BD6BB /* Assets.xcassets */; };
 		22F823F51E5BBB62003BD6BB /* try!.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 22F823D41E5BBB62003BD6BB /* try!.app */; };
@@ -59,6 +57,9 @@
 		FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E9321C6D59890074B6BE /* SessionHeaderTableViewCell.swift */; };
 		FA39E9351C6D59890074B6BE /* SessionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */; };
 		FA3A1CB61D68E1950042F8DD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */; };
+		FA40B3F31E5C02BC00A9D01E /* SessionsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA40B3F21E5C02BC00A9D01E /* SessionsInterfaceController.swift */; };
+		FA40B3F51E5C079000A9D01E /* SessionTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA40B3F41E5C079000A9D01E /* SessionTableRowController.swift */; };
+		FA40B3F71E5C0AE800A9D01E /* SessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA40B3F61E5C0AE800A9D01E /* SessionExtension.swift */; };
 		FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */; };
 		FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */; };
 		FA65B58A1C6D8A5200DCAF0B /* OrganizersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA65B5891C6D8A5200DCAF0B /* OrganizersTableViewController.swift */; };
@@ -153,9 +154,7 @@
 		22F823DB1E5BBB62003BD6BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F823E01E5BBB62003BD6BB /* try! Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try! Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F823E61E5BBB62003BD6BB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		22F823E71E5BBB62003BD6BB /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		22F823E91E5BBB62003BD6BB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		22F823EB1E5BBB62003BD6BB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		22F823ED1E5BBB62003BD6BB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		22F823EF1E5BBB62003BD6BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22F823F11E5BBB62003BD6BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -198,6 +197,9 @@
 		FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-trySwift-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		FA3A1CB51D68E1950042F8DD /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
+		FA40B3F21E5C02BC00A9D01E /* SessionsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsInterfaceController.swift; sourceTree = "<group>"; };
+		FA40B3F41E5C079000A9D01E /* SessionTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableRowController.swift; sourceTree = "<group>"; };
+		FA40B3F61E5C0AE800A9D01E /* SessionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionExtension.swift; sourceTree = "<group>"; };
 		FA65B57B1C6D5C4600DCAF0B /* SessionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailsViewController.swift; sourceTree = "<group>"; };
 		FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 		FA65B5811C6D813200DCAF0B /* trySwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "trySwift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -293,9 +295,8 @@
 		22F823E41E5BBB62003BD6BB /* try! Extension */ = {
 			isa = PBXGroup;
 			children = (
-				22F823E71E5BBB62003BD6BB /* InterfaceController.swift */,
 				22F823E91E5BBB62003BD6BB /* ExtensionDelegate.swift */,
-				22F823EB1E5BBB62003BD6BB /* NotificationController.swift */,
+				FA40B3F11E5C023800A9D01E /* SessionSchedule */,
 				22F823ED1E5BBB62003BD6BB /* ComplicationController.swift */,
 				22F823EF1E5BBB62003BD6BB /* Assets.xcassets */,
 				22F823F11E5BBB62003BD6BB /* Info.plist */,
@@ -482,6 +483,16 @@
 				FA39E9331C6D59890074B6BE /* SessionHeaderTableViewCell.xib */,
 			);
 			name = SessionHeaderTableViewCell;
+			sourceTree = "<group>";
+		};
+		FA40B3F11E5C023800A9D01E /* SessionSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				FA40B3F21E5C02BC00A9D01E /* SessionsInterfaceController.swift */,
+				FA40B3F41E5C079000A9D01E /* SessionTableRowController.swift */,
+				FA40B3F61E5C0AE800A9D01E /* SessionExtension.swift */,
+			);
+			name = SessionSchedule;
 			sourceTree = "<group>";
 		};
 		FA65B57D1C6D7AFC00DCAF0B /* More */ = {
@@ -937,10 +948,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22F823EC1E5BBB62003BD6BB /* NotificationController.swift in Sources */,
+				FA40B3F31E5C02BC00A9D01E /* SessionsInterfaceController.swift in Sources */,
 				22F823EE1E5BBB62003BD6BB /* ComplicationController.swift in Sources */,
+				FA40B3F51E5C079000A9D01E /* SessionTableRowController.swift in Sources */,
 				22F823EA1E5BBB62003BD6BB /* ExtensionDelegate.swift in Sources */,
-				22F823E81E5BBB62003BD6BB /* InterfaceController.swift in Sources */,
+				FA40B3F71E5C0AE800A9D01E /* SessionExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
