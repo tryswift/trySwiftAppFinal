@@ -9,6 +9,3 @@ You can find an overview of speakers and their presentations, including slides a
 
 ## Contributing
 Check out the [issues](https://github.com/tryswift/trySwiftNYC/issues) and see how you can help out.
-
-## Installation
-Before opening the `.xcworkspace` file, run `pod install` in the root of the project.
