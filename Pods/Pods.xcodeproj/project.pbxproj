@@ -12,7 +12,7 @@
 		017F2820862A02A8C5D6D77E76A35380 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5A09DB7F08E9044913398F50E62D23 /* FXPageControl.m */; };
 		0185F360D9B9D287BA2B1F50B371D51B /* realm.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B933AA238AC68509F8494160152C61 /* realm.png */; };
 		01C9D4F205432C346C0B027A31919DDD /* Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624FDE36C95356979A9C7A1CE78B185D /* Sync.swift */; };
-		021FE26F6AB1F0D81D5407C4705CB6F0 /* TrySwiftData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B90A276A763689D71EF2A402432368AC /* TrySwiftData.bundle */; };
+		021FE26F6AB1F0D81D5407C4705CB6F0 /* TrySwiftData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FE3D5410955811B68DB081E7CCD2EBA1 /* TrySwiftData.bundle */; };
 		028D2B14BE76C76B0E292B74FE4A22C6 /* RLMRealm_Dynamic.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D70A0B4BF686902C56FFACA3C89CA02 /* RLMRealm_Dynamic.h */; };
 		0300120ECE5791068BD77C03BCDB23D0 /* maki_sudo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AAB8DD8C5634F15BAA4BAAC43738E02 /* maki_sudo.jpg */; };
 		032FBD951F5AE4A8B59E06649144F341 /* RLMListBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = E32496BF14675D1DCA9485727F9E10D9 /* RLMListBase.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
@@ -21,7 +21,7 @@
 		0459D85540CEF7D7182E60A81884D4EF /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE42B2C2B130E3834964C0794DD50ED /* Migration.swift */; };
 		04DA77EC7E19223EAD6BEC5649AFB9AE /* tatsuya_tobioka.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D97F8ECE3BCEA2B2DCC4B0CE71B7B0 /* tatsuya_tobioka.png */; };
 		0501F7963A30460153F6F28A8B98EEF2 /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA5ABEB335A00ED1A12725CF4E85242 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05426532D0B6F1F3EEFBB799B9DE6132 /* RealmSwift-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E27AD9BBAD68D15B687F5E68CE95C49 /* RealmSwift-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05426532D0B6F1F3EEFBB799B9DE6132 /* RealmSwift-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE2F6C5BFF0CC793C7893C4BAA920F9A /* RealmSwift-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05576627A95F44F86F3FD0A01BDC7F74 /* Pods-trySwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 963719C4751FC7E0BBC1F75A071C2455 /* Pods-trySwift-dummy.m */; };
 		058A3EB8BF05AA50B961D15DEBDED47B /* RLMPredicateUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = E8C6891880E1FF504F3DF5407FD74080 /* RLMPredicateUtil.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		05F3ABC6F10B93D24842368C3C6F17DD /* RLMProperty_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7ED9FF0FC0BD9365B805E4769FF29082 /* RLMProperty_Private.h */; };
@@ -34,7 +34,7 @@
 		084F18867EE094787319A9489D65A236 /* RLMObjectSchema_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 75D972C6335677E68929BFC60ABF3E9E /* RLMObjectSchema_Private.h */; };
 		0873979E94B2E0A03960CE7CB7CFA09D /* RLMResults.h in Headers */ = {isa = PBXBuildFile; fileRef = BE724608F4B81A72F10A9A5E0EF5F9AA /* RLMResults.h */; };
 		0873C4115CB901948A63B6001E7BED88 /* RLMObject_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C003C95D2833580E39158EF31E18C45 /* RLMObject_Private.h */; };
-		08CB576A91AA7F848114192EE4B1DDCF /* RealmSwift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B57AF957ECCED36B6000CDFD7CF1A /* RealmSwift-iOS-dummy.m */; };
+		08CB576A91AA7F848114192EE4B1DDCF /* RealmSwift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6086A2626A5A573D2368FC7E35E51455 /* RealmSwift-iOS-dummy.m */; };
 		08D8A3D002589F039A96AA103D517927 /* results_notifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A844DD873C7FAF4EADC855090304495D /* results_notifier.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		08FC8937AA0B458F343C4A83DA1601D9 /* RLMPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4831DB88FDCB0F74EFC8ED8AFCBAB3 /* RLMPlatform.h */; };
 		0908295B66854E87A2FE04D5AD6771E0 /* RLMSyncCredentials.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 0A6CC2D7FFE55483C4694ECCDCFB886E /* RLMSyncCredentials.h */; };
@@ -49,7 +49,7 @@
 		0D09CE98119C0DFD333BC7A746F5F3F2 /* RLMRealmConfiguration+Sync.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 81561FE77699BC236DD9988E4B3A3035 /* RLMRealmConfiguration+Sync.h */; };
 		0D3C112FA6667DBAA8632D9501611E7F /* RLMObjectBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0BE12B4DB1B4AC7890754A685DC281A /* RLMObjectBase.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		0D6D8CCEEEA547CF988187D88473FD97 /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5E145F3B32F2666735F28B7E5565F /* SortDescriptor.swift */; };
-		0DEFEFED5CCA23B5482B0CA60CF8F26C /* Timepiece-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C40BE26CD00F100FD987B22D9BF2C7E9 /* Timepiece-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DEFEFED5CCA23B5482B0CA60CF8F26C /* Timepiece-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCD369E1E833BBD3C5F10FC4C8925FD5 /* Timepiece-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E357F6CD468EC9EDEA431BC73C061C1 /* transact_log_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6504B01EEA636083EB96CDF805A4E9C /* transact_log_handler.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		0E9CC28AC8E34FE8E1C87E933E04BC7A /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF4BD5640BEEA41E7E2C6A8D5CE2633 /* ImageProcessor.swift */; };
 		0EC4689B50FAAD78F889742FE82F0E4A /* RLMObjectBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B14919D507551BA477C05B633E8E692 /* RLMObjectBase.h */; };
@@ -115,7 +115,7 @@
 		2610B12F928A5EF9B999AB287657FA9E /* shared_realm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33D83A0EDA06688FFD435F22077B9F2A /* shared_realm.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		262B9533CB560F924DF5763375BF663B /* orta_therox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9020ED4438C4ABC4F1A4F226E4DBAB43 /* orta_therox.jpg */; };
 		267F235F2B4D57D04D10CF591F56D54E /* RLMSwiftSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F03852C2EC0E84B95ADE4E90E7ECBFF /* RLMSwiftSupport.m */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
-		26E977FF603DB71167521B95A1845024 /* Timepiece-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F084B4178A3BA4FD0CB21CB393784BB5 /* Timepiece-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26E977FF603DB71167521B95A1845024 /* Timepiece-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12CCBD9DDDF8BE08D44B37E3A556116D /* Timepiece-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26F2D9B540C26539094EFEFA5CE2DD04 /* external_commit_helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EA7639FC515410B58CB7860AA303DF20 /* external_commit_helper.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		274FFC8C4C394F8F2D3686EC53198106 /* mercari.png in Resources */ = {isa = PBXBuildFile; fileRef = D54EC5D81E156D4A2EFCE713F0729AB0 /* mercari.png */; };
 		280C40AF23286A490B07B5D10B48E11B /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC66D489D809B1968A76E45B53866A3 /* BaseButtonBarPagerTabStripViewController.swift */; };
@@ -323,7 +323,7 @@
 		75957667828EA89180858396A55763F4 /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6040C691E3F90D604E818AB1F49A53 /* Acknow.swift */; };
 		75ACC3A20A777B56CAE1CAB1DDC9DD3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61FF8FCA1C422F52FD29C5387E8A9F69 /* Foundation.framework */; };
 		75DEE966EF7DA5A6251954212E5FC3AB /* RLMPlatform.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = EA4831DB88FDCB0F74EFC8ED8AFCBAB3 /* RLMPlatform.h */; };
-		7626FF6B6A1C3F25BA60AFD9DE135658 /* RealmSwift-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F57E069A401C3C82359F23E5B18237 /* RealmSwift-watchOS-dummy.m */; };
+		7626FF6B6A1C3F25BA60AFD9DE135658 /* RealmSwift-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB3B15820B49A7BAEE7F5EFA43E6894 /* RealmSwift-watchOS-dummy.m */; };
 		7636F846675C9F4ED96E00C6C19A4890 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082B7516CE23A01C6D65BEAED504DB84 /* KingfisherManager.swift */; };
 		76C32B614E316E404131ACCCB68D4326 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA176A695D9D4D5C2201BE36B334B8 /* Presentation.swift */; };
 		777F4315490428D0FA3D754F967E1F7A /* RLMSyncPermissionChange_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A5670FCA099A5FFCF3427D913A5EE18D /* RLMSyncPermissionChange_Private.h */; };
@@ -345,7 +345,7 @@
 		7DE885DE8D692B44CD0A69CBBF1ED263 /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63EFDD8EDCB831300C9BC20005E110 /* Int+Timepiece.swift */; };
 		7DF2694E3CAFD04C76F62DA43033C070 /* RLMSyncConfiguration.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABEE9F413EE6B8FFAC4D9AB459A73A1E /* RLMSyncConfiguration.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		7E0CCE6328A51AD4B3A2ECBC41F83B2B /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = DEBEAA386C461100FBD6D00683D2E2AC /* line.png */; };
-		7E5BB0582D7FDEACE4B561C6CB3517DD /* RealmSwift-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3FECD154D553473242B69530408F34D /* RealmSwift-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E5BB0582D7FDEACE4B561C6CB3517DD /* RealmSwift-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2D122BF7E00A154041A875D6381D7A8 /* RealmSwift-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7E67207F15DF4586F218851E1BD56B14 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3989BF776ADC1CE5E22D7080842012C /* Object.swift */; };
 		7ED87AF035AFB06006CF3F0593296FEE /* RLMSyncSessionRefreshHandle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F0912DC56AE19E21AF699D9371BF557 /* RLMSyncSessionRefreshHandle.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		7EDE437BAB7D0A9B64D28D641AB18831 /* DynamicColor+Deriving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADEF1882DD9F1773B9DD5185DA395D /* DynamicColor+Deriving.swift */; };
@@ -495,7 +495,7 @@
 		B0BD12E4C78689879F5E2395B1809F17 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75502267D3727439DB4F5BEF9A2DBC /* Optional.swift */; };
 		B1461B014C18478A51630984AD78AE02 /* format.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A8354AC5FED1E053C490E29CD7FF8177 /* format.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		B168F6B397C2CC5D94F0524A9A078DB5 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1944D003D1418DEC806E41D4228B98B6 /* Results.swift */; };
-		B1B1716C0E2C92084A867C93A0B4026E /* Timepiece-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E67F490572A4E2AEC5B21BE965DC9AFF /* Timepiece-iOS-dummy.m */; };
+		B1B1716C0E2C92084A867C93A0B4026E /* Timepiece-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 678FA3FB81FCA2E6DAD2471EC312C88B /* Timepiece-iOS-dummy.m */; };
 		B207EBCE90E1E93378439FB551B258B9 /* RLMRealmConfiguration_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = AEBFA06093391AA21E870D4D29D6282A /* RLMRealmConfiguration_Private.h */; };
 		B24B6C159AA38EA458CBBD46ED62F4A3 /* RLMConstants.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 61778739926279C3AB7DD91FAA0E5034 /* RLMConstants.h */; };
 		B2FA1B9196993092435E678F238BD7BB /* RLMObjectStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 8210917CF87C762EB1C4797C3B069AF5 /* RLMObjectStore.h */; };
@@ -518,7 +518,7 @@
 		B771D0F881C5246FD42FF689CEFAC65A /* RLMPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4831DB88FDCB0F74EFC8ED8AFCBAB3 /* RLMPlatform.h */; };
 		B777539E2D7A588B972B5BBF5C5CB279 /* NSError+RLMSync.h in Headers */ = {isa = PBXBuildFile; fileRef = 914971037DF4B4B61C310F5E9327A7FA /* NSError+RLMSync.h */; };
 		B7D6FA53C35016712782B68B9F85608E /* RLMArrayLinkView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 981898B5C89AEDD641BABCA706DBFD19 /* RLMArrayLinkView.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
-		B7E31B0E65D9E9F30425AC295A03C031 /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 264FECEE7CDF275A39D7DB80E5BB9AEF /* XLPagerTabStrip.bundle */; };
+		B7E31B0E65D9E9F30425AC295A03C031 /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5758F623F893845FDBA73B0F8AD5DE2A /* XLPagerTabStrip.bundle */; };
 		B81C71F2CBFCE3F10BB5B7F892A54E94 /* RLMObjectBase_Dynamic.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D5EA0E705BCBB1F95262517DA824DFA /* RLMObjectBase_Dynamic.h */; };
 		B8AC78F1079164FE6A0A8D4E3F93F806 /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3645F0FE3050BF48F21251334F6268C /* IndicatorInfo.swift */; };
 		B8E2AE1D0605C16451DFFD0092ADF861 /* RLMSyncSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = E98FC19F4ABE46DC6759FFAE09A89D43 /* RLMSyncSession.mm */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
@@ -555,7 +555,7 @@
 		C6A25964B53557BED35278072B9B03FC /* alexis_gallagher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 998F8F5BB03570EAC8E6362EAA6BB9BA /* alexis_gallagher.jpg */; };
 		C6AEDBC150C95DC75E5F52F02489F99F /* RLMSyncPermissionOffer.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F5AC1C8DD29017178C867D7B7C0E97 /* RLMSyncPermissionOffer.m */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		C7307EFDD6501F3EEDC7B20B3422B93B /* sync_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DAA3685AD7D62632207BB37F06F2C903 /* sync_manager.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
-		C7638BBBE7C120E5C8C1F4D33BB1DEF7 /* Timepiece-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC6C4DD844A15581F751ACFC2E31BEE /* Timepiece-watchOS-dummy.m */; };
+		C7638BBBE7C120E5C8C1F4D33BB1DEF7 /* Timepiece-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F654E784EDAEE84F4600504277DD314B /* Timepiece-watchOS-dummy.m */; };
 		C8042DF35E156D0761BFAD12EF7FD3BD /* RLMTokenModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 839FBB5D18C6729900E31E15B1C62723 /* RLMTokenModels.m */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		C8ABE650BA995850514366FBCD0DA253 /* RLMCollection.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 8AE4238250364FB288C80CEA595636A4 /* RLMCollection.h */; };
 		C8D214DB566A9C330FD793E2ED4D6B35 /* AcknowList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B5856CD7F0D9095687612155A7E4FD /* AcknowList-dummy.m */; };
@@ -569,7 +569,7 @@
 		CD39B73000C8F7EF96E9AE6AD0406253 /* kaoru_tachibana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB1B7C2BE5E4C3DD3FB46C9EAC6DF074 /* kaoru_tachibana.jpg */; };
 		CD43296C27C7D723605F7280385C47BA /* RLMResults.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = BE724608F4B81A72F10A9A5E0EF5F9AA /* RLMResults.h */; };
 		CD8B640261719BED4F199BB87D981894 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61FF8FCA1C422F52FD29C5387E8A9F69 /* Foundation.framework */; };
-		CDAE2A3C6F279263E6F4744C47B89E16 /* TrySwiftData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B90A276A763689D71EF2A402432368AC /* TrySwiftData.bundle */; };
+		CDAE2A3C6F279263E6F4744C47B89E16 /* TrySwiftData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FE3D5410955811B68DB081E7CCD2EBA1 /* TrySwiftData.bundle */; };
 		CDE2364F344F57A88914AC18436D41C0 /* shared_realm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 33D83A0EDA06688FFD435F22077B9F2A /* shared_realm.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		CEAC630A858643B4BDFEB9E5CCCE866E /* list_notifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B824C5C58191235249FFE58D92E365E /* list_notifier.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.4.2\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		CED9E07FD9C4582E201DAC583428A04F /* RLMPlatform.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = EA4831DB88FDCB0F74EFC8ED8AFCBAB3 /* RLMPlatform.h */; };
@@ -989,6 +989,7 @@
 
 /* Begin PBXFileReference section */
 		0046977A52CA4321CD4000B3D4DFB9AA /* fyusion.png */ = {isa = PBXFileReference; includeInIndex = 1; name = fyusion.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/silver/fyusion.png; sourceTree = "<group>"; };
+		00B77A7A9FD380FFC187A46BED0CC0B1 /* RealmSwift-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RealmSwift-watchOS-prefix.pch"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		00F3F6E970DBA1DC96AE8B33738F9427 /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
 		018F92892FBAD2C45A85EDEE741B148B /* natasha_murashev.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = natasha_murashev.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/natasha_murashev.jpg; sourceTree = "<group>"; };
 		027786B26BB2E980C9472BF3337A84EA /* ResourceBundle-TrySwiftData-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TrySwiftData-Info.plist"; sourceTree = "<group>"; };
@@ -1007,18 +1008,17 @@
 		0AAB8DD8C5634F15BAA4BAAC43738E02 /* maki_sudo.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = maki_sudo.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/maki_sudo.jpg; sourceTree = "<group>"; };
 		0ADE94FD56DAF688BD543771D449DB82 /* LinkingObjects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinkingObjects.swift; path = RealmSwift/LinkingObjects.swift; sourceTree = "<group>"; };
 		0B750CE6FFEB90C809DC2CF7CB6D6C64 /* bs_kanda.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = bs_kanda.jpg; path = TrySwiftData/Assets/Tokyo2017/Venues/bs_kanda.jpg; sourceTree = "<group>"; };
-		0C2398DF90E484BB149DCC8CE0DAEBCA /* RealmSwift-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "RealmSwift-iOS.xcconfig"; sourceTree = "<group>"; };
 		0C9410A9AA12568F7D24BA97A78278C8 /* RLMObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObject.h; path = include/RLMObject.h; sourceTree = "<group>"; };
 		0C9876F3737F0E3F79D69C2A0A5C6C2F /* RLMResults.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMResults.mm; path = Realm/RLMResults.mm; sourceTree = "<group>"; };
 		0CCC366BFDD262470BE9B9ED47B55B92 /* RLMRealmConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealmConfiguration.h; path = include/RLMRealmConfiguration.h; sourceTree = "<group>"; };
 		0CF73A342455CAE1FDD7F04F80587FF9 /* results.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = results.cpp; path = Realm/ObjectStore/src/results.cpp; sourceTree = "<group>"; };
-		0D2872B407DE8567DAC3E9281E829D56 /* Timepiece-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Timepiece-iOS.modulemap"; sourceTree = "<group>"; };
 		0DF60AE295803E4D4A74D7CED1CA48FC /* Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Location.swift; path = TrySwiftData/Models/Location.swift; sourceTree = "<group>"; };
 		0E9877EE437E4C3E2472F779C7FB7974 /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = Sources/DynamicColor.swift; sourceTree = "<group>"; };
 		0F31157D0D69901B0BBF34CD4E46DBE1 /* TrySwiftData-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "TrySwiftData-watchOS.xcconfig"; path = "../TrySwiftData-watchOS/TrySwiftData-watchOS.xcconfig"; sourceTree = "<group>"; };
-		0F3B30A783CED16C75E2A5FB11834260 /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DynamicColor.framework; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		107186670F6A81312CB7D2AE8C2B010E /* TrySwiftData-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "TrySwiftData-iOS.modulemap"; sourceTree = "<group>"; };
+		10955BBD25DDCCC7EBA6472D92396A16 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../RealmSwift-watchOS/Info.plist"; sourceTree = "<group>"; };
 		11FE3A152C999244CF51ACAB3E173E7B /* Pods-try! Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-try! Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		12CCBD9DDDF8BE08D44B37E3A556116D /* Timepiece-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-umbrella.h"; path = "../Timepiece-watchOS/Timepiece-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		12F466B438863C690CFE5A383D758EF6 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
 		13B3B8D1E6DBFA5555CD1F4A1415A0A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		13E158328E0415F4C57E25561A7461F6 /* RLMSyncErrorResponseModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RLMSyncErrorResponseModel.m; path = Realm/RLMSyncErrorResponseModel.m; sourceTree = "<group>"; };
@@ -1030,6 +1030,7 @@
 		16D6A1D9FDD937B7583B30D9C85276BE /* RLMNetworkClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RLMNetworkClient.m; path = Realm/RLMNetworkClient.m; sourceTree = "<group>"; };
 		16EE8F863EB6B1E7328C02CBA774D68A /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
 		174B64956BE2732D552E7D627C2FC10A /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/Utils.swift; sourceTree = "<group>"; };
+		178DB6B5514094148330DF1110058C13 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RealmSwift.framework; path = "RealmSwift-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180A32988852A66EA59382E24E29B910 /* Realm-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Realm-iOS.modulemap"; sourceTree = "<group>"; };
 		18B53462CDF7903B9968D37DAC5F3A6B /* meetup.png */ = {isa = PBXFileReference; includeInIndex = 1; name = meetup.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/partner/meetup.png; sourceTree = "<group>"; };
 		1944D003D1418DEC806E41D4228B98B6 /* Results.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Results.swift; path = RealmSwift/Results.swift; sourceTree = "<group>"; };
@@ -1039,12 +1040,13 @@
 		1C3248D51C97126FFEDB84F8DD24D497 /* mo_kudeki.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = mo_kudeki.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/mo_kudeki.jpg; sourceTree = "<group>"; };
 		1CA414EE02800763A35FD4886B653E60 /* prtimes.png */ = {isa = PBXFileReference; includeInIndex = 1; name = prtimes.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/silver/prtimes.png; sourceTree = "<group>"; };
 		1D8059D126DB58B662D449A07D43B143 /* 2-3works.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "2-3works.png"; path = "TrySwiftData/Assets/Tokyo2017/Sponsors/partner/2-3works.png"; sourceTree = "<group>"; };
+		1E218DB2E6207AE15040161239C01ADB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Timepiece-watchOS/Info.plist"; sourceTree = "<group>"; };
 		1E69E8CCC53411EF999EBD34D6C2EFBB /* String+TrySwiftData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+TrySwiftData.swift"; path = "TrySwiftData/Extensions/String+TrySwiftData.swift"; sourceTree = "<group>"; };
-		2204A9AB5F2213E4D0BF88763D862ADB /* RealmSwift-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "RealmSwift-iOS.modulemap"; sourceTree = "<group>"; };
+		1EFBD0BD29C115238470663B48D675AE /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Realm.framework; path = "Realm-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		209E8364A776B6BD962750D718A34D6A /* TrySwiftData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TrySwiftData.framework; path = "TrySwiftData-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		221227EEC1881E7475EB8C68CA8CF390 /* RLMRealmUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMRealmUtil.mm; path = Realm/RLMRealmUtil.mm; sourceTree = "<group>"; };
 		22174E9D9C45A2CFB1D443C99515A2EB /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
 		2265C4EA69B1176D077102511A42E527 /* Pods-trySwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-trySwift-acknowledgements.plist"; sourceTree = "<group>"; };
-		231F8430F3B6B73486234EDCB4E4C53F /* TrySwiftData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TrySwiftData.framework; path = "TrySwiftData-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2338081D8A56CF02932114C30BEEBA0E /* RLMSyncPermissionOffer_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncPermissionOffer_Private.h; path = include/RLMSyncPermissionOffer_Private.h; sourceTree = "<group>"; };
 		24185782EB14323EB1893DBCDAE75547 /* RLMSyncUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncUtil.mm; path = Realm/RLMSyncUtil.mm; sourceTree = "<group>"; };
 		2483A7387547A66E4C7067BE621E7DEB /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = RealmSwift/Error.swift; sourceTree = "<group>"; };
@@ -1055,7 +1057,6 @@
 		25E2AE4250EDB3665B7A8157F22707C2 /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = RealmSwift/Schema.swift; sourceTree = "<group>"; };
 		2625A4AC10F40F2D3133110B9FEE2291 /* kateryna_gridina.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = kateryna_gridina.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/kateryna_gridina.jpg; sourceTree = "<group>"; };
 		262C6D235E1EEEEE925A3044184D53A5 /* matt_gillingham.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = matt_gillingham.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/matt_gillingham.jpg; sourceTree = "<group>"; };
-		264FECEE7CDF275A39D7DB80E5BB9AEF /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XLPagerTabStrip.bundle; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		2707453EC0CCC36AFDD58068E2F8DFBF /* DynamicColor+XYZ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+XYZ.swift"; path = "Sources/DynamicColor+XYZ.swift"; sourceTree = "<group>"; };
 		28253DF9CD9AE5C35DF23FC30C22D75E /* soroush_khanlou.png */ = {isa = PBXFileReference; includeInIndex = 1; name = soroush_khanlou.png; path = TrySwiftData/Assets/Tokyo2017/Speakers/soroush_khanlou.png; sourceTree = "<group>"; };
 		2863A5A5ECA4543BA1DD4F9F98DD191A /* RLMSyncPermissionOfferResponse_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncPermissionOfferResponse_Private.h; path = include/RLMSyncPermissionOfferResponse_Private.h; sourceTree = "<group>"; };
@@ -1065,19 +1066,17 @@
 		29E17C475F7766A380CE8BFD671489A9 /* furyu.png */ = {isa = PBXFileReference; includeInIndex = 1; name = furyu.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/silver/furyu.png; sourceTree = "<group>"; };
 		2A5A09DB7F08E9044913398F50E62D23 /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
 		2A6040C691E3F90D604E818AB1F49A53 /* Acknow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Acknow.swift; path = Source/Acknow.swift; sourceTree = "<group>"; };
-		2AAC380884A08F33CCE1889FF39F274E /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Realm.framework; path = "Realm-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE42B2C2B130E3834964C0794DD50ED /* Migration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Migration.swift; path = RealmSwift/Migration.swift; sourceTree = "<group>"; };
-		2C921077526FDE5355DEC90257881154 /* Timepiece-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-prefix.pch"; path = "../Timepiece-watchOS/Timepiece-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		2D52A0FAB615C79F91387C395A1D1F3A /* jon_reid.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = jon_reid.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/jon_reid.jpg; sourceTree = "<group>"; };
 		2E39CB1023B0CF5DE95C44C9DC7FFDF7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EF55BF8D95555B6BC5020893E74989A /* RLMArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMArray.h; path = include/RLMArray.h; sourceTree = "<group>"; };
+		3003314AFD98111B072488EEA7F94458 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RealmSwift.framework; path = "RealmSwift-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		311F0FA4D4C0942BC0E97B71775DE0A9 /* ubiregi.png */ = {isa = PBXFileReference; includeInIndex = 1; name = ubiregi.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/silver/ubiregi.png; sourceTree = "<group>"; };
-		32A1C46FC5DD8F6D29A1EAB2841817DF /* RealmSwift-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "RealmSwift-watchOS.xcconfig"; path = "../RealmSwift-watchOS/RealmSwift-watchOS.xcconfig"; sourceTree = "<group>"; };
+		32E5E29C58857460C801628E86D98A78 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Timepiece.framework; path = "Timepiece-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		338AFE32F02FD8E265A73F1E67799263 /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		33D83A0EDA06688FFD435F22077B9F2A /* shared_realm.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = shared_realm.cpp; path = Realm/ObjectStore/src/shared_realm.cpp; sourceTree = "<group>"; };
 		3412010FE4F816F7A2C9ACEF06E65EAD /* nikita_lutsenko.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = nikita_lutsenko.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/nikita_lutsenko.jpg; sourceTree = "<group>"; };
 		3451FF485140234FC637F7E7717851BD /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/RequestModifier.swift; sourceTree = "<group>"; };
-		3467D456A1B8E8EAA79DF30F2C9FBF1E /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RealmSwift.framework; path = "RealmSwift-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F773CB9D7B79165C77186480B813FA /* sync_session.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = sync_session.cpp; path = Realm/ObjectStore/src/sync/sync_session.cpp; sourceTree = "<group>"; };
 		3669160BF6C4E3C032AD184B7D2B8375 /* RLMRealmConfiguration+Sync.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = "RLMRealmConfiguration+Sync.mm"; path = "Realm/RLMRealmConfiguration+Sync.mm"; sourceTree = "<group>"; };
 		374CC6F3CA242FE166F25FCE171AB78F /* RLMResults_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMResults_Private.h; path = include/RLMResults_Private.h; sourceTree = "<group>"; };
@@ -1085,15 +1084,14 @@
 		37C563D546E390705419F495B517DC86 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		37FAAD18E082B09E21979E71BCD3A279 /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
 		383AFECEB002980D1BA37BAA9ED3D3EC /* RLMSchema.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSchema.h; path = include/RLMSchema.h; sourceTree = "<group>"; };
-		384ED5F9CD6C16D68CD6C96D624A17C8 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		394761F2B1C80DAB987CF05C3DE94CFB /* AcknowList.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AcknowList.bundle; path = Resources/AcknowList.bundle; sourceTree = "<group>"; };
+		39AAD30DF1B3726B49D8A14718A75831 /* RealmSwift-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-iOS-prefix.pch"; sourceTree = "<group>"; };
 		39D6FA792D5914B85DAF3DA850B9CCEB /* RLMSchema_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSchema_Private.h; path = include/RLMSchema_Private.h; sourceTree = "<group>"; };
 		3A93B396B8A29F93CC3BC0B0CDE9D980 /* RLMArray.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMArray.mm; path = Realm/RLMArray.mm; sourceTree = "<group>"; };
 		3B6A6B1DD8B0FF5C19456D23AAE5D782 /* felix_krause.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = felix_krause.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/felix_krause.jpg; sourceTree = "<group>"; };
 		3B9F67070CD8950444FB737280D914F3 /* marius_rackwitz.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = marius_rackwitz.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/marius_rackwitz.jpg; sourceTree = "<group>"; };
 		3D5D71308DB8B3E3239482098AF26CBF /* cookpad.png */ = {isa = PBXFileReference; includeInIndex = 1; name = cookpad.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/gold/cookpad.png; sourceTree = "<group>"; };
 		3D5EA0E705BCBB1F95262517DA824DFA /* RLMObjectBase_Dynamic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObjectBase_Dynamic.h; path = include/RLMObjectBase_Dynamic.h; sourceTree = "<group>"; };
-		3DE7873C870946D50C477AC1509871A8 /* Pods_try__Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_try__Extension.framework; path = "Pods-try! Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E4F5692BAF04E5275D1E12B719B971E /* sync_user.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = sync_user.cpp; path = Realm/ObjectStore/src/sync/sync_user.cpp; sourceTree = "<group>"; };
 		3E6431A3577E02A1272ED546B3A9C2BE /* kazuaki_matsuo.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = kazuaki_matsuo.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/kazuaki_matsuo.jpg; sourceTree = "<group>"; };
 		403B6292D5CCE91B78188FB2B12B11F9 /* RLMUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMUtil.mm; path = Realm/RLMUtil.mm; sourceTree = "<group>"; };
@@ -1104,7 +1102,7 @@
 		42E54527AE4B3BA12E81E9F37415CAEC /* Pods-try! Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try! Extension.release.xcconfig"; sourceTree = "<group>"; };
 		442C51A8140BC1E35492E03CAA3BDCD2 /* Venue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Venue.swift; path = TrySwiftData/Models/Venue.swift; sourceTree = "<group>"; };
 		442C5ECDF91CF1EE8E311C1B545F57F8 /* Realm-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Realm-watchOS-dummy.m"; path = "../Realm-watchOS/Realm-watchOS-dummy.m"; sourceTree = "<group>"; };
-		44C4BB15DEEEC80B13F61C240E8B6553 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../RealmSwift-watchOS/Info.plist"; sourceTree = "<group>"; };
+		4558A4503C8DF627DE00D76CDB2289FD /* TrySwiftData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TrySwiftData.framework; path = "TrySwiftData-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E1D0339E2D70258236F0C0B0805D0B /* balto.png */ = {isa = PBXFileReference; includeInIndex = 1; name = balto.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/gold/balto.png; sourceTree = "<group>"; };
 		46A3FA9DD6D048F29422F5498F29AD75 /* RLMRealm.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMRealm.mm; path = Realm/RLMRealm.mm; sourceTree = "<group>"; };
 		472DBBFEF9B8382FDD0C413A7ED9354E /* RLMSyncConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncConfiguration.h; path = include/RLMSyncConfiguration.h; sourceTree = "<group>"; };
@@ -1112,46 +1110,44 @@
 		48783CFB3D52C1AAA6BA686463521CA7 /* hatena.png */ = {isa = PBXFileReference; includeInIndex = 1; name = hatena.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/silver/hatena.png; sourceTree = "<group>"; };
 		48810CC63A87AF5C6C7E79294CF8DDEE /* agnes_vasarhelyi.png */ = {isa = PBXFileReference; includeInIndex = 1; name = agnes_vasarhelyi.png; path = TrySwiftData/Assets/Tokyo2017/Speakers/agnes_vasarhelyi.png; sourceTree = "<group>"; };
 		4914194FC617D2D9CD85A46E781A4DE5 /* RLMSyncPermissionChange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncPermissionChange.h; path = include/RLMSyncPermissionChange.h; sourceTree = "<group>"; };
-		49917EC92A674BBAF370994D7BB69F55 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Timepiece.framework; path = "Timepiece-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A03C460028405BAD1E805669DBA53DF /* Organizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Organizer.swift; path = TrySwiftData/Models/Organizer.swift; sourceTree = "<group>"; };
 		4AE65F274F4A6253A6E4A301D07F70FA /* RLMRealm_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealm_Private.h; path = include/RLMRealm_Private.h; sourceTree = "<group>"; };
 		4B82456DAB430F01F60B874999520136 /* katsumi_kishikawa.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = katsumi_kishikawa.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/katsumi_kishikawa.jpg; sourceTree = "<group>"; };
 		4C63EFDD8EDCB831300C9BC20005E110 /* Int+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Timepiece.swift"; path = "Sources/Int+Timepiece.swift"; sourceTree = "<group>"; };
 		4CE61D109DFEE9006C9D785146048389 /* String+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Timepiece.swift"; path = "Sources/String+Timepiece.swift"; sourceTree = "<group>"; };
-		4D2B57AF957ECCED36B6000CDFD7CF1A /* RealmSwift-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RealmSwift-iOS-dummy.m"; sourceTree = "<group>"; };
 		4DFA57BD645DDC5BE5A78E6395A97993 /* DynamicColor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DynamicColor-dummy.m"; sourceTree = "<group>"; };
 		4E740C3BE429AAB51367411DB068695A /* Pods-try! Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-try! Extension-dummy.m"; sourceTree = "<group>"; };
-		4FB1A2F80743E1D123363BDB3498A508 /* Timepiece-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Timepiece-iOS.xcconfig"; sourceTree = "<group>"; };
 		50A0C730A041BB7431E3FD8B0A0A5EF5 /* Conference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Conference.swift; path = TrySwiftData/Models/Conference.swift; sourceTree = "<group>"; };
 		50ED0379BC1F715E336ED52439647FE5 /* AcknowList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AcknowList.modulemap; sourceTree = "<group>"; };
 		51A00790E77274EA72A541987D728B96 /* Bundle+TrySwiftData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+TrySwiftData.swift"; path = "TrySwiftData/Extensions/Bundle+TrySwiftData.swift"; sourceTree = "<group>"; };
 		5220091B7FE75505513A1488922FCBDF /* RLMSchema.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSchema.mm; path = Realm/RLMSchema.mm; sourceTree = "<group>"; };
+		524EAEEBB04C655BE4A8C01F9B986029 /* RealmSwift-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "RealmSwift-iOS.modulemap"; sourceTree = "<group>"; };
 		5256A88B05945C1D80F227D99D33C082 /* kytrade.png */ = {isa = PBXFileReference; includeInIndex = 1; name = kytrade.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/silver/kytrade.png; sourceTree = "<group>"; };
 		52682B24960B456A94AD5F877BAF7F05 /* TrySwiftData-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "TrySwiftData-watchOS.modulemap"; path = "../TrySwiftData-watchOS/TrySwiftData-watchOS.modulemap"; sourceTree = "<group>"; };
 		535EF2916F0B9F169F146D8E7A2EE269 /* Pods-trySwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-trySwift-frameworks.sh"; sourceTree = "<group>"; };
 		5370C4B4D60BC5576C96BCC9911A958E /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
 		53F7FB457D15F3202AE9DAE1E98E2EBC /* RLMSyncPermissionChange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RLMSyncPermissionChange.m; path = Realm/RLMSyncPermissionChange.m; sourceTree = "<group>"; };
-		5637FB038998F7F4DAD55804AB99D498 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5758F623F893845FDBA73B0F8AD5DE2A /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XLPagerTabStrip.bundle; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		597DC552AFB6FD099E5C81ED6D90C4D4 /* yusuke_ito.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = yusuke_ito.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/yusuke_ito.jpg; sourceTree = "<group>"; };
 		59DAA053758007F157EC9D9DFED615FA /* RLMThreadSafeReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMThreadSafeReference.h; path = include/RLMThreadSafeReference.h; sourceTree = "<group>"; };
 		5C003C95D2833580E39158EF31E18C45 /* RLMObject_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObject_Private.h; path = include/RLMObject_Private.h; sourceTree = "<group>"; };
 		5C150FF2A97C7F5FAB09CD9D33D5824C /* caraquri.png */ = {isa = PBXFileReference; includeInIndex = 1; name = caraquri.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/silver/caraquri.png; sourceTree = "<group>"; };
 		5C193486BE9FA1631820DA7D236A5303 /* AcknowParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowParser.swift; path = Source/AcknowParser.swift; sourceTree = "<group>"; };
-		5CE73EB872C16AF3E2D11D40F7A7A6DE /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RealmSwift.framework; path = "RealmSwift-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D270B9B6699B8B9920F5ABF3D3EC8E2 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = TrySwiftData/Models/Session.swift; sourceTree = "<group>"; };
 		5D8A11C294915F418F988C33BBBB15A4 /* Realm-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Realm-iOS-dummy.m"; sourceTree = "<group>"; };
 		5DEE103F743C2B7ED9D53AB89D47F3FA /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		5E0642D153A77CB0CFCDCFD13684E5B5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F7F722DF935784CA38E8B9F8C2D07E4 /* cyberagent.png */ = {isa = PBXFileReference; includeInIndex = 1; name = cyberagent.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/platinum/cyberagent.png; sourceTree = "<group>"; };
 		5FA0C03FFACB4080E3A16A0CD4556D2D /* moneyforward.png */ = {isa = PBXFileReference; includeInIndex = 1; name = moneyforward.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/gold/moneyforward.png; sourceTree = "<group>"; };
 		5FC3ECB5956A3244C1922317EA9D653B /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
 		5FCA44175A5AD4DB34F8836E90F0D98D /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
+		6086A2626A5A573D2368FC7E35E51455 /* RealmSwift-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RealmSwift-iOS-dummy.m"; sourceTree = "<group>"; };
 		6147B7C1262FC86B0988138E71B8F511 /* SessionBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionBlock.swift; path = TrySwiftData/Models/SessionBlock.swift; sourceTree = "<group>"; };
 		6152DB19C0A2F66229AC3AFAB98388BA /* TrySwiftData-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TrySwiftData-watchOS-dummy.m"; path = "../TrySwiftData-watchOS/TrySwiftData-watchOS-dummy.m"; sourceTree = "<group>"; };
 		61778739926279C3AB7DD91FAA0E5034 /* RLMConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMConstants.h; path = include/RLMConstants.h; sourceTree = "<group>"; };
 		61FF8FCA1C422F52FD29C5387E8A9F69 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		622E00AD992EA3469971EDC97ACC7101 /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
 		624FDE36C95356979A9C7A1CE78B185D /* Sync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sync.swift; path = RealmSwift/Sync.swift; sourceTree = "<group>"; };
-		626AF3FCBA61141BDB7340DEF10B697B /* Timepiece-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Timepiece-watchOS.xcconfig"; path = "../Timepiece-watchOS/Timepiece-watchOS.xcconfig"; sourceTree = "<group>"; };
 		630804809BE5F18DF9529B891EA1D3C1 /* RLMThreadSafeReference.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMThreadSafeReference.mm; path = Realm/RLMThreadSafeReference.mm; sourceTree = "<group>"; };
 		632F42C298811A76567F1BF6B37BF9E6 /* RLMObject.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMObject.mm; path = Realm/RLMObject.mm; sourceTree = "<group>"; };
 		64614F2B959EE76A482BBDC89D221848 /* Date+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Timepiece.swift"; path = "TrySwiftData/Extensions/Date+Timepiece.swift"; sourceTree = "<group>"; };
@@ -1159,13 +1155,14 @@
 		64BC88DF8167C641CC516FE93CEE0F58 /* RLMArray_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMArray_Private.h; path = include/RLMArray_Private.h; sourceTree = "<group>"; };
 		6687D907788F2FE4292D33AFE5AD8A06 /* RLMListBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMListBase.h; path = include/RLMListBase.h; sourceTree = "<group>"; };
 		678B4C5226614916377533D5D6666E79 /* Realm-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Realm-iOS-prefix.pch"; sourceTree = "<group>"; };
+		678FA3FB81FCA2E6DAD2471EC312C88B /* Timepiece-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Timepiece-iOS-dummy.m"; sourceTree = "<group>"; };
 		67F55A6C0AEA384714B2497FA504597B /* thread_safe_reference.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = thread_safe_reference.cpp; path = Realm/ObjectStore/src/thread_safe_reference.cpp; sourceTree = "<group>"; };
+		686FF5D14314B67B4FED836C6952C556 /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AcknowList.framework; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		687EC40BB1A05D2F27186A1698BB4BDE /* Pods-trySwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-trySwift.modulemap"; sourceTree = "<group>"; };
 		6A14A66FEC082FA166070E031BFB7CE8 /* recruit_marketing_partners.png */ = {isa = PBXFileReference; includeInIndex = 1; name = recruit_marketing_partners.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/platinum/recruit_marketing_partners.png; sourceTree = "<group>"; };
 		6BCD216804526335F15D73ECEE2E149B /* Realm-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Realm-watchOS.xcconfig"; path = "../Realm-watchOS/Realm-watchOS.xcconfig"; sourceTree = "<group>"; };
 		6C56CAEBEA226E023EBCE55B46038A3C /* AcknowLocalization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowLocalization.swift; path = Source/AcknowLocalization.swift; sourceTree = "<group>"; };
 		6D70A0B4BF686902C56FFACA3C89CA02 /* RLMRealm_Dynamic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealm_Dynamic.h; path = include/RLMRealm_Dynamic.h; sourceTree = "<group>"; };
-		6E27AD9BBAD68D15B687F5E68CE95C49 /* RealmSwift-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-iOS-umbrella.h"; sourceTree = "<group>"; };
 		6E7E1BE27DE5E44C6FE5A88F0F9E0281 /* RLMObservation.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMObservation.mm; path = Realm/RLMObservation.mm; sourceTree = "<group>"; };
 		6F0912DC56AE19E21AF699D9371BF557 /* RLMSyncSessionRefreshHandle.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncSessionRefreshHandle.mm; path = Realm/RLMSyncSessionRefreshHandle.mm; sourceTree = "<group>"; };
 		6FECD60E7736440C5E6C7C1BCE0F9080 /* gmopepabo.png */ = {isa = PBXFileReference; includeInIndex = 1; name = gmopepabo.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/silver/gmopepabo.png; sourceTree = "<group>"; };
@@ -1177,14 +1174,11 @@
 		73AB1414F97C221C0C40D6972E97F91C /* RLMUpdateChecker.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMUpdateChecker.mm; path = Realm/RLMUpdateChecker.mm; sourceTree = "<group>"; };
 		740E4ED411F1A4A5FE587F9EDBAFD7D3 /* object.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = object.cpp; path = Realm/ObjectStore/src/object.cpp; sourceTree = "<group>"; };
 		7456568E0B06C10474C04B7DA0B7CE8D /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
-		74F51646633A4485E2354180F171F2CC /* RealmSwift-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-iOS-prefix.pch"; sourceTree = "<group>"; };
-		754C047A216236488ED3F3EC70EC5F7A /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Timepiece.framework; path = "Timepiece-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B52AE7CD723045ED4721D231CBACBD /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
 		75D972C6335677E68929BFC60ABF3E9E /* RLMObjectSchema_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObjectSchema_Private.h; path = include/RLMObjectSchema_Private.h; sourceTree = "<group>"; };
 		76A324FA6561917E67F63AAEC57856EC /* index_set.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = index_set.cpp; path = Realm/ObjectStore/src/index_set.cpp; sourceTree = "<group>"; };
 		77AC149553DC2273C921CF45E221A713 /* ray_fix.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = ray_fix.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/ray_fix.jpg; sourceTree = "<group>"; };
 		7A7A0E5388270907291D87E7066D7260 /* RLMAccessor.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMAccessor.mm; path = Realm/RLMAccessor.mm; sourceTree = "<group>"; };
-		7A9DF1D24D1E02CBAE16187A18E44D4C /* TrySwiftData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TrySwiftData.framework; path = "TrySwiftData-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B824C5C58191235249FFE58D92E365E /* list_notifier.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = list_notifier.cpp; path = Realm/ObjectStore/src/impl/list_notifier.cpp; sourceTree = "<group>"; };
 		7BDECDE834268757F7A113398FF69BB1 /* RealmCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RealmCollection.swift; path = RealmSwift/RealmCollection.swift; sourceTree = "<group>"; };
 		7D55204DA1500CFE2B2199AE74CAC969 /* Pods-trySwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-trySwift-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -1197,39 +1191,40 @@
 		81A1B16480A6BE273E8234E13261B73B /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
 		8210917CF87C762EB1C4797C3B069AF5 /* RLMObjectStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObjectStore.h; path = include/RLMObjectStore.h; sourceTree = "<group>"; };
 		82769CCC57EFDFA7CB468FDD9BD50AAA /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
-		837275D0D612C22E061AEBC4EBA447A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Timepiece-watchOS/Info.plist"; sourceTree = "<group>"; };
 		839FBB5D18C6729900E31E15B1C62723 /* RLMTokenModels.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RLMTokenModels.m; path = Realm/RLMTokenModels.m; sourceTree = "<group>"; };
 		841031570A79EE699617812DDA005C23 /* RLMClassInfo.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMClassInfo.mm; path = Realm/RLMClassInfo.mm; sourceTree = "<group>"; };
+		84170F7B8C351E79902A380C4F9681D1 /* Timepiece-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Timepiece-iOS.xcconfig"; sourceTree = "<group>"; };
 		84C61B3EABBC9AD68485CBEC318D844F /* AcknowListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowListViewController.swift; path = Source/AcknowListViewController.swift; sourceTree = "<group>"; };
 		86095465B8EC769EFA7528D13C51A1CC /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
 		8832C5D89DB70A66FA35C29862E79A65 /* Speaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Speaker.swift; path = TrySwiftData/Models/Speaker.swift; sourceTree = "<group>"; };
 		8844241D0054844C1DA8375CC5412A7A /* object_schema.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = object_schema.cpp; path = Realm/ObjectStore/src/object_schema.cpp; sourceTree = "<group>"; };
 		885623D080874A1D4D46E67986B45452 /* RLMAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMAccessor.h; path = include/RLMAccessor.h; sourceTree = "<group>"; };
 		89856BEE8342D88A6092C8BA395CE0C2 /* AcknowList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-umbrella.h"; sourceTree = "<group>"; };
+		8A6BF9985CEAE71445C7884FE74A64E6 /* Timepiece-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Timepiece-iOS.modulemap"; sourceTree = "<group>"; };
 		8AE4238250364FB288C80CEA595636A4 /* RLMCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMCollection.h; path = include/RLMCollection.h; sourceTree = "<group>"; };
 		8BD1CD6349F5B5D895824805C3F738BA /* laiso.png */ = {isa = PBXFileReference; includeInIndex = 1; name = laiso.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/gold/laiso.png; sourceTree = "<group>"; };
-		8C173480D583697193912963C46D2045 /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AcknowList.framework; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CBF47A0EDA876CC7D747BA2F57DEA45 /* RLMQueryUtil.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMQueryUtil.mm; path = Realm/RLMQueryUtil.mm; sourceTree = "<group>"; };
 		8D76E445236277A3389CA509EA077A72 /* XLPagerTabStrip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = XLPagerTabStrip.modulemap; sourceTree = "<group>"; };
 		8D8022CB3C13F4A39F6EF9F0D4AF2742 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		8D9926F2940C33E80166F099D5945058 /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		8DADE04B1D5FD8CD47A4A5370C89800E /* RLMSyncUtil_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncUtil_Private.h; path = include/RLMSyncUtil_Private.h; sourceTree = "<group>"; };
-		8FC6C4DD844A15581F751ACFC2E31BEE /* Timepiece-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Timepiece-watchOS-dummy.m"; path = "../Timepiece-watchOS/Timepiece-watchOS-dummy.m"; sourceTree = "<group>"; };
+		8F78E686E9676A9D2C4442F6FE3610A8 /* RealmSwift-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "RealmSwift-watchOS.modulemap"; path = "../RealmSwift-watchOS/RealmSwift-watchOS.modulemap"; sourceTree = "<group>"; };
 		8FC88183935AB1AAC9E49EECF78AB7C9 /* RLMMigration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMMigration_Private.h; path = include/RLMMigration_Private.h; sourceTree = "<group>"; };
 		9020ED4438C4ABC4F1A4F226E4DBAB43 /* orta_therox.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = orta_therox.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/orta_therox.jpg; sourceTree = "<group>"; };
 		908A03E6639A0F9FB5BDBB2C1657C3BE /* shingo_sato.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = shingo_sato.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/shingo_sato.jpg; sourceTree = "<group>"; };
 		909FAF2F4849FA00CB777C7601984FF5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		914971037DF4B4B61C310F5E9327A7FA /* NSError+RLMSync.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+RLMSync.h"; path = "include/NSError+RLMSync.h"; sourceTree = "<group>"; };
 		9184E06FA6AF2F0AC84996E438F2BEF3 /* DynamicColor+Lab.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Lab.swift"; path = "Sources/DynamicColor+Lab.swift"; sourceTree = "<group>"; };
-		91FD7C0964D2478B70350F71D043EB28 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Realm.framework; path = "Realm-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		921CD3EA6DC59DB2E19706EE18F98237 /* BuddyBuildSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BuddyBuildSDK.h; path = BuddyBuildSDK.framework/Headers/BuddyBuildSDK.h; sourceTree = "<group>"; };
 		93A05653624A586C2F9A1B02BF9CC134 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		940062B9853AD1BC1C84C47914F93FE2 /* RealmSwift-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "RealmSwift-watchOS.xcconfig"; path = "../RealmSwift-watchOS/RealmSwift-watchOS.xcconfig"; sourceTree = "<group>"; };
 		95765B2EE3E00BCE83BC5DC06A0F06A0 /* DynamicColor+HSB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+HSB.swift"; path = "Sources/DynamicColor+HSB.swift"; sourceTree = "<group>"; };
 		963719C4751FC7E0BBC1F75A071C2455 /* Pods-trySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-trySwift-dummy.m"; sourceTree = "<group>"; };
 		97325B066EA85B07E4E34D9E6AB197E5 /* artis_birzins.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = artis_birzins.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/artis_birzins.jpg; sourceTree = "<group>"; };
 		981898B5C89AEDD641BABCA706DBFD19 /* RLMArrayLinkView.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMArrayLinkView.mm; path = Realm/RLMArrayLinkView.mm; sourceTree = "<group>"; };
 		998F8F5BB03570EAC8E6362EAA6BB9BA /* alexis_gallagher.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = alexis_gallagher.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/alexis_gallagher.jpg; sourceTree = "<group>"; };
+		9A044D508C237F1D8D253E6EDF2F0C2C /* Timepiece-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-prefix.pch"; sourceTree = "<group>"; };
 		9A8CEB77653793816F6F14C3118317C0 /* RLMObjectSchema.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMObjectSchema.mm; path = Realm/RLMObjectSchema.mm; sourceTree = "<group>"; };
 		9ADF701E8A0DAFDA9655EA0456CB3497 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
 		9B14919D507551BA477C05B633E8E692 /* RLMObjectBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObjectBase.h; path = include/RLMObjectBase.h; sourceTree = "<group>"; };
@@ -1238,7 +1233,6 @@
 		9C120B0C7E94076E9E93E5F6A747CC43 /* appcreatordojo.png */ = {isa = PBXFileReference; includeInIndex = 1; name = appcreatordojo.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/partner/appcreatordojo.png; sourceTree = "<group>"; };
 		9D04050E6396000A9444E66180562255 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D9F0635AAA97AC2834513B6B109E0EE /* ninedrafts.png */ = {isa = PBXFileReference; includeInIndex = 1; name = ninedrafts.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/partner/ninedrafts.png; sourceTree = "<group>"; };
-		9DF2AAC12A477E1F9DC05A1ED8B81359 /* Timepiece-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "Timepiece-watchOS.modulemap"; path = "../Timepiece-watchOS/Timepiece-watchOS.modulemap"; sourceTree = "<group>"; };
 		9F021288EBEB487004411580972ABF9E /* SwiftVersion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftVersion.swift; path = RealmSwift/SwiftVersion.swift; sourceTree = "<group>"; };
 		9F03852C2EC0E84B95ADE4E90E7ECBFF /* RLMSwiftSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RLMSwiftSupport.m; path = Realm/RLMSwiftSupport.m; sourceTree = "<group>"; };
 		9F5377FD5674DF7F2F522F95473F5640 /* Realm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Realm.h; path = include/Realm.h; sourceTree = "<group>"; };
@@ -1247,11 +1241,9 @@
 		A0A7BED5A6968D4749CB04DF4890FD1E /* TrySwiftData-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TrySwiftData-watchOS-prefix.pch"; path = "../TrySwiftData-watchOS/TrySwiftData-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		A0D7A3FBBAC85A89562520596D9CCC9D /* ohako.png */ = {isa = PBXFileReference; includeInIndex = 1; name = ohako.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/silver/ohako.png; sourceTree = "<group>"; };
 		A18B21D58584CCB3680C28619B8E0E68 /* Pods-try! Extension-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-try! Extension-resources.sh"; sourceTree = "<group>"; };
-		A1F57E069A401C3C82359F23E5B18237 /* RealmSwift-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RealmSwift-watchOS-dummy.m"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-dummy.m"; sourceTree = "<group>"; };
 		A2864A1BD4C45E4920F8C1AE0D13B7BE /* object_store.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = object_store.cpp; path = Realm/ObjectStore/src/object_store.cpp; sourceTree = "<group>"; };
 		A28FAC8ABAF9E542D89B3E59AB71048C /* Pods-try! Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-try! Extension-frameworks.sh"; sourceTree = "<group>"; };
 		A31D93A0DB780B99137B39C9DB39ED13 /* TrySwiftData-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TrySwiftData-iOS.xcconfig"; sourceTree = "<group>"; };
-		A34331FBA6C40656A9CB458D514C1A72 /* RealmSwift-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RealmSwift-watchOS-prefix.pch"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		A3BF8681027E6F3174158A2784D5E12D /* RLMSyncPermissionOfferResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncPermissionOfferResponse.h; path = include/RLMSyncPermissionOfferResponse.h; sourceTree = "<group>"; };
 		A5542BD546E6E6EB5D0D99A280EEE2A6 /* RLMOptionalBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMOptionalBase.h; path = include/RLMOptionalBase.h; sourceTree = "<group>"; };
 		A5670FCA099A5FFCF3427D913A5EE18D /* RLMSyncPermissionChange_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncPermissionChange_Private.h; path = include/RLMSyncPermissionChange_Private.h; sourceTree = "<group>"; };
@@ -1263,17 +1255,19 @@
 		A9A41F6BF61CF2A7A620F750CF616F6B /* TrySwiftData-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TrySwiftData-iOS-umbrella.h"; sourceTree = "<group>"; };
 		AB09B8854647FDE3E4AF2F4F2C5867AA /* collection_notifications.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = collection_notifications.cpp; path = Realm/ObjectStore/src/collection_notifications.cpp; sourceTree = "<group>"; };
 		AB4A1140162B31DA7EFD056D85B673AB /* Aliases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Aliases.swift; path = RealmSwift/Aliases.swift; sourceTree = "<group>"; };
+		AB597DBDD886C48C681D8290B3811C32 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEE9F413EE6B8FFAC4D9AB459A73A1E /* RLMSyncConfiguration.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncConfiguration.mm; path = Realm/RLMSyncConfiguration.mm; sourceTree = "<group>"; };
 		AC75502267D3727439DB4F5BEF9A2DBC /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = RealmSwift/Optional.swift; sourceTree = "<group>"; };
 		ADA5ABEB335A00ED1A12725CF4E85242 /* XLPagerTabStrip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-umbrella.h"; sourceTree = "<group>"; };
 		ADAF055062D2158E195F8A199A0D94F8 /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
+		AE2F6C5BFF0CC793C7893C4BAA920F9A /* RealmSwift-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RealmSwift-iOS-umbrella.h"; sourceTree = "<group>"; };
 		AE934B2DAA759328E7516998004BC323 /* schema.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = schema.cpp; path = Realm/ObjectStore/src/schema.cpp; sourceTree = "<group>"; };
 		AEBFA06093391AA21E870D4D29D6282A /* RLMRealmConfiguration_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMRealmConfiguration_Private.h; path = include/RLMRealmConfiguration_Private.h; sourceTree = "<group>"; };
 		AF0AEF559E735E6EC2796CE7DEA02B23 /* DateComponents+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateComponents+Timepiece.swift"; path = "Sources/DateComponents+Timepiece.swift"; sourceTree = "<group>"; };
 		AFCFB2E6428CB6647FE38F721376392A /* DynamicColor+RGBA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+RGBA.swift"; path = "Sources/DynamicColor+RGBA.swift"; sourceTree = "<group>"; };
 		AFD2563637FDD69816828482FD9627C1 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
-		B289D9220081BA97815995C9472B0CB5 /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_trySwift.framework; path = "Pods-trySwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B83ADA7200637F2175DE973355DB44 /* player.png */ = {isa = PBXFileReference; includeInIndex = 1; name = player.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/silver/player.png; sourceTree = "<group>"; };
+		B2D122BF7E00A154041A875D6381D7A8 /* RealmSwift-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RealmSwift-watchOS-umbrella.h"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		B449EA2F432528A323CA95DA324399C9 /* Realm-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Realm-watchOS-prefix.pch"; path = "../Realm-watchOS/Realm-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		B5084838505F3B62318BCAEAE6577FC3 /* Sponsor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sponsor.swift; path = TrySwiftData/Models/Sponsor.swift; sourceTree = "<group>"; };
 		B56275770808731AA12623946ABA9079 /* collection_change_builder.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = collection_change_builder.cpp; path = Realm/ObjectStore/src/impl/collection_change_builder.cpp; sourceTree = "<group>"; };
@@ -1283,37 +1277,37 @@
 		B744016184B624A07CA60BD313572D86 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7659717B66FDD51E5E1EAD2D8005AD1 /* DynamicColorSpace.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColorSpace.swift; path = Sources/DynamicColorSpace.swift; sourceTree = "<group>"; };
 		B813F53CD89382DBD5DEF98B63F364FE /* ObjectSchema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectSchema.swift; path = RealmSwift/ObjectSchema.swift; sourceTree = "<group>"; };
-		B90A276A763689D71EF2A402432368AC /* TrySwiftData.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TrySwiftData.bundle; path = TrySwiftData.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B968FD925F5856EBFFC091D7617B5A71 /* RLMObjectStore.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMObjectStore.mm; path = Realm/RLMObjectStore.mm; sourceTree = "<group>"; };
 		B9B5856CD7F0D9095687612155A7E4FD /* AcknowList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AcknowList-dummy.m"; sourceTree = "<group>"; };
 		B9FD3BEA0B6C2E3C78D115CBDD04953F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		BA095A66DDC837D987AB40480B796B55 /* ContrastDisplayContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContrastDisplayContext.swift; path = Sources/ContrastDisplayContext.swift; sourceTree = "<group>"; };
 		BA978DAF8255A3451A9F647DB98E6880 /* AcknowList-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-prefix.pch"; sourceTree = "<group>"; };
 		BAE6A92B84F4879431D6A104BD4E78CD /* RLMSyncManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMSyncManager.mm; path = Realm/RLMSyncManager.mm; sourceTree = "<group>"; };
-		BB4A5EC0113DF2621E20D410E9DFE345 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCE45928ACECFE6276D40797F18FF48C /* Realm+TrySwiftData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Realm+TrySwiftData.swift"; path = "TrySwiftData/Extensions/Realm+TrySwiftData.swift"; sourceTree = "<group>"; };
 		BE3AD06A808C504F0CC6EB7F237DEC1E /* RLMCollection.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMCollection.mm; path = Realm/RLMCollection.mm; sourceTree = "<group>"; };
 		BE724608F4B81A72F10A9A5E0EF5F9AA /* RLMResults.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMResults.h; path = include/RLMResults.h; sourceTree = "<group>"; };
+		BEAEE1FE61EACA29FE4B1EAAAA4B731C /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLPagerTabStrip.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF4BD5640BEEA41E7E2C6A8D5CE2633 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
 		BF4C2BB5E5436042F7E336453EDAF1BD /* meghan_kane.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = meghan_kane.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/meghan_kane.jpg; sourceTree = "<group>"; };
 		C0129AED23D9DA956F374CD90F142EBB /* jon_bott.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = jon_bott.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/jon_bott.jpg; sourceTree = "<group>"; };
 		C030F50D3F20BAF91F44F7EA11E313B2 /* RLMObjectSchema.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMObjectSchema.h; path = include/RLMObjectSchema.h; sourceTree = "<group>"; };
 		C0389F92343D18170338916576B3DF04 /* eric_wing.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = eric_wing.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/eric_wing.jpg; sourceTree = "<group>"; };
 		C0CFD0FAAFFCA45B81DCBF7D0F73AD47 /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
+		C18B5D8D78E65557C595779B279C1DBB /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Timepiece.framework; path = "Timepiece-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19858E2221F43AFC2485D122282E549 /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
 		C28E900C4B64DEFFE3E4982E66527ADC /* ThreadSafeReference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadSafeReference.swift; path = RealmSwift/ThreadSafeReference.swift; sourceTree = "<group>"; };
 		C3645F0FE3050BF48F21251334F6268C /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
 		C3989BF776ADC1CE5E22D7080842012C /* Object.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Object.swift; path = RealmSwift/Object.swift; sourceTree = "<group>"; };
 		C3A76E88FF60EF297883A2125BBA6AAC /* RLMSyncManager_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncManager_Private.h; path = include/RLMSyncManager_Private.h; sourceTree = "<group>"; };
-		C40BE26CD00F100FD987B22D9BF2C7E9 /* Timepiece-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-umbrella.h"; sourceTree = "<group>"; };
 		C4AB083DC5F4007C197DD348E3C8E2B4 /* Realm-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Realm-iOS.xcconfig"; sourceTree = "<group>"; };
 		C54CCC87037D156E548D139E22F059CA /* RLMSyncPermissionOfferResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RLMSyncPermissionOfferResponse.m; path = Realm/RLMSyncPermissionOfferResponse.m; sourceTree = "<group>"; };
 		C5DFA545569A2A45813E62A06189F06D /* keychain_helper.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = keychain_helper.cpp; path = Realm/ObjectStore/src/impl/apple/keychain_helper.cpp; sourceTree = "<group>"; };
+		C5FD4BDE9DFA3D0D0BE8E686579E2566 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Realm.framework; path = "Realm-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C3A28B219AADC56C892659E38FDAAB /* RLMSyncManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncManager.h; path = include/RLMSyncManager.h; sourceTree = "<group>"; };
 		C6F3DF4B134374D92F8F555F5956FF54 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6FC3889F182A31018BF69703BCCCC43 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C778EB393637A02702A453E5CD984EFF /* realm_coordinator.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = realm_coordinator.cpp; path = Realm/ObjectStore/src/impl/realm_coordinator.cpp; sourceTree = "<group>"; };
-		C984D72672B024086542C88E0C2B6EB3 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLPagerTabStrip.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA239FFCACDC691FE2B6722A47FE1CB4 /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DynamicColor.framework; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA59F548A8481E97228F24B005DE879E /* speee.png */ = {isa = PBXFileReference; includeInIndex = 1; name = speee.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/gold/speee.png; sourceTree = "<group>"; };
 		CA76418407B681BD80C94CFA39948D18 /* TrySwiftDataLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = TrySwiftDataLocalizable.strings; path = ja.lproj/TrySwiftDataLocalizable.strings; sourceTree = "<group>"; };
 		CA8714646FB6CA44B256D62F282A3A76 /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DynamicColor.modulemap; sourceTree = "<group>"; };
@@ -1321,6 +1315,8 @@
 		CB398644EA15B693BC04B2B867FC11A0 /* librealm-ios.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "librealm-ios.a"; path = "core/librealm-ios.a"; sourceTree = "<group>"; };
 		CBA4F9FF4E232AB91D6205CE66515327 /* ResourceBundle-XLPagerTabStrip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XLPagerTabStrip-Info.plist"; sourceTree = "<group>"; };
 		CBD7F4F4389CF8A48F9A4BE88AD370A6 /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		CCD369E1E833BBD3C5F10FC4C8925FD5 /* Timepiece-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-umbrella.h"; sourceTree = "<group>"; };
+		CCDCB3D2BC9FE0E6ED4294B1E9E4119C /* RealmSwift-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "RealmSwift-iOS.xcconfig"; sourceTree = "<group>"; };
 		CCDEA7B311C9D7330BA92C3B15B63FAD /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
 		CD038EFE142D4BA3A903785BE3626533 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		CFEC4C3E35156EAB72D37CBEA1446CA6 /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
@@ -1328,13 +1324,13 @@
 		D21BE1702689C7EAF12296B945EE1A5D /* AcknowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowViewController.swift; path = Source/AcknowViewController.swift; sourceTree = "<group>"; };
 		D32F2A979FE09F0344B490692A86105D /* Pods-try! Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-try! Extension-umbrella.h"; sourceTree = "<group>"; };
 		D39A4349A6E9FF0D27EB7DEA2CF2B854 /* Realm-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "Realm-watchOS.modulemap"; path = "../Realm-watchOS/Realm-watchOS.modulemap"; sourceTree = "<group>"; };
-		D3FECD154D553473242B69530408F34D /* RealmSwift-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RealmSwift-watchOS-umbrella.h"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		D425E897CAA4349E23BB5F9DD8908371 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Realm-watchOS/Info.plist"; sourceTree = "<group>"; };
 		D42DD135FC4A000D6E8376E379685CC3 /* satoshi_hachiya.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = satoshi_hachiya.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/satoshi_hachiya.jpg; sourceTree = "<group>"; };
 		D4BD3039B21A8BD353CE9C0EA829AE35 /* Pods-trySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-trySwift-umbrella.h"; sourceTree = "<group>"; };
 		D4DD6117D3FC8DFE1785D046ED9CA0A4 /* sync_file.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = sync_file.cpp; path = Realm/ObjectStore/src/sync/impl/sync_file.cpp; sourceTree = "<group>"; };
 		D54EC5D81E156D4A2EFCE713F0729AB0 /* mercari.png */ = {isa = PBXFileReference; includeInIndex = 1; name = mercari.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/gold/mercari.png; sourceTree = "<group>"; };
 		D5B933AA238AC68509F8494160152C61 /* realm.png */ = {isa = PBXFileReference; includeInIndex = 1; name = realm.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/platinum/realm.png; sourceTree = "<group>"; };
+		D612A747B416FFD59D3916D0DCDAFC03 /* Timepiece-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-prefix.pch"; path = "../Timepiece-watchOS/Timepiece-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		D62359E2339EE6AB1C835B7634B6B75D /* pivotal.png */ = {isa = PBXFileReference; includeInIndex = 1; name = pivotal.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/partner/pivotal.png; sourceTree = "<group>"; };
 		D635B307A00E3ED3BF59EAD7459E7289 /* Pods-try! Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-try! Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D6504B01EEA636083EB96CDF805A4E9C /* transact_log_handler.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = transact_log_handler.cpp; path = Realm/ObjectStore/src/impl/transact_log_handler.cpp; sourceTree = "<group>"; };
@@ -1344,7 +1340,7 @@
 		D94FAE5C9A9EB72127236850C5FD07DA /* sommer_panage.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = sommer_panage.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/sommer_panage.jpg; sourceTree = "<group>"; };
 		D9CDCB0F0EE3F9450539EB1F87360DE3 /* weak_realm_notifier.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = weak_realm_notifier.cpp; path = Realm/ObjectStore/src/impl/weak_realm_notifier.cpp; sourceTree = "<group>"; };
 		DAA3685AD7D62632207BB37F06F2C903 /* sync_manager.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = sync_manager.cpp; path = Realm/ObjectStore/src/sync/sync_manager.cpp; sourceTree = "<group>"; };
-		DC83D09E65B0BBE15985169ADA50834B /* Timepiece-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-prefix.pch"; sourceTree = "<group>"; };
+		DC44814D5EC16A25D1AE3C7EA5836C64 /* Pods_try__Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_try__Extension.framework; path = "Pods-try! Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE8EE8D741D0749AD4C2FA3597FE634 /* kazunobu_tasaka.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = kazunobu_tasaka.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/kazunobu_tasaka.jpg; sourceTree = "<group>"; };
 		DD05F55D1BA08FE2E66EFB345BCD078E /* Configuration+TrySwiftData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Configuration+TrySwiftData.swift"; path = "TrySwiftData/Extensions/Configuration+TrySwiftData.swift"; sourceTree = "<group>"; };
 		DE09B6DE2E3FA711607F77C8D355576F /* DynamicColor+Mixing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Mixing.swift"; path = "Sources/DynamicColor+Mixing.swift"; sourceTree = "<group>"; };
@@ -1366,7 +1362,6 @@
 		E4034126F2F7CAABED9881612141D00D /* christopher_rogers.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = christopher_rogers.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/christopher_rogers.jpg; sourceTree = "<group>"; };
 		E62E1BC4AFABB337E4CAC880969A875B /* WatchLogo.png */ = {isa = PBXFileReference; includeInIndex = 1; name = WatchLogo.png; path = TrySwiftData/Assets/Tokyo2017/WatchLogo.png; sourceTree = "<group>"; };
 		E671A6AC825804C4DDA3377ED70BD187 /* RLMOptionalBase.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMOptionalBase.mm; path = Realm/RLMOptionalBase.mm; sourceTree = "<group>"; };
-		E67F490572A4E2AEC5B21BE965DC9AFF /* Timepiece-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Timepiece-iOS-dummy.m"; sourceTree = "<group>"; };
 		E6D22920E2FCB6BA0F516F48312FA260 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
 		E6FE9EE05D667C5F43F6070F8E4CFEF6 /* kohki_miki.png */ = {isa = PBXFileReference; includeInIndex = 1; name = kohki_miki.png; path = TrySwiftData/Assets/Tokyo2017/Speakers/kohki_miki.png; sourceTree = "<group>"; };
 		E7A6304AD12DA712C93554D2B8ED432E /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
@@ -1380,15 +1375,16 @@
 		EA7639FC515410B58CB7860AA303DF20 /* external_commit_helper.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = external_commit_helper.cpp; path = Realm/ObjectStore/src/impl/apple/external_commit_helper.cpp; sourceTree = "<group>"; };
 		EBC66D489D809B1968A76E45B53866A3 /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		EC5EAB95BA5B362457614011F7C28732 /* tryswift.realm */ = {isa = PBXFileReference; includeInIndex = 1; name = tryswift.realm; path = TrySwiftData/Assets/Tokyo2017/tryswift.realm; sourceTree = "<group>"; };
+		ECB3B15820B49A7BAEE7F5EFA43E6894 /* RealmSwift-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RealmSwift-watchOS-dummy.m"; path = "../RealmSwift-watchOS/RealmSwift-watchOS-dummy.m"; sourceTree = "<group>"; };
 		ECCF88D513AFC1532188A9E32C1BE34D /* collection_notifier.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = collection_notifier.cpp; path = Realm/ObjectStore/src/impl/collection_notifier.cpp; sourceTree = "<group>"; };
 		ED2B56BC7C560F096D7D835171D0B914 /* TrySwiftData-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TrySwiftData-watchOS-umbrella.h"; path = "../TrySwiftData-watchOS/TrySwiftData-watchOS-umbrella.h"; sourceTree = "<group>"; };
+		ED69986830334104916A8FA02B1B626A /* Timepiece-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "Timepiece-watchOS.modulemap"; path = "../Timepiece-watchOS/Timepiece-watchOS.modulemap"; sourceTree = "<group>"; };
 		EDA6C1F62BF709B9051851505C391332 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
 		EDABDDF0B38FA51C0ABD4FC18A3863B5 /* RLMProperty.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = RLMProperty.mm; path = Realm/RLMProperty.mm; sourceTree = "<group>"; };
-		EEF5C02C3954BBD68EFB0D2215E02B15 /* RealmSwift-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "RealmSwift-watchOS.modulemap"; path = "../RealmSwift-watchOS/RealmSwift-watchOS.modulemap"; sourceTree = "<group>"; };
 		EF07043C115D24E5AC22E6C0604A4DA3 /* sansan.png */ = {isa = PBXFileReference; includeInIndex = 1; name = sansan.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/gold/sansan.png; sourceTree = "<group>"; };
 		EFCDB6ED4F0817C77AF1C9A5B3AF9D47 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../TrySwiftData-watchOS/Info.plist"; sourceTree = "<group>"; };
-		F084B4178A3BA4FD0CB21CB393784BB5 /* Timepiece-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-umbrella.h"; path = "../Timepiece-watchOS/Timepiece-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		F1F36BAA8FAC764E5C63DAAD7DE0E3E2 /* nate_cook.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = nate_cook.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/nate_cook.jpg; sourceTree = "<group>"; };
+		F28D3A5098176B7EE752C90FECB7F8B1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F2D3C45C5E1D36415E9F2EFAC73C12C9 /* ray_tsaihong.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = ray_tsaihong.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/ray_tsaihong.jpg; sourceTree = "<group>"; };
 		F2E4D9B90B7C105B11E422423FE25228 /* himi_sato.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = himi_sato.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/himi_sato.jpg; sourceTree = "<group>"; };
 		F35F0D6758B52FE761811D34F8FD17AD /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
@@ -1397,13 +1393,17 @@
 		F46C83CCDB1B60F26F3D83335158456A /* Pods-trySwift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-trySwift-resources.sh"; sourceTree = "<group>"; };
 		F4983A56C3CE47A9B4528A8727197B57 /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Sources/Array.swift; sourceTree = "<group>"; };
 		F644B64C79931242F721A92B4E9C93E4 /* Logo.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Logo.png; path = TrySwiftData/Assets/Tokyo2017/Logo.png; sourceTree = "<group>"; };
+		F654E784EDAEE84F4600504277DD314B /* Timepiece-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Timepiece-watchOS-dummy.m"; path = "../Timepiece-watchOS/Timepiece-watchOS-dummy.m"; sourceTree = "<group>"; };
 		F711E5AF4A4EC9901CA4B5BDF52958D3 /* Util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Util.swift; path = RealmSwift/Util.swift; sourceTree = "<group>"; };
 		F82AE6A6D4DB0A4C5194FD4447BED30F /* laura_ragone.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = laura_ragone.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/laura_ragone.jpg; sourceTree = "<group>"; };
 		F8C8759306912EDA2EE4722909069B3E /* SegmentedPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedPagerTabStripViewController.swift; path = Sources/SegmentedPagerTabStripViewController.swift; sourceTree = "<group>"; };
+		FA2524D6FABFAF7FAAFB6854FD6F603C /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_trySwift.framework; path = "Pods-trySwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF6B97A5AC64AED2611ABFC9D32E01E /* RLMSyncUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RLMSyncUtil.h; path = include/RLMSyncUtil.h; sourceTree = "<group>"; };
 		FBE168A1711951B5492517F38DD3E9AE /* firebase.png */ = {isa = PBXFileReference; includeInIndex = 1; name = firebase.png; path = TrySwiftData/Assets/Tokyo2017/Sponsors/gold/firebase.png; sourceTree = "<group>"; };
 		FD7B5963399C493425026A76B3A06226 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0CEBAD89D95D126D799E70777B5622 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE3D5410955811B68DB081E7CCD2EBA1 /* TrySwiftData.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TrySwiftData.bundle; path = TrySwiftData.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		FECB3364CB220C306E8B87868A384C33 /* Timepiece-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Timepiece-watchOS.xcconfig"; path = "../Timepiece-watchOS/Timepiece-watchOS.xcconfig"; sourceTree = "<group>"; };
 		FF166DDF0F7A770EC97018D0725E5D95 /* krzysztof_siejkowski.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = krzysztof_siejkowski.jpg; path = TrySwiftData/Assets/Tokyo2017/Speakers/krzysztof_siejkowski.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1633,26 +1633,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		3F5F35821084E399159F244BAA5566D9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BB4A5EC0113DF2621E20D410E9DFE345 /* Info.plist */,
-				44C4BB15DEEEC80B13F61C240E8B6553 /* Info.plist */,
-				2204A9AB5F2213E4D0BF88763D862ADB /* RealmSwift-iOS.modulemap */,
-				0C2398DF90E484BB149DCC8CE0DAEBCA /* RealmSwift-iOS.xcconfig */,
-				4D2B57AF957ECCED36B6000CDFD7CF1A /* RealmSwift-iOS-dummy.m */,
-				74F51646633A4485E2354180F171F2CC /* RealmSwift-iOS-prefix.pch */,
-				6E27AD9BBAD68D15B687F5E68CE95C49 /* RealmSwift-iOS-umbrella.h */,
-				EEF5C02C3954BBD68EFB0D2215E02B15 /* RealmSwift-watchOS.modulemap */,
-				32A1C46FC5DD8F6D29A1EAB2841817DF /* RealmSwift-watchOS.xcconfig */,
-				A1F57E069A401C3C82359F23E5B18237 /* RealmSwift-watchOS-dummy.m */,
-				A34331FBA6C40656A9CB458D514C1A72 /* RealmSwift-watchOS-prefix.pch */,
-				D3FECD154D553473242B69530408F34D /* RealmSwift-watchOS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/RealmSwift-iOS";
-			sourceTree = "<group>";
-		};
 		49AF6B69151E05389EE239ABD7D436C2 /* Tokyo2017 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1706,7 +1686,7 @@
 				624FDE36C95356979A9C7A1CE78B185D /* Sync.swift */,
 				C28E900C4B64DEFFE3E4982E66527ADC /* ThreadSafeReference.swift */,
 				F711E5AF4A4EC9901CA4B5BDF52958D3 /* Util.swift */,
-				3F5F35821084E399159F244BAA5566D9 /* Support Files */,
+				8C0E6A2BCFF577166E9EE01319605079 /* Support Files */,
 			);
 			name = RealmSwift;
 			path = RealmSwift;
@@ -1783,30 +1763,6 @@
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
-		734894A6B120F404A74D53E8DD9E32B0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8C173480D583697193912963C46D2045 /* AcknowList.framework */,
-				0F3B30A783CED16C75E2A5FB11834260 /* DynamicColor.framework */,
-				384ED5F9CD6C16D68CD6C96D624A17C8 /* Kingfisher.framework */,
-				3DE7873C870946D50C477AC1509871A8 /* Pods_try__Extension.framework */,
-				B289D9220081BA97815995C9472B0CB5 /* Pods_trySwift.framework */,
-				2AAC380884A08F33CCE1889FF39F274E /* Realm.framework */,
-				91FD7C0964D2478B70350F71D043EB28 /* Realm.framework */,
-				3467D456A1B8E8EAA79DF30F2C9FBF1E /* RealmSwift.framework */,
-				5CE73EB872C16AF3E2D11D40F7A7A6DE /* RealmSwift.framework */,
-				49917EC92A674BBAF370994D7BB69F55 /* Timepiece.framework */,
-				754C047A216236488ED3F3EC70EC5F7A /* Timepiece.framework */,
-				B90A276A763689D71EF2A402432368AC /* TrySwiftData.bundle */,
-				B90A276A763689D71EF2A402432368AC /* TrySwiftData.bundle */,
-				231F8430F3B6B73486234EDCB4E4C53F /* TrySwiftData.framework */,
-				7A9DF1D24D1E02CBAE16187A18E44D4C /* TrySwiftData.framework */,
-				264FECEE7CDF275A39D7DB80E5BB9AEF /* XLPagerTabStrip.bundle */,
-				C984D72672B024086542C88E0C2B6EB3 /* XLPagerTabStrip.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		73FE54517A3560DDA1AB1B436AFDD84D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1827,7 +1783,7 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				9FE249657007244F6E930BFF395E6868 /* Frameworks */,
 				B413EE9EBF2E5CFC30DF1313DDD9C187 /* Pods */,
-				734894A6B120F404A74D53E8DD9E32B0 /* Products */,
+				DE5469D0C8744DAE179BCEC4E4A5B452 /* Products */,
 				DD80264E078B77C97D0CDF20032FBCB2 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -1862,10 +1818,30 @@
 				AF0AEF559E735E6EC2796CE7DEA02B23 /* DateComponents+Timepiece.swift */,
 				4C63EFDD8EDCB831300C9BC20005E110 /* Int+Timepiece.swift */,
 				4CE61D109DFEE9006C9D785146048389 /* String+Timepiece.swift */,
-				DE1A8933987382FF80854D8352840208 /* Support Files */,
+				D6B5D32BEFDE7C8F1286D7FCA6220A73 /* Support Files */,
 			);
 			name = Timepiece;
 			path = Timepiece;
+			sourceTree = "<group>";
+		};
+		8C0E6A2BCFF577166E9EE01319605079 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				10955BBD25DDCCC7EBA6472D92396A16 /* Info.plist */,
+				5E0642D153A77CB0CFCDCFD13684E5B5 /* Info.plist */,
+				524EAEEBB04C655BE4A8C01F9B986029 /* RealmSwift-iOS.modulemap */,
+				CCDCB3D2BC9FE0E6ED4294B1E9E4119C /* RealmSwift-iOS.xcconfig */,
+				6086A2626A5A573D2368FC7E35E51455 /* RealmSwift-iOS-dummy.m */,
+				39AAD30DF1B3726B49D8A14718A75831 /* RealmSwift-iOS-prefix.pch */,
+				AE2F6C5BFF0CC793C7893C4BAA920F9A /* RealmSwift-iOS-umbrella.h */,
+				8F78E686E9676A9D2C4442F6FE3610A8 /* RealmSwift-watchOS.modulemap */,
+				940062B9853AD1BC1C84C47914F93FE2 /* RealmSwift-watchOS.xcconfig */,
+				ECB3B15820B49A7BAEE7F5EFA43E6894 /* RealmSwift-watchOS-dummy.m */,
+				00B77A7A9FD380FFC187A46BED0CC0B1 /* RealmSwift-watchOS-prefix.pch */,
+				B2D122BF7E00A154041A875D6381D7A8 /* RealmSwift-watchOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RealmSwift-iOS";
 			sourceTree = "<group>";
 		};
 		9F5376EC31EDEBED431D6E6ADE60253A /* Pods-trySwift */ = {
@@ -2082,6 +2058,26 @@
 			path = "../Target Support Files/DynamicColor";
 			sourceTree = "<group>";
 		};
+		D6B5D32BEFDE7C8F1286D7FCA6220A73 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E218DB2E6207AE15040161239C01ADB /* Info.plist */,
+				F28D3A5098176B7EE752C90FECB7F8B1 /* Info.plist */,
+				8A6BF9985CEAE71445C7884FE74A64E6 /* Timepiece-iOS.modulemap */,
+				84170F7B8C351E79902A380C4F9681D1 /* Timepiece-iOS.xcconfig */,
+				678FA3FB81FCA2E6DAD2471EC312C88B /* Timepiece-iOS-dummy.m */,
+				9A044D508C237F1D8D253E6EDF2F0C2C /* Timepiece-iOS-prefix.pch */,
+				CCD369E1E833BBD3C5F10FC4C8925FD5 /* Timepiece-iOS-umbrella.h */,
+				ED69986830334104916A8FA02B1B626A /* Timepiece-watchOS.modulemap */,
+				FECB3364CB220C306E8B87868A384C33 /* Timepiece-watchOS.xcconfig */,
+				F654E784EDAEE84F4600504277DD314B /* Timepiece-watchOS-dummy.m */,
+				D612A747B416FFD59D3916D0DCDAFC03 /* Timepiece-watchOS-prefix.pch */,
+				12CCBD9DDDF8BE08D44B37E3A556116D /* Timepiece-watchOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Timepiece-iOS";
+			sourceTree = "<group>";
+		};
 		DD80264E078B77C97D0CDF20032FBCB2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2091,24 +2087,28 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		DE1A8933987382FF80854D8352840208 /* Support Files */ = {
+		DE5469D0C8744DAE179BCEC4E4A5B452 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5637FB038998F7F4DAD55804AB99D498 /* Info.plist */,
-				837275D0D612C22E061AEBC4EBA447A8 /* Info.plist */,
-				0D2872B407DE8567DAC3E9281E829D56 /* Timepiece-iOS.modulemap */,
-				4FB1A2F80743E1D123363BDB3498A508 /* Timepiece-iOS.xcconfig */,
-				E67F490572A4E2AEC5B21BE965DC9AFF /* Timepiece-iOS-dummy.m */,
-				DC83D09E65B0BBE15985169ADA50834B /* Timepiece-iOS-prefix.pch */,
-				C40BE26CD00F100FD987B22D9BF2C7E9 /* Timepiece-iOS-umbrella.h */,
-				9DF2AAC12A477E1F9DC05A1ED8B81359 /* Timepiece-watchOS.modulemap */,
-				626AF3FCBA61141BDB7340DEF10B697B /* Timepiece-watchOS.xcconfig */,
-				8FC6C4DD844A15581F751ACFC2E31BEE /* Timepiece-watchOS-dummy.m */,
-				2C921077526FDE5355DEC90257881154 /* Timepiece-watchOS-prefix.pch */,
-				F084B4178A3BA4FD0CB21CB393784BB5 /* Timepiece-watchOS-umbrella.h */,
+				686FF5D14314B67B4FED836C6952C556 /* AcknowList.framework */,
+				CA239FFCACDC691FE2B6722A47FE1CB4 /* DynamicColor.framework */,
+				AB597DBDD886C48C681D8290B3811C32 /* Kingfisher.framework */,
+				DC44814D5EC16A25D1AE3C7EA5836C64 /* Pods_try__Extension.framework */,
+				FA2524D6FABFAF7FAAFB6854FD6F603C /* Pods_trySwift.framework */,
+				C5FD4BDE9DFA3D0D0BE8E686579E2566 /* Realm.framework */,
+				1EFBD0BD29C115238470663B48D675AE /* Realm.framework */,
+				3003314AFD98111B072488EEA7F94458 /* RealmSwift.framework */,
+				178DB6B5514094148330DF1110058C13 /* RealmSwift.framework */,
+				32E5E29C58857460C801628E86D98A78 /* Timepiece.framework */,
+				C18B5D8D78E65557C595779B279C1DBB /* Timepiece.framework */,
+				FE3D5410955811B68DB081E7CCD2EBA1 /* TrySwiftData.bundle */,
+				FE3D5410955811B68DB081E7CCD2EBA1 /* TrySwiftData.bundle */,
+				209E8364A776B6BD962750D718A34D6A /* TrySwiftData.framework */,
+				4558A4503C8DF627DE00D76CDB2289FD /* TrySwiftData.framework */,
+				5758F623F893845FDBA73B0F8AD5DE2A /* XLPagerTabStrip.bundle */,
+				BEAEE1FE61EACA29FE4B1EAAAA4B731C /* XLPagerTabStrip.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Timepiece-iOS";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		E644418344B51EA2E3FB829DAED47DAB /* Support Files */ = {
@@ -2482,7 +2482,7 @@
 			);
 			name = XLPagerTabStrip;
 			productName = XLPagerTabStrip;
-			productReference = C984D72672B024086542C88E0C2B6EB3 /* XLPagerTabStrip.framework */;
+			productReference = BEAEE1FE61EACA29FE4B1EAAAA4B731C /* XLPagerTabStrip.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		19864AB8F7B8E9064740E008772C4404 /* DynamicColor */ = {
@@ -2499,7 +2499,7 @@
 			);
 			name = DynamicColor;
 			productName = DynamicColor;
-			productReference = 0F3B30A783CED16C75E2A5FB11834260 /* DynamicColor.framework */;
+			productReference = CA239FFCACDC691FE2B6722A47FE1CB4 /* DynamicColor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2AB76823F97C6B986728CE1C1D320913 /* Timepiece-watchOS */ = {
@@ -2516,7 +2516,7 @@
 			);
 			name = "Timepiece-watchOS";
 			productName = "Timepiece-watchOS";
-			productReference = 754C047A216236488ED3F3EC70EC5F7A /* Timepiece.framework */;
+			productReference = C18B5D8D78E65557C595779B279C1DBB /* Timepiece.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2C4B25DA191884B406DDFDE48CCFD90A /* AcknowList */ = {
@@ -2534,7 +2534,7 @@
 			);
 			name = AcknowList;
 			productName = AcknowList;
-			productReference = 8C173480D583697193912963C46D2045 /* AcknowList.framework */;
+			productReference = 686FF5D14314B67B4FED836C6952C556 /* AcknowList.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2DD1A71EB674BEEED86B9422C5D92D16 /* Realm-iOS */ = {
@@ -2553,7 +2553,7 @@
 			);
 			name = "Realm-iOS";
 			productName = "Realm-iOS";
-			productReference = 2AAC380884A08F33CCE1889FF39F274E /* Realm.framework */;
+			productReference = C5FD4BDE9DFA3D0D0BE8E686579E2566 /* Realm.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4A28B08A5553E6E48CDBFBF33027205A /* RealmSwift-watchOS */ = {
@@ -2571,7 +2571,7 @@
 			);
 			name = "RealmSwift-watchOS";
 			productName = "RealmSwift-watchOS";
-			productReference = 3467D456A1B8E8EAA79DF30F2C9FBF1E /* RealmSwift.framework */;
+			productReference = 3003314AFD98111B072488EEA7F94458 /* RealmSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5D4351430362C15423BA7EC47F0B3C69 /* TrySwiftData-iOS-TrySwiftData */ = {
@@ -2588,7 +2588,7 @@
 			);
 			name = "TrySwiftData-iOS-TrySwiftData";
 			productName = "TrySwiftData-iOS-TrySwiftData";
-			productReference = B90A276A763689D71EF2A402432368AC /* TrySwiftData.bundle */;
+			productReference = FE3D5410955811B68DB081E7CCD2EBA1 /* TrySwiftData.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		5E4208241EE3557DE0AB74DCDF3F4C2E /* Timepiece-iOS */ = {
@@ -2605,7 +2605,7 @@
 			);
 			name = "Timepiece-iOS";
 			productName = "Timepiece-iOS";
-			productReference = 49917EC92A674BBAF370994D7BB69F55 /* Timepiece.framework */;
+			productReference = 32E5E29C58857460C801628E86D98A78 /* Timepiece.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		63AC0C16B1DEEAD7035847B10E6160F6 /* Realm-watchOS */ = {
@@ -2624,7 +2624,7 @@
 			);
 			name = "Realm-watchOS";
 			productName = "Realm-watchOS";
-			productReference = 91FD7C0964D2478B70350F71D043EB28 /* Realm.framework */;
+			productReference = 1EFBD0BD29C115238470663B48D675AE /* Realm.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		66F954DBABF901EDFE6B017F36154AA0 /* RealmSwift-iOS */ = {
@@ -2642,7 +2642,7 @@
 			);
 			name = "RealmSwift-iOS";
 			productName = "RealmSwift-iOS";
-			productReference = 5CE73EB872C16AF3E2D11D40F7A7A6DE /* RealmSwift.framework */;
+			productReference = 178DB6B5514094148330DF1110058C13 /* RealmSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		67E3B2F7A12A44C84C7AC0D9A880DD8C /* TrySwiftData-iOS */ = {
@@ -2663,7 +2663,7 @@
 			);
 			name = "TrySwiftData-iOS";
 			productName = "TrySwiftData-iOS";
-			productReference = 231F8430F3B6B73486234EDCB4E4C53F /* TrySwiftData.framework */;
+			productReference = 4558A4503C8DF627DE00D76CDB2289FD /* TrySwiftData.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		7CD6D858193C40BA47DAE63A446C650A /* Pods-try! Extension */ = {
@@ -2684,7 +2684,7 @@
 			);
 			name = "Pods-try! Extension";
 			productName = "Pods-try! Extension";
-			productReference = 3DE7873C870946D50C477AC1509871A8 /* Pods_try__Extension.framework */;
+			productReference = DC44814D5EC16A25D1AE3C7EA5836C64 /* Pods_try__Extension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9DBB1ED9DFA93891E2B294E25739271C /* XLPagerTabStrip-XLPagerTabStrip */ = {
@@ -2701,7 +2701,7 @@
 			);
 			name = "XLPagerTabStrip-XLPagerTabStrip";
 			productName = "XLPagerTabStrip-XLPagerTabStrip";
-			productReference = 264FECEE7CDF275A39D7DB80E5BB9AEF /* XLPagerTabStrip.bundle */;
+			productReference = 5758F623F893845FDBA73B0F8AD5DE2A /* XLPagerTabStrip.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		B5AE5DE5ABD0319BA0B51380A865095F /* TrySwiftData-watchOS */ = {
@@ -2722,7 +2722,7 @@
 			);
 			name = "TrySwiftData-watchOS";
 			productName = "TrySwiftData-watchOS";
-			productReference = 7A9DF1D24D1E02CBAE16187A18E44D4C /* TrySwiftData.framework */;
+			productReference = 209E8364A776B6BD962750D718A34D6A /* TrySwiftData.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C4944FEC314D1A66588651D006273ADE /* Kingfisher */ = {
@@ -2739,7 +2739,7 @@
 			);
 			name = Kingfisher;
 			productName = Kingfisher;
-			productReference = 384ED5F9CD6C16D68CD6C96D624A17C8 /* Kingfisher.framework */;
+			productReference = AB597DBDD886C48C681D8290B3811C32 /* Kingfisher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C4A149EB547A79898C21A35750930147 /* TrySwiftData-watchOS-TrySwiftData */ = {
@@ -2756,7 +2756,7 @@
 			);
 			name = "TrySwiftData-watchOS-TrySwiftData";
 			productName = "TrySwiftData-watchOS-TrySwiftData";
-			productReference = B90A276A763689D71EF2A402432368AC /* TrySwiftData.bundle */;
+			productReference = FE3D5410955811B68DB081E7CCD2EBA1 /* TrySwiftData.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		DA3616C0293EF6A654ABD71CBDB996B2 /* Pods-trySwift */ = {
@@ -2781,7 +2781,7 @@
 			);
 			name = "Pods-trySwift";
 			productName = "Pods-trySwift";
-			productReference = B289D9220081BA97815995C9472B0CB5 /* Pods_trySwift.framework */;
+			productReference = FA2524D6FABFAF7FAAFB6854FD6F603C /* Pods_trySwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -2801,7 +2801,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 734894A6B120F404A74D53E8DD9E32B0 /* Products */;
+			productRefGroup = DE5469D0C8744DAE179BCEC4E4A5B452 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -3776,7 +3776,7 @@
 		};
 		232A15BB9C8834DD972EF04131885428 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C2398DF90E484BB149DCC8CE0DAEBCA /* RealmSwift-iOS.xcconfig */;
+			baseConfigurationReference = CCDCB3D2BC9FE0E6ED4294B1E9E4119C /* RealmSwift-iOS.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3987,7 +3987,7 @@
 		};
 		5FF9ACCBEFC2F3466FB62448D5C243DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32A1C46FC5DD8F6D29A1EAB2841817DF /* RealmSwift-watchOS.xcconfig */;
+			baseConfigurationReference = 940062B9853AD1BC1C84C47914F93FE2 /* RealmSwift-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -4076,7 +4076,7 @@
 		};
 		740E0AED55B77447496A8FF541F84B4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 626AF3FCBA61141BDB7340DEF10B697B /* Timepiece-watchOS.xcconfig */;
+			baseConfigurationReference = FECB3364CB220C306E8B87868A384C33 /* Timepiece-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -4142,7 +4142,7 @@
 		};
 		8E4C4DC335D217CCD582E1169635EBA2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FB1A2F80743E1D123363BDB3498A508 /* Timepiece-iOS.xcconfig */;
+			baseConfigurationReference = 84170F7B8C351E79902A380C4F9681D1 /* Timepiece-iOS.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4210,7 +4210,7 @@
 		};
 		97D557766DBDDB9B13703253D0F277E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FB1A2F80743E1D123363BDB3498A508 /* Timepiece-iOS.xcconfig */;
+			baseConfigurationReference = 84170F7B8C351E79902A380C4F9681D1 /* Timepiece-iOS.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4307,7 +4307,7 @@
 		};
 		A3004BA0A3AC8BB1A2CDDBFD8056CF10 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C2398DF90E484BB149DCC8CE0DAEBCA /* RealmSwift-iOS.xcconfig */;
+			baseConfigurationReference = CCDCB3D2BC9FE0E6ED4294B1E9E4119C /* RealmSwift-iOS.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4405,7 +4405,7 @@
 		};
 		ACC25E48DDE7C8FCC4B1E9A2F19231FD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 626AF3FCBA61141BDB7340DEF10B697B /* Timepiece-watchOS.xcconfig */;
+			baseConfigurationReference = FECB3364CB220C306E8B87868A384C33 /* Timepiece-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -4661,7 +4661,7 @@
 		};
 		DAD88B22576D1B6AB5CD4430A4983F36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32A1C46FC5DD8F6D29A1EAB2841817DF /* RealmSwift-watchOS.xcconfig */;
+			baseConfigurationReference = 940062B9853AD1BC1C84C47914F93FE2 /* RealmSwift-watchOS.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

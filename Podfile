@@ -3,6 +3,7 @@ use_frameworks!
 def shared_pods
     pod 'Timepiece', '~> 1.1.0'
     pod 'RealmSwift', '~> 2.4.2'
+    pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
 end
 
 target 'trySwift' do
@@ -13,13 +14,11 @@ target 'trySwift' do
     pod 'AcknowList', '~> 1.2'
     pod 'Kingfisher', '~> 3.4.0'
     pod 'BuddyBuildSDK'
-    pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
 end
 
 target 'try! Extension' do
     platform :watchos, '3.1'
     shared_pods
-    pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
 end
 
 post_install do |installer|
