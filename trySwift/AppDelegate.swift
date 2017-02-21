@@ -11,7 +11,6 @@ import CloudKit
 import UserNotifications
 import TrySwiftData
 import Timepiece
-import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         BuddyBuildSDK.setup()
         
         let notificationSettings = UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
@@ -28,6 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         WatchSessionManager.sharedManager.startSession()
         
         configureStyling()
+        
+        // Save Realm Data to Todays Extension 
+        
+        self.saveRealmDataToAppGroups()
         
         return true
     }
@@ -42,19 +46,35 @@ private extension AppDelegate {
     
     func saveRealmDataToAppGroups() {
         
-        let sharead = UserDefaults(suiteName: "group.com.tryTokyoTodayExtension")
+        let shared = UserDefaults(suiteName: "group.com.tryTokyoTodayExtension")
         
-        // Time 
+        // Load data from Realm 
         
-        // Presentation Title
+        let conferenceDays = ConferenceDay.all
+        let allSessions = [conferenceDays[0], conferenceDays[1]].flatMap { $0.sessionBlocks }
         
-        // Speaker Image 
+        var extensionData : [[String : AnyObject]] = []
         
-        // Speaker Name 
+        allSessions.forEach { value in
         
-        // Speaker Twitter Handle 
+            var speakerDictionary : [String : String] = [:]
+            
+            if let session = value.sessions.first {
+                
+                speakerDictionary["title"] = session.presentation?.localizedTitle
+                speakerDictionary["name"] = session.presentation?.speaker?.name
+                speakerDictionary["twitter"] = session.presentation?.speaker?.twitter
+            }
+            
+            extensionData.append([
+                "startTime" : value.startTime as AnyObject,
+                "endTime" : value.endTime as AnyObject,
+                "sessions" :  speakerDictionary as AnyObject
+            ])
+        }
         
-        sharead?.synchronize()
+        shared?.set(extensionData, forKey: "extensionData")
+        shared?.synchronize()
     }
     
     func configureStyling() {

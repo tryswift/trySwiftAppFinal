@@ -45,19 +45,25 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         // App Groups 
         
-        let sharead = UserDefaults(suiteName: "group.com.tryTokyoTodayExtension")
+        let shared = UserDefaults(suiteName: "group.com.tryTokyoTodayExtension")
+        print(shared)
+        shared?.synchronize()
 
-        // Time
+        // Load data from UserDefaults
         
-        // Presentation Title
+        if let extensionData = shared?.value(forKey: "extensionData") as?  [[String : AnyObject]] {
+            
+            extensionData.forEach({ eachValue in
+                
+                let startTime = eachValue["startTime"] as? Date
+                let endTime = eachValue["endTime"] as? Date
+                let sessions = eachValue["sessions"] as? [String : String]
+                
+                print("\(startTime) || \(endTime)")
+            })
+        }
         
-        // Speaker Image
         
-        // Speaker Name
-        
-        // Speaker Twitter Handle
-        
-        sharead?.synchronize()
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -76,7 +82,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             self.preferredContentSize = maxSize
         }
         else if activeDisplayMode == .expanded {
-            self.preferredContentSize = CGSize(width: 320, height: 1000)
+            self.preferredContentSize = CGSize(width: 320, height: 342)
         }
     }
     

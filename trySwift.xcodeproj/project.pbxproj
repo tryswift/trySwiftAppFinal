@@ -75,6 +75,47 @@
 		FCFD24D11E5C0433007A693A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24CF1E5C0433007A693A /* MainInterface.storyboard */; };
 		FCFD24D51E5C0433007A693A /* try! Tokyo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCFD24C91E5C0433007A693A /* try! Tokyo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FCFD24DB1E5C0C76007A693A /* TokyoTodayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD24DA1E5C0C76007A693A /* TokyoTodayTableViewCell.swift */; };
+		FCFD25051E5C97C4007A693A /* agnes_vasarhelyi.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24DC1E5C97C4007A693A /* agnes_vasarhelyi.png */; };
+		FCFD25061E5C97C4007A693A /* alexis_gallagher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24DD1E5C97C4007A693A /* alexis_gallagher.jpg */; };
+		FCFD25071E5C97C4007A693A /* artis_birzins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24DE1E5C97C4007A693A /* artis_birzins.jpg */; };
+		FCFD25081E5C97C4007A693A /* brandon_williams.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24DF1E5C97C4007A693A /* brandon_williams.jpg */; };
+		FCFD25091E5C97C4007A693A /* christopher_rogers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24E01E5C97C4007A693A /* christopher_rogers.jpg */; };
+		FCFD250A1E5C97C4007A693A /* eric_wing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24E11E5C97C4007A693A /* eric_wing.jpg */; };
+		FCFD250B1E5C97C4007A693A /* felix_krause.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24E21E5C97C4007A693A /* felix_krause.jpg */; };
+		FCFD250C1E5C97C4007A693A /* himi_sato.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24E31E5C97C4007A693A /* himi_sato.jpg */; };
+		FCFD250D1E5C97C4007A693A /* jon_bott.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24E41E5C97C4007A693A /* jon_bott.jpg */; };
+		FCFD250E1E5C97C4007A693A /* jon_reid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24E51E5C97C4007A693A /* jon_reid.jpg */; };
+		FCFD250F1E5C97C4007A693A /* kaoru_tachibana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24E61E5C97C4007A693A /* kaoru_tachibana.jpg */; };
+		FCFD25101E5C97C4007A693A /* kateryna_gridina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24E71E5C97C4007A693A /* kateryna_gridina.jpg */; };
+		FCFD25111E5C97C4007A693A /* katsumi_kishikawa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24E81E5C97C4007A693A /* katsumi_kishikawa.jpg */; };
+		FCFD25121E5C97C4007A693A /* kazuaki_matsuo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24E91E5C97C4007A693A /* kazuaki_matsuo.jpg */; };
+		FCFD25131E5C97C4007A693A /* kazunobu_tasaka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24EA1E5C97C4007A693A /* kazunobu_tasaka.jpg */; };
+		FCFD25141E5C97C4007A693A /* kohki_miki.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24EB1E5C97C4007A693A /* kohki_miki.png */; };
+		FCFD25151E5C97C4007A693A /* krzysztof_siejkowski.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24EC1E5C97C4007A693A /* krzysztof_siejkowski.jpg */; };
+		FCFD25161E5C97C4007A693A /* kyle_fuller.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24ED1E5C97C4007A693A /* kyle_fuller.png */; };
+		FCFD25171E5C97C4007A693A /* laura_ragone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24EE1E5C97C4007A693A /* laura_ragone.jpg */; };
+		FCFD25181E5C97C4007A693A /* maki_sudo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24EF1E5C97C4007A693A /* maki_sudo.jpg */; };
+		FCFD25191E5C97C4007A693A /* marius_rackwitz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24F01E5C97C4007A693A /* marius_rackwitz.jpg */; };
+		FCFD251A1E5C97C4007A693A /* matt_gillingham.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24F11E5C97C4007A693A /* matt_gillingham.jpg */; };
+		FCFD251B1E5C97C4007A693A /* meghan_kane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24F21E5C97C4007A693A /* meghan_kane.jpg */; };
+		FCFD251C1E5C97C4007A693A /* mo_kudeki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24F31E5C97C4007A693A /* mo_kudeki.jpg */; };
+		FCFD251D1E5C97C4007A693A /* natasha_murashev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24F41E5C97C4007A693A /* natasha_murashev.jpg */; };
+		FCFD251E1E5C97C4007A693A /* nate_cook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24F51E5C97C4007A693A /* nate_cook.jpg */; };
+		FCFD251F1E5C97C4007A693A /* nikita_lutsenko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24F61E5C97C4007A693A /* nikita_lutsenko.jpg */; };
+		FCFD25201E5C97C4007A693A /* nino_sakuma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24F71E5C97C4007A693A /* nino_sakuma.jpg */; };
+		FCFD25211E5C97C4007A693A /* orta_therox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24F81E5C97C4007A693A /* orta_therox.jpg */; };
+		FCFD25221E5C97C4007A693A /* ray_fix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24F91E5C97C4007A693A /* ray_fix.jpg */; };
+		FCFD25231E5C97C4007A693A /* ray_tsaihong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24FA1E5C97C4007A693A /* ray_tsaihong.jpg */; };
+		FCFD25241E5C97C4007A693A /* rikke_moller_koblauch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24FB1E5C97C4007A693A /* rikke_moller_koblauch.jpg */; };
+		FCFD25251E5C97C4007A693A /* satoshi_hachiya.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24FC1E5C97C4007A693A /* satoshi_hachiya.jpg */; };
+		FCFD25261E5C97C4007A693A /* seiyo_kurita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24FD1E5C97C4007A693A /* seiyo_kurita.jpg */; };
+		FCFD25271E5C97C4007A693A /* shingo_sato.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24FE1E5C97C4007A693A /* shingo_sato.jpg */; };
+		FCFD25281E5C97C4007A693A /* shinichi_goto.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24FF1E5C97C4007A693A /* shinichi_goto.png */; };
+		FCFD25291E5C97C4007A693A /* shuichi_tsutsumi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD25001E5C97C4007A693A /* shuichi_tsutsumi.jpg */; };
+		FCFD252A1E5C97C4007A693A /* sommer_panage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD25011E5C97C4007A693A /* sommer_panage.jpg */; };
+		FCFD252B1E5C97C4007A693A /* soroush_khanlou.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFD25021E5C97C4007A693A /* soroush_khanlou.png */; };
+		FCFD252C1E5C97C4007A693A /* tatsuya_tobioka.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFD25031E5C97C4007A693A /* tatsuya_tobioka.png */; };
+		FCFD252D1E5C97C4007A693A /* yusuke_ito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFD25041E5C97C4007A693A /* yusuke_ito.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +236,48 @@
 		FCFD24D01E5C0433007A693A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		FCFD24D21E5C0433007A693A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCFD24DA1E5C0C76007A693A /* TokyoTodayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokyoTodayTableViewCell.swift; sourceTree = "<group>"; };
+		FCFD24DC1E5C97C4007A693A /* agnes_vasarhelyi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agnes_vasarhelyi.png; sourceTree = "<group>"; };
+		FCFD24DD1E5C97C4007A693A /* alexis_gallagher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alexis_gallagher.jpg; sourceTree = "<group>"; };
+		FCFD24DE1E5C97C4007A693A /* artis_birzins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = artis_birzins.jpg; sourceTree = "<group>"; };
+		FCFD24DF1E5C97C4007A693A /* brandon_williams.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brandon_williams.jpg; sourceTree = "<group>"; };
+		FCFD24E01E5C97C4007A693A /* christopher_rogers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = christopher_rogers.jpg; sourceTree = "<group>"; };
+		FCFD24E11E5C97C4007A693A /* eric_wing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eric_wing.jpg; sourceTree = "<group>"; };
+		FCFD24E21E5C97C4007A693A /* felix_krause.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = felix_krause.jpg; sourceTree = "<group>"; };
+		FCFD24E31E5C97C4007A693A /* himi_sato.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = himi_sato.jpg; sourceTree = "<group>"; };
+		FCFD24E41E5C97C4007A693A /* jon_bott.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jon_bott.jpg; sourceTree = "<group>"; };
+		FCFD24E51E5C97C4007A693A /* jon_reid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jon_reid.jpg; sourceTree = "<group>"; };
+		FCFD24E61E5C97C4007A693A /* kaoru_tachibana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kaoru_tachibana.jpg; sourceTree = "<group>"; };
+		FCFD24E71E5C97C4007A693A /* kateryna_gridina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kateryna_gridina.jpg; sourceTree = "<group>"; };
+		FCFD24E81E5C97C4007A693A /* katsumi_kishikawa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katsumi_kishikawa.jpg; sourceTree = "<group>"; };
+		FCFD24E91E5C97C4007A693A /* kazuaki_matsuo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kazuaki_matsuo.jpg; sourceTree = "<group>"; };
+		FCFD24EA1E5C97C4007A693A /* kazunobu_tasaka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kazunobu_tasaka.jpg; sourceTree = "<group>"; };
+		FCFD24EB1E5C97C4007A693A /* kohki_miki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kohki_miki.png; sourceTree = "<group>"; };
+		FCFD24EC1E5C97C4007A693A /* krzysztof_siejkowski.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = krzysztof_siejkowski.jpg; sourceTree = "<group>"; };
+		FCFD24ED1E5C97C4007A693A /* kyle_fuller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kyle_fuller.png; sourceTree = "<group>"; };
+		FCFD24EE1E5C97C4007A693A /* laura_ragone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laura_ragone.jpg; sourceTree = "<group>"; };
+		FCFD24EF1E5C97C4007A693A /* maki_sudo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maki_sudo.jpg; sourceTree = "<group>"; };
+		FCFD24F01E5C97C4007A693A /* marius_rackwitz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marius_rackwitz.jpg; sourceTree = "<group>"; };
+		FCFD24F11E5C97C4007A693A /* matt_gillingham.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = matt_gillingham.jpg; sourceTree = "<group>"; };
+		FCFD24F21E5C97C4007A693A /* meghan_kane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meghan_kane.jpg; sourceTree = "<group>"; };
+		FCFD24F31E5C97C4007A693A /* mo_kudeki.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mo_kudeki.jpg; sourceTree = "<group>"; };
+		FCFD24F41E5C97C4007A693A /* natasha_murashev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = natasha_murashev.jpg; sourceTree = "<group>"; };
+		FCFD24F51E5C97C4007A693A /* nate_cook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nate_cook.jpg; sourceTree = "<group>"; };
+		FCFD24F61E5C97C4007A693A /* nikita_lutsenko.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nikita_lutsenko.jpg; sourceTree = "<group>"; };
+		FCFD24F71E5C97C4007A693A /* nino_sakuma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nino_sakuma.jpg; sourceTree = "<group>"; };
+		FCFD24F81E5C97C4007A693A /* orta_therox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orta_therox.jpg; sourceTree = "<group>"; };
+		FCFD24F91E5C97C4007A693A /* ray_fix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ray_fix.jpg; sourceTree = "<group>"; };
+		FCFD24FA1E5C97C4007A693A /* ray_tsaihong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ray_tsaihong.jpg; sourceTree = "<group>"; };
+		FCFD24FB1E5C97C4007A693A /* rikke_moller_koblauch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rikke_moller_koblauch.jpg; sourceTree = "<group>"; };
+		FCFD24FC1E5C97C4007A693A /* satoshi_hachiya.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = satoshi_hachiya.jpg; sourceTree = "<group>"; };
+		FCFD24FD1E5C97C4007A693A /* seiyo_kurita.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seiyo_kurita.jpg; sourceTree = "<group>"; };
+		FCFD24FE1E5C97C4007A693A /* shingo_sato.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shingo_sato.jpg; sourceTree = "<group>"; };
+		FCFD24FF1E5C97C4007A693A /* shinichi_goto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shinichi_goto.png; sourceTree = "<group>"; };
+		FCFD25001E5C97C4007A693A /* shuichi_tsutsumi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shuichi_tsutsumi.jpg; sourceTree = "<group>"; };
+		FCFD25011E5C97C4007A693A /* sommer_panage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sommer_panage.jpg; sourceTree = "<group>"; };
+		FCFD25021E5C97C4007A693A /* soroush_khanlou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soroush_khanlou.png; sourceTree = "<group>"; };
+		FCFD25031E5C97C4007A693A /* tatsuya_tobioka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tatsuya_tobioka.png; sourceTree = "<group>"; };
+		FCFD25041E5C97C4007A693A /* yusuke_ito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yusuke_ito.jpg; sourceTree = "<group>"; };
+		FCFD25301E5C9E31007A693A /* try! Tokyo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "try! Tokyo.entitlements"; sourceTree = "<group>"; };
 		FEB20E5DC1FA4168A5D3BB5A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -542,12 +625,62 @@
 		FCFD24CC1E5C0433007A693A /* try! Tokyo */ = {
 			isa = PBXGroup;
 			children = (
+				FCFD25301E5C9E31007A693A /* try! Tokyo.entitlements */,
+				FCFD252F1E5C97DA007A693A /* Assets */,
 				FCFD24CD1E5C0433007A693A /* TodayViewController.swift */,
 				FCFD24CF1E5C0433007A693A /* MainInterface.storyboard */,
 				FCFD24D21E5C0433007A693A /* Info.plist */,
 				FCFD24DA1E5C0C76007A693A /* TokyoTodayTableViewCell.swift */,
 			);
 			path = "try! Tokyo";
+			sourceTree = "<group>";
+		};
+		FCFD252F1E5C97DA007A693A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FCFD24DC1E5C97C4007A693A /* agnes_vasarhelyi.png */,
+				FCFD24DD1E5C97C4007A693A /* alexis_gallagher.jpg */,
+				FCFD24DE1E5C97C4007A693A /* artis_birzins.jpg */,
+				FCFD24DF1E5C97C4007A693A /* brandon_williams.jpg */,
+				FCFD24E01E5C97C4007A693A /* christopher_rogers.jpg */,
+				FCFD24E11E5C97C4007A693A /* eric_wing.jpg */,
+				FCFD24E21E5C97C4007A693A /* felix_krause.jpg */,
+				FCFD24E31E5C97C4007A693A /* himi_sato.jpg */,
+				FCFD24E41E5C97C4007A693A /* jon_bott.jpg */,
+				FCFD24E51E5C97C4007A693A /* jon_reid.jpg */,
+				FCFD24E61E5C97C4007A693A /* kaoru_tachibana.jpg */,
+				FCFD24E71E5C97C4007A693A /* kateryna_gridina.jpg */,
+				FCFD24E81E5C97C4007A693A /* katsumi_kishikawa.jpg */,
+				FCFD24E91E5C97C4007A693A /* kazuaki_matsuo.jpg */,
+				FCFD24EA1E5C97C4007A693A /* kazunobu_tasaka.jpg */,
+				FCFD24EB1E5C97C4007A693A /* kohki_miki.png */,
+				FCFD24EC1E5C97C4007A693A /* krzysztof_siejkowski.jpg */,
+				FCFD24ED1E5C97C4007A693A /* kyle_fuller.png */,
+				FCFD24EE1E5C97C4007A693A /* laura_ragone.jpg */,
+				FCFD24EF1E5C97C4007A693A /* maki_sudo.jpg */,
+				FCFD24F01E5C97C4007A693A /* marius_rackwitz.jpg */,
+				FCFD24F11E5C97C4007A693A /* matt_gillingham.jpg */,
+				FCFD24F21E5C97C4007A693A /* meghan_kane.jpg */,
+				FCFD24F31E5C97C4007A693A /* mo_kudeki.jpg */,
+				FCFD24F41E5C97C4007A693A /* natasha_murashev.jpg */,
+				FCFD24F51E5C97C4007A693A /* nate_cook.jpg */,
+				FCFD24F61E5C97C4007A693A /* nikita_lutsenko.jpg */,
+				FCFD24F71E5C97C4007A693A /* nino_sakuma.jpg */,
+				FCFD24F81E5C97C4007A693A /* orta_therox.jpg */,
+				FCFD24F91E5C97C4007A693A /* ray_fix.jpg */,
+				FCFD24FA1E5C97C4007A693A /* ray_tsaihong.jpg */,
+				FCFD24FB1E5C97C4007A693A /* rikke_moller_koblauch.jpg */,
+				FCFD24FC1E5C97C4007A693A /* satoshi_hachiya.jpg */,
+				FCFD24FD1E5C97C4007A693A /* seiyo_kurita.jpg */,
+				FCFD24FE1E5C97C4007A693A /* shingo_sato.jpg */,
+				FCFD24FF1E5C97C4007A693A /* shinichi_goto.png */,
+				FCFD25001E5C97C4007A693A /* shuichi_tsutsumi.jpg */,
+				FCFD25011E5C97C4007A693A /* sommer_panage.jpg */,
+				FCFD25021E5C97C4007A693A /* soroush_khanlou.png */,
+				FCFD25031E5C97C4007A693A /* tatsuya_tobioka.png */,
+				FCFD25041E5C97C4007A693A /* yusuke_ito.jpg */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -666,8 +799,13 @@
 					};
 					FCFD24C81E5C0433007A693A = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6LF3GMKZAB;
+						DevelopmentTeam = W6GNU64U6Q;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -736,7 +874,48 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFD25261E5C97C4007A693A /* seiyo_kurita.jpg in Resources */,
+				FCFD25121E5C97C4007A693A /* kazuaki_matsuo.jpg in Resources */,
+				FCFD25051E5C97C4007A693A /* agnes_vasarhelyi.png in Resources */,
+				FCFD250B1E5C97C4007A693A /* felix_krause.jpg in Resources */,
+				FCFD25271E5C97C4007A693A /* shingo_sato.jpg in Resources */,
+				FCFD25081E5C97C4007A693A /* brandon_williams.jpg in Resources */,
+				FCFD251B1E5C97C4007A693A /* meghan_kane.jpg in Resources */,
 				FCFD24D11E5C0433007A693A /* MainInterface.storyboard in Resources */,
+				FCFD25131E5C97C4007A693A /* kazunobu_tasaka.jpg in Resources */,
+				FCFD25231E5C97C4007A693A /* ray_tsaihong.jpg in Resources */,
+				FCFD25091E5C97C4007A693A /* christopher_rogers.jpg in Resources */,
+				FCFD25191E5C97C4007A693A /* marius_rackwitz.jpg in Resources */,
+				FCFD251E1E5C97C4007A693A /* nate_cook.jpg in Resources */,
+				FCFD252C1E5C97C4007A693A /* tatsuya_tobioka.png in Resources */,
+				FCFD25291E5C97C4007A693A /* shuichi_tsutsumi.jpg in Resources */,
+				FCFD25171E5C97C4007A693A /* laura_ragone.jpg in Resources */,
+				FCFD250A1E5C97C4007A693A /* eric_wing.jpg in Resources */,
+				FCFD25251E5C97C4007A693A /* satoshi_hachiya.jpg in Resources */,
+				FCFD25101E5C97C4007A693A /* kateryna_gridina.jpg in Resources */,
+				FCFD252B1E5C97C4007A693A /* soroush_khanlou.png in Resources */,
+				FCFD251C1E5C97C4007A693A /* mo_kudeki.jpg in Resources */,
+				FCFD250F1E5C97C4007A693A /* kaoru_tachibana.jpg in Resources */,
+				FCFD252D1E5C97C4007A693A /* yusuke_ito.jpg in Resources */,
+				FCFD250D1E5C97C4007A693A /* jon_bott.jpg in Resources */,
+				FCFD251D1E5C97C4007A693A /* natasha_murashev.jpg in Resources */,
+				FCFD25201E5C97C4007A693A /* nino_sakuma.jpg in Resources */,
+				FCFD25281E5C97C4007A693A /* shinichi_goto.png in Resources */,
+				FCFD251A1E5C97C4007A693A /* matt_gillingham.jpg in Resources */,
+				FCFD25241E5C97C4007A693A /* rikke_moller_koblauch.jpg in Resources */,
+				FCFD251F1E5C97C4007A693A /* nikita_lutsenko.jpg in Resources */,
+				FCFD25151E5C97C4007A693A /* krzysztof_siejkowski.jpg in Resources */,
+				FCFD25211E5C97C4007A693A /* orta_therox.jpg in Resources */,
+				FCFD25141E5C97C4007A693A /* kohki_miki.png in Resources */,
+				FCFD250E1E5C97C4007A693A /* jon_reid.jpg in Resources */,
+				FCFD250C1E5C97C4007A693A /* himi_sato.jpg in Resources */,
+				FCFD25181E5C97C4007A693A /* maki_sudo.jpg in Resources */,
+				FCFD25111E5C97C4007A693A /* katsumi_kishikawa.jpg in Resources */,
+				FCFD25161E5C97C4007A693A /* kyle_fuller.png in Resources */,
+				FCFD25061E5C97C4007A693A /* alexis_gallagher.jpg in Resources */,
+				FCFD25071E5C97C4007A693A /* artis_birzins.jpg in Resources */,
+				FCFD25221E5C97C4007A693A /* ray_fix.jpg in Resources */,
+				FCFD252A1E5C97C4007A693A /* sommer_panage.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1107,13 +1286,14 @@
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_ENTITLEMENTS = "try! Tokyo/try! Tokyo.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = "try! Tokyo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.timoliver.trySwiftConf.try--Tokyo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.natashatherobot.trySwift.try--Tokyo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1126,13 +1306,14 @@
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_ENTITLEMENTS = "try! Tokyo/try! Tokyo.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = "try! Tokyo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.timoliver.trySwiftConf.try--Tokyo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.natashatherobot.trySwift.try--Tokyo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
