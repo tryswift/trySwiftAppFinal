@@ -3,7 +3,7 @@
  * REALM CONFIDENTIAL
  * __________________
  *
- *  [2011] - [2013] Realm Inc
+ *  [2011] - [2015] Realm Inc
  *  All Rights Reserved.
  *
  * NOTICE:  All information contained herein is, and remains
@@ -17,18 +17,24 @@
  * from Realm Incorporated.
  *
  **************************************************************************/
-#ifndef REALM_SYNC_VERSION_HPP
-#define REALM_SYNC_VERSION_HPP
 
-#include <realm/util/features.h>
+#include <realm/sync/history.hpp>
 
-#define REALM_SYNC_VER_MAJOR 1
-#define REALM_SYNC_VER_MINOR 1
-#define REALM_SYNC_VER_PATCH 0
-#define REALM_SYNC_PRODUCT_NAME "realm-sync"
+#ifndef REALM_SYNC_CHANGESET_COOKER_HPP
+#define REALM_SYNC_CHANGESET_COOKER_HPP
 
-#define REALM_SYNC_VER_STRING REALM_QUOTE(REALM_SYNC_VER_MAJOR) "." \
-    REALM_QUOTE(REALM_SYNC_VER_MINOR) "." REALM_QUOTE(REALM_SYNC_VER_PATCH)
-#define REALM_SYNC_VER_CHUNK "[" REALM_SYNC_PRODUCT_NAME "-" REALM_SYNC_VER_STRING "]"
+namespace realm {
+namespace sync {
 
-#endif // REALM_SYNC_VERSION_HPP
+/// Copy raw changesets unmodified.
+class TrivialChangesetCooker: public SyncHistory::ChangesetCooker {
+public:
+    bool cook_changeset(const Group&, const char* changeset,
+                        std::size_t changeset_size,
+                        util::AppendBuffer<char>&) override;
+};
+
+} // namespace sync
+} // namespace realm
+
+#endif // REALM_SYNC_CHANGESET_COOKER_HPP
