@@ -9,20 +9,55 @@
 import UIKit
 import NotificationCenter
 
-class TodayViewController: UIViewController, NCWidgetProviding {
+//MARK: UITableViewDataSource
+
+extension TodayViewController : UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing : TokyoTodayTableViewCell.self), for: indexPath) as! TokyoTodayTableViewCell
         
+        return cell
+    }
+}
+
+class TodayViewController: UIViewController, NCWidgetProviding {
+    
+    //MARK: Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: View Did Load
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let sharead = UserDefaults(suiteName: "try!Tokyo-TodayExtension")
-        // Set values
+        // Todays Extension Height
+        
+        self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        
+        // App Groups 
+        
+        let sharead = UserDefaults(suiteName: "group.com.tryTokyoTodayExtension")
+
+        // Time
+        
+        // Presentation Title
+        
+        // Speaker Image
+        
+        // Speaker Name
+        
+        // Speaker Twitter Handle
         
         sharead?.synchronize()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -35,4 +70,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         completionHandler(NCUpdateResult.newData)
     }
     
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        
+        if activeDisplayMode == .compact {
+            self.preferredContentSize = maxSize
+        }
+        else if activeDisplayMode == .expanded {
+            self.preferredContentSize = CGSize(width: 320, height: 1000)
+        }
+    }
+    
 }
+
+
+
+

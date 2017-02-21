@@ -42,8 +42,17 @@ private extension AppDelegate {
     
     func saveRealmDataToAppGroups() {
         
-        let sharead = UserDefaults(suiteName: "try!Tokyo-TodayExtension")
-        // Set values 
+        let sharead = UserDefaults(suiteName: "group.com.tryTokyoTodayExtension")
+        
+        // Time 
+        
+        // Presentation Title
+        
+        // Speaker Image 
+        
+        // Speaker Name 
+        
+        // Speaker Twitter Handle 
         
         sharead?.synchronize()
     }
