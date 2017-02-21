@@ -10,6 +10,15 @@
 		22C9804E1E5978B900C8C756 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */; };
 		22CE18D11E5A2EB6002C035F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22CE18D31E5A2EB6002C035F /* Localizable.strings */; };
 		22CE18D71E5A2F85002C035F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE18D61E5A2F85002C035F /* StringExtension.swift */; };
+		22F823D81E5BBB62003BD6BB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F823D61E5BBB62003BD6BB /* Interface.storyboard */; };
+		22F823DA1E5BBB62003BD6BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F823D91E5BBB62003BD6BB /* Assets.xcassets */; };
+		22F823E11E5BBB62003BD6BB /* try! Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 22F823E01E5BBB62003BD6BB /* try! Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		22F823E81E5BBB62003BD6BB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F823E71E5BBB62003BD6BB /* InterfaceController.swift */; };
+		22F823EA1E5BBB62003BD6BB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F823E91E5BBB62003BD6BB /* ExtensionDelegate.swift */; };
+		22F823EC1E5BBB62003BD6BB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F823EB1E5BBB62003BD6BB /* NotificationController.swift */; };
+		22F823EE1E5BBB62003BD6BB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F823ED1E5BBB62003BD6BB /* ComplicationController.swift */; };
+		22F823F01E5BBB62003BD6BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F823EF1E5BBB62003BD6BB /* Assets.xcassets */; };
+		22F823F51E5BBB62003BD6BB /* try!.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 22F823D41E5BBB62003BD6BB /* try!.app */; };
 		2E50AF345BAF3D4FC07D959B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F8855FDC17ABDFA46C086 /* QuartzCore.framework */; };
 		2E977335936DA827A6D9E87C /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0B6F88DC3156B1169287F39 /* BuddyBuildSDK.framework */; };
 		401B31312C27CB29D5A896F5 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DEC1F3C735D6F1068D803AA /* Pods_trySwift.framework */; };
@@ -22,6 +31,7 @@
 		517003D35102F78461C10908 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB20E5DC1FA4168A5D3BB5A /* CoreTelephony.framework */; };
 		828D6CB6A2E13E36F3CB9E0D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14346AF2A8784D962D2C2A7F /* CoreVideo.framework */; };
 		95AAB60A3AF87982F03E3CD7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838CADC0521E9A416B75D42 /* AssetsLibrary.framework */; };
+		D012838C02C4165B232997DE /* Pods_try_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF9DB7079715376EF7D3587 /* Pods_try_.framework */; };
 		E2567889D43BE2B22F55781E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1F9C27BCD8099DCA758F7A /* CoreMedia.framework */; };
 		F0E0044EA2AF1A7AEFB06624 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5C53D439AAF00D63047E8 /* SystemConfiguration.framework */; };
 		FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */; };
@@ -73,6 +83,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		22F823E21E5BBB62003BD6BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22F823DF1E5BBB62003BD6BB;
+			remoteInfo = "try! Extension";
+		};
+		22F823F21E5BBB62003BD6BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22F823D31E5BBB62003BD6BB;
+			remoteInfo = "try!";
+		};
 		FAFA15CD1C69D31C00FEA4EA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
@@ -89,18 +113,58 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		22F823F41E5BBB62003BD6BB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				22F823F51E5BBB62003BD6BB /* try!.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F823FB1E5BBB62003BD6BB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				22F823E11E5BBB62003BD6BB /* try! Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0838CADC0521E9A416B75D42 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		14346AF2A8784D962D2C2A7F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		168F8855FDC17ABDFA46C086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2270DD4FE5C5178411E3F566 /* Pods-try!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try!.release.xcconfig"; path = "Pods/Target Support Files/Pods-try!/Pods-try!.release.xcconfig"; sourceTree = "<group>"; };
 		22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		22CE18D21E5A2EB6002C035F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22CE18D51E5A2ECB002C035F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22CE18D61E5A2F85002C035F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		22F823D41E5BBB62003BD6BB /* try!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "try!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F823D71E5BBB62003BD6BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		22F823D91E5BBB62003BD6BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22F823DB1E5BBB62003BD6BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F823E01E5BBB62003BD6BB /* try! Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try! Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F823E61E5BBB62003BD6BB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		22F823E71E5BBB62003BD6BB /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		22F823E91E5BBB62003BD6BB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		22F823EB1E5BBB62003BD6BB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		22F823ED1E5BBB62003BD6BB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		22F823EF1E5BBB62003BD6BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22F823F11E5BBB62003BD6BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27FDA318B195E0590EDF1FBC /* Pods-try!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try!.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try!/Pods-try!.debug.xcconfig"; sourceTree = "<group>"; };
 		2E77AAF3446A13C83CAB4A77 /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		496328931D81F3560033E3C1 /* MailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailConfiguration.swift; sourceTree = "<group>"; };
 		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		4DF9DB7079715376EF7D3587 /* Pods_try_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F81AD508535BD405F98215 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6C1F9C27BCD8099DCA758F7A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		72D255599A07073CC7B5AE51 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -167,6 +231,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		22F823DD1E5BBB62003BD6BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F81C501DF7B6F6A8743E9D3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D012838C02C4165B232997DE /* Pods_try_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAFA15B51C69D31B00FEA4EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,11 +280,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22F823D51E5BBB62003BD6BB /* try! */ = {
+			isa = PBXGroup;
+			children = (
+				22F823D61E5BBB62003BD6BB /* Interface.storyboard */,
+				22F823D91E5BBB62003BD6BB /* Assets.xcassets */,
+				22F823DB1E5BBB62003BD6BB /* Info.plist */,
+			);
+			path = "try!";
+			sourceTree = "<group>";
+		};
+		22F823E41E5BBB62003BD6BB /* try! Extension */ = {
+			isa = PBXGroup;
+			children = (
+				22F823E71E5BBB62003BD6BB /* InterfaceController.swift */,
+				22F823E91E5BBB62003BD6BB /* ExtensionDelegate.swift */,
+				22F823EB1E5BBB62003BD6BB /* NotificationController.swift */,
+				22F823ED1E5BBB62003BD6BB /* ComplicationController.swift */,
+				22F823EF1E5BBB62003BD6BB /* Assets.xcassets */,
+				22F823F11E5BBB62003BD6BB /* Info.plist */,
+				22F823E51E5BBB62003BD6BB /* Supporting Files */,
+			);
+			path = "try! Extension";
+			sourceTree = "<group>";
+		};
+		22F823E51E5BBB62003BD6BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				22F823E61E5BBB62003BD6BB /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		308DA80AB790F65134E01F90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				2E77AAF3446A13C83CAB4A77 /* Pods-trySwift.debug.xcconfig */,
 				752F06FB34815EB1293CCE6B /* Pods-trySwift.release.xcconfig */,
+				27FDA318B195E0590EDF1FBC /* Pods-try!.debug.xcconfig */,
+				2270DD4FE5C5178411E3F566 /* Pods-try!.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -223,6 +336,7 @@
 				6C1F9C27BCD8099DCA758F7A /* CoreMedia.framework */,
 				14346AF2A8784D962D2C2A7F /* CoreVideo.framework */,
 				9DEC1F3C735D6F1068D803AA /* Pods_trySwift.framework */,
+				4DF9DB7079715376EF7D3587 /* Pods_try_.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -442,6 +556,8 @@
 				FAFA15BA1C69D31C00FEA4EA /* trySwift */,
 				FAFA15CF1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15DA1C69D31C00FEA4EA /* trySwiftUITests */,
+				22F823D51E5BBB62003BD6BB /* try! */,
+				22F823E41E5BBB62003BD6BB /* try! Extension */,
 				FAFA15B91C69D31C00FEA4EA /* Products */,
 				411F0B1F9D6446FAAE23A50E /* Frameworks */,
 				308DA80AB790F65134E01F90 /* Pods */,
@@ -454,6 +570,8 @@
 				FAFA15B81C69D31C00FEA4EA /* trySwift.app */,
 				FAFA15CC1C69D31C00FEA4EA /* trySwiftTests.xctest */,
 				FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */,
+				22F823D41E5BBB62003BD6BB /* try!.app */,
+				22F823E01E5BBB62003BD6BB /* try! Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -499,6 +617,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		22F823D31E5BBB62003BD6BB /* try! */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F823FC1E5BBB62003BD6BB /* Build configuration list for PBXNativeTarget "try!" */;
+			buildPhases = (
+				F551FF78806BF1DB1B1A1B00 /* [CP] Check Pods Manifest.lock */,
+				22F823D21E5BBB62003BD6BB /* Resources */,
+				22F823FB1E5BBB62003BD6BB /* Embed App Extensions */,
+				F81C501DF7B6F6A8743E9D3C /* Frameworks */,
+				9A926FC5716B2CE11BD8A483 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22F823E31E5BBB62003BD6BB /* PBXTargetDependency */,
+			);
+			name = "try!";
+			productName = "try!";
+			productReference = 22F823D41E5BBB62003BD6BB /* try!.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		22F823DF1E5BBB62003BD6BB /* try! Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F823FA1E5BBB62003BD6BB /* Build configuration list for PBXNativeTarget "try! Extension" */;
+			buildPhases = (
+				22F823DC1E5BBB62003BD6BB /* Sources */,
+				22F823DD1E5BBB62003BD6BB /* Frameworks */,
+				22F823DE1E5BBB62003BD6BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "try! Extension";
+			productName = "try! Extension";
+			productReference = 22F823E01E5BBB62003BD6BB /* try! Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		FAFA15B71C69D31B00FEA4EA /* trySwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAFA15E01C69D31C00FEA4EA /* Build configuration list for PBXNativeTarget "trySwift" */;
@@ -509,10 +664,12 @@
 				FAFA15B61C69D31B00FEA4EA /* Resources */,
 				F2987CD1ACE309E1A704885D /* [CP] Embed Pods Frameworks */,
 				A26D063FA6994D995B0BC438 /* [CP] Copy Pods Resources */,
+				22F823F41E5BBB62003BD6BB /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				22F823F31E5BBB62003BD6BB /* PBXTargetDependency */,
 			);
 			name = trySwift;
 			productName = trySwift;
@@ -561,10 +718,20 @@
 		FAFA15B01C69D31B00FEA4EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = NatashaTheRobot;
 				TargetAttributes = {
+					22F823D31E5BBB62003BD6BB = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 6LF3GMKZAB;
+						ProvisioningStyle = Automatic;
+					};
+					22F823DF1E5BBB62003BD6BB = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 6LF3GMKZAB;
+						ProvisioningStyle = Automatic;
+					};
 					FAFA15B71C69D31B00FEA4EA = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 6LF3GMKZAB;
@@ -607,11 +774,30 @@
 				FAFA15B71C69D31B00FEA4EA /* trySwift */,
 				FAFA15CB1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15D61C69D31C00FEA4EA /* trySwiftUITests */,
+				22F823D31E5BBB62003BD6BB /* try! */,
+				22F823DF1E5BBB62003BD6BB /* try! Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		22F823D21E5BBB62003BD6BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F823DA1E5BBB62003BD6BB /* Assets.xcassets in Resources */,
+				22F823D81E5BBB62003BD6BB /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F823DE1E5BBB62003BD6BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F823F01E5BBB62003BD6BB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAFA15B61C69D31B00FEA4EA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -668,6 +854,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		9A926FC5716B2CE11BD8A483 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-try!/Pods-try!-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A26D063FA6994D995B0BC438 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -698,9 +899,35 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trySwift/Pods-trySwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F551FF78806BF1DB1B1A1B00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		22F823DC1E5BBB62003BD6BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F823EC1E5BBB62003BD6BB /* NotificationController.swift in Sources */,
+				22F823EE1E5BBB62003BD6BB /* ComplicationController.swift in Sources */,
+				22F823EA1E5BBB62003BD6BB /* ExtensionDelegate.swift in Sources */,
+				22F823E81E5BBB62003BD6BB /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAFA15B41C69D31B00FEA4EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -761,6 +988,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		22F823E31E5BBB62003BD6BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22F823DF1E5BBB62003BD6BB /* try! Extension */;
+			targetProxy = 22F823E21E5BBB62003BD6BB /* PBXContainerItemProxy */;
+		};
+		22F823F31E5BBB62003BD6BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22F823D31E5BBB62003BD6BB /* try! */;
+			targetProxy = 22F823F21E5BBB62003BD6BB /* PBXContainerItemProxy */;
+		};
 		FAFA15CE1C69D31C00FEA4EA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FAFA15B71C69D31B00FEA4EA /* trySwift */;
@@ -783,6 +1020,14 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		22F823D61E5BBB62003BD6BB /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22F823D71E5BBB62003BD6BB /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		FAFA15BF1C69D31C00FEA4EA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -802,6 +1047,92 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		22F823F61E5BBB62003BD6BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27FDA318B195E0590EDF1FBC /* Pods-try!.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				IBSC_MODULE = try__Extension;
+				INFOPLIST_FILE = "try!/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		22F823F71E5BBB62003BD6BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2270DD4FE5C5178411E3F566 /* Pods-try!.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				IBSC_MODULE = try__Extension;
+				INFOPLIST_FILE = "try!/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		22F823F81E5BBB62003BD6BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				INFOPLIST_FILE = "try! Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		22F823F91E5BBB62003BD6BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				INFOPLIST_FILE = "try! Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
 		FAFA15DE1C69D31C00FEA4EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -991,6 +1322,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		22F823FA1E5BBB62003BD6BB /* Build configuration list for PBXNativeTarget "try! Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F823F81E5BBB62003BD6BB /* Debug */,
+				22F823F91E5BBB62003BD6BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		22F823FC1E5BBB62003BD6BB /* Build configuration list for PBXNativeTarget "try!" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F823F61E5BBB62003BD6BB /* Debug */,
+				22F823F71E5BBB62003BD6BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FAFA15B31C69D31B00FEA4EA /* Build configuration list for PBXProject "trySwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
