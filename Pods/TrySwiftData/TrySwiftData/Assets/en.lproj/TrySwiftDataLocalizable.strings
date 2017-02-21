@@ -1,0 +1,25 @@
+/* 
+  TrySwiftData.strings
+  Pods
+
+  Created by Tim Oliver on 2/19/17.
+
+*/
+
+"Platinum"  = "Platinum";
+"Gold"      = "Gold";
+"Silver"    = "Silver";
+"Diversity" = "Diversity";
+"Student"   = "Student";
+"Event"     = "Event";
+
+"Sponsored Demo" = "Sponsored Demo";
+"🍴 Lunch" = "🍴 Lunch";
+"☕️ Break, by %@" = "☕️ Break, by %@";
+"☕️ Break" = "☕️ Break";
+"Office Hours with %@" = "Office Hours with %@";
+"Office Hours" = "Office Hours";
+"Presentation" = "Presentation";
+"⚡️🎤 Lightning Talk" = "⚡️🎤 Lightning Talk";
+"Demo" = "Demo";
+"Q&A" = "Q&A";

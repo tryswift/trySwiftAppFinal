@@ -1,0 +1,54 @@
+PODS:
+  - AcknowList (1.2)
+  - BuddyBuildSDK (1.0.14)
+  - DynamicColor (3.2.1)
+  - Kingfisher (3.4.0)
+  - Realm (2.4.2):
+    - Realm/Headers (= 2.4.2)
+  - Realm/Headers (2.4.2)
+  - RealmSwift (2.4.2):
+    - Realm (= 2.4.2)
+  - Timepiece (1.1.0)
+  - TrySwiftData (0.1.0):
+    - RealmSwift
+    - TrySwiftData/Tokyo2017 (= 0.1.0)
+  - TrySwiftData/Tokyo2017 (0.1.0):
+    - RealmSwift
+  - TrySwiftData/Tokyo2017Lite (0.1.0):
+    - RealmSwift
+  - XLPagerTabStrip (7.0.0)
+
+DEPENDENCIES:
+  - AcknowList (~> 1.2)
+  - BuddyBuildSDK
+  - DynamicColor (~> 3.2.1)
+  - Kingfisher (~> 3.4.0)
+  - RealmSwift (~> 2.4.2)
+  - Timepiece (~> 1.1.0)
+  - TrySwiftData (from `https://github.com/tryswift/trySwiftData.git`)
+  - TrySwiftData/Tokyo2017Lite (from `https://github.com/tryswift/trySwiftData.git`)
+  - XLPagerTabStrip (~> 7.0.0)
+
+EXTERNAL SOURCES:
+  TrySwiftData:
+    :git: https://github.com/tryswift/trySwiftData.git
+
+CHECKOUT OPTIONS:
+  TrySwiftData:
+    :commit: 3823c55e5d604fc3966b6be5965ec165914d14f9
+    :git: https://github.com/tryswift/trySwiftData.git
+
+SPEC CHECKSUMS:
+  AcknowList: 18ccee4d933a153622416cce2d36e6864ec147ea
+  BuddyBuildSDK: 2b2d35a61ad7fd3645beb2d48bc5123efd869918
+  DynamicColor: 4786d650c69da6c3f2cbfe068348288ec4e5521f
+  Kingfisher: 5690cfb3d1bddf3a98d679a3a34d0b7294974ed2
+  Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
+  RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
+  Timepiece: 4190a7bc5ae1c05c87531fd75b14e17d2a017902
+  TrySwiftData: 9c8acd05db49d952e0fbb69790b01f3b7441dbe8
+  XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
+
+PODFILE CHECKSUM: e3fafb1bab1d73e6655efef8342d581716bfcd95
+
+COCOAPODS: 1.2.0
