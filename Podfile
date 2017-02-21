@@ -16,10 +16,10 @@ target 'trySwift' do
     pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
 end
 
-target 'try!' do
+target 'try! Extension' do
     platform :watchos, '3.1'
     shared_pods
-    pod 'TrySwiftData/Tokyo2017Lite', :git => 'https://github.com/tryswift/trySwiftData.git'
+    pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
 end
 
 post_install do |installer|

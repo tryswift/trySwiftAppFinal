@@ -95,7 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Realm-iOS/Realm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmSwift-iOS/RealmSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Timepiece-iOS/Timepiece.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/TrySwiftData/TrySwiftData.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TrySwiftData-iOS/TrySwiftData.framework"
   install_framework "$BUILT_PRODUCTS_DIR/XLPagerTabStrip/XLPagerTabStrip.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -105,7 +105,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Realm-iOS/Realm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmSwift-iOS/RealmSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Timepiece-iOS/Timepiece.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/TrySwiftData/TrySwiftData.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TrySwiftData-iOS/TrySwiftData.framework"
   install_framework "$BUILT_PRODUCTS_DIR/XLPagerTabStrip/XLPagerTabStrip.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

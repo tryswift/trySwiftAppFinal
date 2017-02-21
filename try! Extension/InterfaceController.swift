@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import TrySwiftData
 
 
 class InterfaceController: WKInterfaceController {
