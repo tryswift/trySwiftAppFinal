@@ -70,6 +70,10 @@
 		FAFA15C61C69D31C00FEA4EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C41C69D31C00FEA4EA /* LaunchScreen.storyboard */; };
 		FAFA15D11C69D31C00FEA4EA /* trySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15D01C69D31C00FEA4EA /* trySwiftTests.swift */; };
 		FAFA15DC1C69D31C00FEA4EA /* trySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15DB1C69D31C00FEA4EA /* trySwiftUITests.swift */; };
+		FCFD24CB1E5C0433007A693A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFD24CA1E5C0433007A693A /* NotificationCenter.framework */; };
+		FCFD24CE1E5C0433007A693A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFD24CD1E5C0433007A693A /* TodayViewController.swift */; };
+		FCFD24D11E5C0433007A693A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFD24CF1E5C0433007A693A /* MainInterface.storyboard */; };
+		FCFD24D51E5C0433007A693A /* try! Tokyo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCFD24C91E5C0433007A693A /* try! Tokyo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +91,28 @@
 			remoteGlobalIDString = FAFA15B71C69D31B00FEA4EA;
 			remoteInfo = trySwift;
 		};
+		FCFD24D31E5C0433007A693A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAFA15B01C69D31B00FEA4EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCFD24C81E5C0433007A693A;
+			remoteInfo = "try! Tokyo";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FCFD24D91E5C0433007A693A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FCFD24D51E5C0433007A693A /* try! Tokyo.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0838CADC0521E9A416B75D42 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -163,6 +188,11 @@
 		FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trySwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15DB1C69D31C00FEA4EA /* trySwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trySwiftUITests.swift; sourceTree = "<group>"; };
 		FAFA15DD1C69D31C00FEA4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCFD24C91E5C0433007A693A /* try! Tokyo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try! Tokyo.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCFD24CA1E5C0433007A693A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		FCFD24CD1E5C0433007A693A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		FCFD24D01E5C0433007A693A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		FCFD24D21E5C0433007A693A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEB20E5DC1FA4168A5D3BB5A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -198,6 +228,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCFD24C61E5C0433007A693A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCFD24CB1E5C0433007A693A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -223,6 +261,7 @@
 				6C1F9C27BCD8099DCA758F7A /* CoreMedia.framework */,
 				14346AF2A8784D962D2C2A7F /* CoreVideo.framework */,
 				9DEC1F3C735D6F1068D803AA /* Pods_trySwift.framework */,
+				FCFD24CA1E5C0433007A693A /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -442,6 +481,7 @@
 				FAFA15BA1C69D31C00FEA4EA /* trySwift */,
 				FAFA15CF1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15DA1C69D31C00FEA4EA /* trySwiftUITests */,
+				FCFD24CC1E5C0433007A693A /* try! Tokyo */,
 				FAFA15B91C69D31C00FEA4EA /* Products */,
 				411F0B1F9D6446FAAE23A50E /* Frameworks */,
 				308DA80AB790F65134E01F90 /* Pods */,
@@ -454,6 +494,7 @@
 				FAFA15B81C69D31C00FEA4EA /* trySwift.app */,
 				FAFA15CC1C69D31C00FEA4EA /* trySwiftTests.xctest */,
 				FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */,
+				FCFD24C91E5C0433007A693A /* try! Tokyo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -496,6 +537,16 @@
 			path = trySwiftUITests;
 			sourceTree = "<group>";
 		};
+		FCFD24CC1E5C0433007A693A /* try! Tokyo */ = {
+			isa = PBXGroup;
+			children = (
+				FCFD24CD1E5C0433007A693A /* TodayViewController.swift */,
+				FCFD24CF1E5C0433007A693A /* MainInterface.storyboard */,
+				FCFD24D21E5C0433007A693A /* Info.plist */,
+			);
+			path = "try! Tokyo";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -509,10 +560,12 @@
 				FAFA15B61C69D31B00FEA4EA /* Resources */,
 				F2987CD1ACE309E1A704885D /* [CP] Embed Pods Frameworks */,
 				A26D063FA6994D995B0BC438 /* [CP] Copy Pods Resources */,
+				FCFD24D91E5C0433007A693A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FCFD24D41E5C0433007A693A /* PBXTargetDependency */,
 			);
 			name = trySwift;
 			productName = trySwift;
@@ -555,21 +608,40 @@
 			productReference = FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FCFD24C81E5C0433007A693A /* try! Tokyo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCFD24D81E5C0433007A693A /* Build configuration list for PBXNativeTarget "try! Tokyo" */;
+			buildPhases = (
+				FCFD24C51E5C0433007A693A /* Sources */,
+				FCFD24C61E5C0433007A693A /* Frameworks */,
+				FCFD24C71E5C0433007A693A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "try! Tokyo";
+			productName = "try! Tokyo";
+			productReference = FCFD24C91E5C0433007A693A /* try! Tokyo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		FAFA15B01C69D31B00FEA4EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = NatashaTheRobot;
 				TargetAttributes = {
 					FAFA15B71C69D31B00FEA4EA = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 6LF3GMKZAB;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -587,6 +659,11 @@
 						CreatedOnToolsVersion = 7.2.1;
 						LastSwiftMigration = 0800;
 						TestTargetID = FAFA15B71C69D31B00FEA4EA;
+					};
+					FCFD24C81E5C0433007A693A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6LF3GMKZAB;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -607,6 +684,7 @@
 				FAFA15B71C69D31B00FEA4EA /* trySwift */,
 				FAFA15CB1C69D31C00FEA4EA /* trySwiftTests */,
 				FAFA15D61C69D31C00FEA4EA /* trySwiftUITests */,
+				FCFD24C81E5C0433007A693A /* try! Tokyo */,
 			);
 		};
 /* End PBXProject section */
@@ -647,6 +725,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCFD24C71E5C0433007A693A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCFD24D11E5C0433007A693A /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,6 +844,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCFD24C51E5C0433007A693A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCFD24CE1E5C0433007A693A /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -770,6 +864,11 @@
 			isa = PBXTargetDependency;
 			target = FAFA15B71C69D31B00FEA4EA /* trySwift */;
 			targetProxy = FAFA15D81C69D31C00FEA4EA /* PBXContainerItemProxy */;
+		};
+		FCFD24D41E5C0433007A693A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCFD24C81E5C0433007A693A /* try! Tokyo */;
+			targetProxy = FCFD24D31E5C0433007A693A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -797,6 +896,14 @@
 				FAFA15C51C69D31C00FEA4EA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FCFD24CF1E5C0433007A693A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCFD24D01E5C0433007A693A /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -897,12 +1004,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E77AAF3446A13C83CAB4A77 /* Pods-trySwift.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -919,12 +1027,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 752F06FB34815EB1293CCE6B /* Pods-trySwift.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -988,6 +1097,43 @@
 			};
 			name = Release;
 		};
+		FCFD24D61E5C0433007A693A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				INFOPLIST_FILE = "try! Tokyo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.timoliver.trySwiftConf.try--Tokyo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FCFD24D71E5C0433007A693A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				INFOPLIST_FILE = "try! Tokyo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.timoliver.trySwiftConf.try--Tokyo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1026,6 +1172,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		FCFD24D81E5C0433007A693A /* Build configuration list for PBXNativeTarget "try! Tokyo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCFD24D61E5C0433007A693A /* Debug */,
+				FCFD24D71E5C0433007A693A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

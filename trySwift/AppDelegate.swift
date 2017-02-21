@@ -11,6 +11,7 @@ import CloudKit
 import UserNotifications
 import TrySwiftData
 import Timepiece
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,6 +39,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 private extension AppDelegate {
+    
+    func saveRealmDataToAppGroups() {
+        
+        let sharead = UserDefaults(suiteName: "try!Tokyo-TodayExtension")
+        // Set values 
+        
+        sharead?.synchronize()
+    }
     
     func configureStyling() {
                 
