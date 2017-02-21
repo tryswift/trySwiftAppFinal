@@ -14,8 +14,6 @@ PODS:
     - TrySwiftData/Tokyo2017 (= 0.1.0)
   - TrySwiftData/Tokyo2017 (0.1.0):
     - RealmSwift
-  - TrySwiftData/Tokyo2017Lite (0.1.0):
-    - RealmSwift
   - XLPagerTabStrip (7.0.0)
 
 DEPENDENCIES:
@@ -26,7 +24,6 @@ DEPENDENCIES:
   - RealmSwift (~> 2.4.2)
   - Timepiece (~> 1.1.0)
   - TrySwiftData (from `https://github.com/tryswift/trySwiftData.git`)
-  - TrySwiftData/Tokyo2017Lite (from `https://github.com/tryswift/trySwiftData.git`)
   - XLPagerTabStrip (~> 7.0.0)
 
 EXTERNAL SOURCES:
@@ -49,6 +46,6 @@ SPEC CHECKSUMS:
   TrySwiftData: 9c8acd05db49d952e0fbb69790b01f3b7441dbe8
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: e3fafb1bab1d73e6655efef8342d581716bfcd95
+PODFILE CHECKSUM: 7415226655e65f68570e622ec0a768b67b8da472
 
 COCOAPODS: 1.2.0

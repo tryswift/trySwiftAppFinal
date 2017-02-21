@@ -1,0 +1,6 @@
+framework module TrySwiftData {
+  umbrella header "TrySwiftData-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
