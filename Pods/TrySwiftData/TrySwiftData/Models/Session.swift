@@ -62,12 +62,12 @@ public class Session: Object {
             if let event = event {
                 return event.localizedTitle
             }
-            return nil
+            return localizedString(for: title ?? "", japaneseString: titleJP)
         case .talk, .lightningTalk:
             if let presentation = presentation {
                 return presentation.localizedTitle
             }
-            return nil
+            return localizedString(for: title ?? "", japaneseString: titleJP)
         case .sponsoredDemo:
             return "Sponsored Demo".localized()
         case .coffeeBreak:
@@ -83,7 +83,7 @@ public class Session: Object {
             }
             return "Office Hours".localized()
         default:
-            return localizedString(for: title ?? "", japaneseString: titleJP)
+            return localizedString(for: title ?? " ", japaneseString: titleJP)
         }
     }
 
