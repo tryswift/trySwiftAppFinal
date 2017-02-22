@@ -43,7 +43,9 @@ extension Date {
     }
 
     fileprivate var calendar: Calendar {
-        return Calendar.current
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        return calendar
     }
 
     fileprivate var components: DateComponents {

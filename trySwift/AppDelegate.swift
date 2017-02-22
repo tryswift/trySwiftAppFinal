@@ -25,9 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
 
         WatchSessionManager.sharedManager.startSession()
-        
+
+        NSTimeZone.default = TimeZone(abbreviation: "UTC")!
+
         configureStyling()
-        
+
         return true
     }
     
