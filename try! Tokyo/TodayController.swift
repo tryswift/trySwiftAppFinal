@@ -7,29 +7,88 @@
 //
 
 import UIKit
+import Foundation
+import NotificationCenter
 
-class TodayController: UIViewController {
+class TodayController: UIViewController, NCWidgetProviding {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // Load data from iOS
+
+        self.extractDataFromUserDefaults()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func extractDataFromUserDefaults() {
+        
+         if let shared = UserDefaults(suiteName: "group.com.tryTokyoTodaysExtension"), let extensionData = shared.value(forKey: "shared") as? [[String : AnyObject]] {
+            
+            extensionData.forEach({ dict in
+                
+                if let startTime = dict["startTime"] as? Date, let endTime = dict["endTime"] as? Date, let _ = dict["sessions"] as? [String : String] {
+                    
+                    print("\(startTime) || \(endTime)")
+                    
+                }
+            })
+        }
+    }
     
+    
+    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        // Perform any setup necessary in order to update the view.
+        
+        // If an error is encountered, use NCUpdateResult.Failed
+        // If there's no update required, use NCUpdateResult.NoData
+        // If there's an update, use NCUpdateResult.NewData
+        
+        completionHandler(NCUpdateResult.newData)
+    }
+    
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        
+        if activeDisplayMode == .compact {
+            self.preferredContentSize = maxSize
+            
+            // Hide
+            
+        }
+        else if activeDisplayMode == .expanded {
+            self.preferredContentSize = CGSize(width: 320, height: 342)
+            
+            // Unhide
+            
+        }
+    }
+    
+    func convertingToEachUnit(date : Date) -> (year : Int, month : Int, day : Int, hour : Int, minute : Int) {
+        
+        let calendar = NSCalendar.current
+        let year = calendar.component(.year, from: date as Date)
+        let month = calendar.component(.month, from: date as Date)
+        let day = calendar.component(.day, from: date as Date)
+        let hour = calendar.component(.hour, from: date as Date)
+        let minute = calendar.component(.minute, from: date as Date)
+        
+        return (year : year, month : month, day : day, hour : hour, minute : minute)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
