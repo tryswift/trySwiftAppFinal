@@ -35,6 +35,7 @@
 		FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */; };
 		FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */; };
 		FA20176B1D69D81600B6E158 /* WifiInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */; };
+		FA36B7071E5DA3970022E6A9 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36B7061E5DA3970022E6A9 /* DateFormatterExtension.swift */; };
 		FA39E8C71C6AB7640074B6BE /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */; };
 		FA39E8CA1C6AE4080074B6BE /* NavTabButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */; };
 		FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */; };
@@ -174,6 +175,7 @@
 		FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerDetailTableViewController.swift; sourceTree = "<group>"; };
 		FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiInfoTableViewCell.swift; sourceTree = "<group>"; };
 		FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiInfoTableViewCell.xib; sourceTree = "<group>"; };
+		FA36B7061E5DA3970022E6A9 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		FA39E8C61C6AB7640074B6BE /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		FA39E8C91C6AE4080074B6BE /* NavTabButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavTabButtonCell.xib; sourceTree = "<group>"; };
 		FA39E8D11C6AFCCA0074B6BE /* SessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsTableViewController.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 				FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */,
 				22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */,
 				22CE18D61E5A2F85002C035F /* StringExtension.swift */,
+				FA36B7061E5DA3970022E6A9 /* DateFormatterExtension.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -962,6 +965,7 @@
 			files = (
 				499BD62A1D05910200E74061 /* Twitter.swift in Sources */,
 				FA39E90F1C6C81870074B6BE /* SponsorsViewController.swift in Sources */,
+				FA36B7071E5DA3970022E6A9 /* DateFormatterExtension.swift in Sources */,
 				FAA54F141D9130F900EC9E80 /* UITableViewExtension.swift in Sources */,
 				FABA73BE1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift in Sources */,
 				FAF1DE151D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift in Sources */,

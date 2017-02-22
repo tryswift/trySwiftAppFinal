@@ -13,17 +13,6 @@ import TrySwiftData
 class SessionsTableViewController: UITableViewController {
     
     var conferenceDay: ConferenceDay
-    lazy var sessionDateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "**Session.Time**".localized()
-        return dateFormatter
-    }()
-
-    lazy var dayDateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "**Conference.Date**".localized()
-        return dateFormatter
-    }()
 
     fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
 
@@ -77,6 +66,7 @@ extension SessionsTableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let session = conferenceDay.sessionBlocks[section]
+        let sessionDateFormatter = DateFormatter.sessionDateFormatter
         let startString = sessionDateFormatter.string(from: session.startTime)
         let endString = sessionDateFormatter.string(from: session.endTime)
         return "\(startString) - \(endString)"
@@ -136,7 +126,7 @@ extension SessionsTableViewController {
 
 extension SessionsTableViewController: IndicatorInfoProvider {
     public func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: dayDateFormatter.string(from: conferenceDay.date))
+        return IndicatorInfo(title: DateFormatter.dayDateFormatter.string(from: conferenceDay.date))
     }
 }
 
