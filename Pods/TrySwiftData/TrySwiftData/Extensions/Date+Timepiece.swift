@@ -43,7 +43,9 @@ extension Date {
     }
 
     fileprivate var calendar: Calendar {
-        return Calendar.current
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        return calendar
     }
 
     fileprivate var components: DateComponents {

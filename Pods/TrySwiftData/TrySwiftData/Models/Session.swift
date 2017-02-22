@@ -192,6 +192,16 @@ public class Session: Object {
             }
     }
 
+    /** Presentation Summary */
+    public var presentationSummary: String {
+        switch self.type {
+
+        case .talk, .lightningTalk:
+            return presentation!.localizedSummary
+        default : return Conference.current.localizedDescription
+        }
+    }
+    
     /** Whether this type of session requires a new view controller to display more information */
     public var selectable: Bool {
         switch self.type {

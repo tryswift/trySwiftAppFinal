@@ -61,9 +61,13 @@ private extension AppDelegate {
             
             if let session = value.sessions.first {
                 
-                speakerDictionary["title"] = session.presentation?.localizedTitle
-                speakerDictionary["name"] = session.presentation?.speaker?.name
-                speakerDictionary["twitter"] = session.presentation?.speaker?.twitter
+                speakerDictionary["title"] = session.formattedTitle
+                speakerDictionary["subTitle"] = session.formattedSubtitle
+                speakerDictionary["logoURL"] = session.logoURL.absoluteString
+                speakerDictionary["sessionDescription"] = session.sessionDescription
+                speakerDictionary["twitter"] = session.twitter
+                speakerDictionary["presentationSummary"] = session.presentationSummary
+
             }
             
             extensionData.append([
