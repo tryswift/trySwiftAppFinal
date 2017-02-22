@@ -64,8 +64,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         } else if Date() > lastSession.endTime as Date {
             let tmpl = CLKComplicationTemplateModularLargeStandardBody()
             
-            tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! NYC")
-            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🗽🐥🎉")
+            tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! Tokyo")
+            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🗼🐥🎉")
             tmpl.body2TextProvider = CLKTimeIntervalTextProvider(start: firstSession.startTime as Date, end: lastSession.endTime as Date)
             let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tmpl)
             handler(timelineEntry)
@@ -122,7 +122,7 @@ fileprivate extension ComplicationController {
     func templateForSession(_ sessionBlock: SessionBlock) -> CLKComplicationTemplate {
         let tmpl = CLKComplicationTemplateModularLargeStandardBody()
         
-        tmpl.headerTextProvider = CLKTimeIntervalTextProvider(start: sessionBlock.startTime as Date, end: sessionBlock.endTime as Date)
+        tmpl.headerTextProvider = CLKTimeIntervalTextProvider(start: sessionBlock.startTime as Date, end: sessionBlock.endTime as Date, timeZone: TimeZone(abbreviation: "UTC")!)
         
         let session = sessionBlock.sessions.first!
         tmpl.body1TextProvider = CLKSimpleTextProvider(text: session.formattedTitle ?? session.title ?? "try! Swift")
