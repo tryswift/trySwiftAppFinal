@@ -7,11 +7,14 @@
 //
 
 import WatchKit
+import Foundation
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        
+        NSTimeZone.default = TimeZone(abbreviation: "UTC")!
     }
 
     func applicationDidBecomeActive() {
