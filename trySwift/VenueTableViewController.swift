@@ -47,7 +47,7 @@ extension VenueTableViewController {
             return cell
         case .address:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
-            //cell.configure(withAttributedText: venue.address)
+            cell.configure(withText: venue.address)
             return cell
         case .map:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as MapTableViewCell
