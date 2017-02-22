@@ -31,7 +31,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>co.timoliver.trySwiftConf.watchkitapp</string>
+			<string>com.natashatherobot.trySwift.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>

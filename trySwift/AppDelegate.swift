@@ -78,6 +78,19 @@ private extension AppDelegate {
         
         shared?.set(extensionData, forKey: "extensionData")
         shared?.synchronize()
+        
+        
+        let fileManager = FileManager.default
+        if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.tryTokyoTodaysExtension") {
+            
+//            let newDirectory = directory.URLByAppendingPathComponent("MyDirectory")
+//            try! fileManager.createDirectoryAtURL(newDirectory, withIntermediateDirectories: false, attributes: nil)
+            
+            
+            
+        }
+        
+        
     }
     
     func configureStyling() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Id-Nc-yuI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LtN-0K-VPa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,24 +10,107 @@
     </dependencies>
     <scenes>
         <!--Today Controller-->
-        <scene sceneID="U5O-5b-hhh">
+        <scene sceneID="aML-pL-Dvo">
             <objects>
-                <viewController storyboardIdentifier="TodayController" id="5Id-Nc-yuI" customClass="TodayController" customModule="try__Tokyo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TodayController" id="LtN-0K-VPa" customClass="TodayController" customModule="try__Tokyo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6JI-zp-1mo"/>
-                        <viewControllerLayoutGuide type="bottom" id="NEV-9J-Uf9"/>
+                        <viewControllerLayoutGuide type="top" id="feY-Rd-LLl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uhx-02-bfQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4WV-wR-Ccp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="kcO-iG-O38">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="342"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:00 - 02:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIb-H5-IpE">
+                                <rect key="frame" x="10" y="0.0" width="300" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="pGV-2d-kSn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extending Xcode 8 programming guide Extending Xcode 8 programming guide  programming guide " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBs-uY-04x">
+                                <rect key="frame" x="10" y="40" width="300" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alvin Varghese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Oc-dq-p35">
+                                <rect key="frame" x="96" y="129" width="214" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="6K9-xm-Baa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@alvinvarghese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4I-Vd-A7T">
+                                <rect key="frame" x="96" y="162" width="206" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="2Ec-tC-bFc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RvP-kc-YDV">
+                                <rect key="frame" x="10" y="119" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="050-uD-dDw"/>
+                                    <constraint firstAttribute="height" constant="80" id="cF7-Ec-Gnp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ2-1o-auA">
+                                <rect key="frame" x="10" y="207" width="300" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="15C-XZ-Mhc"/>
+                                </constraints>
+                                <string key="text">Feeling he was living too extravagant of a lifestyle of ramen and subsidized bus passes, Eric Wing graduated (kicking and screaming) from the University of California at San Diego with a Masters degree n Computer Engineering just days before 9/11. In the following quest for free food, he worked a wide range of jobs in the field from automated testing on orbiting satellite systems to scientific visualization with a variety of different operating systems and programming languages. But in a stroke of genius (actually, it was more likely just a stroke), he figured out how he could work even harder for no money and started working on open source projects. He has been a contributor to projects such as SDL (Simple DirectMedia Layer), OpenSceneGraph, and LuaCocoa. And when he was offered a co-authorship of Beginning iPhone Games Development, how could he possibly refuse the idea of even more hard work for virtually no pay? Then in a flash of brilliance (or more likely electrocution performing an ill-advised hardware upgrade), he realized he could top himself doing startups with their relentless amount of work and possible financial losses. He became the Chief Architect for Corona SDK and then co-founder of Lanica building a native game engine for Appcelerator. And now he is working on his craziest endeavor yet, Blurrr SDK.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="k4I-Vd-A7T" secondAttribute="trailing" constant="18" id="3rJ-Ax-Dj9"/>
+                            <constraint firstItem="uBs-uY-04x" firstAttribute="top" secondItem="feY-Rd-LLl" secondAttribute="bottom" constant="40" id="6KR-Kq-6Me"/>
+                            <constraint firstItem="RvP-kc-YDV" firstAttribute="leading" secondItem="kcO-iG-O38" secondAttribute="leading" constant="10" id="6d1-O3-fmk"/>
+                            <constraint firstAttribute="trailing" secondItem="1Oc-dq-p35" secondAttribute="trailing" constant="10" id="AMd-5r-Dz6"/>
+                            <constraint firstItem="mIb-H5-IpE" firstAttribute="leading" secondItem="kcO-iG-O38" secondAttribute="leading" constant="10" id="B6o-cX-V31"/>
+                            <constraint firstItem="k4I-Vd-A7T" firstAttribute="leading" secondItem="RvP-kc-YDV" secondAttribute="trailing" constant="6" id="HId-Mr-Yf2"/>
+                            <constraint firstItem="k4I-Vd-A7T" firstAttribute="top" secondItem="1Oc-dq-p35" secondAttribute="bottom" constant="-8" id="IKq-ti-kPj"/>
+                            <constraint firstAttribute="trailing" secondItem="mIb-H5-IpE" secondAttribute="trailing" constant="10" id="RJV-n6-I1J"/>
+                            <constraint firstItem="RvP-kc-YDV" firstAttribute="top" secondItem="uBs-uY-04x" secondAttribute="bottom" constant="18" id="YYX-ip-APg"/>
+                            <constraint firstItem="RQ2-1o-auA" firstAttribute="top" secondItem="k4I-Vd-A7T" secondAttribute="bottom" constant="18" id="b87-nL-rHS"/>
+                            <constraint firstItem="1Oc-dq-p35" firstAttribute="leading" secondItem="RvP-kc-YDV" secondAttribute="trailing" constant="6" id="c2p-mr-nSY"/>
+                            <constraint firstItem="RQ2-1o-auA" firstAttribute="top" secondItem="RvP-kc-YDV" secondAttribute="bottom" constant="8" id="evq-SO-NuQ"/>
+                            <constraint firstAttribute="trailing" secondItem="RQ2-1o-auA" secondAttribute="trailing" constant="10" id="fZw-HW-s2j"/>
+                            <constraint firstItem="Uhx-02-bfQ" firstAttribute="top" secondItem="RQ2-1o-auA" secondAttribute="bottom" constant="8" id="l7G-bh-Nns"/>
+                            <constraint firstItem="uBs-uY-04x" firstAttribute="leading" secondItem="kcO-iG-O38" secondAttribute="leading" constant="10" id="m8O-nJ-6JK"/>
+                            <constraint firstAttribute="trailing" secondItem="uBs-uY-04x" secondAttribute="trailing" constant="10" id="org-vL-Mtq"/>
+                            <constraint firstItem="mIb-H5-IpE" firstAttribute="top" secondItem="feY-Rd-LLl" secondAttribute="bottom" id="slZ-ah-vpi"/>
+                            <constraint firstItem="RQ2-1o-auA" firstAttribute="leading" secondItem="kcO-iG-O38" secondAttribute="leading" constant="10" id="wvh-Hc-okz"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="400"/>
+                    <size key="freeformSize" width="320" height="342"/>
+                    <connections>
+                        <outlet property="displayPicture" destination="RvP-kc-YDV" id="tmE-hd-mLu"/>
+                        <outlet property="formattedSubTitle" destination="1Oc-dq-p35" id="OXh-Ut-Czp"/>
+                        <outlet property="formattedTitle" destination="uBs-uY-04x" id="ihN-OZ-ue4"/>
+                        <outlet property="presentationSummay" destination="RQ2-1o-auA" id="Zis-km-6C1"/>
+                        <outlet property="time" destination="mIb-H5-IpE" id="MhK-5n-mX7"/>
+                        <outlet property="twitter" destination="k4I-Vd-A7T" id="yAO-O9-vo9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mrZ-N9-irM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mTC-OB-pFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-122" y="188"/>
+            <point key="canvasLocation" x="-243" y="168"/>
         </scene>
     </scenes>
 </document>

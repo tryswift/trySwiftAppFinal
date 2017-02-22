@@ -72,11 +72,11 @@ public class Session: Object {
             return "Sponsored Demo".localized()
         case .coffeeBreak:
             if let sponsor = sponsor {
-                return String(format: "☕️ Break, by %@".localized(), sponsor.name)
+                return String(format: "Coffee Break, by %@".localized(), sponsor.name)
             }
-            return "☕️ Break".localized()
+            return "Coffee Break".localized()
         case .lunch:
-            return "🍴 Lunch".localized()
+            return "Lunch".localized()
         case .officeHours:
             if let speaker = presentation?.speaker?.localizedName {
                 return String(format: "Office Hours with %@".localized(), speaker)
@@ -192,6 +192,16 @@ public class Session: Object {
             }
     }
 
+    /** Presentation Summary */
+    public var presentationSummary: String {
+        switch self.type {
+
+        case .talk, .lightningTalk:
+            return presentation!.localizedSummary
+        default : return Conference.current.localizedDescription
+        }
+    }
+    
     /** Whether this type of session requires a new view controller to display more information */
     public var selectable: Bool {
         switch self.type {

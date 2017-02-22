@@ -12,36 +12,82 @@ import NotificationCenter
 
 class TodayController: UIViewController, NCWidgetProviding {
     
+    //MARK: Outlets
+    
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var formattedTitle: UILabel!
+    @IBOutlet weak var displayPicture: UIImageView!
+    @IBOutlet weak var formattedSubTitle: UILabel!
+    @IBOutlet weak var twitter: UILabel!
+    @IBOutlet weak var presentationSummay: UILabel!
+    
+   // MARK: Local Variables
+    
+    lazy var sessionDateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        dateFormatter.dateFormat = "h:mm a"
+        return dateFormatter
+    }()
+    
+    //MARK: View Life Cycle
+    
+    // View Will Appear
+    
     override func viewWillAppear(_ animated: Bool) {
         
         // Load data from iOS
-
+        
         self.extractDataFromUserDefaults()
     }
+    
+    // View Did Load 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
 
+        self.displayPicture.layer.cornerRadius = self.displayPicture.frame.size.width / 2
+        self.displayPicture.clipsToBounds = true
     }
     
+    // Get data from iOS using App Groups 
     
     func extractDataFromUserDefaults() {
         
-         if let shared = UserDefaults(suiteName: "group.com.tryTokyoTodaysExtension"), let extensionData = shared.value(forKey: "shared") as? [[String : AnyObject]] {
+         if let shared = UserDefaults(suiteName: "group.com.tryTokyoTodaysExtension"), let extensionData = shared.value(forKey: "extensionData") as? [[String : AnyObject]] {
             
-            extensionData.forEach({ dict in
+            if let dict = extensionData.first {
                 
-                if let startTime = dict["startTime"] as? Date, let endTime = dict["endTime"] as? Date, let _ = dict["sessions"] as? [String : String] {
+                if let startTime = dict["startTime"] as? Date, let endTime = dict["endTime"] as? Date, let session = dict["sessions"] as? [String : String] {
                     
-                    print("\(startTime) || \(endTime)")
+                    // Time 
                     
+                    self.time.text = "\(self.sessionDateFormatter.string(from: startTime)) - \(self.sessionDateFormatter.string(from: endTime))"
+                    
+                    // Formatted Title
+                    
+                    self.formattedTitle.text = session["title"]
+                    
+                    // Formattted Subtitle 
+                    
+                    self.formattedSubTitle.text = session["subTitle"]
+                    
+                    print(session["sessionDescription"])
+                    print(session["logoURL"])
+                    
+                    // Twiiter 
+                    
+                    self.twitter.text = session["twitter"]
+                    
+                    // Presentation Summary 
+                    
+                    self.presentationSummay.text = session["presentationSummary"]
                 }
-            })
+            }
         }
     }
-    
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.

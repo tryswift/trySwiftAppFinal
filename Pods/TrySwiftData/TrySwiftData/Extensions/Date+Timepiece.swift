@@ -43,8 +43,8 @@ extension Date {
     }
 
     fileprivate var calendar: Calendar {
-        var calendar = Calendar.current
-        calendar.timeZone = TimeZone(abbreviation: "UTC")!
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
         return calendar
     }
 
