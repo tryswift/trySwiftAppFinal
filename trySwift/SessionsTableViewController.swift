@@ -90,27 +90,44 @@ extension SessionsTableViewController {
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
         switch session.type {
         case .talk:
-            let sessionDetailsVC = sessionDetails(session.presentation!, session: session)
-            navigationController?.pushViewController(sessionDetailsVC, animated: true)
+            if let presentation = session.presentation {
+                let sessionDetailsVC = sessionDetails(presentation, session: session)
+                navigationController?.pushViewController(sessionDetailsVC, animated: true)
+            }
+            break
         case .officeHours:
-            let officeHoursDetailVC = officeHourDetails(session.presentation!.speaker!, session: session)
-            navigationController?.pushViewController(officeHoursDetailVC, animated: true)
+            if let speaker = session.presentation?.speaker {
+                let officeHoursDetailVC = officeHourDetails(speaker, session: session)
+                navigationController?.pushViewController(officeHoursDetailVC, animated: true)
+            }
+            break
         case .workshop:
-            let webDisplayVC = webDisplay(session.event!)
-            navigationController?.pushViewController(webDisplayVC, animated: true)
+            if let event = session.event {
+                let webDisplayVC = webDisplay(event)
+                navigationController?.pushViewController(webDisplayVC, animated: true)
+            }
+            break
         case .meetup:
-            let webDisplayVC = webDisplay(session.event!)
-            navigationController?.pushViewController(webDisplayVC, animated: true)
+            if let event = session.event {
+                let webDisplayVC = webDisplay(event)
+                navigationController?.pushViewController(webDisplayVC, animated: true)
+            }
+            break
         case .coffeeBreak:
             guard let sponsor = session.sponsor else { break }
             let webDisplayVC = webDisplay(sponsor)
             navigationController?.pushViewController(webDisplayVC, animated: true)
         case .sponsoredDemo:
-            let webDisplayVC = webDisplay(session.sponsor!)
-            navigationController?.pushViewController(webDisplayVC, animated: true)
+            if let sponsor = session.sponsor {
+                let webDisplayVC = webDisplay(sponsor)
+                navigationController?.pushViewController(webDisplayVC, animated: true)
+            }
+            break
         case .party:
-            let venueVC = venueDetails(session.venue!)
-            navigationController?.pushViewController(venueVC, animated: true)
+            if let venue = session.venue {
+                let venueVC = venueDetails(venue)
+                navigationController?.pushViewController(venueVC, animated: true)
+            }
         default:
             break
         }
