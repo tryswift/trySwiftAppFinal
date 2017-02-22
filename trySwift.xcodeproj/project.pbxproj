@@ -126,6 +126,15 @@
 		FCFAD0961E5D959A00C41C1A /* soroush_khanlou.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD06D1E5D959A00C41C1A /* soroush_khanlou.png */; };
 		FCFAD0971E5D959A00C41C1A /* tatsuya_tobioka.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD06E1E5D959A00C41C1A /* tatsuya_tobioka.png */; };
 		FCFAD0981E5D959A00C41C1A /* yusuke_ito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD06F1E5D959A00C41C1A /* yusuke_ito.jpg */; };
+		FCFAD0A41E5DBA6700C41C1A /* announce1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD09B1E5DBA6700C41C1A /* announce1.png */; };
+		FCFAD0A51E5DBA6700C41C1A /* announce2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD09C1E5DBA6700C41C1A /* announce2.png */; };
+		FCFAD0A61E5DBA6700C41C1A /* breakfast.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD09D1E5DBA6700C41C1A /* breakfast.png */; };
+		FCFAD0A71E5DBA6700C41C1A /* breaktime1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD09E1E5DBA6700C41C1A /* breaktime1.png */; };
+		FCFAD0A81E5DBA6700C41C1A /* breaktime2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD09F1E5DBA6700C41C1A /* breaktime2.png */; };
+		FCFAD0A91E5DBA6700C41C1A /* dinner.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0A01E5DBA6700C41C1A /* dinner.png */; };
+		FCFAD0AA1E5DBA6700C41C1A /* donuts1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0A11E5DBA6700C41C1A /* donuts1.png */; };
+		FCFAD0AB1E5DBA6700C41C1A /* donuts2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0A21E5DBA6700C41C1A /* donuts2.png */; };
+		FCFAD0AC1E5DBA6700C41C1A /* lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0A31E5DBA6700C41C1A /* lunch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,6 +348,15 @@
 		FCFAD06D1E5D959A00C41C1A /* soroush_khanlou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soroush_khanlou.png; sourceTree = "<group>"; };
 		FCFAD06E1E5D959A00C41C1A /* tatsuya_tobioka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tatsuya_tobioka.png; sourceTree = "<group>"; };
 		FCFAD06F1E5D959A00C41C1A /* yusuke_ito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yusuke_ito.jpg; sourceTree = "<group>"; };
+		FCFAD09B1E5DBA6700C41C1A /* announce1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = announce1.png; sourceTree = "<group>"; };
+		FCFAD09C1E5DBA6700C41C1A /* announce2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = announce2.png; sourceTree = "<group>"; };
+		FCFAD09D1E5DBA6700C41C1A /* breakfast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breakfast.png; sourceTree = "<group>"; };
+		FCFAD09E1E5DBA6700C41C1A /* breaktime1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breaktime1.png; sourceTree = "<group>"; };
+		FCFAD09F1E5DBA6700C41C1A /* breaktime2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breaktime2.png; sourceTree = "<group>"; };
+		FCFAD0A01E5DBA6700C41C1A /* dinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dinner.png; sourceTree = "<group>"; };
+		FCFAD0A11E5DBA6700C41C1A /* donuts1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donuts1.png; sourceTree = "<group>"; };
+		FCFAD0A21E5DBA6700C41C1A /* donuts2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donuts2.png; sourceTree = "<group>"; };
+		FCFAD0A31E5DBA6700C41C1A /* lunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lunch.png; sourceTree = "<group>"; };
 		FEB20E5DC1FA4168A5D3BB5A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -738,6 +756,15 @@
 		FCFAD0341E5D432700C41C1A /* try! Tokyo */ = {
 			isa = PBXGroup;
 			children = (
+				FCFAD09B1E5DBA6700C41C1A /* announce1.png */,
+				FCFAD09C1E5DBA6700C41C1A /* announce2.png */,
+				FCFAD09D1E5DBA6700C41C1A /* breakfast.png */,
+				FCFAD09E1E5DBA6700C41C1A /* breaktime1.png */,
+				FCFAD09F1E5DBA6700C41C1A /* breaktime2.png */,
+				FCFAD0A01E5DBA6700C41C1A /* dinner.png */,
+				FCFAD0A11E5DBA6700C41C1A /* donuts1.png */,
+				FCFAD0A21E5DBA6700C41C1A /* donuts2.png */,
+				FCFAD0A31E5DBA6700C41C1A /* lunch.png */,
 				FCFAD0471E5D959A00C41C1A /* agnes_vasarhelyi.png */,
 				FCFAD0481E5D959A00C41C1A /* alexis_gallagher.jpg */,
 				FCFAD0491E5D959A00C41C1A /* artis_birzins.jpg */,
@@ -1061,11 +1088,15 @@
 				FCFAD0911E5D959A00C41C1A /* seiyo_kurita.jpg in Resources */,
 				FCFAD0701E5D959A00C41C1A /* agnes_vasarhelyi.png in Resources */,
 				FCFAD07A1E5D959A00C41C1A /* jon_reid.jpg in Resources */,
+				FCFAD0A81E5DBA6700C41C1A /* breaktime2.png in Resources */,
 				FCFAD0801E5D959A00C41C1A /* kohki_miki.png in Resources */,
+				FCFAD0AA1E5DBA6700C41C1A /* donuts1.png in Resources */,
 				FCFAD0921E5D959A00C41C1A /* shingo_sato.jpg in Resources */,
 				FCFAD07F1E5D959A00C41C1A /* kazunobu_tasaka.jpg in Resources */,
 				FCFAD0871E5D959A00C41C1A /* meghan_kane.jpg in Resources */,
 				FCFAD0751E5D959A00C41C1A /* derek_lee.jpg in Resources */,
+				FCFAD0A61E5DBA6700C41C1A /* breakfast.png in Resources */,
+				FCFAD0AB1E5DBA6700C41C1A /* donuts2.png in Resources */,
 				FCFAD0731E5D959A00C41C1A /* brandon_williams.jpg in Resources */,
 				FCFAD08E1E5D959A00C41C1A /* ray_tsaihong.jpg in Resources */,
 				FCFAD0761E5D959A00C41C1A /* eric_wing.jpg in Resources */,
@@ -1075,13 +1106,18 @@
 				FCFAD0941E5D959A00C41C1A /* shuichi_tsutsumi.jpg in Resources */,
 				FCFAD0741E5D959A00C41C1A /* christopher_rogers.jpg in Resources */,
 				FCFAD0711E5D959A00C41C1A /* alexis_gallagher.jpg in Resources */,
+				FCFAD0A71E5DBA6700C41C1A /* breaktime1.png in Resources */,
+				FCFAD0A41E5DBA6700C41C1A /* announce1.png in Resources */,
 				FCFAD0901E5D959A00C41C1A /* satoshi_hachiya.jpg in Resources */,
 				FCFAD0861E5D959A00C41C1A /* matt_gillingham.jpg in Resources */,
+				FCFAD0AC1E5DBA6700C41C1A /* lunch.png in Resources */,
 				FCFAD0961E5D959A00C41C1A /* soroush_khanlou.png in Resources */,
 				FCFAD0831E5D959A00C41C1A /* laura_ragone.jpg in Resources */,
 				FCFAD0811E5D959A00C41C1A /* krzysztof_siejkowski.jpg in Resources */,
 				FCFAD0981E5D959A00C41C1A /* yusuke_ito.jpg in Resources */,
 				FCFAD08A1E5D959A00C41C1A /* nate_cook.jpg in Resources */,
+				FCFAD0A51E5DBA6700C41C1A /* announce2.png in Resources */,
+				FCFAD0A91E5DBA6700C41C1A /* dinner.png in Resources */,
 				FCFAD0851E5D959A00C41C1A /* marius_rackwitz.jpg in Resources */,
 				FCFAD08B1E5D959A00C41C1A /* nino_sakuma.jpg in Resources */,
 				FCFAD0931E5D959A00C41C1A /* shinichi_goto.png in Resources */,

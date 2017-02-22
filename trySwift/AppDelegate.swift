@@ -66,7 +66,8 @@ private extension AppDelegate {
                 speakerDictionary["sessionDescription"] = session.sessionDescription
                 speakerDictionary["twitter"] = session.twitter
                 speakerDictionary["presentationSummary"] = session.presentationSummary
-                
+                speakerDictionary["presentationSummary"] = session.presentationSummary
+                speakerDictionary["formattedLocation"] = session.formattedLocation
             }
             
             extensionData.append([
@@ -79,16 +80,16 @@ private extension AppDelegate {
         shared?.set(extensionData, forKey: "extensionData")
         shared?.synchronize()
         
-        
-        let fileManager = FileManager.default
-        if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.tryTokyoTodaysExtension") {
-            
-//            let newDirectory = directory.URLByAppendingPathComponent("MyDirectory")
-//            try! fileManager.createDirectoryAtURL(newDirectory, withIntermediateDirectories: false, attributes: nil)
-            
-            
-            
-        }
+//        
+//        let fileManager = FileManager.default
+//        if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.tryTokyoTodaysExtension") {
+//            
+////            let newDirectory = directory.URLByAppendingPathComponent("MyDirectory")
+////            try! fileManager.createDirectoryAtURL(newDirectory, withIntermediateDirectories: false, attributes: nil)
+//            
+//            
+//            
+//        }
         
         
     }

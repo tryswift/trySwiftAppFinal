@@ -20,8 +20,9 @@ class TodayController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var formattedSubTitle: UILabel!
     @IBOutlet weak var twitter: UILabel!
     @IBOutlet weak var presentationSummay: UILabel!
+    @IBOutlet weak var formattedLocation: UILabel!
     
-   // MARK: Local Variables
+    // MARK: Local Variables
     
     lazy var sessionDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -39,30 +40,33 @@ class TodayController: UIViewController, NCWidgetProviding {
         // Load data from iOS
         
         self.extractDataFromUserDefaults()
+        self.formattedTitle.textColor = UIColor(red: 251 / 255, green: 96 / 255, blue: 0 / 255, alpha: 0.7)
     }
     
-    // View Did Load 
+    // View Did Load
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Expanded Mode 
+        
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
-
+        
         self.displayPicture.layer.cornerRadius = self.displayPicture.frame.size.width / 2
         self.displayPicture.clipsToBounds = true
     }
     
-    // Get data from iOS using App Groups 
+    // Get data from iOS using App Groups
     
     func extractDataFromUserDefaults() {
         
-         if let shared = UserDefaults(suiteName: "group.com.tryTokyoTodaysExtension"), let extensionData = shared.value(forKey: "extensionData") as? [[String : AnyObject]] {
+        if let shared = UserDefaults(suiteName: "group.com.tryTokyoTodaysExtension"), let extensionData = shared.value(forKey: "extensionData") as? [[String : AnyObject]] {
             
-            if let dict = extensionData.first {
+             let dict = extensionData[5]
                 
                 if let startTime = dict["startTime"] as? Date, let endTime = dict["endTime"] as? Date, let session = dict["sessions"] as? [String : String] {
                     
-                    // Time 
+                    // Time
                     
                     self.time.text = "\(self.sessionDateFormatter.string(from: startTime)) - \(self.sessionDateFormatter.string(from: endTime))"
                     
@@ -70,22 +74,47 @@ class TodayController: UIViewController, NCWidgetProviding {
                     
                     self.formattedTitle.text = session["title"]
                     
-                    // Formattted Subtitle 
+                    // Formattted Subtitle
                     
-                    self.formattedSubTitle.text = session["subTitle"]
+                    if session["subTitle"] != "" && session["subTitle"] != nil && session["subTitle"] != " " {
+                        self.formattedSubTitle.text = session["subTitle"]
+                        
+                    }
+                    else {
+                        self.formattedSubTitle.text = session["sessionDescription"]
+                    }
                     
-                    print(session["sessionDescription"])
-                    print(session["logoURL"])
+                    // Formatted Location 
                     
-                    // Twiiter 
+                    self.formattedLocation.text = session["formattedLocation"]
+                    
+                    // Image
+                    
+                    if let logoURL = session["logoURL"] {
+                        
+                        // Local Image 
+                        
+                        if logoURL.hasPrefix("file:///") {
+                            if let url = URL(string: logoURL) {
+                                let lastPathComponent = url.lastPathComponent
+                                self.displayPicture.image = UIImage(named: lastPathComponent)
+                            }
+                        }
+                        else {
+                            
+                        }
+                        
+                    }
+
+                    // Twiiter
                     
                     self.twitter.text = session["twitter"]
                     
-                    // Presentation Summary 
+                    // Presentation Summary
                     
                     self.presentationSummay.text = session["presentationSummary"]
                 }
-            }
+            
         }
     }
     
@@ -102,16 +131,27 @@ class TodayController: UIViewController, NCWidgetProviding {
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         
         if activeDisplayMode == .compact {
-            self.preferredContentSize = maxSize
             
             // Hide
             
+            self.presentationSummay.isHidden = true
+            self.displayPicture.isHidden = true
+            self.formattedSubTitle.isHidden = true
+            self.formattedLocation.isHidden = true
+            self.twitter.isHidden = true
+            
+            self.preferredContentSize = maxSize
         }
         else if activeDisplayMode == .expanded {
-            self.preferredContentSize = CGSize(width: 320, height: 342)
             
             // Unhide
             
+            self.preferredContentSize = CGSize(width: 320, height: 342)
+            self.presentationSummay.isHidden = false
+            self.displayPicture.isHidden = false
+            self.formattedSubTitle.isHidden = false
+            self.formattedLocation.isHidden = false
+            self.twitter.isHidden = false
         }
     }
     
