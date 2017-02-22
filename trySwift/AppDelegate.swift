@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NSTimeZone.default = TimeZone(abbreviation: "UTC")!
 
         configureStyling()
+        
+        self.saveRealmDataToAppGroups()
 
         return true
     }
@@ -40,6 +42,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 private extension AppDelegate {
+    
+    func saveRealmDataToAppGroups() {
+        
+        let shared = UserDefaults(suiteName: "group.com.tryTokyoTodaysExtension")
+        
+        // Load data from Realm
+        
+        let conferenceDays = ConferenceDay.all
+        let allSessions = [conferenceDays[0], conferenceDays[1]].flatMap { $0.sessionBlocks }
+        
+        var extensionData : [[String : AnyObject]] = []
+        
+        allSessions.forEach { value in
+            
+            var speakerDictionary : [String : String] = [:]
+            
+            if let session = value.sessions.first {
+                
+                speakerDictionary["title"] = session.formattedTitle
+                speakerDictionary["subTitle"] = session.formattedSubtitle
+                speakerDictionary["logoURL"] = session.logoURL.absoluteString
+                speakerDictionary["sessionDescription"] = session.sessionDescription
+                speakerDictionary["twitter"] = session.twitter
+                speakerDictionary["presentationSummary"] = session.presentationSummary
+                
+            }
+            
+            extensionData.append([
+                "startTime" : value.startTime as AnyObject,
+                "endTime" : value.endTime as AnyObject,
+                "sessions" :  speakerDictionary as AnyObject
+                ])
+        }
+        
+        shared?.set(extensionData, forKey: "extensionData")
+        shared?.synchronize()
+    }
     
     func configureStyling() {
                 
