@@ -79,7 +79,7 @@ extension SessionsTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
         switch session.type {
-        case .talk:
+        case .talk, .lightningTalk:
             if let presentation = session.presentation {
                 let sessionDetailsVC = sessionDetails(presentation, session: session)
                 navigationController?.pushViewController(sessionDetailsVC, animated: true)

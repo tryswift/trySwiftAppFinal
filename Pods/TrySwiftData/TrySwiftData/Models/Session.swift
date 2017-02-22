@@ -205,7 +205,9 @@ public class Session: Object {
     /** Whether this type of session requires a new view controller to display more information */
     public var selectable: Bool {
         switch self.type {
-        case .workshop, .meetup, .talk, .officeHours, .party, .sponsoredDemo:
+        case .workshop, .meetup:
+            return event != nil
+        case .talk, .lightningTalk, .officeHours, .party, .sponsoredDemo:
             return true
         case .coffeeBreak:
             return sponsor != nil
