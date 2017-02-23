@@ -113,7 +113,7 @@ public class Session: Object {
             }
             return "⁉️"
         default:
-            return nil
+            return "try! Conference"
         }
     }
 
@@ -228,7 +228,7 @@ public class Session: Object {
             if let sponsor = sponsor {
                 return "@\(sponsor.twitter)"
             }
-            return ""
+            return "@tryswiftconf"
         case .talk:
             let twitterHandle = presentation!.speaker?.twitter ?? ""
             if !twitterHandle.isEmpty {
@@ -238,7 +238,7 @@ public class Session: Object {
         case .sponsoredDemo:
             return "@\(sponsor!.twitter)"
         default:
-            return ""
+            return "@tryswiftconf"
         }
     }
 }
