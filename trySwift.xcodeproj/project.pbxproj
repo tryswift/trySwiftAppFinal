@@ -81,6 +81,7 @@
 		FAFA15C61C69D31C00FEA4EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C41C69D31C00FEA4EA /* LaunchScreen.storyboard */; };
 		FAFA15D11C69D31C00FEA4EA /* trySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15D01C69D31C00FEA4EA /* trySwiftTests.swift */; };
 		FAFA15DC1C69D31C00FEA4EA /* trySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15DB1C69D31C00FEA4EA /* trySwiftUITests.swift */; };
+		FC6201601E5F07690019D684 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FC62015F1E5F07690019D684 /* Logo.png */; };
 		FCFAD0331E5D432700C41C1A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFAD0321E5D432700C41C1A /* NotificationCenter.framework */; };
 		FCFAD03D1E5D432700C41C1A /* try! Tokyo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCFAD0311E5D432700C41C1A /* try! Tokyo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FCFAD0441E5D445700C41C1A /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAD0431E5D445700C41C1A /* TodayController.swift */; };
@@ -301,6 +302,7 @@
 		FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trySwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15DB1C69D31C00FEA4EA /* trySwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trySwiftUITests.swift; sourceTree = "<group>"; };
 		FAFA15DD1C69D31C00FEA4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC62015F1E5F07690019D684 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		FCFAD0311E5D432700C41C1A /* try! Tokyo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try! Tokyo.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFAD0321E5D432700C41C1A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		FCFAD03A1E5D432700C41C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -756,6 +758,7 @@
 		FCFAD0341E5D432700C41C1A /* try! Tokyo */ = {
 			isa = PBXGroup;
 			children = (
+				FC62015F1E5F07690019D684 /* Logo.png */,
 				FCFAD09B1E5DBA6700C41C1A /* announce1.png */,
 				FCFAD09C1E5DBA6700C41C1A /* announce2.png */,
 				FCFAD09D1E5DBA6700C41C1A /* breakfast.png */,
@@ -1127,6 +1130,7 @@
 				FCFAD07E1E5D959A00C41C1A /* kazuaki_matsuo.jpg in Resources */,
 				FCFAD08C1E5D959A00C41C1A /* orta_therox.jpg in Resources */,
 				FCFAD07B1E5D959A00C41C1A /* kaoru_tachibana.jpg in Resources */,
+				FC6201601E5F07690019D684 /* Logo.png in Resources */,
 				FCFAD0721E5D959A00C41C1A /* artis_birzins.jpg in Resources */,
 				FCFAD0771E5D959A00C41C1A /* felix_krause.jpg in Resources */,
 				FCFAD0821E5D959A00C41C1A /* kyle_fuller.png in Resources */,

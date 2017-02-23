@@ -10,6 +10,12 @@ import UIKit
 import Foundation
 import NotificationCenter
 
+extension Date {
+    func isBetweeen(date date1: Date, andDate date2: Date) -> Bool {
+        return date1.compare(self) == self.compare(date2)
+    }
+}
+
 class TodayController: UIViewController, NCWidgetProviding {
     
     //MARK: Outlets
@@ -48,7 +54,7 @@ class TodayController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Expanded Mode 
+        // Expanded Mode
         
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         
@@ -62,60 +68,114 @@ class TodayController: UIViewController, NCWidgetProviding {
         
         if let shared = UserDefaults(suiteName: "group.com.tryTokyoTodaysExtension"), let extensionData = shared.value(forKey: "extensionData") as? [[String : AnyObject]] {
             
-             let dict = extensionData[5]
+            extensionData.forEach({ dict in
                 
                 if let startTime = dict["startTime"] as? Date, let endTime = dict["endTime"] as? Date, let session = dict["sessions"] as? [String : String] {
                     
-                    // Time
+                     let currentDate = Date()
                     
-                    self.time.text = "\(self.sessionDateFormatter.string(from: startTime)) - \(self.sessionDateFormatter.string(from: endTime))"
-                    
-                    // Formatted Title
-                    
-                    self.formattedTitle.text = session["title"]
-                    
-                    // Formattted Subtitle
-                    
-                    if session["subTitle"] != "" && session["subTitle"] != nil && session["subTitle"] != " " {
-                        self.formattedSubTitle.text = session["subTitle"]
+                    if currentDate.isBetweeen(date: startTime, andDate: endTime)
+                    {
+                        // Time
                         
-                    }
-                    else {
-                        self.formattedSubTitle.text = session["sessionDescription"]
-                    }
-                    
-                    // Formatted Location 
-                    
-                    self.formattedLocation.text = session["formattedLocation"]
-                    
-                    // Image
-                    
-                    if let logoURL = session["logoURL"] {
+                        self.time.text = "\(self.sessionDateFormatter.string(from: startTime)) - \(self.sessionDateFormatter.string(from: endTime))"
                         
-                        // Local Image 
+                        // Formatted Title
                         
-                        if logoURL.hasPrefix("file:///") {
-                            if let url = URL(string: logoURL) {
-                                let lastPathComponent = url.lastPathComponent
-                                self.displayPicture.image = UIImage(named: lastPathComponent)
-                            }
-                        }
-                        else {
+                        self.formattedTitle.text = session["title"]
+                        
+                        // Formattted Subtitle
+                        
+                        if session["subTitle"] != "" && session["subTitle"] != nil && session["subTitle"] != " " {
+                            self.formattedSubTitle.text = session["subTitle"]
                             
                         }
+                        else {
+                            self.formattedSubTitle.text = session["sessionDescription"]
+                        }
                         
+                        // Formatted Location
+                        
+                        self.formattedLocation.text = session["formattedLocation"]
+                        
+                        // Image
+                    
+                    if let logoURL = session["logoURL"] {
+                            
+                            // Local Image
+                            
+                            if logoURL.hasPrefix("file:///") {
+                                if let url = URL(string: logoURL) {
+                                    let lastPathComponent = url.lastPathComponent
+                                    self.displayPicture.image = UIImage(named: lastPathComponent)
+                                }
+                            }
+                            else if logoURL.hasPrefix("https://") || logoURL.hasPrefix("http://") {
+                                if let url = URL(string: logoURL), let data = try? Data(contentsOf: url) {
+                                    self.displayPicture.image = UIImage(data: data)
+                                }
+                            }
+                        }
+                        
+                        // Twiiter
+                        
+                        self.twitter.text = session["twitter"]
+                        
+                        // Presentation Summary
+                        
+                        self.presentationSummay.text = session["presentationSummary"]
                     }
-
-                    // Twiiter
-                    
-                    self.twitter.text = session["twitter"]
-                    
-                    // Presentation Summary
-                    
-                    self.presentationSummay.text = session["presentationSummary"]
+                    else {
+                        
+                        // Formatted Title
+                        
+                        self.formattedTitle.text = "try! Swift Conference"
+                        
+                        // Formattted Subtitle
+                        
+                        self.formattedSubTitle.text = "❤️"
+                        
+                        // Formatted Location
+                        
+                        self.formattedLocation.text = "Tokyo, Japan"
+                        
+                        // Image
+                        
+                        self.displayPicture.image = UIImage(named: "Logo")
+                        
+                        // Twiiter
+                        
+                        self.twitter.text = "@tryswiftconf"
+                        
+                        // Presentation Summary
+                        
+                        self.presentationSummay.text = "try! Conference is an immersive community gathering about Swift Language Best Practices, Application Development in Swift, Server-Side Swift, Open Source Swift, and the Swift Community, taking place in Tokyo on March 2nd through 4th, 2017."
+                        
+                        let currentDateUnits = self.convertingToEachUnit(date: Date())
+                        
+                        if currentDateUnits.year == 2017 && currentDateUnits.month == 3 && currentDateUnits.day > 4  {
+                            self.time.text = "See You Next Year :)"
+                        }
+                        else {
+                            let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countDownTimer), userInfo: nil, repeats: true)
+                            timer.fire()
+                        }
+                    }
                 }
-            
+            })
         }
+    }
+    
+    func countDownTimer()
+    {
+        let requestedComponent: Set<Calendar.Component> = [.day,.hour,.minute,.second]
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy hh:mm:ss"
+        let startTime = Date()
+        let endTime = dateFormatter.date(from: "02/03/17 08:30:00")
+        let timeDifference = Calendar.current.dateComponents(requestedComponent, from: startTime, to: endTime!)
+        
+        self.time.text = "Countdown : \(timeDifference.day!):\(timeDifference.hour!):\(timeDifference.minute!):\(timeDifference.second!)"
     }
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {

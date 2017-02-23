@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="342"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02:00 - 02:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIb-H5-IpE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIb-H5-IpE">
                                 <rect key="frame" x="10" y="0.0" width="300" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="pGV-2d-kSn"/>
@@ -30,13 +30,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extending Xcode 8 programming guide Extending Xcode 8 programming guide  programming guide " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBs-uY-04x">
-                                <rect key="frame" x="10" y="40" width="300" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBs-uY-04x">
+                                <rect key="frame" x="10" y="49" width="300" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="PRl-hc-wZk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.94117647059999998" green="0.31372549020000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alvin Varghese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Oc-dq-p35">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Oc-dq-p35">
                                 <rect key="frame" x="107" y="119" width="203" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="sOo-Pe-Xp6"/>
@@ -45,7 +48,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presentation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4I-Vd-A7T">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4I-Vd-A7T">
                                 <rect key="frame" x="107" y="143" width="203" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="NTg-rw-2S1"/>
@@ -54,24 +57,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RvP-kc-YDV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RvP-kc-YDV">
                                 <rect key="frame" x="10" y="119" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="050-uD-dDw"/>
                                     <constraint firstAttribute="height" constant="80" id="cF7-Ec-Gnp"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ2-1o-auA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQ2-1o-auA">
                                 <rect key="frame" x="10" y="207" width="300" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="127" id="15C-XZ-Mhc"/>
                                 </constraints>
-                                <string key="text">Feeling he was living too extravagant of a lifestyle of ramen and subsidized bus passes, Eric Wing graduated (kicking and screaming) from the University of California at San Diego with a Masters degree n Computer Engineering just days before 9/11. In the following quest for free food, he worked a wide range of jobs in the field from automated testing on orbiting satellite systems to scientific visualization with a variety of different operating systems and programming languages. But in a stroke of genius (actually, it was more likely just a stroke), he figured out how he could work even harder for no money and started working on open source projects. He has been a contributor to projects such as SDL (Simple DirectMedia Layer), OpenSceneGraph, and LuaCocoa. And when he was offered a co-authorship of Beginning iPhone Games Development, how could he possibly refuse the idea of even more hard work for virtually no pay? Then in a flash of brilliance (or more likely electrocution performing an ill-advised hardware upgrade), he realized he could top himself doing startups with their relentless amount of work and possible financial losses. He became the Chief Architect for Corona SDK and then co-founder of Lanica building a native game engine for Appcelerator. And now he is working on his craziest endeavor yet, Blurrr SDK.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@alvinvarghese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrW-oX-VuA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrW-oX-VuA">
                                 <rect key="frame" x="107" y="165" width="203" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="lno-F8-bGK"/>
@@ -90,7 +92,6 @@
                             <constraint firstItem="k4I-Vd-A7T" firstAttribute="leading" secondItem="RvP-kc-YDV" secondAttribute="trailing" constant="17" id="GzE-mf-urM"/>
                             <constraint firstItem="RQ2-1o-auA" firstAttribute="top" secondItem="GrW-oX-VuA" secondAttribute="bottom" constant="15" id="Jf9-0A-7gn"/>
                             <constraint firstAttribute="trailing" secondItem="GrW-oX-VuA" secondAttribute="trailing" constant="10" id="Pyg-gf-Cpu"/>
-                            <constraint firstItem="uBs-uY-04x" firstAttribute="top" secondItem="mIb-H5-IpE" secondAttribute="bottom" constant="-1" id="QMI-n5-a4f"/>
                             <constraint firstAttribute="trailing" secondItem="mIb-H5-IpE" secondAttribute="trailing" constant="10" id="RJV-n6-I1J"/>
                             <constraint firstItem="RQ2-1o-auA" firstAttribute="top" secondItem="RvP-kc-YDV" secondAttribute="bottom" constant="8" id="evq-SO-NuQ"/>
                             <constraint firstAttribute="trailing" secondItem="RQ2-1o-auA" secondAttribute="trailing" constant="10" id="fZw-HW-s2j"/>
@@ -102,6 +103,7 @@
                             <constraint firstItem="GrW-oX-VuA" firstAttribute="leading" secondItem="RvP-kc-YDV" secondAttribute="trailing" constant="17" id="sz5-kT-lfT"/>
                             <constraint firstItem="RQ2-1o-auA" firstAttribute="leading" secondItem="kcO-iG-O38" secondAttribute="leading" constant="10" id="wvh-Hc-okz"/>
                             <constraint firstItem="GrW-oX-VuA" firstAttribute="top" secondItem="k4I-Vd-A7T" secondAttribute="bottom" constant="-5" id="zS7-hh-DxS"/>
+                            <constraint firstItem="uBs-uY-04x" firstAttribute="top" secondItem="mIb-H5-IpE" secondAttribute="bottom" constant="8" id="zXp-Wq-CT1"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -125,4 +127,7 @@
             <point key="canvasLocation" x="-243.19999999999999" y="167.31634182908547"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo.png" width="2405" height="2404"/>
+    </resources>
 </document>
