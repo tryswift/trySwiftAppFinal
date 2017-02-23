@@ -8,11 +8,21 @@
 
 import UIKit
 import TrySwiftData
+import XLPagerTabStrip
 
 class VenueTableViewController: UITableViewController {
 
     var venue: Venue!
+
+    init(venue: Venue) {
+        self.venue = venue
+        super.init(style: .plain)
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     fileprivate enum VenueDetail: Int {
         case header, wifi, address, map, twitter
     }
@@ -21,6 +31,12 @@ class VenueTableViewController: UITableViewController {
         super.viewDidLoad()
         title = "Venue".localized()
         configureTableView()
+    }
+}
+
+extension VenueTableViewController: IndicatorInfoProvider {
+    public func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: Venue.localizedName(for: venue.type))
     }
 }
 

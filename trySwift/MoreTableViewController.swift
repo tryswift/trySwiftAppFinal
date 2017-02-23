@@ -83,7 +83,7 @@ extension MoreTableViewController {
             case .about:
                 cell.textLabel?.text = "About".localized()
             case .venue:
-                cell.textLabel?.text = "Venue".localized()
+                cell.textLabel?.text = "Venues".localized()
             case .codeOfConduct:
                 cell.textLabel?.text = "Code of Conduct".localized()
             }
@@ -118,7 +118,7 @@ extension MoreTableViewController {
             case .about:
                 showAbout()
             case .venue:
-                showVenue()
+                showVenues()
             case .codeOfConduct:
                 showCodeOfConduct()
             }
@@ -155,9 +155,8 @@ private extension MoreTableViewController {
         navigationController?.pushViewController(aboutViewController, animated: true)
     }
     
-    func showVenue() {
-        let venueController = VenueTableViewController()
-        venueController.venue = Conference.current.venue
+    func showVenues() {
+        let venueController = VenuesViewController()
         navigationController?.pushViewController(venueController, animated: true)
     }
     

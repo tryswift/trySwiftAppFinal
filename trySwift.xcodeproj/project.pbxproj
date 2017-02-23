@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2242EE9C1E5E783800133750 /* VenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2242EE9B1E5E783800133750 /* VenuesViewController.swift */; };
 		22C9804E1E5978B900C8C756 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */; };
 		22CE18D11E5A2EB6002C035F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22CE18D31E5A2EB6002C035F /* Localizable.strings */; };
 		22CE18D71E5A2F85002C035F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CE18D61E5A2F85002C035F /* StringExtension.swift */; };
@@ -145,6 +146,7 @@
 		14346AF2A8784D962D2C2A7F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		168F8855FDC17ABDFA46C086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2173E7786E5DED928F35AA15 /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2242EE9B1E5E783800133750 /* VenuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
 		22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		22CE18D21E5A2EB6002C035F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22CE18D51E5A2ECB002C035F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -284,6 +286,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2242EE9D1E5E784E00133750 /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+				2242EE9B1E5E783800133750 /* VenuesViewController.swift */,
+				FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */,
+			);
+			name = Venues;
+			sourceTree = "<group>";
+		};
 		22F823D51E5BBB62003BD6BB /* try! */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,10 +512,10 @@
 		FA65B57D1C6D7AFC00DCAF0B /* More */ = {
 			isa = PBXGroup;
 			children = (
+				2242EE9D1E5E784E00133750 /* Venues */,
 				FA65B57F1C6D7B1900DCAF0B /* MoreTableViewController.swift */,
 				FA1C9D501D5F6E9000AC212A /* Organizers */,
 				FA65B5901C6DA53600DCAF0B /* AboutTableViewController.swift */,
-				FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -997,6 +1008,7 @@
 				FA3A1CB61D68E1950042F8DD /* WatchSessionManager.swift in Sources */,
 				499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */,
 				FA65B57C1C6D5C4600DCAF0B /* SessionDetailsViewController.swift in Sources */,
+				2242EE9C1E5E783800133750 /* VenuesViewController.swift in Sources */,
 				FA39E9201C6D25D00074B6BE /* SpeakerDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

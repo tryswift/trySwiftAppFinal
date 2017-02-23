@@ -61,7 +61,7 @@ extension SponsorsViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let firstSponsor = sponsors[section].first!
-        return localizedSponsorName(for: firstSponsor.level)
+        return Sponsor.localizedName(for: firstSponsor.level)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

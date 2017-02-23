@@ -9,6 +9,12 @@
 import RealmSwift
 import Contacts
 
+@objc public enum VenueType: Int {
+    case conference
+    case hackathon
+    case party
+}
+
 public class Venue: Object {
     open dynamic var title: String = ""
     open dynamic var titleJP: String?
@@ -21,6 +27,7 @@ public class Venue: Object {
     open dynamic var wifiNetworkName: String?
     open dynamic var wifiUsername: String?
     open dynamic var wifiPassword: String?
+    open dynamic var type: VenueType = .conference
 
     public var localizedTitle: String {
         return self.localizedString(for: title, japaneseString: titleJP)
@@ -40,5 +47,13 @@ public class Venue: Object {
         }
 
         return Bundle.trySwiftAssetURL(for: "Logo.png")!
+    }
+
+    public class func localizedName(for venueType: VenueType) -> String {
+        switch venueType {
+        case .conference: return "Conference".localized()
+        case .hackathon:  return "Hackathon".localized()
+        case .party:      return "Party".localized()
+        }
     }
 }

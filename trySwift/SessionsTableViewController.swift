@@ -206,8 +206,7 @@ private extension SessionsTableViewController {
     }
     
     func venueDetails(_ venue: Venue) -> UIViewController {
-        let venueDetailsVC = VenueTableViewController()
-        venueDetailsVC.venue = venue
+        let venueDetailsVC = VenueTableViewController(venue: venue)
         return venueDetailsVC
     }
 }
