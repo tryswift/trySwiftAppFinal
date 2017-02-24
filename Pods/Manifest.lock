@@ -21,7 +21,6 @@ DEPENDENCIES:
   - BuddyBuildSDK
   - DynamicColor (~> 3.2.1)
   - Kingfisher (~> 3.4.0)
-  - RealmSwift (~> 2.4.2)
   - Timepiece (~> 1.1.0)
   - TrySwiftData (from `https://github.com/tryswift/trySwiftData.git`)
   - XLPagerTabStrip (~> 7.0.0)
@@ -46,6 +45,6 @@ SPEC CHECKSUMS:
   TrySwiftData: 9c8acd05db49d952e0fbb69790b01f3b7441dbe8
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: 7415226655e65f68570e622ec0a768b67b8da472
+PODFILE CHECKSUM: cff7cc53b1949eff12a929fd8a86db2db41b7932
 
 COCOAPODS: 1.2.0

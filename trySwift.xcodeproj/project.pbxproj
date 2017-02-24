@@ -750,17 +750,17 @@
 				TargetAttributes = {
 					22F823D31E5BBB62003BD6BB = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 6LF3GMKZAB;
+						DevelopmentTeam = W6GNU64U6Q;
 						ProvisioningStyle = Automatic;
 					};
 					22F823DF1E5BBB62003BD6BB = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 6LF3GMKZAB;
+						DevelopmentTeam = W6GNU64U6Q;
 						ProvisioningStyle = Automatic;
 					};
 					FAFA15B71C69D31B00FEA4EA = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 6LF3GMKZAB;
+						DevelopmentTeam = W6GNU64U6Q;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1099,10 +1099,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				IBSC_MODULE = try__Extension;
 				INFOPLIST_FILE = "try!/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwift.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1121,10 +1121,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				IBSC_MODULE = try__Extension;
 				INFOPLIST_FILE = "try!/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwift.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1141,10 +1141,10 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = "try! Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwift.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1162,10 +1162,10 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = "try! Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwift.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1275,11 +1275,11 @@
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "trySwift/trySwift-Bridging-Header.h";
@@ -1297,11 +1297,11 @@
 				CODE_SIGN_ENTITLEMENTS = trySwift/trySwift.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = trySwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.trySwiftConf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "trySwift/trySwift-Bridging-Header.h";

@@ -2,7 +2,6 @@ use_frameworks!
 
 def shared_pods
     pod 'Timepiece', '~> 1.1.0'
-    pod 'RealmSwift', '~> 2.4.2'
     pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
 end
 
