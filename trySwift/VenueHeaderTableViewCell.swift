@@ -21,7 +21,7 @@ class VenueHeaderTableViewCell: UITableViewCell {
     }
     
     func configure(withVenue venue: Venue) {
-        titleLabel.text = venue.title
+        titleLabel.text = venue.localizedTitle
         websiteLabel.text = venue.website
 
         let scale = UIScreen.main.scale
