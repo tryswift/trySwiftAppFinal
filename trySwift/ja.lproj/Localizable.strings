@@ -14,9 +14,9 @@
 "Code of Conduct" = "行動規範";
 "Organizers" = "主催者";
 "Acknowledgements" = "謝辞";
-"App Feedback" = "アプリの感想";
-"Conference Feedback" = "イベントの感想";
+"App Feedback" = "アプリのフィードバック";
+"Conference Feedback" = "イベントのフィードバック";
 "Open Slack" = "Slackを開く";
 "About" = "try!について";
 "**Session.Time**" = "HH:mm";
-"**Conference.Date**" = "MM月dd日 (E)";
+"**Conference.Date**" = "M/d（E）";
