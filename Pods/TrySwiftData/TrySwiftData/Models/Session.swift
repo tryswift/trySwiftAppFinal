@@ -62,12 +62,12 @@ public class Session: Object {
             if let event = event {
                 return event.localizedTitle
             }
-            return nil
+            return localizedString(for: title ?? "", japaneseString: titleJP)
         case .talk, .lightningTalk:
             if let presentation = presentation {
                 return presentation.localizedTitle
             }
-            return nil
+            return localizedString(for: title ?? "", japaneseString: titleJP)
         case .sponsoredDemo:
             return "Sponsored Demo".localized()
         case .coffeeBreak:
@@ -83,7 +83,7 @@ public class Session: Object {
             }
             return "Office Hours".localized()
         default:
-            return localizedString(for: title ?? "", japaneseString: titleJP)
+            return localizedString(for: title ?? " ", japaneseString: titleJP)
         }
     }
 
@@ -113,7 +113,7 @@ public class Session: Object {
             }
             return "⁉️"
         default:
-            return nil
+            return "try! Conference"
         }
     }
 
@@ -205,7 +205,9 @@ public class Session: Object {
     /** Whether this type of session requires a new view controller to display more information */
     public var selectable: Bool {
         switch self.type {
-        case .workshop, .meetup, .talk, .officeHours, .party, .sponsoredDemo:
+        case .workshop, .meetup:
+            return event != nil
+        case .talk, .lightningTalk, .officeHours, .party, .sponsoredDemo:
             return true
         case .coffeeBreak:
             return sponsor != nil
@@ -226,7 +228,7 @@ public class Session: Object {
             if let sponsor = sponsor {
                 return "@\(sponsor.twitter)"
             }
-            return ""
+            return "@tryswiftconf"
         case .talk:
             let twitterHandle = presentation!.speaker?.twitter ?? ""
             if !twitterHandle.isEmpty {
@@ -236,7 +238,7 @@ public class Session: Object {
         case .sponsoredDemo:
             return "@\(sponsor!.twitter)"
         default:
-            return ""
+            return "@tryswiftconf"
         }
     }
 }

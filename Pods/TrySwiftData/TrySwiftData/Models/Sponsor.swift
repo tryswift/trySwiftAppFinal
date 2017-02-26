@@ -57,17 +57,18 @@ public class Sponsor: Object {
 
         return resultsSet
     }
-}
 
-public func localizedSponsorName(for sponsorLevel: SponsorLevel) -> String {
-    switch sponsorLevel {
-    case .platinum:     return "Platinum".localized()
-    case .gold:         return "Gold".localized()
-    case .silver:       return "Silver".localized()
-    case .diversity:    return "Diversity".localized()
-    case .student:      return "Student".localized()
-    case .event:        return "Event".localized()
+    public class func localizedName(for sponsorLevel: SponsorLevel) -> String {
+        switch sponsorLevel {
+        case .platinum:     return "Platinum".localized()
+        case .gold:         return "Gold".localized()
+        case .silver:       return "Silver".localized()
+        case .diversity:    return "Diversity".localized()
+        case .student:      return "Student".localized()
+        case .event:        return "Event".localized()
+        }
+        
+        return ""
     }
-
-    return ""
 }
+
