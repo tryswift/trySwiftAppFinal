@@ -34,6 +34,11 @@ class SessionsInterfaceController: WKInterfaceController {
         
          loadTableData()
     }
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        let sessionBlock = conferenceDay.sessionBlocks[rowIndex]
+        presentController(withName: String(describing: SessionDetailInterfaceController.self), context: sessionBlock)
+    }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

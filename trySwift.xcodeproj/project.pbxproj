@@ -39,6 +39,7 @@
 		E2567889D43BE2B22F55781E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1F9C27BCD8099DCA758F7A /* CoreMedia.framework */; };
 		EAFE1C26E49EFABF83487BDC /* Pods_try__Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24718BF11477753FCD47A7A8 /* Pods_try__Today.framework */; };
 		F0E0044EA2AF1A7AEFB06624 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5C53D439AAF00D63047E8 /* SystemConfiguration.framework */; };
+		FA0E2B4F1E63B90400B40814 /* SessionDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E2B4E1E63B90400B40814 /* SessionDetailInterfaceController.swift */; };
 		FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */; };
 		FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */; };
 		FA20176B1D69D81600B6E158 /* WifiInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */; };
@@ -211,6 +212,9 @@
 		A5CEB7B0B430095A78C3399B /* Pods-try! Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-try! Extension/Pods-try! Extension.release.xcconfig"; sourceTree = "<group>"; };
 		A5CFF4633D430A59B8E3CD89 /* Pods-try! Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try! Today/Pods-try! Today.debug.xcconfig"; sourceTree = "<group>"; };
 		CD2E9D5733A6E1B6E10AFEEF /* Pods_try__Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try__Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D187B8ACF44113DA4CB6CD82 /* Pods-try! Swift Conference.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Swift Conference.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try! Swift Conference/Pods-try! Swift Conference.debug.xcconfig"; sourceTree = "<group>"; };
+		D7C85C29463AF737504DFEC8 /* Pods-try! Swift Conference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Swift Conference.release.xcconfig"; path = "Pods/Target Support Files/Pods-try! Swift Conference/Pods-try! Swift Conference.release.xcconfig"; sourceTree = "<group>"; };
+		FA0E2B4E1E63B90400B40814 /* SessionDetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailInterfaceController.swift; sourceTree = "<group>"; };
 		FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerDetailTableViewController.swift; sourceTree = "<group>"; };
 		FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiInfoTableViewCell.swift; sourceTree = "<group>"; };
 		FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -568,6 +572,7 @@
 				FA40B3F21E5C02BC00A9D01E /* SessionsInterfaceController.swift */,
 				FA40B3F41E5C079000A9D01E /* SessionTableRowController.swift */,
 				FA40B3F61E5C0AE800A9D01E /* SessionExtension.swift */,
+				FA0E2B4E1E63B90400B40814 /* SessionDetailInterfaceController.swift */,
 			);
 			name = SessionSchedule;
 			sourceTree = "<group>";
@@ -1110,6 +1115,7 @@
 				FA40B3F31E5C02BC00A9D01E /* SessionsInterfaceController.swift in Sources */,
 				22F823EE1E5BBB62003BD6BB /* ComplicationController.swift in Sources */,
 				FA40B3F51E5C079000A9D01E /* SessionTableRowController.swift in Sources */,
+				FA0E2B4F1E63B90400B40814 /* SessionDetailInterfaceController.swift in Sources */,
 				22F823EA1E5BBB62003BD6BB /* ExtensionDelegate.swift in Sources */,
 				FA40B3F71E5C0AE800A9D01E /* SessionExtension.swift in Sources */,
 			);

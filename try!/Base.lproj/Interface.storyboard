@@ -14,9 +14,9 @@
             <objects>
                 <controller identifier="Mar2" title="try! Mar 2" id="AgC-eL-Hgc" customClass="SessionsInterfaceController" customModule="try__Extension">
                     <items>
-                        <table alignment="left" id="OeU-Nt-vmO">
+                        <table alignment="left" pagingScroll="YES" id="OeU-Nt-vmO">
                             <items>
-                                <tableRow identifier="SessionTableRowController" selectable="NO" id="GWP-LY-cRT" customClass="SessionTableRowController" customModule="try__Extension">
+                                <tableRow identifier="SessionTableRowController" id="GWP-LY-cRT" customClass="SessionTableRowController" customModule="try__Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="fLR-sJ-MF5">
                                         <items>
                                             <label alignment="left" text="Label" numberOfLines="0" id="S1k-hg-2SR">
@@ -42,7 +42,7 @@
                     </items>
                     <connections>
                         <outlet property="sessionsTable" destination="OeU-Nt-vmO" id="Ye4-hJ-Vpn"/>
-                        <segue destination="iUS-6L-mZG" kind="relationship" relationship="nextPage" id="ya9-X6-5p9"/>
+                        <segue destination="iUS-6L-mZG" kind="relationship" relationship="nextPage" id="TG5-sj-8g7"/>
                     </connections>
                 </controller>
             </objects>
@@ -55,7 +55,7 @@
                     <items>
                         <table alignment="left" id="raC-za-EKv">
                             <items>
-                                <tableRow identifier="SessionTableRowController" selectable="NO" id="ACu-83-iQZ" customClass="SessionTableRowController" customModule="try__Extension">
+                                <tableRow identifier="SessionTableRowController" id="ACu-83-iQZ" customClass="SessionTableRowController" customModule="try__Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="f8f-un-HT7">
                                         <items>
                                             <label alignment="left" text="Label" numberOfLines="0" id="M46-kR-icQ">
@@ -81,7 +81,7 @@
                     </items>
                     <connections>
                         <outlet property="sessionsTable" destination="raC-za-EKv" id="FOA-1u-ffW"/>
-                        <segue destination="bEK-aE-rXC" kind="relationship" relationship="nextPage" id="wM0-NE-dgi"/>
+                        <segue destination="bEK-aE-rXC" kind="relationship" relationship="nextPage" id="4lr-qD-QFx"/>
                     </connections>
                 </controller>
             </objects>
@@ -94,7 +94,7 @@
                     <items>
                         <table alignment="left" id="djY-QN-ivz">
                             <items>
-                                <tableRow identifier="SessionTableRowController" selectable="NO" id="Vpg-np-Q16" customClass="SessionTableRowController" customModule="try__Extension">
+                                <tableRow identifier="SessionTableRowController" id="Vpg-np-Q16" customClass="SessionTableRowController" customModule="try__Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="o0x-c9-Jie">
                                         <items>
                                             <label alignment="left" text="Label" numberOfLines="0" id="Gbd-ak-PY9">
@@ -124,6 +124,34 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="735" y="345"/>
+        </scene>
+        <!--SessionDetailInterfaceController-->
+        <scene sceneID="bic-a1-cwU">
+            <objects>
+                <controller identifier="SessionDetailInterfaceController" id="p6y-28-9rw" customClass="SessionDetailInterfaceController" customModule="try__Extension">
+                    <items>
+                        <label alignment="left" text="10:00 - 10:25" baselineAdjustment="alignCenters" id="uFd-R7-iJz">
+                            <color key="textColor" red="0.72156862749999995" green="0.1960784314" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <label alignment="left" text="Dive into Swift Ecosystem" textAlignment="left" numberOfLines="0" id="V1M-gu-B1c"/>
+                        <group alignment="left" id="5lx-mv-Kgq">
+                            <items>
+                                <imageView width="1" height="1" alignment="left" image="syo" contentMode="scaleAspectFill" id="UPC-NZ-3gf"/>
+                            </items>
+                        </group>
+                        <label alignment="left" text="Syo Ikeda" id="cEg-mn-N18"/>
+                        <label alignment="left" text="@ikesyo" id="lKs-Cb-vuN"/>
+                    </items>
+                    <connections>
+                        <outlet property="speakerImage" destination="UPC-NZ-3gf" id="uIL-AW-dh0"/>
+                        <outlet property="speakerNameLabel" destination="cEg-mn-N18" id="DwA-1o-yAw"/>
+                        <outlet property="speakerTwitterLabel" destination="lKs-Cb-vuN" id="0dA-eT-eyg"/>
+                        <outlet property="timeInterfaceLabel" destination="uFd-R7-iJz" id="FgW-EZ-mkf"/>
+                        <outlet property="titleInterfaceLabel" destination="V1M-gu-B1c" id="J3x-Fc-YKH"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="427" y="768"/>
         </scene>
     </scenes>
 </document>
