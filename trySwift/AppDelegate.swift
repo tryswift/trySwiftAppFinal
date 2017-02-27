@@ -30,11 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         configureStyling()
 
-        // Copy the TrySwift Data bundle from the app sandbox to the shared container
-        // where the Today widget can access it
-        Bundle.setTrySwiftSharedGroupIdentifier("group.com.tryTokyoTodaysExtension")
-        Bundle.copyTrySwiftBundleToSharedGroup()
-
         return true
     }
     

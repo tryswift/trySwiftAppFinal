@@ -79,8 +79,6 @@ class TodayController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Bundle.setTrySwiftSharedGroupIdentifier("group.com.tryTokyoTodaysExtension")
-
         self.extensionContext?.widgetLargestAvailableDisplayMode = .compact
 
         self.displayPictureView.layer.shouldRasterize = true
@@ -92,9 +90,7 @@ class TodayController: UIViewController, NCWidgetProviding {
         //Update the view depending on the current state
         if let session = currentSession {
             titleLabel.text = session.formattedTitle
-            if let assetName = session.imageAssetName {
-                displayPictureView.image = UIImage(contentsOfFile: Bundle.trySwiftAssetURL(for: assetName)!.path)
-            }
+            displayPictureView.image = UIImage(contentsOfFile: session.logoURL.path)
             subTitleLabel.text = session.formattedSubtitle
             typeLabel.text = session.sessionDescription
 
