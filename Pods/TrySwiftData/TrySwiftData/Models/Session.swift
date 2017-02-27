@@ -7,6 +7,7 @@
 //
 
 import RealmSwift
+import Foundation
 
 @objc public enum SessionType: Int {
     case workshop
@@ -53,7 +54,18 @@ public class Session: Object {
     /** Any particular events held at a different venue from the conference */
     open dynamic var venue: Venue?
 
+    open let sessionBlock = LinkingObjects(fromType: SessionBlock.self, property: "sessions")
+
     /***************************************************/
+
+    public static var all: Results<Session>? {
+        do {
+            let realm = try Realm.trySwiftRealm()
+            return realm.objects(Session.self)
+        } catch {
+            return nil
+        }
+    }
 
     /** The main name of this session */
     public var formattedTitle: String? {
