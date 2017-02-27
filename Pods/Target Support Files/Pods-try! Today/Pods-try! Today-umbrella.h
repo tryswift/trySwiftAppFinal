@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_try__TokyoVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_try__TokyoVersionString[];
+FOUNDATION_EXPORT double Pods_try__TodayVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_try__TodayVersionString[];
 
