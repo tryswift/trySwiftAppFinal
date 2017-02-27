@@ -730,7 +730,7 @@
 				FAFA15DA1C69D31C00FEA4EA /* trySwiftUITests */,
 				22F823D51E5BBB62003BD6BB /* try! */,
 				22F823E41E5BBB62003BD6BB /* try! Extension */,
-				FCFAD0341E5D432700C41C1A /* try! Tokyo */,
+				FCFAD0341E5D432700C41C1A /* try! Swift Conference */,
 				FAFA15B91C69D31C00FEA4EA /* Products */,
 				411F0B1F9D6446FAAE23A50E /* Frameworks */,
 				F413680C9BA29129B4319377 /* Pods */,
@@ -788,7 +788,7 @@
 			path = trySwiftUITests;
 			sourceTree = "<group>";
 		};
-		FCFAD0341E5D432700C41C1A /* try! Tokyo */ = {
+		FCFAD0341E5D432700C41C1A /* try! Swift Conference */ = {
 			isa = PBXGroup;
 			children = (
 				FC62015F1E5F07690019D684 /* Logo.png */,
@@ -847,6 +847,7 @@
 				FCFAD03A1E5D432700C41C1A /* Info.plist */,
 				FCFAD0431E5D445700C41C1A /* TodayController.swift */,
 			);
+			name = "try! Swift Conference";
 			path = "try! Tokyo";
 			sourceTree = "<group>";
 		};
