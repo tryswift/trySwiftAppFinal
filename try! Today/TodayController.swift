@@ -21,14 +21,42 @@ class TodayController: UIViewController, NCWidgetProviding {
     
     //MARK: Outlets
     
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var formattedTitle: UILabel!
-    @IBOutlet weak var displayPicture: UIImageView!
-    @IBOutlet weak var formattedSubTitle: UILabel!
-    @IBOutlet weak var formattedLocation: UILabel!
-    
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var displayPictureView: UIImageView!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var visualEffectsView: UIVisualEffectView!
+
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        NSTimeZone.default = TimeZone(abbreviation: "UTC")!
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        NSTimeZone.default = TimeZone(abbreviation: "UTC")!
+        super.init(coder: aDecoder)
+    }
+
     // MARK: Local Variables
-    
+
+    private var currentSession: Session? {
+        guard let sessionBlocks = SessionBlock.all else { return nil }
+        let date = Date(timeIntervalSince1970: 1488535546)
+        let currentSessionBlock = sessionBlocks.filter("startTime < %@ AND endTime > %@", date, date)
+        return currentSessionBlock.first?.sessions.first
+    }
+
+    private var firstSession: Session? {
+        guard let sessionBlocks = SessionBlock.all else { return nil }
+        return sessionBlocks.sorted(byKeyPath: "startTime").first?.sessions.first
+    }
+
+    private var lastSession: Session? {
+        guard let sessionBlocks = SessionBlock.all else { return nil }
+        return sessionBlocks.sorted(byKeyPath: "startTime", ascending: false).first?.sessions.first
+    }
+
     lazy var sessionDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(identifier: "UTC")
@@ -42,45 +70,60 @@ class TodayController: UIViewController, NCWidgetProviding {
     
     override func viewWillAppear(_ animated: Bool) {
 
-
-        self.formattedTitle.textColor = UIColor(red: 251 / 255, green: 96 / 255, blue: 0 / 255, alpha: 0.7)
+        self.visualEffectsView.effect = UIVibrancyEffect.widgetPrimary()
+        self.titleLabel.textColor = UIColor(red: 251 / 255, green: 96 / 255, blue: 0 / 255, alpha: 0.7)
     }
     
     // View Did Load
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.displayPicture.layer.shouldRasterize = true
-        self.displayPicture.layer.rasterizationScale = UIScreen.main.scale
-        self.displayPicture.layer.minificationFilter = "trilinear"
-        self.displayPicture.layer.cornerRadius = self.displayPicture.frame.size.width / 2
-        self.displayPicture.clipsToBounds = true
-    }
-    
-    
 
-    
-    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
-        
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
-        
-        completionHandler(NCUpdateResult.newData)
-    }
-    
-    func convertingToEachUnit(date : Date) -> (year : Int, month : Int, day : Int, hour : Int, minute : Int) {
-        
-        let calendar = NSCalendar.current
-        let year = calendar.component(.year, from: date as Date)
-        let month = calendar.component(.month, from: date as Date)
-        let day = calendar.component(.day, from: date as Date)
-        let hour = calendar.component(.hour, from: date as Date)
-        let minute = calendar.component(.minute, from: date as Date)
-        
-        return (year : year, month : month, day : day, hour : hour, minute : minute)
+        Bundle.setTrySwiftSharedGroupIdentifier("group.com.tryTokyoTodaysExtension")
+
+        self.extensionContext?.widgetLargestAvailableDisplayMode = .compact
+
+        self.displayPictureView.layer.shouldRasterize = true
+        self.displayPictureView.layer.rasterizationScale = UIScreen.main.scale
+        self.displayPictureView.layer.minificationFilter = "trilinear"
+        self.displayPictureView.layer.cornerRadius = self.displayPictureView.frame.size.width / 2
+        self.displayPictureView.clipsToBounds = true
+
+        //Update the view depending on the current state
+        if let session = currentSession {
+            titleLabel.text = session.formattedTitle
+            if let assetName = session.imageAssetName {
+                displayPictureView.image = UIImage(contentsOfFile: Bundle.trySwiftAssetURL(for: assetName)!.path)
+            }
+            subTitleLabel.text = session.formattedSubtitle
+            typeLabel.text = session.sessionDescription
+
+            let sessionBlock = session.sessionBlock.first!
+            let firstTimeString = sessionDateFormatter.string(from: sessionBlock.startTime)
+            let lastTimeString = sessionDateFormatter.string(from: sessionBlock.endTime)
+            timeLabel.text = String(format: "%@ - %@", firstTimeString, lastTimeString)
+            return
+        }
+
+        // Check if we're still before the conference
+        if let session = firstSession {
+            let startOfConference = session.sessionBlock.first!.startTime
+            if Date() < startOfConference {
+                var calendar = Calendar(identifier: .gregorian)
+                calendar.timeZone = TimeZone(abbreviation: "UTC")!
+                let components = calendar.dateComponents([.day, .hour], from: Date(), to: startOfConference)
+                timeLabel.text = String(format: "%@, %@", String(describing: components.day), String(describing: components.hour))
+                return
+            }
+        }
+
+        // Check if the conference has ended
+        if let session = lastSession {
+            let endOfConference = session.sessionBlock.first!.endTime
+            if Date() > endOfConference {
+                timeLabel.text = NSLocalizedString("See you next time!", comment: "")
+            }
+        }
     }
 }
 
