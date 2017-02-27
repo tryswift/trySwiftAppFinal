@@ -85,7 +85,7 @@
 		FAFA15DC1C69D31C00FEA4EA /* trySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15DB1C69D31C00FEA4EA /* trySwiftUITests.swift */; };
 		FC6201601E5F07690019D684 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FC62015F1E5F07690019D684 /* Logo.png */; };
 		FCFAD0331E5D432700C41C1A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFAD0321E5D432700C41C1A /* NotificationCenter.framework */; };
-		FCFAD03D1E5D432700C41C1A /* try! Tokyo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCFAD0311E5D432700C41C1A /* try! Tokyo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FCFAD03D1E5D432700C41C1A /* try! Swift Conference.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCFAD0311E5D432700C41C1A /* try! Swift Conference.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FCFAD0441E5D445700C41C1A /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAD0431E5D445700C41C1A /* TodayController.swift */; };
 		FCFAD0461E5D44B300C41C1A /* TodayInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0451E5D44B300C41C1A /* TodayInterface.storyboard */; };
 		FCFAD0701E5D959A00C41C1A /* agnes_vasarhelyi.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0471E5D959A00C41C1A /* agnes_vasarhelyi.png */; };
@@ -207,7 +207,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FCFAD03D1E5D432700C41C1A /* try! Tokyo.appex in Embed App Extensions */,
+				FCFAD03D1E5D432700C41C1A /* try! Swift Conference.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +307,7 @@
 		FAFA15DB1C69D31C00FEA4EA /* trySwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trySwiftUITests.swift; sourceTree = "<group>"; };
 		FAFA15DD1C69D31C00FEA4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC62015F1E5F07690019D684 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
-		FCFAD0311E5D432700C41C1A /* try! Tokyo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try! Tokyo.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCFAD0311E5D432700C41C1A /* try! Swift Conference.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try! Swift Conference.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFAD0321E5D432700C41C1A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		FCFAD03A1E5D432700C41C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCFAD0421E5D43C500C41C1A /* try! Tokyo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "try! Tokyo.entitlements"; sourceTree = "<group>"; };
@@ -737,7 +737,7 @@
 				FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */,
 				22F823D41E5BBB62003BD6BB /* try!.app */,
 				22F823E01E5BBB62003BD6BB /* try! Extension.appex */,
-				FCFAD0311E5D432700C41C1A /* try! Tokyo.appex */,
+				FCFAD0311E5D432700C41C1A /* try! Swift Conference.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -943,9 +943,9 @@
 			productReference = FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		FCFAD0301E5D432700C41C1A /* try! Tokyo */ = {
+		FCFAD0301E5D432700C41C1A /* try! Swift Conference */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCFAD0401E5D432700C41C1A /* Build configuration list for PBXNativeTarget "try! Tokyo" */;
+			buildConfigurationList = FCFAD0401E5D432700C41C1A /* Build configuration list for PBXNativeTarget "try! Swift Conference" */;
 			buildPhases = (
 				FCFAD02D1E5D432700C41C1A /* Sources */,
 				FCFAD02E1E5D432700C41C1A /* Frameworks */,
@@ -955,9 +955,9 @@
 			);
 			dependencies = (
 			);
-			name = "try! Tokyo";
+			name = "try! Swift Conference";
 			productName = "try! Tokyo";
-			productReference = FCFAD0311E5D432700C41C1A /* try! Tokyo.appex */;
+			productReference = FCFAD0311E5D432700C41C1A /* try! Swift Conference.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -1037,7 +1037,7 @@
 				FAFA15D61C69D31C00FEA4EA /* trySwiftUITests */,
 				22F823D31E5BBB62003BD6BB /* try! */,
 				22F823DF1E5BBB62003BD6BB /* try! Extension */,
-				FCFAD0301E5D432700C41C1A /* try! Tokyo */,
+				FCFAD0301E5D432700C41C1A /* try! Swift Conference */,
 			);
 		};
 /* End PBXProject section */
@@ -1357,7 +1357,7 @@
 		};
 		FCFAD03C1E5D432700C41C1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FCFAD0301E5D432700C41C1A /* try! Tokyo */;
+			target = FCFAD0301E5D432700C41C1A /* try! Swift Conference */;
 			targetProxy = FCFAD03B1E5D432700C41C1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1767,7 +1767,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FCFAD0401E5D432700C41C1A /* Build configuration list for PBXNativeTarget "try! Tokyo" */ = {
+		FCFAD0401E5D432700C41C1A /* Build configuration list for PBXNativeTarget "try! Swift Conference" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FCFAD03E1E5D432700C41C1A /* Debug */,
