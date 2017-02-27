@@ -42,7 +42,7 @@ class TodayController: UIViewController, NCWidgetProviding {
 
     private var currentSession: Session? {
         guard let sessionBlocks = SessionBlock.all else { return nil }
-        let date = Date(timeIntervalSince1970: 1488535546)
+        let date = Date()
         let currentSessionBlock = sessionBlocks.filter("startTime < %@ AND endTime > %@", date, date)
         return currentSessionBlock.first?.sessions.first
     }
@@ -60,32 +60,37 @@ class TodayController: UIViewController, NCWidgetProviding {
     lazy var sessionDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(identifier: "UTC")
-        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.dateFormat = NSLocalizedString("h:mm a", comment: "")
         return dateFormatter
+    }()
+
+    lazy var countdownTimeFormatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .day]
+        formatter.unitsStyle = .full
+        return formatter
     }()
     
     //MARK: View Life Cycle
-    
-    // View Will Appear
-    
-    override func viewWillAppear(_ animated: Bool) {
-
-        self.visualEffectsView.effect = UIVibrancyEffect.widgetPrimary()
-        self.titleLabel.textColor = UIColor(red: 251 / 255, green: 96 / 255, blue: 0 / 255, alpha: 0.7)
-    }
     
     // View Did Load
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        view.addGestureRecognizer(tapRecognizer)
+
         self.extensionContext?.widgetLargestAvailableDisplayMode = .compact
+
+        self.visualEffectsView.effect = UIVibrancyEffect.widgetPrimary()
+        self.titleLabel.textColor = UIColor(red: 251 / 255, green: 96 / 255, blue: 0 / 255, alpha: 0.7)
 
         self.displayPictureView.layer.shouldRasterize = true
         self.displayPictureView.layer.rasterizationScale = UIScreen.main.scale
         self.displayPictureView.layer.minificationFilter = "trilinear"
         self.displayPictureView.layer.cornerRadius = self.displayPictureView.frame.size.width / 2
-        self.displayPictureView.clipsToBounds = true
+        self.displayPictureView.layer.masksToBounds = true
 
         //Update the view depending on the current state
         if let session = currentSession {
@@ -105,10 +110,8 @@ class TodayController: UIViewController, NCWidgetProviding {
         if let session = firstSession {
             let startOfConference = session.sessionBlock.first!.startTime
             if Date() < startOfConference {
-                var calendar = Calendar(identifier: .gregorian)
-                calendar.timeZone = TimeZone(abbreviation: "UTC")!
-                let components = calendar.dateComponents([.day, .hour], from: Date(), to: startOfConference)
-                timeLabel.text = String(format: "%@, %@", String(describing: components.day), String(describing: components.hour))
+                let interval = startOfConference.timeIntervalSinceNow
+                timeLabel.text = countdownTimeFormatter.string(from: interval)
                 return
             }
         }
@@ -120,6 +123,11 @@ class TodayController: UIViewController, NCWidgetProviding {
                 timeLabel.text = NSLocalizedString("See you next time!", comment: "")
             }
         }
+    }
+
+    @objc private func viewTapped() {
+        let url = URL(string: "tryswift://")!
+        extensionContext?.open(url, completionHandler: nil)
     }
 }
 
