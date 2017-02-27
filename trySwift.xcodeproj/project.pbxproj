@@ -11,7 +11,6 @@
 		2222DAA01E63CA9000D754A1 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2222DA9A1E63CA9000D754A1 /* Logo.png */; };
 		2222DAA11E63CA9000D754A1 /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222DA9B1E63CA9000D754A1 /* TodayController.swift */; };
 		2222DAA21E63CA9000D754A1 /* TodayInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2222DA9C1E63CA9000D754A1 /* TodayInterface.storyboard */; };
-		2222DAA31E63CA9000D754A1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222DA9D1E63CA9000D754A1 /* TodayViewController.swift */; };
 		2242EE9C1E5E783800133750 /* VenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2242EE9B1E5E783800133750 /* VenuesViewController.swift */; };
 		22C9804E1E5978B900C8C756 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */; };
 		22CE18D11E5A2EB6002C035F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22CE18D31E5A2EB6002C035F /* Localizable.strings */; };
@@ -175,7 +174,6 @@
 		2222DA9A1E63CA9000D754A1 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = "try! Today/Logo.png"; sourceTree = SOURCE_ROOT; };
 		2222DA9B1E63CA9000D754A1 /* TodayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayController.swift; path = "try! Today/TodayController.swift"; sourceTree = SOURCE_ROOT; };
 		2222DA9C1E63CA9000D754A1 /* TodayInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodayInterface.storyboard; path = "try! Today/TodayInterface.storyboard"; sourceTree = SOURCE_ROOT; };
-		2222DA9D1E63CA9000D754A1 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayViewController.swift; path = "try! Today/TodayViewController.swift"; sourceTree = SOURCE_ROOT; };
 		2222DA9E1E63CA9000D754A1 /* try! Today.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = "try! Today.entitlements"; path = "try! Today/try! Today.entitlements"; sourceTree = SOURCE_ROOT; };
 		2242EE9B1E5E783800133750 /* VenuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
 		22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
@@ -690,7 +688,6 @@
 				2222DA9A1E63CA9000D754A1 /* Logo.png */,
 				2222DA9B1E63CA9000D754A1 /* TodayController.swift */,
 				2222DA9C1E63CA9000D754A1 /* TodayInterface.storyboard */,
-				2222DA9D1E63CA9000D754A1 /* TodayViewController.swift */,
 				2222DA9E1E63CA9000D754A1 /* try! Today.entitlements */,
 			);
 			name = "try! Today";
@@ -1135,7 +1132,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2222DAA31E63CA9000D754A1 /* TodayViewController.swift in Sources */,
 				2222DAA11E63CA9000D754A1 /* TodayController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1490,7 +1486,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = "$(SRCROOT)/try! Today/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.natashatherobot.trySwift.try--Tokyo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1512,7 +1508,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = "$(SRCROOT)/try! Today/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.natashatherobot.trySwift.try--Tokyo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
