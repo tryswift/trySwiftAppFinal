@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2222DA9F1E63CA9000D754A1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2222DA991E63CA9000D754A1 /* Info.plist */; };
+		2222DAA01E63CA9000D754A1 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2222DA9A1E63CA9000D754A1 /* Logo.png */; };
+		2222DAA11E63CA9000D754A1 /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222DA9B1E63CA9000D754A1 /* TodayController.swift */; };
+		2222DAA21E63CA9000D754A1 /* TodayInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2222DA9C1E63CA9000D754A1 /* TodayInterface.storyboard */; };
+		2222DAA31E63CA9000D754A1 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222DA9D1E63CA9000D754A1 /* TodayViewController.swift */; };
 		2242EE9C1E5E783800133750 /* VenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2242EE9B1E5E783800133750 /* VenuesViewController.swift */; };
 		22C9804E1E5978B900C8C756 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */; };
 		22CE18D11E5A2EB6002C035F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22CE18D31E5A2EB6002C035F /* Localizable.strings */; };
@@ -31,7 +36,6 @@
 		7AD1E19C80B78BB08E3DF079 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620220ABCCCDF47FDAF48B67 /* Pods_trySwift.framework */; };
 		828D6CB6A2E13E36F3CB9E0D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14346AF2A8784D962D2C2A7F /* CoreVideo.framework */; };
 		95AAB60A3AF87982F03E3CD7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838CADC0521E9A416B75D42 /* AssetsLibrary.framework */; };
-		B77464180B45FD620FEBBEC6 /* Pods_try__Swift_Conference.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2162D678CA779719A0F6014D /* Pods_try__Swift_Conference.framework */; };
 		E2567889D43BE2B22F55781E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1F9C27BCD8099DCA758F7A /* CoreMedia.framework */; };
 		F0E0044EA2AF1A7AEFB06624 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5C53D439AAF00D63047E8 /* SystemConfiguration.framework */; };
 		FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */; };
@@ -84,61 +88,8 @@
 		FAFA15C61C69D31C00FEA4EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAFA15C41C69D31C00FEA4EA /* LaunchScreen.storyboard */; };
 		FAFA15D11C69D31C00FEA4EA /* trySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15D01C69D31C00FEA4EA /* trySwiftTests.swift */; };
 		FAFA15DC1C69D31C00FEA4EA /* trySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA15DB1C69D31C00FEA4EA /* trySwiftUITests.swift */; };
-		FC6201601E5F07690019D684 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FC62015F1E5F07690019D684 /* Logo.png */; };
 		FCFAD0331E5D432700C41C1A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFAD0321E5D432700C41C1A /* NotificationCenter.framework */; };
-		FCFAD03D1E5D432700C41C1A /* try! Swift Conference.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCFAD0311E5D432700C41C1A /* try! Swift Conference.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FCFAD0441E5D445700C41C1A /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFAD0431E5D445700C41C1A /* TodayController.swift */; };
-		FCFAD0461E5D44B300C41C1A /* TodayInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0451E5D44B300C41C1A /* TodayInterface.storyboard */; };
-		FCFAD0701E5D959A00C41C1A /* agnes_vasarhelyi.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0471E5D959A00C41C1A /* agnes_vasarhelyi.png */; };
-		FCFAD0711E5D959A00C41C1A /* alexis_gallagher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0481E5D959A00C41C1A /* alexis_gallagher.jpg */; };
-		FCFAD0721E5D959A00C41C1A /* artis_birzins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0491E5D959A00C41C1A /* artis_birzins.jpg */; };
-		FCFAD0731E5D959A00C41C1A /* brandon_williams.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD04A1E5D959A00C41C1A /* brandon_williams.jpg */; };
-		FCFAD0741E5D959A00C41C1A /* christopher_rogers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD04B1E5D959A00C41C1A /* christopher_rogers.jpg */; };
-		FCFAD0751E5D959A00C41C1A /* derek_lee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD04C1E5D959A00C41C1A /* derek_lee.jpg */; };
-		FCFAD0761E5D959A00C41C1A /* eric_wing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD04D1E5D959A00C41C1A /* eric_wing.jpg */; };
-		FCFAD0771E5D959A00C41C1A /* felix_krause.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD04E1E5D959A00C41C1A /* felix_krause.jpg */; };
-		FCFAD0781E5D959A00C41C1A /* himi_sato.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD04F1E5D959A00C41C1A /* himi_sato.jpg */; };
-		FCFAD0791E5D959A00C41C1A /* jon_bott.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0501E5D959A00C41C1A /* jon_bott.jpg */; };
-		FCFAD07A1E5D959A00C41C1A /* jon_reid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0511E5D959A00C41C1A /* jon_reid.jpg */; };
-		FCFAD07B1E5D959A00C41C1A /* kaoru_tachibana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0521E5D959A00C41C1A /* kaoru_tachibana.jpg */; };
-		FCFAD07C1E5D959A00C41C1A /* kateryna_gridina.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0531E5D959A00C41C1A /* kateryna_gridina.jpg */; };
-		FCFAD07D1E5D959A00C41C1A /* katsumi_kishikawa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0541E5D959A00C41C1A /* katsumi_kishikawa.jpg */; };
-		FCFAD07E1E5D959A00C41C1A /* kazuaki_matsuo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0551E5D959A00C41C1A /* kazuaki_matsuo.jpg */; };
-		FCFAD07F1E5D959A00C41C1A /* kazunobu_tasaka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0561E5D959A00C41C1A /* kazunobu_tasaka.jpg */; };
-		FCFAD0801E5D959A00C41C1A /* kohki_miki.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0571E5D959A00C41C1A /* kohki_miki.png */; };
-		FCFAD0811E5D959A00C41C1A /* krzysztof_siejkowski.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0581E5D959A00C41C1A /* krzysztof_siejkowski.jpg */; };
-		FCFAD0821E5D959A00C41C1A /* kyle_fuller.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0591E5D959A00C41C1A /* kyle_fuller.png */; };
-		FCFAD0831E5D959A00C41C1A /* laura_ragone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD05A1E5D959A00C41C1A /* laura_ragone.jpg */; };
-		FCFAD0841E5D959A00C41C1A /* maki_sudo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD05B1E5D959A00C41C1A /* maki_sudo.jpg */; };
-		FCFAD0851E5D959A00C41C1A /* marius_rackwitz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD05C1E5D959A00C41C1A /* marius_rackwitz.jpg */; };
-		FCFAD0861E5D959A00C41C1A /* matt_gillingham.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD05D1E5D959A00C41C1A /* matt_gillingham.jpg */; };
-		FCFAD0871E5D959A00C41C1A /* meghan_kane.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD05E1E5D959A00C41C1A /* meghan_kane.jpg */; };
-		FCFAD0881E5D959A00C41C1A /* mo_kudeki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD05F1E5D959A00C41C1A /* mo_kudeki.jpg */; };
-		FCFAD0891E5D959A00C41C1A /* natasha_murashev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0601E5D959A00C41C1A /* natasha_murashev.jpg */; };
-		FCFAD08A1E5D959A00C41C1A /* nate_cook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0611E5D959A00C41C1A /* nate_cook.jpg */; };
-		FCFAD08B1E5D959A00C41C1A /* nino_sakuma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0621E5D959A00C41C1A /* nino_sakuma.jpg */; };
-		FCFAD08C1E5D959A00C41C1A /* orta_therox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0631E5D959A00C41C1A /* orta_therox.jpg */; };
-		FCFAD08D1E5D959A00C41C1A /* ray_fix.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0641E5D959A00C41C1A /* ray_fix.jpg */; };
-		FCFAD08E1E5D959A00C41C1A /* ray_tsaihong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0651E5D959A00C41C1A /* ray_tsaihong.jpg */; };
-		FCFAD08F1E5D959A00C41C1A /* rikke_moller_koblauch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0661E5D959A00C41C1A /* rikke_moller_koblauch.jpg */; };
-		FCFAD0901E5D959A00C41C1A /* satoshi_hachiya.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0671E5D959A00C41C1A /* satoshi_hachiya.jpg */; };
-		FCFAD0911E5D959A00C41C1A /* seiyo_kurita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0681E5D959A00C41C1A /* seiyo_kurita.jpg */; };
-		FCFAD0921E5D959A00C41C1A /* shingo_sato.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0691E5D959A00C41C1A /* shingo_sato.jpg */; };
-		FCFAD0931E5D959A00C41C1A /* shinichi_goto.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD06A1E5D959A00C41C1A /* shinichi_goto.png */; };
-		FCFAD0941E5D959A00C41C1A /* shuichi_tsutsumi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD06B1E5D959A00C41C1A /* shuichi_tsutsumi.jpg */; };
-		FCFAD0951E5D959A00C41C1A /* sommer_panage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD06C1E5D959A00C41C1A /* sommer_panage.jpg */; };
-		FCFAD0961E5D959A00C41C1A /* soroush_khanlou.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD06D1E5D959A00C41C1A /* soroush_khanlou.png */; };
-		FCFAD0971E5D959A00C41C1A /* tatsuya_tobioka.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD06E1E5D959A00C41C1A /* tatsuya_tobioka.png */; };
-		FCFAD0981E5D959A00C41C1A /* yusuke_ito.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD06F1E5D959A00C41C1A /* yusuke_ito.jpg */; };
-		FCFAD0A41E5DBA6700C41C1A /* announce1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD09B1E5DBA6700C41C1A /* announce1.png */; };
-		FCFAD0A51E5DBA6700C41C1A /* announce2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD09C1E5DBA6700C41C1A /* announce2.png */; };
-		FCFAD0A61E5DBA6700C41C1A /* breakfast.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD09D1E5DBA6700C41C1A /* breakfast.png */; };
-		FCFAD0A71E5DBA6700C41C1A /* breaktime1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD09E1E5DBA6700C41C1A /* breaktime1.png */; };
-		FCFAD0A81E5DBA6700C41C1A /* breaktime2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD09F1E5DBA6700C41C1A /* breaktime2.png */; };
-		FCFAD0A91E5DBA6700C41C1A /* dinner.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0A01E5DBA6700C41C1A /* dinner.png */; };
-		FCFAD0AA1E5DBA6700C41C1A /* donuts1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0A11E5DBA6700C41C1A /* donuts1.png */; };
-		FCFAD0AB1E5DBA6700C41C1A /* donuts2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0A21E5DBA6700C41C1A /* donuts2.png */; };
-		FCFAD0AC1E5DBA6700C41C1A /* lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = FCFAD0A31E5DBA6700C41C1A /* lunch.png */; };
+		FCFAD03D1E5D432700C41C1A /* try! Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCFAD0311E5D432700C41C1A /* try! Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,7 +159,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FCFAD03D1E5D432700C41C1A /* try! Swift Conference.appex in Embed App Extensions */,
+				FCFAD03D1E5D432700C41C1A /* try! Today.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +171,12 @@
 		14346AF2A8784D962D2C2A7F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		168F8855FDC17ABDFA46C086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1E83A26EC979705A87BEDF82 /* Pods-try! Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try! Extension/Pods-try! Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		2162D678CA779719A0F6014D /* Pods_try__Swift_Conference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try__Swift_Conference.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2222DA991E63CA9000D754A1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "try! Today/Info.plist"; sourceTree = SOURCE_ROOT; };
+		2222DA9A1E63CA9000D754A1 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = "try! Today/Logo.png"; sourceTree = SOURCE_ROOT; };
+		2222DA9B1E63CA9000D754A1 /* TodayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayController.swift; path = "try! Today/TodayController.swift"; sourceTree = SOURCE_ROOT; };
+		2222DA9C1E63CA9000D754A1 /* TodayInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TodayInterface.storyboard; path = "try! Today/TodayInterface.storyboard"; sourceTree = SOURCE_ROOT; };
+		2222DA9D1E63CA9000D754A1 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayViewController.swift; path = "try! Today/TodayViewController.swift"; sourceTree = SOURCE_ROOT; };
+		2222DA9E1E63CA9000D754A1 /* try! Today.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = "try! Today.entitlements"; path = "try! Today/try! Today.entitlements"; sourceTree = SOURCE_ROOT; };
 		2242EE9B1E5E783800133750 /* VenuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
 		22C9804D1E5978B900C8C756 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		22CE18D21E5A2EB6002C035F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -249,8 +205,6 @@
 		A0B6F88DC3156B1169287F39 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		A5CEB7B0B430095A78C3399B /* Pods-try! Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-try! Extension/Pods-try! Extension.release.xcconfig"; sourceTree = "<group>"; };
 		CD2E9D5733A6E1B6E10AFEEF /* Pods_try__Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try__Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D187B8ACF44113DA4CB6CD82 /* Pods-try! Swift Conference.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Swift Conference.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try! Swift Conference/Pods-try! Swift Conference.debug.xcconfig"; sourceTree = "<group>"; };
-		D7C85C29463AF737504DFEC8 /* Pods-try! Swift Conference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Swift Conference.release.xcconfig"; path = "Pods/Target Support Files/Pods-try! Swift Conference/Pods-try! Swift Conference.release.xcconfig"; sourceTree = "<group>"; };
 		FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerDetailTableViewController.swift; sourceTree = "<group>"; };
 		FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiInfoTableViewCell.swift; sourceTree = "<group>"; };
 		FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -310,63 +264,8 @@
 		FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trySwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFA15DB1C69D31C00FEA4EA /* trySwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trySwiftUITests.swift; sourceTree = "<group>"; };
 		FAFA15DD1C69D31C00FEA4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC62015F1E5F07690019D684 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
-		FCFAD0311E5D432700C41C1A /* try! Swift Conference.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try! Swift Conference.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCFAD0311E5D432700C41C1A /* try! Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "try! Today.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFAD0321E5D432700C41C1A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		FCFAD03A1E5D432700C41C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCFAD0421E5D43C500C41C1A /* try! Tokyo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "try! Tokyo.entitlements"; sourceTree = "<group>"; };
-		FCFAD0431E5D445700C41C1A /* TodayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
-		FCFAD0451E5D44B300C41C1A /* TodayInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TodayInterface.storyboard; sourceTree = "<group>"; };
-		FCFAD0471E5D959A00C41C1A /* agnes_vasarhelyi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agnes_vasarhelyi.png; sourceTree = "<group>"; };
-		FCFAD0481E5D959A00C41C1A /* alexis_gallagher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alexis_gallagher.jpg; sourceTree = "<group>"; };
-		FCFAD0491E5D959A00C41C1A /* artis_birzins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = artis_birzins.jpg; sourceTree = "<group>"; };
-		FCFAD04A1E5D959A00C41C1A /* brandon_williams.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brandon_williams.jpg; sourceTree = "<group>"; };
-		FCFAD04B1E5D959A00C41C1A /* christopher_rogers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = christopher_rogers.jpg; sourceTree = "<group>"; };
-		FCFAD04C1E5D959A00C41C1A /* derek_lee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = derek_lee.jpg; sourceTree = "<group>"; };
-		FCFAD04D1E5D959A00C41C1A /* eric_wing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = eric_wing.jpg; sourceTree = "<group>"; };
-		FCFAD04E1E5D959A00C41C1A /* felix_krause.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = felix_krause.jpg; sourceTree = "<group>"; };
-		FCFAD04F1E5D959A00C41C1A /* himi_sato.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = himi_sato.jpg; sourceTree = "<group>"; };
-		FCFAD0501E5D959A00C41C1A /* jon_bott.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jon_bott.jpg; sourceTree = "<group>"; };
-		FCFAD0511E5D959A00C41C1A /* jon_reid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jon_reid.jpg; sourceTree = "<group>"; };
-		FCFAD0521E5D959A00C41C1A /* kaoru_tachibana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kaoru_tachibana.jpg; sourceTree = "<group>"; };
-		FCFAD0531E5D959A00C41C1A /* kateryna_gridina.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kateryna_gridina.jpg; sourceTree = "<group>"; };
-		FCFAD0541E5D959A00C41C1A /* katsumi_kishikawa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = katsumi_kishikawa.jpg; sourceTree = "<group>"; };
-		FCFAD0551E5D959A00C41C1A /* kazuaki_matsuo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kazuaki_matsuo.jpg; sourceTree = "<group>"; };
-		FCFAD0561E5D959A00C41C1A /* kazunobu_tasaka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kazunobu_tasaka.jpg; sourceTree = "<group>"; };
-		FCFAD0571E5D959A00C41C1A /* kohki_miki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kohki_miki.png; sourceTree = "<group>"; };
-		FCFAD0581E5D959A00C41C1A /* krzysztof_siejkowski.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = krzysztof_siejkowski.jpg; sourceTree = "<group>"; };
-		FCFAD0591E5D959A00C41C1A /* kyle_fuller.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kyle_fuller.png; sourceTree = "<group>"; };
-		FCFAD05A1E5D959A00C41C1A /* laura_ragone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laura_ragone.jpg; sourceTree = "<group>"; };
-		FCFAD05B1E5D959A00C41C1A /* maki_sudo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = maki_sudo.jpg; sourceTree = "<group>"; };
-		FCFAD05C1E5D959A00C41C1A /* marius_rackwitz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marius_rackwitz.jpg; sourceTree = "<group>"; };
-		FCFAD05D1E5D959A00C41C1A /* matt_gillingham.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = matt_gillingham.jpg; sourceTree = "<group>"; };
-		FCFAD05E1E5D959A00C41C1A /* meghan_kane.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meghan_kane.jpg; sourceTree = "<group>"; };
-		FCFAD05F1E5D959A00C41C1A /* mo_kudeki.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mo_kudeki.jpg; sourceTree = "<group>"; };
-		FCFAD0601E5D959A00C41C1A /* natasha_murashev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = natasha_murashev.jpg; sourceTree = "<group>"; };
-		FCFAD0611E5D959A00C41C1A /* nate_cook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nate_cook.jpg; sourceTree = "<group>"; };
-		FCFAD0621E5D959A00C41C1A /* nino_sakuma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nino_sakuma.jpg; sourceTree = "<group>"; };
-		FCFAD0631E5D959A00C41C1A /* orta_therox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = orta_therox.jpg; sourceTree = "<group>"; };
-		FCFAD0641E5D959A00C41C1A /* ray_fix.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ray_fix.jpg; sourceTree = "<group>"; };
-		FCFAD0651E5D959A00C41C1A /* ray_tsaihong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ray_tsaihong.jpg; sourceTree = "<group>"; };
-		FCFAD0661E5D959A00C41C1A /* rikke_moller_koblauch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rikke_moller_koblauch.jpg; sourceTree = "<group>"; };
-		FCFAD0671E5D959A00C41C1A /* satoshi_hachiya.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = satoshi_hachiya.jpg; sourceTree = "<group>"; };
-		FCFAD0681E5D959A00C41C1A /* seiyo_kurita.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seiyo_kurita.jpg; sourceTree = "<group>"; };
-		FCFAD0691E5D959A00C41C1A /* shingo_sato.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shingo_sato.jpg; sourceTree = "<group>"; };
-		FCFAD06A1E5D959A00C41C1A /* shinichi_goto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shinichi_goto.png; sourceTree = "<group>"; };
-		FCFAD06B1E5D959A00C41C1A /* shuichi_tsutsumi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shuichi_tsutsumi.jpg; sourceTree = "<group>"; };
-		FCFAD06C1E5D959A00C41C1A /* sommer_panage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sommer_panage.jpg; sourceTree = "<group>"; };
-		FCFAD06D1E5D959A00C41C1A /* soroush_khanlou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soroush_khanlou.png; sourceTree = "<group>"; };
-		FCFAD06E1E5D959A00C41C1A /* tatsuya_tobioka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tatsuya_tobioka.png; sourceTree = "<group>"; };
-		FCFAD06F1E5D959A00C41C1A /* yusuke_ito.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yusuke_ito.jpg; sourceTree = "<group>"; };
-		FCFAD09B1E5DBA6700C41C1A /* announce1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = announce1.png; sourceTree = "<group>"; };
-		FCFAD09C1E5DBA6700C41C1A /* announce2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = announce2.png; sourceTree = "<group>"; };
-		FCFAD09D1E5DBA6700C41C1A /* breakfast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breakfast.png; sourceTree = "<group>"; };
-		FCFAD09E1E5DBA6700C41C1A /* breaktime1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breaktime1.png; sourceTree = "<group>"; };
-		FCFAD09F1E5DBA6700C41C1A /* breaktime2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breaktime2.png; sourceTree = "<group>"; };
-		FCFAD0A01E5DBA6700C41C1A /* dinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dinner.png; sourceTree = "<group>"; };
-		FCFAD0A11E5DBA6700C41C1A /* donuts1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donuts1.png; sourceTree = "<group>"; };
-		FCFAD0A21E5DBA6700C41C1A /* donuts2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donuts2.png; sourceTree = "<group>"; };
-		FCFAD0A31E5DBA6700C41C1A /* lunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lunch.png; sourceTree = "<group>"; };
 		FEB20E5DC1FA4168A5D3BB5A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -422,7 +321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCFAD0331E5D432700C41C1A /* NotificationCenter.framework in Frameworks */,
-				B77464180B45FD620FEBBEC6 /* Pods_try__Swift_Conference.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +382,6 @@
 				FCFAD0321E5D432700C41C1A /* NotificationCenter.framework */,
 				CD2E9D5733A6E1B6E10AFEEF /* Pods_try__Extension.framework */,
 				620220ABCCCDF47FDAF48B67 /* Pods_trySwift.framework */,
-				2162D678CA779719A0F6014D /* Pods_try__Swift_Conference.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -496,8 +393,6 @@
 				A5CEB7B0B430095A78C3399B /* Pods-try! Extension.release.xcconfig */,
 				935E8D690A861FEA189B1863 /* Pods-trySwift.debug.xcconfig */,
 				5FA07FBC036240AEF8B7C739 /* Pods-trySwift.release.xcconfig */,
-				D187B8ACF44113DA4CB6CD82 /* Pods-try! Swift Conference.debug.xcconfig */,
-				D7C85C29463AF737504DFEC8 /* Pods-try! Swift Conference.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -730,7 +625,7 @@
 				FAFA15DA1C69D31C00FEA4EA /* trySwiftUITests */,
 				22F823D51E5BBB62003BD6BB /* try! */,
 				22F823E41E5BBB62003BD6BB /* try! Extension */,
-				FCFAD0341E5D432700C41C1A /* try! Swift Conference */,
+				FCFAD0341E5D432700C41C1A /* try! Today */,
 				FAFA15B91C69D31C00FEA4EA /* Products */,
 				411F0B1F9D6446FAAE23A50E /* Frameworks */,
 				F413680C9BA29129B4319377 /* Pods */,
@@ -745,7 +640,7 @@
 				FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */,
 				22F823D41E5BBB62003BD6BB /* try!.app */,
 				22F823E01E5BBB62003BD6BB /* try! Extension.appex */,
-				FCFAD0311E5D432700C41C1A /* try! Swift Conference.appex */,
+				FCFAD0311E5D432700C41C1A /* try! Today.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -788,66 +683,17 @@
 			path = trySwiftUITests;
 			sourceTree = "<group>";
 		};
-		FCFAD0341E5D432700C41C1A /* try! Swift Conference */ = {
+		FCFAD0341E5D432700C41C1A /* try! Today */ = {
 			isa = PBXGroup;
 			children = (
-				FC62015F1E5F07690019D684 /* Logo.png */,
-				FCFAD09B1E5DBA6700C41C1A /* announce1.png */,
-				FCFAD09C1E5DBA6700C41C1A /* announce2.png */,
-				FCFAD09D1E5DBA6700C41C1A /* breakfast.png */,
-				FCFAD09E1E5DBA6700C41C1A /* breaktime1.png */,
-				FCFAD09F1E5DBA6700C41C1A /* breaktime2.png */,
-				FCFAD0A01E5DBA6700C41C1A /* dinner.png */,
-				FCFAD0A11E5DBA6700C41C1A /* donuts1.png */,
-				FCFAD0A21E5DBA6700C41C1A /* donuts2.png */,
-				FCFAD0A31E5DBA6700C41C1A /* lunch.png */,
-				FCFAD0471E5D959A00C41C1A /* agnes_vasarhelyi.png */,
-				FCFAD0481E5D959A00C41C1A /* alexis_gallagher.jpg */,
-				FCFAD0491E5D959A00C41C1A /* artis_birzins.jpg */,
-				FCFAD04A1E5D959A00C41C1A /* brandon_williams.jpg */,
-				FCFAD04B1E5D959A00C41C1A /* christopher_rogers.jpg */,
-				FCFAD04C1E5D959A00C41C1A /* derek_lee.jpg */,
-				FCFAD04D1E5D959A00C41C1A /* eric_wing.jpg */,
-				FCFAD04E1E5D959A00C41C1A /* felix_krause.jpg */,
-				FCFAD04F1E5D959A00C41C1A /* himi_sato.jpg */,
-				FCFAD0501E5D959A00C41C1A /* jon_bott.jpg */,
-				FCFAD0511E5D959A00C41C1A /* jon_reid.jpg */,
-				FCFAD0521E5D959A00C41C1A /* kaoru_tachibana.jpg */,
-				FCFAD0531E5D959A00C41C1A /* kateryna_gridina.jpg */,
-				FCFAD0541E5D959A00C41C1A /* katsumi_kishikawa.jpg */,
-				FCFAD0551E5D959A00C41C1A /* kazuaki_matsuo.jpg */,
-				FCFAD0561E5D959A00C41C1A /* kazunobu_tasaka.jpg */,
-				FCFAD0571E5D959A00C41C1A /* kohki_miki.png */,
-				FCFAD0581E5D959A00C41C1A /* krzysztof_siejkowski.jpg */,
-				FCFAD0591E5D959A00C41C1A /* kyle_fuller.png */,
-				FCFAD05A1E5D959A00C41C1A /* laura_ragone.jpg */,
-				FCFAD05B1E5D959A00C41C1A /* maki_sudo.jpg */,
-				FCFAD05C1E5D959A00C41C1A /* marius_rackwitz.jpg */,
-				FCFAD05D1E5D959A00C41C1A /* matt_gillingham.jpg */,
-				FCFAD05E1E5D959A00C41C1A /* meghan_kane.jpg */,
-				FCFAD05F1E5D959A00C41C1A /* mo_kudeki.jpg */,
-				FCFAD0601E5D959A00C41C1A /* natasha_murashev.jpg */,
-				FCFAD0611E5D959A00C41C1A /* nate_cook.jpg */,
-				FCFAD0621E5D959A00C41C1A /* nino_sakuma.jpg */,
-				FCFAD0631E5D959A00C41C1A /* orta_therox.jpg */,
-				FCFAD0641E5D959A00C41C1A /* ray_fix.jpg */,
-				FCFAD0651E5D959A00C41C1A /* ray_tsaihong.jpg */,
-				FCFAD0661E5D959A00C41C1A /* rikke_moller_koblauch.jpg */,
-				FCFAD0671E5D959A00C41C1A /* satoshi_hachiya.jpg */,
-				FCFAD0681E5D959A00C41C1A /* seiyo_kurita.jpg */,
-				FCFAD0691E5D959A00C41C1A /* shingo_sato.jpg */,
-				FCFAD06A1E5D959A00C41C1A /* shinichi_goto.png */,
-				FCFAD06B1E5D959A00C41C1A /* shuichi_tsutsumi.jpg */,
-				FCFAD06C1E5D959A00C41C1A /* sommer_panage.jpg */,
-				FCFAD06D1E5D959A00C41C1A /* soroush_khanlou.png */,
-				FCFAD06E1E5D959A00C41C1A /* tatsuya_tobioka.png */,
-				FCFAD06F1E5D959A00C41C1A /* yusuke_ito.jpg */,
-				FCFAD0451E5D44B300C41C1A /* TodayInterface.storyboard */,
-				FCFAD0421E5D43C500C41C1A /* try! Tokyo.entitlements */,
-				FCFAD03A1E5D432700C41C1A /* Info.plist */,
-				FCFAD0431E5D445700C41C1A /* TodayController.swift */,
+				2222DA991E63CA9000D754A1 /* Info.plist */,
+				2222DA9A1E63CA9000D754A1 /* Logo.png */,
+				2222DA9B1E63CA9000D754A1 /* TodayController.swift */,
+				2222DA9C1E63CA9000D754A1 /* TodayInterface.storyboard */,
+				2222DA9D1E63CA9000D754A1 /* TodayViewController.swift */,
+				2222DA9E1E63CA9000D754A1 /* try! Today.entitlements */,
 			);
-			name = "try! Swift Conference";
+			name = "try! Today";
 			path = "try! Tokyo";
 			sourceTree = "<group>";
 		};
@@ -952,23 +798,21 @@
 			productReference = FAFA15D71C69D31C00FEA4EA /* trySwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		FCFAD0301E5D432700C41C1A /* try! Swift Conference */ = {
+		FCFAD0301E5D432700C41C1A /* try! Today */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FCFAD0401E5D432700C41C1A /* Build configuration list for PBXNativeTarget "try! Swift Conference" */;
+			buildConfigurationList = FCFAD0401E5D432700C41C1A /* Build configuration list for PBXNativeTarget "try! Today" */;
 			buildPhases = (
-				B0F449B133BC65040E445BC2 /* [CP] Check Pods Manifest.lock */,
 				FCFAD02D1E5D432700C41C1A /* Sources */,
 				FCFAD02E1E5D432700C41C1A /* Frameworks */,
 				FCFAD02F1E5D432700C41C1A /* Resources */,
-				C90F6BF4BFFC93851219A921 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "try! Swift Conference";
+			name = "try! Today";
 			productName = "try! Tokyo";
-			productReference = FCFAD0311E5D432700C41C1A /* try! Swift Conference.appex */;
+			productReference = FCFAD0311E5D432700C41C1A /* try! Today.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -1020,6 +864,7 @@
 					FCFAD0301E5D432700C41C1A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = W6GNU64U6Q;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -1048,7 +893,7 @@
 				FAFA15D61C69D31C00FEA4EA /* trySwiftUITests */,
 				22F823D31E5BBB62003BD6BB /* try! */,
 				22F823DF1E5BBB62003BD6BB /* try! Extension */,
-				FCFAD0301E5D432700C41C1A /* try! Swift Conference */,
+				FCFAD0301E5D432700C41C1A /* try! Today */,
 			);
 		};
 /* End PBXProject section */
@@ -1113,58 +958,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCFAD0911E5D959A00C41C1A /* seiyo_kurita.jpg in Resources */,
-				FCFAD0701E5D959A00C41C1A /* agnes_vasarhelyi.png in Resources */,
-				FCFAD07A1E5D959A00C41C1A /* jon_reid.jpg in Resources */,
-				FCFAD0A81E5DBA6700C41C1A /* breaktime2.png in Resources */,
-				FCFAD0801E5D959A00C41C1A /* kohki_miki.png in Resources */,
-				FCFAD0AA1E5DBA6700C41C1A /* donuts1.png in Resources */,
-				FCFAD0921E5D959A00C41C1A /* shingo_sato.jpg in Resources */,
-				FCFAD07F1E5D959A00C41C1A /* kazunobu_tasaka.jpg in Resources */,
-				FCFAD0871E5D959A00C41C1A /* meghan_kane.jpg in Resources */,
-				FCFAD0751E5D959A00C41C1A /* derek_lee.jpg in Resources */,
-				FCFAD0A61E5DBA6700C41C1A /* breakfast.png in Resources */,
-				FCFAD0AB1E5DBA6700C41C1A /* donuts2.png in Resources */,
-				FCFAD0731E5D959A00C41C1A /* brandon_williams.jpg in Resources */,
-				FCFAD08E1E5D959A00C41C1A /* ray_tsaihong.jpg in Resources */,
-				FCFAD0761E5D959A00C41C1A /* eric_wing.jpg in Resources */,
-				FCFAD0461E5D44B300C41C1A /* TodayInterface.storyboard in Resources */,
-				FCFAD0841E5D959A00C41C1A /* maki_sudo.jpg in Resources */,
-				FCFAD0971E5D959A00C41C1A /* tatsuya_tobioka.png in Resources */,
-				FCFAD0941E5D959A00C41C1A /* shuichi_tsutsumi.jpg in Resources */,
-				FCFAD0741E5D959A00C41C1A /* christopher_rogers.jpg in Resources */,
-				FCFAD0711E5D959A00C41C1A /* alexis_gallagher.jpg in Resources */,
-				FCFAD0A71E5DBA6700C41C1A /* breaktime1.png in Resources */,
-				FCFAD0A41E5DBA6700C41C1A /* announce1.png in Resources */,
-				FCFAD0901E5D959A00C41C1A /* satoshi_hachiya.jpg in Resources */,
-				FCFAD0861E5D959A00C41C1A /* matt_gillingham.jpg in Resources */,
-				FCFAD0AC1E5DBA6700C41C1A /* lunch.png in Resources */,
-				FCFAD0961E5D959A00C41C1A /* soroush_khanlou.png in Resources */,
-				FCFAD0831E5D959A00C41C1A /* laura_ragone.jpg in Resources */,
-				FCFAD0811E5D959A00C41C1A /* krzysztof_siejkowski.jpg in Resources */,
-				FCFAD0981E5D959A00C41C1A /* yusuke_ito.jpg in Resources */,
-				FCFAD08A1E5D959A00C41C1A /* nate_cook.jpg in Resources */,
-				FCFAD0A51E5DBA6700C41C1A /* announce2.png in Resources */,
-				FCFAD0A91E5DBA6700C41C1A /* dinner.png in Resources */,
-				FCFAD0851E5D959A00C41C1A /* marius_rackwitz.jpg in Resources */,
-				FCFAD08B1E5D959A00C41C1A /* nino_sakuma.jpg in Resources */,
-				FCFAD0931E5D959A00C41C1A /* shinichi_goto.png in Resources */,
-				FCFAD0881E5D959A00C41C1A /* mo_kudeki.jpg in Resources */,
-				FCFAD08F1E5D959A00C41C1A /* rikke_moller_koblauch.jpg in Resources */,
-				FCFAD07D1E5D959A00C41C1A /* katsumi_kishikawa.jpg in Resources */,
-				FCFAD07E1E5D959A00C41C1A /* kazuaki_matsuo.jpg in Resources */,
-				FCFAD08C1E5D959A00C41C1A /* orta_therox.jpg in Resources */,
-				FCFAD07B1E5D959A00C41C1A /* kaoru_tachibana.jpg in Resources */,
-				FC6201601E5F07690019D684 /* Logo.png in Resources */,
-				FCFAD0721E5D959A00C41C1A /* artis_birzins.jpg in Resources */,
-				FCFAD0771E5D959A00C41C1A /* felix_krause.jpg in Resources */,
-				FCFAD0821E5D959A00C41C1A /* kyle_fuller.png in Resources */,
-				FCFAD0781E5D959A00C41C1A /* himi_sato.jpg in Resources */,
-				FCFAD0891E5D959A00C41C1A /* natasha_murashev.jpg in Resources */,
-				FCFAD0791E5D959A00C41C1A /* jon_bott.jpg in Resources */,
-				FCFAD07C1E5D959A00C41C1A /* kateryna_gridina.jpg in Resources */,
-				FCFAD08D1E5D959A00C41C1A /* ray_fix.jpg in Resources */,
-				FCFAD0951E5D959A00C41C1A /* sommer_panage.jpg in Resources */,
+				2222DAA21E63CA9000D754A1 /* TodayInterface.storyboard in Resources */,
+				2222DAA01E63CA9000D754A1 /* Logo.png in Resources */,
+				2222DA9F1E63CA9000D754A1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1201,21 +997,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trySwift/Pods-trySwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B0F449B133BC65040E445BC2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		C0F84B1C9588B67A629A2C4B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1244,21 +1025,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-try! Extension/Pods-try! Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C90F6BF4BFFC93851219A921 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-try! Swift Conference/Pods-try! Swift Conference-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEFC0E894BD10FE986309341 /* [CP] Check Pods Manifest.lock */ = {
@@ -1369,7 +1135,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCFAD0441E5D445700C41C1A /* TodayController.swift in Sources */,
+				2222DAA31E63CA9000D754A1 /* TodayViewController.swift in Sources */,
+				2222DAA11E63CA9000D754A1 /* TodayController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1398,7 +1165,7 @@
 		};
 		FCFAD03C1E5D432700C41C1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FCFAD0301E5D432700C41C1A /* try! Swift Conference */;
+			target = FCFAD0301E5D432700C41C1A /* try! Today */;
 			targetProxy = FCFAD03B1E5D432700C41C1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1714,36 +1481,37 @@
 		};
 		FCFAD03E1E5D432700C41C1A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D187B8ACF44113DA4CB6CD82 /* Pods-try! Swift Conference.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CODE_SIGN_ENTITLEMENTS = "try! Tokyo/try! Tokyo.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "try! Today/try! Today.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = W6GNU64U6Q;
-				INFOPLIST_FILE = "try! Tokyo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/try! Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.natashatherobot.trySwift.try--Tokyo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		FCFAD03F1E5D432700C41C1A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7C85C29463AF737504DFEC8 /* Pods-try! Swift Conference.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CODE_SIGN_ENTITLEMENTS = "try! Tokyo/try! Tokyo.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "try! Today/try! Today.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = W6GNU64U6Q;
-				INFOPLIST_FILE = "try! Tokyo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/try! Today/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.natashatherobot.trySwift.try--Tokyo";
@@ -1810,7 +1578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FCFAD0401E5D432700C41C1A /* Build configuration list for PBXNativeTarget "try! Swift Conference" */ = {
+		FCFAD0401E5D432700C41C1A /* Build configuration list for PBXNativeTarget "try! Today" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FCFAD03E1E5D432700C41C1A /* Debug */,
