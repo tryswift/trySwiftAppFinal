@@ -20,7 +20,7 @@ target 'try! Extension' do
     shared_pods
 end
 
-target 'try! Tokyo' do
+target 'try! Swift Conference' do
     platform :ios, '10.0'
     shared_pods
 end
