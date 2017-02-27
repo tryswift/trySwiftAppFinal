@@ -56,18 +56,18 @@ class TodayController: UIViewController, NCWidgetProviding {
     // View Will Appear
     
     override func viewWillAppear(_ animated: Bool) {
-
+        
         let conferenceDays = ConferenceDay.all
         let allSessions = [conferenceDays[0], conferenceDays[1]].flatMap { $0.sessionBlocks }
-
+        
         var extensionData : [[String : AnyObject]] = []
-
+        
         allSessions.forEach { value in
-
+            
             var speakerDictionary : [String : String] = [:]
-
+            
             if let session = value.sessions.first {
-
+                
                 speakerDictionary["title"] = session.formattedTitle
                 speakerDictionary["subTitle"] = session.formattedSubtitle
                 speakerDictionary["logoURL"] = session.logoURL.absoluteString
@@ -77,49 +77,49 @@ class TodayController: UIViewController, NCWidgetProviding {
                 speakerDictionary["presentationSummary"] = session.presentationSummary
                 speakerDictionary["formattedLocation"] = session.formattedLocation
             }
-
+            
             extensionData.append([
                 "startTime" : value.startTime as AnyObject,
                 "endTime" : value.endTime as AnyObject,
                 "sessions" :  speakerDictionary as AnyObject
                 ])
-
+            
             extensionData.forEach({ dict in
-
+                
                 if let startTime = dict["startTime"] as? Date, let endTime = dict["endTime"] as? Date, let session = dict["sessions"] as? [String : String] {
-
+                    
                     let currentDate = Date()
-
+                    
                     if currentDate.isBetweeen(date: startTime, andDate: endTime)
                     {
                         // Time
-
+                        
                         self.time.text = "\(self.sessionDateFormatter.string(from: startTime)) - \(self.sessionDateFormatter.string(from: endTime))"
-
+                        
                         // Formatted Title
-
+                        
                         self.formattedTitle.text = session["title"]
-
+                        
                         // Formattted Subtitle
-
+                        
                         if session["subTitle"] != "" && session["subTitle"] != nil && session["subTitle"] != " " {
                             self.formattedSubTitle.text = session["subTitle"]
-
+                            
                         }
                         else {
                             self.formattedSubTitle.text = session["sessionDescription"]
                         }
-
+                        
                         // Formatted Location
-
+                        
                         self.formattedLocation.text = session["formattedLocation"]
-
+                        
                         // Image
-
+                        
                         if let logoURL = session["logoURL"] {
-
+                            
                             // Local Image
-
+                            
                             if logoURL.hasPrefix("file:///") {
                                 if let url = URL(string: logoURL) {
                                     let lastPathComponent = url.lastPathComponent
@@ -132,43 +132,43 @@ class TodayController: UIViewController, NCWidgetProviding {
                                 }
                             }
                         }
-
+                        
                         // Twiiter
-
+                        
                         self.twitter.text = session["twitter"]
-
+                        
                         // Presentation Summary
-
+                        
                         self.presentationSummay.text = session["presentationSummary"]
                     }
                     else {
-
+                        
                         // Formatted Title
-
+                        
                         self.formattedTitle.text = "try! Swift Conference"
-
+                        
                         // Formattted Subtitle
-
+                        
                         self.formattedSubTitle.text = "❤️"
-
+                        
                         // Formatted Location
-
+                        
                         self.formattedLocation.text = "Tokyo, Japan"
-
+                        
                         // Image
-
-                        self.displayPicture.image = UIImage(named: "Logo")
-
+                        
+                        self.displayPicture.image = UIImage(named: "Logo.png")
+                        
                         // Twiiter
-
+                        
                         self.twitter.text = "@tryswiftconf"
-
+                        
                         // Presentation Summary
-
+                        
                         self.presentationSummay.text = "try! Conference is an immersive community gathering about Swift Language Best Practices, Application Development in Swift, Server-Side Swift, Open Source Swift, and the Swift Community, taking place in Tokyo on March 2nd through 4th, 2017."
-
+                        
                         let currentDateUnits = Date().convertingToEachUnit()
-
+                        
                         if currentDateUnits.year == 2017 && currentDateUnits.month == 3 && currentDateUnits.day > 4  {
                             self.time.text = "See You Next Year :)"
                         }
@@ -240,9 +240,23 @@ class TodayController: UIViewController, NCWidgetProviding {
         
         let dayValue = timeDifference.day! > 1 ? "Days" : "Day"
         let hourValue = timeDifference.hour! > 1 ? "Hours" : "Hour"
-
+        
         self.time.text = "Starts in \(timeDifference.day!) \(dayValue), \(timeDifference.hour!) \(hourValue)"
     }
+    
+    func fromFile(imageNamed: String) -> UIImage? {
+        
+        let url = URL(string : imageNamed)!
+        let newValue = imageNamed.replacingOccurrences(of: url.lastPathComponent, with: "")
+        let bundle = Bundle(path: newValue)
+        if let image = UIImage(named: url.lastPathComponent, in: bundle, compatibleWith: nil) {
+            return image
+        }
+        else {
+            return UIImage(named: "Logo")
+        }
+    }
+    
 }
 
 
