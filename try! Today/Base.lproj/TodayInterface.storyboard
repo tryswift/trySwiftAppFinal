@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="width" constant="68" id="Z5b-gD-nQf"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4I-Vd-A7T" userLabel="Formatted Type">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🗼🐥🎉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4I-Vd-A7T" userLabel="Formatted Type">
                                 <rect key="frame" x="90" y="59" width="203" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="n0L-V5-RhZ"/>
