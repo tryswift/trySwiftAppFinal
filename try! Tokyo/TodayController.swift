@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import NotificationCenter
+import TrySwiftData
 
 extension Date {
     func isBetweeen(date date1: Date, andDate date2: Date) -> Bool {
@@ -42,10 +43,132 @@ class TodayController: UIViewController, NCWidgetProviding {
     // View Will Appear
     
     override func viewWillAppear(_ animated: Bool) {
+
+        let conferenceDays = ConferenceDay.all
+        let allSessions = [conferenceDays[0], conferenceDays[1]].flatMap { $0.sessionBlocks }
+
+        var extensionData : [[String : AnyObject]] = []
+
+        allSessions.forEach { value in
+
+            var speakerDictionary : [String : String] = [:]
+
+            if let session = value.sessions.first {
+
+                speakerDictionary["title"] = session.formattedTitle
+                speakerDictionary["subTitle"] = session.formattedSubtitle
+                speakerDictionary["logoURL"] = session.logoURL.absoluteString
+                speakerDictionary["sessionDescription"] = session.sessionDescription
+                speakerDictionary["twitter"] = session.twitter
+                speakerDictionary["presentationSummary"] = session.presentationSummary
+                speakerDictionary["presentationSummary"] = session.presentationSummary
+                speakerDictionary["formattedLocation"] = session.formattedLocation
+            }
+
+            extensionData.append([
+                "startTime" : value.startTime as AnyObject,
+                "endTime" : value.endTime as AnyObject,
+                "sessions" :  speakerDictionary as AnyObject
+                ])
+
+            extensionData.forEach({ dict in
+
+                if let startTime = dict["startTime"] as? Date, let endTime = dict["endTime"] as? Date, let session = dict["sessions"] as? [String : String] {
+
+                    let currentDate = Date()
+
+                    if currentDate.isBetweeen(date: startTime, andDate: endTime)
+                    {
+                        // Time
+
+                        self.time.text = "\(self.sessionDateFormatter.string(from: startTime)) - \(self.sessionDateFormatter.string(from: endTime))"
+
+                        // Formatted Title
+
+                        self.formattedTitle.text = session["title"]
+
+                        // Formattted Subtitle
+
+                        if session["subTitle"] != "" && session["subTitle"] != nil && session["subTitle"] != " " {
+                            self.formattedSubTitle.text = session["subTitle"]
+
+                        }
+                        else {
+                            self.formattedSubTitle.text = session["sessionDescription"]
+                        }
+
+                        // Formatted Location
+
+                        self.formattedLocation.text = session["formattedLocation"]
+
+                        // Image
+
+                        if let logoURL = session["logoURL"] {
+
+                            // Local Image
+
+                            if logoURL.hasPrefix("file:///") {
+                                if let url = URL(string: logoURL) {
+                                    let lastPathComponent = url.lastPathComponent
+                                    self.displayPicture.image = UIImage(named: lastPathComponent)
+                                }
+                            }
+                            else if logoURL.hasPrefix("https://") || logoURL.hasPrefix("http://") {
+                                if let url = URL(string: logoURL), let data = try? Data(contentsOf: url) {
+                                    self.displayPicture.image = UIImage(data: data)
+                                }
+                            }
+                        }
+
+                        // Twiiter
+
+                        self.twitter.text = session["twitter"]
+
+                        // Presentation Summary
+
+                        self.presentationSummay.text = session["presentationSummary"]
+                    }
+                    else {
+
+                        // Formatted Title
+
+                        self.formattedTitle.text = "try! Swift Conference"
+
+                        // Formattted Subtitle
+
+                        self.formattedSubTitle.text = "❤️"
+
+                        // Formatted Location
+
+                        self.formattedLocation.text = "Tokyo, Japan"
+
+                        // Image
+
+                        self.displayPicture.image = UIImage(named: "Logo")
+
+                        // Twiiter
+
+                        self.twitter.text = "@tryswiftconf"
+
+                        // Presentation Summary
+
+                        self.presentationSummay.text = "try! Conference is an immersive community gathering about Swift Language Best Practices, Application Development in Swift, Server-Side Swift, Open Source Swift, and the Swift Community, taking place in Tokyo on March 2nd through 4th, 2017."
+
+                        let currentDateUnits = self.convertingToEachUnit(date: Date())
+
+                        if currentDateUnits.year == 2017 && currentDateUnits.month == 3 && currentDateUnits.day > 4  {
+                            self.time.text = "See You Next Year :)"
+                        }
+                        else {
+                            let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countDownTimer), userInfo: nil, repeats: true)
+                            timer.fire()
+                        }
+                    }
+                }
+            })
+        }
         
-        // Load data from iOS
-        
-        self.extractDataFromUserDefaults()
+//        self.extractDataFromUserDefaults()
         self.formattedTitle.textColor = UIColor(red: 251 / 255, green: 96 / 255, blue: 0 / 255, alpha: 0.7)
     }
     
