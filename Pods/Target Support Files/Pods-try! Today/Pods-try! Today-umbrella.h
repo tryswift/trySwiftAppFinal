@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_try__Swift_ConferenceVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_try__Swift_ConferenceVersionString[];
+FOUNDATION_EXPORT double Pods_try__TodayVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_try__TodayVersionString[];
 

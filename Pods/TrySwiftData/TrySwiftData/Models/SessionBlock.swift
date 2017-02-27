@@ -17,4 +17,13 @@ public class SessionBlock: Object {
 
     /* The sessions occurring within this block. */
     open let sessions = List<Session>()
+
+    public static var all: Results<SessionBlock>? {
+        do {
+            let realm = try Realm.trySwiftRealm()
+            return realm.objects(SessionBlock.self)
+        } catch {
+            return nil
+        }
+    }
 }

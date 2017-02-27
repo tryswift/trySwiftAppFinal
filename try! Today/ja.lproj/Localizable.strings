@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  trySwift
+
+  Created by Tim Oliver on 2/26/17.
+  Copyright © 2017 NatashaTheRobot. All rights reserved.
+*/
+
+"See you next time!" = "また今度！";
+"h:mm a" = "HH:mm";

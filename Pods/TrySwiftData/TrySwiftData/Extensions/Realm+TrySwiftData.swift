@@ -9,8 +9,17 @@
 import Foundation
 import RealmSwift
 
+enum RealmError: Error {
+    case realmNotFound
+}
+
 extension Realm {
     public class func trySwiftRealm() throws -> Realm {
-        return try Realm(configuration: Configuration.trySwiftLocalConfiguration)
+        let configuration = Configuration.trySwiftLocalConfiguration
+        if configuration == nil {
+            throw RealmError.realmNotFound
+        }
+
+        return try Realm(configuration: Configuration.trySwiftLocalConfiguration!)
     }
 }
