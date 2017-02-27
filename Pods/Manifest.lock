@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TrySwiftData:
-    :commit: eed0aed146105811811856d9bb387cdd3f16154c
+    :commit: b9ebf9de221c517f090e065706ce6464b2bbf819
     :git: https://github.com/tryswift/trySwiftData.git
 
 SPEC CHECKSUMS:
@@ -45,6 +45,6 @@ SPEC CHECKSUMS:
   TrySwiftData: 9c8acd05db49d952e0fbb69790b01f3b7441dbe8
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: b0dcde0f85dfc0577671b7cdcebdb45504de9f67
+PODFILE CHECKSUM: 629b4a64048c8b9d30d21c035cd162018acc6aa7
 
 COCOAPODS: 1.2.0
