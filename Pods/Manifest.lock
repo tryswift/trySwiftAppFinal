@@ -31,7 +31,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TrySwiftData:
-    :commit: b9ebf9de221c517f090e065706ce6464b2bbf819
+    :commit: ef2cb5e071e6cc59cfbf12c3a1ecb0b081db0625
     :git: https://github.com/tryswift/trySwiftData.git
 
 SPEC CHECKSUMS:
@@ -47,4 +47,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 629b4a64048c8b9d30d21c035cd162018acc6aa7
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.1.1

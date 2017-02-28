@@ -50,7 +50,7 @@ public class Speaker: Object {
     }
 
     public var imageURL: URL? {
-        if let url = imageWebURL {
+        if let url = imageWebURL, !url.isEmpty {
             return URL(string: url)!
         }
 

@@ -9,20 +9,22 @@
 "Platinum"  = "プラチナ";
 "Gold"      = "ゴールド";
 "Silver"    = "シルバー";
-"Diversity" = "ダイバーシティー";
+"Diversity" = "ダイバーシティ";
 "Student"   = "スカラシップ";
 "Event"     = "サポーター";
 
 "Sponsored Demo" = "Sponsored Demo";
+"Coffee Break" = "休憩";
 "☕️ Break, by %@" = "☕️ Break, by %@";
 "☕️ Break" = "☕️ 休憩";
+"Lunch" = "ランチ";
 "🍴 Lunch" = "🍴 ランチ";
-"Office Hours with %@" = "%@との面会時間";
-"Office Hours" = "面会時間";
-"Presentation" = "セッション";
+"Office Hours with %@" = "スピーカーQ&A（%@）";
+"Office Hours" = "スピーカーQ&A";
+"Presentation" = "プレゼンテーション";
 "⚡️🎤 Lightning Talk" = "⚡️🎤 LT";
 "Demo" = "デモ";
-"Q&A" = "Q&A";
+"Q&A" = "スピーカーQ&A";
 "Conference" = "カンファレンス";
 "Hackathon" = "ハッカソン";
 "Party" = "パーティ";

@@ -176,7 +176,7 @@ public class Session: Object {
 
             return location!.localizedName
         case .party:
-            return venue!.localizedAddress
+            return venue!.localizedTitle
         default:
             return location!.localizedName
         }
