@@ -49,8 +49,14 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     {
         let firstSession = sessionBlocks.first!
         let lastSession = sessionBlocks.last!
-        
-        if Date() < conferenceStartDate {
+
+        let calendar = Calendar.current
+        guard let currentDate = calendar.date(byAdding: .second, value:
+            TimeZone.current.secondsFromGMT(), to: Date()) else {
+            fatalError("Current date is invalid")
+        }
+
+        if currentDate < conferenceStartDate {
             let tmpl = CLKComplicationTemplateModularLargeStandardBody()
             tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! Tokyo")
             tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🗼🐥🎉")
@@ -59,18 +65,18 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             let units: NSCalendar.Unit = [.day, .hour, .minute]
             tmpl.body2TextProvider = CLKRelativeDateTextProvider(date: startDate as Date, style: style, units: units)
             
-            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tmpl)
+            let timelineEntry = CLKComplicationTimelineEntry(date: currentDate, complicationTemplate: tmpl)
             handler(timelineEntry)
-        } else if Date() > lastSession.endTime as Date {
+        } else if currentDate > lastSession.endTime as Date {
             let tmpl = CLKComplicationTemplateModularLargeStandardBody()
             
             tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! Tokyo")
             tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🗼🐥🎉")
             tmpl.body2TextProvider = CLKTimeIntervalTextProvider(start: firstSession.startTime as Date, end: lastSession.endTime as Date)
-            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: tmpl)
+            let timelineEntry = CLKComplicationTimelineEntry(date: currentDate, complicationTemplate: tmpl)
             handler(timelineEntry)
         } else {
-            getTimelineEntries(for: complication, before: Date(), limit: 1) { entries in
+            getTimelineEntries(for: complication, before: currentDate, limit: 1) { entries in
                 handler(entries?.first)
             }
         }
@@ -99,7 +105,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             .map {
                 CLKComplicationTimelineEntry(date: timelineEntryDateForSession($0), complicationTemplate: templateForSession($0))
         }
-        
+
         if timelineEntries.count > limit {
             handler(Array(timelineEntries[0..<limit]))
         } else {
@@ -114,6 +120,19 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         handler(nil)
     }
     
+}
+
+private extension Date {
+    func toUTC() -> Date {
+        // Conference timelines are defined in JST
+        let jst = TimeZone(abbreviation: "JST")!
+        let calendar = Calendar.current
+        guard let currentDate = calendar.date(byAdding: .second, value:
+            -jst.secondsFromGMT(), to: self) else {
+                fatalError("Current date is invalid")
+        }
+        return currentDate
+    }
 }
 
 // MARK: Private Helper Methods
@@ -134,13 +153,13 @@ fileprivate extension ComplicationController {
         if let index = sessionBlocks.index(of: sessionBlock) {
             if index - 1 > 0 {
                 let previousSessionBlock = sessionBlocks[index - 1]
-                return previousSessionBlock.endTime as Date
+                return previousSessionBlock.endTime.toUTC() as Date
             } else {
-                return conferenceStartDate
+                return conferenceStartDate.toUTC()
             }
         }
         
-        return conferenceStartDate
+        return conferenceStartDate.toUTC()
     }
 }
 
