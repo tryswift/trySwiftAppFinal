@@ -8,7 +8,7 @@
 | Agnes Vasarhelyi | [@vasarhelyia](https://twitter.com/vasarhelyia) | Everyday Reactive | TBA | TBA |
 | Kazuaki Matsuo | [@Kazu_cocoa](https://twitter.com/Kazu_cocoa) | Tasting tests at Cookpad | TBA | TBA |
 | Sommer Panage | [@Sommer](https://twitter.com/Sommer) | Writing your UI Swiftly | TBA | TBA |
-| Kyle Fuller | [@kylefuller](https://twitter.com/kylefuller) | Building a Swift Web API and Application Together | TBA | TBA |
+| Kyle Fuller | [@kylefuller](https://twitter.com/kylefuller) | Building a Swift Web API and Application Together | [x](https://speakerdeck.com/kylef/building-a-swift-web-api-and-application-together) | TBA |
 | Marius Rackwitz | [@mrackwitz](https://twitter.com/mrackwitz) | Craft Collaborative Apps with Realm | TBA | TBA |
 | Orta Therox | [@orta](https://twitter.com/orta) | Building your own tools | TBA | TBA |
 | Brandon Williams | [@mbrandonw](https://twitter.com/mbrandonw) | The Two Sides of Writing Testable Code | TBA | TBA |
