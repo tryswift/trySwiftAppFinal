@@ -1,6 +1,6 @@
 | Name | Twitter | Presentation | Slides | Video |
 | ---- | ------- | ------------ | ------ | ----- |
-| Alexis Gallagher | [@alexisgallagher](https://twitter.com/alexisgallagher) | TBA | TBA | TBA |
+| Alexis Gallagher | [@alexisgallagher](https://twitter.com/alexisgallagher) | Everything a Swift Developer Wanted to Know about Machine Learning But Was Afraid To Ask | TBA | TBA |
 | Eric Wing | [@ewingfighter](https://twitter.com/ewingfighter) | Swift on Android | TBA | TBA |
 | Nate Cook | [@nnnnnnnn](https://twitter.com/nnnnnnnn) | Swift's Pointy Bits | TBA | TBA |
 | Meghan Kane | [@meghafon](https://twitter.com/meghafon) | 3D Touch: Bring your apps to a new dimension | TBA | TBA |
@@ -19,6 +19,6 @@
 | Krzysztof Siejkowsk | [@_siejkowski](https://twitter.com/_siejkowski) | A Neatly Typed Message | TBA | TBA |
 | Laura Ragone | [@lauraggle](https://twitter.com/lauraggle) | Color Me Surprised!: Architecting a Robust Color System with Swift | TBA | TBA |
 | Jon Reid | [@qcoding](https://twitter.com/qcoding) | Making Mock Objects More Useful | TBA | TBA |
-| Nikita Lutsenko | [@nlutsenko](https://twitter.com/nlutsenko) | TBA | TBA | TBA |
+| Derek Lee | [@derekleerock](https://twitter.com/derekleerock) | Minimizing Decision Fatigue to Improve Team Productivity | TBA | TBA |
 | Christopher Rogers | [@christorogers](https://twitter.com/christorogers) | Lessons in Swift Error Handling and Resilience | TBA | TBA |
 | Felix Krause | [@KrauseFx](https://twitter.com/KrauseFx) | Scaling open source communities | TBA | TBA |
