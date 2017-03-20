@@ -12,7 +12,7 @@
 | Marius Rackwitz | [@mrackwitz](https://twitter.com/mrackwitz) | Craft Collaborative Apps with Realm | TBA | TBA |
 | Orta Therox | [@orta](https://twitter.com/orta) | Building your own tools | TBA | TBA |
 | Brandon Williams | [@mbrandonw](https://twitter.com/mbrandonw) | The Two Sides of Writing Testable Code | TBA | TBA |
-| Soroush Khanlou | [@khanlou](https://twitter.com/khanlou) | Everything You Ever Wanted To Know About Sequence and Collection | TBA | TBA |
+| Soroush Khanlou | [@khanlou](https://twitter.com/khanlou) | Everything You Ever Wanted To Know About Sequence and Collection | TBA | [x](https://realm.io/news/try-swift-soroush-khanlou-sequence-collection/) |
 | Yusuke Ito | [@novi_](https://twitter.com/novi_) | Swift Outside the Box | TBA | TBA |
 | Kateryna Gridina | [@gridNAka](https://twitter.com/gridNAka) | Document Indexing and App Search in iOS | TBA | TBA |
 | Mo Kudeki | [@kudeki](https://twitter.com/kudeki) | Startup Swift | TBA | TBA |
