@@ -41,7 +41,8 @@ class SpeakersViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let speakerDetailVC = segue.destination as? SpeakerDetailViewController,
+        guard let navigationVC = segue.destination as? UINavigationController,
+            let speakerDetailVC = navigationVC.topViewController as? SpeakerDetailViewController,
             let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
         
         speakerDetailVC.speaker = speakers[selectedIndexPath.row]

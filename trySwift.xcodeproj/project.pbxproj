@@ -29,6 +29,7 @@
 		496DB2CC1E5B8678004A4946 /* Pods-trySwift-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */; };
 		499BD62A1D05910200E74061 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BD6291D05910200E74061 /* Twitter.swift */; };
 		499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */; };
+		49F7B2811E8475F900F09768 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7B2801E8475F900F09768 /* SplitViewController.swift */; };
 		4D498DB1B98D4B496FDBB7AA /* Pods_try__Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2E9D5733A6E1B6E10AFEEF /* Pods_try__Extension.framework */; };
 		4E6E3B84BCD00B2750C57828 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F81AD508535BD405F98215 /* AVFoundation.framework */; };
 		4FBC8D84065DB905DEC53AFD /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D255599A07073CC7B5AE51 /* CoreText.framework */; };
@@ -200,6 +201,7 @@
 		496328931D81F3560033E3C1 /* MailConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailConfiguration.swift; sourceTree = "<group>"; };
 		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		49F7B2801E8475F900F09768 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		58F81AD508535BD405F98215 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5FA07FBC036240AEF8B7C739 /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-trySwift/Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
 		620220ABCCCDF47FDAF48B67 /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -589,6 +591,7 @@
 		FA65B57E1C6D7B0900DCAF0B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				49F7B2801E8475F900F09768 /* SplitViewController.swift */,
 				FA39E91B1C6C8D100074B6BE /* WebDisplayViewController.swift */,
 				FA39E91C1C6C8D100074B6BE /* WebDisplayViewController.xib */,
 			);
@@ -1139,6 +1142,7 @@
 				FA39E91D1C6C8D100074B6BE /* WebDisplayViewController.swift in Sources */,
 				22C9804E1E5978B900C8C756 /* KingfisherExtension.swift in Sources */,
 				FAA54F101D912FF300EC9E80 /* ReusableView.swift in Sources */,
+				49F7B2811E8475F900F09768 /* SplitViewController.swift in Sources */,
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
 				FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */,
 				FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */,

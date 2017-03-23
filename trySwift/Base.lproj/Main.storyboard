@@ -20,7 +20,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="FLe-Rw-VAv" kind="relationship" relationship="viewControllers" id="xnZ-vl-edi"/>
-                        <segue destination="4Uc-bA-Fa1" kind="relationship" relationship="viewControllers" id="dQu-Cz-pQN"/>
+                        <segue destination="JeS-Hy-eRC" kind="relationship" relationship="viewControllers" id="OjT-W2-7FF"/>
                         <segue destination="Dl3-ih-gM8" kind="relationship" relationship="viewControllers" id="qmY-CM-8d0"/>
                         <segue destination="qm7-MC-Ro5" kind="relationship" relationship="viewControllers" id="5HF-Ds-kW7"/>
                     </connections>
@@ -99,48 +99,6 @@
             </objects>
             <point key="canvasLocation" x="2216" y="-1138"/>
         </scene>
-        <!--Speakers-->
-        <scene sceneID="2oi-0W-qWe">
-            <objects>
-                <tableViewController id="Ccr-fK-qqe" customClass="SpeakersViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" id="UDD-k2-fZq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <connections>
-                            <outlet property="dataSource" destination="Ccr-fK-qqe" id="De5-2M-731"/>
-                            <outlet property="delegate" destination="Ccr-fK-qqe" id="BHa-rU-0IX"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Speakers" id="rfT-S1-TG2"/>
-                    <connections>
-                        <segue destination="gZZ-TI-i9R" kind="show" identifier="speakerDetailSegue" id="GLU-a7-ocO"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="581-ig-6d0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1555" y="128"/>
-        </scene>
-        <!--Speaker Detail View Controller-->
-        <scene sceneID="cT2-kN-3XL">
-            <objects>
-                <tableViewController storyboardIdentifier="SpeakerDetailViewController" id="gZZ-TI-i9R" customClass="SpeakerDetailViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FQc-pa-q04">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <connections>
-                            <outlet property="dataSource" destination="gZZ-TI-i9R" id="d6z-WW-ktd"/>
-                            <outlet property="delegate" destination="gZZ-TI-i9R" id="gP8-0H-nOt"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="sjf-jU-X7a"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c5m-1D-KdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2298" y="405"/>
-        </scene>
         <!--Sponsors-->
         <scene sceneID="J5H-sm-sb8">
             <objects>
@@ -177,7 +135,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NiV-YQ-hdc">
-                                            <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="325" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -197,6 +155,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QvF-Mq-n9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1555" y="1917"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s6E-Jg-Vj6">
+            <objects>
+                <navigationController id="Jtx-au-xk5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kGR-0y-ad1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2DP-1m-Wcn" kind="relationship" relationship="rootViewController" id="aZh-er-pWQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2z-c3-ase" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="-202"/>
+        </scene>
+        <!--Speakers-->
+        <scene sceneID="lXS-V3-7BM">
+            <objects>
+                <splitViewController id="JeS-Hy-eRC" customClass="SplitViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Speakers" image="speakers" id="5cT-Oj-vsv"/>
+                    <connections>
+                        <segue destination="Jtx-au-xk5" kind="relationship" relationship="masterViewController" id="0bQ-NX-g2N"/>
+                        <segue destination="Yjh-n4-lg9" kind="relationship" relationship="detailViewController" id="KsS-iJ-gxf"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otG-G8-K2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="130"/>
         </scene>
         <!--More-->
         <scene sceneID="Xc4-bi-G0D">
@@ -232,22 +220,65 @@
             </objects>
             <point key="canvasLocation" x="764" y="1177"/>
         </scene>
-        <!--Speakers-->
-        <scene sceneID="bnM-RZ-4Yr">
+        <!--Navigation Controller-->
+        <scene sceneID="fLW-Ph-9Sb">
             <objects>
-                <navigationController id="4Uc-bA-Fa1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Speakers" image="speakers" id="wMZ-Fs-AbP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Yq-fT-Cm0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yjh-n4-lg9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mA7-4G-2cJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ccr-fK-qqe" kind="relationship" relationship="rootViewController" id="ls4-pg-4sC"/>
+                        <segue destination="pgF-JN-5Tp" kind="relationship" relationship="rootViewController" id="a4B-BS-6Ze"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QIR-7Q-bAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RdS-N2-48S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="787" y="128"/>
+            <point key="canvasLocation" x="1967" y="456"/>
+        </scene>
+        <!--Speakers-->
+        <scene sceneID="NvM-cD-Zyl">
+            <objects>
+                <tableViewController id="2DP-1m-Wcn" customClass="SpeakersViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" id="FTZ-pV-ckN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="2DP-1m-Wcn" id="vT4-Ge-ZfQ"/>
+                            <outlet property="delegate" destination="2DP-1m-Wcn" id="J4z-w0-f47"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Speakers" id="XXH-hI-zyU"/>
+                    <connections>
+                        <segue destination="Yjh-n4-lg9" kind="showDetail" identifier="speakerDetailSegue" id="46X-xX-8dv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7t-oD-dai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2906" y="-202"/>
+        </scene>
+        <!--Speaker Detail View Controller-->
+        <scene sceneID="QYy-Dq-n0n">
+            <objects>
+                <tableViewController storyboardIdentifier="SpeakerDetailViewController" id="pgF-JN-5Tp" customClass="SpeakerDetailViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gdw-oI-uqI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="pgF-JN-5Tp" id="Vcz-xL-Sh2"/>
+                            <outlet property="delegate" destination="pgF-JN-5Tp" id="Ck5-cp-cJe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="KG3-tx-fGM"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uc3-A0-Sph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2906" y="456"/>
         </scene>
     </scenes>
     <resources>
@@ -256,4 +287,7 @@
         <image name="speakers" width="25" height="25"/>
         <image name="sponsors" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KsS-iJ-gxf"/>
+    </inferredMetricsTieBreakers>
 </document>
