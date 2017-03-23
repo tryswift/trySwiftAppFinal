@@ -23,7 +23,7 @@ class MapTableViewCell: UITableViewCell {
         geocoder.geocodeAddressString(location) { [weak self] placemarks, error in
             guard let placemark = placemarks?.first, let location = placemark.location else { return }
             let mark = MKPlacemark(placemark: placemark)
-            let viewRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
+            let viewRegion = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 500, longitudeDelta: 500))
             self?.mapView.setRegion(viewRegion, animated: true)
             self?.mapView.addAnnotation(mark)
         }
