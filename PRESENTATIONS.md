@@ -21,4 +21,4 @@
 | Jon Reid | [@qcoding](https://twitter.com/qcoding) | Making Mock Objects More Useful | TBA | TBA |
 | Derek Lee | [@derekleerock](https://twitter.com/derekleerock) | Minimizing Decision Fatigue to Improve Team Productivity | TBA | TBA |
 | Christopher Rogers | [@christorogers](https://twitter.com/christorogers) | Lessons in Swift Error Handling and Resilience | TBA | TBA |
-| Felix Krause | [@KrauseFx](https://twitter.com/KrauseFx) | Scaling open source communities | TBA | TBA |
+| Felix Krause | [@KrauseFx](https://twitter.com/KrauseFx) | Scaling open source communities | [x](https://speakerdeck.com/krausefx/scaling-open-source-communities-tryswift-tokyo) | TBA |
