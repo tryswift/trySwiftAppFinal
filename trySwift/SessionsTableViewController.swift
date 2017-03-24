@@ -101,8 +101,7 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        guard let splitViewDetailNavigationViewController = splitViewDetailNavigationViewController else { return }
-        splitViewDetailNavigationViewController.viewControllers = [viewControllerToCommit]
+        splitViewDetailNavigationViewController?.viewControllers = [viewControllerToCommit]
     }
 }
 
@@ -118,10 +117,6 @@ extension SessionsTableViewController {
 }
 
 private extension SessionsTableViewController {
-    
-    var splitViewDetailNavigationViewController: UINavigationController? {
-        return splitViewController?.viewControllers.last as? UINavigationController
-    }
     
     func viewController(for session: Session) -> UIViewController? {
         switch session.type {
