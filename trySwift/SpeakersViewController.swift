@@ -30,22 +30,18 @@ class SpeakersViewController: UITableViewController {
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: tableView)
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        performSegue(withIdentifier: speakerDetailSegue, sender: speakers.first)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navigationVC = segue.destination as? UINavigationController,
-            let speakerDetailVC = navigationVC.topViewController as? SpeakerDetailViewController,
-            let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
-        
-        speakerDetailVC.speaker = speakers[selectedIndexPath.row]
+            let speakerDetailVC = navigationVC.topViewController as? SpeakerDetailViewController else { return }
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            speakerDetailVC.speaker = speakers[selectedIndexPath.row]
+        } else if let speaker = sender as? Speaker {
+            speakerDetailVC.speaker = speaker
+        }
     }
 }
 
@@ -70,6 +66,7 @@ extension SpeakersViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: speakerDetailSegue, sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
