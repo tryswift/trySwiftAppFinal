@@ -17,7 +17,12 @@ class WebDisplayViewController: UIViewController {
     
     var url: URL!
     var displayTitle: String?
-    fileprivate var webView: WKWebView!
+    fileprivate let webView: WKWebView = {
+        let webView = WKWebView()
+        webView.subviews.forEach { $0.backgroundColor = .clear }
+        webView.allowsLinkPreview = true
+        return webView
+    }()
     
     var showNetworkActivityIndicator: Bool = false {
         didSet {
@@ -34,6 +39,11 @@ class WebDisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = displayTitle
+        
+        view.insertSubview(webView, aboveSubview: activityIndicator)
+        webView.navigationDelegate = self
+        webView.load(URLRequest(url: url))
+        showNetworkActivityIndicator = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -43,15 +53,7 @@ class WebDisplayViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        webView = WKWebView(frame: view.bounds)
-        webView.subviews.forEach { $0.backgroundColor = .clear }
-        webView.navigationDelegate = self
-        webView.allowsLinkPreview = true
-        view.insertSubview(webView, aboveSubview: activityIndicator)
-        
-        webView.load(URLRequest(url: url))
-        showNetworkActivityIndicator = true
+        webView.frame = view.bounds
     }
 }
 
