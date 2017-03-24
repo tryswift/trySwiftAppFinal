@@ -26,12 +26,6 @@ class VenuesViewController: ButtonBarPagerTabStripViewController {
     }
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        var viewControllers = [VenueTableViewController]()
-
-        for venue in venues {
-            viewControllers.append(VenueTableViewController(venue: venue))
-        }
-
-        return viewControllers
+        return venues.map(VenueTableViewController.init)
     }
 }

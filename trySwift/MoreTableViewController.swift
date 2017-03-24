@@ -13,7 +13,6 @@ import TrySwiftData
 class MoreTableViewController: UITableViewController {
     
     fileprivate let cellIdentifier = "BasicCell"
-    
 
     fileprivate enum MoreSection: Int {
         case eventDetails, acknowledgements, feedback, slack
@@ -43,14 +42,7 @@ class MoreTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        showAbout()
     }
 }
 
@@ -112,6 +104,7 @@ extension MoreTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         switch MoreSection(rawValue: indexPath.section)! {
         case .eventDetails:
             switch EventDetailsRow(rawValue: indexPath.row)! {
@@ -141,10 +134,7 @@ extension MoreTableViewController {
             case .open:
                 openSlack()
             }
-
-            tableView.deselectRow(at: indexPath, animated: true)
         }
-        
     }
 }
 
@@ -152,24 +142,24 @@ private extension MoreTableViewController {
     
     func showAbout() {
         let aboutViewController = AboutTableViewController()
-        navigationController?.pushViewController(aboutViewController, animated: true)
+        splitViewDetailNavigationViewController?.viewControllers = [aboutViewController]
     }
     
     func showVenues() {
         let venueController = VenuesViewController()
-        navigationController?.pushViewController(venueController, animated: true)
+        splitViewDetailNavigationViewController?.viewControllers = [venueController]
     }
     
     func showCodeOfConduct() {
         let webViewController = WebDisplayViewController()
         webViewController.url = URL(string: "https://github.com/NatashaTheRobot/trySwiftCodeOfConduct/blob/master/README.md")!
         webViewController.displayTitle = "Code of Conduct".localized()
-        navigationController?.pushViewController(webViewController, animated: true)
+        splitViewDetailNavigationViewController?.viewControllers = [webViewController]
     }
     
     func showOrganizers() {
         let organizerViewController = OrganizersTableViewController()
-        navigationController?.pushViewController(organizerViewController, animated: true)
+        splitViewDetailNavigationViewController?.viewControllers = [organizerViewController]
     }
     
     func showLibraries() {
@@ -181,7 +171,7 @@ private extension MoreTableViewController {
             acknowledgementesViewController.headerText = "We ❤️ Open Source Software"
         }
         
-        navigationController?.pushViewController(acknowledgementesViewController, animated: true)
+        splitViewDetailNavigationViewController?.viewControllers = [acknowledgementesViewController]
     }
     
     func showAppFeedback() {
