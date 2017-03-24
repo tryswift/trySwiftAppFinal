@@ -27,13 +27,8 @@ class SponsorsViewController: UITableViewController {
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
+        if let firstSponsor = sponsors.first?.first {
+            splitViewDetailNavigationViewController?.viewControllers = [webViewController(for: firstSponsor)]
         }
     }
 }
@@ -67,12 +62,19 @@ extension SponsorsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let sponsor = sponsors[indexPath.section][indexPath.row]
+        let webVC = webViewController(for: sponsor)
         
+        splitViewDetailNavigationViewController?.viewControllers = [webVC]
+    }
+}
+
+private extension SponsorsViewController {
+    
+    func webViewController(for sponsor: Sponsor) -> WebDisplayViewController {
         let webViewController = WebDisplayViewController()
         webViewController.url = URL(string: sponsor.url!)!
         webViewController.displayTitle = sponsor.name
         
-        navigationController?.pushViewController(webViewController, animated: true)
+        return webViewController
     }
 }
-

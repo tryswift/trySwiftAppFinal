@@ -44,12 +44,8 @@ class WebDisplayViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        var webViewFrame = view.frame
-        let tabBarHeight = tabBarController?.tabBar.frame.height ?? 0.0
-        webViewFrame.size.height = webViewFrame.size.height - tabBarHeight // To prevent the webpage sticking under the tabbar.
-        
-        webView = WKWebView(frame: webViewFrame)
-        webView.subviews.forEach { $0.backgroundColor = UIColor.clear }
+        webView = WKWebView(frame: view.bounds)
+        webView.subviews.forEach { $0.backgroundColor = .clear }
         webView.navigationDelegate = self
         webView.allowsLinkPreview = true
         view.insertSubview(webView, aboveSubview: activityIndicator)
@@ -66,7 +62,6 @@ extension WebDisplayViewController: WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        print(error.localizedDescription)
         showNetworkActivityIndicator = false
     }
 }
