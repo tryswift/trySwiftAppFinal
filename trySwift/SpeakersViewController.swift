@@ -31,7 +31,9 @@ class SpeakersViewController: UITableViewController {
             registerForPreviewing(with: self, sourceView: tableView)
         }
         
-        performSegue(withIdentifier: speakerDetailSegue, sender: speakers.first)
+        if let speaker = speakers.first {
+            splitViewDetailNavigationViewController?.viewControllers = [speakerDetailViewController(for: speaker)]
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -65,8 +67,8 @@ extension SpeakersViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: speakerDetailSegue, sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
+        splitViewDetailNavigationViewController?.viewControllers = [speakerDetailViewController(for: speakers[indexPath.row])]
     }
 }
 
@@ -76,12 +78,19 @@ extension SpeakersViewController: UIViewControllerPreviewingDelegate {
         guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
         //This will show the cell clearly and blur the rest of the screen for our peek.
         previewingContext.sourceRect = tableView.rectForRow(at: indexPath)
-        let speakerDetailVC = SpeakerDetailViewController()
-        speakerDetailVC.speaker = speakers[indexPath.row]
-        return speakerDetailVC
+        return speakerDetailViewController(for: speakers[indexPath.row])
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         splitViewDetailNavigationViewController?.viewControllers = [viewControllerToCommit]
+    }
+}
+
+private extension SpeakersViewController {
+    
+    func speakerDetailViewController(for speaker: Speaker) -> SpeakerDetailViewController {
+        let speakerDetailVC = SpeakerDetailViewController()
+        speakerDetailVC.speaker = speaker
+        return speakerDetailVC
     }
 }

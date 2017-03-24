@@ -27,10 +27,10 @@ class WebDisplayViewController: UIViewController {
     var showNetworkActivityIndicator: Bool = false {
         didSet {
             if showNetworkActivityIndicator {
-                activityIndicator.startAnimating()
+                activityIndicator?.startAnimating()
                 application.isNetworkActivityIndicatorVisible = true
             } else {
-                activityIndicator.stopAnimating()
+                activityIndicator?.stopAnimating()
                 application.isNetworkActivityIndicatorVisible = false
             }
         }

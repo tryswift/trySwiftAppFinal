@@ -77,10 +77,9 @@ extension SessionsTableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let splitViewDetailNavigationViewController = splitViewDetailNavigationViewController else { return }
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
         guard let viewController = viewController(for: session) else { return }
-        splitViewDetailNavigationViewController.viewControllers = [viewController]
+        splitViewDetailNavigationViewController?.viewControllers = [viewController]
     }
 }
 
