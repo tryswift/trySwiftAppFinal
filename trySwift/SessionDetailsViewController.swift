@@ -11,8 +11,8 @@ import TrySwiftData
 
 class SessionDetailsViewController: UITableViewController {
     
-    var session: Session!
-    var presentation: Presentation!
+    var session: Session?
+    var presentation: Presentation?
     
     fileprivate enum PresentationDetail: Int {
         case header, speakerInfo, summary, twitter
@@ -34,10 +34,13 @@ extension SessionDetailsViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let _ = session, let _ = presentation else { return 0 }
+        
         return 4
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let session = session, let presentation = presentation else { fatalError() }
         switch PresentationDetail(rawValue: indexPath.row)! {
         case .header:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SessionHeaderTableViewCell

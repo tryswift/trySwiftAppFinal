@@ -19,7 +19,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="FLe-Rw-VAv" kind="relationship" relationship="viewControllers" id="xnZ-vl-edi"/>
+                        <segue destination="yXF-6B-e0E" kind="relationship" relationship="viewControllers" id="a1r-LJ-hoV"/>
                         <segue destination="JeS-Hy-eRC" kind="relationship" relationship="viewControllers" id="OjT-W2-7FF"/>
                         <segue destination="Dl3-ih-gM8" kind="relationship" relationship="viewControllers" id="qmY-CM-8d0"/>
                         <segue destination="qm7-MC-Ro5" kind="relationship" relationship="viewControllers" id="5HF-Ds-kW7"/>
@@ -29,75 +29,35 @@
             </objects>
             <point key="canvasLocation" x="43" y="128"/>
         </scene>
-        <!--Schedule-->
-        <scene sceneID="2WR-M6-Nfy">
+        <!--Navigation Controller-->
+        <scene sceneID="PUb-V4-ZJ4">
             <objects>
-                <navigationController id="FLe-Rw-VAv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" image="schedule" selectedImage="schedule" id="ssU-GV-kBZ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bRb-ge-fhW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <navigationController id="CXx-dj-nRA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1LC-js-BVE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZbV-jw-mHT" kind="relationship" relationship="rootViewController" id="9Dl-oV-KhO"/>
+                        <segue destination="Yl6-gZ-aeY" kind="relationship" relationship="rootViewController" id="clz-SS-Ojn"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jxu-2e-MOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFT-I8-DdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="779" y="-1138"/>
+            <point key="canvasLocation" x="1974" y="-1701"/>
         </scene>
-        <!--Schedule View Controller-->
-        <scene sceneID="WnE-2Y-bTl">
+        <!--Schedule-->
+        <scene sceneID="iI3-PD-eLf">
             <objects>
-                <viewController id="ZbV-jw-mHT" customClass="ScheduleViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bcc-5u-M0d"/>
-                        <viewControllerLayoutGuide type="bottom" id="yee-Gn-CeI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VW6-6Q-noy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPm-KG-Btr">
-                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
-                                <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="RPm-KG-Btr" secondAttribute="trailing" id="2JL-pe-QDA"/>
-                            <constraint firstItem="RPm-KG-Btr" firstAttribute="top" secondItem="bcc-5u-M0d" secondAttribute="bottom" constant="44" id="8Kf-H1-MHx"/>
-                            <constraint firstItem="RPm-KG-Btr" firstAttribute="leading" secondItem="VW6-6Q-noy" secondAttribute="leading" id="bo3-5R-xw2"/>
-                            <constraint firstItem="yee-Gn-CeI" firstAttribute="top" secondItem="RPm-KG-Btr" secondAttribute="bottom" id="fuz-pw-IWT"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="olD-E8-za3"/>
+                <splitViewController id="yXF-6B-e0E" customClass="SplitViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Schedule" image="schedule" id="vvB-cU-zRQ"/>
                     <connections>
-                        <outlet property="containerView" destination="RPm-KG-Btr" id="dlS-tG-Pjv"/>
-                        <segue destination="YhW-46-7Om" kind="show" identifier="sessionDetailsSegue" action="showDetailViewController:sender:" id="MDQ-HI-qa8"/>
+                        <segue destination="CXx-dj-nRA" kind="relationship" relationship="masterViewController" id="xiE-ZQ-dB3"/>
+                        <segue destination="gdL-JW-XVB" kind="relationship" relationship="detailViewController" id="4gR-XL-cZA"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cDk-xO-67d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUm-Ki-URg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1527" y="-1138"/>
-        </scene>
-        <!--Session Details View Controller-->
-        <scene sceneID="gqx-3r-fjx">
-            <objects>
-                <tableViewController storyboardIdentifier="SessionDetailsViewController" id="YhW-46-7Om" customClass="SessionDetailsViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qZt-eO-bKm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <connections>
-                            <outlet property="dataSource" destination="YhW-46-7Om" id="IOG-f3-OmZ"/>
-                            <outlet property="delegate" destination="YhW-46-7Om" id="SJq-Nh-3I4"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dEB-E9-8Lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2216" y="-1138"/>
+            <point key="canvasLocation" x="1020" y="-1373"/>
         </scene>
         <!--Sponsors-->
         <scene sceneID="J5H-sm-sb8">
@@ -128,14 +88,14 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BasicCell" textLabel="NiV-YQ-hdc" style="IBUITableViewCellStyleDefault" id="1Md-fs-cY2">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Md-fs-cY2" id="Sso-Xq-6HB">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NiV-YQ-hdc">
-                                            <rect key="frame" x="15" y="0.0" width="325" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -280,6 +240,69 @@
             </objects>
             <point key="canvasLocation" x="2906" y="456"/>
         </scene>
+        <!--Schedule View Controller-->
+        <scene sceneID="Nx8-r3-tSj">
+            <objects>
+                <viewController id="Yl6-gZ-aeY" customClass="ScheduleViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d34-0h-8eD"/>
+                        <viewControllerLayoutGuide type="bottom" id="uMm-bI-1vJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qGa-W2-Bhb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6s-us-e5o">
+                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uMm-bI-1vJ" firstAttribute="top" secondItem="J6s-us-e5o" secondAttribute="bottom" id="5tT-FN-q6F"/>
+                            <constraint firstAttribute="trailing" secondItem="J6s-us-e5o" secondAttribute="trailing" id="758-z7-l3c"/>
+                            <constraint firstItem="J6s-us-e5o" firstAttribute="leading" secondItem="qGa-W2-Bhb" secondAttribute="leading" id="nge-HT-X3g"/>
+                            <constraint firstItem="J6s-us-e5o" firstAttribute="top" secondItem="d34-0h-8eD" secondAttribute="bottom" constant="44" id="qW1-cw-7Wk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="s2n-Xa-eag"/>
+                    <connections>
+                        <outlet property="containerView" destination="J6s-us-e5o" id="aku-ig-DfH"/>
+                        <segue destination="gdL-JW-XVB" kind="showDetail" id="rbS-gA-mmX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxd-EV-6QF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2911" y="-1701"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JMg-ae-6HJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gdL-JW-XVB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tMM-cw-Cmc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SCK-qS-CCS" kind="relationship" relationship="rootViewController" id="Wg1-VF-mD2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="weT-AL-65X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="-1046"/>
+        </scene>
+        <!--Session Details View Controller-->
+        <scene sceneID="oly-PJ-Qfl">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8o-SM-icU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="SessionDetailsViewController" id="SCK-qS-CCS" customClass="SessionDetailsViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Dkd-Zs-wTN"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="2911" y="-1046"/>
+        </scene>
     </scenes>
     <resources>
         <image name="more" width="25" height="25"/>
@@ -288,6 +311,7 @@
         <image name="sponsors" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KsS-iJ-gxf"/>
+        <segue reference="rbS-gA-mmX"/>
+        <segue reference="46X-xX-8dv"/>
     </inferredMetricsTieBreakers>
 </document>

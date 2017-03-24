@@ -14,4 +14,8 @@ class SplitViewController: UISplitViewController {
         super.viewDidLoad()
         preferredDisplayMode = .allVisible
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }

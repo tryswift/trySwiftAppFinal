@@ -34,14 +34,6 @@ class SessionsTableViewController: UITableViewController {
             registerForPreviewing(with: self, sourceView: tableView)
         }
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
-    }
 }
 
 // MARK: - Table view data source
@@ -77,46 +69,29 @@ extension SessionsTableViewController {
 extension SessionsTableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let splitViewDetailNavigationViewController = splitViewController?.viewControllers.last as? UINavigationController else { return }
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
         switch session.type {
         case .talk, .lightningTalk:
             if let presentation = session.presentation {
                 let sessionDetailsVC = sessionDetails(presentation, session: session)
-                navigationController?.pushViewController(sessionDetailsVC, animated: true)
+                splitViewDetailNavigationViewController.viewControllers = [sessionDetailsVC]
             }
-            break
         case .officeHours:
             if let speaker = session.presentation?.speaker {
                 let officeHoursDetailVC = officeHourDetails(speaker, session: session)
-                navigationController?.pushViewController(officeHoursDetailVC, animated: true)
+                splitViewDetailNavigationViewController.viewControllers = [officeHoursDetailVC]
             }
-            break
-        case .workshop:
+        case .workshop, .meetup, .coffeeBreak, .sponsoredDemo:
             if let event = session.event {
                 let webDisplayVC = webDisplay(event)
-                navigationController?.pushViewController(webDisplayVC, animated: true)
+                splitViewDetailNavigationViewController.viewControllers = [webDisplayVC]
             }
-            break
-        case .meetup:
-            if let event = session.event {
-                let webDisplayVC = webDisplay(event)
-                navigationController?.pushViewController(webDisplayVC, animated: true)
-            }
-            break
-        case .coffeeBreak:
-            guard let sponsor = session.sponsor else { break }
-            let webDisplayVC = webDisplay(sponsor)
-            navigationController?.pushViewController(webDisplayVC, animated: true)
-        case .sponsoredDemo:
-            if let sponsor = session.sponsor {
-                let webDisplayVC = webDisplay(sponsor)
-                navigationController?.pushViewController(webDisplayVC, animated: true)
-            }
-            break
         case .party:
             if let venue = session.venue {
                 let venueVC = venueDetails(venue)
-                navigationController?.pushViewController(venueVC, animated: true)
+                splitViewDetailNavigationViewController.viewControllers = [venueVC]
             }
         default:
             break
@@ -159,7 +134,8 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        navigationController?.pushViewController(viewControllerToCommit, animated: true)
+        guard let splitViewDetailNavigationViewController = splitViewController?.viewControllers.last as? UINavigationController else { return }
+        splitViewDetailNavigationViewController.viewControllers = [viewControllerToCommit]
     }
 }
 
