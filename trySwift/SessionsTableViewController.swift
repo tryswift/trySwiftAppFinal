@@ -33,6 +33,13 @@ class SessionsTableViewController: UITableViewController {
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: tableView)
         }
+        
+        if let firstSelectableSession = conferenceDay.sessionBlocks
+            .flatMap({ $0.sessions })
+            .filter({ $0.selectable }).first,
+            let firstSelectableSessionViewController = viewController(for: firstSelectableSession) {
+            splitViewDetailNavigationViewController?.viewControllers = [firstSelectableSessionViewController]
+        }
     }
 }
 
@@ -70,32 +77,10 @@ extension SessionsTableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard let splitViewDetailNavigationViewController = splitViewController?.viewControllers.last as? UINavigationController else { return }
+        guard let splitViewDetailNavigationViewController = splitViewDetailNavigationViewController else { return }
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
-        switch session.type {
-        case .talk, .lightningTalk:
-            if let presentation = session.presentation {
-                let sessionDetailsVC = sessionDetails(presentation, session: session)
-                splitViewDetailNavigationViewController.viewControllers = [sessionDetailsVC]
-            }
-        case .officeHours:
-            if let speaker = session.presentation?.speaker {
-                let officeHoursDetailVC = officeHourDetails(speaker, session: session)
-                splitViewDetailNavigationViewController.viewControllers = [officeHoursDetailVC]
-            }
-        case .workshop, .meetup, .coffeeBreak, .sponsoredDemo:
-            if let event = session.event {
-                let webDisplayVC = webDisplay(event)
-                splitViewDetailNavigationViewController.viewControllers = [webDisplayVC]
-            }
-        case .party:
-            if let venue = session.venue {
-                let venueVC = venueDetails(venue)
-                splitViewDetailNavigationViewController.viewControllers = [venueVC]
-            }
-        default:
-            break
-        }
+        guard let viewController = viewController(for: session) else { return }
+        splitViewDetailNavigationViewController.viewControllers = [viewController]
     }
 }
 
@@ -112,29 +97,11 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
         // This will show the cell clearly and blur the rest of the screen for our peek.
         previewingContext.sourceRect = tableView.rectForRow(at: indexPath)
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
-        switch session.type {
-        case .talk:
-            return sessionDetails(session.presentation!, session: session)
-        case .officeHours:
-            return officeHourDetails(session.presentation!.speaker!, session: session)
-        case .workshop:
-            return webDisplay(session.event!)
-        case .meetup:
-            return webDisplay(session.event!)
-        case .coffeeBreak:
-            guard let sponsor = session.sponsor else { return nil }
-            return webDisplay(sponsor)
-        case .sponsoredDemo:
-            return webDisplay(session.sponsor!)
-        case .party:
-            return venueDetails(session.venue!)
-        default:
-            return nil
-        }
+        return viewController(for: session)
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        guard let splitViewDetailNavigationViewController = splitViewController?.viewControllers.last as? UINavigationController else { return }
+        guard let splitViewDetailNavigationViewController = splitViewDetailNavigationViewController else { return }
         splitViewDetailNavigationViewController.viewControllers = [viewControllerToCommit]
     }
 }
@@ -151,6 +118,43 @@ extension SessionsTableViewController {
 }
 
 private extension SessionsTableViewController {
+    
+    var splitViewDetailNavigationViewController: UINavigationController? {
+        return splitViewController?.viewControllers.last as? UINavigationController
+    }
+    
+    func viewController(for session: Session) -> UIViewController? {
+        switch session.type {
+        case .talk, .lightningTalk:
+            if let presentation = session.presentation {
+                return sessionDetails(presentation, session: session)
+            }
+        case .officeHours:
+            if let speaker = session.presentation?.speaker {
+                return officeHourDetails(speaker, session: session)
+            }
+        case .workshop, .meetup:
+            if let event = session.event {
+                return webDisplay(event)
+            }
+        case .coffeeBreak:
+            if let sponsor = session.sponsor {
+                return webDisplay(sponsor)
+            }
+        case .sponsoredDemo:
+            if let sponsor = session.sponsor {
+                return webDisplay(sponsor)
+            }
+        case .party:
+            if let venue = session.venue {
+                return venueDetails(venue)
+            }
+        default:
+            return nil
+        }
+        
+        return nil
+    }
     
     func sessionDetails(_ presentation: Presentation, session: Session) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
