@@ -144,7 +144,8 @@ fileprivate extension ComplicationController {
         tmpl.headerTextProvider = CLKTimeIntervalTextProvider(start: sessionBlock.startTime as Date, end: sessionBlock.endTime as Date, timeZone: TimeZone(abbreviation: "UTC")!)
         
         let session = sessionBlock.sessions.first!
-        tmpl.body1TextProvider = CLKSimpleTextProvider(text: session.formattedTitle ?? session.title ?? "try! Swift")
+        let viewModel = SessionViewModel(session: session)
+        tmpl.body1TextProvider = CLKSimpleTextProvider(text: viewModel.title)
         
         return tmpl
     }

@@ -17,9 +17,10 @@ class SessionTableRowController: NSObject {
     
     func configure(_ sessionBlock: SessionBlock) {
         
-        let session = sessionBlock.sessions.first
-        titleInterfaceLabel.setText(session?.formattedTitle)
-        subtitleInterfaceLabel.setText(session?.formattedSubtitle)
+        let session = sessionBlock.sessions.first!
+        let viewModel = SessionViewModel(session: session)
+        titleInterfaceLabel.setText(viewModel.title)
+        subtitleInterfaceLabel.setText(viewModel.presenter)
 
         timeInterfaceLabel.setText(sessionBlock.timeString)
     }
