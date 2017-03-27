@@ -94,10 +94,11 @@ class TodayController: UIViewController, NCWidgetProviding {
 
         //Update the view depending on the current state
         if let session = currentSession {
-            titleLabel.text = session.formattedTitle
-            displayPictureView.image = UIImage(contentsOfFile: session.logoURL.path)
-            subTitleLabel.text = session.formattedSubtitle
-            typeLabel.text = session.sessionDescription
+            let viewModel = SessionViewModel(session: session)
+            titleLabel.text = viewModel.title
+            displayPictureView.image = UIImage(contentsOfFile: viewModel.imageURL.path)
+            subTitleLabel.text = viewModel.presenter
+            typeLabel.text = viewModel.shortDescription
 
             let sessionBlock = session.sessionBlock.first!
             let firstTimeString = sessionDateFormatter.string(from: sessionBlock.startTime)

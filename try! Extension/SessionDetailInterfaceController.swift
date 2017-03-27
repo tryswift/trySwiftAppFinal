@@ -32,12 +32,13 @@ class SessionDetailInterfaceController: WKInterfaceController {
         timeInterfaceLabel.setText(sessionBlock.timeString)
         
         if let session = sessionBlock.sessions.first {
-            titleInterfaceLabel.setText(session.formattedTitle)
-            speakerNameLabel.setText(session.formattedSubtitle)
-            speakerTwitterLabel.setText(session.twitter)
+            let viewModel = SessionViewModel(session: session)
+            titleInterfaceLabel.setText(viewModel.title)
+            speakerNameLabel.setText(viewModel.presenter)
+            speakerTwitterLabel.setText(viewModel.twitter)
             
             do {
-                let image = try UIImage(data: Data(contentsOf: session.logoURL))
+                let image = try UIImage(data: Data(contentsOf: viewModel.imageURL))
                 speakerImage.setImage(image)
             } catch {
                 

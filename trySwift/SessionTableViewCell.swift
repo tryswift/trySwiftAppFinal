@@ -33,16 +33,17 @@ class SessionTableViewCell: UITableViewCell {
     }
     
     func configure(withSession session: Session) {
-        sessionTitleLabel.text = session.formattedTitle ?? defaultLocation
-        sessionSubtitleLabel.text = session.formattedSubtitle ?? defaultLocation
-        sessionTypeLabel.text = session.sessionDescription
-        sessionLocationLabel.text = session.formattedLocation
+        let viewModel = SessionViewModel(session: session)
+        sessionTitleLabel.text = viewModel.title
+        sessionSubtitleLabel.text = viewModel.presenter
+        sessionTypeLabel.text = viewModel.shortDescription
+        sessionLocationLabel.text = viewModel.location
 
         let scale = UIScreen.main.scale
         let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
-        sessionImageView.kf.setImage(with: session.logoURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
+        sessionImageView.kf.setImage(with: viewModel.imageURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
     
-        if session.selectable {
+        if viewModel.selectable {
             accessoryType = .disclosureIndicator
             selectionStyle = .default
         } else {

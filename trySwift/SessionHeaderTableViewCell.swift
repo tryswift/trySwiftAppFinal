@@ -20,7 +20,8 @@ class SessionHeaderTableViewCell: UITableViewCell {
     }
     
     func configure(withSession session: Session) {
-        sessionTitleLabel.text = session.formattedTitle
+        let viewModel = SessionViewModel(session: session)
+        sessionTitleLabel.text = viewModel.title
         
         setNeedsUpdateConstraints()
         layoutIfNeeded()
