@@ -31,9 +31,12 @@ class SpeakersViewController: UITableViewController {
             registerForPreviewing(with: self, sourceView: tableView)
         }
         
-        if let speaker = speakers.first {
-            splitViewDetailNavigationViewController?.viewControllers = [speakerDetailViewController(for: speaker)]
-        }
+        guard
+            let speaker = speakers.first,
+            let collapsed = splitViewController?.isCollapsed,
+            !collapsed else { return }
+        
+        performSegue(withIdentifier: speakerDetailSegue, sender: speaker)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -68,7 +71,7 @@ extension SpeakersViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        splitViewDetailNavigationViewController?.viewControllers = [speakerDetailViewController(for: speakers[indexPath.row])]
+        performSegue(withIdentifier: speakerDetailSegue, sender: speakers[indexPath.row])
     }
 }
 
@@ -82,7 +85,7 @@ extension SpeakersViewController: UIViewControllerPreviewingDelegate {
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        splitViewDetailNavigationViewController?.viewControllers = [viewControllerToCommit]
+        performSegue(withIdentifier: speakerDetailSegue, sender: nil)
     }
 }
 
