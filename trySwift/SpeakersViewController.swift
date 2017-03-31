@@ -30,14 +30,21 @@ class SpeakersViewController: UITableViewController {
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: tableView)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard
+            let speaker = speakers.first,
+            let isCollapsed = splitViewController?.isCollapsed,
+            !isCollapsed else { return }
         
-        if let speaker = speakers.first {
-            splitViewDetailNavigationViewController?.viewControllers = [speakerDetailViewController(for: speaker)]
-        }
+        performSegue(withIdentifier: speakerDetailSegue, sender: speaker)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let navigationVC = segue.destination as? UINavigationController,
+        guard segue.identifier == speakerDetailSegue,
+            let navigationVC = segue.destination as? UINavigationController,
             let speakerDetailVC = navigationVC.topViewController as? SpeakerDetailViewController else { return }
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
             speakerDetailVC.speaker = speakers[selectedIndexPath.row]
@@ -68,7 +75,7 @@ extension SpeakersViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        splitViewDetailNavigationViewController?.viewControllers = [speakerDetailViewController(for: speakers[indexPath.row])]
+        performSegue(withIdentifier: speakerDetailSegue, sender: speakers[indexPath.row])
     }
 }
 
@@ -82,7 +89,7 @@ extension SpeakersViewController: UIViewControllerPreviewingDelegate {
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        splitViewDetailNavigationViewController?.viewControllers = [viewControllerToCommit]
+        performSegue(withIdentifier: speakerDetailSegue, sender: nil)
     }
 }
 
