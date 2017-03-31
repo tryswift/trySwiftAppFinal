@@ -16,6 +16,7 @@ class VenuesViewController: ButtonBarPagerTabStripViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
 
         title = "Venues".localized()
 

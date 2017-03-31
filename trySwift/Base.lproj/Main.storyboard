@@ -343,7 +343,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="More" id="5na-Pc-ASs"/>
                     <connections>
-                        <segue destination="1NO-37-OgN" kind="showDetail" id="xqb-Xk-gRL"/>
+                        <segue destination="1NO-37-OgN" kind="showDetail" identifier="moreDetailSegue" id="xqb-Xk-gRL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZb-bY-Hdf" userLabel="First Responder" sceneMemberID="firstResponder"/>

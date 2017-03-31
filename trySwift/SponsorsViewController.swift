@@ -40,7 +40,9 @@ class SponsorsViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let navigationVC = segue.destination as? UINavigationController, let webVC = sender as? WebDisplayViewController else { return }
+        guard segue.identifier == sponsorDetailSegue,
+            let navigationVC = segue.destination as? UINavigationController,
+            let webVC = sender as? WebDisplayViewController else { return }
         navigationVC.pushViewController(webVC, animated: true)
     }
 }

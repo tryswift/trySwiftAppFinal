@@ -38,6 +38,7 @@ class WebDisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
         title = displayTitle
         
         view.insertSubview(webView, aboveSubview: activityIndicator)

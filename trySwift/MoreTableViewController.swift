@@ -13,6 +13,7 @@ import TrySwiftData
 class MoreTableViewController: UITableViewController {
     
     fileprivate let cellIdentifier = "BasicCell"
+    fileprivate let moreDetailSegue = "moreDetailSegue"
 
     fileprivate enum MoreSection: Int {
         case eventDetails, acknowledgements, feedback, slack
@@ -42,7 +43,22 @@ class MoreTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard
+            let isCollapsed = splitViewController?.isCollapsed,
+            !isCollapsed else { return }
         showAbout()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == moreDetailSegue,
+            let navigationVC = segue.destination as? UINavigationController,
+            let vc = sender as? UIViewController else { return }
+        navigationVC.pushViewController(vc, animated: true)
     }
 }
 
@@ -142,36 +158,37 @@ private extension MoreTableViewController {
     
     func showAbout() {
         let aboutViewController = AboutTableViewController()
-        splitViewDetailNavigationViewController?.viewControllers = [aboutViewController]
+        performSegue(withIdentifier: moreDetailSegue, sender: aboutViewController)
     }
     
     func showVenues() {
         let venueController = VenuesViewController()
-        splitViewDetailNavigationViewController?.viewControllers = [venueController]
+        performSegue(withIdentifier: moreDetailSegue, sender: venueController)
     }
     
     func showCodeOfConduct() {
         let webViewController = WebDisplayViewController()
         webViewController.url = URL(string: "https://github.com/NatashaTheRobot/trySwiftCodeOfConduct/blob/master/README.md")!
         webViewController.displayTitle = "Code of Conduct".localized()
-        splitViewDetailNavigationViewController?.viewControllers = [webViewController]
+        performSegue(withIdentifier: moreDetailSegue, sender: webViewController)
     }
     
     func showOrganizers() {
         let organizerViewController = OrganizersTableViewController()
-        splitViewDetailNavigationViewController?.viewControllers = [organizerViewController]
+        performSegue(withIdentifier: moreDetailSegue, sender: organizerViewController)
     }
     
     func showLibraries() {
         let path = Bundle.main.path(forResource: "Pods-trySwift-acknowledgements", ofType: "plist")
         let acknowledgementesViewController = AcknowListViewController(acknowledgementsPlistPath: path)
+        acknowledgementesViewController.edgesForExtendedLayout = []
         if #available(iOS 9.2, *) {
             acknowledgementesViewController.headerText = "We 🤗 Open Source Software"
         } else {
             acknowledgementesViewController.headerText = "We ❤️ Open Source Software"
         }
         
-        splitViewDetailNavigationViewController?.viewControllers = [acknowledgementesViewController]
+        performSegue(withIdentifier: moreDetailSegue, sender: acknowledgementesViewController)
     }
     
     func showAppFeedback() {
@@ -188,7 +205,7 @@ private extension MoreTableViewController {
         let application = UIApplication.shared
         let appURL = URL(string: "slack://open")!
         if application.canOpenURL(appURL) {
-            application.open(appURL, options: [String:Any](), completionHandler: nil)
+            application.open(appURL)
         } else {
             let url = URL(string: "https://tryswiftjp2017.slack.com")!
             openSafariViewController(withURL: url)

@@ -19,6 +19,7 @@ class AboutTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
         title = "About".localized()
         configureTableView()
     }
