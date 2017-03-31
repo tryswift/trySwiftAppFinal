@@ -12,8 +12,9 @@ import TrySwiftData
 class SponsorsViewController: UITableViewController {
 
     /* An array of `Result` objects representing each sponsor level */
-    let sponsors = Sponsor.all
-
+    fileprivate let sponsors = Sponsor.all
+    fileprivate let sponsorDetailSegue = "sponsorDetailSegue"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -26,10 +27,21 @@ class SponsorsViewController: UITableViewController {
         tableView.register(SponsorTableViewCell.self)
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard
+            let sponsor = sponsors.first?.first,
+            let isCollapsed = splitViewController?.isCollapsed,
+            !isCollapsed else { return }
         
-        if let firstSponsor = sponsors.first?.first {
-            splitViewDetailNavigationViewController?.viewControllers = [webViewController(for: firstSponsor)]
-        }
+        performSegue(withIdentifier: sponsorDetailSegue, sender: webViewController(for: sponsor))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navigationVC = segue.destination as? UINavigationController, let webVC = sender as? WebDisplayViewController else { return }
+        navigationVC.pushViewController(webVC, animated: true)
     }
 }
 
@@ -64,7 +76,7 @@ extension SponsorsViewController {
         let sponsor = sponsors[indexPath.section][indexPath.row]
         let webVC = webViewController(for: sponsor)
         
-        splitViewDetailNavigationViewController?.viewControllers = [webVC]
+        performSegue(withIdentifier: sponsorDetailSegue, sender: webVC)
     }
 }
 
