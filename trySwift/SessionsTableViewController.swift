@@ -13,11 +13,13 @@ import TrySwiftData
 class SessionsTableViewController: UITableViewController {
     
     var conferenceDay: ConferenceDay
+    weak var scheduleViewController: ScheduleViewController?
 
     fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
 
-    init(conferenceDay: ConferenceDay) {
+    init(conferenceDay: ConferenceDay, scheduleViewController: ScheduleViewController) {
         self.conferenceDay = conferenceDay
+        self.scheduleViewController = scheduleViewController
         super.init(style: .plain)
     }
 
@@ -33,13 +35,20 @@ class SessionsTableViewController: UITableViewController {
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: tableView)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        if let firstSelectableSession = conferenceDay.sessionBlocks
-            .flatMap({ $0.sessions })
-            .filter({ $0.selectable }).first,
-            let firstSelectableSessionViewController = viewController(for: firstSelectableSession) {
-            splitViewDetailNavigationViewController?.viewControllers = [firstSelectableSessionViewController]
-        }
+        guard
+            let firstSelectableSession = conferenceDay.sessionBlocks
+                .flatMap({ $0.sessions })
+                .filter({ $0.selectable }).first,
+            let firstSelectableSessionVC = viewController(for: firstSelectableSession),
+            let isCollapsed = splitViewController?.isCollapsed,
+            !isCollapsed else { return }
+        
+        scheduleViewController?.performSegue(withIdentifier: sessionDetailsSegue, sender: firstSelectableSessionVC)
     }
 }
 
@@ -79,7 +88,7 @@ extension SessionsTableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
         guard let viewController = viewController(for: session) else { return }
-        splitViewDetailNavigationViewController?.viewControllers = [viewController]
+        scheduleViewController?.performSegue(withIdentifier: sessionDetailsSegue, sender: viewController)
     }
 }
 
@@ -100,7 +109,7 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        splitViewDetailNavigationViewController?.viewControllers = [viewControllerToCommit]
+        scheduleViewController?.performSegue(withIdentifier: sessionDetailsSegue, sender: viewControllerToCommit)
     }
 }
 

@@ -237,7 +237,7 @@
                     <navigationItem key="navigationItem" id="s2n-Xa-eag"/>
                     <connections>
                         <outlet property="containerView" destination="J6s-us-e5o" id="aku-ig-DfH"/>
-                        <segue destination="gdL-JW-XVB" kind="showDetail" id="rbS-gA-mmX"/>
+                        <segue destination="gdL-JW-XVB" kind="showDetail" identifier="sessionDetailsSegue" id="rbS-gA-mmX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxd-EV-6QF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -254,9 +254,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="SCK-qS-CCS" kind="relationship" relationship="rootViewController" id="Wg1-VF-mD2"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weT-AL-65X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,10 +262,10 @@
         <!--Session Details View Controller-->
         <scene sceneID="oly-PJ-Qfl">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8o-SM-icU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController storyboardIdentifier="SessionDetailsViewController" id="SCK-qS-CCS" customClass="SessionDetailsViewController" customModule="trySwift" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Dkd-Zs-wTN"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w8o-SM-icU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2911" y="-1046"/>
         </scene>

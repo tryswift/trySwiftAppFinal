@@ -69,10 +69,3 @@ extension UIViewController: MFMailComposeViewControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
 }
-
-extension UIViewController {
-    
-    var splitViewDetailNavigationViewController: UINavigationController? {
-        return splitViewController?.viewControllers.last as? UINavigationController
-    }
-}

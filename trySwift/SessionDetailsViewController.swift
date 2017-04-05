@@ -20,6 +20,7 @@ class SessionDetailsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
         
         title = "Presentation".localized()
         configureTableView()
