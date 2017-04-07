@@ -13,7 +13,8 @@ import TrySwiftData
 class MoreTableViewController: UITableViewController {
     
     fileprivate let cellIdentifier = "BasicCell"
-    
+    fileprivate let moreDetailSegue = "moreDetailSegue"
+    fileprivate var didShowDetail = false
 
     fileprivate enum MoreSection: Int {
         case eventDetails, acknowledgements, feedback, slack
@@ -45,12 +46,23 @@ class MoreTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        guard
+            let isCollapsed = splitViewController?.isCollapsed,
+            !isCollapsed,
+            !didShowDetail else { return }
+        
+        didShowDetail = true
+        showAbout()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == moreDetailSegue,
+            let navigationVC = segue.destination as? UINavigationController,
+            let vc = sender as? UIViewController else { return }
+        navigationVC.pushViewController(vc, animated: true)
     }
 }
 
@@ -112,6 +124,7 @@ extension MoreTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         switch MoreSection(rawValue: indexPath.section)! {
         case .eventDetails:
             switch EventDetailsRow(rawValue: indexPath.row)! {
@@ -141,10 +154,7 @@ extension MoreTableViewController {
             case .open:
                 openSlack()
             }
-
-            tableView.deselectRow(at: indexPath, animated: true)
         }
-        
     }
 }
 
@@ -152,36 +162,37 @@ private extension MoreTableViewController {
     
     func showAbout() {
         let aboutViewController = AboutTableViewController()
-        navigationController?.pushViewController(aboutViewController, animated: true)
+        performSegue(withIdentifier: moreDetailSegue, sender: aboutViewController)
     }
     
     func showVenues() {
         let venueController = VenuesViewController()
-        navigationController?.pushViewController(venueController, animated: true)
+        performSegue(withIdentifier: moreDetailSegue, sender: venueController)
     }
     
     func showCodeOfConduct() {
         let webViewController = WebDisplayViewController()
         webViewController.url = URL(string: "https://github.com/NatashaTheRobot/trySwiftCodeOfConduct/blob/master/README.md")!
         webViewController.displayTitle = "Code of Conduct".localized()
-        navigationController?.pushViewController(webViewController, animated: true)
+        performSegue(withIdentifier: moreDetailSegue, sender: webViewController)
     }
     
     func showOrganizers() {
         let organizerViewController = OrganizersTableViewController()
-        navigationController?.pushViewController(organizerViewController, animated: true)
+        performSegue(withIdentifier: moreDetailSegue, sender: organizerViewController)
     }
     
     func showLibraries() {
         let path = Bundle.main.path(forResource: "Pods-trySwift-acknowledgements", ofType: "plist")
         let acknowledgementesViewController = AcknowListViewController(acknowledgementsPlistPath: path)
+        acknowledgementesViewController.edgesForExtendedLayout = []
         if #available(iOS 9.2, *) {
             acknowledgementesViewController.headerText = "We 🤗 Open Source Software"
         } else {
             acknowledgementesViewController.headerText = "We ❤️ Open Source Software"
         }
         
-        navigationController?.pushViewController(acknowledgementesViewController, animated: true)
+        performSegue(withIdentifier: moreDetailSegue, sender: acknowledgementesViewController)
     }
     
     func showAppFeedback() {
@@ -198,7 +209,7 @@ private extension MoreTableViewController {
         let application = UIApplication.shared
         let appURL = URL(string: "slack://open")!
         if application.canOpenURL(appURL) {
-            application.open(appURL, options: [String:Any](), completionHandler: nil)
+            application.open(appURL)
         } else {
             let url = URL(string: "https://tryswiftjp2017.slack.com")!
             openSafariViewController(withURL: url)

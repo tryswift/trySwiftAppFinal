@@ -13,6 +13,8 @@ import Timepiece
 class ScheduleViewController: ButtonBarPagerTabStripViewController {
 
     let days = ConferenceDay.all
+    
+    fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,11 +34,19 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let sessionDay1ViewController = SessionsTableViewController(conferenceDay: days[0])
-        let sessionDay2ViewController = SessionsTableViewController(conferenceDay: days[1])
-        let sessionDay3ViewController = SessionsTableViewController(conferenceDay: days[2])
+        let sessionDay1ViewController = SessionsTableViewController(conferenceDay: days[0], scheduleViewController: self)
+        let sessionDay2ViewController = SessionsTableViewController(conferenceDay: days[1], scheduleViewController: self)
+        let sessionDay3ViewController = SessionsTableViewController(conferenceDay: days[2], scheduleViewController: self)
         return [sessionDay1ViewController, sessionDay2ViewController, sessionDay3ViewController]
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == sessionDetailsSegue,
+            let navigationVC = segue.destination as? UINavigationController,
+            let sessionVC = sender as? UIViewController else { return }
+        
+         navigationVC.pushViewController(sessionVC, animated: true)
     }
 }
 

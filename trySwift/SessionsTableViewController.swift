@@ -13,11 +13,14 @@ import TrySwiftData
 class SessionsTableViewController: UITableViewController {
     
     var conferenceDay: ConferenceDay
+    weak var scheduleViewController: ScheduleViewController?
 
     fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
+    fileprivate var didShowDetail = false
 
-    init(conferenceDay: ConferenceDay) {
+    init(conferenceDay: ConferenceDay, scheduleViewController: ScheduleViewController) {
         self.conferenceDay = conferenceDay
+        self.scheduleViewController = scheduleViewController
         super.init(style: .plain)
     }
 
@@ -35,12 +38,20 @@ class SessionsTableViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        guard
+            let firstSelectableSession = conferenceDay.sessionBlocks
+                .flatMap({ $0.sessions })
+                .filter({ $0.selectable }).first,
+            let firstSelectableSessionVC = viewController(for: firstSelectableSession),
+            let isCollapsed = splitViewController?.isCollapsed,
+            !isCollapsed,
+            !didShowDetail else { return }
+        
+        didShowDetail = true
+        scheduleViewController?.performSegue(withIdentifier: sessionDetailsSegue, sender: firstSelectableSessionVC)
     }
 }
 
@@ -77,50 +88,10 @@ extension SessionsTableViewController {
 extension SessionsTableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
-        switch session.type {
-        case .talk, .lightningTalk:
-            if let presentation = session.presentation {
-                let sessionDetailsVC = sessionDetails(presentation, session: session)
-                navigationController?.pushViewController(sessionDetailsVC, animated: true)
-            }
-            break
-        case .officeHours:
-            if let speaker = session.presentation?.speaker {
-                let officeHoursDetailVC = officeHourDetails(speaker, session: session)
-                navigationController?.pushViewController(officeHoursDetailVC, animated: true)
-            }
-            break
-        case .workshop:
-            if let event = session.event {
-                let webDisplayVC = webDisplay(event)
-                navigationController?.pushViewController(webDisplayVC, animated: true)
-            }
-            break
-        case .meetup:
-            if let event = session.event {
-                let webDisplayVC = webDisplay(event)
-                navigationController?.pushViewController(webDisplayVC, animated: true)
-            }
-            break
-        case .coffeeBreak:
-            guard let sponsor = session.sponsor else { break }
-            let webDisplayVC = webDisplay(sponsor)
-            navigationController?.pushViewController(webDisplayVC, animated: true)
-        case .sponsoredDemo:
-            if let sponsor = session.sponsor {
-                let webDisplayVC = webDisplay(sponsor)
-                navigationController?.pushViewController(webDisplayVC, animated: true)
-            }
-            break
-        case .party:
-            if let venue = session.venue {
-                let venueVC = venueDetails(venue)
-                navigationController?.pushViewController(venueVC, animated: true)
-            }
-        default:
-            break
-        }
+        guard let viewController = viewController(for: session) else { return }
+        scheduleViewController?.performSegue(withIdentifier: sessionDetailsSegue, sender: viewController)
     }
 }
 
@@ -137,29 +108,11 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
         // This will show the cell clearly and blur the rest of the screen for our peek.
         previewingContext.sourceRect = tableView.rectForRow(at: indexPath)
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
-        switch session.type {
-        case .talk:
-            return sessionDetails(session.presentation!, session: session)
-        case .officeHours:
-            return officeHourDetails(session.presentation!.speaker!, session: session)
-        case .workshop:
-            return webDisplay(session.event!)
-        case .meetup:
-            return webDisplay(session.event!)
-        case .coffeeBreak:
-            guard let sponsor = session.sponsor else { return nil }
-            return webDisplay(sponsor)
-        case .sponsoredDemo:
-            return webDisplay(session.sponsor!)
-        case .party:
-            return venueDetails(session.venue!)
-        default:
-            return nil
-        }
+        return viewController(for: session)
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        navigationController?.pushViewController(viewControllerToCommit, animated: true)
+        scheduleViewController?.performSegue(withIdentifier: sessionDetailsSegue, sender: viewControllerToCommit)
     }
 }
 
@@ -175,6 +128,39 @@ extension SessionsTableViewController {
 }
 
 private extension SessionsTableViewController {
+    
+    func viewController(for session: Session) -> UIViewController? {
+        switch session.type {
+        case .talk, .lightningTalk:
+            if let presentation = session.presentation {
+                return sessionDetails(presentation, session: session)
+            }
+        case .officeHours:
+            if let speaker = session.presentation?.speaker {
+                return officeHourDetails(speaker, session: session)
+            }
+        case .workshop, .meetup:
+            if let event = session.event {
+                return webDisplay(event)
+            }
+        case .coffeeBreak:
+            if let sponsor = session.sponsor {
+                return webDisplay(sponsor)
+            }
+        case .sponsoredDemo:
+            if let sponsor = session.sponsor {
+                return webDisplay(sponsor)
+            }
+        case .party:
+            if let venue = session.venue {
+                return venueDetails(venue)
+            }
+        default:
+            return nil
+        }
+        
+        return nil
+    }
     
     func sessionDetails(_ presentation: Presentation, session: Session) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

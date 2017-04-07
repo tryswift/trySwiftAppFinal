@@ -28,6 +28,7 @@ class OrganizerDetailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
 
         title = organizer.name
         

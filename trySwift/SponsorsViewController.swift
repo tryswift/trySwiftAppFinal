@@ -12,8 +12,10 @@ import TrySwiftData
 class SponsorsViewController: UITableViewController {
 
     /* An array of `Result` objects representing each sponsor level */
-    let sponsors = Sponsor.all
-
+    fileprivate let sponsors = Sponsor.all
+    fileprivate let sponsorDetailSegue = "sponsorDetailSegue"
+    fileprivate var didShowDetail = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -26,15 +28,25 @@ class SponsorsViewController: UITableViewController {
         tableView.register(SponsorTableViewCell.self)
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
-        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard
+            let sponsor = sponsors.first?.first,
+            let isCollapsed = splitViewController?.isCollapsed,
+            !isCollapsed,
+            !didShowDetail else { return }
         
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        didShowDetail = true
+        performSegue(withIdentifier: sponsorDetailSegue, sender: webViewController(for: sponsor))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == sponsorDetailSegue,
+            let navigationVC = segue.destination as? UINavigationController,
+            let webVC = sender as? WebDisplayViewController else { return }
+        navigationVC.pushViewController(webVC, animated: true)
     }
 }
 
@@ -67,12 +79,19 @@ extension SponsorsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let sponsor = sponsors[indexPath.section][indexPath.row]
+        let webVC = webViewController(for: sponsor)
         
+        performSegue(withIdentifier: sponsorDetailSegue, sender: webVC)
+    }
+}
+
+private extension SponsorsViewController {
+    
+    func webViewController(for sponsor: Sponsor) -> WebDisplayViewController {
         let webViewController = WebDisplayViewController()
         webViewController.url = URL(string: sponsor.url!)!
         webViewController.displayTitle = sponsor.name
         
-        navigationController?.pushViewController(webViewController, animated: true)
+        return webViewController
     }
 }
-

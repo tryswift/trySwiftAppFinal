@@ -20,6 +20,7 @@ class OfficeHoursDetailViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
         
         title = "Q&A".localized()
         configureTableView()

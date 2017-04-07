@@ -15,6 +15,7 @@ class OrganizersTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
 
         title = "Organizers".localized()
         configureTableView()

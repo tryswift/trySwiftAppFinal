@@ -13,6 +13,7 @@ class SpeakersViewController: UITableViewController {
     
     fileprivate let speakers = Speaker.all
     fileprivate let speakerDetailSegue = "speakerDetailSegue"
+    fileprivate var didShowDetail = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,19 +33,27 @@ class SpeakersViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard
+            let speaker = speakers.first,
+            let isCollapsed = splitViewController?.isCollapsed,
+            !isCollapsed,
+            !didShowDetail else { return }
         
-        if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
+        didShowDetail = true
+        performSegue(withIdentifier: speakerDetailSegue, sender: speaker)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let speakerDetailVC = segue.destination as? SpeakerDetailViewController,
-            let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
-        
-        speakerDetailVC.speaker = speakers[selectedIndexPath.row]
+        guard segue.identifier == speakerDetailSegue,
+            let navigationVC = segue.destination as? UINavigationController,
+            let speakerDetailVC = navigationVC.topViewController as? SpeakerDetailViewController else { return }
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            speakerDetailVC.speaker = speakers[selectedIndexPath.row]
+        } else if let speaker = sender as? Speaker {
+            speakerDetailVC.speaker = speaker
+        }
     }
 }
 
@@ -68,7 +77,8 @@ extension SpeakersViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: speakerDetailSegue, sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: speakerDetailSegue, sender: speakers[indexPath.row])
     }
 }
 
@@ -78,12 +88,19 @@ extension SpeakersViewController: UIViewControllerPreviewingDelegate {
         guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
         //This will show the cell clearly and blur the rest of the screen for our peek.
         previewingContext.sourceRect = tableView.rectForRow(at: indexPath)
-        let speakerDetailVC = SpeakerDetailViewController()
-        speakerDetailVC.speaker = speakers[indexPath.row]
-        return speakerDetailVC
+        return speakerDetailViewController(for: speakers[indexPath.row])
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        navigationController?.pushViewController(viewControllerToCommit, animated: true)
+        performSegue(withIdentifier: speakerDetailSegue, sender: nil)
+    }
+}
+
+private extension SpeakersViewController {
+    
+    func speakerDetailViewController(for speaker: Speaker) -> SpeakerDetailViewController {
+        let speakerDetailVC = SpeakerDetailViewController()
+        speakerDetailVC.speaker = speaker
+        return speakerDetailVC
     }
 }

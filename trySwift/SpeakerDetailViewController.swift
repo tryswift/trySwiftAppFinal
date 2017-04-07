@@ -11,7 +11,7 @@ import TrySwiftData
 
 class SpeakerDetailViewController: UITableViewController {
 
-    var speaker: Speaker!
+    var speaker: Speaker?
     
     fileprivate enum SpeakerDetail: Int {
         case header, bio, twitter
@@ -19,8 +19,9 @@ class SpeakerDetailViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
 
-        title = speaker.name
+        title = speaker?.name
         configureTableView()
     }
 }
@@ -33,10 +34,12 @@ extension SpeakerDetailViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if let _ = speaker { return 3 }
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let speaker = speaker else { fatalError() }
         switch SpeakerDetail(rawValue: indexPath.row)! {
         case .header:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SpeakerTableViewCell

@@ -17,15 +17,20 @@ class WebDisplayViewController: UIViewController {
     
     var url: URL!
     var displayTitle: String?
-    fileprivate var webView: WKWebView!
+    fileprivate let webView: WKWebView = {
+        let webView = WKWebView()
+        webView.subviews.forEach { $0.backgroundColor = .clear }
+        webView.allowsLinkPreview = true
+        return webView
+    }()
     
     var showNetworkActivityIndicator: Bool = false {
         didSet {
             if showNetworkActivityIndicator {
-                activityIndicator.startAnimating()
+                activityIndicator?.startAnimating()
                 application.isNetworkActivityIndicatorVisible = true
             } else {
-                activityIndicator.stopAnimating()
+                activityIndicator?.stopAnimating()
                 application.isNetworkActivityIndicatorVisible = false
             }
         }
@@ -33,7 +38,13 @@ class WebDisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
         title = displayTitle
+        
+        view.insertSubview(webView, aboveSubview: activityIndicator)
+        webView.navigationDelegate = self
+        webView.load(URLRequest(url: url))
+        showNetworkActivityIndicator = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -43,19 +54,7 @@ class WebDisplayViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        var webViewFrame = view.frame
-        let tabBarHeight = tabBarController?.tabBar.frame.height ?? 0.0
-        webViewFrame.size.height = webViewFrame.size.height - tabBarHeight // To prevent the webpage sticking under the tabbar.
-        
-        webView = WKWebView(frame: webViewFrame)
-        webView.subviews.forEach { $0.backgroundColor = UIColor.clear }
-        webView.navigationDelegate = self
-        webView.allowsLinkPreview = true
-        view.insertSubview(webView, aboveSubview: activityIndicator)
-        
-        webView.load(URLRequest(url: url))
-        showNetworkActivityIndicator = true
+        webView.frame = view.bounds
     }
 }
 
@@ -66,7 +65,6 @@ extension WebDisplayViewController: WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
-        print(error.localizedDescription)
         showNetworkActivityIndicator = false
     }
 }
