@@ -16,6 +16,7 @@ class SessionsTableViewController: UITableViewController {
     weak var scheduleViewController: ScheduleViewController?
 
     fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
+    fileprivate var didShowDetail = false
 
     init(conferenceDay: ConferenceDay, scheduleViewController: ScheduleViewController) {
         self.conferenceDay = conferenceDay
@@ -46,8 +47,10 @@ class SessionsTableViewController: UITableViewController {
                 .filter({ $0.selectable }).first,
             let firstSelectableSessionVC = viewController(for: firstSelectableSession),
             let isCollapsed = splitViewController?.isCollapsed,
-            !isCollapsed else { return }
+            !isCollapsed,
+            !didShowDetail else { return }
         
+        didShowDetail = true
         scheduleViewController?.performSegue(withIdentifier: sessionDetailsSegue, sender: firstSelectableSessionVC)
     }
 }

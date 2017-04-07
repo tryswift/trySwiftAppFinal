@@ -14,6 +14,7 @@ class SponsorsViewController: UITableViewController {
     /* An array of `Result` objects representing each sponsor level */
     fileprivate let sponsors = Sponsor.all
     fileprivate let sponsorDetailSegue = "sponsorDetailSegue"
+    fileprivate var didShowDetail = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,8 +35,10 @@ class SponsorsViewController: UITableViewController {
         guard
             let sponsor = sponsors.first?.first,
             let isCollapsed = splitViewController?.isCollapsed,
-            !isCollapsed else { return }
+            !isCollapsed,
+            !didShowDetail else { return }
         
+        didShowDetail = true
         performSegue(withIdentifier: sponsorDetailSegue, sender: webViewController(for: sponsor))
     }
     

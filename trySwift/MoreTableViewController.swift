@@ -14,6 +14,7 @@ class MoreTableViewController: UITableViewController {
     
     fileprivate let cellIdentifier = "BasicCell"
     fileprivate let moreDetailSegue = "moreDetailSegue"
+    fileprivate var didShowDetail = false
 
     fileprivate enum MoreSection: Int {
         case eventDetails, acknowledgements, feedback, slack
@@ -50,7 +51,10 @@ class MoreTableViewController: UITableViewController {
         
         guard
             let isCollapsed = splitViewController?.isCollapsed,
-            !isCollapsed else { return }
+            !isCollapsed,
+            !didShowDetail else { return }
+        
+        didShowDetail = true
         showAbout()
     }
     

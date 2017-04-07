@@ -13,6 +13,7 @@ class SpeakersViewController: UITableViewController {
     
     fileprivate let speakers = Speaker.all
     fileprivate let speakerDetailSegue = "speakerDetailSegue"
+    fileprivate var didShowDetail = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,8 +38,10 @@ class SpeakersViewController: UITableViewController {
         guard
             let speaker = speakers.first,
             let isCollapsed = splitViewController?.isCollapsed,
-            !isCollapsed else { return }
+            !isCollapsed,
+            !didShowDetail else { return }
         
+        didShowDetail = true
         performSegue(withIdentifier: speakerDetailSegue, sender: speaker)
     }
     
