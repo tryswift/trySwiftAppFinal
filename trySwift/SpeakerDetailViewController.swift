@@ -19,6 +19,7 @@ class SpeakerDetailViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        edgesForExtendedLayout = []
 
         title = speaker?.name
         configureTableView()
