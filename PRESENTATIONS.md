@@ -18,7 +18,7 @@
 | Mo Kudeki | [@kudeki](https://twitter.com/kudeki) | Startup Swift | TBA | TBA |
 | Krzysztof Siejkowsk | [@_siejkowski](https://twitter.com/_siejkowski) | A Neatly Typed Message | TBA | TBA |
 | Laura Ragone | [@lauraggle](https://twitter.com/lauraggle) | Color Me Surprised!: Architecting a Robust Color System with Swift | TBA | TBA |
-| Jon Reid | [@qcoding](https://twitter.com/qcoding) | Making Mock Objects More Useful | TBA | TBA |
+| Jon Reid | [@qcoding](https://twitter.com/qcoding) | Making Mock Objects More Useful | TBA | [x](https://realm.io/news/making-mock-objects-more-useful-try-swift-2017/) |
 | Derek Lee | [@derekleerock](https://twitter.com/derekleerock) | Minimizing Decision Fatigue to Improve Team Productivity | TBA | TBA |
 | Christopher Rogers | [@christorogers](https://twitter.com/christorogers) | Lessons in Swift Error Handling and Resilience | TBA | TBA |
 | Felix Krause | [@KrauseFx](https://twitter.com/KrauseFx) | Scaling open source communities | [x](https://speakerdeck.com/krausefx/scaling-open-source-communities-tryswift-tokyo) | [x](https://realm.io/news/tryswift-felix-krause-scaling-open-source-communities-github-management/) |
