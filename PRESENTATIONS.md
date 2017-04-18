@@ -10,7 +10,7 @@
 | Sommer Panage | [@Sommer](https://twitter.com/Sommer) | Writing your UI Swiftly | TBA | TBA |
 | Kyle Fuller | [@kylefuller](https://twitter.com/kylefuller) | Building a Swift Web API and Application Together | [x](https://speakerdeck.com/kylef/building-a-swift-web-api-and-application-together) | TBA |
 | Marius Rackwitz | [@mrackwitz](https://twitter.com/mrackwitz) | Craft Collaborative Apps with Realm | TBA | [x](https://realm.io/news/craft-collaborative-apps-with-realm/) |
-| Orta Therox | [@orta](https://twitter.com/orta) | Building your own tools | TBA | TBA |
+| Orta Therox | [@orta](https://twitter.com/orta) | Building your own tools | TBA | [x](https://realm.io/news/orta-therox-try-swift-tokyo-building-your-own-tools/) |
 | Brandon Williams | [@mbrandonw](https://twitter.com/mbrandonw) | The Two Sides of Writing Testable Code | TBA | TBA |
 | Soroush Khanlou | [@khanlou](https://twitter.com/khanlou) | Everything You Ever Wanted To Know About Sequence and Collection | TBA | [x](https://realm.io/news/try-swift-soroush-khanlou-sequence-collection/) |
 | Yusuke Ito | [@novi_](https://twitter.com/novi_) | Swift Outside the Box | TBA | TBA |
