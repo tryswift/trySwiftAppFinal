@@ -201,7 +201,7 @@ private extension MoreTableViewController {
     }
     
     func showConferenceFeedback() {
-        let configuration = MailConfiguration(recipients: ["info@tryswift.co"], subject: "Conference feedback via try! NYC app")
+        let configuration = MailConfiguration(recipients: ["info@tryswift.co"], subject: "Conference feedback via try! Conference app")
         sendMail(withConfiguration: configuration)
     }
     
