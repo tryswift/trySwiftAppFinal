@@ -5,7 +5,7 @@
 | Nate Cook | [@nnnnnnnn](https://twitter.com/nnnnnnnn) | Swift's Pointy Bits | [x](https://speakerdeck.com/natecook1000/swifts-pointy-bits) | [x](https://realm.io/news/nate-cook-tryswift-tokyo-unsafe-swift-and-pointer-types/) |
 | Meghan Kane | [@meghafon](https://twitter.com/meghafon) | 3D Touch: Bring your apps to a new dimension | TBA | TBA |
 | Rikke Møller Koblauch | [@Rikkekoblauch](https://twitter.com/Rikkekoblauch) | Pixels, process and passion | TBA | TBA |
-| Agnes Vasarhelyi | [@vasarhelyia](https://twitter.com/vasarhelyia) | Everyday Reactive | TBA | TBA |
+| Agnes Vasarhelyi | [@vasarhelyia](https://twitter.com/vasarhelyia) | Everyday Reactive | TBA | [x](https://realm.io/news/everyday-reactive/) |
 | Kazuaki Matsuo | [@Kazu_cocoa](https://twitter.com/Kazu_cocoa) | Tasting tests at Cookpad | TBA | TBA |
 | Sommer Panage | [@Sommer](https://twitter.com/Sommer) | Writing your UI Swiftly | TBA | TBA |
 | Kyle Fuller | [@kylefuller](https://twitter.com/kylefuller) | Building a Swift Web API and Application Together | [x](https://speakerdeck.com/kylef/building-a-swift-web-api-and-application-together) | TBA |
