@@ -12,23 +12,3 @@ Check out the [issues][issue] and see how you can help out.
 
 [pr]: https://github.com/tryswift/trySwiftAppFinal/pulls
 [issue]: https://github.com/tryswift/trySwiftAppFinal/issues
-
-# To build app
-
-If you don't use [bundler](http://bundler.io/) now, install it to fix cocoapods version in this project.
-
-```
-$ gem install bundler
-```
-
-Then you install gems from Gemfile.
-
-```
-$ bundle install --path vendor/bundle
-```
-
-After you install cocoapods, do `pod install` via bundler:
-
-```
-$ bundle exec pod install
-```
