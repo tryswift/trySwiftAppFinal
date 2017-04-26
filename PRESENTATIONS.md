@@ -1,6 +1,6 @@
 | Name | Twitter | Presentation | Slides | Video |
 | ---- | ------- | ------------ | ------ | ----- |
-| Alexis Gallagher | [@alexisgallagher](https://twitter.com/alexisgallagher) | Everything a Swift Developer Wanted to Know about Machine Learning But Was Afraid To Ask | TBA | TBA |
+| Alexis Gallagher | [@alexisgallagher](https://twitter.com/alexisgallagher) | Everything a Swift Developer Wanted to Know about Machine Learning But Was Afraid To Ask | TBA | [x](https://news.realm.io/news/swift-developer-on-machine-learning-try-swift-2017-gallagher/) |
 | Eric Wing | [@ewingfighter](https://twitter.com/ewingfighter) | Swift on Android | TBA | [x](https://realm.io/news/swift-on-android/) |
 | Nate Cook | [@nnnnnnnn](https://twitter.com/nnnnnnnn) | Swift's Pointy Bits | [x](https://speakerdeck.com/natecook1000/swifts-pointy-bits) | [x](https://realm.io/news/nate-cook-tryswift-tokyo-unsafe-swift-and-pointer-types/) |
 | Meghan Kane | [@meghafon](https://twitter.com/meghafon) | 3D Touch: Bring your apps to a new dimension | TBA | TBA |
