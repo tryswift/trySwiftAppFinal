@@ -7,7 +7,7 @@
 | Rikke Møller Koblauch | [@Rikkekoblauch](https://twitter.com/Rikkekoblauch) | Pixels, process and passion | TBA | TBA |
 | Agnes Vasarhelyi | [@vasarhelyia](https://twitter.com/vasarhelyia) | Everyday Reactive | TBA | [x](https://realm.io/news/everyday-reactive/) |
 | Kazuaki Matsuo | [@Kazu_cocoa](https://twitter.com/Kazu_cocoa) | Tasting tests at Cookpad | TBA | TBA |
-| Sommer Panage | [@Sommer](https://twitter.com/Sommer) | Writing your UI Swiftly | TBA | TBA |
+| Sommer Panage | [@Sommer](https://twitter.com/Sommer) | Writing your UI Swiftly | TBA | [x](https://news.realm.io/news/sommer-panage-writing-your-ui-swiftly/) |
 | Kyle Fuller | [@kylefuller](https://twitter.com/kylefuller) | Building a Swift Web API and Application Together | [x](https://speakerdeck.com/kylef/building-a-swift-web-api-and-application-together) | TBA |
 | Marius Rackwitz | [@mrackwitz](https://twitter.com/mrackwitz) | Craft Collaborative Apps with Realm | TBA | [x](https://realm.io/news/craft-collaborative-apps-with-realm/) |
 | Orta Therox | [@orta](https://twitter.com/orta) | Building your own tools | TBA | [x](https://realm.io/news/orta-therox-try-swift-tokyo-building-your-own-tools/) |
