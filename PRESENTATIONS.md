@@ -6,7 +6,7 @@
 | Meghan Kane | [@meghafon](https://twitter.com/meghafon) | 3D Touch: Bring your apps to a new dimension | TBA | TBA |
 | Rikke Møller Koblauch | [@Rikkekoblauch](https://twitter.com/Rikkekoblauch) | Pixels, process and passion | TBA | TBA |
 | Agnes Vasarhelyi | [@vasarhelyia](https://twitter.com/vasarhelyia) | Everyday Reactive | TBA | [x](https://realm.io/news/everyday-reactive/) |
-| Kazuaki Matsuo | [@Kazu_cocoa](https://twitter.com/Kazu_cocoa) | Tasting tests at Cookpad | TBA | TBA |
+| Kazuaki Matsuo | [@Kazu_cocoa](https://twitter.com/Kazu_cocoa) | Tasting tests at Cookpad | TBA | [x](https://news.realm.io/news/tasting-tests-at-cookpad-try-swift-2017/) |
 | Sommer Panage | [@Sommer](https://twitter.com/Sommer) | Writing your UI Swiftly | TBA | [x](https://news.realm.io/news/sommer-panage-writing-your-ui-swiftly/) |
 | Kyle Fuller | [@kylefuller](https://twitter.com/kylefuller) | Building a Swift Web API and Application Together | [x](https://speakerdeck.com/kylef/building-a-swift-web-api-and-application-together) | [x](https://news.realm.io/news/kyle-fuller-building-a-swift-web-api-try-swift-2017/) |
 | Marius Rackwitz | [@mrackwitz](https://twitter.com/mrackwitz) | Craft Collaborative Apps with Realm | TBA | [x](https://realm.io/news/craft-collaborative-apps-with-realm/) |
