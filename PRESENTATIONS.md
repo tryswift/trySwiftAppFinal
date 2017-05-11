@@ -16,7 +16,7 @@
 | Yusuke Ito | [@novi_](https://twitter.com/novi_) | Swift Outside the Box | TBA | TBA |
 | Kateryna Gridina | [@gridNAka](https://twitter.com/gridNAka) | Document Indexing and App Search in iOS | TBA | TBA |
 | Mo Kudeki | [@kudeki](https://twitter.com/kudeki) | Startup Swift | TBA | TBA |
-| Krzysztof Siejkowsk | [@_siejkowski](https://twitter.com/_siejkowski) | A Neatly Typed Message | TBA | TBA |
+| Krzysztof Siejkowsk | [@_siejkowski](https://twitter.com/_siejkowski) | A Neatly Typed Message | TBA | [x](https://news.realm.io/news/a-neatly-typed-message-improving-code-readability/) |
 | Laura Ragone | [@lauraggle](https://twitter.com/lauraggle) | Color Me Surprised!: Architecting a Robust Color System with Swift | TBA | TBA |
 | Jon Reid | [@qcoding](https://twitter.com/qcoding) | Making Mock Objects More Useful | TBA | [x](https://realm.io/news/making-mock-objects-more-useful-try-swift-2017/) |
 | Derek Lee | [@derekleerock](https://twitter.com/derekleerock) | Minimizing Decision Fatigue to Improve Team Productivity | TBA | TBA |
