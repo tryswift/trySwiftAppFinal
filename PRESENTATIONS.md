@@ -14,7 +14,7 @@
 | Brandon Williams | [@mbrandonw](https://twitter.com/mbrandonw) | The Two Sides of Writing Testable Code | TBA | [x](https://news.realm.io/news/try-swift-brandon-williams-writing-testable-code/) |
 | Soroush Khanlou | [@khanlou](https://twitter.com/khanlou) | Everything You Ever Wanted To Know About Sequence and Collection | TBA | [x](https://realm.io/news/try-swift-soroush-khanlou-sequence-collection/) |
 | Yusuke Ito | [@novi_](https://twitter.com/novi_) | Swift Outside the Box | TBA | TBA |
-| Kateryna Gridina | [@gridNAka](https://twitter.com/gridNAka) | Document Indexing and App Search in iOS | TBA | TBA |
+| Kateryna Gridina | [@gridNAka](https://twitter.com/gridNAka) | Document Indexing and App Search in iOS | TBA | [x](https://news.realm.io/news/document-indexing-app-search-ios-try-swift-2017-gridina/) |
 | Mo Kudeki | [@kudeki](https://twitter.com/kudeki) | Startup Swift | TBA | TBA |
 | Krzysztof Siejkowsk | [@_siejkowski](https://twitter.com/_siejkowski) | A Neatly Typed Message | TBA | [x](https://news.realm.io/news/a-neatly-typed-message-improving-code-readability/) |
 | Laura Ragone | [@lauraggle](https://twitter.com/lauraggle) | Color Me Surprised!: Architecting a Robust Color System with Swift | TBA | TBA |
