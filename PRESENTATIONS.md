@@ -17,7 +17,7 @@
 | Kateryna Gridina | [@gridNAka](https://twitter.com/gridNAka) | Document Indexing and App Search in iOS | TBA | [x](https://news.realm.io/news/document-indexing-app-search-ios-try-swift-2017-gridina/) |
 | Mo Kudeki | [@kudeki](https://twitter.com/kudeki) | Startup Swift | TBA | TBA |
 | Krzysztof Siejkowsk | [@_siejkowski](https://twitter.com/_siejkowski) | A Neatly Typed Message | TBA | [x](https://news.realm.io/news/a-neatly-typed-message-improving-code-readability/) |
-| Laura Ragone | [@lauraggle](https://twitter.com/lauraggle) | Color Me Surprised!: Architecting a Robust Color System with Swift | TBA | TBA |
+| Laura Ragone | [@lauraggle](https://twitter.com/lauraggle) | Color Me Surprised!: Architecting a Robust Color System with Swift | TBA | [x](https://news.realm.io/news/architecting-a-robust-color-system-swift-tryswift-2017-ragone/) |
 | Jon Reid | [@qcoding](https://twitter.com/qcoding) | Making Mock Objects More Useful | TBA | [x](https://realm.io/news/making-mock-objects-more-useful-try-swift-2017/) |
 | Derek Lee | [@derekleerock](https://twitter.com/derekleerock) | Minimizing Decision Fatigue to Improve Team Productivity | TBA | TBA |
 | Christopher Rogers | [@christorogers](https://twitter.com/christorogers) | Lessons in Swift Error Handling and Resilience | TBA | [x](https://news.realm.io/news/christopher-rogers-lessons-swift-error-handling-resilience-try-swift-2017/) |
