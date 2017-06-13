@@ -15,7 +15,7 @@
 | Soroush Khanlou | [@khanlou](https://twitter.com/khanlou) | Everything You Ever Wanted To Know About Sequence and Collection | TBA | [x](https://realm.io/news/try-swift-soroush-khanlou-sequence-collection/) |
 | Yusuke Ito | [@novi_](https://twitter.com/novi_) | Swift Outside the Box | TBA | TBA |
 | Kateryna Gridina | [@gridNAka](https://twitter.com/gridNAka) | Document Indexing and App Search in iOS | TBA | [x](https://news.realm.io/news/document-indexing-app-search-ios-try-swift-2017-gridina/) |
-| Mo Kudeki | [@kudeki](https://twitter.com/kudeki) | Startup Swift | TBA | TBA |
+| Mo Kudeki | [@kudeki](https://twitter.com/kudeki) | Startup Swift | TBA | [x](https://news.realm.io/news/startup-swift-try-swift-2017/) |
 | Krzysztof Siejkowsk | [@_siejkowski](https://twitter.com/_siejkowski) | A Neatly Typed Message | TBA | [x](https://news.realm.io/news/a-neatly-typed-message-improving-code-readability/) |
 | Laura Ragone | [@lauraggle](https://twitter.com/lauraggle) | Color Me Surprised!: Architecting a Robust Color System with Swift | TBA | [x](https://news.realm.io/news/architecting-a-robust-color-system-swift-tryswift-2017-ragone/) |
 | Jon Reid | [@qcoding](https://twitter.com/qcoding) | Making Mock Objects More Useful | TBA | [x](https://realm.io/news/making-mock-objects-more-useful-try-swift-2017/) |
