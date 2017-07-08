@@ -44,7 +44,7 @@ class SessionsTableViewController: UITableViewController {
         guard
             let firstSelectableSession = conferenceDay.sessionBlocks
                 .flatMap({ $0.sessions })
-                .filter({ $0.selectable }).first,
+                .filter({ SessionViewModel(session: $0).selectable }).first,
             let firstSelectableSessionVC = viewController(for: firstSelectableSession),
             let isCollapsed = splitViewController?.isCollapsed,
             !isCollapsed,
