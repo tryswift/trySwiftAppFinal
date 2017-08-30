@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2222DA9F1E63CA9000D754A1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2222DA991E63CA9000D754A1 /* Info.plist */; };
 		2222DAA01E63CA9000D754A1 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2222DA9A1E63CA9000D754A1 /* Logo.png */; };
 		2222DAA11E63CA9000D754A1 /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222DA9B1E63CA9000D754A1 /* TodayController.swift */; };
 		2222DAA41E63F0E300D754A1 /* TodayInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2222DAA61E63F0E300D754A1 /* TodayInterface.storyboard */; };
@@ -840,7 +839,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = NatashaTheRobot;
 				TargetAttributes = {
 					22F823D31E5BBB62003BD6BB = {
@@ -979,7 +978,6 @@
 				2222DAA41E63F0E300D754A1 /* TodayInterface.storyboard in Resources */,
 				2222DAB11E64036A00D754A1 /* Localizable.strings in Resources */,
 				2222DAA01E63CA9000D754A1 /* Logo.png in Resources */,
-				2222DA9F1E63CA9000D754A1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
