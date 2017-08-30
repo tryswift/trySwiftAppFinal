@@ -11,8 +11,7 @@ _Written in Swift 3 (for Objective-C, you can use [VTAcknowledgementsViewControl
 [![CocoaPods documentation](https://img.shields.io/cocoapods/metrics/doc-percent/AcknowList.svg)](http://cocoadocs.org/docsets/AcknowList)
 [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vtourraine/AcknowList/raw/master/LICENSE)
 
-<img alt="iPhone screenshot 1" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-01.png" width="300px">
-<img alt="iPhone screenshot 2" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-02.png" width="300px">
+<img alt="iPhone screenshot 1" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-01.png" width="300px"> <img alt="iPhone screenshot 2" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-02.png" width="300px">
 
 
 ## How to Install
@@ -41,7 +40,7 @@ if let navigationController = self.navigationController {
 If your `.plist` file is named something other than `Pods-acknowledgements.plist` (_e.g._ if you’re using fancy build targets), you can initialize the view controller with a custom path.
 
 ``` swift
-let path = NSBundle.mainBundle().pathForResource("Pods-AcknowExample-acknowledgements", ofType: "plist")
+let path = Bundle.main.path(forResource: "Pods-AcknowExample-acknowledgements", ofType: "plist")
 let viewController = AcknowListViewController(acknowledgementsPlistPath: path)
 ```
 
