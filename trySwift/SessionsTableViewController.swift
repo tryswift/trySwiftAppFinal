@@ -193,6 +193,8 @@ private extension SessionsTableViewController {
     
     func venueDetails(_ venue: Venue) -> UIViewController {
         let venueDetailsVC = VenueTableViewController(venue: venue)
+        venueDetailsVC.tableView.contentInset = UIEdgeInsets(top: 80,left: 0,bottom: 0,right: 0)
+
         return venueDetailsVC
     }
 }

@@ -1,7 +1,7 @@
 //
 // Acknow.swift
 //
-// Copyright (c) 2015-2016 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2015-2017 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,18 +25,24 @@
 /// Represents a single acknowledgement.
 public struct Acknow {
 
-    /**
-     The acknowledgement title (for instance: the pod’s name).
-     */
+    /// The acknowledgement title (for instance: the pod’s name).
     public let title: String
 
-    /**
-     The acknowledgement body text (for instance: the pod’s license).
-     */
+    /// The acknowledgement body text (for instance: the pod’s license).
     public let text: String
 
-    /**
-     The acknowledgement license (for instance the pod' s license type).
-     */
+    /// The acknowledgement license (for instance the pod’s license type).
     public let license: String?
+
+    /// Returns an object initialized from the given parameters.
+    ///
+    /// - Parameters:
+    ///   - title: The acknowledgement title (for instance: the pod’s name).
+    ///   - text: The acknowledgement body text (for instance: the pod’s license).
+    ///   - license: The acknowledgement license (for instance the pod’s license type).
+    public init(title: String, text: String, license: String? = nil) {
+        self.title = title
+        self.text = text
+        self.license = license
+    }
 }

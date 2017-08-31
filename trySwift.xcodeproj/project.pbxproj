@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2222DA9F1E63CA9000D754A1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2222DA991E63CA9000D754A1 /* Info.plist */; };
-		2222DAA01E63CA9000D754A1 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2222DA9A1E63CA9000D754A1 /* Logo.png */; };
 		2222DAA11E63CA9000D754A1 /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222DA9B1E63CA9000D754A1 /* TodayController.swift */; };
 		2222DAA41E63F0E300D754A1 /* TodayInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2222DAA61E63F0E300D754A1 /* TodayInterface.storyboard */; };
 		2222DAB11E64036A00D754A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2222DAB31E64036A00D754A1 /* Localizable.strings */; };
@@ -80,6 +78,7 @@
 		FAA54F121D91305200EC9E80 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F111D91305200EC9E80 /* NibLoadableView.swift */; };
 		FAA54F141D9130F900EC9E80 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */; };
 		FABA73BE1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */; };
+		FAC488181F5719BF00CFA660 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC488171F5719BF00CFA660 /* Logo.png */; };
 		FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */; };
 		FAF1DE151D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */; };
 		FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */; };
@@ -175,7 +174,6 @@
 		168F8855FDC17ABDFA46C086 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1E83A26EC979705A87BEDF82 /* Pods-try! Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try! Extension/Pods-try! Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		2222DA991E63CA9000D754A1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "try! Today/Info.plist"; sourceTree = SOURCE_ROOT; };
-		2222DA9A1E63CA9000D754A1 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = "try! Today/Logo.png"; sourceTree = SOURCE_ROOT; };
 		2222DA9B1E63CA9000D754A1 /* TodayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodayController.swift; path = "try! Today/TodayController.swift"; sourceTree = SOURCE_ROOT; };
 		2222DA9E1E63CA9000D754A1 /* try! Today.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = "try! Today.entitlements"; path = "try! Today/try! Today.entitlements"; sourceTree = SOURCE_ROOT; };
 		2222DAA51E63F0E300D754A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TodayInterface.storyboard; sourceTree = "<group>"; };
@@ -256,6 +254,7 @@
 		FAA54F111D91305200EC9E80 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeHoursDetailViewController.swift; sourceTree = "<group>"; };
+		FAC488171F5719BF00CFA660 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = "try! Today/Logo.png"; sourceTree = SOURCE_ROOT; };
 		FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTableViewController.swift; sourceTree = "<group>"; };
 		FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -703,7 +702,7 @@
 			isa = PBXGroup;
 			children = (
 				2222DA991E63CA9000D754A1 /* Info.plist */,
-				2222DA9A1E63CA9000D754A1 /* Logo.png */,
+				FAC488171F5719BF00CFA660 /* Logo.png */,
 				2222DA9B1E63CA9000D754A1 /* TodayController.swift */,
 				2222DAA61E63F0E300D754A1 /* TodayInterface.storyboard */,
 				2222DA9E1E63CA9000D754A1 /* try! Today.entitlements */,
@@ -840,7 +839,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = NatashaTheRobot;
 				TargetAttributes = {
 					22F823D31E5BBB62003BD6BB = {
@@ -871,11 +870,13 @@
 					};
 					FAFA15CB1C69D31C00FEA4EA = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = W6GNU64U6Q;
 						LastSwiftMigration = 0800;
 						TestTargetID = FAFA15B71C69D31B00FEA4EA;
 					};
 					FAFA15D61C69D31C00FEA4EA = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = W6GNU64U6Q;
 						LastSwiftMigration = 0800;
 						TestTargetID = FAFA15B71C69D31B00FEA4EA;
 					};
@@ -976,10 +977,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC488181F5719BF00CFA660 /* Logo.png in Resources */,
 				2222DAA41E63F0E300D754A1 /* TodayInterface.storyboard in Resources */,
 				2222DAB11E64036A00D754A1 /* Localizable.strings in Resources */,
-				2222DAA01E63CA9000D754A1 /* Logo.png in Resources */,
-				2222DA9F1E63CA9000D754A1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1503,6 +1503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = trySwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYCTests;
@@ -1516,6 +1517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = trySwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYCTests;
@@ -1528,6 +1530,7 @@
 		FAFA15E71C69D31C00FEA4EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = trySwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYCUITests;
@@ -1541,6 +1544,7 @@
 		FAFA15E81C69D31C00FEA4EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = W6GNU64U6Q;
 				INFOPLIST_FILE = trySwiftUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.trySwiftConfNYCUITests;

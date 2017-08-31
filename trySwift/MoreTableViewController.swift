@@ -211,7 +211,7 @@ private extension MoreTableViewController {
         if application.canOpenURL(appURL) {
             application.open(appURL)
         } else {
-            let url = URL(string: "https://tryswiftjp2017.slack.com")!
+            let url = URL(string: "https://tryswiftnyc2017.slack.com")!
             openSafariViewController(withURL: url)
         }
     }

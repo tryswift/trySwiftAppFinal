@@ -1,13 +1,13 @@
 PODS:
-  - AcknowList (1.2)
+  - AcknowList (1.2.1)
   - BuddyBuildSDK (1.0.16)
   - DynamicColor (3.2.1)
   - Kingfisher (3.4.0)
-  - Realm (2.8.3):
-    - Realm/Headers (= 2.8.3)
-  - Realm/Headers (2.8.3)
-  - RealmSwift (2.8.3):
-    - Realm (= 2.8.3)
+  - Realm (2.10.0):
+    - Realm/Headers (= 2.10.0)
+  - Realm/Headers (2.10.0)
+  - RealmSwift (2.10.0):
+    - Realm (= 2.10.0)
   - Timepiece (1.1.0)
   - TrySwiftData (0.1.0):
     - RealmSwift
@@ -31,16 +31,16 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TrySwiftData:
-    :commit: 05a8956b60d4c1b17040fd8d1b6e3686a32526c4
+    :commit: 2305ca7698f60d4e47108ac0d64f7265dce421ea
     :git: https://github.com/tryswift/trySwiftData.git
 
 SPEC CHECKSUMS:
-  AcknowList: 18ccee4d933a153622416cce2d36e6864ec147ea
+  AcknowList: 6089be555e4dcb5066de3071270ac7ad9df9ee55
   BuddyBuildSDK: 2c5469eee2981a3365386e46393e97068d75e4f4
   DynamicColor: 4786d650c69da6c3f2cbfe068348288ec4e5521f
   Kingfisher: 5690cfb3d1bddf3a98d679a3a34d0b7294974ed2
-  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
-  RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
+  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
+  RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
   Timepiece: 4190a7bc5ae1c05c87531fd75b14e17d2a017902
   TrySwiftData: 9c8acd05db49d952e0fbb69790b01f3b7441dbe8
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
