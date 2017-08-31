@@ -730,6 +730,8 @@
 		F91AA65CFC8A22A109DFDA7C687D3F57 /* RLMSyncPermissionChange_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ADA7DBEAABF4C5B09AF68D26E08F6AA /* RLMSyncPermissionChange_Private.h */; };
 		F9ECE1307E3C92731860D44DE1B7458C /* RLMSyncPermissionValue.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 6D258CB3C05264B230109DADBBC78CE1 /* RLMSyncPermissionValue.h */; };
 		FA500D744546E31E1D6DC5A4D5DD09A5 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A208EB46C0CA4AEDD8B938126C0368 /* ButtonBarPagerTabStripViewController.swift */; };
+		FACEA43C1F58D16800AD25F8 /* lickability.png in Resources */ = {isa = PBXBuildFile; fileRef = FACEA43B1F58D16800AD25F8 /* lickability.png */; };
+		FACEA43D1F58D16800AD25F8 /* lickability.png in Resources */ = {isa = PBXBuildFile; fileRef = FACEA43B1F58D16800AD25F8 /* lickability.png */; };
 		FAFAF8ED0B17035B02301222CE15562D /* object_schema.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC721626D9E58AC6BDAFFCA6D8A4B832 /* object_schema.cpp */; settings = {COMPILER_FLAGS = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"2.10.0\"' -D__ASSERTMACROS__ -DREALM_ENABLE_SYNC"; }; };
 		FB216869C5F0C9491C982F421540C216 /* DynamicColor+Mixing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9826D8D6F110416A193ED875A5F0597 /* DynamicColor+Mixing.swift */; };
 		FB677EABC207571AE2988D7E504445B4 /* RLMPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D642464EFA786EF69F8C61638568D0 /* RLMPlatform.h */; };
@@ -1516,6 +1518,7 @@
 		F87E39982B568E66543FD9DDE118B770 /* sync_manager.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = sync_manager.cpp; path = Realm/ObjectStore/src/sync/sync_manager.cpp; sourceTree = "<group>"; };
 		F8A4B13D27D91A185A01654EE6C94F4A /* ericasadun.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = ericasadun.png; path = TrySwiftData/Assets/Tokyo2017/NYC2017/Speakers/ericasadun.png; sourceTree = "<group>"; };
 		F9EA87A68920DF6F8CA38A8C3C6B2B8B /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
+		FACEA43B1F58D16800AD25F8 /* lickability.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lickability.png; sourceTree = "<group>"; };
 		FB71A5C5268DE9E3DA6A9F903FEBB91A /* PagerTabStripError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripError.swift; path = Sources/PagerTabStripError.swift; sourceTree = "<group>"; };
 		FC953E39859B682043E6B1D2EFEA5865 /* james.jpg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.jpeg; name = james.jpg; path = TrySwiftData/Assets/Tokyo2017/NYC2017/Speakers/james.jpg; sourceTree = "<group>"; };
 		FD0C8894F89D4A7D52B446B19F4650C7 /* TrySwiftData-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TrySwiftData-watchOS-prefix.pch"; path = "../TrySwiftData-watchOS/TrySwiftData-watchOS-prefix.pch"; sourceTree = "<group>"; };
@@ -1742,6 +1745,7 @@
 		18538B4949A8D1B6754589540E1F3391 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FACEA43B1F58D16800AD25F8 /* lickability.png */,
 				3A423D169E1B397C1925E0E01F792E88 /* alvin.jpg */,
 				91F13539A8EECF87CD14FF753BB0B241 /* announce_nyc_1.png */,
 				0FE37337CF255CDB3B03FF2AD7B01B01 /* announce_nyc_2.png */,
@@ -3040,6 +3044,7 @@
 				E474BB5F12428AB3436ED9986955FD8C /* announce_nyc_2.png in Resources */,
 				041EA5B65C57B4E6052FF1947397F3FF /* bowling.png in Resources */,
 				7A9972816A4884E0497B9DD5B345A5A5 /* breakfast.png in Resources */,
+				FACEA43C1F58D16800AD25F8 /* lickability.png in Resources */,
 				A5B1EBE945DC2F9DADFA6597FAB0F71B /* breaktime1.png in Resources */,
 				C197F9CD0607DCA8B71D177B3F09FE28 /* breaktime2.png in Resources */,
 				5B71BE629D0D4103367AFCD27AA64B89 /* brian.jpg in Resources */,
@@ -3127,6 +3132,7 @@
 				1D07EBF99D86E66975F9BBFA57FC1815 /* announce_nyc_2.png in Resources */,
 				0A8FB949E3C04E3007B33F4A491F4A62 /* bowling.png in Resources */,
 				A187D9E76F888E6C998766ED59178F75 /* breakfast.png in Resources */,
+				FACEA43D1F58D16800AD25F8 /* lickability.png in Resources */,
 				AFC2804E7197F996C71D2438C937268F /* breaktime1.png in Resources */,
 				5C44B19C2233F283272DC7968C9790A4 /* breaktime2.png in Resources */,
 				12AE37E458E0684CBA7D92AB9EA38E55 /* brian.jpg in Resources */,
