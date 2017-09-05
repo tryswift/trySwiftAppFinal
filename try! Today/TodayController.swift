@@ -29,12 +29,10 @@ class TodayController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var visualEffectsView: UIVisualEffectView!
 
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        NSTimeZone.default = TimeZone(abbreviation: "UTC")!
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
     public required init?(coder aDecoder: NSCoder) {
-        NSTimeZone.default = TimeZone(abbreviation: "UTC")!
         super.init(coder: aDecoder)
     }
 
@@ -42,7 +40,9 @@ class TodayController: UIViewController, NCWidgetProviding {
 
     private var currentSession: Session? {
         guard let sessionBlocks = SessionBlock.all else { return nil }
-        let date = Date()
+        
+        let est = TimeZone(abbreviation: "EST")!
+        let date = Date().addingTimeInterval((Double)(est.secondsFromGMT()))
         let currentSessionBlock = sessionBlocks.filter("startTime < %@ AND endTime > %@", date, date)
         return currentSessionBlock.first?.sessions.first
     }
@@ -101,6 +101,7 @@ class TodayController: UIViewController, NCWidgetProviding {
             typeLabel.text = viewModel.shortDescription
 
             let sessionBlock = session.sessionBlock.first!
+            
             let firstTimeString = sessionDateFormatter.string(from: sessionBlock.startTime)
             let lastTimeString = sessionDateFormatter.string(from: sessionBlock.endTime)
             timeLabel.text = String(format: "%@ - %@", firstTimeString, lastTimeString)
@@ -131,7 +132,6 @@ class TodayController: UIViewController, NCWidgetProviding {
         extensionContext?.open(url, completionHandler: nil)
     }
 }
-
 
 
 

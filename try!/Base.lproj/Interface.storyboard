@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
-        <!--try! Mar 2-->
+        <!--try! Sep 5-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="Mar2" title="try! Mar 2" id="AgC-eL-Hgc" customClass="SessionsInterfaceController" customModule="try__Extension">
+                <controller identifier="Sep5" title="try! Sep 5" id="AgC-eL-Hgc" customClass="SessionsInterfaceController" customModule="try__Extension">
                     <items>
                         <table alignment="left" pagingScroll="YES" id="OeU-Nt-vmO">
                             <items>
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--try! Mar 3-->
+        <!--try! Sep 6-->
         <scene sceneID="VYM-ue-q9a">
             <objects>
-                <controller identifier="Mar3" title="try! Mar 3" id="iUS-6L-mZG" customClass="SessionsInterfaceController" customModule="try__Extension">
+                <controller identifier="Sep6" title="try! Sep 6" id="iUS-6L-mZG" customClass="SessionsInterfaceController" customModule="try__Extension">
                     <items>
                         <table alignment="left" id="raC-za-EKv">
                             <items>
@@ -81,49 +81,10 @@
                     </items>
                     <connections>
                         <outlet property="sessionsTable" destination="raC-za-EKv" id="FOA-1u-ffW"/>
-                        <segue destination="bEK-aE-rXC" kind="relationship" relationship="nextPage" id="4lr-qD-QFx"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="478" y="345"/>
-        </scene>
-        <!--try! Mar 4-->
-        <scene sceneID="oQV-7V-XSt">
-            <objects>
-                <controller identifier="Mar4" title="try! Mar 4" id="bEK-aE-rXC" customClass="SessionsInterfaceController" customModule="try__Extension">
-                    <items>
-                        <table alignment="left" id="djY-QN-ivz">
-                            <items>
-                                <tableRow identifier="SessionTableRowController" id="Vpg-np-Q16" customClass="SessionTableRowController" customModule="try__Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="o0x-c9-Jie">
-                                        <items>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="Gbd-ak-PY9">
-                                                <color key="textColor" red="0.72156862749999995" green="0.1960784314" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
-                                            </label>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="PeQ-eW-yDO">
-                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                            </label>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="d8M-v2-w2k">
-                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
-                                            </label>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="subtitleInterfaceLabel" destination="d8M-v2-w2k" id="BFm-hB-D94"/>
-                                        <outlet property="timeInterfaceLabel" destination="Gbd-ak-PY9" id="rVM-mv-ER1"/>
-                                        <outlet property="titleInterfaceLabel" destination="PeQ-eW-yDO" id="wvg-4Y-VFH"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                    <connections>
-                        <outlet property="sessionsTable" destination="djY-QN-ivz" id="jHz-up-BeT"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="735" y="345"/>
         </scene>
         <!--SessionDetailInterfaceController-->
         <scene sceneID="bic-a1-cwU">
