@@ -9,7 +9,7 @@
 | Nataliya Patsovska | [@nataliya_bg](https://twitter.com/nataliya_bg) | MVVM at Scale  | [x](https://www.slideshare.net/NataliyaPatsovska/mvvm-at-scale-not-so-simple-tryswift-nyc17) | TBA
 | Priya Rajagopal | [@rajagp](https://twitter.com/rajagp) | Core Data Migrations and A Better Option | [x](https://www.slideshare.net/PriyaRajagopal1/core-data-migrations-and-a-better-option) | TBA
 | Harlan Haskins | [@harlanhaskins](https://twitter.com/harlanhaskins) | Improving Swift Tools with libSyntax | [x](https://speakerdeck.com/harlanhaskins/improving-swift-tools-with-libsyntax) | TBA
-| Carl Brown | [@CarlBrwn](https://twitter.com/CarlBrwn) | Swift from the Foundation Up | [x](https://www.slideshare.net/carlbrown/better-swift-from-the-foundation-up-tryswiftnyc17-0906) | TBA
+| Carl Brown | [@CarlBrwn](https://twitter.com/CarlBrwn) | Swift from the Foundation Up | [Slides](https://www.slideshare.net/carlbrown/better-swift-from-the-foundation-up-tryswiftnyc17-0906) & [Supporting data](https://github.com/carlbrown/SwiftPRInsights) | TBA
 | Glenna Budford | [@glennersboofy](https://twitter.com/glennersboofy) | Getting Started With ARKit Tips + Tricks  | [x](https://speakerdeck.com/glenna/arkit-tips-plus-tricks) | TBA
 | Yasuhiro Inami | [@inamiy](https://twitter.com/inamiy) | Swift 4 Codable  | [x](https://speakerdeck.com/inamiy/swift-4-codable-try-swift-nyc-2017) | TBA
 | Sonam Dhingra | [@Sdhingra89](https://twitter.com/Sdhingra89) | Building a framework with Viper  | [Slides](https://speakerdeck.com/socohesive/viper-ios-and-frameworks) & [GitHub project](https://github.com/ustwo/videoplayback-ios) | TBA
