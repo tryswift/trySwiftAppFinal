@@ -42,6 +42,6 @@
 | Krzysztof Siejkowsk | [@_siejkowski](https://twitter.com/_siejkowski) | A Neatly Typed Message | TBA | [x](https://news.realm.io/news/a-neatly-typed-message-improving-code-readability/) |
 | Laura Ragone | [@lauraggle](https://twitter.com/lauraggle) | Color Me Surprised!: Architecting a Robust Color System with Swift | TBA | [x](https://news.realm.io/news/architecting-a-robust-color-system-swift-tryswift-2017-ragone/) |
 | Jon Reid | [@qcoding](https://twitter.com/qcoding) | Making Mock Objects More Useful | TBA | [x](https://realm.io/news/making-mock-objects-more-useful-try-swift-2017/) |
-| Derek Lee | [@derekleerock](https://twitter.com/derekleerock) | Minimizing Decision Fatigue to Improve Team Productivity | TBA | TBA |
+| Derek Lee | [@derekleerock](https://twitter.com/derekleerock) | Minimizing Decision Fatigue to Improve Team Productivity | TBA | [x](https://academy.realm.io/posts/minimizing-decision-fatigue-to-improve-team-productivity-try-swift-2017-lee/?) |
 | Christopher Rogers | [@christorogers](https://twitter.com/christorogers) | Lessons in Swift Error Handling and Resilience | TBA | [x](https://news.realm.io/news/christopher-rogers-lessons-swift-error-handling-resilience-try-swift-2017/) |
 | Felix Krause | [@KrauseFx](https://twitter.com/KrauseFx) | Scaling open source communities | [x](https://speakerdeck.com/krausefx/scaling-open-source-communities-tryswift-tokyo) | [x](https://realm.io/news/tryswift-felix-krause-scaling-open-source-communities-github-management/) |
