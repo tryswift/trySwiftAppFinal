@@ -16,7 +16,7 @@
 | Ray Tsaihong | [@rmundo](https://twitter.com/rmundo) | Swift Chatbots for Fun and Profit | [x](https://speakerdeck.com/rmundo/swift-chatbots-for-fun-and-profit) | TBA
 | Eleni Papanikolopoulou & Kostas Kremizas | [@elenipapanikolo](https://twitter.com/elenipapanikolo) & [@kostaskremizas](https://twitter.com/kostaskremizas) | Error Handling Made Easy | [Slides](https://speakerdeck.com/eleni_papan/try-swift-2017-nyc-error-handling-made-easy) & [GitHub project](https://github.com/Workable/swift-error-handler) | TBA
 | Tanner Nelson | [@tanner0101](https://twitter.com/rmundo) | Server-Side Swift Using Swift  | [x](https://speakerdeck.com/tanner0101/server-side-swift-using-vapor) | TBA
-| Krunoslav Zaher | [@krunoslavzaher](https://twitter.com/krunoslavzaher) | Modern RxSwift Architectures | [x](https://github.com/kzaher/RxFeedback) | TBA
+| Krunoslav Zaher | [@krunoslavzaher](https://twitter.com/krunoslavzaher) | Modern RxSwift Architectures | [Slides](https://github.com/kzaher/RxFeedback) & [Github project](https://github.com/kzaher/RxFeedback) | TBA
 | Julio Carrettoni | [@dev_jac](https://twitter.com/dev_jac) | Accessibility - Everyone is your user | [Slides](https://speakerdeck.com/dev_jac/accessibility-everyone-is-your-user) & [GitHub project](https://github.com/Julioacarrettoni/tryswiftnycAccessibilityDemo) | TBA
 
 ## try! Swift Tokyo 2017
