@@ -4,13 +4,14 @@
 | ---- | ------- | ------------ | ------ | ----- |
 | Neem Serra | [@TeamNeem](https://twitter.com/TeamNeem) | Map & FlatMap Magic | [x](https://www.slideshare.net/NeemSerra/map-and-flat-map-magic) | TBA
 | Craig Clayton | [@thedevme](https://twitter.com/thedevme) | Creating Rich Custom UI Notifications | [x](https://www.slideshare.net/thedevme/creating-rich-custom-ui-notifications) | TBA
-| Paola Mata | [@PaolaNotPaolo](https://twitter.com/PaolaNotPaolo) | Exploring Natural Language Processing | [x](https://www.slideshare.net/PaolaMata3/exploring-natural-language-processing) & [GitHub project](https://github.com/pmatanyc/NLPDemo) | TBA
-| Matt Gallagher | [@cocoawithlove](https://twitter.com/cocoawithlove) | View-State Driven Applications | [x](https://speakerdeck.com/mattgallagher/try-swift-2017-view-state-driven-applications) & [GitHub project](https://github.com/mattgallagher/clocks) | TBA
-| Nataliya Patsovska | [@nataliya_bg](https://twitter.com/nataliya_bg) | MVVM at Scale  | [x](https://www.slideshare.net/NataliyaPatsovska/mvvm-at-scale-not-so-simple-tryswift-nyc17) & [GitHub project](https://github.com/nataliq/TripCheckins) | TBA
+| Paola Mata | [@PaolaNotPaolo](https://twitter.com/PaolaNotPaolo) | Exploring Natural Language Processing | [Slides](https://www.slideshare.net/PaolaMata3/exploring-natural-language-processing) & [GitHub project](https://github.com/pmatanyc/NLPDemo) | TBA
+| Matt Gallagher | [@cocoawithlove](https://twitter.com/cocoawithlove) | View-State Driven Applications | [Slides](https://speakerdeck.com/mattgallagher/try-swift-2017-view-state-driven-applications) & [GitHub project](https://github.com/mattgallagher/clocks) | TBA
+| Nataliya Patsovska | [@nataliya_bg](https://twitter.com/nataliya_bg) | MVVM at Scale  | [Slides](https://www.slideshare.net/NataliyaPatsovska/mvvm-at-scale-not-so-simple-tryswift-nyc17) & [GitHub project](https://github.com/nataliq/TripCheckins) | TBA
 | Priya Rajagopal | [@rajagp](https://twitter.com/rajagp) | Core Data Migrations and A Better Option | [x](https://www.slideshare.net/PriyaRajagopal1/core-data-migrations-and-a-better-option) | TBA
 | Harlan Haskins | [@harlanhaskins](https://twitter.com/harlanhaskins) | Improving Swift Tools with libSyntax | [x](https://speakerdeck.com/harlanhaskins/improving-swift-tools-with-libsyntax) | TBA
-| Carl Brown | [@CarlBrwn](https://twitter.com/CarlBrwn) | Swift from the Foundation Up | [x](https://www.slideshare.net/carlbrown/better-swift-from-the-foundation-up-tryswiftnyc17-0906) & [GitHub project](https://github.com/carlbrown/SwiftPRInsights) | TBA
-| Glenna Budford | [@glennersboofy](https://twitter.com/glennersboofy) | Getting Started With ARKit Tips + Tricks  | [x](https://speakerdeck.com/glenna/arkit-tips-plus-tricks) & [GitHub project](https://github.com/glenna/arkit-demo) | TBA
+| Carl Brown | [@CarlBrwn](https://twitter.com/CarlBrwn) | Swift from the Foundation Up | [Slides](https://www.slideshare.net/carlbrown/better-swift-from-the-foundation-up-tryswiftnyc17-0906) & [GitHub project](https://github.com/carlbrown/SwiftPRInsights) | TBA
+| Glenna Budford | [@glennersboofy](https://twitter.com/glennersboofy) | Getting Started With ARKit Tips + Tricks  | [Slides](https://speakerdeck.com/glenna/arkit-tips-plus-tricks) & [
+](https://github.com/glenna/arkit-demo) | TBA
 | Yasuhiro Inami | [@inamiy](https://twitter.com/inamiy) | Swift 4 Codable  | [x](https://speakerdeck.com/inamiy/swift-4-codable-try-swift-nyc-2017) | TBA
 | Sonam Dhingra | [@Sdhingra89](https://twitter.com/Sdhingra89) | Building a framework with Viper  | [Slides](https://speakerdeck.com/socohesive/viper-ios-and-frameworks) & [GitHub project](https://github.com/ustwo/videoplayback-ios) | TBA
 | Ray Tsaihong | [@rmundo](https://twitter.com/rmundo) | Swift Chatbots for Fun and Profit | [x](https://speakerdeck.com/rmundo/swift-chatbots-for-fun-and-profit) | TBA
