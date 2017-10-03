@@ -4,7 +4,7 @@
 | ---- | ------- | ------------ | ------ | ----- |
 | James Dempsey | [@jamesdempsey](https://twitter.com/jamesdempsey) | Flexible View Controller Interfaces With Swift 4 |  | [x](https://academy.realm.io/posts/try-swift-nyc-2017-james-dempsey-flexible-view-controller-interfaces-swift-4/)
 | Erica Sadun | [@ericasadun](https://twitter.com/ericasadun) | A Funny Thing Happened On The Way To This Array |  | [x](https://academy.realm.io/posts/try-swift-nyc-2017-erica-sadun-swift-flexibility-arrays/)
-| Neem Serra | [@TeamNeem](https://twitter.com/TeamNeem) | Map & FlatMap Magic | [x](https://www.slideshare.net/NeemSerra/map-and-flat-map-magic) | TBA
+| Neem Serra | [@TeamNeem](https://twitter.com/TeamNeem) | Map & FlatMap Magic | [x](https://www.slideshare.net/NeemSerra/map-and-flat-map-magic) | [x](https://academy.realm.io/posts/try-swift-nyc-2017-neem-serra-map-and-flatmap-in-swift/)
 | Craig Clayton | [@thedevme](https://twitter.com/thedevme) | Creating Rich Custom UI Notifications | [x](https://www.slideshare.net/thedevme/creating-rich-custom-ui-notifications) | TBA
 | Paola Mata | [@PaolaNotPaolo](https://twitter.com/PaolaNotPaolo) | Exploring Natural Language Processing | [Slides](https://www.slideshare.net/PaolaMata3/exploring-natural-language-processing) & [GitHub project](https://github.com/pmatanyc/NLPDemo) | TBA
 | Matt Gallagher | [@cocoawithlove](https://twitter.com/cocoawithlove) | View-State Driven Applications | [Slides](https://speakerdeck.com/mattgallagher/try-swift-2017-view-state-driven-applications) & [GitHub project](https://github.com/mattgallagher/clocks) | TBA
