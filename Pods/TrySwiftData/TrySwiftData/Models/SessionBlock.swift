@@ -10,10 +10,10 @@ import RealmSwift
 
 public class SessionBlock: Object {
     /* The time in which these sessions start */
-    open dynamic var startTime: Date = Date()
+    @objc open dynamic var startTime: Date = Date()
 
     /* The time in which they end */
-    open dynamic var endTime: Date = Date()
+    @objc open dynamic var endTime: Date = Date()
 
     /* The sessions occurring within this block. */
     open let sessions = List<Session>()

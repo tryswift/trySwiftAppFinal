@@ -10,8 +10,8 @@ import UIKit
 import RealmSwift
 
 public class Location: Object {
-    open dynamic var name: String = ""
-    open dynamic var nameJP: String?
+    @objc open dynamic var name: String = ""
+    @objc open dynamic var nameJP: String?
 
     public var localizedName: String {
         return self.localizedString(for: name, japaneseString: nameJP)

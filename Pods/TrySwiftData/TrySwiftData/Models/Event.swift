@@ -9,13 +9,13 @@
 import RealmSwift
 
 public class Event: Object {
-    open dynamic var title: String = ""
-    open dynamic var titleJP: String?
-    open dynamic var logoAssetName: String?
-    open dynamic var logoImageWebURL: String?
-    open dynamic var location: String = ""
-    open dynamic var locationJP: String?
-    open dynamic var website: String?
+    @objc open dynamic var title: String = ""
+    @objc open dynamic var titleJP: String?
+    @objc open dynamic var logoAssetName: String?
+    @objc open dynamic var logoImageWebURL: String?
+    @objc open dynamic var location: String = ""
+    @objc open dynamic var locationJP: String?
+    @objc open dynamic var website: String?
 
     public var localizedTitle: String {
         return self.localizedString(for: title, japaneseString: titleJP)

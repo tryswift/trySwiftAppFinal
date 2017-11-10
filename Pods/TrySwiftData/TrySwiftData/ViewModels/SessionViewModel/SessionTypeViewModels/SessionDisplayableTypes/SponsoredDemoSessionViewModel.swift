@@ -36,7 +36,7 @@ struct SponsoredDemoSessionViewModel: SessionDisplayable {
             return imageURL
         }
         
-        return sponsor.logoURL ?? dataDefaults.imageURL
+        return sponsor.logoURL
     }
     
     var location: String {

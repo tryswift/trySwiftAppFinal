@@ -18,14 +18,14 @@ import RealmSwift
 }
 
 public class Sponsor: Object {
-    open dynamic var name: String = ""
-    open dynamic var nameJP: String?
-    open dynamic var url: String?
-    open dynamic var displayURL: String?
-    open dynamic var twitter: String?
-    open dynamic var logoAssetName: String?
-    open dynamic var logoImageWebURL: String?
-    open dynamic var level: SponsorLevel = .event
+    @objc open dynamic var name: String = ""
+    @objc open dynamic var nameJP: String?
+    @objc open dynamic var url: String?
+    @objc open dynamic var displayURL: String?
+    @objc open dynamic var twitter: String?
+    @objc open dynamic var logoAssetName: String?
+    @objc open dynamic var logoImageWebURL: String?
+    @objc open dynamic var level: SponsorLevel = .event
 
     public var localizedName: String {
         return self.localizedString(for: name, japaneseString: nameJP)
@@ -67,8 +67,6 @@ public class Sponsor: Object {
         case .student:      return "Student".localized()
         case .event:        return "Event".localized()
         }
-        
-        return ""
     }
 }
 

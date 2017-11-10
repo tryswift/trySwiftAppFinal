@@ -9,12 +9,12 @@
 import RealmSwift
 
 public class Conference: Object {
-    open dynamic var name: String?
-    open dynamic var twitter: String?
-    open dynamic var logoAssetName: String?
-    open dynamic var logoImageWebURL: String?
-    open dynamic var conferenceDescription: String = ""
-    open dynamic var conferenceDescriptionJP: String?
+    @objc open dynamic var name: String?
+    @objc open dynamic var twitter: String?
+    @objc open dynamic var logoAssetName: String?
+    @objc open dynamic var logoImageWebURL: String?
+    @objc open dynamic var conferenceDescription: String = ""
+    @objc open dynamic var conferenceDescriptionJP: String?
     open let venues = List<Venue>()
     open let organizers = List<Organizer>()
 

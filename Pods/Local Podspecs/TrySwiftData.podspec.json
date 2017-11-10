@@ -30,15 +30,15 @@
 
     ]
   },
-  "default_subspecs": "Tokyo2017",
+  "default_subspecs": "TrySwiftAssets",
   "source_files": "TrySwiftData/**/*.{swift}",
   "subspecs": [
     {
-      "name": "Tokyo2017",
+      "name": "TrySwiftAssets",
       "resource_bundles": {
         "TrySwiftData": [
           "TrySwiftData/Assets/**/*.strings",
-          "TrySwiftData/Assets/Tokyo2017/**/*.{jpg,png,realm}"
+          "TrySwiftData/Assets/Conferences/**/*.{jpg,png,realm}"
         ]
       }
     },
@@ -47,7 +47,7 @@
       "resource_bundles": {
         "TrySwiftData": [
           "TrySwiftData/Assets/**/*.strings",
-          "TrySwiftData/Assets/Tokyo2017/*.{realm}"
+          "TrySwiftData/Assets/Conferences/*.{realm}"
         ]
       }
     }

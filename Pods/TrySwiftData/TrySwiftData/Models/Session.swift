@@ -25,34 +25,34 @@ import Foundation
 
 public class Session: Object {
     /** The type of content in this particular session */
-    open dynamic var type: SessionType = .talk
+    @objc open dynamic var type: SessionType = .talk
 
     /** The title of this session (if not provided by any child objects) */
-    open dynamic var title: String?
+    @objc open dynamic var title: String?
 
     /** The Japanese title of this session (if not provided by any child objects) */
-    open dynamic var titleJP: String?
+    @objc open dynamic var titleJP: String?
 
     /** For special cases, the name of the image to show for this session. */
-    open dynamic var imageAssetName: String?
+    @objc open dynamic var imageAssetName: String?
 
     /** For special cases, the name of the image to show for this session. */
-    open dynamic var imageWebURL: String?
+    @objc open dynamic var imageWebURL: String?
 
     /** A sponsor, if any, responsible for this session. */
-    open dynamic var sponsor: Sponsor?
+    @objc open dynamic var sponsor: Sponsor?
 
     /** The presentation information if this session is a talk. */
-    open dynamic var presentation: Presentation?
+    @objc open dynamic var presentation: Presentation?
 
     /** The specific room this session will be held */
-    open dynamic var location: Location?
+    @objc open dynamic var location: Location?
 
     /** A special type of event occuring during the conference */
-    open dynamic var event: Event?
+    @objc open dynamic var event: Event?
 
     /** Any particular events held at a different venue from the conference */
-    open dynamic var venue: Venue?
+    @objc open dynamic var venue: Venue?
 
     open let sessionBlock = LinkingObjects(fromType: SessionBlock.self, property: "sessions")
 

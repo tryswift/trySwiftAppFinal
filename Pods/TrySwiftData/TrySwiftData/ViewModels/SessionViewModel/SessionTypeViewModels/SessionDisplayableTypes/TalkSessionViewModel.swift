@@ -52,7 +52,7 @@ struct TalkSessionViewModel: SessionDisplayable {
     }
     
     var longDescription: String {
-        return presentation.localizedSummary ?? dataDefaults.longDescription
+        return presentation.localizedSummary
     }
     
     var selectable: Bool {

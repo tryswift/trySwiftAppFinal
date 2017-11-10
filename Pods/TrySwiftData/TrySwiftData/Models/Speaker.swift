@@ -15,16 +15,16 @@ import UIKit
 }
 
 public class Speaker: Object {
-    open dynamic var id: Int = 0
-    open dynamic var name: String = "TBD"
-    open dynamic var nameJP: String?
-    open dynamic var twitter: String = "TBD"
-    open dynamic var imageAssetName: String? = nil
-    open dynamic var imageWebURL: String? = nil
-    open dynamic var bio: String = "TBD"
-    open dynamic var bioJP: String?
-    open dynamic var hidden: Bool = false
-    open dynamic var type: SpeakerType = .presentation
+    @objc open dynamic var id: Int = 0
+    @objc open dynamic var name: String = "TBD"
+    @objc open dynamic var nameJP: String?
+    @objc open dynamic var twitter: String = "TBD"
+    @objc open dynamic var imageAssetName: String? = nil
+    @objc open dynamic var imageWebURL: String? = nil
+    @objc open dynamic var bio: String = "TBD"
+    @objc open dynamic var bioJP: String?
+    @objc open dynamic var hidden: Bool = false
+    @objc open dynamic var type: SpeakerType = .presentation
     
     public override static func primaryKey() -> String? {
         return "id"
