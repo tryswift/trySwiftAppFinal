@@ -34,9 +34,7 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let sessionDay1ViewController = SessionsTableViewController(conferenceDay: days[0], scheduleViewController: self)
-      //  let sessionDay2ViewController = SessionsTableViewController(conferenceDay: days[1], scheduleViewController: self)
-        return [sessionDay1ViewController]
+        return days.map { SessionsTableViewController(conferenceDay: $0, scheduleViewController: self) }
 
     }
     
@@ -52,11 +50,13 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
 private extension ScheduleViewController {
     
     func moveToCorrectDate() {
-//        let today = Date.today()
-//
-//        let day2 = days[1].date
-//        if today == day2 {
-//            moveToViewController(at: 1)
-//        }
+        if days.count > 1 {
+            let today = Date.today()
+            
+            let day2 = days[1].date
+            if today == day2 {
+                moveToViewController(at: 1)
+            }
+        }
     }
 }
