@@ -37,7 +37,7 @@ public class Speaker: Object {
     public class var all: Results<Speaker> {
         let realm = try! Realm.trySwiftRealm()
         return realm.objects(Speaker.self)
-            .filter("hidden == false AND type == %d", SpeakerType.presentation.rawValue)
+            .filter("hidden == false")
             .sorted(byKeyPath: "name")
     }
 

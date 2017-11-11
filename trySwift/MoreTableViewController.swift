@@ -201,7 +201,7 @@ private extension MoreTableViewController {
     }
     
     func showConferenceFeedback() {
-        let configuration = MailConfiguration(recipients: ["info@tryswift.co"], subject: "Conference feedback via try! Conference app")
+        let configuration = MailConfiguration(recipients: ["india@tryswift.co"], subject: "Conference feedback via try! Conference app")
         sendMail(withConfiguration: configuration)
     }
     
@@ -211,7 +211,7 @@ private extension MoreTableViewController {
         if application.canOpenURL(appURL) {
             application.open(appURL)
         } else {
-            let url = URL(string: "https://tryswiftnyc2017.slack.com")!
+            let url = URL(string: "https://tryswiftindia.slack.com/")!
             openSafariViewController(withURL: url)
         }
     }
