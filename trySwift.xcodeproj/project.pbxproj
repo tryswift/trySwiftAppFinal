@@ -78,7 +78,7 @@
 		FAA54F121D91305200EC9E80 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F111D91305200EC9E80 /* NibLoadableView.swift */; };
 		FAA54F141D9130F900EC9E80 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */; };
 		FABA73BE1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */; };
-		FAC488181F5719BF00CFA660 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC488171F5719BF00CFA660 /* Logo.png */; };
+		FAC488181F5719BF00CFA660 /* Logo_BLR.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC488171F5719BF00CFA660 /* Logo_BLR.png */; };
 		FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */; };
 		FAF1DE151D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */; };
 		FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */; };
@@ -254,7 +254,7 @@
 		FAA54F111D91305200EC9E80 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeHoursDetailViewController.swift; sourceTree = "<group>"; };
-		FAC488171F5719BF00CFA660 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo.png; path = "try! Today/Logo.png"; sourceTree = SOURCE_ROOT; };
+		FAC488171F5719BF00CFA660 /* Logo_BLR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo_BLR.png; path = "try! Today/Logo_BLR.png"; sourceTree = SOURCE_ROOT; };
 		FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTableViewController.swift; sourceTree = "<group>"; };
 		FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -702,7 +702,7 @@
 			isa = PBXGroup;
 			children = (
 				2222DA991E63CA9000D754A1 /* Info.plist */,
-				FAC488171F5719BF00CFA660 /* Logo.png */,
+				FAC488171F5719BF00CFA660 /* Logo_BLR.png */,
 				2222DA9B1E63CA9000D754A1 /* TodayController.swift */,
 				2222DAA61E63F0E300D754A1 /* TodayInterface.storyboard */,
 				2222DA9E1E63CA9000D754A1 /* try! Today.entitlements */,
@@ -977,7 +977,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC488181F5719BF00CFA660 /* Logo.png in Resources */,
+				FAC488181F5719BF00CFA660 /* Logo_BLR.png in Resources */,
 				2222DAA41E63F0E300D754A1 /* TodayInterface.storyboard in Resources */,
 				2222DAB11E64036A00D754A1 /* Localizable.strings in Resources */,
 			);
