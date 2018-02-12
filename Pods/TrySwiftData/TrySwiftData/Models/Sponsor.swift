@@ -15,6 +15,9 @@ import RealmSwift
     case diversity = 3
     case student = 4
     case event = 5
+    case individual = 6
+    case lanyard = 7
+    case bag = 8
 }
 
 public class Sponsor: Object {
@@ -66,6 +69,9 @@ public class Sponsor: Object {
         case .diversity:    return "Diversity".localized()
         case .student:      return "Student".localized()
         case .event:        return "Event".localized()
+        case .individual:   return "Individual".localized()
+        case .lanyard:      return "Lanyard".localized()
+        case .bag:          return "Bag".localized()
         }
     }
 }
