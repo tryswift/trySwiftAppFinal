@@ -12,6 +12,7 @@ import UIKit
 @objc public enum SpeakerType: Int {
     case presentation
     case lightningTalk
+    case instructor
 }
 
 public class Speaker: Object {
