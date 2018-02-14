@@ -139,7 +139,17 @@ private extension SessionsTableViewController {
             if let speaker = session.presentation?.speaker {
                 return officeHourDetails(speaker, session: session)
             }
-        case .workshop, .meetup:
+        case .workshop:
+            if let presentation = session.presentation, let venue = session.venue {
+                return workshopDetails(presentation, session: session, venue: venue)
+            }
+            else if let presentation = session.presentation {
+                return sessionDetails(presentation, session: session)
+            }
+            else if let event = session.event {
+                return webDisplay(event)
+            }
+        case .meetup:
             if let event = session.event {
                 return webDisplay(event)
             }
@@ -196,5 +206,13 @@ private extension SessionsTableViewController {
         venueDetailsVC.tableView.contentInset = UIEdgeInsets(top: 80,left: 0,bottom: 0,right: 0)
 
         return venueDetailsVC
+    }
+    func workshopDetails(_ presentation: Presentation, session: Session, venue: Venue) -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let workshopDetailVC = storyboard.instantiateViewController(withIdentifier: String(describing: WorkshopDetailViewController.self)) as! WorkshopDetailViewController
+        workshopDetailVC.session = session
+        workshopDetailVC.presentation = presentation
+        workshopDetailVC.venue = venue
+        return workshopDetailVC
     }
 }

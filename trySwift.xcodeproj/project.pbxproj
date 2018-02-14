@@ -79,6 +79,7 @@
 		FAA54F141D9130F900EC9E80 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */; };
 		FABA73BE1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */; };
 		FAC488181F5719BF00CFA660 /* Logo_BLR.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC488171F5719BF00CFA660 /* Logo_BLR.png */; };
+		FAE089A02033EBDE00A5B560 /* WorkshopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0899F2033EBDE00A5B560 /* WorkshopDetailViewController.swift */; };
 		FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */; };
 		FAF1DE151D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */; };
 		FAF1DE161D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */; };
@@ -255,6 +256,7 @@
 		FAA54F131D9130F900EC9E80 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficeHoursDetailViewController.swift; sourceTree = "<group>"; };
 		FAC488171F5719BF00CFA660 /* Logo_BLR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logo_BLR.png; path = "try! Today/Logo_BLR.png"; sourceTree = SOURCE_ROOT; };
+		FAE0899F2033EBDE00A5B560 /* WorkshopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopDetailViewController.swift; sourceTree = "<group>"; };
 		FAF1DE111D5FDBD600D710C3 /* VenueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTableViewController.swift; sourceTree = "<group>"; };
 		FAF1DE131D5FDD3700D710C3 /* VenueHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		FAF1DE141D5FDD3700D710C3 /* VenueHeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueHeaderTableViewCell.xib; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 				FA39E8FB1C6C26150074B6BE /* Schedule */,
 				FA39E9061C6C43480074B6BE /* Speakers */,
 				FABA73BF1D6D9ACE0081D887 /* OfficeHours */,
+				FAE0899E2033EB9A00A5B560 /* Workshops */,
 				FA39E9111C6C81940074B6BE /* SponsorsViewController */,
 				FA65B57D1C6D7AFC00DCAF0B /* More */,
 				FA65B57E1C6D7B0900DCAF0B /* Shared */,
@@ -612,6 +615,14 @@
 				FABA73BD1D6D9ABB0081D887 /* OfficeHoursDetailViewController.swift */,
 			);
 			name = OfficeHours;
+			sourceTree = "<group>";
+		};
+		FAE0899E2033EB9A00A5B560 /* Workshops */ = {
+			isa = PBXGroup;
+			children = (
+				FAE0899F2033EBDE00A5B560 /* WorkshopDetailViewController.swift */,
+			);
+			name = Workshops;
 			sourceTree = "<group>";
 		};
 		FAF1DE171D5FDD3B00D710C3 /* VenueHeaderTableViewCell */ = {
@@ -1153,6 +1164,7 @@
 				FA39E8D21C6AFCCA0074B6BE /* SessionsTableViewController.swift in Sources */,
 				FAF1DE121D5FDBD600D710C3 /* VenueTableViewController.swift in Sources */,
 				FA39E9341C6D59890074B6BE /* SessionHeaderTableViewCell.swift in Sources */,
+				FAE089A02033EBDE00A5B560 /* WorkshopDetailViewController.swift in Sources */,
 				FA39E90B1C6C45FD0074B6BE /* SpeakerTableViewCell.swift in Sources */,
 				FA65B5911C6DA53600DCAF0B /* AboutTableViewController.swift in Sources */,
 				FA65B58D1C6D8B0600DCAF0B /* OrganizerTableViewCell.swift in Sources */,
