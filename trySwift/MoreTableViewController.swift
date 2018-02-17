@@ -15,6 +15,7 @@ class MoreTableViewController: UITableViewController {
     fileprivate let cellIdentifier = "BasicCell"
     fileprivate let moreDetailSegue = "moreDetailSegue"
     fileprivate var didShowDetail = false
+    fileprivate let conference = Conference.current
 
     fileprivate enum MoreSection: Int {
         case eventDetails, acknowledgements, feedback, slack
@@ -172,7 +173,7 @@ private extension MoreTableViewController {
     
     func showCodeOfConduct() {
         let webViewController = WebDisplayViewController()
-        webViewController.url = URL(string: "https://github.com/NatashaTheRobot/trySwiftCodeOfConduct/blob/master/README.md")!
+        webViewController.url = URL(string: conference.codeOfConductURL)!
         webViewController.displayTitle = "Code of Conduct".localized()
         performSegue(withIdentifier: moreDetailSegue, sender: webViewController)
     }
@@ -196,12 +197,12 @@ private extension MoreTableViewController {
     }
     
     func showAppFeedback() {
-        let url = URL(string: "https://github.com/tryswift/trySwiftAppFinal/issues")!
+        let url = URL(string: conference.githubIssuesURL)!
         openSafariViewController(withURL: url)
     }
     
     func showConferenceFeedback() {
-        let configuration = MailConfiguration(recipients: ["india@tryswift.co"], subject: "Conference feedback via try! Conference app")
+        let configuration = MailConfiguration(recipients: [conference.email], subject: "Conference feedback via try! Conference app")
         sendMail(withConfiguration: configuration)
     }
     
@@ -211,7 +212,7 @@ private extension MoreTableViewController {
         if application.canOpenURL(appURL) {
             application.open(appURL)
         } else {
-            let url = URL(string: "https://tryswiftindia.slack.com/")!
+            let url = URL(string: conference.slackURL)!
             openSafariViewController(withURL: url)
         }
     }

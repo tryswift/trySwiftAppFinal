@@ -15,6 +15,10 @@ public class Conference: Object {
     @objc open dynamic var logoImageWebURL: String?
     @objc open dynamic var conferenceDescription: String = ""
     @objc open dynamic var conferenceDescriptionJP: String?
+    @objc open dynamic var email: String = "info@tryswift.co"
+    @objc open dynamic var slackURL: String = ""
+    @objc open dynamic var githubIssuesURL: String = "https://github.com/tryswift/trySwiftAppFinal/issues"
+    @objc open dynamic var codeOfConductURL: String = "https://www.tryswift.co/code-of-conduct/"
     open let venues = List<Venue>()
     open let organizers = List<Organizer>()
 
