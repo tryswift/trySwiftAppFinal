@@ -17,7 +17,8 @@ extension Realm.Configuration {
         }
 
         var configuration = Realm.Configuration.defaultConfiguration
-        configuration.readOnly = true
+        configuration.readOnly = false
+        configuration.schemaVersion = 1
         configuration.fileURL = localRealmURL!
         return configuration
     }
