@@ -14,7 +14,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     fileprivate let conferenceStartDate = Date.date(year: 2018, month: 3, day: 1, hour: 0, minute: 0, second: 0)
     fileprivate let headerText = "try! Tokyo"
-    fileprivate let bodyText = "🇯🇵🐥🎉"
+    fileprivate let bodyText = "🗼🐥🎉"
     
     fileprivate let sessionBlocks: [SessionBlock] = {
         let days = ConferenceDay.all
