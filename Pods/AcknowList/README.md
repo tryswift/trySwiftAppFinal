@@ -29,15 +29,17 @@ The `AcknowListViewController` instance is usually pushed to an existing `UINavi
 
 ``` swift
 let viewController = AcknowListViewController()
-if let navigationController = self.navigationController {
-  navigationController.pushViewController(viewController, animated: true)
-}
+navigationController?.pushViewController(viewController, animated: true)
 ```
 
 
 ## Customization
 
 If your `.plist` file is named something other than `Pods-acknowledgements.plist` (_e.g._ if you’re using custom build targets), you can initialize the view controller with a custom path.
+
+``` swift
+let viewController = AcknowListViewController(fileNamed: "Pods-AcknowExample-acknowledgements")
+```
 
 ``` swift
 let path = Bundle.main.path(forResource: "Pods-AcknowExample-acknowledgements", ofType: "plist")
@@ -47,7 +49,7 @@ let viewController = AcknowListViewController(acknowledgementsPlistPath: path)
 
 ## Requirements
 
-AcknowList is written in Swift 4, requires iOS 8.0 and above, Xcode 8.0 and above, and uses ARC.
+AcknowList is written in Swift 4, requires iOS 8.0 and above, Xcode 9.0 and above, and uses ARC.
 
 
 ## Credits

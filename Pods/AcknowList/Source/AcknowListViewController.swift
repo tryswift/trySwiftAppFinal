@@ -63,6 +63,16 @@ open class AcknowListViewController: UITableViewController {
     }
 
     /**
+     Initializes the `AcknowListViewController` instance for the plist file based on its name.
+
+     - returns: The new `AcknowListViewController` instance.
+     */
+    public convenience init(fileNamed fileName: String) {
+        let path = AcknowListViewController.acknowledgementsPlistPath(name: fileName)
+        self.init(acknowledgementsPlistPath: path)
+    }
+
+    /**
      Initializes the `AcknowListViewController` instance for a plist file path.
 
      - parameter acknowledgementsPlistPath: The path to the acknowledgements plist file.
@@ -140,8 +150,21 @@ open class AcknowListViewController: UITableViewController {
     }
 
     class func defaultAcknowledgementsPlistPath() -> String? {
-        let DefaultAcknowledgementsPlistName = "Pods-acknowledgements"
-        return self.acknowledgementsPlistPath(name: DefaultAcknowledgementsPlistName)
+        guard let bundleName = Bundle.main.infoDictionary?["CFBundleName"] as? String else {
+            return nil
+        }
+
+        let defaultAcknowledgementsPlistName = "Pods-\(bundleName)-acknowledgements"
+        let defaultAcknowledgementsPlistPath = self.acknowledgementsPlistPath(name: defaultAcknowledgementsPlistName)
+
+        if let defaultAcknowledgementsPlistPath = defaultAcknowledgementsPlistPath,
+            FileManager.default.fileExists(atPath: defaultAcknowledgementsPlistPath) == true {
+            return defaultAcknowledgementsPlistPath
+        }
+        else {
+            // Legacy value
+            return self.acknowledgementsPlistPath(name: "Pods-acknowledgements")
+        }
     }
 
     // MARK: - View life cycle
@@ -219,7 +242,11 @@ open class AcknowListViewController: UITableViewController {
     @IBAction open func openCocoaPodsWebsite(_ sender: AnyObject) {
         let url = URL(string: AcknowLocalization.CocoaPodsURLString())
         if let url = url {
-            UIApplication.shared.openURL(url)
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
         }
     }
 
@@ -314,7 +341,7 @@ open class AcknowListViewController: UITableViewController {
         let font = UIFont.systemFont(ofSize: 12)
         let options: NSStringDrawingOptions = NSStringDrawingOptions.usesLineFragmentOrigin
         // should be (NSLineBreakByWordWrapping | NSStringDrawingUsesLineFragmentOrigin)?
-        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, attributes: [NSFontAttributeName: font], context: nil)
+        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, context: nil)
         let labelHeight = labelBounds.height
 
         return CGFloat(ceilf(Float(labelHeight)))

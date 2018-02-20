@@ -15,6 +15,9 @@ import RealmSwift
     case diversity = 3
     case student = 4
     case event = 5
+    case lanyard = 6
+    case bag = 7
+    case individual = 8
 }
 
 public class Sponsor: Object {
@@ -26,6 +29,8 @@ public class Sponsor: Object {
     @objc open dynamic var logoAssetName: String?
     @objc open dynamic var logoImageWebURL: String?
     @objc open dynamic var level: SponsorLevel = .event
+    @objc open dynamic var priority: Int = 0
+    
 
     public var localizedName: String {
         return self.localizedString(for: name, japaneseString: nameJP)
@@ -48,8 +53,8 @@ public class Sponsor: Object {
         let realm = try! Realm.trySwiftRealm()
 
         var resultsSet = [Results<Sponsor>]()
-        for i in 0...SponsorLevel.event.rawValue {
-            let sponsors = realm.objects(Sponsor.self).filter("level == %d", i)
+        for i in 0...SponsorLevel.individual.rawValue {
+            let sponsors = realm.objects(Sponsor.self).sorted(byKeyPath: "priority", ascending: true).filter("level == %d", i)
             if sponsors.count > 0 {
                 resultsSet.append(sponsors)
             }
@@ -66,6 +71,9 @@ public class Sponsor: Object {
         case .diversity:    return "Diversity".localized()
         case .student:      return "Student".localized()
         case .event:        return "Event".localized()
+        case .lanyard:      return "Lanyard".localized()
+        case .bag:          return "Bag".localized()
+        case .individual:   return "Individual".localized()
         }
     }
 }

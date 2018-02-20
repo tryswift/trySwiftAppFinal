@@ -21,14 +21,26 @@ struct WorkshopSessionViewModel: SessionDisplayable {
     }
     
     var title: String {
-        guard let event = session.event else { return dataDefaults.title }
-        return event.localizedTitle
+        if let event = session.event {
+            return event.localizedTitle
+        }
+        
+        if let presentation = session.presentation {
+            return presentation.localizedTitle
+        }
+        
+        return dataDefaults.title
     }
     
     var presenter: String {
         if let sponsor = session.sponsor {
             return sponsor.localizedName
         }
+        
+        if let speaker = session.presentation?.speaker {
+            return speaker.localizedName
+        }
+        
         return dataDefaults.presenter
     }
     
@@ -49,11 +61,15 @@ struct WorkshopSessionViewModel: SessionDisplayable {
             return event.localizedLocation
         }
         
+        if let venue = session.venue {
+            return venue.localizedTitle
+        }
+        
         return dataDefaults.location
     }
     
     var shortDescription: String {
-        return "Special Event".localized()
+        return "Workshop".localized()
     }
     
     var longDescription: String {
@@ -61,11 +77,11 @@ struct WorkshopSessionViewModel: SessionDisplayable {
     }
     
     var selectable: Bool {
-        return session.event != nil
+        return session.event != nil || session.presentation != nil || session.venue != nil
     }
     
     var twitter: String {
-        let twitter = session.sponsor?.twitter ?? dataDefaults.twitter
+        let twitter = session.sponsor?.twitter ?? session.presentation?.speaker?.twitter ?? dataDefaults.twitter
         return "@\(twitter)"
     }
 }
