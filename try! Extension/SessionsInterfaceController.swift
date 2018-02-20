@@ -24,7 +24,7 @@ class SessionsInterfaceController: WKInterfaceController {
         
         if SessionsInterfaceController.first {
             let days = ConferenceDay.all
-            WKInterfaceController.reloadRootControllers(withNames: ["Nov19"], contexts: [days[0]])
+            WKInterfaceController.reloadRootControllers(withNames: ["day1", "day2"], contexts: [days[0], days[1]])
             SessionsInterfaceController.first = false
         }
         
@@ -62,6 +62,15 @@ fileprivate extension SessionsInterfaceController {
             if let row = sessionsTable.rowController(at: index) as? SessionTableRowController {
                 row.configure(sessionBlock)
             }
+        }
+    }
+}
+
+extension SessionType {
+    var isOfficeHours: Bool {
+        switch self {
+        case .officeHours: return true
+        default: return false
         }
     }
 }

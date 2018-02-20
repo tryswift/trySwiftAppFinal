@@ -12,11 +12,13 @@ import Foundation
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
-    fileprivate let conferenceStartDate = Date.date(year: 2017, month: 11, day: 18, hour: 0, minute: 0, second: 0)
+    fileprivate let conferenceStartDate = Date.date(year: 2018, month: 3, day: 1, hour: 0, minute: 0, second: 0)
+    fileprivate let headerText = "try! Tokyo"
+    fileprivate let bodyText = "🇯🇵🐥🎉"
     
     fileprivate let sessionBlocks: [SessionBlock] = {
         let days = ConferenceDay.all
-        let conferenceDays = [days[0]]
+        let conferenceDays = [days[0], days[1], days[2]]
         let sessionBlocks = conferenceDays.flatMap { $0.sessionBlocks }
         return sessionBlocks
     }()
@@ -58,8 +60,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
         if currentDate < conferenceStartDate {
             let tmpl = CLKComplicationTemplateModularLargeStandardBody()
-            tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! India")
-            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🇮🇳🐥🎉")
+            tmpl.headerTextProvider = CLKSimpleTextProvider(text: headerText)
+            tmpl.body1TextProvider = CLKSimpleTextProvider(text: bodyText)
             let startDate = firstSession.startTime
             let style = CLKRelativeDateStyle.natural
             let units: NSCalendar.Unit = [.day, .hour, .minute]
@@ -70,8 +72,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         } else if currentDate > lastSession.endTime as Date {
             let tmpl = CLKComplicationTemplateModularLargeStandardBody()
             
-            tmpl.headerTextProvider = CLKSimpleTextProvider(text: "try! India")
-            tmpl.body1TextProvider = CLKSimpleTextProvider(text: "🇮🇳🐥🎉")
+            tmpl.headerTextProvider = CLKSimpleTextProvider(text: headerText)
+            tmpl.body1TextProvider = CLKSimpleTextProvider(text: bodyText)
             tmpl.body2TextProvider = CLKTimeIntervalTextProvider(start: firstSession.startTime as Date, end: lastSession.endTime as Date)
             let timelineEntry = CLKComplicationTimelineEntry(date: currentDate, complicationTemplate: tmpl)
             handler(timelineEntry)
@@ -125,7 +127,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 private extension Date {
     func toUTC() -> Date {
         // Conference timelines are defined in EST
-        let jst = TimeZone(abbreviation: "IST")!
+        let jst = TimeZone(abbreviation: "JST")!
         let calendar = Calendar.current
         guard let currentDate = calendar.date(byAdding: .second, value:
             -jst.secondsFromGMT(), to: self) else {
