@@ -21,22 +21,14 @@
 		22F823EE1E5BBB62003BD6BB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F823ED1E5BBB62003BD6BB /* ComplicationController.swift */; };
 		22F823F01E5BBB62003BD6BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F823EF1E5BBB62003BD6BB /* Assets.xcassets */; };
 		22F823F51E5BBB62003BD6BB /* try!.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 22F823D41E5BBB62003BD6BB /* try!.app */; };
-		2E50AF345BAF3D4FC07D959B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168F8855FDC17ABDFA46C086 /* QuartzCore.framework */; };
 		496328941D81F3560033E3C1 /* MailConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496328931D81F3560033E3C1 /* MailConfiguration.swift */; };
 		496DB2CC1E5B8678004A4946 /* Pods-trySwift-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA3A1C541D652DDC0042F8DD /* Pods-trySwift-acknowledgements.plist */; };
 		499BD62A1D05910200E74061 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499BD6291D05910200E74061 /* Twitter.swift */; };
 		499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */; };
 		49F7B2811E8475F900F09768 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7B2801E8475F900F09768 /* SplitViewController.swift */; };
 		4D498DB1B98D4B496FDBB7AA /* Pods_try__Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2E9D5733A6E1B6E10AFEEF /* Pods_try__Extension.framework */; };
-		4E6E3B84BCD00B2750C57828 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F81AD508535BD405F98215 /* AVFoundation.framework */; };
-		4FBC8D84065DB905DEC53AFD /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D255599A07073CC7B5AE51 /* CoreText.framework */; };
-		517003D35102F78461C10908 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB20E5DC1FA4168A5D3BB5A /* CoreTelephony.framework */; };
 		7AD1E19C80B78BB08E3DF079 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620220ABCCCDF47FDAF48B67 /* Pods_trySwift.framework */; };
-		828D6CB6A2E13E36F3CB9E0D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14346AF2A8784D962D2C2A7F /* CoreVideo.framework */; };
-		95AAB60A3AF87982F03E3CD7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838CADC0521E9A416B75D42 /* AssetsLibrary.framework */; };
-		E2567889D43BE2B22F55781E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C1F9C27BCD8099DCA758F7A /* CoreMedia.framework */; };
 		EAFE1C26E49EFABF83487BDC /* Pods_try__Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24718BF11477753FCD47A7A8 /* Pods_try__Today.framework */; };
-		F0E0044EA2AF1A7AEFB06624 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F5C53D439AAF00D63047E8 /* SystemConfiguration.framework */; };
 		FA0E2B4F1E63B90400B40814 /* SessionDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E2B4E1E63B90400B40814 /* SessionDetailInterfaceController.swift */; };
 		FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */; };
 		FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */; };
@@ -299,14 +291,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95AAB60A3AF87982F03E3CD7 /* AssetsLibrary.framework in Frameworks */,
-				4FBC8D84065DB905DEC53AFD /* CoreText.framework in Frameworks */,
-				517003D35102F78461C10908 /* CoreTelephony.framework in Frameworks */,
-				F0E0044EA2AF1A7AEFB06624 /* SystemConfiguration.framework in Frameworks */,
-				2E50AF345BAF3D4FC07D959B /* QuartzCore.framework in Frameworks */,
-				4E6E3B84BCD00B2750C57828 /* AVFoundation.framework in Frameworks */,
-				E2567889D43BE2B22F55781E /* CoreMedia.framework in Frameworks */,
-				828D6CB6A2E13E36F3CB9E0D /* CoreVideo.framework in Frameworks */,
 				7AD1E19C80B78BB08E3DF079 /* Pods_trySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1352,7 +1336,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -1374,7 +1358,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
