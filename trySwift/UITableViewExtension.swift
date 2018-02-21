@@ -6,6 +6,8 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
+import UIKit
+
 extension UITableView {
     
     func register<T: UITableViewCell>(_: T.Type) {

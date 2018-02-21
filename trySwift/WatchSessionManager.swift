@@ -36,7 +36,7 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     }
     
     static let watchDataUpdatedNotification = "LastUpdatedWatchChangeCreationData"
-    fileprivate let session: WCSession? = WCSession.isSupported() ? WCSession.default() : nil
+    fileprivate let session: WCSession? = WCSession.isSupported() ? WCSession.default : nil
     
     func startSession() {
         session?.delegate = self

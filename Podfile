@@ -6,21 +6,20 @@ def shared_pods
 end
 
 target 'trySwift' do
-    platform :ios, '10.0'
+    platform :ios, '11.0'
     shared_pods
-    pod 'XLPagerTabStrip', '~> 7.0.0'
+    pod 'XLPagerTabStrip', '~> 8.0.0'
     pod 'DynamicColor', '~> 3.2.1'
     pod 'AcknowList', '~> 1.2'
-    pod 'Kingfisher', '~> 3.4.0'
-    pod 'BuddyBuildSDK'
+    pod 'Kingfisher', '~> 4.6.2'
 end
 
 target 'try! Extension' do
-    platform :watchos, '3.1'
+    platform :watchos, '4.0'
     shared_pods
 end
 
 target 'try! Today' do
-    platform :ios, '10.0'
+    platform :ios, '11.0'
     shared_pods
 end

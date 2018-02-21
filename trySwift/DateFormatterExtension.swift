@@ -6,6 +6,8 @@
 //  Copyright © 2017 NatashaTheRobot. All rights reserved.
 //
 
+import Foundation
+
 extension DateFormatter {
     
     static let sessionDateFormatter: DateFormatter = {

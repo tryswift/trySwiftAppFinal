@@ -6,6 +6,7 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
+import UIKit
 
 protocol ReusableView: class {}
 

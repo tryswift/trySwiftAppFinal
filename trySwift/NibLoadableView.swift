@@ -6,6 +6,8 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
+import UIKit
+
 protocol NibLoadableView: class { }
 
 extension NibLoadableView where Self: UIView {
