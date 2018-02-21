@@ -1,3 +1,5 @@
+#include <iostream>  // REMOVE
+
 /*************************************************************************
  *
  * REALM CONFIDENTIAL
@@ -123,20 +125,25 @@ public:
     /// `SSL_CTX_use_PrivateKey_file()`.
     void use_private_key_file(const std::string& path);
 
-    /// Calling use_default_verify() will make a client use the
-    /// device default certificates for server verification.
-    /// For OpenSSL, use_default_verify() corresponds to
+    /// Calling use_default_verify() will make a client use the device
+    /// default certificates for server verification. For OpenSSL,
+    /// use_default_verify() corresponds to
     /// SSL_CTX_set_default_verify_paths(SSL_CTX*);
     void use_default_verify();
 
-    /// The verify file is a PEM file containing trust
-    /// certificates that the client will use to
-    /// verify the server crtificate. If use_verify_file()
-    /// is not called, the default device trust store will
-    /// be used.
-    /// Corresponds roughly to OpenSSL's
+    /// The verify file is a PEM file containing trust certificates that the
+    /// client will use to verify the server certificate. If use_verify_file()
+    /// is not called, the default device trust store will be used.
+    /// use_verify_file() corresponds roughly to OpenSSL's
     /// SSL_CTX_load_verify_locations().
     void use_verify_file(const std::string& path);
+
+    /// use_included_certificates() loads a set of certificates that are
+    /// included in the header file src/realm/noinst/root_certs.hpp. By using
+    /// the included certificates, the client can verify a server in the case
+    /// where the relevant certificate cannot be found, or is absent, in the
+    /// system trust store. This function is only implemented for OpenSSL.
+    void use_included_certificates();
 
 private:
     void ssl_init();
@@ -145,6 +152,7 @@ private:
     void ssl_use_private_key_file(const std::string& path, std::error_code&);
     void ssl_use_default_verify(std::error_code&);
     void ssl_use_verify_file(const std::string& path, std::error_code&);
+    void ssl_use_included_certificates(std::error_code&);
 
 #if REALM_HAVE_OPENSSL
     SSL_CTX* m_ssl_ctx = nullptr;
@@ -554,8 +562,18 @@ inline void Context::use_verify_file(const std::string& path)
 {
     std::error_code ec;
     ssl_use_verify_file(path, ec);
-    if (ec)
+    if (ec) {
         throw std::system_error(ec);
+    }
+}
+
+inline void Context::use_included_certificates()
+{
+    std::error_code ec;
+    ssl_use_included_certificates(ec);
+    if (ec) {
+        throw std::system_error(ec);
+    }
 }
 
 class Stream::HandshakeOperBase: public Service::IoOper {

@@ -22,6 +22,7 @@
 #include "object_schema.hpp"
 #include "schema.hpp"
 #include "shared_realm.hpp"
+#include "sync/partial_sync.hpp"
 
 #include <realm/descriptor.hpp>
 #include <realm/group.hpp>
@@ -31,6 +32,8 @@
 
 #if REALM_ENABLE_SYNC
 #include <realm/sync/object.hpp>
+#include <realm/sync/permissions.hpp>
+#include <realm/sync/instruction_replication.hpp>
 #endif // REALM_ENABLE_SYNC
 
 #include <string.h>
@@ -54,15 +57,14 @@ const size_t c_zeroRowIndex = 0;
 
 const char c_object_table_prefix[] = "class_";
 
-void create_metadata_tables(Group& group) {
+void create_metadata_tables(Group& group, bool partial_realm) {
     // The tables 'pk' and 'metadata' are treated specially by Sync. The 'pk' table
     // is populated by `sync::create_table` and friends, while the 'metadata' table
     // is simply ignored.
     TableRef pk_table = group.get_or_add_table(c_primaryKeyTableName);
     TableRef metadata_table = group.get_or_add_table(c_metadataTableName);
-    const size_t empty_table_size = 0;
 
-    if (metadata_table->get_column_count() == empty_table_size) {
+    if (metadata_table->get_column_count() == 0) {
         metadata_table->insert_column(c_versionColumnIndex, type_Int, c_versionColumnName);
         metadata_table->add_empty_row();
         // set initial version
@@ -74,6 +76,14 @@ void create_metadata_tables(Group& group) {
         pk_table->insert_column(c_primaryKeyPropertyNameColumnIndex, type_String, c_primaryKeyPropertyNameColumnName);
     }
     pk_table->add_search_index(c_primaryKeyObjectClassColumnIndex);
+
+#if REALM_ENABLE_SYNC
+    // Only add __ResultSets if Realm is a partial Realm
+    if (partial_realm)
+        _impl::initialize_schema(group);
+#else
+    (void)partial_realm;
+#endif
 }
 
 void set_schema_version(Group& group, uint64_t version) {
@@ -155,9 +165,8 @@ TableRef create_table(Group& group, ObjectSchema const& object_schema)
     }
 #else
     table = group.get_or_add_table(name);
-#endif // REALM_ENABLE_SYNC
-
     ObjectStore::set_primary_key_for_object(group, object_schema.name, object_schema.primary_key);
+#endif // REALM_ENABLE_SYNC
 
     return table;
 }
@@ -249,7 +258,7 @@ void validate_primary_column_uniqueness(Group const& group)
 } // anonymous namespace
 
 void ObjectStore::set_schema_version(Group& group, uint64_t version) {
-    ::create_metadata_tables(group);
+    ::create_metadata_tables(group, false);
     ::set_schema_version(group, version);
 }
 
@@ -687,12 +696,55 @@ static void apply_post_migration_changes(Group& group, std::vector<SchemaChange>
     }
 }
 
+static void create_default_permissions(Group& group, std::vector<SchemaChange> const& changes,
+                                       std::string const& sync_user_id)
+{
+#if !REALM_ENABLE_SYNC
+    static_cast<void>(group);
+    static_cast<void>(changes);
+    static_cast<void>(sync_user_id);
+#else
+    sync::set_up_basic_permissions(group, true);
+
+    // Ensure that this user exists so that local privileges checks work immediately
+    sync::add_user_to_role(group, sync_user_id, "everyone");
+
+    // Mark all tables we just created as fully world-accessible
+    // This has to be done after the first pass of schema init is done so that we can be
+    // sure that the permissions tables actually exist.
+    using namespace schema_change;
+    struct Applier {
+        Group& group;
+        void operator()(AddTable op)
+        {
+            sync::set_class_permissions_for_role(group, op.object->name, "everyone",
+                                                 static_cast<int>(ComputedPrivileges::All));
+        }
+
+        void operator()(AddInitialProperties) { }
+        void operator()(AddProperty) { }
+        void operator()(RemoveProperty) { }
+        void operator()(MakePropertyNullable) { }
+        void operator()(MakePropertyRequired) { }
+        void operator()(ChangePrimaryKey) { }
+        void operator()(AddIndex) { }
+        void operator()(RemoveIndex) { }
+        void operator()(ChangePropertyType) { }
+    } applier{group};
+
+    for (auto& change : changes) {
+        change.visit(applier);
+    }
+#endif
+}
+
 void ObjectStore::apply_schema_changes(Group& group, uint64_t schema_version,
                                        Schema& target_schema, uint64_t target_schema_version,
                                        SchemaMode mode, std::vector<SchemaChange> const& changes,
+                                       util::Optional<std::string> sync_user_id,
                                        std::function<void()> migration_function)
 {
-    create_metadata_tables(group);
+    create_metadata_tables(group, sync_user_id != util::none);
 
     if (mode == SchemaMode::Additive) {
         bool target_schema_is_newer = (schema_version < target_schema_version
@@ -704,6 +756,9 @@ void ObjectStore::apply_schema_changes(Group& group, uint64_t schema_version,
 
         if (target_schema_is_newer)
             set_schema_version(group, target_schema_version);
+
+        if (sync_user_id)
+            create_default_permissions(group, changes, *sync_user_id);
 
         set_schema_columns(group, target_schema);
         return;
@@ -820,8 +875,8 @@ void ObjectStore::delete_data_for_object(Group& group, StringData object_type) {
 bool ObjectStore::is_empty(Group const& group) {
     for (size_t i = 0; i < group.size(); i++) {
         ConstTableRef table = group.get_table(i);
-        std::string object_type = object_type_for_table_name(table->get_name());
-        if (!object_type.length()) {
+        auto object_type = object_type_for_table_name(table->get_name());
+        if (object_type.size() == 0 || object_type.begins_with("__")) {
             continue;
         }
         if (!table->is_empty()) {

@@ -85,6 +85,7 @@ public:
     static void apply_schema_changes(Group& group, uint64_t schema_version,
                                      Schema& target_schema, uint64_t target_schema_version,
                                      SchemaMode mode, std::vector<SchemaChange> const& changes,
+                                     util::Optional<std::string> sync_user_id,
                                      std::function<void()> migration_function={});
 
     static void apply_additive_changes(Group&, std::vector<SchemaChange> const&, bool update_indexes);

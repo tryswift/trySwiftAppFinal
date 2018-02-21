@@ -63,6 +63,7 @@ namespace sync {
     X(ContainerErase) \
     X(ContainerClear) \
 
+
 enum class ContainerType { none=0, links=1, array=2, dict=3 };
 
 struct Instruction {
@@ -96,9 +97,9 @@ struct Instruction {
     Type type;
 
     template <class F>
-    void visit(F&& lambda);
+    auto visit(F&& lambda);
     template <class F>
-    void visit(F&& lambda) const;
+    auto visit(F&& lambda) const;
 
     template <class T> T& get_as()
     {
@@ -294,6 +295,7 @@ struct Instruction::ContainerClear {
     uint32_t prior_size;
 };
 
+
 // If container_type != ContainerType::none, creates a subtable:
 // +---+---+-------+
 // | a | b |   c   |
@@ -365,7 +367,7 @@ Instruction::Instruction(T instr): type(GetInstructionType<T>::value)
 }
 
 template <class F>
-void Instruction::visit(F&& lambda)
+auto Instruction::visit(F&& lambda)
 {
     switch (type) {
 #define REALM_VISIT_INSTRUCTION(X) \
@@ -377,9 +379,9 @@ void Instruction::visit(F&& lambda)
 }
 
 template <class F>
-void Instruction::visit(F&& lambda) const
+auto Instruction::visit(F&& lambda) const
 {
-    const_cast<Instruction*>(this)->visit(std::forward<F>(lambda));
+    return const_cast<Instruction*>(this)->visit(std::forward<F>(lambda));
 }
 
 std::ostream& operator<<(std::ostream&, Instruction::Type);

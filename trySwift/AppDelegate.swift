@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import CloudKit
-import UserNotifications
 import TrySwiftData
 import Timepiece
 
@@ -18,10 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-//        let notificationSettings = UIUserNotificationSettings(types: UIUserNotificationType(), categories: nil)
-//        application.registerUserNotificationSettings(notificationSettings)
-//        application.registerForRemoteNotifications()
 
         WatchSessionManager.sharedManager.startSession()
 

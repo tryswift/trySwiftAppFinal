@@ -30,6 +30,7 @@
 #include <realm/util/logger.hpp>
 #include <realm/util/network.hpp>
 #include <realm/impl/cont_transact_hist.hpp>
+#include <realm/sync/protocol.hpp>
 #include <realm/sync/history.hpp>
 
 namespace realm {
@@ -46,21 +47,20 @@ public:
         /// amount of time (i.e., a server hammering protection mechanism).
         normal,
 
-        /// Delay reconnect attempts indefinitely. For testing purposes only.
+        /// For testing purposes only.
         ///
-        /// A reconnect attempt can be manually scheduled by calling
-        /// cancel_reconnect_delay(). In particular, when a connection breaks,
-        /// or when an attempt at establishing the connection fails, the
-        /// connection state change listener is called. If one calls
-        /// cancel_reconnect_delay() from that invocation of the listener, the
-        /// effect is to allow another reconnect attempt to occur.
-        never,
-
-        /// Never delay reconnect attempts. Perform them immediately. For
-        /// testing purposes only.
-        immediate
+        /// Never reconnect automatically after the connection is closed due to
+        /// an error. Allow immediate reconnect if the connection was closed
+        /// voluntarily (e.g., due to sessions being abandoned).
+        ///
+        /// In this mode, Client::cancel_reconnect_delay() and
+        /// Session::cancel_reconnect_delay() can still be used to trigger
+        /// another reconnection attempt (with no delay) after an error has
+        /// caused the connection to be closed.
+        testing
     };
 
+    static constexpr std::uint_fast64_t default_connection_linger_time_ms =  30000; // 30 seconds
     static constexpr std::uint_fast64_t default_ping_keepalive_period_ms  = 600000; // 10 minutes
     static constexpr std::uint_fast64_t default_pong_keepalive_timeout_ms = 300000; //  5 minutes
     static constexpr std::uint_fast64_t default_pong_urgent_timeout_ms    =   5000; //  5 seconds
@@ -108,6 +108,18 @@ public:
         ///
         /// \sa make_client_history(), TrivialChangesetCooker.
         std::shared_ptr<ClientHistory::ChangesetCooker> changeset_cooker;
+
+        /// The number of milliseconds to keep a connection open after all
+        /// sessions have been abandoned (or suspended by errors).
+        ///
+        /// The purpose of this linger time is to avoid close/reopen cycles
+        /// during short periods of time where there are no sessions interested
+        /// in using the connection.
+        ///
+        /// If the connection gets closed due to an error before the linger time
+        /// expires, the connection will be kept closed until there are sessions
+        /// willing to use it again.
+        std::uint_fast64_t connection_linger_time_ms = default_connection_linger_time_ms;
 
         /// The number of ms between periodic keep-alive pings.
         std::uint_fast64_t ping_keepalive_period_ms = default_ping_keepalive_period_ms;
@@ -275,7 +287,6 @@ class BadServerUrl; // Exception
 class Session {
 public:
     using port_type = util::network::Endpoint::port_type;
-    using version_type = _impl::History::version_type;
     using SyncTransactCallback = void(VersionID old_version, VersionID new_version);
     using ProgressHandler = void(std::uint_fast64_t downloaded_bytes,
                                  std::uint_fast64_t downloadable_bytes,
@@ -890,7 +901,7 @@ enum class Client::Error {
     limits_exceeded             = 103, ///< Limits exceeded in input message
     bad_session_ident           = 104, ///< Bad session identifier in input message
     bad_message_order           = 105, ///< Bad input message order
-    bad_file_ident_pair         = 106, ///< Bad file identifier pair (ALLOC)
+    bad_client_file_ident       = 106, ///< Bad client file identifier (IDENT)
     bad_progress                = 107, ///< Bad progress information (DOWNLOAD)
     bad_changeset_header_syntax = 108, ///< Bad syntax in changeset header (DOWNLOAD)
     bad_changeset_size          = 109, ///< Bad changeset size in changeset header (DOWNLOAD)
@@ -903,6 +914,8 @@ enum class Client::Error {
     bad_client_version          = 116, ///< Bad last integrated client version in changeset header (DOWNLOAD)
     ssl_server_cert_rejected    = 117, ///< SSL server certificate rejected
     pong_timeout                = 118, ///< Timeout on reception of PONG respone message
+    bad_client_file_ident_salt  = 119, ///< Bad client file identifier salt (IDENT)
+    bad_file_ident              = 120, ///< Bad file identifier (ALLOC)
 };
 
 const std::error_category& client_error_category() noexcept;
