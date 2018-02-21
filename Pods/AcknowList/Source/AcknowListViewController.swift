@@ -407,6 +407,7 @@ open class AcknowListViewController: UITableViewController {
         let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
         let navigationController = self.navigationController {
                 let viewController = AcknowViewController(acknowledgement: acknowledgement)
+                viewController.edgesForExtendedLayout = []
                 navigationController.pushViewController(viewController, animated: true)
         }
     }
