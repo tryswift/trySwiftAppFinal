@@ -14,6 +14,7 @@ class SpeakersViewController: UITableViewController {
     fileprivate let speakers = Speaker.all
     fileprivate let speakerDetailSegue = "speakerDetailSegue"
     fileprivate var didShowDetail = false
+    fileprivate var forceTouchedSpeaker: Speaker?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -88,11 +89,13 @@ extension SpeakersViewController: UIViewControllerPreviewingDelegate {
         guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
         //This will show the cell clearly and blur the rest of the screen for our peek.
         previewingContext.sourceRect = tableView.rectForRow(at: indexPath)
-        return speakerDetailViewController(for: speakers[indexPath.row])
+        let speaker = speakers[indexPath.row]
+        forceTouchedSpeaker = speaker
+        return speakerDetailViewController(for: speaker)
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
-        performSegue(withIdentifier: speakerDetailSegue, sender: nil)
+        performSegue(withIdentifier: speakerDetailSegue, sender: forceTouchedSpeaker)
     }
 }
 

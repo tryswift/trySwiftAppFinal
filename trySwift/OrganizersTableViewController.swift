@@ -12,6 +12,7 @@ import TrySwiftData
 class OrganizersTableViewController: UITableViewController {
 
     fileprivate let organizers = Conference.current.organizers
+    fileprivate var forceTouchedOrganizer: Organizer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,10 @@ class OrganizersTableViewController: UITableViewController {
 
         title = "Organizers".localized()
         configureTableView()
+        
+        if traitCollection.forceTouchCapability == .available {
+            registerForPreviewing(with: self, sourceView: tableView)
+        }
     }
 }
 
@@ -45,6 +50,22 @@ extension OrganizersTableViewController {
         let organizer = organizers[indexPath.row]
         let organizerVC = OrganizerDetailTableViewController(organizer: organizer)
         self.navigationController?.pushViewController(organizerVC, animated: true)
+    }
+}
+
+extension OrganizersTableViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
+        //This will show the cell clearly and blur the rest of the screen for our peek.
+        previewingContext.sourceRect = tableView.rectForRow(at: indexPath)
+        let organizer = organizers[indexPath.row]
+        forceTouchedOrganizer = organizer
+        return OrganizerDetailTableViewController(organizer: organizer)
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        self.navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }
 }
 
