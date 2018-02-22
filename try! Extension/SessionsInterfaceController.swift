@@ -24,7 +24,9 @@ class SessionsInterfaceController: WKInterfaceController {
         
         if SessionsInterfaceController.first {
             let days = ConferenceDay.all
-            WKInterfaceController.reloadRootControllers(withNames: ["day1", "day2"], contexts: [days[0], days[1]])
+
+            let namesAndContexts: [(String, AnyObject)] = [("day1", days[0]), ("day2", days[1])]
+            WKInterfaceController.reloadRootControllers(withNamesAndContexts: namesAndContexts)
             SessionsInterfaceController.first = false
         }
         
