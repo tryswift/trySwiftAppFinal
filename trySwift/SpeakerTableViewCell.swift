@@ -12,7 +12,11 @@ import TrySwiftData
 
 class SpeakerTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var speakerImageView: UIImageView!
+    @IBOutlet weak var speakerImageView: UIImageView! {
+        didSet {
+            speakerImageView.backgroundColor = .clear
+        }
+    }
     @IBOutlet weak var speakerNameLabel: UILabel!
     @IBOutlet weak var speakerTwitterLabel: UILabel!
     
