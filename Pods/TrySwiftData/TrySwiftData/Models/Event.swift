@@ -6,23 +6,21 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import RealmSwift
-
-public class Event: Object {
-    @objc open dynamic var title: String = ""
-    @objc open dynamic var titleJP: String?
-    @objc open dynamic var logoAssetName: String?
-    @objc open dynamic var logoImageWebURL: String?
-    @objc open dynamic var location: String = ""
-    @objc open dynamic var locationJP: String?
-    @objc open dynamic var website: String?
+public class Event {
+    public var title: String = ""
+    public var titleJP: String?
+    public var logoAssetName: String?
+    public var logoImageWebURL: String?
+    public var location: String = ""
+    public var locationJP: String?
+    public var website: String?
 
     public var localizedTitle: String {
-        return self.localizedString(for: title, japaneseString: titleJP)
+        return localizedString(for: title, japaneseString: titleJP)
     }
 
     public var localizedLocation: String {
-        return self.localizedString(for: location, japaneseString: locationJP)
+        return localizedString(for: location, japaneseString: locationJP)
     }
 
     public var logoURL: URL {

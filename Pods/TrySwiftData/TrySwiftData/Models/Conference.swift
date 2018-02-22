@@ -6,29 +6,26 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import RealmSwift
-
-public class Conference: Object {
-    @objc open dynamic var name: String?
-    @objc open dynamic var twitter: String?
-    @objc open dynamic var logoAssetName: String?
-    @objc open dynamic var logoImageWebURL: String?
-    @objc open dynamic var conferenceDescription: String = ""
-    @objc open dynamic var conferenceDescriptionJP: String?
-    @objc open dynamic var email: String = "info@tryswift.co"
-    @objc open dynamic var slackURL: String = ""
-    @objc open dynamic var githubIssuesURL: String = "https://github.com/tryswift/trySwiftAppFinal/issues"
-    @objc open dynamic var codeOfConductURL: String = "https://www.tryswift.co/code-of-conduct/"
-    open let venues = List<Venue>()
-    open let organizers = List<Organizer>()
+public class Conference {
+    public var name: String?
+    public var twitter: String?
+    public var logoAssetName: String?
+    public var logoImageWebURL: String?
+    public var conferenceDescription: String = ""
+    public var conferenceDescriptionJP: String?
+    public var email: String = "info@tryswift.co"
+    public var slackURL: String = ""
+    public var githubIssuesURL: String = "https://github.com/tryswift/trySwiftAppFinal/issues"
+    public var codeOfConductURL: String = "https://www.tryswift.co/code-of-conduct/"
+    public var venues = [Venue]()
+    public var organizers = [Organizer]()
 
     public var localizedDescription: String {
-        return self.localizedString(for: conferenceDescription, japaneseString: conferenceDescriptionJP)
+        return localizedString(for: conferenceDescription, japaneseString: conferenceDescriptionJP)
     }
 
     public static var current: Conference {
-        let realm = try! Realm.trySwiftRealm()
-        return realm.objects(Conference.self).first!
+        return tko2018Conferences.first!
     }
 
     public var logoURL: URL {

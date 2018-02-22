@@ -33,7 +33,7 @@ class SponsorsViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         guard
-            let sponsor = sponsors.first?.first,
+            let sponsor = sponsors.values.first?.first,
             let isCollapsed = splitViewController?.isCollapsed,
             !isCollapsed,
             !didShowDetail else { return }
@@ -59,26 +59,26 @@ extension SponsorsViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sponsorLevel = sponsors[section]
-        return sponsorLevel.count
+        return sponsorLevel!.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SponsorTableViewCell
         
-        let sponsor = sponsors[indexPath.section][indexPath.row]
+        let sponsor = sponsors[indexPath.section]![indexPath.row]
         cell.configure(withSponsor: sponsor)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let firstSponsor = sponsors[section].first!
+        let firstSponsor = sponsors[section]!.first!
         return Sponsor.localizedName(for: firstSponsor.level)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let sponsor = sponsors[indexPath.section][indexPath.row]
+        let sponsor = sponsors[indexPath.section]![indexPath.row]
         let webVC = webViewController(for: sponsor)
         
         performSegue(withIdentifier: sponsorDetailSegue, sender: webVC)

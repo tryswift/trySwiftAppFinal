@@ -153,7 +153,8 @@ fileprivate extension ComplicationController {
     }
     
     func timelineEntryDateForSession(_ sessionBlock: SessionBlock) -> Date {
-        if let index = sessionBlocks.index(of: sessionBlock) {
+
+        if let index = sessionBlocks.index(where: {$0.startTime == sessionBlock.startTime}) {
             if index - 1 > 0 {
                 let previousSessionBlock = sessionBlocks[index - 1]
                 return previousSessionBlock.endTime.toUTC() as Date
@@ -161,7 +162,7 @@ fileprivate extension ComplicationController {
                 return conferenceStartDate.toUTC()
             }
         }
-        
+
         return conferenceStartDate.toUTC()
     }
 }

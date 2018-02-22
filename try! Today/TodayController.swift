@@ -37,24 +37,23 @@ class TodayController: UIViewController, NCWidgetProviding {
     }
 
     // MARK: Local Variables
-
-    private var currentSession: Session? {
-        guard let sessionBlocks = SessionBlock.all else { return nil }
+    
+    private var currentSessionBlock: SessionBlock? {
+        let sessionBlocks = SessionBlock.all
         
         let est = TimeZone(abbreviation: "JST")!
         let date = Date().addingTimeInterval((Double)(est.secondsFromGMT()))
-        let currentSessionBlock = sessionBlocks.filter("startTime < %@ AND endTime > %@", date, date)
-        return currentSessionBlock.first?.sessions.first
+        return sessionBlocks.filter { $0.startTime < date && $0.endTime > date }.first
     }
 
-    private var firstSession: Session? {
-        guard let sessionBlocks = SessionBlock.all else { return nil }
-        return sessionBlocks.sorted(byKeyPath: "startTime").first?.sessions.first
+    private var firstSessionBlock: SessionBlock? {
+        let sessionBlocks = SessionBlock.all
+        return sessionBlocks.sorted { $0.startTime > $1.startTime }.first
     }
 
-    private var lastSession: Session? {
-        guard let sessionBlocks = SessionBlock.all else { return nil }
-        return sessionBlocks.sorted(byKeyPath: "startTime", ascending: false).first?.sessions.first
+    private var lastSessionBlock: SessionBlock? {
+        let sessionBlocks = SessionBlock.all
+        return sessionBlocks.sorted { $0.startTime < $1.startTime }.first
     }
 
     lazy var sessionDateFormatter: DateFormatter = {
@@ -93,37 +92,31 @@ class TodayController: UIViewController, NCWidgetProviding {
         self.displayPictureView.layer.masksToBounds = true
 
         //Update the view depending on the current state
-        if let session = currentSession {
+        if let sessionBlock = currentSessionBlock, let session = currentSessionBlock?.sessions.first {
             let viewModel = SessionViewModel(session: session)
             titleLabel.text = viewModel.title
             displayPictureView.image = UIImage(contentsOfFile: viewModel.imageURL.path)
             subTitleLabel.text = viewModel.presenter
             typeLabel.text = viewModel.shortDescription
-
-            let sessionBlock = session.sessionBlock.first!
             
             let firstTimeString = sessionDateFormatter.string(from: sessionBlock.startTime)
             let lastTimeString = sessionDateFormatter.string(from: sessionBlock.endTime)
             timeLabel.text = String(format: "%@ - %@", firstTimeString, lastTimeString)
             return
         }
-
+        
         // Check if we're still before the conference
-        if let session = firstSession {
-            let startOfConference = session.sessionBlock.first!.startTime
-            if Date() < startOfConference {
-                let interval = startOfConference.timeIntervalSinceNow
-                timeLabel.text = countdownTimeFormatter.string(from: interval)
-                return
-            }
+        let startOfConference = firstSessionBlock!.startTime
+        if Date() < startOfConference {
+            let interval = startOfConference.timeIntervalSinceNow
+            timeLabel.text = countdownTimeFormatter.string(from: interval)
+            return
         }
-
+        
         // Check if the conference has ended
-        if let session = lastSession {
-            let endOfConference = session.sessionBlock.first!.endTime
-            if Date() > endOfConference {
-                timeLabel.text = NSLocalizedString("See you next time!", comment: "")
-            }
+        let endOfConference = lastSessionBlock!.endTime
+        if Date() > endOfConference {
+            timeLabel.text = NSLocalizedString("See you next time!", comment: "")
         }
     }
 

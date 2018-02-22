@@ -25,7 +25,7 @@ struct SessionDataDefaults: SessionDisplayable {
     }
     
     var title: String {
-        return session.localizedString(for: session.title ?? "TBD", japaneseString: session.titleJP)
+        return localizedString(for: session.title ?? "TBD", japaneseString: session.titleJP)
     }
     
     var presenter: String {
