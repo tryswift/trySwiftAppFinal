@@ -6,24 +6,17 @@
 //  Copyright © 2017 NatashaTheRobot. All rights reserved.
 //
 
-import RealmSwift
-
-public class SessionBlock: Object {
+public class SessionBlock {
     /* The time in which these sessions start */
-    @objc open dynamic var startTime: Date = Date()
+    public var startTime: Date = Date()
 
     /* The time in which they end */
-    @objc open dynamic var endTime: Date = Date()
+    public var endTime: Date = Date()
 
     /* The sessions occurring within this block. */
-    open let sessions = List<Session>()
+    open var sessions = [Session]()
 
-    public static var all: Results<SessionBlock>? {
-        do {
-            let realm = try Realm.trySwiftRealm()
-            return realm.objects(SessionBlock.self)
-        } catch {
-            return nil
-        }
+    public static var all: [SessionBlock] {
+        return tko2018SessionBlocks
     }
 }

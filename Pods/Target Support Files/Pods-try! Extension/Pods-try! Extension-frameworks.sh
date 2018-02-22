@@ -89,14 +89,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Realm-watchOS/Realm.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/RealmSwift-watchOS/RealmSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Timepiece-watchOS/Timepiece.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TrySwiftData-watchOS/TrySwiftData.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/Realm-watchOS/Realm.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/RealmSwift-watchOS/RealmSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Timepiece-watchOS/Timepiece.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TrySwiftData-watchOS/TrySwiftData.framework"
 fi

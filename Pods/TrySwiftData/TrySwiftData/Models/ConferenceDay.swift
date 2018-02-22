@@ -6,17 +6,14 @@
 //  Copyright © 2017 NatashaTheRobot. All rights reserved.
 //
 
-import RealmSwift
-
-public class ConferenceDay: Object {
+public class ConferenceDay {
     /* The date of this particular day of the conference. */
-    @objc open dynamic var date: Date = Date()
+    public var date: Date = Date()
 
     /* The list of sessions, sorted into time blocks for that day. */
-    open let sessionBlocks = List<SessionBlock>()
+    open var sessionBlocks = [SessionBlock]()
 
-    public static var all: Results<ConferenceDay> {
-        let realm = try! Realm.trySwiftRealm()
-        return realm.objects(ConferenceDay.self).sorted(byKeyPath: "date")
+    public static var all: [ConferenceDay] {
+        return tko2018ConferenceDays.sorted { $0.date < $1.date }
     }
 }

@@ -6,36 +6,35 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-import RealmSwift
 import Contacts
 
-@objc public enum VenueType: Int {
+public enum VenueType: Int {
     case conference
     case hackathon
     case party
     case workshop
 }
 
-public class Venue: Object {
-    @objc open dynamic var title: String = ""
-    @objc open dynamic var titleJP: String?
-    @objc open dynamic var address: String = ""
-    @objc open dynamic var addressJP: String?
-    @objc open dynamic var website: String?
-    @objc open dynamic var twitter: String?
-    @objc open dynamic var logoAssetName: String?
-    @objc open dynamic var logoImageWebURL: String?
-    @objc open dynamic var wifiNetworkName: String?
-    @objc open dynamic var wifiUsername: String?
-    @objc open dynamic var wifiPassword: String?
-    @objc open dynamic var type: VenueType = .conference
+public class Venue {
+    public var title: String = ""
+    public var titleJP: String?
+    public var address: String = ""
+    public var addressJP: String?
+    public var website: String?
+    public var twitter: String?
+    public var logoAssetName: String?
+    public var logoImageWebURL: String?
+    public var wifiNetworkName: String?
+    public var wifiUsername: String?
+    public var wifiPassword: String?
+    public var type: VenueType = .conference
 
     public var localizedTitle: String {
-        return self.localizedString(for: title, japaneseString: titleJP)
+        return localizedString(for: title, japaneseString: titleJP)
     }
 
     public var localizedAddress: String {
-        return self.localizedString(for: address, japaneseString: addressJP)
+        return localizedString(for: address, japaneseString: addressJP)
     }
 
     public var logoURL: URL {

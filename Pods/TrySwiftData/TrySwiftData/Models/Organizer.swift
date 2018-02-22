@@ -7,34 +7,30 @@
 //
 
 import Foundation
-import RealmSwift
 
-public class Organizer: Object {
-    @objc open dynamic var id: Int = 0
-    @objc open dynamic var name: String = "TBD"
-    @objc open dynamic var nameJP: String?
-    @objc open dynamic var twitter: String = "TBD"
-    @objc open dynamic var imageAssetName: String? = nil
-    @objc open dynamic var imageWebURL: String? = nil
-    @objc open dynamic var bio: String = "TBD"
-    @objc open dynamic var bioJP: String?
-    @objc open dynamic var hidden: Bool = false
+public class Organizer {
+    public var id: Int = 0
+    public var name: String = "TBD"
+    public var nameJP: String?
+    public var twitter: String = "TBD"
+    public var imageAssetName: String? = nil
+    public var imageWebURL: String? = nil
+    public var bio: String = "TBD"
+    public var bioJP: String?
+    public var hidden: Bool = false
 
-    public override static func primaryKey() -> String? {
-        return "id"
-    }
-
-    public class var all: Results<Organizer> {
-        let realm = try! Realm.trySwiftRealm()
-        return realm.objects(Organizer.self).filter("hidden == false").sorted(byKeyPath: "name")
+    public static var all: [String : Organizer] {
+        let organizers =  tko2018Organizers.filter { $0.value.hidden == false}
+        let sortedOrganizers = organizers.sorted{ $0.value.name > $1.value.name }
+        return sortedOrganizers.dictionary()
     }
 
     public var localizedName: String {
-        return self.localizedString(for: name, japaneseString: nameJP)
+        return localizedString(for: name, japaneseString: nameJP)
     }
 
     public var localizedBio: String {
-        return self.localizedString(for: bio, japaneseString: bioJP)
+        return localizedString(for: bio, japaneseString: bioJP)
     }
 
     public var imageURL: URL {
