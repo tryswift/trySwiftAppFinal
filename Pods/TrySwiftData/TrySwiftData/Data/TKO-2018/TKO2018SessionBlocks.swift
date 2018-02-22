@@ -141,7 +141,7 @@ public let tko2018SessionBlocks: [SessionBlock] = [
     {
         let sessionBlock = SessionBlock()
         sessionBlock.startTime = Date.date(year: 2018, month: 3, day: 1, hour: 16, minute: 50, second: 0)
-        sessionBlock.endTime = Date.date(year: 2018, month: 3, day: 1, hour: 17, minute: 5, second: 0)
+        sessionBlock.endTime = Date.date(year: 2018, month: 3, day: 1, hour: 17, minute: 05, second: 0)
         sessionBlock.sessions.append(tko2018Sessions["day1WebAPI"]!)
         return sessionBlock
     }(),
@@ -163,8 +163,8 @@ public let tko2018SessionBlocks: [SessionBlock] = [
     }(),
     {
         let sessionBlock = SessionBlock()
-        sessionBlock.startTime = Date.date(year: 2018, month: 3, day: 1, hour: 18, minute: 30, second: 0)
-        sessionBlock.endTime = Date.date(year: 2018, month: 3, day: 1, hour: 19, minute: 0, second: 0)
+        sessionBlock.startTime = Date.date(year: 2018, month: 3, day: 1, hour: 18, minute: 00, second: 0)
+        sessionBlock.endTime = Date.date(year: 2018, month: 3, day: 1, hour: 18, minute: 30, second: 0)
         sessionBlock.sessions.append(tko2018Sessions["day1Closing"]!)
         return sessionBlock
     }(),
@@ -337,7 +337,7 @@ public let tko2018SessionBlocks: [SessionBlock] = [
     {
         let sessionBlock = SessionBlock()
         sessionBlock.startTime = Date.date(year: 2018, month: 3, day: 2, hour: 18, minute: 30, second: 0)
-        sessionBlock.endTime = Date.date(year: 2018, month: 3, day: 2, hour: 20, minute: 30, second: 0)
+        sessionBlock.endTime = Date.date(year: 2018, month: 3, day: 2, hour: 21, minute: 00, second: 0)
         sessionBlock.sessions.append(tko2018Sessions["day2Party"]!)
         return sessionBlock
     }(),

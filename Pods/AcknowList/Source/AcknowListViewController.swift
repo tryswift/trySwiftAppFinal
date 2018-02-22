@@ -341,7 +341,7 @@ open class AcknowListViewController: UITableViewController {
         let font = UIFont.systemFont(ofSize: 12)
         let options: NSStringDrawingOptions = NSStringDrawingOptions.usesLineFragmentOrigin
         // should be (NSLineBreakByWordWrapping | NSStringDrawingUsesLineFragmentOrigin)?
-        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, context: nil)
+        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, attributes: [NSAttributedStringKey.font: font], context: nil)
         let labelHeight = labelBounds.height
 
         return CGFloat(ceilf(Float(labelHeight)))
@@ -407,7 +407,6 @@ open class AcknowListViewController: UITableViewController {
         let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
         let navigationController = self.navigationController {
                 let viewController = AcknowViewController(acknowledgement: acknowledgement)
-                viewController.edgesForExtendedLayout = []
                 navigationController.pushViewController(viewController, animated: true)
         }
     }
