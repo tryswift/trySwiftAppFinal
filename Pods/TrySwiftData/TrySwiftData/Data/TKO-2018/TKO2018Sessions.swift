@@ -563,7 +563,7 @@ public let tko2018Sessions: [String : Session] = [
         session.titleJP = "Open Source Swift"
         session.imageAssetName = "opensource.png"
         session.presentation = tko2018Presentations["open-source-workshop"]
-        session.venue = tko2018Venues["casareal"]
+        session.venue = tko2018Venues["line"]
         return session
     }(),
     //---------------------------------------------------------
