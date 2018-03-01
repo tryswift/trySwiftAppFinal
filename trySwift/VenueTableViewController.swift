@@ -67,7 +67,7 @@ extension VenueTableViewController {
             return cell
         case .map:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as MapTableViewCell
-            cell.configure(withAddress: venue.address)
+            cell.configure(withAddress: venue.address, delegate: self)
             return cell
         case .twitter:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TwitterFollowTableViewCell
