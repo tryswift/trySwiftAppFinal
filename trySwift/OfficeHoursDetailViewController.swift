@@ -47,7 +47,7 @@ extension OfficeHoursDetailViewController {
             return cell
         case .speakerInfo:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SpeakerTableViewCell
-            cell.configure(withSpeaker: speaker, selectionEnabled: false, accessoryEnabled: false)
+            cell.configure(withSpeaker: speaker, selectionEnabled: false, accessoryEnabled: false, delegate: self)
             return cell
         case .bio:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell

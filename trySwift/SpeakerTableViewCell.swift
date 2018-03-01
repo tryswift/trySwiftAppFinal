@@ -14,22 +14,31 @@ class SpeakerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var speakerImageView: UIImageView!
     @IBOutlet weak var speakerNameLabel: UILabel!
-    @IBOutlet weak var speakerTwitterLabel: UILabel!
-    
+    @IBOutlet weak var speakerTwitterButton: UIButton!
+
+    fileprivate var speaker: Speaker?
+    fileprivate weak var delegate: TwitterFollowDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        speakerTwitterLabel.textColor = .trySwiftAccentColor()
+        speakerTwitterButton.setTitleColor(.trySwiftAccentColor(), for: .normal)
     }
     
-    func configure(withSpeaker speaker: Speaker, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {
 
+    @IBAction func speakerTwitterButtonDidTap(_ sender: Any) {
+        guard let speaker = speaker else {
+          assertionFailure("Speaker is not set")
+          return
+        }
+        self.delegate?.followUser(speaker.twitter)
+    }
+
+    func configure(withSpeaker speaker: Speaker, selectionEnabled: Bool = true, accessoryEnabled: Bool = true, delegate: TwitterFollowDelegate) {
         let scale = UIScreen.main.scale
         let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
         speakerImageView.kf.setImage(with: speaker.imageURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
         speakerNameLabel.text = speaker.localizedName
-        speakerTwitterLabel.text = "@\(speaker.twitter)"
-        
+        speakerTwitterButton.setTitle("@\(speaker.twitter)", for: .normal)
         if !selectionEnabled {
             selectionStyle = .none
         }
@@ -40,5 +49,8 @@ class SpeakerTableViewCell: UITableViewCell {
         
         setNeedsUpdateConstraints()
         layoutIfNeeded()
+
+        self.speaker = speaker
+        self.delegate = delegate
     }
 }
