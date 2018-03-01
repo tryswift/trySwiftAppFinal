@@ -11,20 +11,20 @@ import SafariServices
 import MessageUI
 
 extension UIViewController: SFSafariViewControllerDelegate {
-    
+
     func openSafariViewController(withURL url: URL) {
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self
-        present(safariViewController, animated: true, completion: nil)
+        present(safariViewController, animated: true)
     }
-    
+
     public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
 }
 
 extension UIViewController: TwitterFollowDelegate {
-    
+
     func followUser(_ username: String) {
         var applicationOpened = false
         let application = UIApplication.shared
@@ -35,7 +35,7 @@ extension UIViewController: TwitterFollowDelegate {
                 break
             }
         }
-        
+
         if !applicationOpened {
             if let twitterURL = URL(string: "http://twitter.com/\(username)") {
                 openSafariViewController(withURL: twitterURL)
@@ -45,7 +45,7 @@ extension UIViewController: TwitterFollowDelegate {
 }
 
 extension UIViewController: MFMailComposeViewControllerDelegate {
-    
+
     func sendMail(withConfiguration configuration: MailConfiguration) {
         if MFMailComposeViewController.canSendMail() {
             let mailViewController: MFMailComposeViewController = {
@@ -56,16 +56,16 @@ extension UIViewController: MFMailComposeViewControllerDelegate {
                 mailViewController.navigationBar.tintColor = .white
                 return mailViewController
             }()
-            
-            present(mailViewController, animated: true, completion: nil)
+
+            present(mailViewController, animated: true)
         } else {
             let alert = UIAlertController(title: "Could not send mail", message: "Please reach out to us via \(configuration.recipients.first ?? "")", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
     }
-    
+
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
 }
