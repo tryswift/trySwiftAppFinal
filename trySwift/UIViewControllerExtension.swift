@@ -37,7 +37,7 @@ extension UIViewController: TwitterFollowDelegate {
         }
         
         if !applicationOpened {
-            if let twitterURL = URL(string: "http://twitter.com/\(username)") {
+            if let twitterURL = URL(string: "https://twitter.com/\(username)") {
                 openSafariViewController(withURL: twitterURL)
             }
         }
