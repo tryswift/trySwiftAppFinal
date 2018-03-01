@@ -566,6 +566,16 @@ public let tko2018Sponsors: [String : Sponsor] = [
         sponsor.priority = 62
         return sponsor
     }(),
+    "crashacademy" : {
+        let sponsor = Sponsor()
+        sponsor.name = "crash.academy"
+        sponsor.url = "https://crash.academy"
+        sponsor.displayURL = "crash.academy"
+        sponsor.logoAssetName = "crashAcademy.png"
+        sponsor.level = .event
+        sponsor.priority = 70
+        return sponsor
+    }(),
     
     // Individual
     "daisuke_nagata" : {

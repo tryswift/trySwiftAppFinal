@@ -18,6 +18,8 @@ public let tko2018Venues: [String : Venue] = [
         venue.website = "https://www.bellesalle.co.jp/shisetsu/shinjuku/bs_shinjukugrand"
         venue.logoAssetName = "hallA.jpg"
         venue.type = .conference
+        venue.wifiNetworkName = "tryswift"
+        venue.wifiPassword = "iloveswift"
         return venue
     }(),
     "casareal" : {

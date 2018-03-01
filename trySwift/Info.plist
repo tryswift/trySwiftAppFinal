@@ -62,8 +62,6 @@
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-		<string>armv7s</string>
-		<string>arm64</string>
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarStyle</key>
