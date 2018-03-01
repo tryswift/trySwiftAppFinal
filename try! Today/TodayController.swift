@@ -48,12 +48,12 @@ class TodayController: UIViewController, NCWidgetProviding {
 
     private var firstSessionBlock: SessionBlock? {
         let sessionBlocks = SessionBlock.all
-        return sessionBlocks.sorted { $0.startTime > $1.startTime }.first
+        return sessionBlocks.sorted { $0.startTime < $1.startTime }.first
     }
 
     private var lastSessionBlock: SessionBlock? {
         let sessionBlocks = SessionBlock.all
-        return sessionBlocks.sorted { $0.startTime < $1.startTime }.first
+        return sessionBlocks.sorted { $0.startTime > $1.startTime }.first
     }
 
     lazy var sessionDateFormatter: DateFormatter = {
