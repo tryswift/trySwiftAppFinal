@@ -30,8 +30,6 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         buttonBarView.backgroundColor = .white
         settings.style.selectedBarBackgroundColor = .white
         buttonBarView.selectedBar.backgroundColor = .trySwiftAccentColor()
-        
-        tabBarController?.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -83,19 +81,3 @@ private extension ScheduleViewController {
     }
 }
 
-extension ScheduleViewController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        guard
-            tabBarController.selectedViewController === viewController,
-            navigationController?.viewControllers.last === self
-            else { return true }
-
-        guard
-            let index = moveToCorrectDate(animated: true),
-            let controller = viewControllers[index] as? SessionsTableViewController
-            else { return true }
-        controller.scrollToCurrentSession(animated: true)
-
-        return true
-    }
-}

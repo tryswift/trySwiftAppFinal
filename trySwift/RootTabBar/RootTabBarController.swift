@@ -15,18 +15,25 @@ class RootTabBarController: UITabBarController, UITabBarControllerDelegate {
   }
 
   func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-    if let splitViewController = viewController as? UISplitViewController {
-      if let navigationController = splitViewController.viewControllers.last as? UINavigationController {
-        if navigationController.viewControllers.count > 1 {
-          navigationController.popViewController(animated: true)
+    guard
+      let splitViewController = viewController as? UISplitViewController,
+      let navigationController = splitViewController.viewControllers.last as? UINavigationController
+      else {
+        return
+    }
+
+    // if several view controllers are in the stack, pop to the root
+    if navigationController.viewControllers.count > 1 {
+      navigationController.popToRootViewController(animated: true)
+    } else {
+      // if there's at least one view controller in the stack (which there always should be)
+      if let firstController = navigationController.viewControllers.first {
+        // we either delegate to the controller since it knows better how to scroll to the top
+        if let scrollableToTop = firstController as? ScrollableToTop {
+          scrollableToTop.scrollAfterTabTap()
+        // or we find the topmost scroll view and scroll it to the top
         } else {
-          if let firstController = navigationController.viewControllers.first {
-            if let scrollableToTop = firstController as? ScrollableToTop {
-              scrollableToTop.scrollAfterTabTap()
-            } else {
-              firstController.view.findScrollSubview()?.setContentOffset(.zero, animated: true)
-            }
-          }
+          firstController.view.findScrollSubview()?.setContentOffset(.zero, animated: true)
         }
       }
     }
