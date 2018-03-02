@@ -47,7 +47,6 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         return days.map { SessionsTableViewController(conferenceDay: $0, scheduleViewController: self) }
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,6 +56,13 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
 
          navigationVC.pushViewController(sessionVC, animated: true)
     }
+}
+
+extension ScheduleViewController: ScrollableToTop {
+  func scrollAfterTabTap() {
+    let controller = viewControllers[currentIndex] as! SessionsTableViewController
+    controller.scrollAfterTabTap()
+  }
 }
 
 private extension ScheduleViewController {

@@ -10,6 +10,7 @@ import UIKit
 import XLPagerTabStrip
 import TrySwiftData
 
+
 class SessionsTableViewController: UITableViewController {
     private lazy var needsToScrollToCurrentSession = Calendar.current.isDateInToday(conferenceDay.date)
 
@@ -33,15 +34,15 @@ class SessionsTableViewController: UITableViewController {
         super.viewDidLoad()
 
         configureTableView()
-        
+
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: tableView)
         }
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    
+
         if needsToScrollToCurrentSession {
             needsToScrollToCurrentSession = false
             scrollToCurrentSession(animated: false)
@@ -55,7 +56,7 @@ class SessionsTableViewController: UITableViewController {
             let isCollapsed = splitViewController?.isCollapsed,
             !isCollapsed,
             !didShowDetail else { return }
-        
+
         didShowDetail = true
         scheduleViewController?.performSegue(withIdentifier: sessionDetailsSegue, sender: firstSelectableSessionVC)
     }
@@ -63,24 +64,24 @@ class SessionsTableViewController: UITableViewController {
 
 // MARK: - Table view data source
 extension SessionsTableViewController {
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return conferenceDay.sessionBlocks.count
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return conferenceDay.sessionBlocks[section].sessions.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SessionTableViewCell
-        
+
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
         cell.configure(withSession: session)
-        
+
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let session = conferenceDay.sessionBlocks[section]
         let sessionDateFormatter = DateFormatter.sessionDateFormatter
@@ -108,7 +109,7 @@ extension SessionsTableViewController: IndicatorInfoProvider {
 }
 
 extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
-    
+
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
         // This will show the cell clearly and blur the rest of the screen for our peek.
@@ -116,25 +117,25 @@ extension SessionsTableViewController: UIViewControllerPreviewingDelegate {
         let session = conferenceDay.sessionBlocks[indexPath.section].sessions[indexPath.row]
         return viewController(for: session)
     }
-    
+
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         scheduleViewController?.performSegue(withIdentifier: sessionDetailsSegue, sender: viewControllerToCommit)
     }
 }
 
 extension SessionsTableViewController {
-    
+
     func configureTableView() {
-        
+
         tableView.register(SessionTableViewCell.self)
-        
+
         tableView.estimatedRowHeight = 160
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
 private extension SessionsTableViewController {
-    
+
     func viewController(for session: Session) -> UIViewController? {
         switch session.type {
         case .talk, .lightningTalk:
@@ -174,10 +175,10 @@ private extension SessionsTableViewController {
         default:
             return nil
         }
-        
+
         return nil
     }
-    
+
     func sessionDetails(_ presentation: Presentation, session: Session) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let sessionDetailsVC = storyboard.instantiateViewController(withIdentifier: String(describing: SessionDetailsViewController.self)) as! SessionDetailsViewController
@@ -185,28 +186,28 @@ private extension SessionsTableViewController {
         sessionDetailsVC.presentation = presentation
         return sessionDetailsVC
     }
-    
+
     func officeHourDetails(_ speaker: Speaker, session: Session) -> UIViewController {
         let officeHoursVC = OfficeHoursDetailViewController()
         officeHoursVC.speaker = speaker
         officeHoursVC.session = session
         return officeHoursVC
     }
-    
+
     func webDisplay(_ event: Event) -> UIViewController {
         let webViewController = WebDisplayViewController()
         webViewController.url = URL(string: event.website!)
         webViewController.displayTitle = event.title
         return webViewController
     }
-    
+
     func webDisplay(_ sponsor: Sponsor) -> UIViewController {
         let webViewController = WebDisplayViewController()
         webViewController.url = URL(string: sponsor.url!)
         webViewController.displayTitle = sponsor.name
         return webViewController
     }
-    
+
     func venueDetails(_ venue: Venue) -> UIViewController {
         let venueDetailsVC = VenueTableViewController(venue: venue)
         venueDetailsVC.tableView.contentInset = UIEdgeInsets(top: 80,left: 0,bottom: 0,right: 0)
@@ -224,7 +225,7 @@ private extension SessionsTableViewController {
 }
 
 extension SessionsTableViewController {
-    
+
     func scrollToCurrentSession(animated: Bool) {
         let secondsFromGMT = TimeZone.current.secondsFromGMT()
         guard
@@ -232,7 +233,13 @@ extension SessionsTableViewController {
             let section = conferenceDay.sessionBlocks.index(where: { date < $0.endTime }),
             !conferenceDay.sessionBlocks[section].sessions.isEmpty
             else { return }
-        
+
         tableView.scrollToRow(at: IndexPath(row: 0, section: section), at: .top, animated: animated)
     }
+}
+
+extension SessionsTableViewController: ScrollableToTop {
+  func scrollAfterTabTap() {
+    scrollToCurrentSession(animated: true)
+  }
 }

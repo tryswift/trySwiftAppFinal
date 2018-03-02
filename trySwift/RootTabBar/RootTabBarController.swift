@@ -20,18 +20,21 @@ class RootTabBarController: UITabBarController, UITabBarControllerDelegate {
         if navigationController.viewControllers.count > 1 {
           navigationController.popViewController(animated: true)
         } else {
-          navigationController.viewControllers.first?.scrollToTop()
+          if let firstController = navigationController.viewControllers.first {
+            if let scrollableToTop = firstController as? ScrollableToTop {
+              scrollableToTop.scrollAfterTabTap()
+            } else {
+              firstController.view.findScrollSubview()?.setContentOffset(.zero, animated: true)
+            }
+          }
         }
       }
     }
   }
 }
 
-private extension UIViewController {
-  func scrollToTop() {
-    let scrollView = view.findScrollSubview()
-    scrollView?.setContentOffset(.zero, animated: true)
-  }
+protocol ScrollableToTop {
+  func scrollAfterTabTap()
 }
 
 private extension UIView {
