@@ -72,7 +72,7 @@ extension SpeakersViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SpeakerTableViewCell
         
-        cell.configure(withSpeaker: speakers[indexPath.row], delegate: self)
+        cell.configure(withSpeaker: speakers[indexPath.row], delegate: self, speakerImageDelegate: nil)
         
         return cell
     }
