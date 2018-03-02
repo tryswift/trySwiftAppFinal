@@ -11,8 +11,9 @@ import TrySwiftData
 import Timepiece
 
 class ScheduleViewController: ButtonBarPagerTabStripViewController {
+    private var hasMovedToTodaysDate = false
 
-    let days = ConferenceDay.all
+    private let days = ConferenceDay.all
     
     fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
 
@@ -29,8 +30,17 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         buttonBarView.backgroundColor = .white
         settings.style.selectedBarBackgroundColor = .white
         buttonBarView.selectedBar.backgroundColor = .trySwiftAccentColor()
-        
-        moveToCorrectDate()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // sadly not isBeingPresented nor isMovingToParentViewController
+        // is not working here so we have to store the state locally
+        if !hasMovedToTodaysDate {
+            hasMovedToTodaysDate = true
+            moveToCorrectDate()
+        }
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -42,21 +52,21 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         guard segue.identifier == sessionDetailsSegue,
             let navigationVC = segue.destination as? UINavigationController,
             let sessionVC = sender as? UIViewController else { return }
-        
+
          navigationVC.pushViewController(sessionVC, animated: true)
     }
 }
 
 private extension ScheduleViewController {
     
-    func moveToCorrectDate() {
-        if days.count > 1 {
-            let today = Date.today()
-            
-            let day2 = days[1].date
-            if today == day2 {
-                moveToViewController(at: 1)
-            }
-        }
+  func moveToCorrectDate() {
+    if days.count > 1 {
+      let calendar = NSCalendar.current
+      if let todaysIndex = days.enumerated()
+        .first(where:{ calendar.isDateInToday($0.element.date) })
+        .map({$0.offset}) {
+        moveToViewController(at: todaysIndex, animated: false)
+      }
     }
+  }
 }
