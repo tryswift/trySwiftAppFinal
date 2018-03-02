@@ -30,6 +30,8 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         buttonBarView.backgroundColor = .white
         settings.style.selectedBarBackgroundColor = .white
         buttonBarView.selectedBar.backgroundColor = .trySwiftAccentColor()
+        
+        tabBarController?.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -59,14 +61,35 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
 
 private extension ScheduleViewController {
     
-  func moveToCorrectDate() {
-    if days.count > 1 {
-      let calendar = NSCalendar.current
-      if let todaysIndex = days.enumerated()
-        .first(where:{ calendar.isDateInToday($0.element.date) })
-        .map({$0.offset}) {
-        moveToViewController(at: todaysIndex, animated: false)
-      }
+    @discardableResult
+    func moveToCorrectDate(animated: Bool = false) -> Int? {
+        if days.count > 1 {
+            let calendar = Calendar.current
+            if let todaysIndex = days.enumerated()
+                .first(where:{ calendar.isDateInToday($0.element.date) })
+                .map({$0.offset}) {
+                moveToViewController(at: todaysIndex, animated: animated)
+                return todaysIndex
+            }
+        }
+        
+        return .none
     }
-  }
+}
+
+extension ScheduleViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        guard
+            tabBarController.selectedViewController === viewController,
+            navigationController?.viewControllers.last === self
+            else { return true }
+
+        guard
+            let index = moveToCorrectDate(animated: true),
+            let controller = viewControllers[index] as? SessionsTableViewController
+            else { return true }
+        controller.scrollToCurrentSession(animated: true)
+
+        return true
+    }
 }
