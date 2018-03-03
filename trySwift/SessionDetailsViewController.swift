@@ -49,7 +49,7 @@ extension SessionDetailsViewController {
             return cell
         case .speakerInfo:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SpeakerTableViewCell
-            cell.configure(withSpeaker: presentation.speaker!, selectionEnabled: false, accessoryEnabled: false)
+            cell.configure(withSpeaker: presentation.speaker!, selectionEnabled: false, accessoryEnabled: false, delegate: self)
             return cell
         case .summary:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell

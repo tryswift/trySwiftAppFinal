@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol TwitterFollowDelegate: class {
-    func followUser(_ username: String)
-}
-
 class TwitterFollowTableViewCell: UITableViewCell {
     
     @IBOutlet weak var followButton: UIButton!
