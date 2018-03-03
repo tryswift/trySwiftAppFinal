@@ -11,7 +11,8 @@ import XLPagerTabStrip
 import TrySwiftData
 
 class SessionsTableViewController: UITableViewController {
-    
+    private lazy var needsToScrollToCurrentSession = Calendar.current.isDateInToday(conferenceDay.date)
+
     var conferenceDay: ConferenceDay
     weak var scheduleViewController: ScheduleViewController?
 
@@ -40,7 +41,12 @@ class SessionsTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+    
+        if needsToScrollToCurrentSession {
+            needsToScrollToCurrentSession = false
+            scrollToCurrentSession(animated: false)
+        }
+
         guard
             let firstSelectableSession = conferenceDay.sessionBlocks
                 .flatMap({ $0.sessions })
@@ -214,5 +220,19 @@ private extension SessionsTableViewController {
         workshopDetailVC.presentation = presentation
         workshopDetailVC.venue = venue
         return workshopDetailVC
+    }
+}
+
+extension SessionsTableViewController {
+    
+    func scrollToCurrentSession(animated: Bool) {
+        let secondsFromGMT = TimeZone.current.secondsFromGMT()
+        guard
+            let date = Date().changed(second: secondsFromGMT),
+            let section = conferenceDay.sessionBlocks.index(where: { date < $0.endTime }),
+            !conferenceDay.sessionBlocks[section].sessions.isEmpty
+            else { return }
+        
+        tableView.scrollToRow(at: IndexPath(row: 0, section: section), at: .top, animated: animated)
     }
 }
