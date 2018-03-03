@@ -10,6 +10,10 @@ import UIKit
 import Kingfisher
 import TrySwiftData
 
+protocol SpeakerImageDelegate: class {
+    func didTapSpeakerImage(forSpeaker speaker: Speaker)
+}
+
 class SpeakerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var speakerImageView: UIImageView!
@@ -18,10 +22,14 @@ class SpeakerTableViewCell: UITableViewCell {
 
     fileprivate var speaker: Speaker?
     fileprivate weak var delegate: TwitterFollowDelegate?
+    fileprivate weak var speakerImageDelegate: SpeakerImageDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         speakerTwitterButton.setTitleColor(.trySwiftAccentColor(), for: .normal)
+        speakerImageView.addGestureRecognizer(
+          UITapGestureRecognizer(target: self, action: #selector(didTapSpeakerImage))
+        )
     }
     
 
@@ -33,7 +41,7 @@ class SpeakerTableViewCell: UITableViewCell {
         self.delegate?.followUser(speaker.twitter)
     }
 
-    func configure(withSpeaker speaker: Speaker, selectionEnabled: Bool = true, accessoryEnabled: Bool = true, delegate: TwitterFollowDelegate) {
+    func configure(withSpeaker speaker: Speaker, selectionEnabled: Bool = true, accessoryEnabled: Bool = true, delegate: TwitterFollowDelegate, speakerImageDelegate: SpeakerImageDelegate?) {
         let scale = UIScreen.main.scale
         let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
         speakerImageView.kf.setImage(with: speaker.imageURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
@@ -52,5 +60,12 @@ class SpeakerTableViewCell: UITableViewCell {
 
         self.speaker = speaker
         self.delegate = delegate
+        self.speakerImageDelegate = speakerImageDelegate
+    }
+
+    @objc
+    func didTapSpeakerImage() {
+          guard let speaker = speaker else { return }
+          self.speakerImageDelegate?.didTapSpeakerImage(forSpeaker: speaker)
     }
 }
