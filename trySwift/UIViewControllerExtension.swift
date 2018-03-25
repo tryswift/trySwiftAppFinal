@@ -15,11 +15,7 @@ extension UIViewController: SFSafariViewControllerDelegate {
     func openSafariViewController(withURL url: URL) {
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self
-        present(safariViewController, animated: true, completion: nil)
-    }
-    
-    public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        dismiss(animated: true, completion: nil)
+        present(safariViewController, animated: true)
     }
 }
 
@@ -36,15 +32,17 @@ extension UIViewController: MFMailComposeViewControllerDelegate {
                 return mailViewController
             }()
             
-            present(mailViewController, animated: true, completion: nil)
+            present(mailViewController, animated: true)
         } else {
-            let alert = UIAlertController(title: "Could not send mail", message: "Please reach out to us via \(configuration.recipients.first ?? "")", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            let format = "Please reach out to us via %@."
+            let message = String.localizedStringWithFormat(format, configuration.recipients.first ?? "email".localized())
+            let alert = UIAlertController(title: "Could not send email".localized(), message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK".localized(), style: .default))
+            present(alert, animated: true)
         }
     }
     
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
 }
