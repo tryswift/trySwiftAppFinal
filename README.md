@@ -1,7 +1,7 @@
 # trySwiftApp
 try! Swift Conference App
 
-<p align="center"><a href="https://itunes.apple.com/us/app/try/id1083944488"><img src="Assets/app-store-badge.png" width="250" /></a></p>
+<a href="https://itunes.apple.com/us/app/try/id1083944488"><img src="Assets/app-store-badge.png" width="250" /></a>
 
 ## try! Swift Tokyo 2017 presentations
 You can find an overview of speakers and their presentations, including slides and video [here](PRESENTATIONS.md). If you see slides or videos get posted, please create a [pull request][pr] to add these, or let us know by filing an [issue][issue].
