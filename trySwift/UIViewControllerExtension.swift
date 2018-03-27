@@ -35,12 +35,13 @@ extension UIViewController: MFMailComposeViewControllerDelegate {
                 mailViewController.navigationBar.tintColor = .white
                 return mailViewController
             }()
-
             present(mailViewController, animated: true)
         } else {
-            let alert = UIAlertController(title: "Could not send mail", message: "Please reach out to us via \(configuration.recipients.first ?? "")", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            let format = "Please reach out to us via %@."
+            let message = String.localizedStringWithFormat(format, configuration.recipients.first ?? "email".localized())
+            let alert = UIAlertController(title: "Could not send email".localized(), message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK".localized(), style: .default))
+            present(alert, animated: true)
         }
     }
 

@@ -24,7 +24,7 @@ class WebDisplayViewController: UIViewController {
         return webView
     }()
     
-    var showNetworkActivityIndicator: Bool = false {
+    var showNetworkActivityIndicator = false {
         didSet {
             if showNetworkActivityIndicator {
                 activityIndicator?.startAnimating()
