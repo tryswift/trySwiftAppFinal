@@ -187,7 +187,7 @@ private extension MoreTableViewController {
         let path = Bundle.main.path(forResource: "Pods-trySwift-acknowledgements", ofType: "plist")
         let acknowledgementesViewController = AcknowListViewController(acknowledgementsPlistPath: path)
         acknowledgementesViewController.edgesForExtendedLayout = []
-        acknowledgementesViewController.headerText = "We ❤️ Open Source Software"
+        acknowledgementesViewController.headerText = "We ❤️ Open Source Software".localized()
         
         performSegue(withIdentifier: moreDetailSegue, sender: acknowledgementesViewController)
     }

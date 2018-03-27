@@ -87,7 +87,7 @@ extension SpeakersViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
-        //This will show the cell clearly and blur the rest of the screen for our peek.
+        // This will show the cell clearly and blur the rest of the screen for our peek.
         previewingContext.sourceRect = tableView.rectForRow(at: indexPath)
         let speaker = speakers[indexPath.row]
         forceTouchedSpeaker = speaker
