@@ -15,6 +15,7 @@ enum Twitter {
     static func urls(forUsername username: String) -> [String] {
         return [
             "twitter://user?screen_name=\(username)", // Twitter
+            "twitterrific://current/profile?screen_name=\(username)", // Twitterrific
             "tweetbot://\(username)/user_profile/\(username)", // TweetBot
             "echofon://user_timeline?\(username)", // Echofon
             "twit://user?screen_name=\(username)", // Twittelator Pro

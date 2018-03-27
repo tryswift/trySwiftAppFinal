@@ -43,7 +43,7 @@ extension SpeakerDetailViewController {
         switch SpeakerDetail(rawValue: indexPath.row)! {
         case .header:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SpeakerTableViewCell
-            cell.configure(withSpeaker: speaker, selectionEnabled: false, accessoryEnabled: false)
+            cell.configure(withSpeaker: speaker, selectionEnabled: false, accessoryEnabled: false, delegate: self, speakerImageDelegate: nil)
             return cell
         case .bio:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell

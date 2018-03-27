@@ -47,7 +47,7 @@ extension OfficeHoursDetailViewController {
             return cell
         case .speakerInfo:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SpeakerTableViewCell
-            cell.configure(withSpeaker: speaker, selectionEnabled: false, accessoryEnabled: false)
+            cell.configure(withSpeaker: speaker, selectionEnabled: false, accessoryEnabled: false, delegate: self, speakerImageDelegate: self)
             return cell
         case .bio:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as TextTableViewCell
@@ -73,6 +73,14 @@ extension OfficeHoursDetailViewController {
         tableView.estimatedRowHeight = 83
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.separatorStyle = .none
+    }
+}
+
+extension OfficeHoursDetailViewController: SpeakerImageDelegate {
+    func didTapSpeakerImage(forSpeaker speaker: Speaker) {
+        let vc = SpeakerDetailViewController()
+        vc.speaker = speaker
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
