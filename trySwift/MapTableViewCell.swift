@@ -15,6 +15,7 @@ class MapTableViewCell: UITableViewCell {
 
     private weak var placemark: MKPlacemark?
     private weak var delegate: OpenInMapsDelegate?
+    private lazy var geocoder = CLGeocoder()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,9 +36,7 @@ class MapTableViewCell: UITableViewCell {
     }
 
     func configure(withAddress address: String, delegate: OpenInMapsDelegate) {
-        let location = address
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(location) { [weak self] placemarks, error in
+        geocoder.geocodeAddressString(address) { [weak self] placemarks, error in
             guard let placemark = placemarks?.first, let location = placemark.location else { return }
             let mark = MKPlacemark(placemark: placemark)
             let viewRegion = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
