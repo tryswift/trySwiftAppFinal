@@ -11,16 +11,20 @@ import SafariServices
 import MessageUI
 
 extension UIViewController: SFSafariViewControllerDelegate {
-    
+
     func openSafariViewController(withURL url: URL) {
         let safariViewController = SFSafariViewController(url: url)
         safariViewController.delegate = self
         present(safariViewController, animated: true)
     }
+
+    public func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        dismiss(animated: true)
+    }
 }
 
 extension UIViewController: MFMailComposeViewControllerDelegate {
-    
+
     func sendMail(withConfiguration configuration: MailConfiguration) {
         if MFMailComposeViewController.canSendMail() {
             let mailViewController: MFMailComposeViewController = {
@@ -31,7 +35,6 @@ extension UIViewController: MFMailComposeViewControllerDelegate {
                 mailViewController.navigationBar.tintColor = .white
                 return mailViewController
             }()
-            
             present(mailViewController, animated: true)
         } else {
             let format = "Please reach out to us via %@."
@@ -41,7 +44,7 @@ extension UIViewController: MFMailComposeViewControllerDelegate {
             present(alert, animated: true)
         }
     }
-    
+
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         dismiss(animated: true)
     }

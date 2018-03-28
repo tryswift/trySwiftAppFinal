@@ -12,22 +12,38 @@ import MapKit
 class MapTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mapView: MKMapView!
+
+    private weak var placemark: MKPlacemark?
+    private weak var delegate: OpenInMapsDelegate?
+    private lazy var geocoder = CLGeocoder()
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onTapGesture(_:))))
+        self.contentView.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(onLongPressGesture(_:))))
     }
     
-    func configure(withAddress address: String) {
-        let location = address
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(location) { [weak self] placemarks, error in
+    @objc func onTapGesture(_ sender: Any) {
+        if let placemark = placemark {
+            self.delegate?.openInMaps(placemark: placemark, allowCopy: false)
+        }
+    }
+  
+    @objc func onLongPressGesture(_ sender: Any) {
+        if let placemark = placemark {
+            self.delegate?.openInMaps(placemark: placemark, allowCopy: true)
+        }
+    }
+
+    func configure(withAddress address: String, delegate: OpenInMapsDelegate) {
+        geocoder.geocodeAddressString(address) { [weak self] placemarks, error in
             guard let placemark = placemarks?.first, let location = placemark.location else { return }
             let mark = MKPlacemark(placemark: placemark)
             let viewRegion = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
             self?.mapView.setRegion(viewRegion, animated: true)
-            self?.mapView.addAnnotation(mark)
+            self?.mapView.addAnnotation(mark)          
+            self?.placemark = mark
         }
-
+        self.delegate = delegate
     }
-    
 }

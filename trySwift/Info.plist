@@ -49,6 +49,7 @@
 		<string>x-seesmic</string>
 		<string>twitter</string>
 		<string>slack</string>
+		<string>comgooglemaps</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
