@@ -19,6 +19,7 @@ class VenuesViewController: ButtonBarPagerTabStripViewController {
         edgesForExtendedLayout = []
 
         title = "Venues".localized()
+        navigationController?.view.backgroundColor = .white
 
         buttonBarView.register(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         buttonBarView.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
