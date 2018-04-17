@@ -36,15 +36,15 @@ private extension AppDelegate {
 
     func configureStyling() {
                 
-        window?.tintColor = UIColor.trySwiftNavigationBarColor()
+        window?.tintColor = UIColor.trySwiftNavigationBarColor
         
         UINavigationBar.appearance().titleTextAttributes = [
             NSAttributedStringKey.foregroundColor: UIColor.white,
             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)
         ]
         
-        UINavigationBar.appearance().backgroundColor = UIColor.trySwiftNavigationBarColor()
-        UINavigationBar.appearance().barTintColor = UIColor.trySwiftNavigationBarColor()
+        UINavigationBar.appearance().backgroundColor = UIColor.trySwiftNavigationBarColor
+        UINavigationBar.appearance().barTintColor = UIColor.trySwiftNavigationBarColor
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barStyle = .blackTranslucent

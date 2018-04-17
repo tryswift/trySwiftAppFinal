@@ -37,6 +37,24 @@ class MoreTableViewController: UITableViewController {
         case open
     }
     
+    
+    
+    lazy var webViewController: WebDisplayViewController = {
+        let webViewController = WebDisplayViewController()
+        webViewController.url = URL(string: conference.codeOfConductURL)!
+        webViewController.displayTitle = "Code of Conduct".localized()
+        return webViewController
+    }()
+    
+    
+    lazy var acknowledgement: AcknowListViewController = {
+        let path = Bundle.main.path(forResource: "Pods-trySwift-acknowledgements", ofType: "plist")
+        let vc = AcknowListViewController(acknowledgementsPlistPath: path)
+        vc.edgesForExtendedLayout = []
+        vc.headerText = "We ❤️ Open Source Software".localized()
+        return vc
+    }()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -56,7 +74,7 @@ class MoreTableViewController: UITableViewController {
             !didShowDetail else { return }
         
         didShowDetail = true
-        showAbout()
+        navigateTo(AboutTableViewController.self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -124,24 +142,27 @@ extension MoreTableViewController {
         return cell
     }
     
+  
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch MoreSection(rawValue: indexPath.section)! {
         case .eventDetails:
             switch EventDetailsRow(rawValue: indexPath.row)! {
             case .about:
-                showAbout()
+                navigateTo(AboutTableViewController.self)
             case .venue:
-                showVenues()
+                navigateTo(VenuesViewController.self)
             case .codeOfConduct:
-                showCodeOfConduct()
+                navigateTo({webViewController})
             }
         case .acknowledgements:
             switch AcknowledgementsRow(rawValue: indexPath.row)! {
             case .organizers:
-                showOrganizers()
+                navigateTo(OrganizersTableViewController.self)
             case .libraries:
-                showLibraries()
+                navigateTo ({acknowledgement})
             }
         case .feedback:
             switch FeedbackRow(rawValue: indexPath.row)! {
@@ -161,35 +182,12 @@ extension MoreTableViewController {
 
 private extension MoreTableViewController {
     
-    func showAbout() {
-        let aboutViewController = AboutTableViewController()
-        performSegue(withIdentifier: moreDetailSegue, sender: aboutViewController)
+    func navigateTo<T: UIViewController>(_ controller: () -> T, id: String = "moreDetailSegue"){
+        performSegue(withIdentifier: id, sender: controller())
     }
-    
-    func showVenues() {
-        let venueController = VenuesViewController()
-        performSegue(withIdentifier: moreDetailSegue, sender: venueController)
-    }
-    
-    func showCodeOfConduct() {
-        let webViewController = WebDisplayViewController()
-        webViewController.url = URL(string: conference.codeOfConductURL)!
-        webViewController.displayTitle = "Code of Conduct".localized()
-        performSegue(withIdentifier: moreDetailSegue, sender: webViewController)
-    }
-    
-    func showOrganizers() {
-        let organizerViewController = OrganizersTableViewController()
-        performSegue(withIdentifier: moreDetailSegue, sender: organizerViewController)
-    }
-    
-    func showLibraries() {
-        let path = Bundle.main.path(forResource: "Pods-trySwift-acknowledgements", ofType: "plist")
-        let acknowledgementesViewController = AcknowListViewController(acknowledgementsPlistPath: path)
-        acknowledgementesViewController.edgesForExtendedLayout = []
-        acknowledgementesViewController.headerText = "We ❤️ Open Source Software".localized()
-        
-        performSegue(withIdentifier: moreDetailSegue, sender: acknowledgementesViewController)
+  
+    func navigateTo<T: UIViewController>(_ withType: T.Type, id: String = "moreDetailSegue"){
+        performSegue(withIdentifier: id, sender: T())
     }
     
     func showAppFeedback() {
