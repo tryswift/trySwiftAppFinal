@@ -29,7 +29,7 @@ class ScheduleViewController: ButtonBarPagerTabStripViewController {
         buttonBarView.register(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         buttonBarView.backgroundColor = .white
         settings.style.selectedBarBackgroundColor = .white
-        buttonBarView.selectedBar.backgroundColor = .trySwiftAccentColor()
+        buttonBarView.selectedBar.backgroundColor = .trySwiftAccentColor
         
         tabBarController?.delegate = self
     }

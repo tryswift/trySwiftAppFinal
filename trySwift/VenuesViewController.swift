@@ -23,7 +23,7 @@ class VenuesViewController: ButtonBarPagerTabStripViewController {
         buttonBarView.register(UINib(nibName: "NavTabButtonCell", bundle: nil), forCellWithReuseIdentifier: "Cell")
         buttonBarView.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
         settings.style.selectedBarBackgroundColor = .white
-        buttonBarView.selectedBar.backgroundColor = .trySwiftAccentColor()
+        buttonBarView.selectedBar.backgroundColor = .trySwiftAccentColor
     }
 
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

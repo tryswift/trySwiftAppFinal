@@ -26,7 +26,7 @@ class SpeakerTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        speakerTwitterButton.setTitleColor(.trySwiftAccentColor(), for: .normal)
+        speakerTwitterButton.setTitleColor(.trySwiftAccentColor, for: .normal)
         speakerImageView.addGestureRecognizer(
           UITapGestureRecognizer(target: self, action: #selector(didTapSpeakerImage))
         )

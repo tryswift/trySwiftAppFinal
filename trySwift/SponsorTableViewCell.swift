@@ -19,7 +19,7 @@ class SponsorTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        websiteLabel.textColor = .trySwiftAccentColor()
+        websiteLabel.textColor = .trySwiftAccentColor
     }
     
     func configure(withSponsor sponsor: Sponsor) {
