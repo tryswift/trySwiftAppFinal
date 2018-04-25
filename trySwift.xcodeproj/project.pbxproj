@@ -27,7 +27,6 @@
 		499CCFF21CC2E0F4007A5BBB /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */; };
 		49F7B2811E8475F900F09768 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F7B2801E8475F900F09768 /* SplitViewController.swift */; };
 		4D498DB1B98D4B496FDBB7AA /* Pods_try__Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2E9D5733A6E1B6E10AFEEF /* Pods_try__Extension.framework */; };
-		5017E21120828D3C007DAEE5 /* UIImage+Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5017E21020828D3C007DAEE5 /* UIImage+Downloader.swift */; };
 		5C39360020489EC900FA0D95 /* OpenInMapsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3935FF20489EC900FA0D95 /* OpenInMapsProtocol.swift */; };
 		5CDB20792048952A00C3E0D3 /* TwitterFollowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDB20782048952A00C3E0D3 /* TwitterFollowDelegate.swift */; };
 		7AD1E19C80B78BB08E3DF079 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620220ABCCCDF47FDAF48B67 /* Pods_trySwift.framework */; };
@@ -195,7 +194,6 @@
 		499BD6291D05910200E74061 /* Twitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
 		499CCFF11CC2E0F4007A5BBB /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		49F7B2801E8475F900F09768 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
-		5017E21020828D3C007DAEE5 /* UIImage+Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Downloader.swift"; sourceTree = "<group>"; };
 		58F81AD508535BD405F98215 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5C3935FF20489EC900FA0D95 /* OpenInMapsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenInMapsProtocol.swift; sourceTree = "<group>"; };
 		5CDB20782048952A00C3E0D3 /* TwitterFollowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterFollowDelegate.swift; sourceTree = "<group>"; };
@@ -602,7 +600,6 @@
 				49F7B2801E8475F900F09768 /* SplitViewController.swift */,
 				FA39E91B1C6C8D100074B6BE /* WebDisplayViewController.swift */,
 				FA39E91C1C6C8D100074B6BE /* WebDisplayViewController.xib */,
-				5017E21020828D3C007DAEE5 /* UIImage+Downloader.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -1198,7 +1195,6 @@
 				49F7B2811E8475F900F09768 /* SplitViewController.swift in Sources */,
 				FAFA15BC1C69D31C00FEA4EA /* AppDelegate.swift in Sources */,
 				FA65B5801C6D7B1900DCAF0B /* MoreTableViewController.swift in Sources */,
-				5017E21120828D3C007DAEE5 /* UIImage+Downloader.swift in Sources */,
 				FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */,
 				FA39E9161C6C83A40074B6BE /* SponsorTableViewCell.swift in Sources */,
 				FAA54F121D91305200EC9E80 /* NibLoadableView.swift in Sources */,

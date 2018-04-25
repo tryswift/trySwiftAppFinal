@@ -74,7 +74,7 @@ class MoreTableViewController: UITableViewController {
             !didShowDetail else { return }
         
         didShowDetail = true
-        navigateTo({AboutTableViewController()})
+        navigate(to: {AboutTableViewController()})
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -151,18 +151,18 @@ extension MoreTableViewController {
         case .eventDetails:
             switch EventDetailsRow(rawValue: indexPath.row)! {
             case .about:
-                navigateTo{AboutTableViewController()}
+                navigate(to: {AboutTableViewController()})
             case .venue:
-                navigateTo{VenuesViewController()}
+                navigate(to: {VenuesViewController()})
             case .codeOfConduct:
-                navigateTo{webViewController}
+                navigate(to: {webViewController})
             }
         case .acknowledgements:
             switch AcknowledgementsRow(rawValue: indexPath.row)! {
             case .organizers:
-                navigateTo{OrganizersTableViewController()}
+                navigate(to: {OrganizersTableViewController()})
             case .libraries:
-                navigateTo{acknowledgement}
+                navigate(to: {acknowledgement})
             }
         case .feedback:
             switch FeedbackRow(rawValue: indexPath.row)! {
@@ -182,9 +182,7 @@ extension MoreTableViewController {
 
 private extension MoreTableViewController {
     
-    
-    
-    func navigateTo<T: UIViewController>(id: String = "moreDetailSegue", _ controller: () -> T){
+    func navigate<T: UIViewController>(to controller: () -> T, id: String = "moreDetailSegue"){
         performSegue(withIdentifier: id, sender: controller())
     }
     

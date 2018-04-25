@@ -44,7 +44,7 @@ private extension AppDelegate {
         ]
         
         UINavigationBar.appearance().backgroundColor = UIColor.trySwiftNavigationBarColor
-        UINavigationBar.appearance().barTintColor = UIColor.trySwiftNavigationBarColor
+        UINavigationBar.appearance().barTintColor = .trySwiftNavigationBarColor
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().barStyle = .blackTranslucent
