@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 import TrySwiftData
 
 class SessionTableViewCell: UITableViewCell {
@@ -30,9 +31,6 @@ class SessionTableViewCell: UITableViewCell {
         sessionTitleLabel.clipsToBounds = false
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -46,7 +44,9 @@ class SessionTableViewCell: UITableViewCell {
         sessionTypeLabel.text = viewModel.shortDescription
         sessionLocationLabel.text = viewModel.location
 
-        sessionImageView.setImageWith(url: viewModel.imageURL)
+        let scale = UIScreen.main.scale
+        let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
+        sessionImageView.kf.setImage(with: viewModel.imageURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
     
         if viewModel.selectable {
             accessoryType = .disclosureIndicator
