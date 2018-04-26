@@ -74,7 +74,7 @@ class MoreTableViewController: UITableViewController {
             !didShowDetail else { return }
         
         didShowDetail = true
-        navigate(to: {AboutTableViewController()})
+        navigate(to: AboutTableViewController())
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -143,26 +143,24 @@ extension MoreTableViewController {
     }
     
   
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch MoreSection(rawValue: indexPath.section)! {
         case .eventDetails:
             switch EventDetailsRow(rawValue: indexPath.row)! {
             case .about:
-                navigate(to: {AboutTableViewController()})
+                navigate(to: AboutTableViewController())
             case .venue:
-                navigate(to: {VenuesViewController()})
+                navigate(to: VenuesViewController())
             case .codeOfConduct:
-                navigate(to: {webViewController})
+                navigate(to: webViewController)
             }
         case .acknowledgements:
             switch AcknowledgementsRow(rawValue: indexPath.row)! {
             case .organizers:
-                navigate(to: {OrganizersTableViewController()})
+                navigate(to: OrganizersTableViewController())
             case .libraries:
-                navigate(to: {acknowledgement})
+                navigate(to: acknowledgement)
             }
         case .feedback:
             switch FeedbackRow(rawValue: indexPath.row)! {
@@ -182,9 +180,11 @@ extension MoreTableViewController {
 
 private extension MoreTableViewController {
     
-    func navigate<T: UIViewController>(to controller: () -> T, id: String = "moreDetailSegue"){
+    func navigate<T: UIViewController>(to controller: @autoclosure () -> T,
+                                       id: String = "moreDetailSegue"){
         performSegue(withIdentifier: id, sender: controller())
     }
+    
     
     func showAppFeedback() {
         let url = URL(string: conference.githubIssuesURL)!
