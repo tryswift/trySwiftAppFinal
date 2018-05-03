@@ -15,7 +15,8 @@ class SessionsTableViewController: UITableViewController {
 
     var conferenceDay: ConferenceDay
     weak var scheduleViewController: ScheduleViewController?
-
+    
+    fileprivate var context: UIViewControllerPreviewing?
     fileprivate let sessionDetailsSegue = "sessionDetailsSegue"
     fileprivate var didShowDetail = false
 
@@ -33,10 +34,19 @@ class SessionsTableViewController: UITableViewController {
         super.viewDidLoad()
 
         configureTableView()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if traitCollection.forceTouchCapability == .available {
-            registerForPreviewing(with: self, sourceView: tableView)
+            context = registerForPreviewing(with: self, sourceView: tableView)
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        guard let context = context else { return }
+        unregisterForPreviewing(withContext: context)
     }
     
     override func viewDidAppear(_ animated: Bool) {
