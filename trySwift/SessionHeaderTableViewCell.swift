@@ -16,7 +16,7 @@ class SessionHeaderTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        sessionTitleLabel.textColor = .trySwiftTitleColor()
+        sessionTitleLabel.textColor = .trySwiftTitleColor
     }
     
     func configure(withSession session: Session) {

@@ -24,12 +24,17 @@ class SessionTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        sessionTitleLabel.textColor = .trySwiftTitleColor()
-        sessionTypeLabel.textColor = .trySwiftTitleColor()
-        sessionSubtitleLabel.textColor = .trySwiftSubtitleColor()
-        sessionLocationLabel.textColor = .trySwiftSubtitleColor()
+        sessionTitleLabel.textColor = .trySwiftTitleColor
+        sessionTypeLabel.textColor = .trySwiftTitleColor
+        sessionSubtitleLabel.textColor = .trySwiftSubtitleColor
+        sessionLocationLabel.textColor = .trySwiftSubtitleColor
         sessionTitleLabel.clipsToBounds = false
+    }
+    
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView?.image = nil
     }
     
     func configure(withSession session: Session) {

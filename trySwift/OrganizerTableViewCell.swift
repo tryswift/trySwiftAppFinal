@@ -19,7 +19,7 @@ class OrganizerTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        organizerTwitterLabel.textColor = .trySwiftAccentColor()
+        organizerTwitterLabel.textColor = .trySwiftAccentColor
     }
     
     func configure(withOrganizer organizer: Organizer, selectionEnabled: Bool = true, accessoryEnabled: Bool = true) {
