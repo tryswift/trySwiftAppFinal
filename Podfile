@@ -2,10 +2,10 @@ use_frameworks!
 
 def shared_pods
     pod 'Timepiece', '~> 1.1.0'
-    # pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
+    pod 'TrySwiftData', :git => 'https://github.com/tryswift/trySwiftData.git'
     
     # for local development
-    pod 'TrySwiftData', :path => "/Users/natashatherobot/Dropbox/NatashaTheRobot/trySwift/trySwiftApp/trySwiftData"
+    # pod 'TrySwiftData', :path => "/Users/natashatherobot/Dropbox/NatashaTheRobot/trySwift/trySwiftApp/trySwiftData"
 end
 
 target 'trySwift' do

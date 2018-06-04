@@ -15,9 +15,7 @@ struct SessionDataDefaults: SessionDisplayable {
     init(session: Session) {
         self.session = session
         
-        if let url = session.imageWebURL {
-            customImageAssetURL = URL(string: url)
-        } else if let assetName = session.imageAssetName {
+        if let assetName = session.imageAssetName {
             customImageAssetURL = Bundle.trySwiftAssetURL(for: assetName)
         } else {
             customImageAssetURL = nil
@@ -29,7 +27,7 @@ struct SessionDataDefaults: SessionDisplayable {
     }
     
     var presenter: String {
-        return Conference.current.name ?? "try! Conference"
+        return Conference.current.name
     }
     
 
@@ -55,7 +53,7 @@ struct SessionDataDefaults: SessionDisplayable {
     }
     
     var twitter: String {
-        return Conference.current.twitter!
+        return Conference.current.twitter
     }
     
     var selectable: Bool {

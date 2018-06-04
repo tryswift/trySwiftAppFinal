@@ -17,7 +17,7 @@ extension Bundle {
     }
 
     public class func trySwiftResourceBundleURL() -> URL {
-        let classBundle = Bundle(for: Conference.self)
+        let classBundle = Conference.conferenceBundle
         if let bundleURL = classBundle.url(forResource: "TrySwiftData", withExtension: "bundle") {
             return bundleURL
         }

@@ -7,27 +7,26 @@
 //
 
 public enum SponsorLevel: Int {
-    case platinum = 0
-    case gold = 1
-    case silver = 2
-    case diversity = 3
-    case student = 4
-    case event = 5
-    case lanyard = 6
-    case bag = 7
-    case individual = 8
+    case platinum
+    case gold
+    case silver
+    case diversity
+    case student
+    case event
+    case lanyard
+    case bag
+    case individual
 }
 
-public class Sponsor {
-    public var name: String = ""
-    public var nameJP: String?
-    public var url: String?
-    public var displayURL: String?
-    public var twitter: String?
-    public var logoAssetName: String?
-    public var logoImageWebURL: String?
-    public var level: SponsorLevel = .event
-    public var priority: Int = 0
+public struct Sponsor {
+    public let name: String
+    public let nameJP: String?
+    public let url: String
+    public let displayURL: String
+    public let twitter: String?
+    public let logoAssetName: String?
+    public let level: SponsorLevel
+    public let priority: Int
     
 
     public var localizedName: String {
@@ -35,10 +34,6 @@ public class Sponsor {
     }
 
     public var logoURL: URL {
-        if let url = logoImageWebURL {
-            return URL(string: url)!
-        }
-
         if let assetName = logoAssetName {
             return Bundle.trySwiftAssetURL(for: assetName)!
         }
@@ -47,11 +42,11 @@ public class Sponsor {
     }
 
     /* Return an array of `Results` objects */
-    public class var all: [Int : [Sponsor]] {
+    public static var all: [Int : [Sponsor]] {
 
         var resultsSet = [ Int : [Sponsor] ]()
         for i in 0...SponsorLevel.individual.rawValue {
-            let sponsors = tko2018Sponsors.filter { $0.value.level.rawValue == i }
+            let sponsors = sjo2018Sponsors.filter { $0.value.level.rawValue == i }
             
             if sponsors.count > 0 {
                 let sponsorsSorted = sponsors.sorted { $0.value.priority < $1.value.priority }
@@ -62,7 +57,7 @@ public class Sponsor {
         return resultsSet
     }
 
-    public class func localizedName(for sponsorLevel: SponsorLevel) -> String {
+    public static func localizedName(for sponsorLevel: SponsorLevel) -> String {
         switch sponsorLevel {
         case .platinum:     return "Platinum".localized()
         case .gold:         return "Gold".localized()

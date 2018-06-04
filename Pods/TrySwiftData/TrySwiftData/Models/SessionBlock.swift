@@ -6,17 +6,17 @@
 //  Copyright © 2017 NatashaTheRobot. All rights reserved.
 //
 
-public class SessionBlock {
+public struct SessionBlock {
     /* The time in which these sessions start */
-    public var startTime: Date = Date()
+    public let startTime: Date
 
     /* The time in which they end */
-    public var endTime: Date = Date()
+    public let endTime: Date
 
     /* The sessions occurring within this block. */
-    open var sessions = [Session]()
+    public let sessions: [Session]
 
     public static var all: [SessionBlock] {
-        return tko2018SessionBlocks
+        return sjo2018SessionBlocks
     }
 }

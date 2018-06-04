@@ -13,12 +13,17 @@ DEPENDENCIES:
   - DynamicColor (~> 3.2.1)
   - Kingfisher (~> 4.6.2)
   - Timepiece (~> 1.1.0)
-  - TrySwiftData (from `/Users/natashatherobot/Dropbox/NatashaTheRobot/trySwift/trySwiftApp/trySwiftData`)
+  - TrySwiftData (from `https://github.com/tryswift/trySwiftData.git`)
   - XLPagerTabStrip (~> 8.0.0)
 
 EXTERNAL SOURCES:
   TrySwiftData:
-    :path: "/Users/natashatherobot/Dropbox/NatashaTheRobot/trySwift/trySwiftApp/trySwiftData"
+    :git: https://github.com/tryswift/trySwiftData.git
+
+CHECKOUT OPTIONS:
+  TrySwiftData:
+    :commit: 8c71d09e211ced74a9b85a33762e545c367f5ac3
+    :git: https://github.com/tryswift/trySwiftData.git
 
 SPEC CHECKSUMS:
   AcknowList: 2b27ccc75110be58be37424c4b08b07bdec628b4
@@ -28,6 +33,6 @@ SPEC CHECKSUMS:
   TrySwiftData: 6ae96c51963fa7fe5698b20dfd9e279ce5d978b7
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: 31d6acc1f074e27936d9c495356d0d7b7f77c20c
+PODFILE CHECKSUM: 41a4636e6c849941bb4518a6df2f61aee271660a
 
 COCOAPODS: 1.2.0

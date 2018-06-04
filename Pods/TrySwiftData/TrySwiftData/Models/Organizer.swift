@@ -8,20 +8,19 @@
 
 import Foundation
 
-public class Organizer {
-    public var id: Int = 0
-    public var name: String = "TBD"
-    public var nameJP: String?
-    public var twitter: String = "TBD"
-    public var imageAssetName: String? = nil
-    public var imageWebURL: String? = nil
-    public var bio: String = "TBD"
-    public var bioJP: String?
-    public var hidden: Bool = false
+public struct Organizer {
+    public let id: Int
+    public let name: String
+    public let nameJP: String?
+    public let twitter: String
+    public let imageAssetName: String?
+    public let bio: String
+    public let bioJP: String?
+    public let hidden: Bool
 
     public static var all: [String : Organizer] {
-        let organizers =  tko2018Organizers.filter { $0.value.hidden == false}
-        let sortedOrganizers = organizers.sorted{ $0.value.name > $1.value.name }
+        let organizers =  sjo2018Organizers.filter { $0.value.hidden == false}
+        let sortedOrganizers = organizers.sorted { $0.value.name > $1.value.name }
         return sortedOrganizers.dictionary()
     }
 
@@ -34,10 +33,6 @@ public class Organizer {
     }
 
     public var imageURL: URL {
-        if let url = imageWebURL {
-            return URL(string: url)!
-        }
-
         if let assetName = imageAssetName {
             return Bundle.trySwiftAssetURL(for: assetName)!
         }

@@ -13,19 +13,19 @@ public enum SpeakerType: Int {
 }
 
 public class Speaker {
-    public var id: Int = 0
-    public var name: String = "TBD"
+    public var id = 0
+    public var name = "TBD"
     public var nameJP: String?
-    public var twitter: String = "TBD"
+    public var twitter = "TBD"
     public var imageAssetName: String? = nil
     public var imageWebURL: String? = nil
-    public var bio: String = "TBD"
+    public var bio = "TBD"
     public var bioJP: String?
-    public var hidden: Bool = false
+    public var hidden = false
     public var type: SpeakerType = .presentation
 
     public class var all: [Speaker] {
-        let speakers = tko2018Speakers.values.filter { $0.hidden == false}
+        let speakers = sjo2018Speakers.values.filter { $0.hidden == false}
         return speakers.sorted { $0.name < $1.name }
     }
 

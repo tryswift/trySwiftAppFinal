@@ -41,7 +41,7 @@ class TodayController: UIViewController, NCWidgetProviding {
     private var currentSessionBlock: SessionBlock? {
         let sessionBlocks = SessionBlock.all
         
-        let est = TimeZone(abbreviation: "JST")!
+        let est = TimeZone(abbreviation: "PST")!
         let date = Date().addingTimeInterval((Double)(est.secondsFromGMT()))
         return sessionBlocks.filter { $0.startTime < date && $0.endTime > date }.first
     }

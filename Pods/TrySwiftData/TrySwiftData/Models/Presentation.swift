@@ -6,14 +6,15 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
+import Foundation
 
-public class Presentation {
-    public var id: Int = 0
-    public var speaker: Speaker?
-    public var title: String = "TBD"
-    public var titleJP: String?
-    public var summary: String = "TBD"
-    public var summaryJP: String?
+public struct Presentation {
+    public let id: Int
+    public let speaker: Speaker?
+    public let title: String
+    public let titleJP: String?
+    public let summary: String
+    public let summaryJP: String?
 
     public var localizedTitle: String {
         return localizedString(for: title, japaneseString: titleJP)

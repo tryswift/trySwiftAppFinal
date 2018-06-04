@@ -6,33 +6,31 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-public class Conference {
-    public var name: String?
-    public var twitter: String?
-    public var logoAssetName: String?
-    public var logoImageWebURL: String?
-    public var conferenceDescription: String = ""
-    public var conferenceDescriptionJP: String?
-    public var email: String = "info@tryswift.co"
-    public var slackURL: String = ""
-    public var githubIssuesURL: String = "https://github.com/tryswift/trySwiftAppFinal/issues"
-    public var codeOfConductURL: String = "https://www.tryswift.co/code-of-conduct/"
-    public var venues = [Venue]()
-    public var organizers = [Organizer]()
+public struct Conference {
+    public let name: String
+    public let twitter: String
+    public let logoAssetName: String?
+    public let conferenceDescription: String
+    public let conferenceDescriptionJP: String?
+    public let email: String
+    public let slackURL: String
+    public let githubIssuesURL = "https://github.com/tryswift/trySwiftAppFinal/issues"
+    public let codeOfConductURL = "https://www.tryswift.co/code-of-conduct/"
+    public let venues: [Venue]
+    public let organizers: [Organizer]
 
+    class BundleIdenifier { }
+    static var conferenceBundle: Bundle { return Bundle(for: Conference.BundleIdenifier.self) }
+    
     public var localizedDescription: String {
         return localizedString(for: conferenceDescription, japaneseString: conferenceDescriptionJP)
     }
 
     public static var current: Conference {
-        return tko2018Conferences.first!
+        return sjo2018Conferences.first!
     }
 
     public var logoURL: URL {
-        if let url = logoImageWebURL {
-            return URL(string: url)!
-        }
-
         if let assetName = logoAssetName {
             return Bundle.trySwiftAssetURL(for: assetName)!
         }

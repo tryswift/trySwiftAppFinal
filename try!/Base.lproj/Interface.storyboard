@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
     </dependencies>
     <scenes>
-        <!--try! Mar 1-->
+        <!--try! Jun 8-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="day1" title="try! Mar 1" id="AgC-eL-Hgc" customClass="SessionsInterfaceController" customModule="try__Extension">
+                <controller identifier="day1" title="try! Jun 8" id="AgC-eL-Hgc" customClass="SessionsInterfaceController" customModule="try__Extension">
                     <items>
                         <table alignment="left" pagingScroll="YES" id="OeU-Nt-vmO">
                             <items>
@@ -42,49 +42,10 @@
                     </items>
                     <connections>
                         <outlet property="sessionsTable" destination="OeU-Nt-vmO" id="Ye4-hJ-Vpn"/>
-                        <segue destination="iUS-6L-mZG" kind="relationship" relationship="nextPage" id="TG5-sj-8g7"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
-        </scene>
-        <!--try! Mar 2-->
-        <scene sceneID="VYM-ue-q9a">
-            <objects>
-                <controller identifier="day2" title="try! Mar 2" id="iUS-6L-mZG" customClass="SessionsInterfaceController" customModule="try__Extension">
-                    <items>
-                        <table alignment="left" id="raC-za-EKv">
-                            <items>
-                                <tableRow identifier="SessionTableRowController" id="ACu-83-iQZ" customClass="SessionTableRowController" customModule="try__Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="f8f-un-HT7">
-                                        <items>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="M46-kR-icQ">
-                                                <color key="textColor" red="0.72156862749999995" green="0.1960784314" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
-                                            </label>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="3hw-2u-ASw">
-                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                            </label>
-                                            <label alignment="left" text="Label" numberOfLines="0" id="Ulq-ko-odx">
-                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
-                                            </label>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="subtitleInterfaceLabel" destination="Ulq-ko-odx" id="zvD-jO-M1h"/>
-                                        <outlet property="timeInterfaceLabel" destination="M46-kR-icQ" id="Lrv-KX-a5X"/>
-                                        <outlet property="titleInterfaceLabel" destination="3hw-2u-ASw" id="YKo-nZ-r35"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                    <connections>
-                        <outlet property="sessionsTable" destination="raC-za-EKv" id="FOA-1u-ffW"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="478" y="345"/>
         </scene>
         <!--SessionDetailInterfaceController-->
         <scene sceneID="bic-a1-cwU">

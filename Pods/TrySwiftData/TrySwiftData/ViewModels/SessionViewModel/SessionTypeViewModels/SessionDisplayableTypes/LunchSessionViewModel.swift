@@ -37,7 +37,7 @@ struct LunchSessionViewModel: SessionDisplayable {
     }
     
     var shortDescription: String {
-        return dataDefaults.shortDescription
+        return "🌯".localized()
     }
     
     var longDescription: String {

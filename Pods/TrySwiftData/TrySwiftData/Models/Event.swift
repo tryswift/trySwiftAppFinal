@@ -6,14 +6,13 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
-public class Event {
-    public var title: String = ""
-    public var titleJP: String?
-    public var logoAssetName: String?
-    public var logoImageWebURL: String?
-    public var location: String = ""
-    public var locationJP: String?
-    public var website: String?
+public struct Event {
+    public let title: String
+    public let titleJP: String?
+    public let logoAssetName: String?
+    public let location: String
+    public let locationJP: String?
+    public let website: String?
 
     public var localizedTitle: String {
         return localizedString(for: title, japaneseString: titleJP)
@@ -24,10 +23,6 @@ public class Event {
     }
 
     public var logoURL: URL {
-        if let url = logoImageWebURL {
-            return URL(string: url)!
-        }
-
         if let assetName = logoAssetName {
             return Bundle.trySwiftAssetURL(for: assetName)!
         }

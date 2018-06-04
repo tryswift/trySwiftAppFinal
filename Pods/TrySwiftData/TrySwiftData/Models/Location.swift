@@ -6,9 +6,9 @@
 //  Copyright © 2017 NatashaTheRobot. All rights reserved.
 //
 
-public class Location {
-    public var name: String = ""
-    public var nameJP: String?
+public struct Location {
+    public let name: String
+    public let nameJP: String?
 
     public var localizedName: String {
         return localizedString(for: name, japaneseString: nameJP)

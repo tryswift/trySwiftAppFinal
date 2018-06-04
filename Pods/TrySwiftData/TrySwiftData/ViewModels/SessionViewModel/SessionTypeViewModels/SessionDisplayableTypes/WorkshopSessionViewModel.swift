@@ -69,7 +69,7 @@ struct WorkshopSessionViewModel: SessionDisplayable {
     }
     
     var shortDescription: String {
-        return "Workshop".localized()
+        return "💻".localized()
     }
     
     var longDescription: String {

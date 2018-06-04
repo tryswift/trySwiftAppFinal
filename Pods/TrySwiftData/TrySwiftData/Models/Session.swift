@@ -20,42 +20,41 @@ public enum SessionType: Int {
     case lunch
     case officeHours
     case party
+    case registration
+    case panel
 }
 
-public class Session {
+public struct Session {
     /** The type of content in this particular session */
-    public var type: SessionType = .talk
+    public let type: SessionType
 
     /** The title of this session (if not provided by any child objects) */
-    public var title: String?
+    public let title: String?
 
     /** The Japanese title of this session (if not provided by any child objects) */
-    public var titleJP: String?
+    public let titleJP: String?
 
     /** For special cases, the name of the image to show for this session. */
-    public var imageAssetName: String?
-
-    /** For special cases, the name of the image to show for this session. */
-    public var imageWebURL: String?
+    public let imageAssetName: String?
 
     /** A sponsor, if any, responsible for this session. */
-    public var sponsor: Sponsor?
+    public let sponsor: Sponsor?
 
     /** The presentation information if this session is a talk. */
-    public var presentation: Presentation?
+    public let presentation: Presentation?
 
     /** The specific room this session will be held */
-    public var location: Location?
+    public let location: Location?
 
     /** A special type of event occuring during the conference */
-    public var event: Event?
+    public let event: Event?
 
     /** Any particular events held at a different venue from the conference */
-    public var venue: Venue?
+    public let venue: Venue?
 
     /***************************************************/
 
     public static var all: [String: Session] {
-        return tko2018Sessions
+        return sjo2018Sessions
     }
 }

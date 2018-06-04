@@ -22,11 +22,13 @@ class SessionsInterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        /*
         if SessionsInterfaceController.first {
             let days = ConferenceDay.all
             WKInterfaceController.reloadRootControllers(withNames: ["day1", "day2"], contexts: [days[0], days[1]])
             SessionsInterfaceController.first = false
         }
+        */
         
         if let sessionsContext = context as? ConferenceDay {
             conferenceDay = sessionsContext
