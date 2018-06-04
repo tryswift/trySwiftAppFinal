@@ -13,6 +13,7 @@ class SponsorsViewController: UITableViewController {
 
     /* An array of `Result` objects representing each sponsor level */
     fileprivate let sponsors = Sponsor.all
+    fileprivate let sections = Sponsor.all.map { $0.key }
     fileprivate let sponsorDetailSegue = "sponsorDetailSegue"
     fileprivate var didShowDetail = false
     
@@ -58,27 +59,29 @@ extension SponsorsViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sponsorLevel = sponsors[section]
-        return sponsorLevel!.count
+        let mappedSection = sections[section]
+        return sponsors[mappedSection]!.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SponsorTableViewCell
-        
-        let sponsor = sponsors[indexPath.section]![indexPath.row]
+        let section = sections[indexPath.section]
+        let sponsor = sponsors[section]![indexPath.row]
         cell.configure(withSponsor: sponsor)
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let firstSponsor = sponsors[section]!.first!
+        let mappedSection = sections[section]
+        let firstSponsor = sponsors[mappedSection]!.first!
         return Sponsor.localizedName(for: firstSponsor.level)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let sponsor = sponsors[indexPath.section]![indexPath.row]
+        let mappedSection = sections[indexPath.section]
+        let sponsor = sponsors[mappedSection]![indexPath.row]
         let webVC = webViewController(for: sponsor)
         
         performSegue(withIdentifier: sponsorDetailSegue, sender: webVC)
@@ -89,7 +92,7 @@ private extension SponsorsViewController {
     
     func webViewController(for sponsor: Sponsor) -> WebDisplayViewController {
         let webViewController = WebDisplayViewController()
-        webViewController.url = URL(string: sponsor.url!)!
+        webViewController.url = URL(string: sponsor.url)!
         webViewController.displayTitle = sponsor.name
         
         return webViewController

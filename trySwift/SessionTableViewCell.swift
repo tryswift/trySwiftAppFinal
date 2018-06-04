@@ -19,7 +19,7 @@ class SessionTableViewCell: UITableViewCell {
     @IBOutlet weak var sessionLocationLabel: UILabel!
 
     private lazy var defaultLocation: String = {
-        return Conference.current.name!
+        return Conference.current.name
     }()
 
     override func awakeFromNib() {

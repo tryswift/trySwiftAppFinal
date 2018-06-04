@@ -212,7 +212,7 @@ private extension SessionsTableViewController {
     
     func webDisplay(_ sponsor: Sponsor) -> UIViewController {
         let webViewController = WebDisplayViewController()
-        webViewController.url = URL(string: sponsor.url!)
+        webViewController.url = URL(string: sponsor.url)
         webViewController.displayTitle = sponsor.name
         return webViewController
     }

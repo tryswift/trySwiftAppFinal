@@ -44,7 +44,7 @@ class OrganizerTableViewCell: UITableViewCell {
         let processor = RoundCornerImageProcessor(cornerRadius: 34, targetSize: CGSize(width: 67, height: 67))
         organizerImageView.kf.setImage(with: conference.logoURL, placeholder: nil, options: [.processor(processor), .scaleFactor(scale)])
         organizerNameLabel.text = conference.name
-        organizerTwitterLabel.text = "@\(conference.twitter!)"
+        organizerTwitterLabel.text = "@\(conference.twitter)"
         
         setNeedsUpdateConstraints()
         layoutIfNeeded()

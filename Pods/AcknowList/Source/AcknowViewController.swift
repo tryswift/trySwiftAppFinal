@@ -1,7 +1,7 @@
 //
 // AcknowViewController.swift
 //
-// Copyright (c) 2015-2017 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2015-2018 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -68,10 +68,12 @@ open class AcknowViewController: UIViewController {
         textView.alwaysBounceVertical = true
         textView.font = UIFont.preferredFont(forTextStyle: .body)
         textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        textView.isEditable = false
-        textView.dataDetectorTypes = .link
-
-        view.backgroundColor = UIColor.white
+        #if os(iOS)
+            textView.isEditable = false
+            textView.dataDetectorTypes = .link
+            
+            view.backgroundColor = UIColor.white
+        #endif
         view.addSubview(textView)
 
         self.textView = textView

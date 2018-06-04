@@ -4,11 +4,10 @@ _Ready to use “Acknowledgements”/“Licenses”/“Credits” view controlle
 
 _Written in Swift 4 (for Objective-C, you can use [VTAcknowledgementsViewController](https://github.com/vtourraine/VTAcknowledgementsViewController))._
 
-![Platform iOS](https://img.shields.io/badge/platform-iOS-blue.svg)
+![Platform iOS](https://img.shields.io/cocoapods/p/AcknowList.svg)
 ![Swift 4](https://img.shields.io/badge/Swift-4-blue.svg)
 [![Build Status](https://travis-ci.org/vtourraine/AcknowList.svg?branch=master)](https://travis-ci.org/vtourraine/AcknowList)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/AcknowList.svg)](https://cocoapods.org/pods/AcknowList)
-[![CocoaPods documentation](https://img.shields.io/cocoapods/metrics/doc-percent/AcknowList.svg)](http://cocoadocs.org/docsets/AcknowList)
 [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/vtourraine/AcknowList/raw/master/LICENSE)
 
 <img alt="iPhone screenshot 1" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-01.png" width="300px"> <img alt="iPhone screenshot 2" src="http://vtourraine.github.io/VTAcknowledgementsViewController/screenshots/iPhone-6s-02.png" width="300px">
@@ -46,10 +45,16 @@ let path = Bundle.main.path(forResource: "Pods-AcknowExample-acknowledgements", 
 let viewController = AcknowListViewController(acknowledgementsPlistPath: path)
 ```
 
+## Apple TV
+
+AcknowList is also compatible with tvOS for Apple TV apps.
+
+<img alt="Apple TV screenshot 1" src="https://user-images.githubusercontent.com/886053/37403710-07901b2e-2790-11e8-975f-b779fcfc3fbe.png" width="300px"> <img alt="Apple TV screenshot 2" src="https://user-images.githubusercontent.com/886053/37403711-07c83d38-2790-11e8-9f2e-84fe2d5f6bad.png" width="300px">
+
 
 ## Requirements
 
-AcknowList is written in Swift 4, requires iOS 8.0 and above, Xcode 9.0 and above, and uses ARC.
+AcknowList is written in Swift 4, requires iOS 8.0 or tvOS 9.0 and above, Xcode 9.0 and above.
 
 
 ## Credits
