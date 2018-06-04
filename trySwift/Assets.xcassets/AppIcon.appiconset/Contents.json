@@ -3,115 +3,115 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "icon_20@2x.png",
+      "filename" : "20@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "icon_20@3x.png",
+      "filename" : "20@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icon_29@2x.png",
+      "filename" : "Page 1@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "icon_29@3x.png",
+      "filename" : "Page 1@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icon_40@2x.png",
+      "filename" : "Page 1@2x-1.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "icon_40@3x.png",
+      "filename" : "Page 1@3x-1.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon_60@2x.png",
+      "filename" : "Page 1@2x-6.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon_60@3x.png",
+      "filename" : "Page 1@3x-3.png",
       "scale" : "3x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "icon_20@1x.png",
+      "filename" : "Page 1-2.png",
       "scale" : "1x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "icon_20@2x-1.png",
+      "filename" : "20@2x-1.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "icon_29@1x.png",
+      "filename" : "Page 1-1.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "icon_29@2x-1.png",
+      "filename" : "Page 1@2x-4.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "icon_40@1x.png",
+      "filename" : "Page 1.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "icon_40@2x-1.png",
+      "filename" : "Page 1@2x-2.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "icon_76@1x.png",
+      "filename" : "Page 1-3.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "icon_76@2x.png",
+      "filename" : "Page 1@2x-7.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "icon_83@2x.png",
+      "filename" : "Page 1@2x-8.png",
       "scale" : "2x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "logo_tko.png",
+      "filename" : "icon-1.png",
       "scale" : "1x"
     },
     {
       "size" : "24x24",
       "idiom" : "watch",
-      "filename" : "watch_24@2x.png",
+      "filename" : "Page 1@2x-9.png",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "38mm"
@@ -119,7 +119,7 @@
     {
       "size" : "27.5x27.5",
       "idiom" : "watch",
-      "filename" : "watch_27.5@2x.png",
+      "filename" : "Page 1@2x-10.png",
       "scale" : "2x",
       "role" : "notificationCenter",
       "subtype" : "42mm"
@@ -127,21 +127,21 @@
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "watch_29@2x.png",
+      "filename" : "Page 1@2x-5.png",
       "role" : "companionSettings",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
-      "filename" : "watch_29@3x.png",
+      "filename" : "Page 1@3x-2.png",
       "role" : "companionSettings",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "watch",
-      "filename" : "watch_40@2x.png",
+      "filename" : "Page 1@2x-3.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "38mm"
@@ -149,7 +149,7 @@
     {
       "size" : "86x86",
       "idiom" : "watch",
-      "filename" : "watch_86@2x.png",
+      "filename" : "Page 1@2x-11.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "38mm"
@@ -157,7 +157,7 @@
     {
       "size" : "98x98",
       "idiom" : "watch",
-      "filename" : "watch_98@2x.png",
+      "filename" : "Page 1@2x-12.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "42mm"
@@ -165,7 +165,7 @@
     {
       "size" : "1024x1024",
       "idiom" : "watch-marketing",
-      "filename" : "WatchLogo_TKO.png",
+      "filename" : "icon.png",
       "scale" : "1x"
     }
   ],
