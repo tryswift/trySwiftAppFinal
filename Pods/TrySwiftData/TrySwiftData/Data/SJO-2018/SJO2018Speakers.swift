@@ -85,7 +85,7 @@ public let sjo2018Speakers: [String : Speaker] = [
         speaker.id = 10
         speaker.name = "Garric G. Nahapetian"
         speaker.twitter = "garricn"
-        speaker.imageAssetName = "bas.jpg"
+        speaker.imageAssetName = "garric.jpg"
         speaker.bio = "Garric is an iOS Engineer at Tinder as well as the host of The SwiftCoders Podcast and the founder of the Learn Swift {CITY} group of meet ups."
         return speaker
     }(),
