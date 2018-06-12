@@ -7,62 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		007076ADBB07C44674D5CE7A03DC6879 /* TrySwiftDataLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F17C4349235A4EDE1E608506FF904C6C /* TrySwiftDataLocalizable.strings */; };
 		0096C6816AC3D92834AB65C49518C177 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F65068549B5DF760008D7F8C318D5DD /* ImageView+Kingfisher.swift */; };
-		03C3FBBEE1198D3FABE658A5765F617D /* bas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D842F729FF08FEB8717A22CC4C0FD7F4 /* bas.jpg */; };
+		02AAB642F9EE0DD3A29C4DB1C5F99543 /* naruki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79951662BC686A66370A9E9B0F9C512C /* naruki.jpg */; };
+		033B101548E196437482F1D47C99387C /* kostia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72BDC0F0D7D18463EB570116F976FE0 /* kostia.jpg */; };
 		03E0A134F1DDF33EA16F004F1A230CA1 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3C21467E3C3F23B9A9E5712CBFDD67 /* FormatIndicatedCacheSerializer.swift */; };
+		0609E19288C5521CD93CDFC1A8D9F5B9 /* dave.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1ED1CFA6C6E99978BBFF507C68AB085 /* dave.jpg */; };
 		06FB9B8A63EB5CDD496B751EC06009BF /* LunchSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A1CBD87B5B33CA62E8A84F059C626 /* LunchSessionViewModel.swift */; };
-		072C31A5F8C94EA6F3505510B548CB5E /* naruki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41296ECBFB9557447A43B886761C225B /* naruki.jpg */; };
 		07D4057BEB2A6A41BA9A470F8A669290 /* SponsoredDemoSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70644FE83179D2835CB73E273A53DD6B /* SponsoredDemoSessionViewModel.swift */; };
-		099A360A57E7EF4600C6A6BF346E956D /* party1.png in Resources */ = {isa = PBXBuildFile; fileRef = 533DD63F27B75CAE7107A19B95BA0961 /* party1.png */; };
-		0C16F4E9B86F50B771BD1691A002AAFA /* Logo_BLR.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DAE58A381487E809A57145B68EBC88E /* Logo_BLR.png */; };
+		07D9E5CED95FDC506686B09D59E42BD7 /* party1.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFDE76AEBE680257EB8446D55E26DB2 /* party1.png */; };
+		09C0F2C252DE176FDBE0824BAEF80AAD /* donuts1.png in Resources */ = {isa = PBXBuildFile; fileRef = AA11EA8C95894E03A8A3B86CECCAF411 /* donuts1.png */; };
+		0AE7F8F1E393BF78383803F8299E57D4 /* chrislattner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BB8D1DDAE4331E4501C3E49C7553A029 /* chrislattner.jpg */; };
 		0C2846C6D896390EC119B91C27B35B9A /* Pods-try! Today-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02AD17C0D2AEB1874790078E1F394353 /* Pods-try! Today-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CCED50A26B04D5F4D6A37C415AEBD99 /* harlan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C827C435064E86F4EFB4554021EF69B /* harlan.jpg */; };
 		0D099B639BAAC51C9E49BCE349DD33E9 /* SJO2018SessionBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690ED840B5AB8E54DC06801F7CE09AA /* SJO2018SessionBlocks.swift */; };
+		0D56AC650716761AB75303572A5FA8BE /* twilio.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D14DD7E47F6F704E669507A9CAA63BB /* twilio.png */; };
 		0E192AF5D95F4F7AF0F2B9C62C030608 /* TalkSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73469CE52F9823F4FD351A9B5A1244BF /* TalkSessionViewModel.swift */; };
 		0E32E0262B4939BE8561C52A092A6143 /* SJO2018Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58D57FF9DD7F2360C7BBD44DA855D6A /* SJO2018Sessions.swift */; };
-		0EA52CBD0B87D1D8F47C9D700641215F /* breaktime1.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A9A676E552C5956381C9BAD393C9C3 /* breaktime1.png */; };
 		0EABBC7405D7E69F0DC067A54089BD2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09B23CBD138A2E13475947D3FCFFC98 /* Foundation.framework */; };
-		0EF24F2FCDBC6994A83793CD2523C2AA /* lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7FB078F86E7FF5739EA7438B19EEAC /* lunch.png */; };
+		0F618BB449E85F2187D6E9286C8EA4B9 /* dinner.png in Resources */ = {isa = PBXBuildFile; fileRef = BA83DB11E5BE44A13F5969EC82A27952 /* dinner.png */; };
 		0F77C9B844B2134A2FD90206239327B9 /* TwitterPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462422157D01248A37906C70FEDDE6E1 /* TwitterPagerTabStripViewController.swift */; };
+		100CC8ECB136E39A7C31C09FC1BFC41D /* lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B7F5422D2862CF4A0D79258960CC338 /* lunch.png */; };
 		103228D906B112AA75562E8B17179127 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05DF9456FDB6E1A290A96F2634C7B6C /* Indicator.swift */; };
 		1055BB72B76B3CAFD7EDF60A7B6EA3DC /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76FC41FED756BC209DBDC933709B2A7C /* ButtonCell.xib */; };
 		114397DE4A2DC0204868A79F4BE13769 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276177D3EA58F938393BDF5D79688024 /* Filter.swift */; };
-		11C98DF4398AB128CA74180E84522D0A /* announce_blr.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD8E7BCB7E36B38B67DA2191974D7ED /* announce_blr.png */; };
-		1244A1D32CAC872B32882CFCC379A064 /* dave.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB713DCCBC127029C7219F40E9301BA4 /* dave.jpg */; };
+		11FB4B2CDAE1F2324B66AAB37937AC66 /* garric.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDC37B2EA0C27F6EF2F34E7C92BA5D8B /* garric.jpg */; };
+		127C277334321F8FCEB2CF2AB9E8A5F7 /* fumiya.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F7C9165B6ACE86E4122242DAED6C37 /* fumiya.png */; };
 		1341D2047E77123A25338469A1B23D25 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C566F361EA7552D0752F4640D77F9718 /* SessionViewModel.swift */; };
 		13A64EFBFD04779380498D4E7B4A8FED /* ContrastDisplayContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE621BABA9E2412D4862A2F0A866B7F5 /* ContrastDisplayContext.swift */; };
 		13E854C1957252DA415E6B308ECE6976 /* AcknowList.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 02A655F35BB06E9A19D763B52AF1AAAD /* AcknowList.bundle */; };
-		145234617765AD5128F3D1699914DB24 /* hiroki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC5D68C0C9FC64371A104A64A9B57F66 /* hiroki.jpg */; };
-		14B9A69BEBA527F8B3170BE85022444B /* Logo_TKO.png in Resources */ = {isa = PBXBuildFile; fileRef = E1346530AF1ADA876B4CB5D3762FA88F /* Logo_TKO.png */; };
-		15C229B2F291D9778980591CA14356B8 /* breaktime2.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F46FC5CF1B053E493ADA3A7D34AFAE /* breaktime2.png */; };
 		16FD5F9C647C874DD7246D3A5EE1AD6F /* String+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F62DBB990D38D08F1E80AF483145EC /* String+Timepiece.swift */; };
-		175F439E22F7589CDAB6D2D9C98B9E26 /* announce2.png in Resources */ = {isa = PBXBuildFile; fileRef = F50A9CABFD692D15D19D0232500A1486 /* announce2.png */; };
+		177169C7C9DDE9927802F56B94160D03 /* announce1.png in Resources */ = {isa = PBXBuildFile; fileRef = A16525A1262EA304B5E662824E6CD0F4 /* announce1.png */; };
+		17B82F0D71E58D3FAD86F584A03B88D2 /* naruki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79951662BC686A66370A9E9B0F9C512C /* naruki.jpg */; };
+		17F3D222C9076B3F551063D4B2AF2137 /* dave.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E1ED1CFA6C6E99978BBFF507C68AB085 /* dave.jpg */; };
 		18BC048B42E116B31C759483F86580EA /* DynamicGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018EFC5E4AD7495824A7AC207DFCF358 /* DynamicGradient.swift */; };
 		18C300717BE7EFF2AD4E9ACD24D82786 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9526C588DBE1DA00390332F139F5B8D0 /* DynamicColor.swift */; };
+		18EBB2B1D755B85EA3B83B9EBED271EC /* TrySwiftDataLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F26850F3D676264900D804D3A9338A4 /* TrySwiftDataLocalizable.strings */; };
+		19EFBF7027B3AE8D3839D1EC16E80D83 /* announce_nyc_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2340EAFF838D29D4FBCE24810D00684 /* announce_nyc_1.png */; };
 		19F8FA80FBAB09A86FDF3986D1FBB761 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC154FA49ACEB22B9D96BC830BE556E /* UIKit.framework */; };
-		1AEC38C981CDC20FA6EA588D5FCD4B31 /* jp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00F9B3645222E001C6500FEEE517A401 /* jp.jpg */; };
-		1BCC2CE0AE6B4C2AC7181C484E04877C /* announce_nyc_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F3AACECB2E6613E3FD43376CC97648 /* announce_nyc_2.png */; };
 		1D5AE44433EEEF257652B18893659158 /* ConferenceDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EDCBF111CCDC071D67BAC1A45914C /* ConferenceDay.swift */; };
+		1D6AFB063CAF937847278FB659E0515B /* announce2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9569096A37119E8674637E68A0AB45 /* announce2.png */; };
+		1D7D7BA8EE725F74B2EAF9F663E4BCB6 /* bowling.png in Resources */ = {isa = PBXBuildFile; fileRef = 018170D95A83337921666540C57B1BE8 /* bowling.png */; };
+		1DA574615F9E0B945B41CF75CC895ADA /* dinner.png in Resources */ = {isa = PBXBuildFile; fileRef = BA83DB11E5BE44A13F5969EC82A27952 /* dinner.png */; };
 		1DDD458121E28AE9811F42D5D78A85A2 /* Array+TrySwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330A5AF2B2E0FC3D81F3ED1C8791200B /* Array+TrySwiftData.swift */; };
-		1E479B55BB27EE2E8548E6F3D78D63B9 /* breaktime2.png in Resources */ = {isa = PBXBuildFile; fileRef = C2F46FC5CF1B053E493ADA3A7D34AFAE /* breaktime2.png */; };
+		1ECB803C6946781C22C52ED7C35CAD57 /* takeru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8243DF5F6C16835745E06FCF195ED83A /* takeru.jpg */; };
 		1EDB4A473D89CA38C453F15733D69833 /* XLPagerTabStrip.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93E1328133926AA9E159A881FC7017A8 /* XLPagerTabStrip.bundle */; };
-		1F631AEA158B515D02EC6799A4492778 /* twilio.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEBE3083098BB8FCAE18F64D35CB0EB /* twilio.png */; };
-		1FBF7AF0A0300E89B330E80DCCBC58DC /* naruki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41296ECBFB9557447A43B886761C225B /* naruki.jpg */; };
-		20C4D05F08B76CF117ADD6A4481CD04D /* donuts2.png in Resources */ = {isa = PBXBuildFile; fileRef = E9921960B44DC5CE3DEE76E07243C0A7 /* donuts2.png */; };
-		221A5214B393C7C772427931362D03BF /* david.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8653E416E7B436D6FB47B7ABEC129E77 /* david.jpg */; };
-		2257462C69A38EEC6C0C0E8EC11F324C /* david.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8653E416E7B436D6FB47B7ABEC129E77 /* david.jpg */; };
+		1F2713F3A692C1D9A45F46EFC7CA2030 /* jp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73A7183AE7B3C06E1F3C337D16C14908 /* jp.jpg */; };
 		2283375C0C99789CF47EEDA0CE9D3D80 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC542A3CF27ABF9C70AFCEBF2CBC44F /* ImageProcessor.swift */; };
-		22965ECEB2D23E32ED03C70F0D35C284 /* takeru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC92BFF5802D4F930949EF9A94DEAF8A /* takeru.jpg */; };
-		2338D6A057103F54383E4AF88FBC7080 /* lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7FB078F86E7FF5739EA7438B19EEAC /* lunch.png */; };
 		25FB6AEFAF01CF781336C7B66987D2F8 /* PagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0637B771121D74FF7192AF391B091871 /* PagerTabStripViewController.swift */; };
+		2747D3B9D535FCE0BF684EB5C5DBE353 /* donuts2.png in Resources */ = {isa = PBXBuildFile; fileRef = A06A27D05334BCC5E81108031DC97480 /* donuts2.png */; };
+		27492DC570D0DA5A95A7920D286309E9 /* breaktime1.png in Resources */ = {isa = PBXBuildFile; fileRef = A805A6591337A6072F5344D60EDC2DED /* breaktime1.png */; };
+		27D20225754F2CAB0C3C6FEAFEA1CF22 /* jpmarthajp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B0C8CD70F91D60DB7325C9D91CE269FB /* jpmarthajp.jpg */; };
 		296C74B603E27E7F98D36DCDA8D71152 /* OfficeHoursSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AA79974B88C1B4FFE439502139E57 /* OfficeHoursSessionViewModel.swift */; };
 		29D9F97B242EDD909DA68D6C54996D0F /* SJO2018Venues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A51AFC6AD78F4AD5BD175D373A8B98 /* SJO2018Venues.swift */; };
 		2ABE0F8940C00BD429E33ED7F7C9EA1D /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733325840C3D2CAE474BD3DF0273753 /* KingfisherOptionsInfo.swift */; };
 		2AC7119008B685013BA9875358D3D3F3 /* AcknowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2C49520D8A0FD85807D095E6AF968D /* AcknowParser.swift */; };
+		2B12247CFE6C36CEADD9C38430692977 /* alvin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2A58F3EA735777A2724C8231A34A52B /* alvin.jpg */; };
+		2B26A5D608427D0F370C873FE9A86227 /* pushkar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF184F43441AE0F0433FD0C649AC1B68 /* pushkar.jpg */; };
 		2B7A8A4674C4FBCD38E7076AB8451654 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91561755655F1EEE731D9E927BD67FE2 /* Foundation.framework */; };
+		2BAED65FFECB74BDD6509E44A5B38B1D /* WatchLogo_TKO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE3358F8365C4C2E900BD6C1A14DE13B /* WatchLogo_TKO.png */; };
 		2BC8D7687511FCCC2B9E4ED41E4118FC /* SJO2018Conferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6588E5F1E3069B28F155D956E34E83C /* SJO2018Conferences.swift */; };
-		2BFD76B172F928D61B130C438A9AB326 /* harlan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A0D0FF205CE87BD2F4B789656E48188 /* harlan.jpg */; };
-		2CA391FF88184E37039D6607DC15D0ED /* kita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 257CA5BFEA2D1A69CC28507AB8F2FF01 /* kita.jpg */; };
+		2C9C577989C9020AE4E9F2771674F421 /* eric.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 645EEF77193595B27160971961BF9B08 /* eric.jpg */; };
 		2DBA9E82FA2897328E4C4B77775CF4B8 /* Array+TrySwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330A5AF2B2E0FC3D81F3ED1C8791200B /* Array+TrySwiftData.swift */; };
 		2DDD385F3A80C4A6FFBC17C105372890 /* DynamicColor+HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6EA39778C997480318204CF218D0B /* DynamicColor+HSL.swift */; };
 		2E8F26084EACF6371CB5817F919661A0 /* AcknowList-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C302ABE461A8E8283A60C3F16E31500B /* AcknowList-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,17 +77,15 @@
 		342AF1EB6F70C97E6F3BCCF9EAD07BE1 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AE57F3F8A9C7E04CAF0A2A0A1598B8 /* Session.swift */; };
 		3464228E4F1F63DBCA803CC848A6A8C0 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3CF488865DD37ABE5E60C7CA9BB2B1 /* Resource.swift */; };
 		34C318A4BA1BBC06C521D08028F57796 /* SJO2018Presentations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E2DC99D082EF6FC8E282BF03245CC /* SJO2018Presentations.swift */; };
-		358562A52715C884A65A96BDB51CD03E /* party2.png in Resources */ = {isa = PBXBuildFile; fileRef = 089899CB51C0650A91499A66708CD125 /* party2.png */; };
-		35AA955671E4ECD7BA53DFA223E251ED /* pushkar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1F5AE6C66FA6721D1163BF73FC4C07C /* pushkar.jpg */; };
 		35B238F5BC3AA114DA06B10F790EE989 /* SJO2018SessionBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6690ED840B5AB8E54DC06801F7CE09AA /* SJO2018SessionBlocks.swift */; };
-		370160327B10C5DFBE2F8A03AC94F3F7 /* WatchLogo_TKO.png in Resources */ = {isa = PBXBuildFile; fileRef = B39C02AA1A63F451E10A8CAC4C1C5C94 /* WatchLogo_TKO.png */; };
-		38732E6F8E34F5A8FDA49122303A2F64 /* bento2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B895E6AB3D55C97A808A53E9516967D /* bento2.png */; };
-		3873B25561DE3613192B59BF132E2519 /* bento1.png in Resources */ = {isa = PBXBuildFile; fileRef = 312C6A4286996F2C3F22FE695CED9203 /* bento1.png */; };
 		3875E63B1F9531E6DDDE6470838F25C6 /* SessionBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52070EC1565936BE4088FC42FDB6348B /* SessionBlock.swift */; };
 		3A0FB850C85D8822A20D87867B0A4AF9 /* CoffeeBreakSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E992B091D09802A9D9C614E24C85D7C /* CoffeeBreakSessionViewModel.swift */; };
 		3A4001E60871257D0B717CC9DFDFFA20 /* SessionDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C952CCF5669827C008B84A6E16FC90 /* SessionDataDefaults.swift */; };
+		3AD601DE4F00422C21F8FAB6BA574561 /* hilton2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 53FD03F61E7DC9E68070F49B136D41BB /* hilton2.jpg */; };
 		3B239E9FF0E4E91BC31B84800684ED22 /* SJO2018Organizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370E9246D48523E0C32893C44F90B8F /* SJO2018Organizers.swift */; };
+		3B6D09CA23194A8507777CE1DA85F5F3 /* david.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 225D31B2C35F987F79A858E1D453A11A /* david.jpg */; };
 		3C0F40EED9A2E668AAA7A004A4603227 /* SJO2018ConferenceDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8567FE99186856EE071A173ED63F9C8E /* SJO2018ConferenceDays.swift */; };
+		3D15FB90AE9668C19724387DF6431FBE /* hiroki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26643BD7D0C7AECCF457F4AD35201492 /* hiroki.jpg */; };
 		3EF061F7E63EB589B5066A1A92485A13 /* RegistrationSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0455B7A72D79D0211A5EB1C763052 /* RegistrationSessionViewModel.swift */; };
 		3F3486F901DB53DD3D2B3F780C9E5CAE /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48C2EBE755E3EC2089D8FF950E47CD7 /* Int+Timepiece.swift */; };
 		404505783FB738639ADA66A98E1C9219 /* WorkshopSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D914EB0DCDA89B3670232C0D925C13 /* WorkshopSessionViewModel.swift */; };
@@ -92,88 +94,88 @@
 		41093078E4FBEAD054A947A5A33773E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91561755655F1EEE731D9E927BD67FE2 /* Foundation.framework */; };
 		41D85A37EC76F8A7AD5A8BA840A8C9B2 /* PagerTabStripError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E188809C69F2890638F92E5D157886F /* PagerTabStripError.swift */; };
 		42F3C67E5D5299FE5C4CA3CAC7B7953F /* Bundle+TrySwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A366B261251D55439228C8CA0E53E3 /* Bundle+TrySwiftData.swift */; };
-		432D39DD44E249F08B6989A4F5B303E0 /* announce1.png in Resources */ = {isa = PBXBuildFile; fileRef = 52FD9FC876F9666174FB2C85C050B708 /* announce1.png */; };
+		43C6FA457A16D0E9D0B7996D6A85E925 /* bento2.png in Resources */ = {isa = PBXBuildFile; fileRef = 46DAB20F418D6B0D655A119BAC30081C /* bento2.png */; };
 		453CE2D2F98186B1CE6BDFE6FE0B4D52 /* Date+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063147C27DF465781BA68FF766575284 /* Date+Timepiece.swift */; };
-		4546FE7D3C79A7BD35DA0C69D4022047 /* breakfast.png in Resources */ = {isa = PBXBuildFile; fileRef = 706ED28222E807AB6A50F359429CAC95 /* breakfast.png */; };
-		4579176366067FBCB91DDC64FAB51754 /* harlan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5A0D0FF205CE87BD2F4B789656E48188 /* harlan.jpg */; };
 		45C9F1452FEBD920E1B1B987D4BD4C8C /* RegistrationSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A0455B7A72D79D0211A5EB1C763052 /* RegistrationSessionViewModel.swift */; };
 		45E7D8EB3AF974C3611AA02E9AFEBDDB /* SJO2018Speakers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C19B97CCE2505575F39BA73270843 /* SJO2018Speakers.swift */; };
 		4838414EEE290F193CB3187481057957 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657CC6BD5E6B22EEE7589247BF6C5E4B /* UIKit.framework */; };
+		48ABDD6CBEAB37CA58D36E8136C71EDB /* garric.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDC37B2EA0C27F6EF2F34E7C92BA5D8B /* garric.jpg */; };
 		4913D146C8748F61E2F0AA6A99E2ABC4 /* PartySessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B6E718993C23B89EB74F9D5D08F19 /* PartySessionViewModel.swift */; };
 		498DC29155467AC093701C1AF5EE3807 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86EB140AEB9B52666DDB85BB174C811 /* Placeholder.swift */; };
 		49DB3FE30A62FE3DBE12A59070224E0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09B23CBD138A2E13475947D3FCFFC98 /* Foundation.framework */; };
-		4AA780EF2F4D6F189A4BD86D45EFAF79 /* dinner.png in Resources */ = {isa = PBXBuildFile; fileRef = D8526CDFA6D2BD1C943D514B647B06AF /* dinner.png */; };
-		4CEE1B399EC3C4B0365797F6EF40C7D8 /* Logo_SJO.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E0C8AD319C5D5BD59CEB440E21B5CF8 /* Logo_SJO.png */; };
-		4CFD25586BAEF0E50B2B0A13D99395D8 /* rikoPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 494FF444C723DEB09C150272E4E71814 /* rikoPurple.png */; };
-		4D2C73CB1DD0A99CE53AB07E7BCC130D /* announce_nyc_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F3AACECB2E6613E3FD43376CC97648 /* announce_nyc_2.png */; };
-		4E7EA839CCEC4EC732F935DE57B3BBFB /* breakfast.png in Resources */ = {isa = PBXBuildFile; fileRef = 706ED28222E807AB6A50F359429CAC95 /* breakfast.png */; };
+		4FC75662103448519383DBE2CD2A4B4F /* Logo_BLR.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5FC977150C1357715760E2A620A3E7 /* Logo_BLR.png */; };
 		4FF4EC504BB37E7189E3BF10E6AF34CC /* String+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F62DBB990D38D08F1E80AF483145EC /* String+Timepiece.swift */; };
-		5073EC1EBE85D306BB818C870E7E5CEB /* eric.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02EA35EF8F53CBAE65B45B454C0A994E /* eric.jpg */; };
 		509A5621DAB44B06929B30ACCA7CA598 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DED8C0AC914E176F4461FBEAAC447A7D /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		525DC7D49AF8947C918F629A35919AE8 /* kostia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25C34B80B180348AE827D1D7E7AE63C6 /* kostia.jpg */; };
 		527AE356580A138D481E168D9120951A /* LunchSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5A1CBD87B5B33CA62E8A84F059C626 /* LunchSessionViewModel.swift */; };
 		52C169D500220D38CA87ADF017FDBB58 /* SJO2018Speakers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C19B97CCE2505575F39BA73270843 /* SJO2018Speakers.swift */; };
+		53DBB9D006753A96976DDBED99BAA794 /* announce_blr.png in Resources */ = {isa = PBXBuildFile; fileRef = 905AF7051B71501D17474BFFDBCE08E8 /* announce_blr.png */; };
 		56387B9445FA0DD1D7CCD549334EA3A9 /* FXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC662A80F084218A6181DE4CD33F10D /* FXPageControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56C8CA43AFFE1B70D9BE91C15B7D9B47 /* fumiya.png in Resources */ = {isa = PBXBuildFile; fileRef = 2204BC9610F6A978D0A5A8BD2CEA3294 /* fumiya.png */; };
+		563E45D6F7BD761E7C96448528EB8C04 /* WatchLogo_TKO.png in Resources */ = {isa = PBXBuildFile; fileRef = AE3358F8365C4C2E900BD6C1A14DE13B /* WatchLogo_TKO.png */; };
+		5694FDDAB02657E67252674A2AFA1F76 /* Logo_NYC.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C87EEF7E65E092020DB1D7D1A08E406 /* Logo_NYC.png */; };
+		577BFDF969A784F7AE3FCC2F1FDFEBB2 /* eric.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 645EEF77193595B27160971961BF9B08 /* eric.jpg */; };
+		5879AF453D594DFD48CAC0EB45E41A19 /* bento1.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C8A4CA7C7EDD8FA3D426D03B49AB7 /* bento1.png */; };
 		5A1E6FC4FEF0197EBCA62E1F1EC771A5 /* SessionBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52070EC1565936BE4088FC42FDB6348B /* SessionBlock.swift */; };
 		5A3D97343FBFE44DFC502FDC2D79247E /* String+TrySwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931792622C28D1F2706456029E8F9905 /* String+TrySwiftData.swift */; };
-		5B988A22D6EFB5529087DF67B51D5224 /* vaish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43058FD6858331E38EDFB4C5D68C1FD9 /* vaish.jpg */; };
-		5CE2E08B32951EEE33EA9C93CEB5DCD9 /* dinner.png in Resources */ = {isa = PBXBuildFile; fileRef = D8526CDFA6D2BD1C943D514B647B06AF /* dinner.png */; };
-		5D9B522DA0F8D26AB1CCA36096BA8331 /* WatchLogo_NYC.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC7FD25C9095A80573992524E37579 /* WatchLogo_NYC.png */; };
-		5E1E3D6F2D4C8FAC80D4C180C0E35E32 /* hilton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9415D2659A5A2AB4FF24F4D783136CA4 /* hilton.jpg */; };
-		5EE0107D25CCB1E08DC6D628F7BDEED8 /* Logo_NYC.png in Resources */ = {isa = PBXBuildFile; fileRef = 45443737300C668D7DCF28966E633B76 /* Logo_NYC.png */; };
+		5CE6A6C6FA7C018016D39196FA6F71AC /* kostia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A72BDC0F0D7D18463EB570116F976FE0 /* kostia.jpg */; };
 		5EFCFC598E95F29CD6391AA5500BCB95 /* OfficeHoursSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AA79974B88C1B4FFE439502139E57 /* OfficeHoursSessionViewModel.swift */; };
 		5F13D1610BDE65F71098F95D85DB2014 /* Date+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041D417A9322A542804A5AADE604140 /* Date+Timepiece.swift */; };
 		5FE70E2F5C476B1F70C9633BDEAA1C9D /* Conference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCD182C0147C10F972C987F067BA74 /* Conference.swift */; };
+		601DFEA05482F0952BE7324B75ED169E /* hiroki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26643BD7D0C7AECCF457F4AD35201492 /* hiroki.jpg */; };
 		605C23448775AD91C78BC5F78DA8CED8 /* SJO2018Sponsors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D5EB5B5B8B6071DD4836FBD6D45CF /* SJO2018Sponsors.swift */; };
+		61AEC0A3BD5D0FB7CD089D80CA606A3C /* alvin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2A58F3EA735777A2724C8231A34A52B /* alvin.jpg */; };
+		622DFCB3BC3D005C2F02576141FC8845 /* party1.png in Resources */ = {isa = PBXBuildFile; fileRef = FFFDE76AEBE680257EB8446D55E26DB2 /* party1.png */; };
+		638287B915417CB581844157D994C8FF /* yucovin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F111F4C6614254A37B24CA3C1B7B308 /* yucovin.jpg */; };
 		6486781D756A9D71FE5C6E56CC9A343F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EA7331687151FA2916F1372956AE2 /* ImageCache.swift */; };
 		65300F438379FC57E6D2FAF61883CA12 /* SessionDisplayableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F65EBCA66B76F06F3D878395F0124C /* SessionDisplayableProtocol.swift */; };
 		66AC0C7CE70B1A3D6A1B70DE5C789BED /* DateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA309221322DD81ED7466A59D055A6F /* DateComponents+Timepiece.swift */; };
 		66EC33C4A6FD83A5AF780BD0C2D7B157 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4A351F51DB900A42BA0C5A24C5F88 /* BarView.swift */; };
-		67491341361F9BB57DCBA7579F809DA1 /* announce2.png in Resources */ = {isa = PBXBuildFile; fileRef = F50A9CABFD692D15D19D0232500A1486 /* announce2.png */; };
-		6791EB468A3BB10A07A54138EB83E02A /* alvin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE819DD6310E35514899A0E5308E1A2C /* alvin.jpg */; };
-		6820A77EEB38EE4580D660FB238B5D54 /* vaish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43058FD6858331E38EDFB4C5D68C1FD9 /* vaish.jpg */; };
 		6859FC08B103D2A58CF4A006D17CAAFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91561755655F1EEE731D9E927BD67FE2 /* Foundation.framework */; };
+		6AABA44FB2E9E30849483CC41C0F29D5 /* hilton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFB25E298178C8E8AE3C3764991F1D44 /* hilton.jpg */; };
 		6AC78C19651D96C5E7DB96469CA1EC65 /* SJO2018Sponsors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1D5EB5B5B8B6071DD4836FBD6D45CF /* SJO2018Sponsors.swift */; };
-		6C3D9CCDFE9CC9CBB57E509DB4D0D5CB /* donuts1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A827370F0D8C5F62890DA5DC3A180 /* donuts1.png */; };
-		6CE32623E240101235BCEEF1DCA843E2 /* WatchLogo_TKO.png in Resources */ = {isa = PBXBuildFile; fileRef = B39C02AA1A63F451E10A8CAC4C1C5C94 /* WatchLogo_TKO.png */; };
-		6D45E5BDA10EB9871F3A1F1F1DF0C9FD /* fumiya.png in Resources */ = {isa = PBXBuildFile; fileRef = 2204BC9610F6A978D0A5A8BD2CEA3294 /* fumiya.png */; };
+		6B36A6A3DF7FFD2F355717F3E8F5647E /* vaish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07CAB469BA3FD0A79F6096B131E42C2F /* vaish.jpg */; };
+		6C63786B384A7C8A4F32B14395ABFEED /* TrySwiftDataLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F26850F3D676264900D804D3A9338A4 /* TrySwiftDataLocalizable.strings */; };
 		6DFB36612F6782ED25C9C606B71797A9 /* PartySessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7B6E718993C23B89EB74F9D5D08F19 /* PartySessionViewModel.swift */; };
 		6F5BEC8377865617C362F1E880A9CD5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC154FA49ACEB22B9D96BC830BE556E /* UIKit.framework */; };
-		70ACF050B80AA02C033FBA7A0B9CE662 /* garric.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE6F490334F9FDFA90C19D54E074E392 /* garric.jpg */; };
+		6FD02E35125A3BAC26420B635BF0A752 /* bowling.png in Resources */ = {isa = PBXBuildFile; fileRef = 018170D95A83337921666540C57B1BE8 /* bowling.png */; };
 		7159E42D4A73579DA7786A9B42CCA51A /* SJO2018ConferenceDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8567FE99186856EE071A173ED63F9C8E /* SJO2018ConferenceDays.swift */; };
 		71758DA9F467D90A1FF0D1A8BB7A38A7 /* String+TrySwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931792622C28D1F2706456029E8F9905 /* String+TrySwiftData.swift */; };
+		73396E55606B82438B31A7F2754E89A2 /* Logo_TKO.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E752CBF46FFA28AA85D4F8E9B18A826 /* Logo_TKO.png */; };
 		75957667828EA89180858396A55763F4 /* Acknow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFBD97B1DD20A5C0B4E2A643FB7D088 /* Acknow.swift */; };
 		76AE779AA5B88AF653982D7F97FA139A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91561755655F1EEE731D9E927BD67FE2 /* Foundation.framework */; };
-		77F2982A85DFFF4265F85F2D8A3CD2AE /* kostia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25C34B80B180348AE827D1D7E7AE63C6 /* kostia.jpg */; };
+		77A1ECFAC97328F8A2FC00DF7B08782F /* breakfast.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA20D7A4F65081704CECA15CE474083 /* breakfast.png */; };
 		7932DDD093D9D3DA9F5DA411A2D5B4E6 /* ConferenceDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EDCBF111CCDC071D67BAC1A45914C /* ConferenceDay.swift */; };
+		7AF0B2B499DC7FE47FA229856000BE73 /* kita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F63225A43790B5DC92E428F882EF083 /* kita.jpg */; };
 		7B2A61E55C43E9B12E5B7DD852456AEE /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68E0118263F6720467DD617D5E65CB /* ImageTransition.swift */; };
+		7C8828E8B8A0B58B0A38BBD1A66F861B /* bas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B95F552F58FCA132179D165ACC51DC65 /* bas.jpg */; };
 		7E148B861F15FFC1ED342312477152D6 /* TrySwiftData-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 969010D6AC57573A0C2383E5DCB2184B /* TrySwiftData-watchOS-dummy.m */; };
-		7E6F08347EB722C91A10661BAAD25614 /* announce_blr.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DD8E7BCB7E36B38B67DA2191974D7ED /* announce_blr.png */; };
 		7EB5276F2777EDCE1C0DE50E38E5F9C6 /* TalkSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73469CE52F9823F4FD351A9B5A1244BF /* TalkSessionViewModel.swift */; };
 		7EDE437BAB7D0A9B64D28D641AB18831 /* DynamicColor+Deriving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255DAD0756255D5C6890A76D3F969694 /* DynamicColor+Deriving.swift */; };
 		7F0AAD2F8E01EAA6E6B3B1ACF7C0A4D3 /* DynamicColor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E31861F8B8DD5E4B6A1B0620B5BE0EF /* DynamicColor-dummy.m */; };
+		7F7877A8DFCE48A4EF9C8C46DBF7C059 /* vaish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 07CAB469BA3FD0A79F6096B131E42C2F /* vaish.jpg */; };
 		820F3B2BFB2D7570271C7BB602BF810E /* HSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F3FF71758B8AEF07BA9D30B308159D /* HSL.swift */; };
-		835B00ACDDEF53F12A67FC03676F7A78 /* WatchLogo_NYC.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC7FD25C9095A80573992524E37579 /* WatchLogo_NYC.png */; };
 		84138B06EC1E860EB57C0DA84893E595 /* SJO2018Conferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6588E5F1E3069B28F155D956E34E83C /* SJO2018Conferences.swift */; };
-		85A11ADA81472DD0677F7149AFE96BFB /* hilton2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40593251AF5B3B47C2E9D38846BF93E0 /* hilton2.jpg */; };
-		868E7506133F0C976914CC8F8FE45420 /* Logo_BLR.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DAE58A381487E809A57145B68EBC88E /* Logo_BLR.png */; };
+		8533049B4ADE10C33333ECB446F322B7 /* hilton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFB25E298178C8E8AE3C3764991F1D44 /* hilton.jpg */; };
 		87E103AE0AB2864E183DAC2517090B91 /* Pods-trySwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 56701385D7A2E846159944DA1195F56F /* Pods-trySwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87E612C7CE2B2F5953DFFE32C0C3959B /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72DC50AE863FFFE74386AC30686B27A /* Array.swift */; };
 		89A340684F32ABABF0B4187E692B02BE /* DateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA309221322DD81ED7466A59D055A6F /* DateComponents+Timepiece.swift */; };
-		89A35CD24BDABBB8CC54223A99236385 /* TrySwiftDataLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F17C4349235A4EDE1E608506FF904C6C /* TrySwiftDataLocalizable.strings */; };
 		89DF36142CDDB063CBB93F17A48EFC5F /* XLPagerTabStrip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7014363E5BF05DF38FAEC443E6EA86 /* XLPagerTabStrip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B30AFB5C6465DC595C42A4B0B97598B /* bowling.png in Resources */ = {isa = PBXBuildFile; fileRef = BD02EC5C4577BB8F6495101D00DA6E5F /* bowling.png */; };
+		8A2A3F76D76D12D59D54FB1699C4FC33 /* twilio.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D14DD7E47F6F704E669507A9CAA63BB /* twilio.png */; };
+		8C3B752D4CFE3B1CA048C37E8DFE5DDD /* takeru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8243DF5F6C16835745E06FCF195ED83A /* takeru.jpg */; };
 		8C88192665B576B449BF9CADEA968BF2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51463977B8FAE648A7F6722AC6E69A8 /* Location.swift */; };
 		8E6887ADD4B7DB379281A77D79F44D4E /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58A09C6E2F1D6F97CC31555166EE79B /* Sponsor.swift */; };
 		8E855438EC879A36479B8FBCCA66F2E9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51463977B8FAE648A7F6722AC6E69A8 /* Location.swift */; };
 		8F18F1A055784BBDB6E5C6D674D6E1DF /* DynamicColorSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62027C889DB6E7E7E7683BF6DE3574F6 /* DynamicColorSpace.swift */; };
 		8F680349A03532C2790865B240F11348 /* PanelSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6D5D3CD3AB1FE7B0C0E1948091250 /* PanelSessionViewModel.swift */; };
+		90560AF4EC6C0F404352E1C146D822AA /* bento2.png in Resources */ = {isa = PBXBuildFile; fileRef = 46DAB20F418D6B0D655A119BAC30081C /* bento2.png */; };
+		9134E1208A6CF571825C619526E79E32 /* WatchLogo_NYC.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B901E631CC228E3DD149F51EEC3D694 /* WatchLogo_NYC.png */; };
 		92CCCC3E5836392EC230E18C372FB1C4 /* SessionDataDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C952CCF5669827C008B84A6E16FC90 /* SessionDataDefaults.swift */; };
+		92ECA0FEF2DA95EE5EF76EB746567019 /* announce_nyc_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F2340EAFF838D29D4FBCE24810D00684 /* announce_nyc_1.png */; };
 		931FADAA9D2DA60EEDECE9DAE9980E38 /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C566F361EA7552D0752F4640D77F9718 /* SessionViewModel.swift */; };
 		9357B4C4275E55E4CF27C32C9DF420A4 /* BreakfastSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA921D7EBEC2654BC681EE325A4793 /* BreakfastSessionViewModel.swift */; };
 		9370A4A51A301094F3576C3CB1D2DB39 /* SJO2018Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD237D45D69AD8DEAEB5F19A7D378A1 /* SJO2018Locations.swift */; };
 		9400DBA1881CEC5D8BA22B102EEDBCA3 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1568F44A84F26FBDB2A477F9A79808 /* Venue.swift */; };
+		941D79CAD71BE8EE1C308380C2A6BC88 /* Logo_SJO.png in Resources */ = {isa = PBXBuildFile; fileRef = D5351ABEEE9D8D0FDA14B98795153F83 /* Logo_SJO.png */; };
+		9444BC49EDFE6029DB8BA26F10A2B70D /* rikoOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3553C06179DE6ECA65AAB84DFF9DCA /* rikoOrange.png */; };
 		949719B934505EAB3845037434222C7D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED40CEDE12FBCEFE4A2945AAB966 /* Event.swift */; };
 		94C89AE4A8F1A4EC4EB6308DEF741E99 /* BaseButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6749ABEB05992C77BC7F661CD728E1FC /* BaseButtonBarPagerTabStripViewController.swift */; };
 		94E05800B45D42F5A99709546E1F4FE2 /* Timepiece-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 411D938485342FA7DEEA918E42F41B00 /* Timepiece-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -181,102 +183,104 @@
 		95703F985B347F70AD25BF8AB6F3A9F5 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED40CEDE12FBCEFE4A2945AAB966 /* Event.swift */; };
 		967A7206DAF7E7200B45125EDFC25839 /* ButtonBarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6892477E70DB42438DDAF03A99083CC7 /* ButtonBarViewCell.swift */; };
 		9697EC87FB37444787A8A2EF3794CB6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91561755655F1EEE731D9E927BD67FE2 /* Foundation.framework */; };
+		96A660B34A2B683FF7EA152E5DA531D3 /* jp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73A7183AE7B3C06E1F3C337D16C14908 /* jp.jpg */; };
 		984171C228C5906749423D8FD46FC780 /* DynamicColor+XYZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325C9A7D342BBDFF0BA617BA8F8B1D02 /* DynamicColor+XYZ.swift */; };
-		9A036CA8897DCF0A14F5A57B529EB84D /* alvin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE819DD6310E35514899A0E5308E1A2C /* alvin.jpg */; };
-		9B1463CFFF7D842E2D31691CA753CE78 /* Logo_SJO.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E0C8AD319C5D5BD59CEB440E21B5CF8 /* Logo_SJO.png */; };
-		9B171FF73A6F0FCF5F4B97FECEEBE890 /* hilton2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 40593251AF5B3B47C2E9D38846BF93E0 /* hilton2.jpg */; };
-		9CBF313978AF666479433DAA809710EF /* jpmarthajp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E25481DB240A993DF8A1326A6E4388E5 /* jpmarthajp.jpg */; };
+		9C04B8AB839641E49C257F121AABDF75 /* chrislattner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BB8D1DDAE4331E4501C3E49C7553A029 /* chrislattner.jpg */; };
+		9C856495A253950238DEB037C8018BE8 /* donuts2.png in Resources */ = {isa = PBXBuildFile; fileRef = A06A27D05334BCC5E81108031DC97480 /* donuts2.png */; };
 		9D298CA21EDA44ACAC5C07B464074DC8 /* LightningTalkSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3F7B6A361FD161B7452E37C225505 /* LightningTalkSessionViewModel.swift */; };
 		9D782865F8D1D78E7425D1F9C12D890F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91561755655F1EEE731D9E927BD67FE2 /* Foundation.framework */; };
 		9E1A41D3F7B52841CAC5D2FB15AC3BBC /* SJO2018Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB71629BB5146A61A615D06CA6C3FCC /* SJO2018Events.swift */; };
+		9E261C14C7C758796D462374CBEF2A71 /* natasha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE9E72CA221B87B53783647CBABC4EBF /* natasha.jpg */; };
 		9EA8206C719D7E3AC0CBE315466AD8AD /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21BB6B15AC6F42DC8C98EDAEEAEBAC7 /* Speaker.swift */; };
-		9FC4305518EA70BD36ED09E35DF2CE4F /* announce_nyc_1.png in Resources */ = {isa = PBXBuildFile; fileRef = BB6085DDFB74510A3D2EB7610F6F1CB4 /* announce_nyc_1.png */; };
+		A0AC5569989A7AE80AB69E0FE2FA97E0 /* donuts1.png in Resources */ = {isa = PBXBuildFile; fileRef = AA11EA8C95894E03A8A3B86CECCAF411 /* donuts1.png */; };
+		A1A7FCA5FD314312C402765A12A727ED /* breaktime2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBD952CC3BE29CEE4D84A34A8E391E8 /* breaktime2.png */; };
 		A2A7A90F22750AC934A4F87579990B83 /* DynamicColor+HSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B52B87295E862ECB0896539518B06C3 /* DynamicColor+HSB.swift */; };
-		A3D9F258B8AC8B68CD08F8FD3AEC97D6 /* donuts1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A0A827370F0D8C5F62890DA5DC3A180 /* donuts1.png */; };
-		A5692C83C292F29D31607513B1D29CC5 /* bento1.png in Resources */ = {isa = PBXBuildFile; fileRef = 312C6A4286996F2C3F22FE695CED9203 /* bento1.png */; };
+		A49F2D6C2FBB71A18674BB599CAFDFF0 /* breaktime1.png in Resources */ = {isa = PBXBuildFile; fileRef = A805A6591337A6072F5344D60EDC2DED /* breaktime1.png */; };
 		A57EC39B3738DFAC7FE66AE1CF235BBE /* Pods-trySwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E65A36EDC358E8536C08E86147E94D2 /* Pods-trySwift-dummy.m */; };
-		A5AE61690D576D6466148C310D69E942 /* rikoOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C7CF65FBAA00619146EA85799E09B1 /* rikoOrange.png */; };
 		A5BFB943657D84EC94A24756D52B1913 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80003175E7A562347526B34099E98A48 /* Utils.swift */; };
-		A7466A99F631BCA72984C660AEF26B69 /* Logo_NYC.png in Resources */ = {isa = PBXBuildFile; fileRef = 45443737300C668D7DCF28966E633B76 /* Logo_NYC.png */; };
 		A7612F7A21F47F1F0CBB1F719E16547C /* PanelSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B6D5D3CD3AB1FE7B0C0E1948091250 /* PanelSessionViewModel.swift */; };
+		A79A2919629A9AEA7F4D4C0263A736D8 /* rikoOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3553C06179DE6ECA65AAB84DFF9DCA /* rikoOrange.png */; };
 		A88EDECB4BA5F48E21E2DC7F3D760382 /* AcknowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF73F1FF89998083939928DEC39BFA85 /* AcknowViewController.swift */; };
 		A8A79840E81BFA3D8DCC29BE71F1AEC4 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F246A46B04FA857A59E1BA46F3AA89E /* KingfisherManager.swift */; };
-		A9037AEEEE7D3F670CA9087CB54CFABD /* yucovin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFE9609654FBBBCA225A08CFD731C2EF /* yucovin.jpg */; };
 		A9CD0587A8238597C591E591356FA547 /* TrySwiftData-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D786C678489E95837D51418C8644D2D /* TrySwiftData-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9D2A6547EE5F6532EF8D1F1870BF158 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DCC1531F38F9771EC00864D2C24B2D /* CacheSerializer.swift */; };
-		A9F285C93D847AD5B200073681A91C17 /* natasha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 189FEFE2DB1BF6B234084F6F5B652DF6 /* natasha.jpg */; };
+		AB2D28B237760E0493AED29FDE35EB9E /* announce_blr.png in Resources */ = {isa = PBXBuildFile; fileRef = 905AF7051B71501D17474BFFDBCE08E8 /* announce_blr.png */; };
 		AD67828AA17492A5BE9D2D0E1DF8D144 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC154FA49ACEB22B9D96BC830BE556E /* UIKit.framework */; };
 		ADB26069EA3DFF7AB3923DAEEB8CE5E2 /* MeetupSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E542F96313C26624D0C9F29525D23506 /* MeetupSessionViewModel.swift */; };
 		AE0781C6A6F2E596A7B8F892C07EDE52 /* Object+LocalizedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E431D9F50A063BE6D8991EA678D9EC81 /* Object+LocalizedProperty.swift */; };
+		AE8963D9C962513C4EA56929DE9C5DE2 /* party2.png in Resources */ = {isa = PBXBuildFile; fileRef = D13888AD0EEF04D95766E866BA5D660E /* party2.png */; };
+		AEB3AF9C611207BF461EC45E63E0D284 /* harlan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C827C435064E86F4EFB4554021EF69B /* harlan.jpg */; };
 		AEDFA9AB8D25A35987E86AC6DD536198 /* Pods-try! Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C7938F75405D94758A4CFF28EA3D37 /* Pods-try! Extension-dummy.m */; };
+		AFFDF84A4EC2AC965B32CB780B99F714 /* rikoPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 19DFAA2B2EDC6378773CA1AC5C6DC974 /* rikoPurple.png */; };
 		B1BA5531773F657B57DC51B84A50FBF0 /* WorkshopSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D914EB0DCDA89B3670232C0D925C13 /* WorkshopSessionViewModel.swift */; };
-		B218A99FB1FFE89C013457F9D33D8525 /* party2.png in Resources */ = {isa = PBXBuildFile; fileRef = 089899CB51C0650A91499A66708CD125 /* party2.png */; };
 		B36920E41538CDEFCDE48FFB96D0D4DD /* SJO2018Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD237D45D69AD8DEAEB5F19A7D378A1 /* SJO2018Locations.swift */; };
 		B42AFC89531E5E802E7DF80EF62AC51C /* IndicatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90DAEE510826AE9AD6E924D188AEA12 /* IndicatorInfo.swift */; };
 		B46A70091989688E5EE39520A5095C3C /* TrySwiftData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F173E24C330937039B41A8D349FF346A /* TrySwiftData.bundle */; };
-		B4A7A541525DF4D29B7A78A86DC44BB3 /* announce1.png in Resources */ = {isa = PBXBuildFile; fileRef = 52FD9FC876F9666174FB2C85C050B708 /* announce1.png */; };
-		B4DAD1805265E1E9AC103DC028639852 /* rikoPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 494FF444C723DEB09C150272E4E71814 /* rikoPurple.png */; };
 		B564B930C3B6CCFCC109ABF374B21CE6 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5067187C2622186FEAC95B8FAE815EBA /* ImageModifier.swift */; };
-		B5C62F902D2B977B904533B74945C8CF /* party1.png in Resources */ = {isa = PBXBuildFile; fileRef = 533DD63F27B75CAE7107A19B95BA0961 /* party1.png */; };
+		B5FF7FC413B7B5579BD31EC9EF40F135 /* breakfast.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA20D7A4F65081704CECA15CE474083 /* breakfast.png */; };
 		B700F466A00F823B8BA8CE0451AE6B78 /* ButtonBarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0228CFFF9C257F5E8BF0935B417359E /* ButtonBarPagerTabStripViewController.swift */; };
+		B70202401EBCC664156729F0EE900733 /* pushkar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF184F43441AE0F0433FD0C649AC1B68 /* pushkar.jpg */; };
 		B81D79C7EDA8F449E7C78C2E82A16EC4 /* PagerTabStripBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722AE991928D7A5AC831A488664E453 /* PagerTabStripBehaviour.swift */; };
-		B87C39599BB0E21C50B8B8DA09F1F998 /* kita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 257CA5BFEA2D1A69CC28507AB8F2FF01 /* kita.jpg */; };
 		B924069CD75769E22765912C66A87BF3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554CC9B14AE93E436CA07E44F8F86D92 /* Image.swift */; };
+		BA16B662B16E2B962C2D989B46F66E8F /* hilton2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 53FD03F61E7DC9E68070F49B136D41BB /* hilton2.jpg */; };
+		BA39A87F9FA505119EE88CD0FCD1DD1F /* Logo_BLR.png in Resources */ = {isa = PBXBuildFile; fileRef = AF5FC977150C1357715760E2A620A3E7 /* Logo_BLR.png */; };
 		BA4DF38E820FF6B40FFABF8B1BBCC615 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 262BE2CAC37378318C82F9AA1D4514DD /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD62A41CF12D82060DCC326BC9E7E0D8 /* Int+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48C2EBE755E3EC2089D8FF950E47CD7 /* Int+Timepiece.swift */; };
+		BE326D50EEFB5F85B8D9EEDDB8A268BF /* announce1.png in Resources */ = {isa = PBXBuildFile; fileRef = A16525A1262EA304B5E662824E6CD0F4 /* announce1.png */; };
 		BE9FB5E8188E0B68DB277B09A06E79BA /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65B1A4528CDEEC5AA2E1AEE2DBF62A /* ImagePrefetcher.swift */; };
+		BF85BC719D096255D9C69E56D9583170 /* bas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B95F552F58FCA132179D165ACC51DC65 /* bas.jpg */; };
 		C087D84651DC278417E2AF06D10FC0D4 /* Object+LocalizedProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E431D9F50A063BE6D8991EA678D9EC81 /* Object+LocalizedProperty.swift */; };
+		C0FE94F27E5197515FFCB1CEC6AA5413 /* kita.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F63225A43790B5DC92E428F882EF083 /* kita.jpg */; };
 		C1714C0393644642338BA89A3B7A9B4D /* SJO2018Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB71629BB5146A61A615D06CA6C3FCC /* SJO2018Events.swift */; };
 		C1ACF851719AC22E3F1C109AC255582D /* Timepiece-watchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F07502FA4E68C90C5B7657DC32C86A61 /* Timepiece-watchOS-dummy.m */; };
+		C1BADE37FF92720F342E73B667D9089A /* yucovin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4F111F4C6614254A37B24CA3C1B7B308 /* yucovin.jpg */; };
 		C1FF0935793DF9687A9A4A040740ACEB /* XLPagerTabStrip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 276112720D1429F26EFB5A87EBD7F246 /* XLPagerTabStrip-dummy.m */; };
+		C226FE645ED781B2CECFC525E543FC88 /* Logo_TKO.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E752CBF46FFA28AA85D4F8E9B18A826 /* Logo_TKO.png */; };
+		C2AFA7E3608EBB369B3D7C277CC087A6 /* breaktime2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BBD952CC3BE29CEE4D84A34A8E391E8 /* breaktime2.png */; };
 		C32C7FE70764DE37935F6A5D80CB17C7 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C87752EBF2EDDC520CD2D58CCBA950 /* RequestModifier.swift */; };
 		C3F8EB92E302F1C29C605825A2B800D9 /* MeetupSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E542F96313C26624D0C9F29525D23506 /* MeetupSessionViewModel.swift */; };
 		C57B5C48FCD2EF32EE37550673640BF7 /* DynamicColor+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC27BD09495A995C5972BDAFC994BE1 /* DynamicColor+RGBA.swift */; };
-		C6A11FAAA5ADC14308FA87158D1FAF78 /* pushkar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1F5AE6C66FA6721D1163BF73FC4C07C /* pushkar.jpg */; };
+		C6BA71F2AAB5588FA28FBF1588667B21 /* Logo_SJO.png in Resources */ = {isa = PBXBuildFile; fileRef = D5351ABEEE9D8D0FDA14B98795153F83 /* Logo_SJO.png */; };
+		C86D8E85D2DE6A025E4701D46CDB7F99 /* fumiya.png in Resources */ = {isa = PBXBuildFile; fileRef = 69F7C9165B6ACE86E4122242DAED6C37 /* fumiya.png */; };
 		C8D214DB566A9C330FD793E2ED4D6B35 /* AcknowList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FA435472494223942D2874250F7BB6 /* AcknowList-dummy.m */; };
 		CA78011A50189BC57FA306BF1E2B2C96 /* Organizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6592C3195452F95F93C13A2F0F30D3 /* Organizer.swift */; };
-		CCC648D1190000BB93387CB0B989DF67 /* natasha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 189FEFE2DB1BF6B234084F6F5B652DF6 /* natasha.jpg */; };
 		CD5432C31F6593FED718329515F32357 /* CoffeeBreakSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E992B091D09802A9D9C614E24C85D7C /* CoffeeBreakSessionViewModel.swift */; };
 		CE334ADEE7885C533A566621E5E24696 /* Date+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063147C27DF465781BA68FF766575284 /* Date+Timepiece.swift */; };
 		CE38861F1268294930C074FC3F807E55 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826AF35827BE3E9BF95862F23772B611 /* ThreadHelper.swift */; };
+		CED996473A70604077218D29305E5E71 /* lunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B7F5422D2862CF4A0D79258960CC338 /* lunch.png */; };
 		CEEB7C897409C08DF53289E307AB987C /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58BDFA37FF3912287C175F2B8926520 /* String+MD5.swift */; };
-		CEECAF1B41A397C7309932EA08F6F453 /* hilton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9415D2659A5A2AB4FF24F4D783136CA4 /* hilton.jpg */; };
 		D03E909EDD06EF18ABD9867FD9D116BF /* SponsoredDemoSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70644FE83179D2835CB73E273A53DD6B /* SponsoredDemoSessionViewModel.swift */; };
 		D1575AAADDCEA395E3828EBAC2A772FA /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D88EE42E1BE9F42BD5F947DEE5C1BA6 /* Box.swift */; };
 		D1F130FA14EC228FF42EBBEFA0895D79 /* TrySwiftData-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1595459A1F1E8AE9D56CC37B76FBE7FC /* TrySwiftData-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D2356C48944EB2A4263F4CCB5D20F79E /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1568F44A84F26FBDB2A477F9A79808 /* Venue.swift */; };
-		D2609943CCA77F65E17CD90EA87B551B /* eric.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 02EA35EF8F53CBAE65B45B454C0A994E /* eric.jpg */; };
-		D2C773DBAEBE06CCA63E684DE287689D /* bowling.png in Resources */ = {isa = PBXBuildFile; fileRef = BD02EC5C4577BB8F6495101D00DA6E5F /* bowling.png */; };
 		D58C6C2B4597938DBF91AC40470C1360 /* BarPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91985F3087AE8D304DA3478725662A6 /* BarPagerTabStripViewController.swift */; };
-		D5E2082AE4A64B66008932716D439214 /* breaktime1.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A9A676E552C5956381C9BAD393C9C3 /* breaktime1.png */; };
 		D62D7F6F0018C839C0E84A639B06BA97 /* AnnouncementSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32769C1F1DB2DB1575A14205EB738696 /* AnnouncementSessionViewModel.swift */; };
 		D6643E2120D68ACA820755988CA9861F /* Pods-try! Today-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1417616E6279CBA43E4C615222936 /* Pods-try! Today-dummy.m */; };
 		D716D0C9ADE5E7A0A62AB4EF0FA56675 /* AcknowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB364181BCB997304A6B1B622ADD5AF /* AcknowListViewController.swift */; };
 		D7B8B350DD0AA0148D088AB4B0443022 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91561755655F1EEE731D9E927BD67FE2 /* Foundation.framework */; };
 		D840B43A6F32CAC971A827775C780D77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91561755655F1EEE731D9E927BD67FE2 /* Foundation.framework */; };
+		D89B44FC0769B1FCEAFFC24DF1026AAB /* announce_nyc_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EEBDEF9B4853DCD4B780C9483951B0 /* announce_nyc_2.png */; };
 		D970B556677109295CE9D0A5167326D5 /* SJO2018Organizers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B370E9246D48523E0C32893C44F90B8F /* SJO2018Organizers.swift */; };
 		DA7A5ECA4C0B39776007BE89B99227EF /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2F1C76C23C6EA637DF697E570C0CC3 /* ImageDownloader.swift */; };
-		DA8C50503D477A9E66E9293D686BF945 /* dave.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AB713DCCBC127029C7219F40E9301BA4 /* dave.jpg */; };
 		DA988B3F5F6D22E3FA66879E392BD085 /* FXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FF31A6EF3497B6D990514C259C926D88 /* FXPageControl.m */; };
-		DB2CBE332F560B14C3CAC68BA46CEB86 /* yucovin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FFE9609654FBBBCA225A08CFD731C2EF /* yucovin.jpg */; };
+		DB4CEC212AFBE4EECD0199BBCF707475 /* party2.png in Resources */ = {isa = PBXBuildFile; fileRef = D13888AD0EEF04D95766E866BA5D660E /* party2.png */; };
 		DBE0023C56ACE4F0056037A1D1C8FB09 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AE57F3F8A9C7E04CAF0A2A0A1598B8 /* Session.swift */; };
+		DDA9F6A59A9AA76FC869D52BEB0FDAAE /* WatchLogo_NYC.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B901E631CC228E3DD149F51EEC3D694 /* WatchLogo_NYC.png */; };
 		DE05C419F70778AEE5F04655CE434E49 /* SJO2018Presentations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E2DC99D082EF6FC8E282BF03245CC /* SJO2018Presentations.swift */; };
+		DEB09259AFFE1ACCC51569E44E9F0146 /* rikoPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 19DFAA2B2EDC6378773CA1AC5C6DC974 /* rikoPurple.png */; };
 		E1193C19776A2494621B322CBF9FB753 /* Timepiece-watchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CC334EC27661DADF89396991C2B96B /* Timepiece-watchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E16F0E05827DBED8F3442781B600D589 /* SegmentedPagerTabStripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91466D2B76F713E84D883CD318450690 /* SegmentedPagerTabStripViewController.swift */; };
 		E1EA151CDADA264396DCA6F4BB04AD6B /* SJO2018Venues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A51AFC6AD78F4AD5BD175D373A8B98 /* SJO2018Venues.swift */; };
-		E264E4848FAF4CCA2E792CBBA0A8350C /* bento2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B895E6AB3D55C97A808A53E9516967D /* bento2.png */; };
 		E2F6FDB4A4E9166CFBED7C443BBF349C /* AnnouncementSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32769C1F1DB2DB1575A14205EB738696 /* AnnouncementSessionViewModel.swift */; };
 		E320CB56392BCDB8D11F99B839EF08FB /* AcknowLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2B4E61B0DA0E3800CA9969BA746D3D /* AcknowLocalization.swift */; };
-		E3C0CB63484D70D3E2ACAA7A2E63F9A9 /* bas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D842F729FF08FEB8717A22CC4C0FD7F4 /* bas.jpg */; };
 		E42F8D52C9A1D84AEFBC92728D1A3C06 /* LightningTalkSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F3F7B6A361FD161B7452E37C225505 /* LightningTalkSessionViewModel.swift */; };
 		E51B576B12B14AA067F72990AF5A6AB8 /* DynamicColor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5B1B5ABA40903B0767D9E8597392FEC /* DynamicColor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E557C3262A9F92354165CB9A402FC28C /* ButtonCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 76FC41FED756BC209DBDC933709B2A7C /* ButtonCell.xib */; };
-		E5CEDD9EE73E6AD45828591D46D353B6 /* Logo_TKO.png in Resources */ = {isa = PBXBuildFile; fileRef = E1346530AF1ADA876B4CB5D3762FA88F /* Logo_TKO.png */; };
-		E65E931C3867FFEF33A5953794E51237 /* donuts2.png in Resources */ = {isa = PBXBuildFile; fileRef = E9921960B44DC5CE3DEE76E07243C0A7 /* donuts2.png */; };
+		E574810F5013DC9F757FF6ED2E1E99CA /* bento1.png in Resources */ = {isa = PBXBuildFile; fileRef = C94C8A4CA7C7EDD8FA3D426D03B49AB7 /* bento1.png */; };
 		E6BF82D174DA7E442C79B5D327CBBBC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC154FA49ACEB22B9D96BC830BE556E /* UIKit.framework */; };
 		E7D6D5E276493764F59C3B916C579C5A /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58A09C6E2F1D6F97CC31555166EE79B /* Sponsor.swift */; };
-		E808768F9D88FBA4D865D50B3CE27ED0 /* jpmarthajp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E25481DB240A993DF8A1326A6E4388E5 /* jpmarthajp.jpg */; };
 		E821DFAA0E2D3BC80C052535D772BA2B /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1AF7B44D841DAEAC9AD952C58A570B /* SwipeDirection.swift */; };
+		E86AB34D36A25F482CAAF1AD3831EBF2 /* announce2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9569096A37119E8674637E68A0AB45 /* announce2.png */; };
 		E9E5F082818BE1AA4722E77DD066450F /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EFEC09DCC42B745B17A209774E9F42 /* Kingfisher.swift */; };
 		EC9378C94BA3486BC7CFC184BE9D663D /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339AC5396155E7E8395D620D2913B029 /* Presentation.swift */; };
 		ECB2B29D5CAF4E55E72243E203CF5AA3 /* Pods-try! Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE513600EF7A14B6235F11A70BD6A1DC /* Pods-try! Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -284,20 +288,18 @@
 		EE633237E72BF1EFFF984E4CB0C756DD /* Bundle+TrySwiftData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A366B261251D55439228C8CA0E53E3 /* Bundle+TrySwiftData.swift */; };
 		EEC2160ADE2443B526BDEDD58AB4F037 /* SJO2018Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58D57FF9DD7F2360C7BBD44DA855D6A /* SJO2018Sessions.swift */; };
 		EED2DED24554E4B27BEDFF3D7B02B200 /* BreakfastSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCA921D7EBEC2654BC681EE325A4793 /* BreakfastSessionViewModel.swift */; };
-		EF50589F5E6FCF5A4A039A38CD6CA050 /* twilio.png in Resources */ = {isa = PBXBuildFile; fileRef = BBEBE3083098BB8FCAE18F64D35CB0EB /* twilio.png */; };
-		EFB6DF324D1C95786981FA35D58CBA70 /* garric.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE6F490334F9FDFA90C19D54E074E392 /* garric.jpg */; };
-		F1E82D1CE3BDA019AE9069154A2B8D72 /* jp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00F9B3645222E001C6500FEEE517A401 /* jp.jpg */; };
+		EED8762660B1182BC0E079B1567E333E /* david.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 225D31B2C35F987F79A858E1D453A11A /* david.jpg */; };
+		F28DF5BFF1C21D67B08ECD215FB46F28 /* Logo_NYC.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C87EEF7E65E092020DB1D7D1A08E406 /* Logo_NYC.png */; };
 		F41291584B07BC069571943C6972EE9D /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21BB6B15AC6F42DC8C98EDAEEAEBAC7 /* Speaker.swift */; };
+		F4C8E676D9F05312346F99ADA8AD0D8C /* natasha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE9E72CA221B87B53783647CBABC4EBF /* natasha.jpg */; };
 		F55A8146544F2A25230599C67AE23AE5 /* Organizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6592C3195452F95F93C13A2F0F30D3 /* Organizer.swift */; };
-		F5D83F63E81F63CCF672C1907C13C6AF /* takeru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC92BFF5802D4F930949EF9A94DEAF8A /* takeru.jpg */; };
-		F5E5730235A072E0B6AFA7BC12C5B7B9 /* announce_nyc_1.png in Resources */ = {isa = PBXBuildFile; fileRef = BB6085DDFB74510A3D2EB7610F6F1CB4 /* announce_nyc_1.png */; };
-		F6AF055B85C7E22020F3BD091FD51D46 /* rikoOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = 34C7CF65FBAA00619146EA85799E09B1 /* rikoOrange.png */; };
 		F7F351CFB2630FA336EC6635679A7E42 /* TrySwiftData-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8B8EFF04BA39C752A8DF94686CE1DC /* TrySwiftData-iOS-dummy.m */; };
 		F9B0E59B3D6F25F9E76DE4A11B0EE045 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339AC5396155E7E8395D620D2913B029 /* Presentation.swift */; };
-		FAB1253BDD1C859134A3E003D1A338A9 /* hiroki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC5D68C0C9FC64371A104A64A9B57F66 /* hiroki.jpg */; };
+		FA2BDA43BF02B0C3FC66516EB8451513 /* jpmarthajp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B0C8CD70F91D60DB7325C9D91CE269FB /* jpmarthajp.jpg */; };
 		FB216869C5F0C9491C982F421540C216 /* DynamicColor+Mixing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078C42B4E2BBA934AF304D296D3693DA /* DynamicColor+Mixing.swift */; };
 		FCB1A7361740F011D930D96B70BEEC8F /* DynamicColor+Lab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050367DA30ADE538E37B6FFE095AD014 /* DynamicColor+Lab.swift */; };
 		FCD6E45354D7D34A678DB2FAA13473BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09B23CBD138A2E13475947D3FCFFC98 /* Foundation.framework */; };
+		FD78F5F2074F1D298C5D0E8A2B6A8563 /* announce_nyc_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EEBDEF9B4853DCD4B780C9483951B0 /* announce_nyc_2.png */; };
 		FDB398E4C391A38B0465DA6043DCCE00 /* ButtonBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D018E8E101D56D38CFAE51685E57685 /* ButtonBarView.swift */; };
 		FED97351EC4705507DAB175106B819C8 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD0F096C58D9FE87D92A436633F319 /* UIButton+Kingfisher.swift */; };
 /* End PBXBuildFile section */
@@ -397,12 +399,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00F9B3645222E001C6500FEEE517A401 /* jp.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = jp.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/jp.jpg"; sourceTree = "<group>"; };
+		018170D95A83337921666540C57B1BE8 /* bowling.png */ = {isa = PBXFileReference; includeInIndex = 1; name = bowling.png; path = TrySwiftData/Assets/Conferences/Icons/bowling.png; sourceTree = "<group>"; };
 		018EFC5E4AD7495824A7AC207DFCF358 /* DynamicGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicGradient.swift; path = Sources/DynamicGradient.swift; sourceTree = "<group>"; };
 		02A655F35BB06E9A19D763B52AF1AAAD /* AcknowList.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AcknowList.bundle; path = Resources/AcknowList.bundle; sourceTree = "<group>"; };
 		02AD17C0D2AEB1874790078E1F394353 /* Pods-try! Today-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-try! Today-umbrella.h"; sourceTree = "<group>"; };
 		02D4E17EAADCAD14588A59CCC292C837 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
-		02EA35EF8F53CBAE65B45B454C0A994E /* eric.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = eric.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Sponsors/New Group/eric.jpg"; sourceTree = "<group>"; };
 		0311599DBB15B3E0560B34E7E116AABB /* Timepiece-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Timepiece-watchOS.xcconfig"; path = "../Timepiece-watchOS/Timepiece-watchOS.xcconfig"; sourceTree = "<group>"; };
 		03A51AFC6AD78F4AD5BD175D373A8B98 /* SJO2018Venues.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJO2018Venues.swift; path = "TrySwiftData/Data/SJO-2018/SJO2018Venues.swift"; sourceTree = "<group>"; };
 		050367DA30ADE538E37B6FFE095AD014 /* DynamicColor+Lab.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Lab.swift"; path = "Sources/DynamicColor+Lab.swift"; sourceTree = "<group>"; };
@@ -410,8 +411,7 @@
 		0637B771121D74FF7192AF391B091871 /* PagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripViewController.swift; path = Sources/PagerTabStripViewController.swift; sourceTree = "<group>"; };
 		078C42B4E2BBA934AF304D296D3693DA /* DynamicColor+Mixing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Mixing.swift"; path = "Sources/DynamicColor+Mixing.swift"; sourceTree = "<group>"; };
 		07A366B261251D55439228C8CA0E53E3 /* Bundle+TrySwiftData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+TrySwiftData.swift"; path = "TrySwiftData/Extensions/Bundle+TrySwiftData.swift"; sourceTree = "<group>"; };
-		089899CB51C0650A91499A66708CD125 /* party2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = party2.png; path = TrySwiftData/Assets/Conferences/Icons/party2.png; sourceTree = "<group>"; };
-		08A9A676E552C5956381C9BAD393C9C3 /* breaktime1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = breaktime1.png; path = TrySwiftData/Assets/Conferences/Icons/breaktime1.png; sourceTree = "<group>"; };
+		07CAB469BA3FD0A79F6096B131E42C2F /* vaish.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = vaish.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Organizers/vaish.jpg"; sourceTree = "<group>"; };
 		0A5CD9CD0CD2B433CCA51592B0082A1D /* Pods-try! Today-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-try! Today-resources.sh"; sourceTree = "<group>"; };
 		0AF2A3BEF0E5F485A880321494017AE0 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
 		0B52B87295E862ECB0896539518B06C3 /* DynamicColor+HSB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+HSB.swift"; path = "Sources/DynamicColor+HSB.swift"; sourceTree = "<group>"; };
@@ -427,35 +427,31 @@
 		15B30F5D9BFD10961A7A7D3271803A4D /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = XLPagerTabStrip.framework; path = XLPagerTabStrip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D914EB0DCDA89B3670232C0D925C13 /* WorkshopSessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WorkshopSessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableTypes/WorkshopSessionViewModel.swift; sourceTree = "<group>"; };
 		1812C85FA152C30585B756236308A337 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		189FEFE2DB1BF6B234084F6F5B652DF6 /* natasha.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = natasha.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Organizers/natasha.jpg"; sourceTree = "<group>"; };
+		19DFAA2B2EDC6378773CA1AC5C6DC974 /* rikoPurple.png */ = {isa = PBXFileReference; includeInIndex = 1; name = rikoPurple.png; path = TrySwiftData/Assets/Conferences/Icons/rikoPurple.png; sourceTree = "<group>"; };
 		1B478C77FE16E7B6ABDA9C012C7DAFBA /* Timepiece-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "Timepiece-watchOS.modulemap"; path = "../Timepiece-watchOS/Timepiece-watchOS.modulemap"; sourceTree = "<group>"; };
+		1D14DD7E47F6F704E669507A9CAA63BB /* twilio.png */ = {isa = PBXFileReference; includeInIndex = 1; name = twilio.png; path = "TrySwiftData/Assets/Conferences/SJO-2018/Sponsors/gold/twilio.png"; sourceTree = "<group>"; };
 		1D1F9B3316646EB4D878A643A4B90043 /* AcknowList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AcknowList.modulemap; sourceTree = "<group>"; };
-		1DAE58A381487E809A57145B68EBC88E /* Logo_BLR.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Logo_BLR.png; path = "TrySwiftData/Assets/Conferences/BLR-2017/Logo_BLR.png"; sourceTree = "<group>"; };
-		1E0C8AD319C5D5BD59CEB440E21B5CF8 /* Logo_SJO.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Logo_SJO.png; path = "TrySwiftData/Assets/Conferences/SJO-2018/Logo_SJO.png"; sourceTree = "<group>"; };
 		20F0DE7758EB5A5DB13FA8A6AC629F9B /* Pods_trySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_trySwift.framework; path = "Pods-trySwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2204BC9610F6A978D0A5A8BD2CEA3294 /* fumiya.png */ = {isa = PBXFileReference; includeInIndex = 1; name = fumiya.png; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/fumiya.png"; sourceTree = "<group>"; };
+		225D31B2C35F987F79A858E1D453A11A /* david.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = david.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/david.jpg"; sourceTree = "<group>"; };
 		24F27C16E7ED39EE9159BB873939803F /* Pods-try! Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try! Today.debug.xcconfig"; sourceTree = "<group>"; };
 		255DAD0756255D5C6890A76D3F969694 /* DynamicColor+Deriving.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Deriving.swift"; path = "Sources/DynamicColor+Deriving.swift"; sourceTree = "<group>"; };
-		257CA5BFEA2D1A69CC28507AB8F2FF01 /* kita.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = kita.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/kita.jpg"; sourceTree = "<group>"; };
-		25C34B80B180348AE827D1D7E7AE63C6 /* kostia.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = kostia.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/kostia.jpg"; sourceTree = "<group>"; };
 		25CCD182C0147C10F972C987F067BA74 /* Conference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Conference.swift; path = TrySwiftData/Models/Conference.swift; sourceTree = "<group>"; };
 		262BE2CAC37378318C82F9AA1D4514DD /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		265114D384B4FC9CBFD1D64F121F131C /* TrySwiftData-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "TrySwiftData-watchOS-prefix.pch"; path = "../TrySwiftData-watchOS/TrySwiftData-watchOS-prefix.pch"; sourceTree = "<group>"; };
+		26643BD7D0C7AECCF457F4AD35201492 /* hiroki.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = hiroki.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/hiroki.jpg"; sourceTree = "<group>"; };
 		276112720D1429F26EFB5A87EBD7F246 /* XLPagerTabStrip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLPagerTabStrip-dummy.m"; sourceTree = "<group>"; };
 		276177D3EA58F938393BDF5D79688024 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
+		2C87EEF7E65E092020DB1D7D1A08E406 /* Logo_NYC.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Logo_NYC.png; path = TrySwiftData/Assets/Conferences/NYC2017/Logo_NYC.png; sourceTree = "<group>"; };
 		2C99F03F5DBC3DEFE21478F5FA1943DC /* ResourceBundle-TrySwiftData-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "ResourceBundle-TrySwiftData-Info.plist"; path = "../TrySwiftData-watchOS/ResourceBundle-TrySwiftData-Info.plist"; sourceTree = "<group>"; };
 		2C9EDCBF111CCDC071D67BAC1A45914C /* ConferenceDay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConferenceDay.swift; path = TrySwiftData/Models/ConferenceDay.swift; sourceTree = "<group>"; };
-		2D37551DACA66915278BF4148B777CF9 /* TrySwiftDataLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = TrySwiftDataLocalizable.strings; path = en.lproj/TrySwiftDataLocalizable.strings; sourceTree = "<group>"; };
 		2DC27BD09495A995C5972BDAFC994BE1 /* DynamicColor+RGBA.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+RGBA.swift"; path = "Sources/DynamicColor+RGBA.swift"; sourceTree = "<group>"; };
 		2F246A46B04FA857A59E1BA46F3AA89E /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
 		2F36E0C4E675DA1F45EE0CB0597A4A5F /* Pods-try! Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try! Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		2FB2ACB3BDFAD50F1866054CCA5CF632 /* XLPagerTabStrip.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLPagerTabStrip.xcconfig; sourceTree = "<group>"; };
-		312C6A4286996F2C3F22FE695CED9203 /* bento1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = bento1.png; path = TrySwiftData/Assets/Conferences/Icons/bento1.png; sourceTree = "<group>"; };
 		325C9A7D342BBDFF0BA617BA8F8B1D02 /* DynamicColor+XYZ.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+XYZ.swift"; path = "Sources/DynamicColor+XYZ.swift"; sourceTree = "<group>"; };
 		32769C1F1DB2DB1575A14205EB738696 /* AnnouncementSessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnnouncementSessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableTypes/AnnouncementSessionViewModel.swift; sourceTree = "<group>"; };
 		330A5AF2B2E0FC3D81F3ED1C8791200B /* Array+TrySwiftData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+TrySwiftData.swift"; path = "TrySwiftData/Extensions/Array+TrySwiftData.swift"; sourceTree = "<group>"; };
 		339AC5396155E7E8395D620D2913B029 /* Presentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Presentation.swift; path = TrySwiftData/Models/Presentation.swift; sourceTree = "<group>"; };
-		34C7CF65FBAA00619146EA85799E09B1 /* rikoOrange.png */ = {isa = PBXFileReference; includeInIndex = 1; name = rikoOrange.png; path = TrySwiftData/Assets/Conferences/Icons/rikoOrange.png; sourceTree = "<group>"; };
 		39F4CD248534C0056A8CBE66F3E6C3C6 /* Timepiece-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Timepiece-iOS-dummy.m"; sourceTree = "<group>"; };
 		3AA309221322DD81ED7466A59D055A6F /* DateComponents+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateComponents+Timepiece.swift"; path = "Sources/DateComponents+Timepiece.swift"; sourceTree = "<group>"; };
 		3B1AF7B44D841DAEAC9AD952C58A570B /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwipeDirection.swift; sourceTree = "<group>"; };
@@ -464,39 +460,39 @@
 		3D018E8E101D56D38CFAE51685E57685 /* ButtonBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarView.swift; path = Sources/ButtonBarView.swift; sourceTree = "<group>"; };
 		3D3CF488865DD37ABE5E60C7CA9BB2B1 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
 		3E2B4E61B0DA0E3800CA9969BA746D3D /* AcknowLocalization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowLocalization.swift; path = Source/AcknowLocalization.swift; sourceTree = "<group>"; };
-		40593251AF5B3B47C2E9D38846BF93E0 /* hilton2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = hilton2.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Venues/hilton2.jpg"; sourceTree = "<group>"; };
+		3F63225A43790B5DC92E428F882EF083 /* kita.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = kita.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/kita.jpg"; sourceTree = "<group>"; };
 		411D938485342FA7DEEA918E42F41B00 /* Timepiece-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Timepiece-iOS-umbrella.h"; sourceTree = "<group>"; };
-		41296ECBFB9557447A43B886761C225B /* naruki.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = naruki.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/naruki.jpg"; sourceTree = "<group>"; };
 		41A0455B7A72D79D0211A5EB1C763052 /* RegistrationSessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegistrationSessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableTypes/RegistrationSessionViewModel.swift; sourceTree = "<group>"; };
-		43058FD6858331E38EDFB4C5D68C1FD9 /* vaish.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = vaish.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Organizers/vaish.jpg"; sourceTree = "<group>"; };
 		44AE57F3F8A9C7E04CAF0A2A0A1598B8 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = TrySwiftData/Models/Session.swift; sourceTree = "<group>"; };
-		45443737300C668D7DCF28966E633B76 /* Logo_NYC.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Logo_NYC.png; path = TrySwiftData/Assets/Conferences/NYC2017/Logo_NYC.png; sourceTree = "<group>"; };
+		45EEBDEF9B4853DCD4B780C9483951B0 /* announce_nyc_2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = announce_nyc_2.png; path = TrySwiftData/Assets/Conferences/Icons/announce_nyc_2.png; sourceTree = "<group>"; };
 		462422157D01248A37906C70FEDDE6E1 /* TwitterPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitterPagerTabStripViewController.swift; path = Sources/TwitterPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		46D21D4BA3B7A9A6F2472656F51C14C8 /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
+		46DAB20F418D6B0D655A119BAC30081C /* bento2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = bento2.png; path = TrySwiftData/Assets/Conferences/Icons/bento2.png; sourceTree = "<group>"; };
 		48E952923820F14DC12FDDD98A6072DB /* TrySwiftData-watchOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "TrySwiftData-watchOS.xcconfig"; path = "../TrySwiftData-watchOS/TrySwiftData-watchOS.xcconfig"; sourceTree = "<group>"; };
-		494FF444C723DEB09C150272E4E71814 /* rikoPurple.png */ = {isa = PBXFileReference; includeInIndex = 1; name = rikoPurple.png; path = TrySwiftData/Assets/Conferences/Icons/rikoPurple.png; sourceTree = "<group>"; };
 		499EA7331687151FA2916F1372956AE2 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
 		4A5A1CBD87B5B33CA62E8A84F059C626 /* LunchSessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LunchSessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableTypes/LunchSessionViewModel.swift; sourceTree = "<group>"; };
 		4B68E0118263F6720467DD617D5E65CB /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
+		4B7F5422D2862CF4A0D79258960CC338 /* lunch.png */ = {isa = PBXFileReference; includeInIndex = 1; name = lunch.png; path = TrySwiftData/Assets/Conferences/Icons/lunch.png; sourceTree = "<group>"; };
+		4B901E631CC228E3DD149F51EEC3D694 /* WatchLogo_NYC.png */ = {isa = PBXFileReference; includeInIndex = 1; name = WatchLogo_NYC.png; path = TrySwiftData/Assets/Conferences/NYC2017/WatchLogo_NYC.png; sourceTree = "<group>"; };
 		4CC662A80F084218A6181DE4CD33F10D /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = Sources/FXPageControl.h; sourceTree = "<group>"; };
+		4CCD698C47B659035331F8890160E37A /* TrySwiftDataLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = TrySwiftDataLocalizable.strings; path = ja.lproj/TrySwiftDataLocalizable.strings; sourceTree = "<group>"; };
 		4D88EE42E1BE9F42BD5F947DEE5C1BA6 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
+		4E752CBF46FFA28AA85D4F8E9B18A826 /* Logo_TKO.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Logo_TKO.png; path = "TrySwiftData/Assets/Conferences/TKO-2018/Logo_TKO.png"; sourceTree = "<group>"; };
 		4E7D061256E4752883859D4AD9AF1509 /* Timepiece-watchOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-prefix.pch"; path = "../Timepiece-watchOS/Timepiece-watchOS-prefix.pch"; sourceTree = "<group>"; };
 		4ED38D6110B24CCCB5E47394251062FF /* TrySwiftData-watchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = "TrySwiftData-watchOS.modulemap"; path = "../TrySwiftData-watchOS/TrySwiftData-watchOS.modulemap"; sourceTree = "<group>"; };
+		4F111F4C6614254A37B24CA3C1B7B308 /* yucovin.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = yucovin.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Organizers/yucovin.jpg"; sourceTree = "<group>"; };
+		4F9569096A37119E8674637E68A0AB45 /* announce2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = announce2.png; path = TrySwiftData/Assets/Conferences/Icons/announce2.png; sourceTree = "<group>"; };
 		5067187C2622186FEAC95B8FAE815EBA /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/ImageModifier.swift; sourceTree = "<group>"; };
 		52070EC1565936BE4088FC42FDB6348B /* SessionBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionBlock.swift; path = TrySwiftData/Models/SessionBlock.swift; sourceTree = "<group>"; };
-		52FD9FC876F9666174FB2C85C050B708 /* announce1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = announce1.png; path = TrySwiftData/Assets/Conferences/Icons/announce1.png; sourceTree = "<group>"; };
-		533DD63F27B75CAE7107A19B95BA0961 /* party1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = party1.png; path = TrySwiftData/Assets/Conferences/Icons/party1.png; sourceTree = "<group>"; };
+		53FD03F61E7DC9E68070F49B136D41BB /* hilton2.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = hilton2.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Venues/hilton2.jpg"; sourceTree = "<group>"; };
 		544AA403BC3DE4FBC529ED56EE86EF25 /* Pods-try! Extension-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-try! Extension-frameworks.sh"; sourceTree = "<group>"; };
 		554CC9B14AE93E436CA07E44F8F86D92 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
 		56701385D7A2E846159944DA1195F56F /* Pods-trySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-trySwift-umbrella.h"; sourceTree = "<group>"; };
 		58F65EBCA66B76F06F3D878395F0124C /* SessionDisplayableProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDisplayableProtocol.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableProtocol.swift; sourceTree = "<group>"; };
 		59EAB0944F0D4393FB03A71B86742D4E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A0A827370F0D8C5F62890DA5DC3A180 /* donuts1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = donuts1.png; path = TrySwiftData/Assets/Conferences/Icons/donuts1.png; sourceTree = "<group>"; };
-		5A0D0FF205CE87BD2F4B789656E48188 /* harlan.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = harlan.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/harlan.jpg"; sourceTree = "<group>"; };
 		5B2FB7C623E900A6153B902B622495F2 /* AcknowList.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AcknowList.xcconfig; sourceTree = "<group>"; };
 		5B6592C3195452F95F93C13A2F0F30D3 /* Organizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Organizer.swift; path = TrySwiftData/Models/Organizer.swift; sourceTree = "<group>"; };
 		5BD237D45D69AD8DEAEB5F19A7D378A1 /* SJO2018Locations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJO2018Locations.swift; path = "TrySwiftData/Data/SJO-2018/SJO2018Locations.swift"; sourceTree = "<group>"; };
-		5DD8E7BCB7E36B38B67DA2191974D7ED /* announce_blr.png */ = {isa = PBXFileReference; includeInIndex = 1; name = announce_blr.png; path = TrySwiftData/Assets/Conferences/Icons/announce_blr.png; sourceTree = "<group>"; };
 		5F40C950373CD6B81E5360BF545603D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F65512A731EDF462AD1BBED0F3C2102 /* Pods-try! Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try! Today.release.xcconfig"; sourceTree = "<group>"; };
 		60DAEFAAE22272100ED502AA5C09D5B3 /* Pods-trySwift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-trySwift-resources.sh"; sourceTree = "<group>"; };
@@ -504,32 +500,35 @@
 		60F62DBB990D38D08F1E80AF483145EC /* String+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Timepiece.swift"; path = "Sources/String+Timepiece.swift"; sourceTree = "<group>"; };
 		62027C889DB6E7E7E7683BF6DE3574F6 /* DynamicColorSpace.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColorSpace.swift; path = Sources/DynamicColorSpace.swift; sourceTree = "<group>"; };
 		6380B0E44910D11C0CF9EB635404E93F /* Timepiece-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Timepiece-iOS.modulemap"; sourceTree = "<group>"; };
+		645EEF77193595B27160971961BF9B08 /* eric.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = eric.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Sponsors/New Group/eric.jpg"; sourceTree = "<group>"; };
 		657CC6BD5E6B22EEE7589247BF6C5E4B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6690ED840B5AB8E54DC06801F7CE09AA /* SJO2018SessionBlocks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJO2018SessionBlocks.swift; path = "TrySwiftData/Data/SJO-2018/SJO2018SessionBlocks.swift"; sourceTree = "<group>"; };
 		6749ABEB05992C77BC7F661CD728E1FC /* BaseButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseButtonBarPagerTabStripViewController.swift; path = Sources/BaseButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		67F57C81576086A1346536CB9B99D88C /* TrySwiftData-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "TrySwiftData-iOS.modulemap"; sourceTree = "<group>"; };
 		6892477E70DB42438DDAF03A99083CC7 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/ButtonBarViewCell.swift; sourceTree = "<group>"; };
-		69F3AACECB2E6613E3FD43376CC97648 /* announce_nyc_2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = announce_nyc_2.png; path = TrySwiftData/Assets/Conferences/Icons/announce_nyc_2.png; sourceTree = "<group>"; };
+		69F7C9165B6ACE86E4122242DAED6C37 /* fumiya.png */ = {isa = PBXFileReference; includeInIndex = 1; name = fumiya.png; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/fumiya.png"; sourceTree = "<group>"; };
 		6AC542A3CF27ABF9C70AFCEBF2CBC44F /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
 		6C18411ACC0655C945AA0C9EACD79CAE /* AcknowList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AcknowList.framework; path = AcknowList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7C1FB63AC68E375D5C8EFE5E4720F3 /* Pods-try! Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-try! Extension-acknowledgements.plist"; sourceTree = "<group>"; };
 		6EDBEBA8F449A93965908007ECD9B3EB /* XLPagerTabStrip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLPagerTabStrip-prefix.pch"; sourceTree = "<group>"; };
 		6FC154FA49ACEB22B9D96BC830BE556E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		70644FE83179D2835CB73E273A53DD6B /* SponsoredDemoSessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SponsoredDemoSessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableTypes/SponsoredDemoSessionViewModel.swift; sourceTree = "<group>"; };
-		706ED28222E807AB6A50F359429CAC95 /* breakfast.png */ = {isa = PBXFileReference; includeInIndex = 1; name = breakfast.png; path = TrySwiftData/Assets/Conferences/Icons/breakfast.png; sourceTree = "<group>"; };
 		73469CE52F9823F4FD351A9B5A1244BF /* TalkSessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TalkSessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableTypes/TalkSessionViewModel.swift; sourceTree = "<group>"; };
+		73A7183AE7B3C06E1F3C337D16C14908 /* jp.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = jp.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/jp.jpg"; sourceTree = "<group>"; };
 		76FC41FED756BC209DBDC933709B2A7C /* ButtonCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = ButtonCell.xib; path = Sources/ButtonCell.xib; sourceTree = "<group>"; };
+		79951662BC686A66370A9E9B0F9C512C /* naruki.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = naruki.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/naruki.jpg"; sourceTree = "<group>"; };
 		79B5A9B0A696B5B8DEB7195CB20F9659 /* ResourceBundle-XLPagerTabStrip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-XLPagerTabStrip-Info.plist"; sourceTree = "<group>"; };
 		79D0C2173747CB29120CEF08890FE899 /* Pods-try! Today.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-try! Today.modulemap"; sourceTree = "<group>"; };
 		7B7C19B97CCE2505575F39BA73270843 /* SJO2018Speakers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJO2018Speakers.swift; path = "TrySwiftData/Data/SJO-2018/SJO2018Speakers.swift"; sourceTree = "<group>"; };
-		7B895E6AB3D55C97A808A53E9516967D /* bento2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = bento2.png; path = TrySwiftData/Assets/Conferences/Icons/bento2.png; sourceTree = "<group>"; };
 		7C3C21467E3C3F23B9A9E5712CBFDD67 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
+		7C827C435064E86F4EFB4554021EF69B /* harlan.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = harlan.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/harlan.jpg"; sourceTree = "<group>"; };
 		7E1D5EB5B5B8B6071DD4836FBD6D45CF /* SJO2018Sponsors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJO2018Sponsors.swift; path = "TrySwiftData/Data/SJO-2018/SJO2018Sponsors.swift"; sourceTree = "<group>"; };
 		7E65A36EDC358E8536C08E86147E94D2 /* Pods-trySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-trySwift-dummy.m"; sourceTree = "<group>"; };
 		7F29300F5EDB3B89A1452A6BDA1C1829 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		7F65068549B5DF760008D7F8C318D5DD /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		7FAEE5DD6782F8E8A7C6A8E5316035EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Timepiece-watchOS/Info.plist"; sourceTree = "<group>"; };
 		80003175E7A562347526B34099E98A48 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/Utils.swift; sourceTree = "<group>"; };
+		8243DF5F6C16835745E06FCF195ED83A /* takeru.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = takeru.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/takeru.jpg"; sourceTree = "<group>"; };
 		826AF35827BE3E9BF95862F23772B611 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
 		8484580DA6F9C7E04FD34C8CCB52A547 /* Pods-trySwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-trySwift-acknowledgements.plist"; sourceTree = "<group>"; };
 		84F3FF71758B8AEF07BA9D30B308159D /* HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = Sources/HSL.swift; sourceTree = "<group>"; };
@@ -537,15 +536,13 @@
 		8567FE99186856EE071A173ED63F9C8E /* SJO2018ConferenceDays.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJO2018ConferenceDays.swift; path = "TrySwiftData/Data/SJO-2018/SJO2018ConferenceDays.swift"; sourceTree = "<group>"; };
 		85A95D333C3607E645B00C1C373BD57F /* DynamicColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DynamicColor.framework; path = DynamicColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D33D7F80A7E645BC7390C7AF6C1534 /* DynamicColor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DynamicColor.xcconfig; sourceTree = "<group>"; };
-		8653E416E7B436D6FB47B7ABEC129E77 /* david.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = david.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/david.jpg"; sourceTree = "<group>"; };
 		872CD489B274CEC228321FA397B2CC34 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Timepiece.framework; path = "Timepiece-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B6D5D3CD3AB1FE7B0C0E1948091250 /* PanelSessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PanelSessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableTypes/PanelSessionViewModel.swift; sourceTree = "<group>"; };
 		88E4A351F51DB900A42BA0C5A24C5F88 /* BarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarView.swift; path = Sources/BarView.swift; sourceTree = "<group>"; };
+		8BBD952CC3BE29CEE4D84A34A8E391E8 /* breaktime2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = breaktime2.png; path = TrySwiftData/Assets/Conferences/Icons/breaktime2.png; sourceTree = "<group>"; };
 		8CB71629BB5146A61A615D06CA6C3FCC /* SJO2018Events.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJO2018Events.swift; path = "TrySwiftData/Data/SJO-2018/SJO2018Events.swift"; sourceTree = "<group>"; };
-		8CFC7FD25C9095A80573992524E37579 /* WatchLogo_NYC.png */ = {isa = PBXFileReference; includeInIndex = 1; name = WatchLogo_NYC.png; path = TrySwiftData/Assets/Conferences/NYC2017/WatchLogo_NYC.png; sourceTree = "<group>"; };
 		8E7B6E718993C23B89EB74F9D5D08F19 /* PartySessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PartySessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableTypes/PartySessionViewModel.swift; sourceTree = "<group>"; };
-		8E7FB078F86E7FF5739EA7438B19EEAC /* lunch.png */ = {isa = PBXFileReference; includeInIndex = 1; name = lunch.png; path = TrySwiftData/Assets/Conferences/Icons/lunch.png; sourceTree = "<group>"; };
-		90C13F0031B46683DCE1B8A0FEEAC5A4 /* TrySwiftDataLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = TrySwiftDataLocalizable.strings; path = ja.lproj/TrySwiftDataLocalizable.strings; sourceTree = "<group>"; };
+		905AF7051B71501D17474BFFDBCE08E8 /* announce_blr.png */ = {isa = PBXFileReference; includeInIndex = 1; name = announce_blr.png; path = TrySwiftData/Assets/Conferences/Icons/announce_blr.png; sourceTree = "<group>"; };
 		90E60FBDDC8A9EEDEC8E106D112C597F /* Pods-try! Today-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-try! Today-acknowledgements.plist"; sourceTree = "<group>"; };
 		90FA435472494223942D2874250F7BB6 /* AcknowList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AcknowList-dummy.m"; sourceTree = "<group>"; };
 		912BED40CEDE12FBCEFE4A2945AAB966 /* Event.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Event.swift; path = TrySwiftData/Models/Event.swift; sourceTree = "<group>"; };
@@ -557,7 +554,6 @@
 		9351B1D181F58FB32E023A392C4A3325 /* Pods-trySwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-trySwift-acknowledgements.markdown"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93E1328133926AA9E159A881FC7017A8 /* XLPagerTabStrip.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = XLPagerTabStrip.bundle; path = XLPagerTabStrip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		9415D2659A5A2AB4FF24F4D783136CA4 /* hilton.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = hilton.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Venues/hilton.jpg"; sourceTree = "<group>"; };
 		9526C588DBE1DA00390332F139F5B8D0 /* DynamicColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = Sources/DynamicColor.swift; sourceTree = "<group>"; };
 		953C23DACCFB5C0362CEAAF74B3A1C8C /* DynamicColor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DynamicColor.modulemap; sourceTree = "<group>"; };
 		95A0C824C3569D45B048C5BCDD02E9D7 /* Pods_try__Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_try__Today.framework; path = "Pods-try! Today.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -573,33 +569,40 @@
 		9EFBD97B1DD20A5C0B4E2A643FB7D088 /* Acknow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Acknow.swift; path = Source/Acknow.swift; sourceTree = "<group>"; };
 		A0228CFFF9C257F5E8BF0935B417359E /* ButtonBarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarPagerTabStripViewController.swift; path = Sources/ButtonBarPagerTabStripViewController.swift; sourceTree = "<group>"; };
 		A05DF9456FDB6E1A290A96F2634C7B6C /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
+		A06A27D05334BCC5E81108031DC97480 /* donuts2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = donuts2.png; path = TrySwiftData/Assets/Conferences/Icons/donuts2.png; sourceTree = "<group>"; };
+		A16525A1262EA304B5E662824E6CD0F4 /* announce1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = announce1.png; path = TrySwiftData/Assets/Conferences/Icons/announce1.png; sourceTree = "<group>"; };
 		A2C7938F75405D94758A4CFF28EA3D37 /* Pods-try! Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-try! Extension-dummy.m"; sourceTree = "<group>"; };
+		A321C1B78593AA2994764EB074F6B1C2 /* TrySwiftDataLocalizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; name = TrySwiftDataLocalizable.strings; path = en.lproj/TrySwiftDataLocalizable.strings; sourceTree = "<group>"; };
 		A48C2EBE755E3EC2089D8FF950E47CD7 /* Int+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Timepiece.swift"; path = "Sources/Int+Timepiece.swift"; sourceTree = "<group>"; };
 		A4CC334EC27661DADF89396991C2B96B /* Timepiece-watchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Timepiece-watchOS-umbrella.h"; path = "../Timepiece-watchOS/Timepiece-watchOS-umbrella.h"; sourceTree = "<group>"; };
 		A51463977B8FAE648A7F6722AC6E69A8 /* Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Location.swift; path = TrySwiftData/Models/Location.swift; sourceTree = "<group>"; };
+		A72BDC0F0D7D18463EB570116F976FE0 /* kostia.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = kostia.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/kostia.jpg"; sourceTree = "<group>"; };
+		A805A6591337A6072F5344D60EDC2DED /* breaktime1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = breaktime1.png; path = TrySwiftData/Assets/Conferences/Icons/breaktime1.png; sourceTree = "<group>"; };
 		A899E2F47C14B62708D04967BD825586 /* TrySwiftData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TrySwiftData.framework; path = "TrySwiftData-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91985F3087AE8D304DA3478725662A6 /* BarPagerTabStripViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPagerTabStripViewController.swift; path = Sources/BarPagerTabStripViewController.swift; sourceTree = "<group>"; };
-		AB713DCCBC127029C7219F40E9301BA4 /* dave.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = dave.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/dave.jpg"; sourceTree = "<group>"; };
+		AA11EA8C95894E03A8A3B86CECCAF411 /* donuts1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = donuts1.png; path = TrySwiftData/Assets/Conferences/Icons/donuts1.png; sourceTree = "<group>"; };
+		AE3358F8365C4C2E900BD6C1A14DE13B /* WatchLogo_TKO.png */ = {isa = PBXFileReference; includeInIndex = 1; name = WatchLogo_TKO.png; path = "TrySwiftData/Assets/Conferences/TKO-2018/WatchLogo_TKO.png"; sourceTree = "<group>"; };
 		AE513600EF7A14B6235F11A70BD6A1DC /* Pods-try! Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-try! Extension-umbrella.h"; sourceTree = "<group>"; };
-		AE819DD6310E35514899A0E5308E1A2C /* alvin.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = alvin.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Organizers/alvin.jpg"; sourceTree = "<group>"; };
+		AF5FC977150C1357715760E2A620A3E7 /* Logo_BLR.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Logo_BLR.png; path = "TrySwiftData/Assets/Conferences/BLR-2017/Logo_BLR.png"; sourceTree = "<group>"; };
 		B041D417A9322A542804A5AADE604140 /* Date+Timepiece.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Timepiece.swift"; path = "TrySwiftData/Extensions/Date+Timepiece.swift"; sourceTree = "<group>"; };
+		B0C8CD70F91D60DB7325C9D91CE269FB /* jpmarthajp.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = jpmarthajp.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Organizers/jpmarthajp.jpg"; sourceTree = "<group>"; };
 		B345322947E64F581131A38F532F8D66 /* TrySwiftData-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TrySwiftData-iOS.xcconfig"; sourceTree = "<group>"; };
 		B370E9246D48523E0C32893C44F90B8F /* SJO2018Organizers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJO2018Organizers.swift; path = "TrySwiftData/Data/SJO-2018/SJO2018Organizers.swift"; sourceTree = "<group>"; };
-		B39C02AA1A63F451E10A8CAC4C1C5C94 /* WatchLogo_TKO.png */ = {isa = PBXFileReference; includeInIndex = 1; name = WatchLogo_TKO.png; path = "TrySwiftData/Assets/Conferences/TKO-2018/WatchLogo_TKO.png"; sourceTree = "<group>"; };
 		B58BDFA37FF3912287C175F2B8926520 /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
 		B5B1B5ABA40903B0767D9E8597392FEC /* DynamicColor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-umbrella.h"; sourceTree = "<group>"; };
 		B85ABC984E80885511F15B85EAE6FF2A /* Pods-try! Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-try! Extension.modulemap"; sourceTree = "<group>"; };
+		B95F552F58FCA132179D165ACC51DC65 /* bas.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = bas.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/bas.jpg"; sourceTree = "<group>"; };
 		BA360754E2A4B079998A6F1B12398B96 /* Pods-trySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-trySwift.release.xcconfig"; sourceTree = "<group>"; };
-		BB6085DDFB74510A3D2EB7610F6F1CB4 /* announce_nyc_1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = announce_nyc_1.png; path = TrySwiftData/Assets/Conferences/Icons/announce_nyc_1.png; sourceTree = "<group>"; };
-		BBEBE3083098BB8FCAE18F64D35CB0EB /* twilio.png */ = {isa = PBXFileReference; includeInIndex = 1; name = twilio.png; path = "TrySwiftData/Assets/Conferences/SJO-2018/Sponsors/gold/twilio.png"; sourceTree = "<group>"; };
-		BD02EC5C4577BB8F6495101D00DA6E5F /* bowling.png */ = {isa = PBXFileReference; includeInIndex = 1; name = bowling.png; path = TrySwiftData/Assets/Conferences/Icons/bowling.png; sourceTree = "<group>"; };
+		BA83DB11E5BE44A13F5969EC82A27952 /* dinner.png */ = {isa = PBXFileReference; includeInIndex = 1; name = dinner.png; path = TrySwiftData/Assets/Conferences/Icons/dinner.png; sourceTree = "<group>"; };
+		BB8D1DDAE4331E4501C3E49C7553A029 /* chrislattner.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = chrislattner.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Sponsors/New Group/chrislattner.jpg"; sourceTree = "<group>"; };
+		BE3553C06179DE6ECA65AAB84DFF9DCA /* rikoOrange.png */ = {isa = PBXFileReference; includeInIndex = 1; name = rikoOrange.png; path = TrySwiftData/Assets/Conferences/Icons/rikoOrange.png; sourceTree = "<group>"; };
+		BE9E72CA221B87B53783647CBABC4EBF /* natasha.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = natasha.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Organizers/natasha.jpg"; sourceTree = "<group>"; };
 		BF3E2DC99D082EF6FC8E282BF03245CC /* SJO2018Presentations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJO2018Presentations.swift; path = "TrySwiftData/Data/SJO-2018/SJO2018Presentations.swift"; sourceTree = "<group>"; };
 		BF52C54351988788C3E51AA69CA27511 /* Timepiece-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Timepiece-iOS.xcconfig"; sourceTree = "<group>"; };
 		BF73F1FF89998083939928DEC39BFA85 /* AcknowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AcknowViewController.swift; path = Source/AcknowViewController.swift; sourceTree = "<group>"; };
 		BF86223DE46C31E0FC307AC989F0FF43 /* DynamicColor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DynamicColor-prefix.pch"; sourceTree = "<group>"; };
 		C09B23CBD138A2E13475947D3FCFFC98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		C21BB6B15AC6F42DC8C98EDAEEAEBAC7 /* Speaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Speaker.swift; path = TrySwiftData/Models/Speaker.swift; sourceTree = "<group>"; };
-		C2F46FC5CF1B053E493ADA3A7D34AFAE /* breaktime2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = breaktime2.png; path = TrySwiftData/Assets/Conferences/Icons/breaktime2.png; sourceTree = "<group>"; };
 		C302ABE461A8E8283A60C3F16E31500B /* AcknowList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AcknowList-umbrella.h"; sourceTree = "<group>"; };
 		C4E6EA39778C997480318204CF218D0B /* DynamicColor+HSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DynamicColor+HSL.swift"; path = "Sources/DynamicColor+HSL.swift"; sourceTree = "<group>"; };
 		C566F361EA7552D0752F4640D77F9718 /* SessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionViewModel.swift; sourceTree = "<group>"; };
@@ -608,19 +611,22 @@
 		C5EFEC09DCC42B745B17A209774E9F42 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
 		C6588E5F1E3069B28F155D956E34E83C /* SJO2018Conferences.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SJO2018Conferences.swift; path = "TrySwiftData/Data/SJO-2018/SJO2018Conferences.swift"; sourceTree = "<group>"; };
 		C72DC50AE863FFFE74386AC30686B27A /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Array.swift; path = Sources/Array.swift; sourceTree = "<group>"; };
+		C94C8A4CA7C7EDD8FA3D426D03B49AB7 /* bento1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = bento1.png; path = TrySwiftData/Assets/Conferences/Icons/bento1.png; sourceTree = "<group>"; };
+		CDC37B2EA0C27F6EF2F34E7C92BA5D8B /* garric.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = garric.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/garric.jpg"; sourceTree = "<group>"; };
 		CF1568F44A84F26FBDB2A477F9A79808 /* Venue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Venue.swift; path = TrySwiftData/Models/Venue.swift; sourceTree = "<group>"; };
+		CF184F43441AE0F0433FD0C649AC1B68 /* pushkar.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = pushkar.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/pushkar.jpg"; sourceTree = "<group>"; };
 		CFB8179C4927543DD98D27D0335A5A35 /* Timepiece.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Timepiece.framework; path = "Timepiece-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFF4F263A23283CB2180512028BC357 /* TrySwiftData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TrySwiftData.framework; path = "TrySwiftData-watchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1F5AE6C66FA6721D1163BF73FC4C07C /* pushkar.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = pushkar.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/pushkar.jpg"; sourceTree = "<group>"; };
+		D13888AD0EEF04D95766E866BA5D660E /* party2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = party2.png; path = TrySwiftData/Assets/Conferences/Icons/party2.png; sourceTree = "<group>"; };
+		D2A58F3EA735777A2724C8231A34A52B /* alvin.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = alvin.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Organizers/alvin.jpg"; sourceTree = "<group>"; };
 		D2F3F7B6A361FD161B7452E37C225505 /* LightningTalkSessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LightningTalkSessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableTypes/LightningTalkSessionViewModel.swift; sourceTree = "<group>"; };
 		D4D1417616E6279CBA43E4C615222936 /* Pods-try! Today-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-try! Today-dummy.m"; sourceTree = "<group>"; };
 		D523D5837A8A54F382E9CEEB3015A3B9 /* Pods-try! Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-try! Extension.release.xcconfig"; sourceTree = "<group>"; };
+		D5351ABEEE9D8D0FDA14B98795153F83 /* Logo_SJO.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Logo_SJO.png; path = "TrySwiftData/Assets/Conferences/SJO-2018/Logo_SJO.png"; sourceTree = "<group>"; };
 		D6ED47D994426A644CA12208CEDD28F2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../TrySwiftData-watchOS/Info.plist"; sourceTree = "<group>"; };
 		D722AE991928D7A5AC831A488664E453 /* PagerTabStripBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerTabStripBehaviour.swift; path = Sources/PagerTabStripBehaviour.swift; sourceTree = "<group>"; };
 		D733325840C3D2CAE474BD3DF0273753 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
 		D80AA79974B88C1B4FFE439502139E57 /* OfficeHoursSessionViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OfficeHoursSessionViewModel.swift; path = TrySwiftData/ViewModels/SessionViewModel/SessionTypeViewModels/SessionDisplayableTypes/OfficeHoursSessionViewModel.swift; sourceTree = "<group>"; };
-		D842F729FF08FEB8717A22CC4C0FD7F4 /* bas.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = bas.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/bas.jpg"; sourceTree = "<group>"; };
-		D8526CDFA6D2BD1C943D514B647B06AF /* dinner.png */ = {isa = PBXFileReference; includeInIndex = 1; name = dinner.png; path = TrySwiftData/Assets/Conferences/Icons/dinner.png; sourceTree = "<group>"; };
 		D8C87752EBF2EDDC520CD2D58CCBA950 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/RequestModifier.swift; sourceTree = "<group>"; };
 		D8F40B8FEC078E08B7E743ED49295F3B /* Pods-trySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-trySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		D90DAEE510826AE9AD6E924D188AEA12 /* IndicatorInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndicatorInfo.swift; path = Sources/IndicatorInfo.swift; sourceTree = "<group>"; };
@@ -629,8 +635,7 @@
 		DE621BABA9E2412D4862A2F0A866B7F5 /* ContrastDisplayContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContrastDisplayContext.swift; path = Sources/ContrastDisplayContext.swift; sourceTree = "<group>"; };
 		DED8C0AC914E176F4461FBEAAC447A7D /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
 		DFABF05670FF1EC86A8C12DE5A7D34FC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1346530AF1ADA876B4CB5D3762FA88F /* Logo_TKO.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Logo_TKO.png; path = "TrySwiftData/Assets/Conferences/TKO-2018/Logo_TKO.png"; sourceTree = "<group>"; };
-		E25481DB240A993DF8A1326A6E4388E5 /* jpmarthajp.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = jpmarthajp.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Organizers/jpmarthajp.jpg"; sourceTree = "<group>"; };
+		E1ED1CFA6C6E99978BBFF507C68AB085 /* dave.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = dave.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/dave.jpg"; sourceTree = "<group>"; };
 		E36A60FAED43E439332385B545694B1A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3DCC1531F38F9771EC00864D2C24B2D /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
 		E431D9F50A063BE6D8991EA678D9EC81 /* Object+LocalizedProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Object+LocalizedProperty.swift"; path = "TrySwiftData/Extensions/Object+LocalizedProperty.swift"; sourceTree = "<group>"; };
@@ -638,20 +643,18 @@
 		E7382A91BCBEED985C772F582E938DAA /* Pods-try! Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-try! Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E7FA638A30385CB37644DA9D6EFBC10C /* Pods-trySwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-trySwift-frameworks.sh"; sourceTree = "<group>"; };
 		E86EB140AEB9B52666DDB85BB174C811 /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Placeholder.swift; sourceTree = "<group>"; };
-		E9921960B44DC5CE3DEE76E07243C0A7 /* donuts2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = donuts2.png; path = TrySwiftData/Assets/Conferences/Icons/donuts2.png; sourceTree = "<group>"; };
 		EB8B8EFF04BA39C752A8DF94686CE1DC /* TrySwiftData-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TrySwiftData-iOS-dummy.m"; sourceTree = "<group>"; };
-		EC5D68C0C9FC64371A104A64A9B57F66 /* hiroki.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = hiroki.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/hiroki.jpg"; sourceTree = "<group>"; };
-		EC92BFF5802D4F930949EF9A94DEAF8A /* takeru.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = takeru.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/takeru.jpg"; sourceTree = "<group>"; };
+		EDA20D7A4F65081704CECA15CE474083 /* breakfast.png */ = {isa = PBXFileReference; includeInIndex = 1; name = breakfast.png; path = TrySwiftData/Assets/Conferences/Icons/breakfast.png; sourceTree = "<group>"; };
 		F07502FA4E68C90C5B7657DC32C86A61 /* Timepiece-watchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Timepiece-watchOS-dummy.m"; path = "../Timepiece-watchOS/Timepiece-watchOS-dummy.m"; sourceTree = "<group>"; };
 		F173E24C330937039B41A8D349FF346A /* TrySwiftData.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = TrySwiftData.bundle; path = TrySwiftData.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2340EAFF838D29D4FBCE24810D00684 /* announce_nyc_1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = announce_nyc_1.png; path = TrySwiftData/Assets/Conferences/Icons/announce_nyc_1.png; sourceTree = "<group>"; };
 		F39C0555F9B4081A0FDD46F153F09995 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3B4A940620590271ADE9921F8F9FCFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F50A9CABFD692D15D19D0232500A1486 /* announce2.png */ = {isa = PBXFileReference; includeInIndex = 1; name = announce2.png; path = TrySwiftData/Assets/Conferences/Icons/announce2.png; sourceTree = "<group>"; };
 		F7480DAFA9009791B15EEA427670DFE5 /* Pods_try__Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_try__Extension.framework; path = "Pods-try! Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE6F490334F9FDFA90C19D54E074E392 /* garric.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = garric.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Speakers/garric.jpg"; sourceTree = "<group>"; };
 		FEB228211A868BADD620209C8A92C035 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF31A6EF3497B6D990514C259C926D88 /* FXPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FXPageControl.m; path = Sources/FXPageControl.m; sourceTree = "<group>"; };
-		FFE9609654FBBBCA225A08CFD731C2EF /* yucovin.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = yucovin.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Organizers/yucovin.jpg"; sourceTree = "<group>"; };
+		FFB25E298178C8E8AE3C3764991F1D44 /* hilton.jpg */ = {isa = PBXFileReference; includeInIndex = 1; name = hilton.jpg; path = "TrySwiftData/Assets/Conferences/SJO-2018/Venues/hilton.jpg"; sourceTree = "<group>"; };
+		FFFDE76AEBE680257EB8446D55E26DB2 /* party1.png */ = {isa = PBXFileReference; includeInIndex = 1; name = party1.png; path = TrySwiftData/Assets/Conferences/Icons/party1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -828,6 +831,62 @@
 			name = watchOS;
 			sourceTree = "<group>";
 		};
+		2BB6082100983E47799D11ED4A2154A9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D2A58F3EA735777A2724C8231A34A52B /* alvin.jpg */,
+				A16525A1262EA304B5E662824E6CD0F4 /* announce1.png */,
+				4F9569096A37119E8674637E68A0AB45 /* announce2.png */,
+				905AF7051B71501D17474BFFDBCE08E8 /* announce_blr.png */,
+				F2340EAFF838D29D4FBCE24810D00684 /* announce_nyc_1.png */,
+				45EEBDEF9B4853DCD4B780C9483951B0 /* announce_nyc_2.png */,
+				B95F552F58FCA132179D165ACC51DC65 /* bas.jpg */,
+				C94C8A4CA7C7EDD8FA3D426D03B49AB7 /* bento1.png */,
+				46DAB20F418D6B0D655A119BAC30081C /* bento2.png */,
+				018170D95A83337921666540C57B1BE8 /* bowling.png */,
+				EDA20D7A4F65081704CECA15CE474083 /* breakfast.png */,
+				A805A6591337A6072F5344D60EDC2DED /* breaktime1.png */,
+				8BBD952CC3BE29CEE4D84A34A8E391E8 /* breaktime2.png */,
+				BB8D1DDAE4331E4501C3E49C7553A029 /* chrislattner.jpg */,
+				E1ED1CFA6C6E99978BBFF507C68AB085 /* dave.jpg */,
+				225D31B2C35F987F79A858E1D453A11A /* david.jpg */,
+				BA83DB11E5BE44A13F5969EC82A27952 /* dinner.png */,
+				AA11EA8C95894E03A8A3B86CECCAF411 /* donuts1.png */,
+				A06A27D05334BCC5E81108031DC97480 /* donuts2.png */,
+				645EEF77193595B27160971961BF9B08 /* eric.jpg */,
+				69F7C9165B6ACE86E4122242DAED6C37 /* fumiya.png */,
+				CDC37B2EA0C27F6EF2F34E7C92BA5D8B /* garric.jpg */,
+				7C827C435064E86F4EFB4554021EF69B /* harlan.jpg */,
+				FFB25E298178C8E8AE3C3764991F1D44 /* hilton.jpg */,
+				53FD03F61E7DC9E68070F49B136D41BB /* hilton2.jpg */,
+				26643BD7D0C7AECCF457F4AD35201492 /* hiroki.jpg */,
+				73A7183AE7B3C06E1F3C337D16C14908 /* jp.jpg */,
+				B0C8CD70F91D60DB7325C9D91CE269FB /* jpmarthajp.jpg */,
+				3F63225A43790B5DC92E428F882EF083 /* kita.jpg */,
+				A72BDC0F0D7D18463EB570116F976FE0 /* kostia.jpg */,
+				AF5FC977150C1357715760E2A620A3E7 /* Logo_BLR.png */,
+				2C87EEF7E65E092020DB1D7D1A08E406 /* Logo_NYC.png */,
+				D5351ABEEE9D8D0FDA14B98795153F83 /* Logo_SJO.png */,
+				4E752CBF46FFA28AA85D4F8E9B18A826 /* Logo_TKO.png */,
+				4B7F5422D2862CF4A0D79258960CC338 /* lunch.png */,
+				79951662BC686A66370A9E9B0F9C512C /* naruki.jpg */,
+				BE9E72CA221B87B53783647CBABC4EBF /* natasha.jpg */,
+				FFFDE76AEBE680257EB8446D55E26DB2 /* party1.png */,
+				D13888AD0EEF04D95766E866BA5D660E /* party2.png */,
+				CF184F43441AE0F0433FD0C649AC1B68 /* pushkar.jpg */,
+				BE3553C06179DE6ECA65AAB84DFF9DCA /* rikoOrange.png */,
+				19DFAA2B2EDC6378773CA1AC5C6DC974 /* rikoPurple.png */,
+				8243DF5F6C16835745E06FCF195ED83A /* takeru.jpg */,
+				9F26850F3D676264900D804D3A9338A4 /* TrySwiftDataLocalizable.strings */,
+				1D14DD7E47F6F704E669507A9CAA63BB /* twilio.png */,
+				07CAB469BA3FD0A79F6096B131E42C2F /* vaish.jpg */,
+				4B901E631CC228E3DD149F51EEC3D694 /* WatchLogo_NYC.png */,
+				AE3358F8365C4C2E900BD6C1A14DE13B /* WatchLogo_TKO.png */,
+				4F111F4C6614254A37B24CA3C1B7B308 /* yucovin.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		473157B5A41D26F64E0008CCDE522FE4 /* AcknowList */ = {
 			isa = PBXGroup;
 			children = (
@@ -899,14 +958,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Timepiece-iOS";
-			sourceTree = "<group>";
-		};
-		6453C0599612C1F9B0A4BFD154165BE2 /* TrySwiftAssets */ = {
-			isa = PBXGroup;
-			children = (
-				BF3AC25FCB3B526A8D9B9A8B5113FC9E /* Resources */,
-			);
-			name = TrySwiftAssets;
 			sourceTree = "<group>";
 		};
 		6C8CB4776A4074CDD79369D34532B42F /* Pods-try! Today */ = {
@@ -1010,7 +1061,7 @@
 				CF1568F44A84F26FBDB2A477F9A79808 /* Venue.swift */,
 				16D914EB0DCDA89B3670232C0D925C13 /* WorkshopSessionViewModel.swift */,
 				FFA1FDE31931EC636843177D951FA0F8 /* Support Files */,
-				6453C0599612C1F9B0A4BFD154165BE2 /* TrySwiftAssets */,
+				F99F9B1F112C0ACCC5217E9B88882CEB /* TrySwiftAssets */,
 			);
 			name = TrySwiftData;
 			path = TrySwiftData;
@@ -1061,61 +1112,6 @@
 		B908FE6FD7FBD969B9D831D3112DB695 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		BF3AC25FCB3B526A8D9B9A8B5113FC9E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AE819DD6310E35514899A0E5308E1A2C /* alvin.jpg */,
-				52FD9FC876F9666174FB2C85C050B708 /* announce1.png */,
-				F50A9CABFD692D15D19D0232500A1486 /* announce2.png */,
-				5DD8E7BCB7E36B38B67DA2191974D7ED /* announce_blr.png */,
-				BB6085DDFB74510A3D2EB7610F6F1CB4 /* announce_nyc_1.png */,
-				69F3AACECB2E6613E3FD43376CC97648 /* announce_nyc_2.png */,
-				D842F729FF08FEB8717A22CC4C0FD7F4 /* bas.jpg */,
-				312C6A4286996F2C3F22FE695CED9203 /* bento1.png */,
-				7B895E6AB3D55C97A808A53E9516967D /* bento2.png */,
-				BD02EC5C4577BB8F6495101D00DA6E5F /* bowling.png */,
-				706ED28222E807AB6A50F359429CAC95 /* breakfast.png */,
-				08A9A676E552C5956381C9BAD393C9C3 /* breaktime1.png */,
-				C2F46FC5CF1B053E493ADA3A7D34AFAE /* breaktime2.png */,
-				AB713DCCBC127029C7219F40E9301BA4 /* dave.jpg */,
-				8653E416E7B436D6FB47B7ABEC129E77 /* david.jpg */,
-				D8526CDFA6D2BD1C943D514B647B06AF /* dinner.png */,
-				5A0A827370F0D8C5F62890DA5DC3A180 /* donuts1.png */,
-				E9921960B44DC5CE3DEE76E07243C0A7 /* donuts2.png */,
-				02EA35EF8F53CBAE65B45B454C0A994E /* eric.jpg */,
-				2204BC9610F6A978D0A5A8BD2CEA3294 /* fumiya.png */,
-				FE6F490334F9FDFA90C19D54E074E392 /* garric.jpg */,
-				5A0D0FF205CE87BD2F4B789656E48188 /* harlan.jpg */,
-				9415D2659A5A2AB4FF24F4D783136CA4 /* hilton.jpg */,
-				40593251AF5B3B47C2E9D38846BF93E0 /* hilton2.jpg */,
-				EC5D68C0C9FC64371A104A64A9B57F66 /* hiroki.jpg */,
-				00F9B3645222E001C6500FEEE517A401 /* jp.jpg */,
-				E25481DB240A993DF8A1326A6E4388E5 /* jpmarthajp.jpg */,
-				257CA5BFEA2D1A69CC28507AB8F2FF01 /* kita.jpg */,
-				25C34B80B180348AE827D1D7E7AE63C6 /* kostia.jpg */,
-				1DAE58A381487E809A57145B68EBC88E /* Logo_BLR.png */,
-				45443737300C668D7DCF28966E633B76 /* Logo_NYC.png */,
-				1E0C8AD319C5D5BD59CEB440E21B5CF8 /* Logo_SJO.png */,
-				E1346530AF1ADA876B4CB5D3762FA88F /* Logo_TKO.png */,
-				8E7FB078F86E7FF5739EA7438B19EEAC /* lunch.png */,
-				41296ECBFB9557447A43B886761C225B /* naruki.jpg */,
-				189FEFE2DB1BF6B234084F6F5B652DF6 /* natasha.jpg */,
-				533DD63F27B75CAE7107A19B95BA0961 /* party1.png */,
-				089899CB51C0650A91499A66708CD125 /* party2.png */,
-				D1F5AE6C66FA6721D1163BF73FC4C07C /* pushkar.jpg */,
-				34C7CF65FBAA00619146EA85799E09B1 /* rikoOrange.png */,
-				494FF444C723DEB09C150272E4E71814 /* rikoPurple.png */,
-				EC92BFF5802D4F930949EF9A94DEAF8A /* takeru.jpg */,
-				F17C4349235A4EDE1E608506FF904C6C /* TrySwiftDataLocalizable.strings */,
-				BBEBE3083098BB8FCAE18F64D35CB0EB /* twilio.png */,
-				43058FD6858331E38EDFB4C5D68C1FD9 /* vaish.jpg */,
-				8CFC7FD25C9095A80573992524E37579 /* WatchLogo_NYC.png */,
-				B39C02AA1A63F451E10A8CAC4C1C5C94 /* WatchLogo_TKO.png */,
-				FFE9609654FBBBCA225A08CFD731C2EF /* yucovin.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1225,6 +1221,14 @@
 				15B30F5D9BFD10961A7A7D3271803A4D /* XLPagerTabStrip.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F99F9B1F112C0ACCC5217E9B88882CEB /* TrySwiftAssets */ = {
+			isa = PBXGroup;
+			children = (
+				2BB6082100983E47799D11ED4A2154A9 /* Resources */,
+			);
+			name = TrySwiftAssets;
 			sourceTree = "<group>";
 		};
 		FFA1FDE31931EC636843177D951FA0F8 /* Support Files */ = {
@@ -1456,7 +1460,7 @@
 			buildPhases = (
 				E0429B8F68F735B586F84743FDC1DA3C /* Sources */,
 				C772F529C59EBAAA8854F14B1F05F114 /* Frameworks */,
-				599529F697B78B44FD80AE5D2B968AF8 /* Resources */,
+				CE46258384CA335FF856EC97A9A052A3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1551,7 +1555,7 @@
 			buildPhases = (
 				8356DE24F3ABDEF3409594F09ACDB687 /* Sources */,
 				8F9F7E4B18C598F3595451E08C8CCC41 /* Frameworks */,
-				448C31849719CA48FA837A2D27592041 /* Resources */,
+				AF5F3F4A2A011D4BEA160494DAC66047 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1648,116 +1652,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		448C31849719CA48FA837A2D27592041 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6791EB468A3BB10A07A54138EB83E02A /* alvin.jpg in Resources */,
-				432D39DD44E249F08B6989A4F5B303E0 /* announce1.png in Resources */,
-				67491341361F9BB57DCBA7579F809DA1 /* announce2.png in Resources */,
-				11C98DF4398AB128CA74180E84522D0A /* announce_blr.png in Resources */,
-				9FC4305518EA70BD36ED09E35DF2CE4F /* announce_nyc_1.png in Resources */,
-				4D2C73CB1DD0A99CE53AB07E7BCC130D /* announce_nyc_2.png in Resources */,
-				E3C0CB63484D70D3E2ACAA7A2E63F9A9 /* bas.jpg in Resources */,
-				A5692C83C292F29D31607513B1D29CC5 /* bento1.png in Resources */,
-				E264E4848FAF4CCA2E792CBBA0A8350C /* bento2.png in Resources */,
-				D2C773DBAEBE06CCA63E684DE287689D /* bowling.png in Resources */,
-				4E7EA839CCEC4EC732F935DE57B3BBFB /* breakfast.png in Resources */,
-				0EA52CBD0B87D1D8F47C9D700641215F /* breaktime1.png in Resources */,
-				1E479B55BB27EE2E8548E6F3D78D63B9 /* breaktime2.png in Resources */,
-				DA8C50503D477A9E66E9293D686BF945 /* dave.jpg in Resources */,
-				2257462C69A38EEC6C0C0E8EC11F324C /* david.jpg in Resources */,
-				5CE2E08B32951EEE33EA9C93CEB5DCD9 /* dinner.png in Resources */,
-				A3D9F258B8AC8B68CD08F8FD3AEC97D6 /* donuts1.png in Resources */,
-				20C4D05F08B76CF117ADD6A4481CD04D /* donuts2.png in Resources */,
-				5073EC1EBE85D306BB818C870E7E5CEB /* eric.jpg in Resources */,
-				56C8CA43AFFE1B70D9BE91C15B7D9B47 /* fumiya.png in Resources */,
-				70ACF050B80AA02C033FBA7A0B9CE662 /* garric.jpg in Resources */,
-				4579176366067FBCB91DDC64FAB51754 /* harlan.jpg in Resources */,
-				5E1E3D6F2D4C8FAC80D4C180C0E35E32 /* hilton.jpg in Resources */,
-				9B171FF73A6F0FCF5F4B97FECEEBE890 /* hilton2.jpg in Resources */,
-				145234617765AD5128F3D1699914DB24 /* hiroki.jpg in Resources */,
-				F1E82D1CE3BDA019AE9069154A2B8D72 /* jp.jpg in Resources */,
-				E808768F9D88FBA4D865D50B3CE27ED0 /* jpmarthajp.jpg in Resources */,
-				2CA391FF88184E37039D6607DC15D0ED /* kita.jpg in Resources */,
-				77F2982A85DFFF4265F85F2D8A3CD2AE /* kostia.jpg in Resources */,
-				868E7506133F0C976914CC8F8FE45420 /* Logo_BLR.png in Resources */,
-				5EE0107D25CCB1E08DC6D628F7BDEED8 /* Logo_NYC.png in Resources */,
-				9B1463CFFF7D842E2D31691CA753CE78 /* Logo_SJO.png in Resources */,
-				14B9A69BEBA527F8B3170BE85022444B /* Logo_TKO.png in Resources */,
-				2338D6A057103F54383E4AF88FBC7080 /* lunch.png in Resources */,
-				072C31A5F8C94EA6F3505510B548CB5E /* naruki.jpg in Resources */,
-				CCC648D1190000BB93387CB0B989DF67 /* natasha.jpg in Resources */,
-				B5C62F902D2B977B904533B74945C8CF /* party1.png in Resources */,
-				358562A52715C884A65A96BDB51CD03E /* party2.png in Resources */,
-				C6A11FAAA5ADC14308FA87158D1FAF78 /* pushkar.jpg in Resources */,
-				F6AF055B85C7E22020F3BD091FD51D46 /* rikoOrange.png in Resources */,
-				B4DAD1805265E1E9AC103DC028639852 /* rikoPurple.png in Resources */,
-				F5D83F63E81F63CCF672C1907C13C6AF /* takeru.jpg in Resources */,
-				89A35CD24BDABBB8CC54223A99236385 /* TrySwiftDataLocalizable.strings in Resources */,
-				1F631AEA158B515D02EC6799A4492778 /* twilio.png in Resources */,
-				6820A77EEB38EE4580D660FB238B5D54 /* vaish.jpg in Resources */,
-				835B00ACDDEF53F12A67FC03676F7A78 /* WatchLogo_NYC.png in Resources */,
-				6CE32623E240101235BCEEF1DCA843E2 /* WatchLogo_TKO.png in Resources */,
-				A9037AEEEE7D3F670CA9087CB54CFABD /* yucovin.jpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		599529F697B78B44FD80AE5D2B968AF8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9A036CA8897DCF0A14F5A57B529EB84D /* alvin.jpg in Resources */,
-				B4A7A541525DF4D29B7A78A86DC44BB3 /* announce1.png in Resources */,
-				175F439E22F7589CDAB6D2D9C98B9E26 /* announce2.png in Resources */,
-				7E6F08347EB722C91A10661BAAD25614 /* announce_blr.png in Resources */,
-				F5E5730235A072E0B6AFA7BC12C5B7B9 /* announce_nyc_1.png in Resources */,
-				1BCC2CE0AE6B4C2AC7181C484E04877C /* announce_nyc_2.png in Resources */,
-				03C3FBBEE1198D3FABE658A5765F617D /* bas.jpg in Resources */,
-				3873B25561DE3613192B59BF132E2519 /* bento1.png in Resources */,
-				38732E6F8E34F5A8FDA49122303A2F64 /* bento2.png in Resources */,
-				8B30AFB5C6465DC595C42A4B0B97598B /* bowling.png in Resources */,
-				4546FE7D3C79A7BD35DA0C69D4022047 /* breakfast.png in Resources */,
-				D5E2082AE4A64B66008932716D439214 /* breaktime1.png in Resources */,
-				15C229B2F291D9778980591CA14356B8 /* breaktime2.png in Resources */,
-				1244A1D32CAC872B32882CFCC379A064 /* dave.jpg in Resources */,
-				221A5214B393C7C772427931362D03BF /* david.jpg in Resources */,
-				4AA780EF2F4D6F189A4BD86D45EFAF79 /* dinner.png in Resources */,
-				6C3D9CCDFE9CC9CBB57E509DB4D0D5CB /* donuts1.png in Resources */,
-				E65E931C3867FFEF33A5953794E51237 /* donuts2.png in Resources */,
-				D2609943CCA77F65E17CD90EA87B551B /* eric.jpg in Resources */,
-				6D45E5BDA10EB9871F3A1F1F1DF0C9FD /* fumiya.png in Resources */,
-				EFB6DF324D1C95786981FA35D58CBA70 /* garric.jpg in Resources */,
-				2BFD76B172F928D61B130C438A9AB326 /* harlan.jpg in Resources */,
-				CEECAF1B41A397C7309932EA08F6F453 /* hilton.jpg in Resources */,
-				85A11ADA81472DD0677F7149AFE96BFB /* hilton2.jpg in Resources */,
-				FAB1253BDD1C859134A3E003D1A338A9 /* hiroki.jpg in Resources */,
-				1AEC38C981CDC20FA6EA588D5FCD4B31 /* jp.jpg in Resources */,
-				9CBF313978AF666479433DAA809710EF /* jpmarthajp.jpg in Resources */,
-				B87C39599BB0E21C50B8B8DA09F1F998 /* kita.jpg in Resources */,
-				525DC7D49AF8947C918F629A35919AE8 /* kostia.jpg in Resources */,
-				0C16F4E9B86F50B771BD1691A002AAFA /* Logo_BLR.png in Resources */,
-				A7466A99F631BCA72984C660AEF26B69 /* Logo_NYC.png in Resources */,
-				4CEE1B399EC3C4B0365797F6EF40C7D8 /* Logo_SJO.png in Resources */,
-				E5CEDD9EE73E6AD45828591D46D353B6 /* Logo_TKO.png in Resources */,
-				0EF24F2FCDBC6994A83793CD2523C2AA /* lunch.png in Resources */,
-				1FBF7AF0A0300E89B330E80DCCBC58DC /* naruki.jpg in Resources */,
-				A9F285C93D847AD5B200073681A91C17 /* natasha.jpg in Resources */,
-				099A360A57E7EF4600C6A6BF346E956D /* party1.png in Resources */,
-				B218A99FB1FFE89C013457F9D33D8525 /* party2.png in Resources */,
-				35AA955671E4ECD7BA53DFA223E251ED /* pushkar.jpg in Resources */,
-				A5AE61690D576D6466148C310D69E942 /* rikoOrange.png in Resources */,
-				4CFD25586BAEF0E50B2B0A13D99395D8 /* rikoPurple.png in Resources */,
-				22965ECEB2D23E32ED03C70F0D35C284 /* takeru.jpg in Resources */,
-				007076ADBB07C44674D5CE7A03DC6879 /* TrySwiftDataLocalizable.strings in Resources */,
-				EF50589F5E6FCF5A4A039A38CD6CA050 /* twilio.png in Resources */,
-				5B988A22D6EFB5529087DF67B51D5224 /* vaish.jpg in Resources */,
-				5D9B522DA0F8D26AB1CCA36096BA8331 /* WatchLogo_NYC.png in Resources */,
-				370160327B10C5DFBE2F8A03AC94F3F7 /* WatchLogo_TKO.png in Resources */,
-				DB2CBE332F560B14C3CAC68BA46CEB86 /* yucovin.jpg in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		635AEE48C328177490FCCAF3EFEF2F81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1782,11 +1676,123 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF5F3F4A2A011D4BEA160494DAC66047 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B12247CFE6C36CEADD9C38430692977 /* alvin.jpg in Resources */,
+				BE326D50EEFB5F85B8D9EEDDB8A268BF /* announce1.png in Resources */,
+				1D6AFB063CAF937847278FB659E0515B /* announce2.png in Resources */,
+				53DBB9D006753A96976DDBED99BAA794 /* announce_blr.png in Resources */,
+				19EFBF7027B3AE8D3839D1EC16E80D83 /* announce_nyc_1.png in Resources */,
+				D89B44FC0769B1FCEAFFC24DF1026AAB /* announce_nyc_2.png in Resources */,
+				7C8828E8B8A0B58B0A38BBD1A66F861B /* bas.jpg in Resources */,
+				5879AF453D594DFD48CAC0EB45E41A19 /* bento1.png in Resources */,
+				90560AF4EC6C0F404352E1C146D822AA /* bento2.png in Resources */,
+				1D7D7BA8EE725F74B2EAF9F663E4BCB6 /* bowling.png in Resources */,
+				B5FF7FC413B7B5579BD31EC9EF40F135 /* breakfast.png in Resources */,
+				27492DC570D0DA5A95A7920D286309E9 /* breaktime1.png in Resources */,
+				A1A7FCA5FD314312C402765A12A727ED /* breaktime2.png in Resources */,
+				0AE7F8F1E393BF78383803F8299E57D4 /* chrislattner.jpg in Resources */,
+				0609E19288C5521CD93CDFC1A8D9F5B9 /* dave.jpg in Resources */,
+				EED8762660B1182BC0E079B1567E333E /* david.jpg in Resources */,
+				0F618BB449E85F2187D6E9286C8EA4B9 /* dinner.png in Resources */,
+				A0AC5569989A7AE80AB69E0FE2FA97E0 /* donuts1.png in Resources */,
+				9C856495A253950238DEB037C8018BE8 /* donuts2.png in Resources */,
+				2C9C577989C9020AE4E9F2771674F421 /* eric.jpg in Resources */,
+				127C277334321F8FCEB2CF2AB9E8A5F7 /* fumiya.png in Resources */,
+				11FB4B2CDAE1F2324B66AAB37937AC66 /* garric.jpg in Resources */,
+				0CCED50A26B04D5F4D6A37C415AEBD99 /* harlan.jpg in Resources */,
+				8533049B4ADE10C33333ECB446F322B7 /* hilton.jpg in Resources */,
+				3AD601DE4F00422C21F8FAB6BA574561 /* hilton2.jpg in Resources */,
+				601DFEA05482F0952BE7324B75ED169E /* hiroki.jpg in Resources */,
+				1F2713F3A692C1D9A45F46EFC7CA2030 /* jp.jpg in Resources */,
+				27D20225754F2CAB0C3C6FEAFEA1CF22 /* jpmarthajp.jpg in Resources */,
+				7AF0B2B499DC7FE47FA229856000BE73 /* kita.jpg in Resources */,
+				033B101548E196437482F1D47C99387C /* kostia.jpg in Resources */,
+				BA39A87F9FA505119EE88CD0FCD1DD1F /* Logo_BLR.png in Resources */,
+				5694FDDAB02657E67252674A2AFA1F76 /* Logo_NYC.png in Resources */,
+				941D79CAD71BE8EE1C308380C2A6BC88 /* Logo_SJO.png in Resources */,
+				73396E55606B82438B31A7F2754E89A2 /* Logo_TKO.png in Resources */,
+				100CC8ECB136E39A7C31C09FC1BFC41D /* lunch.png in Resources */,
+				17B82F0D71E58D3FAD86F584A03B88D2 /* naruki.jpg in Resources */,
+				F4C8E676D9F05312346F99ADA8AD0D8C /* natasha.jpg in Resources */,
+				07D9E5CED95FDC506686B09D59E42BD7 /* party1.png in Resources */,
+				DB4CEC212AFBE4EECD0199BBCF707475 /* party2.png in Resources */,
+				2B26A5D608427D0F370C873FE9A86227 /* pushkar.jpg in Resources */,
+				9444BC49EDFE6029DB8BA26F10A2B70D /* rikoOrange.png in Resources */,
+				DEB09259AFFE1ACCC51569E44E9F0146 /* rikoPurple.png in Resources */,
+				1ECB803C6946781C22C52ED7C35CAD57 /* takeru.jpg in Resources */,
+				18EBB2B1D755B85EA3B83B9EBED271EC /* TrySwiftDataLocalizable.strings in Resources */,
+				8A2A3F76D76D12D59D54FB1699C4FC33 /* twilio.png in Resources */,
+				7F7877A8DFCE48A4EF9C8C46DBF7C059 /* vaish.jpg in Resources */,
+				9134E1208A6CF571825C619526E79E32 /* WatchLogo_NYC.png in Resources */,
+				563E45D6F7BD761E7C96448528EB8C04 /* WatchLogo_TKO.png in Resources */,
+				638287B915417CB581844157D994C8FF /* yucovin.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BED5EA921C00C878AC8FA1C165446661 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1055BB72B76B3CAFD7EDF60A7B6EA3DC /* ButtonCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE46258384CA335FF856EC97A9A052A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61AEC0A3BD5D0FB7CD089D80CA606A3C /* alvin.jpg in Resources */,
+				177169C7C9DDE9927802F56B94160D03 /* announce1.png in Resources */,
+				E86AB34D36A25F482CAAF1AD3831EBF2 /* announce2.png in Resources */,
+				AB2D28B237760E0493AED29FDE35EB9E /* announce_blr.png in Resources */,
+				92ECA0FEF2DA95EE5EF76EB746567019 /* announce_nyc_1.png in Resources */,
+				FD78F5F2074F1D298C5D0E8A2B6A8563 /* announce_nyc_2.png in Resources */,
+				BF85BC719D096255D9C69E56D9583170 /* bas.jpg in Resources */,
+				E574810F5013DC9F757FF6ED2E1E99CA /* bento1.png in Resources */,
+				43C6FA457A16D0E9D0B7996D6A85E925 /* bento2.png in Resources */,
+				6FD02E35125A3BAC26420B635BF0A752 /* bowling.png in Resources */,
+				77A1ECFAC97328F8A2FC00DF7B08782F /* breakfast.png in Resources */,
+				A49F2D6C2FBB71A18674BB599CAFDFF0 /* breaktime1.png in Resources */,
+				C2AFA7E3608EBB369B3D7C277CC087A6 /* breaktime2.png in Resources */,
+				9C04B8AB839641E49C257F121AABDF75 /* chrislattner.jpg in Resources */,
+				17F3D222C9076B3F551063D4B2AF2137 /* dave.jpg in Resources */,
+				3B6D09CA23194A8507777CE1DA85F5F3 /* david.jpg in Resources */,
+				1DA574615F9E0B945B41CF75CC895ADA /* dinner.png in Resources */,
+				09C0F2C252DE176FDBE0824BAEF80AAD /* donuts1.png in Resources */,
+				2747D3B9D535FCE0BF684EB5C5DBE353 /* donuts2.png in Resources */,
+				577BFDF969A784F7AE3FCC2F1FDFEBB2 /* eric.jpg in Resources */,
+				C86D8E85D2DE6A025E4701D46CDB7F99 /* fumiya.png in Resources */,
+				48ABDD6CBEAB37CA58D36E8136C71EDB /* garric.jpg in Resources */,
+				AEB3AF9C611207BF461EC45E63E0D284 /* harlan.jpg in Resources */,
+				6AABA44FB2E9E30849483CC41C0F29D5 /* hilton.jpg in Resources */,
+				BA16B662B16E2B962C2D989B46F66E8F /* hilton2.jpg in Resources */,
+				3D15FB90AE9668C19724387DF6431FBE /* hiroki.jpg in Resources */,
+				96A660B34A2B683FF7EA152E5DA531D3 /* jp.jpg in Resources */,
+				FA2BDA43BF02B0C3FC66516EB8451513 /* jpmarthajp.jpg in Resources */,
+				C0FE94F27E5197515FFCB1CEC6AA5413 /* kita.jpg in Resources */,
+				5CE6A6C6FA7C018016D39196FA6F71AC /* kostia.jpg in Resources */,
+				4FC75662103448519383DBE2CD2A4B4F /* Logo_BLR.png in Resources */,
+				F28DF5BFF1C21D67B08ECD215FB46F28 /* Logo_NYC.png in Resources */,
+				C6BA71F2AAB5588FA28FBF1588667B21 /* Logo_SJO.png in Resources */,
+				C226FE645ED781B2CECFC525E543FC88 /* Logo_TKO.png in Resources */,
+				CED996473A70604077218D29305E5E71 /* lunch.png in Resources */,
+				02AAB642F9EE0DD3A29C4DB1C5F99543 /* naruki.jpg in Resources */,
+				9E261C14C7C758796D462374CBEF2A71 /* natasha.jpg in Resources */,
+				622DFCB3BC3D005C2F02576141FC8845 /* party1.png in Resources */,
+				AE8963D9C962513C4EA56929DE9C5DE2 /* party2.png in Resources */,
+				B70202401EBCC664156729F0EE900733 /* pushkar.jpg in Resources */,
+				A79A2919629A9AEA7F4D4C0263A736D8 /* rikoOrange.png in Resources */,
+				AFFDF84A4EC2AC965B32CB780B99F714 /* rikoPurple.png in Resources */,
+				8C3B752D4CFE3B1CA048C37E8DFE5DDD /* takeru.jpg in Resources */,
+				6C63786B384A7C8A4F32B14395ABFEED /* TrySwiftDataLocalizable.strings in Resources */,
+				0D56AC650716761AB75303572A5FA8BE /* twilio.png in Resources */,
+				6B36A6A3DF7FFD2F355717F3E8F5647E /* vaish.jpg in Resources */,
+				DDA9F6A59A9AA76FC869D52BEB0FDAAE /* WatchLogo_NYC.png in Resources */,
+				2BAED65FFECB74BDD6509E44A5B38B1D /* WatchLogo_TKO.png in Resources */,
+				C1BADE37FF92720F342E73B667D9089A /* yucovin.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2137,11 +2143,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F17C4349235A4EDE1E608506FF904C6C /* TrySwiftDataLocalizable.strings */ = {
+		9F26850F3D676264900D804D3A9338A4 /* TrySwiftDataLocalizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2D37551DACA66915278BF4148B777CF9 /* TrySwiftDataLocalizable.strings */,
-				90C13F0031B46683DCE1B8A0FEEAC5A4 /* TrySwiftDataLocalizable.strings */,
+				A321C1B78593AA2994764EB074F6B1C2 /* TrySwiftDataLocalizable.strings */,
+				4CCD698C47B659035331F8890160E37A /* TrySwiftDataLocalizable.strings */,
 			);
 			name = TrySwiftDataLocalizable.strings;
 			path = TrySwiftData/Assets;

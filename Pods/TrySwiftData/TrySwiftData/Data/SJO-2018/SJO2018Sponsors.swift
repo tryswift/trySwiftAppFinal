@@ -20,6 +20,16 @@ public let sjo2018Sponsors: [String : Sponsor] = [
         level: .gold,
         priority: 59
     ),
+    "chrislattner" : Sponsor(
+        name: "Chris Lattner",
+        nameJP: nil,
+        url: "http://swift.org/",
+        displayURL: "swift.org",
+        twitter: nil,
+        logoAssetName: "chrislattner.jpg",
+        level: .individual,
+        priority: 65
+    ),
     "eric" : Sponsor(
         name: "Eric Giannini",
         nameJP: nil,
