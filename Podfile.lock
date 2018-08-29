@@ -1,5 +1,5 @@
 PODS:
-  - AcknowList (1.6)
+  - AcknowList (1.6.1)
   - DynamicColor (3.2.1)
   - Kingfisher (4.6.4)
   - Timepiece (1.1.0)
@@ -22,11 +22,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   TrySwiftData:
-    :commit: 0082424c3ef9b9b8a6ce613209957b8c33517576
+    :commit: c6153a07790d3b0dda19eb94b2b28438c000df37
     :git: https://github.com/tryswift/trySwiftData.git
 
 SPEC CHECKSUMS:
-  AcknowList: 2b27ccc75110be58be37424c4b08b07bdec628b4
+  AcknowList: c9091be8dd75c95662b56f75e382487a0cbb9a27
   DynamicColor: 4786d650c69da6c3f2cbfe068348288ec4e5521f
   Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
   Timepiece: 4190a7bc5ae1c05c87531fd75b14e17d2a017902

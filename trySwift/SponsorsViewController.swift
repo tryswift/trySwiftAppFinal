@@ -13,7 +13,7 @@ class SponsorsViewController: UITableViewController {
 
     /* An array of `Result` objects representing each sponsor level */
     fileprivate let sponsors = Sponsor.all
-    fileprivate let sections = Sponsor.all.map { $0.key }
+    fileprivate let sections = Sponsor.all.map { $0.key }.sorted()
     fileprivate let sponsorDetailSegue = "sponsorDetailSegue"
     fileprivate var didShowDetail = false
     

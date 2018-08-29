@@ -13,5 +13,5 @@ public struct ConferenceDay {
     /* The list of sessions, sorted into time blocks for that day. */
     public let sessionBlocks: [SessionBlock]
 
-    public static let all = sjo2018ConferenceDays.sorted { $0.date < $1.date }
+    public static let all = nyc2018ConferenceDays.sorted { $0.date < $1.date }
 }

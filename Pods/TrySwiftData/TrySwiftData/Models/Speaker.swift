@@ -12,20 +12,43 @@ public enum SpeakerType: Int {
     case instructor
 }
 
-public class Speaker {
-    public var id = 0
-    public var name = "TBD"
-    public var nameJP: String?
-    public var twitter = "TBD"
-    public var imageAssetName: String? = nil
-    public var imageWebURL: String? = nil
-    public var bio = "TBD"
-    public var bioJP: String?
-    public var hidden = false
-    public var type: SpeakerType = .presentation
+public struct Speaker {
+    public let id: Int
+    public let name: String
+    public let nameJP: String?
+    public let twitter: String
+    public let imageAssetName: String?
+    public let imageWebURL: String?
+    public let bio: String
+    public let bioJP: String?
+    public let hidden: Bool
+    public let type: SpeakerType
 
-    public class var all: [Speaker] {
-        let speakers = sjo2018Speakers.values.filter { $0.hidden == false}
+    
+    init(id: Int,
+         name: String,
+         nameJP: String? = nil,
+         twitter: String,
+         imageAssetName: String?,
+         imageWebURL: String? = nil,
+         bio: String,
+         bioJP: String? = nil,
+         hidden: Bool = false,
+         type: SpeakerType = .presentation) {
+        self.id = id
+        self.name = name
+        self.nameJP = nameJP
+        self.twitter = twitter
+        self.imageAssetName = imageAssetName
+        self.imageWebURL = imageWebURL
+        self.bio = bio
+        self.bioJP = bioJP
+        self.hidden = hidden
+        self.type = type
+    }
+    
+    public static var all: [Speaker] {
+        let speakers = nyc2018Speakers.values.filter { $0.hidden == false}
         return speakers.sorted { $0.name < $1.name }
     }
 

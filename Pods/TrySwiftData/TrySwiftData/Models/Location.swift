@@ -10,6 +10,11 @@ public struct Location {
     public let name: String
     public let nameJP: String?
 
+    init(name: String, nameJP: String? = nil) {
+        self.name = name
+        self.nameJP = nameJP
+    }
+    
     public var localizedName: String {
         return localizedString(for: name, japaneseString: nameJP)
     }

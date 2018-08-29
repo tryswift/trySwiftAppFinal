@@ -31,9 +31,10 @@
 		5CDB20792048952A00C3E0D3 /* TwitterFollowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDB20782048952A00C3E0D3 /* TwitterFollowDelegate.swift */; };
 		7AD1E19C80B78BB08E3DF079 /* Pods_trySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620220ABCCCDF47FDAF48B67 /* Pods_trySwift.framework */; };
 		EAFE1C26E49EFABF83487BDC /* Pods_try__Today.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24718BF11477753FCD47A7A8 /* Pods_try__Today.framework */; };
-		FA0D3A2420C596AF007C51C4 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0D3A2320C596AE007C51C4 /* Logo.png */; };
+		FA0D3A2420C596AF007C51C4 /* Logo_SJO.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0D3A2320C596AE007C51C4 /* Logo_SJO.png */; };
 		FA0E2B4F1E63B90400B40814 /* SessionDetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E2B4E1E63B90400B40814 /* SessionDetailInterfaceController.swift */; };
 		FA1C9D4F1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */; };
+		FA2011FA213712B100BEC745 /* Logo_NYC.png in Resources */ = {isa = PBXBuildFile; fileRef = FA2011F8213712A600BEC745 /* Logo_NYC.png */; };
 		FA20176A1D69D81600B6E158 /* WifiInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */; };
 		FA20176B1D69D81600B6E158 /* WifiInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */; };
 		FA36B7071E5DA3970022E6A9 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA36B7061E5DA3970022E6A9 /* DateFormatterExtension.swift */; };
@@ -209,9 +210,10 @@
 		A5CEB7B0B430095A78C3399B /* Pods-try! Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-try! Extension/Pods-try! Extension.release.xcconfig"; sourceTree = "<group>"; };
 		A5CFF4633D430A59B8E3CD89 /* Pods-try! Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-try! Today.debug.xcconfig"; path = "Pods/Target Support Files/Pods-try! Today/Pods-try! Today.debug.xcconfig"; sourceTree = "<group>"; };
 		CD2E9D5733A6E1B6E10AFEEF /* Pods_try__Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_try__Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA0D3A2320C596AE007C51C4 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		FA0D3A2320C596AE007C51C4 /* Logo_SJO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_SJO.png; sourceTree = "<group>"; };
 		FA0E2B4E1E63B90400B40814 /* SessionDetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailInterfaceController.swift; sourceTree = "<group>"; };
 		FA1C9D4E1D5F6E8800AC212A /* OrganizerDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerDetailTableViewController.swift; sourceTree = "<group>"; };
+		FA2011F8213712A600BEC745 /* Logo_NYC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo_NYC.png; sourceTree = "<group>"; };
 		FA2017681D69D81600B6E158 /* WifiInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WifiInfoTableViewCell.swift; sourceTree = "<group>"; };
 		FA2017691D69D81600B6E158 /* WifiInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiInfoTableViewCell.xib; sourceTree = "<group>"; };
 		FA36B7061E5DA3970022E6A9 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
@@ -721,8 +723,9 @@
 			isa = PBXGroup;
 			children = (
 				2222DA991E63CA9000D754A1 /* Info.plist */,
-				FA0D3A2320C596AE007C51C4 /* Logo.png */,
+				FA0D3A2320C596AE007C51C4 /* Logo_SJO.png */,
 				FAE089CE203C154900A5B560 /* Logo_TKO.png */,
+				FA2011F8213712A600BEC745 /* Logo_NYC.png */,
 				2222DA9B1E63CA9000D754A1 /* TodayController.swift */,
 				2222DAA61E63F0E300D754A1 /* TodayInterface.storyboard */,
 				2222DA9E1E63CA9000D754A1 /* try! Today.entitlements */,
@@ -1001,8 +1004,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0D3A2420C596AF007C51C4 /* Logo.png in Resources */,
+				FA0D3A2420C596AF007C51C4 /* Logo_SJO.png in Resources */,
 				FAE089CF203C154900A5B560 /* Logo_TKO.png in Resources */,
+				FA2011FA213712B100BEC745 /* Logo_NYC.png in Resources */,
 				2222DAA41E63F0E300D754A1 /* TodayInterface.storyboard in Resources */,
 				2222DAB11E64036A00D754A1 /* Localizable.strings in Resources */,
 			);

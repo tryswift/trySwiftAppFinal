@@ -54,7 +54,28 @@ public struct Session {
 
     /***************************************************/
 
+    init(type: SessionType,
+         title: String? = nil,
+         titleJP: String? = nil,
+         imageAssetName: String? = nil,
+         sponsor: Sponsor? = nil,
+         presentation: Presentation? = nil,
+         location: Location? = nil,
+         event: Event? = nil,
+         venue: Venue? = nil
+        ) {
+        self.type = type
+        self.title = title
+        self.titleJP = titleJP
+        self.imageAssetName = imageAssetName
+        self.sponsor = sponsor
+        self.presentation = presentation
+        self.location = location
+        self.event = event
+        self.venue = venue
+    }
+    
     public static var all: [String: Session] {
-        return sjo2018Sessions
+        return nyc2018Sessions
     }
 }

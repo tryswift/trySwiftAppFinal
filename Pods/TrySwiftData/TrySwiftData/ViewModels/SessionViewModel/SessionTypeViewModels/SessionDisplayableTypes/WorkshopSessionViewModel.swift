@@ -45,6 +45,11 @@ struct WorkshopSessionViewModel: SessionDisplayable {
     }
     
     var imageURL: URL {
+        
+        if let speakerImage = session.presentation?.speaker?.imageURL {
+            return speakerImage
+        }
+        
         if let imageURL = dataDefaults.customImageAssetURL {
             return imageURL
         }

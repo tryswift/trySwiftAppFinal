@@ -15,20 +15,20 @@ class SessionsInterfaceController: WKInterfaceController {
 
     @IBOutlet var sessionsTable: WKInterfaceTable!
     
-    fileprivate var conferenceDay = ConferenceDay.all[0]
+    fileprivate var conferenceDay = ConferenceDay.all[1]
     fileprivate static var first = true
 
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        /*
+        
         if SessionsInterfaceController.first {
-            let days = ConferenceDay.all
+            let days = [ConferenceDay.all[1], ConferenceDay.all[2]]
             WKInterfaceController.reloadRootControllers(withNames: ["day1", "day2"], contexts: [days[0], days[1]])
             SessionsInterfaceController.first = false
         }
-        */
+    
         
         if let sessionsContext = context as? ConferenceDay {
             conferenceDay = sessionsContext

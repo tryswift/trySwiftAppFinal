@@ -18,10 +18,11 @@ public struct Organizer {
     public let bioJP: String?
     public let hidden: Bool
 
-    public static var all: [String : Organizer] {
-        let organizers =  sjo2018Organizers.filter { $0.value.hidden == false}
-        let sortedOrganizers = organizers.sorted { $0.value.name > $1.value.name }
-        return sortedOrganizers.dictionary()
+    public static var all: [Organizer] {
+        // let organizers =  nyc2018Organizers.filter { $0.value.hidden == false}
+        //let sortedOrganizers = organizers.sorted { $0.value.name < $1.value.name }
+        //return sortedOrganizers.dictionary()
+        return nyc2018Organizers
     }
 
     public var localizedName: String {

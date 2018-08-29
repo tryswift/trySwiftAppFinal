@@ -6,6 +6,8 @@
 //  Copyright © 2016 NatashaTheRobot. All rights reserved.
 //
 
+import Foundation
+
 public enum SponsorLevel: Int {
     case platinum
     case gold
@@ -28,6 +30,24 @@ public struct Sponsor {
     public let level: SponsorLevel
     public let priority: Int
     
+    init(name: String,
+         nameJP: String? = nil,
+         url: String,
+         displayURL: String,
+         twitter: String? = nil,
+         logoAssetName: String?,
+         level: SponsorLevel,
+         priority: Int
+        ) {
+        self.name = name
+        self.nameJP = nameJP
+        self.url = url
+        self.displayURL = displayURL
+        self.twitter = twitter
+        self.logoAssetName = logoAssetName
+        self.level = level
+        self.priority = priority
+    }
 
     public var localizedName: String {
         return localizedString(for: name, japaneseString: nameJP)
@@ -46,14 +66,15 @@ public struct Sponsor {
 
         var resultsSet = [ Int : [Sponsor] ]()
         for i in 0...SponsorLevel.individual.rawValue {
-            let sponsors = sjo2018Sponsors.filter { $0.value.level.rawValue == i }
+            let sponsors = nyc2018Sponsors.filter { $0.value.level.rawValue == i }
             
             if sponsors.count > 0 {
-                let sponsorsSorted = sponsors.sorted { $0.value.priority < $1.value.priority }
+                //let sponsorsSorted = sponsors.sorted { $0.value.priority < $1.value.priority }
+                let sponsorsSorted = sponsors.sorted { $0.value.name < $1.value.name }
                 resultsSet[i] = sponsorsSorted.map { $0.value }
             }
         }
-
+        
         return resultsSet
     }
 

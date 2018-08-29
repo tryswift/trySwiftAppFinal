@@ -12,13 +12,13 @@ import Foundation
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
-    fileprivate let conferenceStartDate = Date.date(year: 2018, month: 6, day: 8, hour: 0, minute: 0, second: 0)
-    fileprivate let headerText = "try! San Jose"
-    fileprivate let bodyText = "💻🐥🎉"
+    fileprivate let conferenceStartDate = Date.date(year: 2018, month: 9, day: 4, hour: 0, minute: 0, second: 0)
+    fileprivate let headerText = Conference.current.name
+    fileprivate let bodyText = Conference.current.emojiSet
     
     fileprivate let sessionBlocks: [SessionBlock] = {
         let days = ConferenceDay.all
-        let conferenceDays = [days[0]]
+        let conferenceDays = [days[1], days[2]]
         let sessionBlocks = conferenceDays.flatMap { $0.sessionBlocks }
         return sessionBlocks
     }()
@@ -127,7 +127,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 private extension Date {
     func toUTC() -> Date {
         // Conference timelines are defined in EST
-        let jst = TimeZone(abbreviation: "PST")!
+        let jst = TimeZone(abbreviation: Conference.current.timezone)!
         let calendar = Calendar.current
         guard let currentDate = calendar.date(byAdding: .second, value:
             -jst.secondsFromGMT(), to: self) else {

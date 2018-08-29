@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
-        <!--try! Jun 8-->
+        <!--try! Sep 4-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="day1" title="try! Jun 8" id="AgC-eL-Hgc" customClass="SessionsInterfaceController" customModule="try__Extension">
+                <controller identifier="day1" title="try! Sep 4" id="AgC-eL-Hgc" customClass="SessionsInterfaceController" customModule="try__Extension">
                     <items>
                         <table alignment="left" pagingScroll="YES" id="OeU-Nt-vmO">
                             <items>
@@ -42,6 +42,7 @@
                     </items>
                     <connections>
                         <outlet property="sessionsTable" destination="OeU-Nt-vmO" id="Ye4-hJ-Vpn"/>
+                        <segue destination="eUM-85-Jro" kind="relationship" relationship="nextPage" id="Vvb-fM-Uhy"/>
                     </connections>
                 </controller>
             </objects>
@@ -74,6 +75,44 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="427" y="768"/>
+        </scene>
+        <!--try! Sep 5-->
+        <scene sceneID="9RR-sN-HVo">
+            <objects>
+                <controller identifier="day2" title="try! Sep 5" id="eUM-85-Jro" customClass="SessionsInterfaceController" customModule="try__Extension">
+                    <items>
+                        <table alignment="left" pagingScroll="YES" id="M6L-VH-06g">
+                            <items>
+                                <tableRow identifier="SessionTableRowController" id="2AG-vg-dMP" customClass="SessionTableRowController" customModule="try__Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="eoG-FY-bL7">
+                                        <items>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="AuG-Ue-jCj">
+                                                <color key="textColor" red="0.72156862749999995" green="0.1960784314" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="oo9-gS-HBG">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                            <label alignment="left" text="Label" numberOfLines="0" id="da1-o9-wm6">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="subtitleInterfaceLabel" destination="da1-o9-wm6" id="wmw-jK-lRe"/>
+                                        <outlet property="timeInterfaceLabel" destination="AuG-Ue-jCj" id="bHV-Fd-wzY"/>
+                                        <outlet property="titleInterfaceLabel" destination="oo9-gS-HBG" id="aCq-Tg-mc7"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="sessionsTable" destination="M6L-VH-06g" id="bWE-Lw-BYd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="458" y="345"/>
         </scene>
     </scenes>
 </document>

@@ -41,13 +41,13 @@ class TodayController: UIViewController, NCWidgetProviding {
     private var currentSessionBlock: SessionBlock? {
         let sessionBlocks = SessionBlock.all
         
-        let est = TimeZone(abbreviation: "PST")!
+        let est = TimeZone(abbreviation: Conference.current.timezone)!
         let date = Date().addingTimeInterval((Double)(est.secondsFromGMT()))
         return sessionBlocks.filter { $0.startTime < date && $0.endTime > date }.first
     }
 
     private var firstSessionBlock: SessionBlock? {
-        let sessionBlocks = SessionBlock.all
+        let sessionBlocks = SessionBlock.all[1...38]
         return sessionBlocks.sorted { $0.startTime < $1.startTime }.first
     }
 
@@ -59,7 +59,7 @@ class TodayController: UIViewController, NCWidgetProviding {
     lazy var sessionDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(identifier: "UTC")
-        dateFormatter.dateFormat = NSLocalizedString("h:mm a", comment: "")
+        dateFormatter.dateFormat = NSLocalizedString(Conference.current.dateFormat, comment: "")
         return dateFormatter
     }()
 
