@@ -104,7 +104,7 @@ open class AcknowListViewController: UITableViewController {
 
     func commonInit(acknowledgementsPlistPath: String?) {
         self.title = AcknowLocalization.localizedTitle()
-        
+
         if let acknowledgementsPlistPath = acknowledgementsPlistPath {
             let parser = AcknowParser(plistPath: acknowledgementsPlistPath)
             let headerFooter = parser.parseHeaderAndFooter()
@@ -137,7 +137,7 @@ open class AcknowListViewController: UITableViewController {
                     range: nil,
                     locale: Locale.current)
                 return (result == ComparisonResult.orderedAscending)
-             })
+            })
 
             self.acknowledgements = sortedAcknowledgements
         }
@@ -197,7 +197,7 @@ open class AcknowListViewController: UITableViewController {
             if self.presentingViewController != nil &&
                 navigationController.viewControllers.first == self {
                 let item = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
-                    self.navigationItem.leftBarButtonItem = item
+                self.navigationItem.leftBarButtonItem = item
             }
         }
     }
@@ -226,8 +226,8 @@ open class AcknowListViewController: UITableViewController {
         if self.acknowledgements == nil {
             print(
                 "** AcknowList Warning **\n" +
-                "No acknowledgements found.\n" +
-                "This probably means that you didn’t import the `Pods-acknowledgements.plist` to your main target.\n" +
+                    "No acknowledgements found.\n" +
+                    "This probably means that you didn’t import the `Pods-acknowledgements.plist` to your main target.\n" +
                 "Please take a look at https://github.com/vtourraine/AcknowList for instructions.", terminator: "\n")
         }
     }
@@ -264,7 +264,7 @@ open class AcknowListViewController: UITableViewController {
     class func LabelMargin () -> CGFloat {
         return 20
     }
-    
+
     class func FooterBottomMargin() -> CGFloat {
         return 20
     }
@@ -321,10 +321,10 @@ open class AcknowListViewController: UITableViewController {
             let CocoaPodsURL = URL(string: AcknowLocalization.CocoaPodsURLString())
             if let CocoaPodsURL = CocoaPodsURL,
                 let CocoaPodsURLHost = CocoaPodsURL.host {
-                    if footerText.range(of: CocoaPodsURLHost) != nil {
-                        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openCocoaPodsWebsite(_:)))
-                        label.addGestureRecognizer(tapGestureRecognizer)
-                    }
+                if footerText.range(of: CocoaPodsURLHost) != nil {
+                    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openCocoaPodsWebsite(_:)))
+                    label.addGestureRecognizer(tapGestureRecognizer)
+                }
             }
 
             let footerFrame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height + AcknowListViewController.FooterBottomMargin())
@@ -387,8 +387,8 @@ open class AcknowListViewController: UITableViewController {
         if let acknowledgements = self.acknowledgements,
             let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
             let textLabel = cell.textLabel as UILabel? {
-                textLabel.text = acknowledgement.title
-                cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+            textLabel.text = acknowledgement.title
+            cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         }
 
         return cell
@@ -404,10 +404,11 @@ open class AcknowListViewController: UITableViewController {
      */
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let acknowledgements = self.acknowledgements,
-        let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
-        let navigationController = self.navigationController {
-                let viewController = AcknowViewController(acknowledgement: acknowledgement)
-                navigationController.pushViewController(viewController, animated: true)
+            let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
+            let navigationController = self.navigationController {
+            let viewController = AcknowViewController(acknowledgement: acknowledgement)
+            viewController.edgesForExtendedLayout = []
+            navigationController.pushViewController(viewController, animated: true)
         }
     }
 
