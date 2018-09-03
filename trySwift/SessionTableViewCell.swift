@@ -26,6 +26,7 @@ class SessionTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         sessionTitleLabel.textColor = .trySwiftTitleColor()
+        sessionImageView.accessibilityIgnoresInvertColors = true
         sessionTypeLabel.textColor = .trySwiftTitleColor()
         sessionSubtitleLabel.textColor = .trySwiftSubtitleColor()
         sessionLocationLabel.textColor = .trySwiftSubtitleColor()
