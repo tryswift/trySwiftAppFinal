@@ -17,7 +17,7 @@ class TwitterFollowTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        followButton.titleLabel?.adjustsFontForContentSizeCategory = true
         followButton.layer.borderWidth = 1.0
         followButton.layer.borderColor = UIColor.trySwiftAccentColor().cgColor
         followButton.tintColor = .trySwiftAccentColor()

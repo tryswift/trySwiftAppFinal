@@ -19,21 +19,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="axa" translatesAutoresizingMaskIntoConstraints="NO" id="7l7-NP-8sf">
-                        <rect key="frame" x="16" y="11.5" width="67" height="67.5"/>
+                        <rect key="frame" x="16" y="11" width="67" height="67.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="67" id="OKJ-t2-8Af"/>
                             <constraint firstAttribute="width" constant="67" id="h7O-iT-nV5"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AXA Event &amp; Production Center" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwW-kN-j2r">
-                        <rect key="frame" x="98" y="23" width="206" height="41"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="98" y="23.5" width="206" height="42.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="axaeventproductioncenter.com" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCp-dY-9hs">
-                        <rect key="frame" x="98" y="69" width="206" height="36"/>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <rect key="frame" x="98" y="71" width="206" height="38"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
