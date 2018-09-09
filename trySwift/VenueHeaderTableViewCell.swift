@@ -18,6 +18,7 @@ class VenueHeaderTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        venueImageView.accessibilityIgnoresInvertColors = true
     }
     
     func configure(withVenue venue: Venue) {
