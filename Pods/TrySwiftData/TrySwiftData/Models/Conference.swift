@@ -14,6 +14,7 @@ public struct Conference {
     public let conferenceDescriptionJP: String?
     public let email: String
     public let slackURL: String
+    public let slackTeamID: String
     public let githubIssuesURL = "https://github.com/tryswift/trySwiftAppFinal/issues"
     public let codeOfConductURL = "https://www.tryswift.co/code-of-conduct/"
     public let venues: [Venue]

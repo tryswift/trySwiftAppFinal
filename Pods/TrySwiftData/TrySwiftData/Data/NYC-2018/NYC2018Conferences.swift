@@ -15,6 +15,7 @@ public let nyc2018Conferences: [Conference] = [
         conferenceDescriptionJP: nil,
         email: "nyc@tryswift.co",
         slackURL: "https://tryswiftnyc2018.slack.com/",
+        slackTeamID: "T9Y0ZDK0S",
         venues: [nyc2018Venues["newworldstages"]!, nyc2018Venues["frames"]!],
         organizers: nyc2018Organizers,
         emojiSet: "🐥🎉🗽",
