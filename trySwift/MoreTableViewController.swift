@@ -204,7 +204,7 @@ private extension MoreTableViewController {
     
     func openSlack() {
         let application = UIApplication.shared
-        let appURL = URL(string: "slack://open")!
+        let appURL = URL(string: "slack://open?team=\(conference.slackTeamID)")!
         if application.canOpenURL(appURL) {
             application.open(appURL)
         } else {
