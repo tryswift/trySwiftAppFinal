@@ -12,13 +12,13 @@ import Foundation
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
-    fileprivate let conferenceStartDate = Date.date(year: 2018, month: 9, day: 4, hour: 0, minute: 0, second: 0)
+    fileprivate let conferenceStartDate = Date.date(year: 2019, month: 3, day: 21, hour: 0, minute: 0, second: 0)
     fileprivate let headerText = Conference.current.name
-    fileprivate let bodyText = Conference.current.emojiSet
+    fileprivate let bodyText = Conference.current.emojiSet 
     
     fileprivate let sessionBlocks: [SessionBlock] = {
         let days = ConferenceDay.all
-        let conferenceDays = [days[1], days[2]]
+        let conferenceDays = [days[0], days[1]]
         let sessionBlocks = conferenceDays.flatMap { $0.sessionBlocks }
         return sessionBlocks
     }()
