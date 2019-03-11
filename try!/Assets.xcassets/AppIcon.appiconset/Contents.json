@@ -33,10 +33,24 @@
     {
       "size" : "40x40",
       "idiom" : "watch",
-      "filename" : "watch_40@2x.png",
+      "filename" : "watch_40@2x-1.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "38mm"
+    },
+    {
+      "size" : "44x44",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "appLauncher",
+      "subtype" : "40mm"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "appLauncher",
+      "subtype" : "44mm"
     },
     {
       "size" : "86x86",
@@ -55,9 +69,16 @@
       "subtype" : "42mm"
     },
     {
+      "size" : "108x108",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "quickLook",
+      "subtype" : "44mm"
+    },
+    {
       "size" : "1024x1024",
       "idiom" : "watch-marketing",
-      "filename" : "WatchLogo_NYC.png",
+      "filename" : "WatchLogo_TKO.png",
       "scale" : "1x"
     }
   ],
