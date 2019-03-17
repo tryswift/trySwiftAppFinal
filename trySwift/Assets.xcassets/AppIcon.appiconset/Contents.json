@@ -149,6 +149,7 @@
     {
       "size" : "44x44",
       "idiom" : "watch",
+      "filename" : "Icon-88.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "40mm"
@@ -156,6 +157,7 @@
     {
       "size" : "50x50",
       "idiom" : "watch",
+      "filename" : "Icon-100.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "44mm"
@@ -179,6 +181,7 @@
     {
       "size" : "108x108",
       "idiom" : "watch",
+      "filename" : "Icon_108@2x-1.png",
       "scale" : "2x",
       "role" : "quickLook",
       "subtype" : "44mm"
@@ -188,6 +191,14 @@
       "idiom" : "watch-marketing",
       "filename" : "WatchLogo_TKO.png",
       "scale" : "1x"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "watch",
+      "filename" : "icon_50@2x.png",
+      "scale" : "2x",
+      "role" : "longLook",
+      "subtype" : "44mm"
     }
   ],
   "info" : {

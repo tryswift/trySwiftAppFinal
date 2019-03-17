@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Contacts
 
 class MapTableViewCell: UITableViewCell {
 
@@ -35,15 +36,31 @@ class MapTableViewCell: UITableViewCell {
         }
     }
 
-    func configure(withAddress address: String, delegate: OpenInMapsDelegate) {
-        geocoder.geocodeAddressString(address) { [weak self] placemarks, error in
-            guard let placemark = placemarks?.first, let location = placemark.location else { return }
-            let mark = MKPlacemark(placemark: placemark)
-            let viewRegion = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
-            self?.mapView.setRegion(viewRegion, animated: true)
-            self?.mapView.addAnnotation(mark)          
-            self?.placemark = mark
+    func configure(withAddress address: String,
+                   postalAddress: CNPostalAddress? = nil,
+                   delegate: OpenInMapsDelegate) {
+        if let postalAddress = postalAddress {
+            geocoder.geocodePostalAddress(postalAddress) { [weak self] placemarks, error in
+                guard let placemark = placemarks?.first, let location = placemark.location else { return }
+                let mark = MKPlacemark(placemark: placemark)
+                let viewRegion = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+                self?.mapView.setRegion(viewRegion, animated: true)
+                self?.mapView.addAnnotation(mark)
+                self?.placemark = mark
+            }
+            self.delegate = delegate
+        } else {
+            geocoder.geocodeAddressString(address) { [weak self] placemarks, error in
+                guard let placemark = placemarks?.first, let location = placemark.location else { return }
+                let mark = MKPlacemark(placemark: placemark)
+                let viewRegion = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+                self?.mapView.setRegion(viewRegion, animated: true)
+                self?.mapView.addAnnotation(mark)
+                self?.placemark = mark
+            }
+            self.delegate = delegate
+
         }
-        self.delegate = delegate
+        
     }
 }

@@ -75,7 +75,7 @@ extension WorkshopDetailViewController {
         case .map:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as MapTableViewCell
             if let venue = venue {
-                cell.configure(withAddress: venue.address, delegate: self)
+                cell.configure(withAddress: venue.localizedAddress, delegate: self)
             }
             return cell
         }
