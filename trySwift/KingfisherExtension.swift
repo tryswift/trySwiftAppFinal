@@ -12,6 +12,15 @@ import Kingfisher
 
 /// Processor for resizing images.
 public struct AspectResizingImageProcessor: ImageProcessor {
+    public func process(item: ImageProcessItem, options: KingfisherParsedOptionsInfo) -> Image? {
+        switch item {
+        case .image(let image):
+            return image.kf.resize(to: image.size.scaledSize(fitting: targetSize, contentMode: contentMode))
+        case .data:
+            return (DefaultImageProcessor.default >> self).process(item: item, options: options)
+        }
+    }
+
     public let identifier: String
 
     /// Target size of output image should be.
@@ -29,15 +38,6 @@ public struct AspectResizingImageProcessor: ImageProcessor {
         self.targetSize = targetSize
         self.contentMode = contentMode
         self.identifier = "com.natashatherobot.trySwift.AspectFitResizingImageProcessor(\(targetSize))"
-    }
-
-    public func process(item: ImageProcessItem, options: KingfisherOptionsInfo) -> Image? {
-        switch item {
-        case .image(let image):
-            return image.kf.resize(to: image.size.scaledSize(fitting: targetSize, contentMode: contentMode))
-        case .data(_):
-            return (DefaultImageProcessor.default >> self).process(item: item, options: options)
-        }
     }
 }
 

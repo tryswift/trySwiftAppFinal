@@ -1,20 +1,20 @@
 PODS:
-  - AcknowList (1.6.1)
-  - DynamicColor (3.2.1)
-  - Kingfisher (4.6.4)
-  - Timepiece (1.1.0)
+  - AcknowList (1.8)
+  - DynamicColor (4.0.3)
+  - Kingfisher (5.2.0)
+  - Timepiece (1.3.1)
   - TrySwiftData (0.1.0):
     - TrySwiftData/TrySwiftAssets (= 0.1.0)
   - TrySwiftData/TrySwiftAssets (0.1.0)
-  - XLPagerTabStrip (8.0.1)
+  - XLPagerTabStrip (8.1.1)
 
 DEPENDENCIES:
-  - AcknowList (~> 1.2)
-  - DynamicColor (~> 3.2.1)
-  - Kingfisher (~> 4.6.2)
-  - Timepiece (~> 1.1.0)
+  - AcknowList (~> 1.8)
+  - DynamicColor (~> 4.0)
+  - Kingfisher (~> 5.2)
+  - Timepiece (~> 1.3)
   - TrySwiftData (from `https://github.com/tryswift/trySwiftData.git`)
-  - XLPagerTabStrip (~> 8.0.0)
+  - XLPagerTabStrip (~> 8.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -34,13 +34,13 @@ CHECKOUT OPTIONS:
     :git: https://github.com/tryswift/trySwiftData.git
 
 SPEC CHECKSUMS:
-  AcknowList: c9091be8dd75c95662b56f75e382487a0cbb9a27
-  DynamicColor: 4786d650c69da6c3f2cbfe068348288ec4e5521f
-  Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
-  Timepiece: 4190a7bc5ae1c05c87531fd75b14e17d2a017902
+  AcknowList: 5b8820004d019d0a8d6a091ea2392dcb54bd3ad2
+  DynamicColor: bf19b33fe404c59a68e64af95cc6b017346e7e75
+  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
+  Timepiece: c0760ec0e545697d86b80424dcd2b4d5ef66cf51
   TrySwiftData: 6ae96c51963fa7fe5698b20dfd9e279ce5d978b7
-  XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
+  XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: 41a4636e6c849941bb4518a6df2f61aee271660a
+PODFILE CHECKSUM: dfdd2b890ace3e8c9f073ff179d0b15dce75dbb7
 
 COCOAPODS: 1.6.1

@@ -8,11 +8,8 @@ Intuitive date handling in Swift
 
 ## Requirements
 
-| version | Swift | iOS  | macOS | tvOS | watchOS | NOTE |
-| ------- | ----- | ---- | ----- | ---- | ------- | ---- |
-| 1.0.0+  | 3.0+  | 8.0+ | 10.9+ | 9.0+ | 2.0+    | Incompatible with 0.6.x |
-| 0.6.0+  | 3.0+  | 8.0+ | 10.9+ | 9.0+ | 2.0+    | |
-| 0.5.0+  | 2.3   | 8.0+ | 10.9+ | 9.0+ | 2.0+    | |
+* Swift 3.0+
+* iOS 8.0+ / macOS 10.9+ / tvOS 9.0+ / watchOS 2.0+
 
 ## Usage
 
@@ -45,12 +42,14 @@ now + (3.weeks - 4.days + 5.hours)
 ```swift
 now.changed(year: 2014)
 now.changed(weekday: 1)
+now.truncated([.minute, .second, .nanosecond])
+now.truncated(from: .day)
 ```
 
 ### Formating
 
 ```swift
-now.string(inDateStyle: .long, andTimeStyle: .medium)
+now.stringIn(dateStyle: .long, timeStyle: .medium)
 now.dateString(in: .medium)
 now.timeString(in: .short)
 
