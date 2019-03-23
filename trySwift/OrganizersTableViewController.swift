@@ -74,6 +74,6 @@ fileprivate extension OrganizersTableViewController {
     func configureTableView() {
         tableView.register(OrganizerTableViewCell.self)
         tableView.estimatedRowHeight = 83
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     }
 }

@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         WatchSessionManager.sharedManager.startSession()
 
@@ -39,8 +39,8 @@ private extension AppDelegate {
         window?.tintColor = UIColor.trySwiftNavigationBarColor()
         
         UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: UIColor.white,
-            NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)
+            .foregroundColor: UIColor.white,
+            .font: UIFont.systemFont(ofSize: 18)
         ]
         
         UINavigationBar.appearance().backgroundColor = UIColor.trySwiftNavigationBarColor()

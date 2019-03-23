@@ -87,7 +87,7 @@ class TodayController: UIViewController, NCWidgetProviding {
 
         self.displayPictureView.layer.shouldRasterize = true
         self.displayPictureView.layer.rasterizationScale = UIScreen.main.scale
-        self.displayPictureView.layer.minificationFilter = "trilinear"
+        self.displayPictureView.layer.minificationFilter = .trilinear
         self.displayPictureView.layer.cornerRadius = self.displayPictureView.frame.size.width / 2
         self.displayPictureView.layer.masksToBounds = true
 
@@ -125,13 +125,3 @@ class TodayController: UIViewController, NCWidgetProviding {
         extensionContext?.open(url, completionHandler: nil)
     }
 }
-
-
-
-
-
-
-
-
-
-

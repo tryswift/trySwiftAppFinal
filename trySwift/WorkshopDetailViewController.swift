@@ -86,7 +86,7 @@ extension WorkshopDetailViewController {
         case .map:
             return 300
         default:
-            return UITableViewAutomaticDimension
+            return UITableView.automaticDimension
         }
     }
 }
@@ -102,7 +102,7 @@ extension WorkshopDetailViewController {
         tableView.register(MapTableViewCell.self)
         
         tableView.estimatedRowHeight = 83
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
     }
 }

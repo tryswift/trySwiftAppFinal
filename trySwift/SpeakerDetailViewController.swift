@@ -66,7 +66,7 @@ extension SpeakerDetailViewController {
         tableView.register(TwitterFollowTableViewCell.self)
         
         tableView.estimatedRowHeight = 83
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
     }
 }

@@ -27,7 +27,7 @@ class SpeakersViewController: UITableViewController {
         
         tableView.register(SpeakerTableViewCell.self)
         tableView.estimatedRowHeight = 83
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         
         if traitCollection.forceTouchCapability == .available {
             registerForPreviewing(with: self, sourceView: tableView)
