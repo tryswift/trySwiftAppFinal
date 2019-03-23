@@ -82,7 +82,7 @@ extension VenueTableViewController {
             return 300
         }
         
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 }
 
@@ -96,7 +96,7 @@ private extension VenueTableViewController {
         tableView.register(TwitterFollowTableViewCell.self)
         
         tableView.estimatedRowHeight = 83
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
     }
 }

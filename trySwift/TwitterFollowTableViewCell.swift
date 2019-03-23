@@ -28,7 +28,7 @@ class TwitterFollowTableViewCell: UITableViewCell {
         self.username = username
         self.delegate = delegate
         
-        followButton.setTitle("Follow @\(username)", for: UIControlState())
+        followButton.setTitle("Follow @\(username)", for: .normal)
         
         setNeedsUpdateConstraints()
         layoutIfNeeded()

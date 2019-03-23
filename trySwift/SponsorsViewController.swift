@@ -28,7 +28,7 @@ class SponsorsViewController: UITableViewController {
         
         tableView.register(SponsorTableViewCell.self)
         tableView.estimatedRowHeight = 83
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     override func viewDidAppear(_ animated: Bool) {

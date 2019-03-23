@@ -139,7 +139,7 @@ extension SessionsTableViewController {
         tableView.register(SessionTableViewCell.self)
         
         tableView.estimatedRowHeight = 160
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     }
 }
 
