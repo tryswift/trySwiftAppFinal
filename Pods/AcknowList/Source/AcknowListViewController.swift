@@ -1,7 +1,7 @@
 //
 // AcknowListViewController.swift
 //
-// Copyright (c) 2015-2018 Vincent Tourraine (http://www.vtourraine.net)
+// Copyright (c) 2015-2019 Vincent Tourraine (http://www.vtourraine.net)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -82,7 +82,26 @@ open class AcknowListViewController: UITableViewController {
     public init(acknowledgementsPlistPath: String?) {
         super.init(style: .grouped)
 
-        self.commonInit(acknowledgementsPlistPath: acknowledgementsPlistPath)
+        if let acknowledgementsPlistPath = acknowledgementsPlistPath {
+            self.commonInit(acknowledgementsPlistPaths: [acknowledgementsPlistPath])
+        }
+        else {
+            self.commonInit(acknowledgementsPlistPaths: [])
+        }
+    }
+
+    /**
+     Initializes the `AcknowListViewController` instance for a set of plist file paths.
+
+     The first path is the "main" one which will be used for any custom header/footer.
+
+     - parameter acknowledgementsPlistPaths: The paths to the acknowledgements plist files.
+
+     - returns: The new `AcknowListViewController` instance.
+     */
+    public init(acknowledgementsPlistPaths: [String]) {
+        super.init(style: .grouped)
+        self.commonInit(acknowledgementsPlistPaths: acknowledgementsPlistPaths)
     }
 
     /**
@@ -95,18 +114,25 @@ open class AcknowListViewController: UITableViewController {
     public required init(coder aDecoder: NSCoder) {
         super.init(style: .grouped)
         let path = AcknowListViewController.defaultAcknowledgementsPlistPath()
-        self.commonInit(acknowledgementsPlistPath: path)
+        if let path = path {
+            self.commonInit(acknowledgementsPlistPaths: [path])
+        }
+        else {
+            self.commonInit(acknowledgementsPlistPaths: [])
+        }
     }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
-    func commonInit(acknowledgementsPlistPath: String?) {
+    func commonInit(acknowledgementsPlistPaths: [String]) {
         self.title = AcknowLocalization.localizedTitle()
 
-        if let acknowledgementsPlistPath = acknowledgementsPlistPath {
-            let parser = AcknowParser(plistPath: acknowledgementsPlistPath)
+        guard !acknowledgementsPlistPaths.isEmpty else { return }
+
+        if let mainPlistPath = acknowledgementsPlistPaths.first {
+            let parser = AcknowParser(plistPath: mainPlistPath)
             let headerFooter = parser.parseHeaderAndFooter()
 
             let DefaultHeaderText = "This application makes use of the following third party libraries:"
@@ -116,31 +142,34 @@ open class AcknowListViewController: UITableViewController {
             if (headerFooter.header == DefaultHeaderText) {
                 self.headerText = nil
             }
-            else if (headerFooter.header !=  "") {
+            else if (headerFooter.header != "") {
                 self.headerText = headerFooter.header
             }
 
-            if (headerFooter.footer == DefaultFooterText ||
-                headerFooter.footer == DefaultFooterTextLegacy) {
+            if (headerFooter.footer == DefaultFooterText || headerFooter.footer == DefaultFooterTextLegacy) {
                 self.footerText = AcknowLocalization.localizedCocoaPodsFooterText()
             }
             else if (headerFooter.footer != "") {
                 self.footerText = headerFooter.footer
             }
-
-            let acknowledgements = parser.parseAcknowledgements()
-            let sortedAcknowledgements = acknowledgements.sorted(by: {
-                (ack1: Acknow, ack2: Acknow) -> Bool in
-                let result = ack1.title.compare(
-                    ack2.title,
-                    options: [],
-                    range: nil,
-                    locale: Locale.current)
-                return (result == ComparisonResult.orderedAscending)
-            })
-
-            self.acknowledgements = sortedAcknowledgements
         }
+
+        var acknowledgements: [Acknow] = []
+        for path in acknowledgementsPlistPaths {
+            let parser = AcknowParser(plistPath: path)
+            acknowledgements.append(contentsOf: parser.parseAcknowledgements())
+        }
+
+        let sortedAcknowledgements = acknowledgements.sorted(by: {
+            (ack1: Acknow, ack2: Acknow) -> Bool in
+            let result = ack1.title.compare(
+                ack2.title,
+                options: [],
+                range: nil,
+                locale: Locale.current)
+            return (result == ComparisonResult.orderedAscending)
+        })
+        self.acknowledgements = sortedAcknowledgements
     }
 
     // MARK: - Paths
@@ -182,7 +211,7 @@ open class AcknowListViewController: UITableViewController {
         }
 
         if let path = path {
-            self.commonInit(acknowledgementsPlistPath: path)
+            self.commonInit(acknowledgementsPlistPaths: [path])
         }
     }
 
@@ -197,7 +226,7 @@ open class AcknowListViewController: UITableViewController {
             if self.presentingViewController != nil &&
                 navigationController.viewControllers.first == self {
                 let item = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(AcknowListViewController.dismissViewController(_:)))
-                self.navigationItem.leftBarButtonItem = item
+                    self.navigationItem.leftBarButtonItem = item
             }
         }
     }
@@ -226,8 +255,8 @@ open class AcknowListViewController: UITableViewController {
         if self.acknowledgements == nil {
             print(
                 "** AcknowList Warning **\n" +
-                    "No acknowledgements found.\n" +
-                    "This probably means that you didn’t import the `Pods-acknowledgements.plist` to your main target.\n" +
+                "No acknowledgements found.\n" +
+                "This probably means that you didn’t import the `Pods-acknowledgements.plist` to your main target.\n" +
                 "Please take a look at https://github.com/vtourraine/AcknowList for instructions.", terminator: "\n")
         }
     }
@@ -264,7 +293,7 @@ open class AcknowListViewController: UITableViewController {
     class func LabelMargin () -> CGFloat {
         return 20
     }
-
+    
     class func FooterBottomMargin() -> CGFloat {
         return 20
     }
@@ -282,13 +311,16 @@ open class AcknowListViewController: UITableViewController {
                 height: labelHeight)
 
             let label = UILabel(frame: labelFrame)
-            label.text             = self.headerText
-            label.font             = font
-            label.textColor        = UIColor.gray
-            label.backgroundColor  = UIColor.clear
-            label.numberOfLines    = 0
-            label.textAlignment    = .center
+            label.text = self.headerText
+            label.font = font
+            label.textColor = UIColor.gray
+            label.backgroundColor = UIColor.clear
+            label.numberOfLines = 0
+            label.textAlignment = .center
             label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
+            if #available(iOS 10.0, tvOS 10.0, *) {
+                label.adjustsFontForContentSizeCategory = true
+            }
 
             let headerFrame = CGRect(
                 x: 0, y: 0,
@@ -309,22 +341,25 @@ open class AcknowListViewController: UITableViewController {
             let labelFrame = CGRect(x: AcknowListViewController.LabelMargin(), y: 0, width: labelWidth, height: labelHeight);
 
             let label = UILabel(frame: labelFrame)
-            label.text             = self.footerText
-            label.font             = font
-            label.textColor        = UIColor.gray
-            label.backgroundColor  = UIColor.clear
-            label.numberOfLines    = 0
-            label.textAlignment    = .center
+            label.text = self.footerText
+            label.font = font
+            label.textColor = UIColor.gray
+            label.backgroundColor = UIColor.clear
+            label.numberOfLines = 0
+            label.textAlignment = .center
             label.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin]
             label.isUserInteractionEnabled = true
+            if #available(iOS 10.0, tvOS 10.0, *) {
+                label.adjustsFontForContentSizeCategory = true
+            }
 
             let CocoaPodsURL = URL(string: AcknowLocalization.CocoaPodsURLString())
             if let CocoaPodsURL = CocoaPodsURL,
                 let CocoaPodsURLHost = CocoaPodsURL.host {
-                if footerText.range(of: CocoaPodsURLHost) != nil {
-                    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openCocoaPodsWebsite(_:)))
-                    label.addGestureRecognizer(tapGestureRecognizer)
-                }
+                    if footerText.range(of: CocoaPodsURLHost) != nil {
+                        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AcknowListViewController.openCocoaPodsWebsite(_:)))
+                        label.addGestureRecognizer(tapGestureRecognizer)
+                    }
             }
 
             let footerFrame = CGRect(x: 0, y: 0, width: label.frame.width, height: label.frame.height + AcknowListViewController.FooterBottomMargin())
@@ -341,7 +376,7 @@ open class AcknowListViewController: UITableViewController {
         let font = UIFont.preferredFont(forTextStyle: .footnote)
         let options: NSStringDrawingOptions = NSStringDrawingOptions.usesLineFragmentOrigin
         // should be (NSLineBreakByWordWrapping | NSStringDrawingUsesLineFragmentOrigin)?
-        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, attributes: [NSAttributedStringKey.font: font], context: nil)
+        let labelBounds: CGRect = labelText.boundingRect(with: CGSize(width: labelWidth, height: CGFloat.greatestFiniteMagnitude), options: options, attributes: [NSAttributedString.Key.font: font], context: nil)
         let labelHeight = labelBounds.height
 
         return CGFloat(ceilf(Float(labelHeight)))
@@ -381,14 +416,14 @@ open class AcknowListViewController: UITableViewController {
             cell = dequeuedCell
         }
         else {
-            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: CellIdentifier)
+            cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: CellIdentifier)
         }
 
         if let acknowledgements = self.acknowledgements,
             let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
             let textLabel = cell.textLabel as UILabel? {
-            textLabel.text = acknowledgement.title
-            cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+                textLabel.text = acknowledgement.title
+                cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         }
 
         return cell
@@ -404,11 +439,10 @@ open class AcknowListViewController: UITableViewController {
      */
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let acknowledgements = self.acknowledgements,
-            let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
-            let navigationController = self.navigationController {
-            let viewController = AcknowViewController(acknowledgement: acknowledgement)
-            viewController.edgesForExtendedLayout = []
-            navigationController.pushViewController(viewController, animated: true)
+        let acknowledgement = acknowledgements[(indexPath as NSIndexPath).row] as Acknow?,
+        let navigationController = self.navigationController {
+                let viewController = AcknowViewController(acknowledgement: acknowledgement)
+                navigationController.pushViewController(viewController, animated: true)
         }
     }
 
