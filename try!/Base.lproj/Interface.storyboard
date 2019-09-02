@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
-        <!--try! March 21-->
+        <!--try! Sep 9-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="day1" title="try! March 21" id="AgC-eL-Hgc" customClass="SessionsInterfaceController" customModule="try__Extension">
+                <controller identifier="day1" title="try! Sep 9" id="AgC-eL-Hgc" customClass="SessionsInterfaceController" customModule="try__Extension">
                     <items>
                         <table alignment="left" pagingScroll="YES" id="OeU-Nt-vmO">
                             <items>
@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="427" y="768"/>
         </scene>
-        <!--try! March 22-->
+        <!--try! Sep 10-->
         <scene sceneID="9RR-sN-HVo">
             <objects>
-                <controller identifier="day2" title="try! March 22" id="eUM-85-Jro" customClass="SessionsInterfaceController" customModule="try__Extension">
+                <controller identifier="day2" title="try! Sep 10" id="eUM-85-Jro" customClass="SessionsInterfaceController" customModule="try__Extension">
                     <items>
                         <table alignment="left" pagingScroll="YES" id="M6L-VH-06g">
                             <items>
