@@ -240,8 +240,8 @@ public let nyc2019Speakers: [String : Speaker] = [
         name: "Dave DeLong",
         twitter: "davedelong",
         imageAssetName: "dave_delong.jpg",
-        bio: "TBD",
-        hidden: true,
+        bio: "Dave DeLong is a Principal iOS Engineer at WeWork in their Enterprise Technology group. He has a passion for teaching, experimentation, and designing APIs. Prior to joining WeWork, he spent seven years at Apple, where he worked on the UIKit framework, Developer Evangelism, and Apple Maps. Dave, his family, and his large collection of Brandon Sanderson books live near Salt Lake City, where he’s an active member of the local developer community. He can often be found on Twitter teaching developers about all the ways that calendrical calculations can go wrong and pontificating on the virtues of eating chocolate with peanut butter.",
+        hidden: false,
         type: .presentation
     ),
     "dr" : Speaker(

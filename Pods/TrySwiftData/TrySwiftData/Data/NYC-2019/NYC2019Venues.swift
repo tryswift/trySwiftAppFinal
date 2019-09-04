@@ -68,9 +68,9 @@ public let nyc2019Venues: [String : Venue] = [
     "prototyping-workshop" : Venue(
         title: "Technology Experience Prototyping",
         titleJP: nil,
-        address: "New York, NY 10018",
+        address: "116 W 23rd St, 5th floor, New York, NY 10011",
         addressJP: nil,
-        displayAddress: "Manhattan, New York",
+        displayAddress: "116 W 23rd St",
         website: nil,
         twitter: nil,
         logoAssetName: "carson_mark.jpg",
